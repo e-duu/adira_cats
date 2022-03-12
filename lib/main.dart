@@ -1,3 +1,4 @@
+import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashPage(),
+      // home: SplashPage(),
+      home: LoginPage(),
     );
   }
 }
