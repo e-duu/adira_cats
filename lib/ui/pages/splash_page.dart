@@ -10,9 +10,9 @@ class SplashPage extends StatelessWidget {
       backgroundColor: kPrimaryColor,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
+              margin: EdgeInsets.only(top: 442),
               width: 240,
               height: 42,
               decoration: BoxDecoration(
@@ -21,20 +21,23 @@ class SplashPage extends StatelessWidget {
                 ),
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  'CATS',
-                  style: blackTextStyle.copyWith(
-                    fontWeight: bold,
+            Spacer(),
+            Container(
+              margin: EdgeInsets.only(bottom: 72),
+              child: Column(
+                children: [
+                  Text(
+                    'CATS',
+                    style: blackTextStyle.copyWith(
+                      fontWeight: bold,
+                    ),
                   ),
-                ),
-                Text(
-                  'Collection Activity and Tracking System',
-                  style: blackTextStyle,
-                ),
-              ],
+                  Text(
+                    'Collection Activity and Tracking System',
+                    style: blackTextStyle,
+                  ),
+                ],
+              ),
             ),
           ],
         ),
