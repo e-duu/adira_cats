@@ -24,19 +24,46 @@ class LoginPage extends StatelessWidget {
 
     Widget content(){
       return Container(
-        width: double.infinity,
         child: Column(
           children: [
             Container(
+              width: double.infinity,
+              margin: EdgeInsets.only(top: 291),
+              padding: EdgeInsets.symmetric(
+                horizontal: 36,
+                vertical: 36,
+              ),
               decoration: BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(
-                  'assets/adira_logo_yellow',
-                )
-              )
+                color: kWhiteColor,
+                borderRadius: BorderRadius.circular(18),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  // NOTE : ABOUT
+                  // Text(
+                  //   'About',
+                  //   style: blackTextStyle.copyWith(
+                  //     fontSize: 16,
+                  //     fontWeight: bold,
+                  //   ),
+                  // ),
+                  Container(
+                    width: 240,
+                    height: 40,
+                    margin: EdgeInsets.only(top: 36),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(
+                          'assets/adira_logo_yellow.png',
+                        )
+                      )
+                    ),
+                  )
+                ],
+              ),
             ),
-            )
           ],
         ),
       );
@@ -44,12 +71,14 @@ class LoginPage extends StatelessWidget {
     
     return Scaffold(
       backgroundColor: kWhiteColor,
-      body: SingleChildScrollView(
-        child: Stack(
-          children: [
-            // backgroundImage(),
-            content(),
-          ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Stack(
+            children: [
+              backgroundImage(),
+              content(),
+            ],
+          ),
         ),
       ),
     );
