@@ -17,26 +17,24 @@ class SplashPage extends StatelessWidget {
               height: 42,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/adira_logo.png'),
+                  image: AssetImage('assets/adira_logo_white.png'),
                 ),
               ),
             ),
-            Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    'CATS',
-                    style: blackTextStyle.copyWith(
-                      fontWeight: bold,
-                    ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  'CATS',
+                  style: blackTextStyle.copyWith(
+                    fontWeight: bold,
                   ),
-                  Text(
-                    'Collection Activity and Tracking System',
-                    style: blackTextStyle,
-                  ),
-                ],
-              ),
+                ),
+                Text(
+                  'Collection Activity and Tracking System',
+                  style: blackTextStyle,
+                ),
+              ],
             ),
           ],
         ),
