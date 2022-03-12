@@ -9,37 +9,43 @@ class SplashPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: Center(
-        child: Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 442),
-              width: 240,
-              height: 42,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/adira_logo_white.png'),
+        child: Container(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 442,
+              ),
+              Container(
+                width: 240,
+                height: 42,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/adira_logo_white.png'),
+                  ),
                 ),
               ),
-            ),
-            Spacer(),
-            Container(
-              margin: EdgeInsets.only(bottom: 72),
-              child: Column(
-                children: [
-                  Text(
-                    'CATS',
-                    style: blackTextStyle.copyWith(
-                      fontWeight: bold,
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      'CATS',
+                      style: blackTextStyle.copyWith(
+                        fontWeight: bold,
+                      ),
                     ),
-                  ),
-                  Text(
-                    'Collection Activity and Tracking System',
-                    style: blackTextStyle,
-                  ),
-                ],
+                    Text(
+                      'Collection Activity and Tracking System',
+                      style: blackTextStyle,
+                    ),
+                    SizedBox(
+                      height: 72,
+                    )
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
