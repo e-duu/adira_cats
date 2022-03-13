@@ -85,7 +85,7 @@ class LoginPage extends StatelessWidget {
                     child: CustomInput(
                       hintText: 'Password', 
                       prefixIcon: Icon(Icons.password, color: Colors.grey,),
-                      suffixIcon: Icon(Icons.remove_red_eye_outlined, color: Colors.grey,),
+                      // suffixIcon: Icon(Icons.remove_red_eye_outlined, color: Colors.grey,),
                       hintColor: kGreyColor,
                       filled: true,
                       padding: EdgeInsets.all(2),
@@ -101,7 +101,6 @@ class LoginPage extends StatelessWidget {
                       children: [
                         CustomButton(
                           fontWeight: bold,
-                          borderColor: kPrimaryColor,
                           color: kPrimaryColor,
                           title: 'Login', 
                           width: 142,
@@ -110,9 +109,7 @@ class LoginPage extends StatelessWidget {
                         SizedBox(width: 12,),
                         CustomButton(
                           fontWeight: light,
-                          borderColor: kGreyColor,
                           color: kWhiteColor,
-                          borderWidth: 2,
                           title: 'Reset', 
                           width: 142,
                           onPressed: (){}

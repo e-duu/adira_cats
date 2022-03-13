@@ -15,7 +15,7 @@ class CustomInput extends StatefulWidget {
   const CustomInput({ 
     Key? key,
     required this.hintText,
-    this.prefixIcon,
+    this.prefixIcon = null,
     this.suffixIcon,
     required this.hintColor,
     required this.padding,
@@ -51,7 +51,15 @@ class _CustomInputState extends State<CustomInput> {
         decoration: InputDecoration(
           hintText: widget.hintText,
           prefixIcon: widget.prefixIcon,
-          suffixIcon: widget.suffixIcon,
+          suffixIcon: GestureDetector(
+            onTap: () {
+              _togglePasswordVisibility();
+            },
+            child: Icon(
+              _isHidePassword ? Icons.visibility_off : Icons.visibility,
+              color: kGreyColor,
+            ),
+          ),
           hintStyle: TextStyle(
             color: widget.hintColor
           ),
