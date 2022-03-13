@@ -120,7 +120,7 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Text(
                         'Lupa Password?',
-                        style: blackTextStyle.copyWith(
+                        style: darkGreyTextStyle.copyWith(
                           fontSize: 13,
                           fontWeight: light,
                         ),
@@ -141,7 +141,7 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Text(
                         'Belum punya akun?',
-                        style: blackTextStyle.copyWith(
+                        style: darkGreyTextStyle.copyWith(
                           fontSize: 13,
                           fontWeight: light,
                         ),
@@ -161,14 +161,14 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Text(
                         'CATS',
-                        style: blackTextStyle.copyWith(
+                        style: darkGreyTextStyle.copyWith(
                           fontSize: 11,
                           fontWeight: bold,
                         ),
                       ),
                       Text(
                         'Collection Activity and Tracking System',
-                        style: blackTextStyle.copyWith(
+                        style: darkGreyTextStyle.copyWith(
                           fontSize: 11,
                           fontWeight: light,
                         ),
