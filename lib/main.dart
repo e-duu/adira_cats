@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
       // home: OtpPage(),
       // home: SplashPage(),
       // home: SuccessPage(),
-      home: LoginPage(),
+      // home: LoginPage(),
       // home: ForgotPasswordPage(),
-      // home: TrialPage(),
+      home: TrialPage(),
     );
   }
 }

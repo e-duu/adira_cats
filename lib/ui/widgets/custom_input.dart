@@ -53,11 +53,11 @@ class _CustomInputState extends State<CustomInput> {
           prefixIcon: widget.prefixIcon,
           suffixIcon: GestureDetector(
             onTap: () {
-              _togglePasswordVisibility();
+              _togglePasswordVisibility(); 
             },
             child: Icon(
               _isHidePassword ? Icons.visibility_off : Icons.visibility,
-              color: kGreyColor,
+              color: kDarkGreyColor,
             ),
           ),
           hintStyle: TextStyle(

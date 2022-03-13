@@ -1,6 +1,7 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_icon_upload.dart';
+import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_menu.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,10 @@ class TrialPage extends StatelessWidget {
             // ),
 
             // NOTE: CUSTOM BUTTON
-            // CustomButton(title: "Ok", onPressed: () {}, color: kGreyColor, fontWeight: FontWeight)
+            // CustomButton(title: "Ok", onPressed: () {}, color: kDarkGreyColor, fontWeight: FontWeight.bold)
+
+            // NOTE: CUSTOM INPUT
+            CustomInput(hintText: "Email", hintColor: kDarkGreyColor, padding: EdgeInsets.only(top: 5), margin: EdgeInsets.symmetric(horizontal: 36))
 
             // NOTE: CUSTOM ICON UPLOAD
             // CustomIconUpload(text: 'Tambahkan\nFoto KTP'),
