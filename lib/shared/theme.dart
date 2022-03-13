@@ -8,6 +8,7 @@ Color kPrimaryColor = Color(0XFFFFEB00);
 Color kBlackColor = Color(0XFF212121);
 Color kRedColor = Color(0XFFFF0F0F);
 Color kWhiteColor = Color(0XFFFFFFFF);
+Color kGreyColor = Color(0XFFF6F6F6);
 
 TextStyle primaryTextStyle = GoogleFonts.poppins(
   color: kPrimaryColor,
