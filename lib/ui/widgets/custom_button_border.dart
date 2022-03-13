@@ -29,19 +29,14 @@ class CustomButtonBorder extends StatelessWidget {
       width: width,
       height: 50,
       margin: margin,
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: borderColor,
-          width: borderWidth,
-        ),
-      ),
-      child: TextButton(
+      child: OutlinedButton(
         onPressed: onPressed,
-        style: TextButton.styleFrom(
+        style: OutlinedButton.styleFrom(
           backgroundColor: color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
           ),
+          side: BorderSide(color: borderColor, width: borderWidth),
         ),
         child: Text(
           title,
