@@ -6,7 +6,8 @@ class CustomInput extends StatefulWidget {
   final String hintText;
   final bool autocorrect;
   final bool filled;
-  final Icon? icon;
+  final Widget? prefixIcon;
+  final Widget? suffixIcon;
   final Color hintColor;
   final EdgeInsets padding;
   final EdgeInsets margin;
@@ -14,7 +15,8 @@ class CustomInput extends StatefulWidget {
   const CustomInput({ 
     Key? key,
     required this.hintText,
-    this.icon,
+    this.prefixIcon,
+    this.suffixIcon,
     required this.hintColor,
     required this.padding,
     required this.margin,
@@ -48,7 +50,8 @@ class _CustomInputState extends State<CustomInput> {
         obscureText: _isHidePassword,
         decoration: InputDecoration(
           hintText: widget.hintText,
-          prefixIcon: widget.icon,
+          prefixIcon: widget.prefixIcon,
+          suffixIcon: widget.suffixIcon,
           hintStyle: TextStyle(
             color: widget.hintColor
           ),

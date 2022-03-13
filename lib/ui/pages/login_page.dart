@@ -67,10 +67,13 @@ class LoginPage extends StatelessWidget {
                     ),
                     child: CustomInput(
                       hintText: 'User ID', 
-                      icon: Icon(Icons.account_circle_outlined, color: Colors.grey,),
+                      prefixIcon: Icon(Icons.account_circle_outlined, color: Colors.grey,),
                       hintColor: kGreyColor,
                       filled: true,
                       padding: EdgeInsets.all(2),
+                      margin: EdgeInsets.symmetric(
+                        horizontal: 36
+                      ),
                     ),
                   ),
                   Container(
@@ -81,10 +84,14 @@ class LoginPage extends StatelessWidget {
                     ),
                     child: CustomInput(
                       hintText: 'Password', 
-                      icon: Icon(Icons.password, color: Colors.grey,),
+                      prefixIcon: Icon(Icons.password, color: Colors.grey,),
+                      suffixIcon: Icon(Icons.remove_red_eye_outlined, color: Colors.grey,),
                       hintColor: kGreyColor,
                       filled: true,
                       padding: EdgeInsets.all(2),
+                      margin: EdgeInsets.symmetric(
+                        horizontal: 36
+                      ),
                     ),
                   ),
                   SizedBox(height: 24,),
@@ -160,14 +167,14 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Text(
                         'CATS',
-                        style: greyTextStyle.copyWith(
+                        style: blackTextStyle.copyWith(
                           fontSize: 11,
                           fontWeight: bold,
                         ),
                       ),
                       Text(
                         'Collection Activity and Tracking System',
-                        style: greyTextStyle.copyWith(
+                        style: blackTextStyle.copyWith(
                           fontSize: 11,
                           fontWeight: light,
                         ),
