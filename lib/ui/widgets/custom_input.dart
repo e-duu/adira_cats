@@ -57,7 +57,7 @@ class _CustomInputState extends State<CustomInput> {
             },
             child: Icon(
               _isHidePassword ? Icons.visibility_off : Icons.visibility,
-              color: kGreyColor,
+              color: kDarkGreyColor,
             ),
           ),
           hintStyle: TextStyle(

@@ -1,5 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -68,11 +69,11 @@ class LoginPage extends StatelessWidget {
                     child: CustomInput(
                       hintText: 'User ID', 
                       prefixIcon: Icon(Icons.account_circle_outlined, color: Colors.grey,),
-                      hintColor: kGreyColor,
+                      hintColor: kDarkGreyColor,
                       filled: true,
                       padding: EdgeInsets.all(2),
                       margin: EdgeInsets.symmetric(
-                        horizontal: 36
+                        horizontal: 0
                       ),
                     ),
                   ),
@@ -85,16 +86,32 @@ class LoginPage extends StatelessWidget {
                     child: CustomInput(
                       hintText: 'Password', 
                       prefixIcon: Icon(Icons.password, color: Colors.grey,),
-                      // suffixIcon: Icon(Icons.remove_red_eye_outlined, color: Colors.grey,),
-                      hintColor: kGreyColor,
+                      suffixIcon: Icon(Icons.remove_red_eye_outlined, color: Colors.grey,),
+                      hintColor: kDarkGreyColor,
                       filled: true,
                       padding: EdgeInsets.all(2),
                       margin: EdgeInsets.symmetric(
-                        horizontal: 36
+                        horizontal: 0
                       ),
                     ),
                   ),
                   SizedBox(height: 24,),
+                  // CustomButton(
+                  //         fontWeight: bold,
+                  //         color: kPrimaryColor,
+                  //         title: 'Login', 
+                  //         width: 142,
+                  //         onPressed: (){}
+                  //       ),
+                  //       SizedBox(width: 12,),
+                  //       CustomButtonBorder(
+                  //         title: 'Reset', 
+                  //         onPressed: (){},
+                  //         borderColor: kGreyColor, 
+                  //         borderWidth: 2, 
+                  //         width: 142,
+                  //         fontWeight: light,
+                  //         ),
                   Container(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -107,12 +124,13 @@ class LoginPage extends StatelessWidget {
                           onPressed: (){}
                         ),
                         SizedBox(width: 12,),
-                        CustomButton(
-                          fontWeight: light,
-                          color: kWhiteColor,
+                        CustomButtonBorder(
                           title: 'Reset', 
+                          onPressed: (){},
+                          borderColor: kDarkGreyColor, 
+                          borderWidth: 2, 
                           width: 142,
-                          onPressed: (){}
+                          fontWeight: light,
                         ),
                       ],
                     ),
