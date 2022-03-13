@@ -6,14 +6,16 @@ class CustomInput extends StatelessWidget {
   final String hintText;
   final bool autocorrect;
   final bool filled;
-  final Icon icon;
+  final Widget? prefixIcon;
+  final Widget? suffixIcon;
   final Color hintColor;
   final EdgeInsets padding;
   
   const CustomInput({ 
     Key? key,
     required this.hintText,
-    required this.icon,
+    this.prefixIcon,
+    this.suffixIcon,
     required this.hintColor,
     required this.padding,
     this.autocorrect = false,
@@ -29,7 +31,8 @@ class CustomInput extends StatelessWidget {
         autocorrect: true,
         decoration: InputDecoration(
           hintText: hintText,
-          prefixIcon: icon,
+          prefixIcon: prefixIcon,
+          suffixIcon: suffixIcon,
           hintStyle: TextStyle(
             color: hintColor
           ),
