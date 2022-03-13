@@ -1,3 +1,5 @@
+import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_icon_upload.dart';
 import 'package:adira_cats/ui/widgets/custom_menu.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -28,6 +30,9 @@ class TrialPage extends StatelessWidget {
             //   ),
             //   onTap: () => {},
             // ),
+
+            // NOTE: CUSTOM BUTTON
+            // CustomButton(title: "Ok", onPressed: () {}, color: kGreyColor, fontWeight: FontWeight)
 
             // NOTE: CUSTOM ICON UPLOAD
             // CustomIconUpload(text: 'Tambahkan\nFoto KTP'),
