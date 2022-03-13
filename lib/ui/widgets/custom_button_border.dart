@@ -8,7 +8,7 @@ class CustomButtonBorder extends StatelessWidget {
   final Color borderColor;
   final double borderWidth;
   final EdgeInsets margin;
-  final Color color;
+  // final Color color;
   final FontWeight fontWeight;
 
   const CustomButtonBorder({
@@ -16,7 +16,7 @@ class CustomButtonBorder extends StatelessWidget {
     required this.title,
     this.width = double.infinity,
     required this.onPressed,
-    required this.color,
+    // required this.color,
     required this.borderColor,
     required this.borderWidth,
     required this.fontWeight,
@@ -32,7 +32,7 @@ class CustomButtonBorder extends StatelessWidget {
       child: OutlinedButton(
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(
-          backgroundColor: color,
+          // backgroundColor: color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
           ),
