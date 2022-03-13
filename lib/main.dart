@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       // home: SplashPage(),
       // home: SuccessPage(),
       home: LoginPage(),
+      // home: SuccessPage(),
       // home: LoginPage(),
       // home: TrialPage(),
     );

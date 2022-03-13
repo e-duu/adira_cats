@@ -8,7 +8,7 @@ Color kPrimaryColor = Color(0XFFFFEB00);
 Color kBlackColor = Color(0XFF212121);
 Color kRedColor = Color(0XFFFF0F0F);
 Color kWhiteColor = Color(0XFFFFFFFF);
-Color kGreyColor = Color(0XFFF6F6F6);
+Color kGreyColor = Color(0XFF212121).withOpacity(0.24);
 Color kTransparent = Colors.transparent;
 
 TextStyle primaryTextStyle = GoogleFonts.poppins(
@@ -24,7 +24,7 @@ TextStyle redTextStyle = GoogleFonts.poppins(
 );
 
 TextStyle greyTextStyle = GoogleFonts.poppins(
-  color: kRedColor,
+  color: kGreyColor,
 );
 
 

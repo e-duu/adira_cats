@@ -16,11 +16,11 @@ class SuccessPage extends StatelessWidget {
           Expanded(
             child: Center(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     width: 140,
                     height: 140,
-                    margin: EdgeInsets.only(bottom: 36, top: 230),
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
@@ -75,6 +75,7 @@ class SuccessPage extends StatelessWidget {
               ),
               borderColor: kTransparent,
               color: kPrimaryColor,
+              fontWeight: bold,
             ),
           ),
         ],

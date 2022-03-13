@@ -122,6 +122,7 @@ class LoginPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomButton(
+                          fontWeight: bold,
                           borderColor: kPrimaryColor,
                           color: kPrimaryColor,
                           title: 'Login', 
@@ -130,6 +131,7 @@ class LoginPage extends StatelessWidget {
                         ),
                         SizedBox(width: 12,),
                         CustomButton(
+                          fontWeight: light,
                           borderColor: kGreyColor,
                           color: kWhiteColor,
                           borderWidth: 2,
@@ -139,79 +141,68 @@ class LoginPage extends StatelessWidget {
                         ),
                       ],
                     ),
+                  ),
+                  SizedBox(height: 36,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Lupa Password?',
+                        style: blackTextStyle.copyWith(
+                          fontSize: 13,
+                          fontWeight: light,
+                        ),
+                      ),
+                      SizedBox(width: 2,),
+                      Text(
+                        'Klik di Sini',
+                        style: blackTextStyle.copyWith(
+                          fontSize: 13,
+                          fontWeight: bold,
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 24,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Belum punya akun?',
+                        style: blackTextStyle.copyWith(
+                          fontSize: 13,
+                          fontWeight: light,
+                        ),
+                      ),
+                      SizedBox(width: 2,),
+                      Text(
+                        'Daftar',
+                        style: blackTextStyle.copyWith(
+                          fontSize: 13,
+                          fontWeight: bold,
+                        ),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 72,),
+                  Column(
+                    children: [
+                      Text(
+                        'CATS',
+                        style: blackTextStyle.copyWith(
+                          fontSize: 11,
+                          fontWeight: bold,
+                        ),
+                      ),
+                      Text(
+                        'Collection Activity and Tracking System',
+                        style: blackTextStyle.copyWith(
+                          fontSize: 11,
+                          fontWeight: light,
+                        ),
+                      )
+                    ],
                   )
-                  // SizedBox(height: 24,),
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //   children: [
-                  //     CustomButton(
-                  //       title: 'Login', 
-                  //       onPressed: (){}
-                  //     ),
-                  //     SizedBox(width: 12,),
-                  //     CustomButton(
-                  //       title: 'Reset', 
-                  //       onPressed: (){}
-                  //     ),
-                  //   ],
-                  // ),
-                  // SizedBox(height: 36,),
-                  // Row(
-                  //   children: [
-                  //     Text(
-                  //       'Lupa Password?',
-                  //       style: greyTextStyle.copyWith(
-                  //         fontSize: 13,
-                  //         fontWeight: light,
-                  //       ),
-                  //     ),
-                  //     Text(
-                  //       'Klik di Sini',
-                  //       style: greyTextStyle.copyWith(
-                  //         fontSize: 13,
-                  //         fontWeight: bold,
-                  //       ),
-                  //     )
-                  //   ],
-                  // ),
-                  // SizedBox(height: 24,),
-                  // Row(
-                  //   children: [
-                  //     Text(
-                  //       'Belum punya akun?',
-                  //       style: greyTextStyle.copyWith(
-                  //         fontSize: 13,
-                  //         fontWeight: light,
-                  //       ),
-                  //     ),
-                  //     Text(
-                  //       'Daftar',
-                  //       style: greyTextStyle.copyWith(
-                  //         fontSize: 13,
-                  //         fontWeight: bold,
-                  //       ),
-                  //     )
-                  //   ],
-                  // ),
-                  // SizedBox(height: 72,),
-                  // Column(
-                  //   children: [
-                  //     Text(
-                  //       'CATS',
-                  //       style: greyTextStyle.copyWith(
-                  //         fontSize: 11,
-                  //         fontWeight: bold,
-                  //       ),
-                  //     ),
-                  //     Text(
-                  //       'Collection Activity and Tracking System',
-                  //       style: greyTextStyle.copyWith(
-                  //         fontSize: 11,
-                  //         fontWeight: light,
-                  //       ),
-                  //     )
-                  //   ],
-                  // )
                 ],
               ),
             ),
