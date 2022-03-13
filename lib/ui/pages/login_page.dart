@@ -1,5 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widget/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
@@ -74,7 +74,7 @@ class LoginPage extends StatelessWidget {
                     autocorrect: true,
                     decoration: InputDecoration(
                       hintText: 'User ID',
-                      prefixIcon: Icon(Icons.password, color: Colors.grey,),
+                      prefixIcon: Icon(Icons.account_circle_outlined, color: Colors.grey,),
                       hintStyle: TextStyle(color: Colors.grey),
                       filled: true,
                       fillColor: kGreyColor,
@@ -91,7 +91,6 @@ class LoginPage extends StatelessWidget {
 
                     
                   ),
-                  // SizedBox(height: 12,),
                   Container(
                     width: double.infinity,
                     padding: EdgeInsets.symmetric(
@@ -117,18 +116,23 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),)
                   ),
-
+                  SizedBox(height: 24,),
                   Container(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomButton(
+                          borderColor: kPrimaryColor,
+                          color: kPrimaryColor,
                           title: 'Login', 
                           width: 142,
                           onPressed: (){}
                         ),
                         SizedBox(width: 12,),
                         CustomButton(
+                          borderColor: kGreyColor,
+                          color: kWhiteColor,
+                          borderWidth: 2,
                           title: 'Reset', 
                           width: 142,
                           onPressed: (){}
