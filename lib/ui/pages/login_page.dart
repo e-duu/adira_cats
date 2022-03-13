@@ -96,22 +96,6 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 24,),
-                  // CustomButton(
-                  //         fontWeight: bold,
-                  //         color: kPrimaryColor,
-                  //         title: 'Login', 
-                  //         width: 142,
-                  //         onPressed: (){}
-                  //       ),
-                  //       SizedBox(width: 12,),
-                  //       CustomButtonBorder(
-                  //         title: 'Reset', 
-                  //         onPressed: (){},
-                  //         borderColor: kGreyColor, 
-                  //         borderWidth: 2, 
-                  //         width: 142,
-                  //         fontWeight: light,
-                  //         ),
                   Container(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
