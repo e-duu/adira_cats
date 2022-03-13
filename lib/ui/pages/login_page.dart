@@ -1,4 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/widget/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
@@ -85,7 +86,10 @@ class LoginPage extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(10.0)),
                         borderSide: BorderSide(color: kGreyColor, width: 2),
                       ),
-                    ),)
+                    ),
+                    ),
+
+                    
                   ),
                   // SizedBox(height: 12,),
                   Container(
@@ -113,6 +117,97 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),)
                   ),
+
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CustomButton(
+                          title: 'Login', 
+                          width: 142,
+                          onPressed: (){}
+                        ),
+                        SizedBox(width: 12,),
+                        CustomButton(
+                          title: 'Reset', 
+                          width: 142,
+                          onPressed: (){}
+                        ),
+                      ],
+                    ),
+                  )
+                  // SizedBox(height: 24,),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //   children: [
+                  //     CustomButton(
+                  //       title: 'Login', 
+                  //       onPressed: (){}
+                  //     ),
+                  //     SizedBox(width: 12,),
+                  //     CustomButton(
+                  //       title: 'Reset', 
+                  //       onPressed: (){}
+                  //     ),
+                  //   ],
+                  // ),
+                  // SizedBox(height: 36,),
+                  // Row(
+                  //   children: [
+                  //     Text(
+                  //       'Lupa Password?',
+                  //       style: greyTextStyle.copyWith(
+                  //         fontSize: 13,
+                  //         fontWeight: light,
+                  //       ),
+                  //     ),
+                  //     Text(
+                  //       'Klik di Sini',
+                  //       style: greyTextStyle.copyWith(
+                  //         fontSize: 13,
+                  //         fontWeight: bold,
+                  //       ),
+                  //     )
+                  //   ],
+                  // ),
+                  // SizedBox(height: 24,),
+                  // Row(
+                  //   children: [
+                  //     Text(
+                  //       'Belum punya akun?',
+                  //       style: greyTextStyle.copyWith(
+                  //         fontSize: 13,
+                  //         fontWeight: light,
+                  //       ),
+                  //     ),
+                  //     Text(
+                  //       'Daftar',
+                  //       style: greyTextStyle.copyWith(
+                  //         fontSize: 13,
+                  //         fontWeight: bold,
+                  //       ),
+                  //     )
+                  //   ],
+                  // ),
+                  // SizedBox(height: 72,),
+                  // Column(
+                  //   children: [
+                  //     Text(
+                  //       'CATS',
+                  //       style: greyTextStyle.copyWith(
+                  //         fontSize: 11,
+                  //         fontWeight: bold,
+                  //       ),
+                  //     ),
+                  //     Text(
+                  //       'Collection Activity and Tracking System',
+                  //       style: greyTextStyle.copyWith(
+                  //         fontSize: 11,
+                  //         fontWeight: light,
+                  //       ),
+                  //     )
+                  //   ],
+                  // )
                 ],
               ),
             ),

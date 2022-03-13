@@ -22,6 +22,11 @@ TextStyle redTextStyle = GoogleFonts.poppins(
   color: kRedColor,
 );
 
+TextStyle greyTextStyle = GoogleFonts.poppins(
+  color: kRedColor,
+);
+
+
 FontWeight light = FontWeight.w300;
 FontWeight semibold = FontWeight.w600;
 FontWeight bold = FontWeight.w700;
