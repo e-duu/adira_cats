@@ -1,5 +1,7 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:pin_input_text_field/pin_input_text_field.dart';
+import 'package:sms_autofill/sms_autofill.dart';
 
 class OtpPage extends StatelessWidget {
   const OtpPage({ Key? key }) : super(key: key);
@@ -74,24 +76,73 @@ class OtpPage extends StatelessWidget {
       );
     }
 
-    // Widget Otp(){
-    //   return Scaffold(
-    //     body: Center(
-    //       child: Column(
-    //         mainAxisAlignment: MainAxisAlignment.center,
-    //         children: <Widget>[
-    //           Text('Masukan OTP'),
-    //           Container(
-    //             padding: EdgeInsets.symmetric(horizontal: 50),
-    //             child: PinFieldAutofill(
+    // Widget otp(){
+    //       String _code="";
 
-    //             ),
-    //           ),
-    //         ],
-    //       )
+    //   return Container(
+    //     child: Padding(
+    //       padding:EdgeInsets.symmetric(horizontal: 50, vertical:10),
+          
+    //       child: Container(
+            
+    //         child: PinFieldAutoFill(
+    //            decoration: UnderlineDecoration(
+    //                 textStyle: TextStyle(fontSize: 20, color: Colors.black, fontWeight: bold,),
+    //                 colorBuilder: FixedColorBuilder(Colors.black.withOpacity(0.3)),
+    //               ),
+    //                currentCode: _code,
+    //               onCodeSubmitted: (code) {},
+    //               onCodeChanged: (code) {
+    //                 if (code!.length == 6) {
+    //                   FocusScope.of(context).requestFocus(FocusNode());
+    //                 }
+    //               },
+    //               // currentCode: // prefill with a code
+    //               // onCodeSubmitted: //code submitted callback
+    //               // onCodeChanged: //code changed callback
+    //               codeLength: 6,
+    //         ),
+    //       ),
+          
     //     ),
+        
+        
     //   );
     // }
+
+    Widget otpEmail(){
+      String _code="";
+
+      return Container(
+        child:Column(
+          children: [
+
+            Text(
+              'OTP Email',
+              // style: gra,
+              ),
+            
+      
+            PinFieldAutoFill(
+              
+              decoration: UnderlineDecoration(
+              textStyle: TextStyle(fontSize: 20, color: Colors.black, fontWeight: bold,),
+              colorBuilder: FixedColorBuilder(Colors.black.withOpacity(0.3)),
+              ),
+              currentCode: _code,
+              onCodeSubmitted: (code) {},
+              onCodeChanged: (code) {
+                if (code!.length == 6) {
+                  FocusScope.of(context).requestFocus(FocusNode());
+                }
+              },
+            ),
+           
+          ],
+         
+        )
+      );
+    }
     
     return Scaffold(
       backgroundColor: kWhiteColor,
@@ -102,6 +153,7 @@ class OtpPage extends StatelessWidget {
             children: [
             logo(),
             title(),
+            otpEmail(),
             coba(),
             
         
