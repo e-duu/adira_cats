@@ -1,4 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -40,18 +41,11 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // NOTE : ABOUT
-                  // Text(
-                  //   'About',
-                  //   style: blackTextStyle.copyWith(
-                  //     fontSize: 16,
-                  //     fontWeight: bold,
-                  //   ),
-                  // ),
+                  // NOTE : LOGO
                   Container(
-                    width: 240,
+                    width: 242,
                     height: 40,
-                    margin: EdgeInsets.only(top: 36),
+                    margin: EdgeInsets.only(top: 36, bottom: 48),
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.cover,
@@ -60,7 +54,64 @@ class LoginPage extends StatelessWidget {
                         )
                       )
                     ),
-                  )
+                  ),
+                  Text(
+                    'Login',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 18,
+                      fontWeight: bold
+                    ),
+                  ),
+                  SizedBox(height: 24,),
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(
+                      vertical: 15,
+                      horizontal: 21,
+                    ),
+                    child: TextField(
+                    autocorrect: true,
+                    decoration: InputDecoration(
+                      hintText: 'User ID',
+                      prefixIcon: Icon(Icons.account_circle_outlined, color: Colors.grey,),
+                      hintStyle: TextStyle(color: Colors.grey),
+                      filled: true,
+                      fillColor: kGreyColor,
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                        borderSide: BorderSide(color: kGreyColor, width: 2),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                        borderSide: BorderSide(color: kGreyColor, width: 2),
+                      ),
+                    ),)
+                  ),
+                  // SizedBox(height: 12,),
+                  Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.symmetric(
+                      vertical: 15,
+                      horizontal: 21,
+                    ),
+                    child: TextField(
+                    autocorrect: true,
+                    decoration: InputDecoration(
+                      hintText: 'Password',
+                      prefixIcon: Icon(Icons.password, color: Colors.grey,),
+                      hintStyle: TextStyle(color: Colors.grey),
+                      filled: true,
+                      fillColor: kGreyColor,
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                        borderSide: BorderSide(color: kGreyColor, width: 2),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                        borderSide: BorderSide(color: kGreyColor, width: 2),
+                      ),
+                    ),)
+                  ),
                 ],
               ),
             ),
