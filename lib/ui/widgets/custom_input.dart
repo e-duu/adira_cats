@@ -6,14 +6,14 @@ class CustomInput extends StatelessWidget {
   final String hintText;
   final bool autocorrect;
   final bool filled;
-  final Icon icon;
+  final Icon? icon;
   final Color hintColor;
   final EdgeInsets padding;
   
   const CustomInput({ 
     Key? key,
     required this.hintText,
-    required this.icon,
+    this.icon,
     required this.hintColor,
     required this.padding,
     this.autocorrect = false,

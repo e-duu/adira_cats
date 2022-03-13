@@ -1,8 +1,8 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
 
-class Navbar extends StatelessWidget {
-  const Navbar({ Key? key }) : super(key: key);
+class CustomNavbar extends StatelessWidget {
+  const CustomNavbar({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
