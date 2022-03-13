@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-double defaultMargin = 36.0;
-double defaultRadius = 8.0;
+double defaultMargin = 36;
+double defaultRadius = 8;
 
 Color kPrimaryColor = Color(0XFFFFEB00);
 Color kBlackColor = Color(0XFF212121);
@@ -27,6 +27,11 @@ TextStyle blackTextStyle = GoogleFonts.poppins(
 TextStyle redTextStyle = GoogleFonts.poppins(
   color: kRedColor,
 );
+
+TextStyle greyTextStyle = GoogleFonts.poppins(
+  color: kGreyColor,
+);
+
 
 FontWeight light = FontWeight.w300;
 FontWeight semibold = FontWeight.w600;
