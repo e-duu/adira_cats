@@ -73,7 +73,6 @@ class SuccessPage extends StatelessWidget {
               margin: EdgeInsets.symmetric(
                 horizontal: 36,
               ),
-              borderColor: kTransparent,
               color: kPrimaryColor,
               fontWeight: bold,
             ),

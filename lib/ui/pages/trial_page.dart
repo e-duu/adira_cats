@@ -12,6 +12,7 @@ class TrialPage extends StatelessWidget {
       body: Container(
         child: Column(
           children: [
+            
             // NOTE: CUSTOM NAVBAR
             // CustomNavbar(),
 
