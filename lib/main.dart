@@ -1,5 +1,6 @@
 import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
+import 'package:adira_cats/ui/pages/trial_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: SplashPage(),
-      home: LoginPage(),
+      // home: LoginPage(),
+      home: TrialPage(),
     );
   }
 }
