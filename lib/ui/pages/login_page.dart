@@ -73,7 +73,7 @@ class LoginPage extends StatelessWidget {
                     autocorrect: true,
                     decoration: InputDecoration(
                       hintText: 'User ID',
-                      prefixIcon: Icon(Icons.account_circle_outlined, color: Colors.grey,),
+                      prefixIcon: Icon(Icons.password, color: Colors.grey,),
                       hintStyle: TextStyle(color: Colors.grey),
                       filled: true,
                       fillColor: kGreyColor,
@@ -99,6 +99,7 @@ class LoginPage extends StatelessWidget {
                     decoration: InputDecoration(
                       hintText: 'Password',
                       prefixIcon: Icon(Icons.password, color: Colors.grey,),
+                      suffixIcon: Icon(Icons.remove_red_eye_outlined, color: Colors.grey,),
                       hintStyle: TextStyle(color: Colors.grey),
                       filled: true,
                       fillColor: kGreyColor,
