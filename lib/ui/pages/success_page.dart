@@ -9,50 +9,40 @@ class SuccessPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kWhiteColor,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: CustomButton(
-          title: 'Ok',
-          width: 350,
-          onPressed: () {},
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: Container(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                width: 140,
-                height: 140,
-                margin: EdgeInsets.only(bottom: 36),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      'assets/icon_success.png',
+              Expanded(
+                child: Container(
+                  width: 140,
+                  height: 140,
+                  margin: EdgeInsets.only(bottom: 36),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        'assets/icon_success.png',
+                      ),
                     ),
                   ),
                 ),
               ),
-              Text(
-                'Berhasil!',
-                style: blackTextStyle.copyWith(
-                  fontSize: 18,
-                  fontWeight: bold,
+              Container(
+                margin: EdgeInsets.only(bottom: 72),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    CustomButton(
+                      title: 'Ok',
+                      onPressed: () {},
+                      margin: EdgeInsets.symmetric(
+                        horizontal: 36,
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              SizedBox(
-                height: 24,
-              ),
-              Text(
-                'Akun Edward Einselton sudah terdaftar!\nSilakan Login kembali.',
-                style: blackTextStyle.copyWith(
-                  fontSize: 13,
-                  fontWeight: light,
-                ),
-                textAlign: TextAlign.center,
-              ),
+              )
             ],
           ),
         ),
