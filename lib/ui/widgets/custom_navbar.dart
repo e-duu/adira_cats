@@ -2,7 +2,16 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomNavbar extends StatelessWidget {
-  const CustomNavbar({ Key? key }) : super(key: key);
+
+  final String text;
+  final Widget preffixWidget;
+  final Widget suffixWidget;
+  
+  const CustomNavbar({ 
+    Key? key,
+    required this.preffixWidget,
+    required this.suffixWidget,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +35,11 @@ class CustomNavbar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          IconButton(
-            onPressed: () => {}, 
-            icon: Icon(Icons.subject_sharp)
-          ),
+          preffixWidget,
+          // IconButton(
+          //   onPressed: () => {}, 
+          //   icon: Icon(Icons.subject_sharp)
+          // ),
           Text(
             "Pesan",
             style: blackTextStyle.copyWith(
@@ -37,19 +47,20 @@ class CustomNavbar extends StatelessWidget {
               fontWeight: bold
             ),
           ),
-          Container(
-            width: 48,
-            height: 48,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(
-                  "assets/image_user.png",
-                )
-              )
-            ),
-          )
+          suffixWidget
+          // Container(
+          //   width: 48,
+          //   height: 48,
+          //   decoration: BoxDecoration(
+          //     shape: BoxShape.circle,
+          //     image: DecorationImage(
+          //       fit: BoxFit.cover,
+          //       image: AssetImage(
+          //         "assets/image_user.png",
+          //       )
+          //     )
+          //   ),
+          // )
         ],
       ),
     );

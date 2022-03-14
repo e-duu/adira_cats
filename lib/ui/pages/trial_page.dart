@@ -17,7 +17,7 @@ class TrialPage extends StatelessWidget {
           children: [
             
             // NOTE: CUSTOM NAVBAR
-            // CustomNavbar(),
+            CustomNavbar(suffixWidget: SizedBox(), preffixWidget: SizedBox()),
 
             // NOTE: CUSTOM MENU
             // CustomMenu(
