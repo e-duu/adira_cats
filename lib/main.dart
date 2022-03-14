@@ -15,11 +15,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+
+      /// NOTE: DONE
       // home: OtpPage(),
       // home: SplashPage(),
       // home: SuccessPage(),
       // home: LoginPage(),
       home: ForgotPasswordPage(),
+
+      /// NOTE: ON PROGRESS
       // home: TrialPage(),
     );
   }

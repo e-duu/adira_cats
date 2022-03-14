@@ -1,5 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -68,11 +69,11 @@ class LoginPage extends StatelessWidget {
                     child: CustomInput(
                       hintText: 'User ID', 
                       prefixIcon: Icon(Icons.account_circle_outlined, color: Colors.grey,),
-                      hintColor: kGreyColor,
+                      hintColor: kDarkGreyColor,
                       filled: true,
                       padding: EdgeInsets.all(2),
                       margin: EdgeInsets.symmetric(
-                        horizontal: 36
+                        horizontal: 0
                       ),
                     ),
                   ),
@@ -85,12 +86,12 @@ class LoginPage extends StatelessWidget {
                     child: CustomInput(
                       hintText: 'Password', 
                       prefixIcon: Icon(Icons.password, color: Colors.grey,),
-                      // suffixIcon: Icon(Icons.remove_red_eye_outlined, color: Colors.grey,),
-                      hintColor: kGreyColor,
+                      suffixIcon: Icon(Icons.remove_red_eye_outlined, color: Colors.grey,),
+                      hintColor: kDarkGreyColor,
                       filled: true,
                       padding: EdgeInsets.all(2),
                       margin: EdgeInsets.symmetric(
-                        horizontal: 36
+                        horizontal: 0
                       ),
                     ),
                   ),
@@ -107,12 +108,13 @@ class LoginPage extends StatelessWidget {
                           onPressed: (){}
                         ),
                         SizedBox(width: 12,),
-                        CustomButton(
-                          fontWeight: light,
-                          color: kWhiteColor,
+                        CustomButtonBorder(
                           title: 'Reset', 
+                          onPressed: (){},
+                          borderColor: kDarkGreyColor, 
+                          borderWidth: 2, 
                           width: 142,
-                          onPressed: (){}
+                          fontWeight: light,
                         ),
                       ],
                     ),
@@ -123,7 +125,7 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Text(
                         'Lupa Password?',
-                        style: blackTextStyle.copyWith(
+                        style: darkGreyTextStyle.copyWith(
                           fontSize: 13,
                           fontWeight: light,
                         ),
@@ -144,7 +146,7 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Text(
                         'Belum punya akun?',
-                        style: blackTextStyle.copyWith(
+                        style: darkGreyTextStyle.copyWith(
                           fontSize: 13,
                           fontWeight: light,
                         ),
@@ -164,14 +166,14 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Text(
                         'CATS',
-                        style: blackTextStyle.copyWith(
+                        style: darkGreyTextStyle.copyWith(
                           fontSize: 11,
                           fontWeight: bold,
                         ),
                       ),
                       Text(
                         'Collection Activity and Tracking System',
-                        style: blackTextStyle.copyWith(
+                        style: darkGreyTextStyle.copyWith(
                           fontSize: 11,
                           fontWeight: light,
                         ),
