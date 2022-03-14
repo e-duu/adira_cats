@@ -32,8 +32,10 @@ TextStyle greyTextStyle = GoogleFonts.poppins(
   color: kGreyColor,
 );
 
-
 FontWeight light = FontWeight.w300;
 FontWeight semibold = FontWeight.w600;
 FontWeight bold = FontWeight.w700;
 FontWeight normal = FontWeight.w400;
+
+Icon libraryIcon = Icon(Icons.subject_sharp);
+Icon editIcon = Icon(Icons.edit_outlined);

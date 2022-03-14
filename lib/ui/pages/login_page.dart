@@ -2,7 +2,6 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
-import 'package:adira_cats/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
@@ -74,11 +73,8 @@ class LoginPage extends StatelessWidget {
                   ),
                   Container(
                     width: double.infinity,
-                    padding: EdgeInsets.symmetric(
-                      vertical: 15,
-                      horizontal: 21,
-                    ),
                     child: CustomInput(
+                      contentPadding: EdgeInsets.all(2.0),
                       hintText: 'User ID',
                       prefixIcon: Icon(
                         Icons.account_circle_outlined,
@@ -86,7 +82,6 @@ class LoginPage extends StatelessWidget {
                       ),
                       hintColor: kDarkGreyColor,
                       filled: true,
-                      padding: EdgeInsets.all(0),
                       margin: EdgeInsets.symmetric(
                         horizontal: 0,
                       ),
@@ -100,6 +95,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     child: CustomInput(
                       hintText: 'Password',
+                      contentPadding: EdgeInsets.all(2.0),
                       prefixIcon: Icon(
                         Icons.password,
                         color: Colors.grey,
@@ -107,7 +103,6 @@ class LoginPage extends StatelessWidget {
                       obscureText: true,
                       hintColor: kDarkGreyColor,
                       filled: true,
-                      padding: EdgeInsets.all(2),
                       margin: EdgeInsets.symmetric(
                         horizontal: 0,
                       ),
@@ -121,7 +116,7 @@ class LoginPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomButton(
-                          fontWeight: bold,
+                          // fontWeight: bold,
                           color: kPrimaryColor,
                           title: 'Login',
                           width: 142,
