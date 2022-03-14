@@ -18,11 +18,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       /// NOTE: DONE
-      // home: OtpPage(),
       home: SplashPage(),
+      // home: LoginPage(),
+      // home: OtpPage(),
       // home: VertifivationDonePage(),
       // home: SkDonePage(),
-      // home: LoginPage(),
       // home: ForgotPasswordPage(),
 
       /// NOTE: ON PROGRESS
