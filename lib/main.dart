@@ -1,6 +1,7 @@
 import 'package:adira_cats/ui/pages/forgot_password_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/register_second_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
 import 'package:adira_cats/ui/pages/success_page.dart';
 import 'package:adira_cats/ui/pages/trial_page.dart';
@@ -15,10 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OtpPage(),
+      // home: OtpPage(),
       // home: SplashPage(),
       // home: SuccessPage(),
       // home: LoginPage(),
+      home: RegisterSecondPage(),
       // home: TrialPage(),
       // home: OtpPage(),
       // home: SplashPage(),
