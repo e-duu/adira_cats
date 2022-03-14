@@ -42,7 +42,7 @@ class RegisterSecondPage extends StatelessWidget {
         return CustomInput(
           hintText: 'Nomor Rekening',
           hintColor: kGreyColor,
-          padding: EdgeInsets.symmetric(
+          contentPadding: EdgeInsets.symmetric(
             horizontal: 18,
             vertical: 15,
           ),

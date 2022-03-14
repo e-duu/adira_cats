@@ -6,22 +6,28 @@ class CustomInput extends StatefulWidget {
   final String hintText;
   final bool autocorrect;
   final bool filled;
+  final bool obscureText;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final Color hintColor;
-  final EdgeInsets padding;
-  final EdgeInsets margin;
+  final double borderWidth;
+  final EdgeInsets? margin;
+  final EdgeInsets contentPadding;
+  final double width;
   
   const CustomInput({ 
     Key? key,
     required this.hintText,
+    required this.hintColor,
+    required this.contentPadding,
+    this.margin,
+    this.borderWidth = 0,
+    this.width = double.infinity,
     this.prefixIcon = null,
     this.suffixIcon,
-    required this.hintColor,
-    required this.padding,
-    required this.margin,
     this.autocorrect = false,
     this.filled = false,
+    this.obscureText = false,
   }) : super(key: key);
 
   @override
@@ -38,28 +44,35 @@ class _CustomInputState extends State<CustomInput> {
     });
   }
   
+  Widget suffixPassword(){
+    return GestureDetector(
+      onTap: () {
+        _togglePasswordVisibility(); 
+      },
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        child: Icon(
+          _isHidePassword ? Icons.visibility_off : Icons.visibility,
+          color: kDarkGreyColor,
+        ),
+      ),
+    );
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      padding: widget.padding,
+      width: widget.width,
       margin: widget.margin,
       child: TextFormField(
         autocorrect: true,
         autofocus: false,
-        obscureText: _isHidePassword,
+        obscureText: widget.obscureText ? _isHidePassword : widget.obscureText,
         decoration: InputDecoration(
+          contentPadding: widget.contentPadding,
           hintText: widget.hintText,
           prefixIcon: widget.prefixIcon,
-          suffixIcon: GestureDetector(
-            onTap: () {
-              _togglePasswordVisibility(); 
-            },
-            child: Icon(
-              _isHidePassword ? Icons.visibility_off : Icons.visibility,
-              color: kDarkGreyColor,
-            ),
-          ),
+          suffixIcon: widget.obscureText ? suffixPassword() : null,
           hintStyle: TextStyle(
             color: widget.hintColor
           ),
@@ -67,64 +80,14 @@ class _CustomInputState extends State<CustomInput> {
           fillColor: kGreyColor,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
-            borderSide: BorderSide(color: kDarkGreyColor, width: 2),
+            borderSide: BorderSide(color: kDarkGreyColor, width: widget.borderWidth),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
-            borderSide: BorderSide(color: kDarkGreyColor, width: 2),
+            borderSide: BorderSide(color: kDarkGreyColor, width: widget.borderWidth),
           ),
         ),
       ),
     );
   }
 }
-
-// class CustomInput extends StatelessWidget {
-
-//   final String hintText;
-//   final bool autocorrect;
-//   final bool filled;
-//   final Icon? icon;
-//   final Color hintColor;
-//   final EdgeInsets padding;
-  
-//   const CustomInput({
-//     Key? key,
-//     required this.hintText,
-//     this.icon,
-//     required this.hintColor,
-//     required this.padding,
-//     this.autocorrect = false,
-//     this.filled = false,
-//   }) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       width: double.infinity,
-//       padding: padding,
-//       child: TextFormField(
-//         autocorrect: true,
-//         autofocus: false,
-//         obscureText: _isHidePassword,
-//         decoration: InputDecoration(
-//           hintText: hintText,
-//           prefixIcon: icon,
-//           hintStyle: TextStyle(
-//             color: hintColor
-//           ),
-//           filled: filled,
-//           fillColor: kGreyColor,
-//           enabledBorder: OutlineInputBorder(
-//             borderRadius: BorderRadius.circular(defaultRadius),
-//             borderSide: BorderSide(color: kGreyColor, width: 2),
-//           ),
-//           focusedBorder: OutlineInputBorder(
-//             borderRadius: BorderRadius.circular(defaultRadius),
-//             borderSide: BorderSide(color: kGreyColor, width: 2),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }

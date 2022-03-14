@@ -1,5 +1,9 @@
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/widgets/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:flutter/material.dart';
+import 'package:pin_input_text_field/pin_input_text_field.dart';
+import 'package:sms_autofill/sms_autofill.dart';
 
 class OtpPage extends StatelessWidget {
   const OtpPage({Key? key}) : super(key: key);
@@ -47,8 +51,9 @@ class OtpPage extends StatelessWidget {
       );
     }
 
-    Widget coba() {
+    Widget contentTitle() {
       return Container(
+        margin: EdgeInsets.only(top: 36),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -60,47 +65,174 @@ class OtpPage extends StatelessWidget {
             SizedBox(
               width: 2,
             ),
-            Text('Kirim ulang',
-                style: blackTextStyle.copyWith(
-                  fontSize: 14,
-                  fontWeight: bold,
-                ))
+            Text(
+              'Kirim ulang',
+              style: blackTextStyle.copyWith(
+                fontSize: 14,
+                fontWeight: bold,
+              ),
+            ),
           ],
         ),
       );
     }
 
-    // Widget Otp(){
-    //   return Scaffold(
-    //     body: Center(
-    //       child: Column(
-    //         mainAxisAlignment: MainAxisAlignment.center,
-    //         children: <Widget>[
-    //           Text('Masukan OTP'),
-    //           Container(
-    //             padding: EdgeInsets.symmetric(horizontal: 50),
-    //             child: PinFieldAutofill(
+    Widget otpEmail() {
+      String _code = "";
 
-    //             ),
-    //           ),
-    //         ],
-    //       )
-    //     ),
-    //   );
-    // }
+      return Container(
+        margin: EdgeInsets.only(top: 48),
+        child: Column(
+          children: [
+            Text(
+              'OTP Email',
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13,
+              ),
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 18,
+              ),
+              child: Container(
+                width: 336,
+                margin: EdgeInsets.symmetric(
+                  horizontal: 61,
+                  vertical: 6,
+                ),
+                child: PinFieldAutoFill(
+                  decoration: UnderlineDecoration(
+                    gapSpace: 18,
+                    lineHeight: 4,
+                    textStyle: TextStyle(
+                      fontSize: 24,
+                      height: 0,
+                      color: Colors.black,
+                      fontWeight: bold,
+                    ),
+                    colorBuilder:
+                        FixedColorBuilder(Colors.black.withOpacity(0.3)),
+                  ),
+                  currentCode: _code,
+                  onCodeSubmitted: (code) {},
+                  onCodeChanged: (code) {
+                    if (code!.length == 6) {
+                      FocusScope.of(context).requestFocus(FocusNode());
+                    }
+                  },
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget otpSms() {
+      String _code = "";
+
+      return Container(
+        margin: EdgeInsets.only(top: 48),
+        child: Column(
+          children: [
+            Text(
+              'OTP SMS',
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13,
+              ),
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 18,
+              ),
+              child: Container(
+                width: 336,
+                margin: EdgeInsets.symmetric(
+                  horizontal: 61,
+                  vertical: 6,
+                ),
+                child: PinFieldAutoFill(
+                  decoration: UnderlineDecoration(
+                    gapSpace: 18,
+                    lineHeight: 4,
+                    textStyle: TextStyle(
+                      fontSize: 24,
+                      height: 0,
+                      color: Colors.black,
+                      fontWeight: bold,
+                    ),
+                    colorBuilder:
+                        FixedColorBuilder(Colors.black.withOpacity(0.3)),
+                  ),
+                  currentCode: _code,
+                  onCodeSubmitted: (code) {},
+                  onCodeChanged: (code) {
+                    if (code!.length == 6) {
+                      FocusScope.of(context).requestFocus(FocusNode());
+                    }
+                  },
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget customButtonBorder() {
+      return Container(
+        margin: EdgeInsets.only(
+          bottom: 26,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            CustomButtonBorder(
+              title: 'Kembali',
+              onPressed: () {},
+              borderColor: kDarkGreyColor,
+              borderWidth: 2,
+              fontWeight: normal,
+              width: 356,
+            ),
+            SizedBox(height: 12),
+            CustomButton(
+              title: 'Submit',
+              onPressed: () {},
+              color: kPrimaryColor,
+              width: 356,
+            ),
+          ],
+        ),
+      );
+    }
 
     return Scaffold(
-        backgroundColor: kWhiteColor,
-        body: SafeArea(
-          child: Center(
-            child: ListView(
-              children: [
-                logo(),
-                title(),
-                coba(),
-              ],
-            ),
+      backgroundColor: kWhiteColor,
+      resizeToAvoidBottomInset: false,
+      floatingActionButton: Visibility(
+        child: customButtonBorder(),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      body: SafeArea(
+        child: Center(
+          child: ListView(
+            children: [
+              logo(),
+              title(),
+              otpEmail(),
+              otpSms(),
+              contentTitle(),
+            ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../shared/theme.dart';
+import 'package:adira_cats/shared/theme.dart';
 
 class CustomButton extends StatelessWidget {
   final String title;
@@ -7,16 +7,14 @@ class CustomButton extends StatelessWidget {
   final Function() onPressed;
   final EdgeInsets margin;
   final Color color;
-  final FontWeight fontWeight;
 
   const CustomButton({
     Key? key,
     required this.title,
-    this.width = double.infinity,
     required this.onPressed,
     required this.color,
-    required this.fontWeight,
     this.margin = EdgeInsets.zero,
+    this.width = double.infinity,
   }) : super(key: key);
 
   @override
@@ -37,7 +35,7 @@ class CustomButton extends StatelessWidget {
           title,
           style: blackTextStyle.copyWith(
             fontSize: 12,
-            fontWeight: fontWeight,
+            fontWeight: bold,
           ),
         ),
       ),

@@ -3,8 +3,8 @@ import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
-class SuccessPage extends StatelessWidget {
-  const SuccessPage({Key? key}) : super(key: key);
+class SkDonePage extends StatelessWidget {
+  const SkDonePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +21,11 @@ class SuccessPage extends StatelessWidget {
                   Container(
                     width: 140,
                     height: 140,
+                    margin: EdgeInsets.only(bottom: 36),
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
-                          'assets/icon_success.png',
+                          'assets/icon_sk_done.png',
                         ),
                       ),
                     ),
@@ -42,20 +43,12 @@ class SuccessPage extends StatelessWidget {
                         SizedBox(
                           height: 24,
                         ),
-                        StyledText(
-                          text:
-                              'Akun <bold>Edward Einselton</bold> sudah terdaftar!\nSilakan Login kembali.',
-                          tags: {
-                            'bold': StyledTextTag(
-                              style: TextStyle(fontWeight: bold),
-                            ),
-                          },
+                        Text(
+                          'SK baru berhasil dibuat!',
                           style: blackTextStyle.copyWith(
                             fontWeight: light,
-                            fontSize: 13,
                           ),
-                          textAlign: TextAlign.center,
-                        )
+                        ),
                       ],
                     ),
                   ),
@@ -74,7 +67,6 @@ class SuccessPage extends StatelessWidget {
                 horizontal: 36,
               ),
               color: kPrimaryColor,
-              fontWeight: bold,
             ),
           ),
         ],
