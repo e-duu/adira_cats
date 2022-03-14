@@ -7,7 +7,7 @@ import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
 
 class TrialPage extends StatelessWidget {
-  const TrialPage({ Key? key }) : super(key: key);
+  const TrialPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +15,15 @@ class TrialPage extends StatelessWidget {
       body: Container(
         child: Column(
           children: [
-            
             // NOTE: CUSTOM NAVBAR
-            CustomNavbar(suffixWidget: SizedBox(), preffixWidget: SizedBox()),
+            CustomNavbar(
+                text: 'Omicron',
+                suffixWidget: SizedBox(),
+                preffixWidget: SizedBox()),
 
             // NOTE: CUSTOM MENU
             // CustomMenu(
-            //   imageUrl: "icon_menu1.png", 
+            //   imageUrl: "icon_menu1.png",
             //   text: "Pencarian Unit",
             //   padding: EdgeInsets.only(
             //     top: 26,
@@ -36,7 +38,11 @@ class TrialPage extends StatelessWidget {
             // CustomButton(title: "Ok", onPressed: () {}, color: kDarkGreyColor, fontWeight: FontWeight.bold)
 
             // NOTE: CUSTOM INPUT
-            CustomInput(hintText: "Email", hintColor: kDarkGreyColor, padding: EdgeInsets.only(top: 5), margin: EdgeInsets.symmetric(horizontal: 36))
+            CustomInput(
+                hintText: "Email",
+                hintColor: kDarkGreyColor,
+                padding: EdgeInsets.only(top: 5),
+                margin: EdgeInsets.symmetric(horizontal: 36))
 
             // NOTE: CUSTOM ICON UPLOAD
             // CustomIconUpload(text: 'Tambahkan\nFoto KTP'),

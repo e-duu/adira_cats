@@ -2,13 +2,13 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomNavbar extends StatelessWidget {
-
   final String text;
   final Widget preffixWidget;
   final Widget suffixWidget;
-  
-  const CustomNavbar({ 
+
+  const CustomNavbar({
     Key? key,
+    required this.text,
     required this.preffixWidget,
     required this.suffixWidget,
   }) : super(key: key);
@@ -18,12 +18,7 @@ class CustomNavbar extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 114,
-      padding: EdgeInsets.only(
-        bottom: 30,
-        top: 36,
-        left: 36,
-        right: 36
-      ),
+      padding: EdgeInsets.only(bottom: 30, top: 36, left: 36, right: 36),
       decoration: BoxDecoration(
         color: kPrimaryColor,
         borderRadius: BorderRadius.only(
@@ -37,15 +32,12 @@ class CustomNavbar extends StatelessWidget {
         children: [
           preffixWidget,
           // IconButton(
-          //   onPressed: () => {}, 
+          //   onPressed: () => {},
           //   icon: Icon(Icons.subject_sharp)
           // ),
           Text(
             "Pesan",
-            style: blackTextStyle.copyWith(
-              fontSize: 18,
-              fontWeight: bold
-            ),
+            style: blackTextStyle.copyWith(fontSize: 18, fontWeight: bold),
           ),
           suffixWidget
           // Container(
