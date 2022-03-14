@@ -1,18 +1,16 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
 
-class Menu extends StatelessWidget {
+class CustomMenu extends StatelessWidget {
 
   final String imageUrl;
   final String text;
-  final EdgeInsets padding;
   final Function() onTap;
   
-  const Menu({ 
+  const CustomMenu({ 
     Key? key,
     required this.imageUrl,
     required this.text,
-    required this.padding,
     required this.onTap,
   }) : super(key: key);
 
@@ -23,7 +21,6 @@ class Menu extends StatelessWidget {
       child: Container(
         width: 110,
         height: 110,
-        padding: padding,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
@@ -32,6 +29,8 @@ class Menu extends StatelessWidget {
           )
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               width: 32,

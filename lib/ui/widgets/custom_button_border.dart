@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomButtonBorder extends StatelessWidget {
   final String title;
   final double width;
   final Function() onPressed;
+  final Color borderColor;
+  final double borderWidth;
   final EdgeInsets margin;
-  final Color color;
   final FontWeight fontWeight;
 
-  const CustomButton({
+  const CustomButtonBorder({
     Key? key,
     required this.title,
     this.width = double.infinity,
     required this.onPressed,
-    required this.color,
+    required this.borderColor,
+    required this.borderWidth,
     required this.fontWeight,
     this.margin = EdgeInsets.zero,
   }) : super(key: key);
@@ -25,13 +27,13 @@ class CustomButton extends StatelessWidget {
       width: width,
       height: 50,
       margin: margin,
-      child: TextButton(
+      child: OutlinedButton(
         onPressed: onPressed,
-        style: TextButton.styleFrom(
-          backgroundColor: color,
+        style: OutlinedButton.styleFrom(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
           ),
+          side: BorderSide(color: borderColor, width: borderWidth),
         ),
         child: Text(
           title,
