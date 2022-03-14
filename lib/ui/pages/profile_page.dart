@@ -63,8 +63,8 @@ class ProfilePage extends StatelessWidget {
       return Container(
         margin: EdgeInsets.only(
           top: 18,
-          right: 18,
-          left: 18,
+          right: 36,
+          left: 36,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -78,7 +78,6 @@ class ProfilePage extends StatelessWidget {
             ),
             CustomInput(
               hintText: "Nomor KTP", 
-              contentPadding: EdgeInsets.all(2.0),
               hintColor: kDarkGreyColor,
               margin: EdgeInsets.only(
                 top: 12
@@ -104,11 +103,11 @@ class ProfilePage extends StatelessWidget {
                     ),
                     CustomInput(
                       hintText: "Tempat Lahir", 
-                      contentPadding: EdgeInsets.all(2.0),
                       hintColor: kDarkGreyColor, 
                       margin: EdgeInsets.only(
                         top: 12
                       ),
+                      width: 172,
                     ),
                   ],
                 ),
@@ -124,89 +123,84 @@ class ProfilePage extends StatelessWidget {
                     ),
                     CustomInput(
                       hintText: "Tanggal Lahir", 
-                      contentPadding: EdgeInsets.all(2.0),
                       hintColor: kDarkGreyColor, 
                       margin: EdgeInsets.only(
                         top: 12,
                       ),
+                      width: 172,
                     ),
                   ],
                 ),
               ],
             ),
-            // Text(
-            //   "Alamat KTP",
-            //   style: darkGreyTextStyle.copyWith(
-            //     fontSize: 13,
-            //     fontWeight: semibold,
-            //   ),
-            // ),
-            // CustomTextField(
-            //   hintText: "Alamat KTP",
-            //   maxLines: 2,
-            // ),
-            // Text(
-            //   "Alamat Domisili",
-            //   style: darkGreyTextStyle.copyWith(
-            //     fontSize: 13,
-            //     fontWeight: semibold,
-            //   ),
-            // ),
-            // CustomTextField(
-            //   hintText: "Alamat Domisili",
-            //   maxLines: 2,
-            // ),
-            // Row(
-            //   children: [
-            //     Column(
-            //       children: [
-            //         Text(
-            //           "Email",
-            //           style: darkGreyTextStyle.copyWith(
-            //             fontSize: 13,
-            //             fontWeight: semibold,
-            //           ),
-            //         ),
-            //         CustomInput(
-            //           hintText: "Email", 
-            //           hintColor: kDarkGreyColor, 
-            //           padding: EdgeInsets.symmetric(
-            //             vertical: 15,
-            //             horizontal: 18
-            //           ),
-            //           margin: EdgeInsets.only(
-            //             top: 12
-            //           ),
-            //         ),
-            //       ],
-            //     ),
-            //     SizedBox(
-            //       width: 12,
-            //     ),
-            //     Column(
-            //       children: [
-            //         Text(
-            //           "Nomor Telepon",
-            //           style: darkGreyTextStyle.copyWith(
-            //             fontSize: 13,
-            //             fontWeight: semibold,
-            //           ),
-            //         ),
-            //         CustomInput(
-            //           hintText: "Nomor Telepon", 
-            //           hintColor: kDarkGreyColor, 
-            //           padding: EdgeInsets.symmetric(
-            //             vertical: 15,
-            //             horizontal: 18
-            //           ),
-            //           margin: EdgeInsets.only(
-            //             top: 12
-            //           ),
-            //         ),
-            //       ],
-            //     ),
-            //   ],
-            // ),
+            Text(
+              "Alamat KTP",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13,
+                fontWeight: semibold,
+              ),
+            ),
+            CustomTextField(
+              hintText: "Alamat KTP",
+              maxLines: 2,
+            ),
+            Text(
+              "Alamat Domisili",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13,
+                fontWeight: semibold,
+              ),
+            ),
+            CustomTextField(
+              hintText: "Alamat Domisili",
+              maxLines: 2,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Tempat Lahir",
+                      style: darkGreyTextStyle.copyWith(
+                        fontSize: 13,
+                        fontWeight: semibold,
+                      ),
+                    ),
+                    CustomInput(
+                      hintText: "Tempat Lahir", 
+                      hintColor: kDarkGreyColor, 
+                      margin: EdgeInsets.only(
+                        top: 12
+                      ),
+                      width: 172,
+                    ),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Tanggal Lahir",
+                      style: darkGreyTextStyle.copyWith(
+                        fontSize: 13,
+                        fontWeight: semibold,
+                      ),
+                    ),
+                    CustomInput(
+                      hintText: "Tanggal Lahir", 
+                      hintColor: kDarkGreyColor, 
+                      margin: EdgeInsets.only(
+                        top: 12,
+                      ),
+                      width: 172,
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ],
         ),
       );

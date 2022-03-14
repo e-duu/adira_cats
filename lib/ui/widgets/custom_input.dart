@@ -12,14 +12,12 @@ class CustomInput extends StatefulWidget {
   final Color hintColor;
   final double borderWidth;
   final EdgeInsets? margin;
-  final EdgeInsets contentPadding;
   final double width;
   
   const CustomInput({ 
     Key? key,
     required this.hintText,
     required this.hintColor,
-    required this.contentPadding,
     this.margin,
     this.borderWidth = 0,
     this.width = double.infinity,
@@ -69,7 +67,10 @@ class _CustomInputState extends State<CustomInput> {
         autofocus: false,
         obscureText: widget.obscureText ? _isHidePassword : widget.obscureText,
         decoration: InputDecoration(
-          contentPadding: widget.contentPadding,
+          contentPadding: EdgeInsets.symmetric(
+            horizontal: 18,
+            vertical: 15
+          ),
           hintText: widget.hintText,
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.obscureText ? suffixPassword() : null,
