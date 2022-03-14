@@ -9,17 +9,19 @@ class CustomInput extends StatefulWidget {
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final Color hintColor;
+  final double borderWidth;
   final EdgeInsets padding;
   final EdgeInsets margin;
   
   const CustomInput({ 
     Key? key,
     required this.hintText,
-    this.prefixIcon = null,
-    this.suffixIcon,
     required this.hintColor,
     required this.padding,
     required this.margin,
+    this.borderWidth = 0,
+    this.prefixIcon = null,
+    this.suffixIcon,
     this.autocorrect = false,
     this.filled = false,
   }) : super(key: key);
@@ -67,11 +69,11 @@ class _CustomInputState extends State<CustomInput> {
           fillColor: kGreyColor,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
-            borderSide: BorderSide(color: kDarkGreyColor, width: 2),
+            borderSide: BorderSide(color: kDarkGreyColor, width: widget.borderWidth),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
-            borderSide: BorderSide(color: kDarkGreyColor, width: 2),
+            borderSide: BorderSide(color: kDarkGreyColor, width: widget.borderWidth),
           ),
         ),
       ),
