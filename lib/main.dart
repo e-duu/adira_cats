@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
 
       /// NOTE: DONE
       // home: OtpPage(),
-      home: SplashPage(),
+      // home: SplashPage(),
       // home: VertifivationDonePage(),
       // home: SkDonePage(),
       // home: LoginPage(),
