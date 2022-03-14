@@ -1,6 +1,7 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -15,11 +16,13 @@ class LoginPage extends StatelessWidget {
         width: double.infinity,
         height: 327,
         decoration: BoxDecoration(
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(
-                  'assets/image_login.png',
-                ))),
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage(
+              'assets/image_login.png',
+            ),
+          ),
+        ),
       );
     }
 
@@ -29,7 +32,9 @@ class LoginPage extends StatelessWidget {
           children: [
             Container(
               width: double.infinity,
-              margin: EdgeInsets.only(top: 291),
+              margin: EdgeInsets.only(
+                top: 291,
+              ),
               padding: EdgeInsets.symmetric(
                 horizontal: 36,
                 vertical: 36,
@@ -44,18 +49,25 @@ class LoginPage extends StatelessWidget {
                   Container(
                     width: 242,
                     height: 40,
-                    margin: EdgeInsets.only(top: 36, bottom: 48),
+                    margin: EdgeInsets.only(
+                      top: 36,
+                      bottom: 48,
+                    ),
                     decoration: BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage(
-                              'assets/adira_logo_yellow.png',
-                            ))),
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(
+                          'assets/adira_logo_yellow.png',
+                        ),
+                      ),
+                    ),
                   ),
                   Text(
                     'Login',
-                    style:
-                        blackTextStyle.copyWith(fontSize: 18, fontWeight: bold),
+                    style: blackTextStyle.copyWith(
+                      fontSize: 18,
+                      fontWeight: bold,
+                    ),
                   ),
                   SizedBox(
                     height: 24,
@@ -67,13 +79,16 @@ class LoginPage extends StatelessWidget {
                       horizontal: 21,
                     ),
                     child: CustomInput(
-                      hintText: 'User ID', 
-                      prefixIcon: Icon(Icons.account_circle_outlined, color: Colors.grey,),
+                      hintText: 'User ID',
+                      prefixIcon: Icon(
+                        Icons.account_circle_outlined,
+                        color: Colors.grey,
+                      ),
                       hintColor: kDarkGreyColor,
                       filled: true,
                       padding: EdgeInsets.all(2),
                       margin: EdgeInsets.symmetric(
-                        horizontal: 0
+                        horizontal: 0,
                       ),
                     ),
                   ),
@@ -84,18 +99,26 @@ class LoginPage extends StatelessWidget {
                       horizontal: 21,
                     ),
                     child: CustomInput(
-                      hintText: 'Password', 
-                      prefixIcon: Icon(Icons.password, color: Colors.grey,),
-                      suffixIcon: Icon(Icons.remove_red_eye_outlined, color: Colors.grey,),
+                      hintText: 'Password',
+                      prefixIcon: Icon(
+                        Icons.password,
+                        color: Colors.grey,
+                      ),
+                      suffixIcon: Icon(
+                        Icons.remove_red_eye_outlined,
+                        color: Colors.grey,
+                      ),
                       hintColor: kDarkGreyColor,
                       filled: true,
                       padding: EdgeInsets.all(2),
                       margin: EdgeInsets.symmetric(
-                        horizontal: 0
+                        horizontal: 0,
                       ),
                     ),
                   ),
-                  SizedBox(height: 24,),
+                  SizedBox(
+                    height: 24,
+                  ),
                   Container(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -103,23 +126,27 @@ class LoginPage extends StatelessWidget {
                         CustomButton(
                           fontWeight: bold,
                           color: kPrimaryColor,
-                          title: 'Login', 
+                          title: 'Login',
                           width: 142,
-                          onPressed: (){}
+                          onPressed: () {},
                         ),
-                        SizedBox(width: 12,),
+                        SizedBox(
+                          width: 12,
+                        ),
                         CustomButtonBorder(
-                          title: 'Reset', 
-                          onPressed: (){},
-                          borderColor: kDarkGreyColor, 
-                          borderWidth: 2, 
+                          title: 'Reset',
+                          onPressed: () {},
+                          borderColor: kDarkGreyColor,
+                          borderWidth: 2,
                           width: 142,
                           fontWeight: light,
                         ),
                       ],
                     ),
                   ),
-                  SizedBox(height: 36,),
+                  SizedBox(
+                    height: 36,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -130,7 +157,9 @@ class LoginPage extends StatelessWidget {
                           fontWeight: light,
                         ),
                       ),
-                      SizedBox(width: 2,),
+                      SizedBox(
+                        width: 2,
+                      ),
                       Text(
                         'Klik di Sini',
                         style: blackTextStyle.copyWith(
@@ -140,7 +169,9 @@ class LoginPage extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(height: 24,),
+                  SizedBox(
+                    height: 24,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -151,17 +182,21 @@ class LoginPage extends StatelessWidget {
                           fontWeight: light,
                         ),
                       ),
-                      SizedBox(width: 2,),
+                      SizedBox(
+                        width: 2,
+                      ),
                       Text(
                         'Daftar',
                         style: blackTextStyle.copyWith(
                           fontSize: 13,
                           fontWeight: bold,
                         ),
-                      )
+                      ),
                     ],
                   ),
-                  SizedBox(height: 72,),
+                  SizedBox(
+                    height: 72,
+                  ),
                   Column(
                     children: [
                       Text(
@@ -180,7 +215,7 @@ class LoginPage extends StatelessWidget {
                       )
                     ],
                   ),
-                ]
+                ],
               ),
             ),
           ],

@@ -65,20 +65,8 @@ class ForgotPasswordPage extends StatelessWidget {
         padding: EdgeInsets.all(2),
         margin: EdgeInsets.only(
           top: 20,
-          right: 20,
-          left: 20,
-        ),
-      );
-    }
-
-    Widget header() {
-      return Container(
-        child: Column(
-          children: [
-            logo(),
-            title(),
-            input(),
-          ],
+          right: 18,
+          left: 18,
         ),
       );
     }
@@ -86,7 +74,7 @@ class ForgotPasswordPage extends StatelessWidget {
     Widget button() {
       return Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -94,23 +82,21 @@ class ForgotPasswordPage extends StatelessWidget {
                 CustomButtonBorder(
                   title: 'Kembali',
                   onPressed: () {},
-                  color: kWhiteColor,
                   borderColor: kDarkGreyColor,
                   borderWidth: 2,
                   fontWeight: normal,
-                  width: 172,
+                  width: 180,
                 ),
                 SizedBox(
                   width: 12,
                 ),
                 CustomButtonBorder(
-                  title: 'Kembali',
+                  title: 'Reset',
                   onPressed: () {},
-                  color: kWhiteColor,
                   borderColor: kDarkGreyColor,
                   borderWidth: 2,
                   fontWeight: normal,
-                  width: 172,
+                  width: 180,
                 ),
               ],
             ),
@@ -122,22 +108,26 @@ class ForgotPasswordPage extends StatelessWidget {
               onPressed: () {},
               color: kPrimaryColor,
               fontWeight: bold,
-              margin: EdgeInsets.symmetric(
-                horizontal: 20,
-              ),
-            )
+              margin: EdgeInsets.symmetric(horizontal: 20),
+            ),
           ],
         ),
       );
     }
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
+      floatingActionButton: Visibility(
+        child: button(),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       backgroundColor: kWhiteColor,
       body: SafeArea(
-        child: ListView(
+        child: Column(
           children: [
-            header(),
-            button(),
+            logo(),
+            title(),
+            input(),
           ],
         ),
       ),
