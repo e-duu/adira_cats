@@ -11,16 +11,18 @@ class CustomInput extends StatefulWidget {
   final Widget? suffixIcon;
   final Color hintColor;
   final double borderWidth;
-  final EdgeInsets padding;
-  final EdgeInsets margin;
+  final EdgeInsets? margin;
+  final EdgeInsets contentPadding;
+  final double width;
   
   const CustomInput({ 
     Key? key,
     required this.hintText,
     required this.hintColor,
-    required this.padding,
-    required this.margin,
+    required this.contentPadding,
+    this.margin,
     this.borderWidth = 0,
+    this.width = double.infinity,
     this.prefixIcon = null,
     this.suffixIcon,
     this.autocorrect = false,
@@ -60,14 +62,14 @@ class _CustomInputState extends State<CustomInput> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      padding: widget.padding,
+      width: widget.width,
       margin: widget.margin,
       child: TextFormField(
         autocorrect: true,
         autofocus: false,
         obscureText: widget.obscureText ? _isHidePassword : widget.obscureText,
         decoration: InputDecoration(
+          contentPadding: widget.contentPadding,
           hintText: widget.hintText,
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.obscureText ? suffixPassword() : null,
@@ -89,53 +91,3 @@ class _CustomInputState extends State<CustomInput> {
     );
   }
 }
-
-// class CustomInput extends StatelessWidget {
-
-//   final String hintText;
-//   final bool autocorrect;
-//   final bool filled;
-//   final Icon? icon;
-//   final Color hintColor;
-//   final EdgeInsets padding;
-  
-//   const CustomInput({
-//     Key? key,
-//     required this.hintText,
-//     this.icon,
-//     required this.hintColor,
-//     required this.padding,
-//     this.autocorrect = false,
-//     this.filled = false,
-//   }) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       width: double.infinity,
-//       padding: padding,
-//       child: TextFormField(
-//         autocorrect: true,
-//         autofocus: false,
-//         obscureText: _isHidePassword,
-//         decoration: InputDecoration(
-//           hintText: hintText,
-//           prefixIcon: icon,
-//           hintStyle: TextStyle(
-//             color: hintColor
-//           ),
-//           filled: filled,
-//           fillColor: kGreyColor,
-//           enabledBorder: OutlineInputBorder(
-//             borderRadius: BorderRadius.circular(defaultRadius),
-//             borderSide: BorderSide(color: kGreyColor, width: 2),
-//           ),
-//           focusedBorder: OutlineInputBorder(
-//             borderRadius: BorderRadius.circular(defaultRadius),
-//             borderSide: BorderSide(color: kGreyColor, width: 2),
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }

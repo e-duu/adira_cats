@@ -106,7 +106,6 @@ class ForgotPasswordPage extends StatelessWidget {
               title: 'Submit',
               onPressed: () {},
               color: kPrimaryColor,
-              fontWeight: bold,
               margin: EdgeInsets.symmetric(horizontal: 20),
             ),
           ],
