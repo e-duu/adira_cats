@@ -1,8 +1,9 @@
 import 'package:adira_cats/ui/pages/forgot_password_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/sk_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
-import 'package:adira_cats/ui/pages/success_page.dart';
+import 'package:adira_cats/ui/pages/vertification_done_page.dart';
 import 'package:adira_cats/ui/pages/trial_page.dart';
 import 'package:flutter/material.dart';
 
@@ -18,10 +19,11 @@ class MyApp extends StatelessWidget {
 
       /// NOTE: DONE
       // home: OtpPage(),
-      // home: SplashPage(),
-      // home: SuccessPage(),
+      home: SplashPage(),
+      // home: VertifivationDonePage(),
+      // home: SkDonePage(),
       // home: LoginPage(),
-      home: ForgotPasswordPage(),
+      // home: ForgotPasswordPage(),
 
       /// NOTE: ON PROGRESS
       // home: TrialPage(),
