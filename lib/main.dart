@@ -18,14 +18,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OtpPage(),
-      // home: SplashPage(),
-      // home: SuccessPage(),
 
       /// NOTE: DONE
-      home: SplashPage(),
+      // home: SplashPage(),
       // home: LoginPage(),
-      // home: OtpPage(),
+      home: OtpPage(),
       // home: VertifivationDonePage(),
       // home: SkDonePage(),
       // home: ForgotPasswordPage(),
