@@ -86,7 +86,7 @@ class LoginPage extends StatelessWidget {
                       ),
                       hintColor: kDarkGreyColor,
                       filled: true,
-                      padding: EdgeInsets.all(2),
+                      padding: EdgeInsets.all(0),
                       margin: EdgeInsets.symmetric(
                         horizontal: 0,
                       ),
@@ -104,10 +104,7 @@ class LoginPage extends StatelessWidget {
                         Icons.password,
                         color: Colors.grey,
                       ),
-                      suffixIcon: Icon(
-                        Icons.remove_red_eye_outlined,
-                        color: Colors.grey,
-                      ),
+                      obscureText: true,
                       hintColor: kDarkGreyColor,
                       filled: true,
                       padding: EdgeInsets.all(2),
