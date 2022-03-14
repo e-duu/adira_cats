@@ -17,9 +17,24 @@ class TrialPage extends StatelessWidget {
           children: [
             // NOTE: CUSTOM NAVBAR
             CustomNavbar(
-              suffixWidget: SizedBox(),
-              preffixWidget: SizedBox(),
+              preffixWidget: IconButton(
+                onPressed: () => {},
+                icon: Icon(Icons.subject_sharp)
+              ),
               text: "Pencarian Unit",
+              suffixWidget: Container(
+                width: 48,
+                height: 48,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage(
+                      "assets/image_user.png",
+                    )
+                  )
+                ),
+              ),
             ),
 
             // NOTE: CUSTOM MENU
@@ -40,10 +55,12 @@ class TrialPage extends StatelessWidget {
 
             // NOTE: CUSTOM INPUT
             CustomInput(
-                hintText: "Email",
-                hintColor: kDarkGreyColor,
-                padding: EdgeInsets.only(top: 5),
-                margin: EdgeInsets.symmetric(horizontal: 36))
+              hintText: "Password",
+              hintColor: kDarkGreyColor,
+              padding: EdgeInsets.only(top: 5),
+              margin: EdgeInsets.symmetric(horizontal: 36),
+              obscureText: true,
+            ),
 
             // NOTE: CUSTOM ICON UPLOAD
             // CustomIconUpload(text: 'Tambahkan\nFoto KTP'),

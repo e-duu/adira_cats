@@ -21,10 +21,10 @@ class MyApp extends StatelessWidget {
       // home: SplashPage(),
       // home: SuccessPage(),
       // home: LoginPage(),
-      home: ForgotPasswordPage(),
+      // home: ForgotPasswordPage(),
 
       /// NOTE: ON PROGRESS
-      // home: TrialPage(),
+      home: TrialPage(),
     );
   }
 }

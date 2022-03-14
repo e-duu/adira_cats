@@ -6,6 +6,7 @@ class CustomInput extends StatefulWidget {
   final String hintText;
   final bool autocorrect;
   final bool filled;
+  final bool obscureText;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final Color hintColor;
@@ -24,6 +25,7 @@ class CustomInput extends StatefulWidget {
     this.suffixIcon,
     this.autocorrect = false,
     this.filled = false,
+    this.obscureText = false,
   }) : super(key: key);
 
   @override
@@ -40,6 +42,21 @@ class _CustomInputState extends State<CustomInput> {
     });
   }
   
+  Widget suffixPassword(){
+    return GestureDetector(
+      onTap: () {
+        _togglePasswordVisibility(); 
+      },
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        child: Icon(
+          _isHidePassword ? Icons.visibility_off : Icons.visibility,
+          color: kDarkGreyColor,
+        ),
+      ),
+    );
+  }
+  
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -49,19 +66,11 @@ class _CustomInputState extends State<CustomInput> {
       child: TextFormField(
         autocorrect: true,
         autofocus: false,
-        obscureText: _isHidePassword,
+        obscureText: widget.obscureText ? _isHidePassword : widget.obscureText,
         decoration: InputDecoration(
           hintText: widget.hintText,
           prefixIcon: widget.prefixIcon,
-          suffixIcon: GestureDetector(
-            onTap: () {
-              _togglePasswordVisibility(); 
-            },
-            child: Icon(
-              _isHidePassword ? Icons.visibility_off : Icons.visibility,
-              color: kDarkGreyColor,
-            ),
-          ),
+          suffixIcon: widget.obscureText ? suffixPassword() : null,
           hintStyle: TextStyle(
             color: widget.hintColor
           ),
