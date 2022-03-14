@@ -216,7 +216,10 @@ class OtpPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: kWhiteColor,
-      floatingActionButton: customButtonBorder(),
+      resizeToAvoidBottomInset: false,
+      floatingActionButton: Visibility(
+        child: customButtonBorder(),
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: SafeArea(
         child: Center(
