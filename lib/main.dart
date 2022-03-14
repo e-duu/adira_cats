@@ -21,13 +21,13 @@ class MyApp extends StatelessWidget {
 
       /// NOTE: DONE
       // home: SplashPage(),
-      // home: LoginPage(),
+      home: LoginPage(),
       // home: VertifivationDonePage(),
       // home: SkDonePage(),
       // home: ForgotPasswordPage(),
 
       /// NOTE: ON PROGRESS
-      home: OtpPage(),
+      // home: OtpPage(),
       // home: TrialPage(),
     );
   }
