@@ -1,3 +1,5 @@
+import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/forgot_password_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
@@ -19,16 +21,17 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       /// NOTE: DONE
-      // home: OtpPage(),
       // home: SplashPage(),
+      // home: LoginPage(),
       // home: VertifivationDonePage(),
       // home: SkDonePage(),
-      // home: LoginPage(),
       // home: ForgotPasswordPage(),
 
       /// NOTE: ON PROGRESS
       // home: TrialPage(),
       home: ProfilePage(),
+      // home: OtpPage(),
+      // home: TrialPage(),
     );
   }
 }
