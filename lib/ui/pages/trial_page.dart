@@ -17,9 +17,10 @@ class TrialPage extends StatelessWidget {
           children: [
             // NOTE: CUSTOM NAVBAR
             CustomNavbar(
-                text: 'Omicron',
-                suffixWidget: SizedBox(),
-                preffixWidget: SizedBox()),
+              suffixWidget: SizedBox(),
+              preffixWidget: SizedBox(),
+              text: "Pencarian Unit",
+            ),
 
             // NOTE: CUSTOM MENU
             // CustomMenu(
