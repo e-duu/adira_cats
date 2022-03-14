@@ -2,8 +2,7 @@ import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:flutter/material.dart';
-
-import '../../shared/theme.dart';
+import 'package:adira_cats/shared/theme.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
   const ForgotPasswordPage({Key? key}) : super(key: key);
