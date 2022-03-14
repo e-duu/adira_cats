@@ -42,34 +42,8 @@ class OtpPage extends StatelessWidget {
             Text(
               'Masukkan kode OTP yang Anda terima dari kami.',
               style: blackTextStyle.copyWith(
-                fontSize: 14,
+                fontSize: 13,
                 fontWeight: light,
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-
-    Widget contentTitle() {
-      return Container(
-        margin: EdgeInsets.only(top: 36),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Belum menerima kode?',
-                style: blackTextStyle.copyWith(
-                  fontSize: 14,
-                  fontWeight: light,
-                )),
-            SizedBox(
-              width: 2,
-            ),
-            Text(
-              'Kirim ulang',
-              style: blackTextStyle.copyWith(
-                fontSize: 14,
-                fontWeight: bold,
               ),
             ),
           ],
@@ -131,7 +105,7 @@ class OtpPage extends StatelessWidget {
       );
     }
 
-    Widget otpSms() {
+    Widget otpMessage() {
       String _code = "";
 
       return Container(
@@ -185,7 +159,81 @@ class OtpPage extends StatelessWidget {
       );
     }
 
-    Widget customButtonBorder() {
+    Widget contentTitle() {
+      return Container(
+        margin: EdgeInsets.only(top: 36),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Belum menerima kode?',
+              style: blackTextStyle.copyWith(
+                fontSize: 14,
+                fontWeight: light,
+              ),
+            ),
+            SizedBox(
+              width: 2,
+            ),
+            TextButton(
+              onPressed: () => showDialog<String>(
+                context: context,
+                builder: (BuildContext context) => Container(
+                  width: double.infinity,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 2,
+                    vertical: 48,
+                  ),
+                  child: AlertDialog(
+                    titlePadding: EdgeInsets.only(
+                      top: 10,
+                    ),
+                    title: Text(
+                      'Kode Dikirim',
+                      style: blackTextStyle.copyWith(
+                        fontWeight: bold,
+                        fontSize: 18,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    content: Text(
+                      'Kode telah dikirim ulang ke email Anda.',
+                      style: blackTextStyle.copyWith(
+                        fontSize: 13,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    actions: <Widget>[
+                      CustomButton(
+                        title: 'Ok',
+                        onPressed: () => Navigator.pop(context, 'OK'),
+                        color: kPrimaryColor,
+                        fontWeight: bold,
+                      ),
+                    ],
+                    actionsPadding: EdgeInsets.only(
+                      bottom: 10,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                  ),
+                ),
+              ),
+              child: Text(
+                'Kirim ulang',
+                style: blackTextStyle.copyWith(
+                  fontSize: 14,
+                  fontWeight: bold,
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget button() {
       return Container(
         margin: EdgeInsets.only(
           bottom: 26,
@@ -199,15 +247,21 @@ class OtpPage extends StatelessWidget {
               borderColor: kDarkGreyColor,
               borderWidth: 2,
               fontWeight: normal,
-              width: 356,
+              margin: EdgeInsets.symmetric(
+                horizontal: 36,
+              ),
             ),
-            SizedBox(height: 12),
+            SizedBox(
+              height: 12,
+            ),
             CustomButton(
               title: 'Submit',
               onPressed: () {},
               color: kPrimaryColor,
               fontWeight: normal,
-              width: 356,
+              margin: EdgeInsets.symmetric(
+                horizontal: 36,
+              ),
             ),
           ],
         ),
@@ -218,7 +272,7 @@ class OtpPage extends StatelessWidget {
       backgroundColor: kWhiteColor,
       resizeToAvoidBottomInset: false,
       floatingActionButton: Visibility(
-        child: customButtonBorder(),
+        child: button(),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: SafeArea(
@@ -228,7 +282,7 @@ class OtpPage extends StatelessWidget {
               logo(),
               title(),
               otpEmail(),
-              otpSms(),
+              otpMessage(),
               contentTitle(),
             ],
           ),

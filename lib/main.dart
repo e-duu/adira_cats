@@ -5,7 +5,7 @@ import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/sk_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
-import 'package:adira_cats/ui/pages/vertification_done_page.dart';
+import 'package:adira_cats/ui/pages/verification_done_page.dart';
 import 'package:adira_cats/ui/pages/trial_page.dart';
 import 'package:flutter/material.dart';
 
@@ -22,12 +22,12 @@ class MyApp extends StatelessWidget {
       /// NOTE: DONE
       // home: SplashPage(),
       // home: LoginPage(),
-      // home: VertifivationDonePage(),
+      // home: VerificationDonePage(),
       // home: SkDonePage(),
       // home: ForgotPasswordPage(),
+      home: OtpPage(),
 
       /// NOTE: ON PROGRESS
-      home: OtpPage(),
       // home: TrialPage(),
     );
   }

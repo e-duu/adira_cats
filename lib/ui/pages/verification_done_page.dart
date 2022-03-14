@@ -3,8 +3,8 @@ import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
-class VertifivationDonePage extends StatelessWidget {
-  const VertifivationDonePage({Key? key}) : super(key: key);
+class VerificationDonePage extends StatelessWidget {
+  const VerificationDonePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
