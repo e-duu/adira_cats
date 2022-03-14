@@ -2,6 +2,7 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_icon_upload.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
+import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:adira_cats/ui/widgets/custom_menu.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +18,24 @@ class TrialPage extends StatelessWidget {
           children: [
             // NOTE: CUSTOM NAVBAR
             CustomNavbar(
-              suffixWidget: SizedBox(),
-              preffixWidget: SizedBox(),
+              preffixWidget: IconButton(
+                onPressed: () => {},
+                icon: Icon(Icons.subject_sharp)
+              ),
               text: "Pencarian Unit",
+              suffixWidget: Container(
+                width: 48,
+                height: 48,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage(
+                      "assets/image_user.png",
+                    )
+                  )
+                ),
+              ),
             ),
 
             // NOTE: CUSTOM MENU
@@ -40,10 +56,18 @@ class TrialPage extends StatelessWidget {
 
             // NOTE: CUSTOM INPUT
             CustomInput(
-                hintText: "Email",
-                hintColor: kDarkGreyColor,
-                padding: EdgeInsets.only(top: 5),
-                margin: EdgeInsets.symmetric(horizontal: 36))
+              hintText: "Password",
+              hintColor: kDarkGreyColor,
+              padding: EdgeInsets.only(top: 5),
+              margin: EdgeInsets.symmetric(horizontal: 36),
+              obscureText: true,
+            ),
+
+            SizedBox(
+              height: 10,
+            ),
+
+            CustomLogoAdira(text: "Daftar Sebagai Informan")
 
             // NOTE: CUSTOM ICON UPLOAD
             // CustomIconUpload(text: 'Tambahkan\nFoto KTP'),

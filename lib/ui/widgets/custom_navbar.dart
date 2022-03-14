@@ -31,28 +31,11 @@ class CustomNavbar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           preffixWidget,
-          // IconButton(
-          //   onPressed: () => {},
-          //   icon: Icon(Icons.subject_sharp)
-          // ),
           Text(
-            "Pesan",
+            text,
             style: blackTextStyle.copyWith(fontSize: 18, fontWeight: bold),
           ),
           suffixWidget
-          // Container(
-          //   width: 48,
-          //   height: 48,
-          //   decoration: BoxDecoration(
-          //     shape: BoxShape.circle,
-          //     image: DecorationImage(
-          //       fit: BoxFit.cover,
-          //       image: AssetImage(
-          //         "assets/image_user.png",
-          //       )
-          //     )
-          //   ),
-          // )
         ],
       ),
     );
