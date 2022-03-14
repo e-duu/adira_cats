@@ -208,7 +208,6 @@ class OtpPage extends StatelessWidget {
                         title: 'Ok',
                         onPressed: () => Navigator.pop(context, 'OK'),
                         color: kPrimaryColor,
-                        fontWeight: bold,
                       ),
                     ],
                     actionsPadding: EdgeInsets.only(
@@ -258,7 +257,6 @@ class OtpPage extends StatelessWidget {
               title: 'Submit',
               onPressed: () {},
               color: kPrimaryColor,
-              fontWeight: normal,
               margin: EdgeInsets.symmetric(
                 horizontal: 36,
               ),

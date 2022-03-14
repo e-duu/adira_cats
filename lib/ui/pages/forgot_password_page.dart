@@ -61,7 +61,6 @@ class ForgotPasswordPage extends StatelessWidget {
       return CustomInput(
         hintText: 'User ID',
         hintColor: kDarkGreyColor,
-        padding: EdgeInsets.all(2),
         margin: EdgeInsets.only(
           top: 20,
           right: 18,
@@ -106,7 +105,6 @@ class ForgotPasswordPage extends StatelessWidget {
               title: 'Submit',
               onPressed: () {},
               color: kPrimaryColor,
-              fontWeight: bold,
               margin: EdgeInsets.symmetric(horizontal: 20),
             ),
           ],

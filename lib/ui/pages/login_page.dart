@@ -1,9 +1,8 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
-import 'package:adira_cats/ui/widgets/custom_text_form_field.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -37,7 +36,7 @@ class LoginPage extends StatelessWidget {
               ),
               padding: EdgeInsets.symmetric(
                 horizontal: 36,
-                vertical: 36,
+                vertical: 16,
               ),
               decoration: BoxDecoration(
                 color: kWhiteColor,
@@ -51,7 +50,7 @@ class LoginPage extends StatelessWidget {
                     height: 40,
                     margin: EdgeInsets.only(
                       top: 36,
-                      bottom: 48,
+                      bottom: 42,
                     ),
                     decoration: BoxDecoration(
                       image: DecorationImage(
@@ -70,7 +69,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 24,
+                    height: 14,
                   ),
                   Container(
                     width: double.infinity,
@@ -86,7 +85,6 @@ class LoginPage extends StatelessWidget {
                       ),
                       hintColor: kDarkGreyColor,
                       filled: true,
-                      padding: EdgeInsets.all(2),
                       margin: EdgeInsets.symmetric(
                         horizontal: 0,
                       ),
@@ -94,37 +92,29 @@ class LoginPage extends StatelessWidget {
                   ),
                   Container(
                     width: double.infinity,
-                    padding: EdgeInsets.symmetric(
-                      vertical: 15,
-                      horizontal: 21,
-                    ),
+                    padding: EdgeInsets.only(bottom: 15, right: 21, left: 21),
                     child: CustomInput(
                       hintText: 'Password',
                       prefixIcon: Icon(
                         Icons.password,
                         color: Colors.grey,
                       ),
-                      suffixIcon: Icon(
-                        Icons.remove_red_eye_outlined,
-                        color: Colors.grey,
-                      ),
+                      obscureText: true,
                       hintColor: kDarkGreyColor,
                       filled: true,
-                      padding: EdgeInsets.all(2),
                       margin: EdgeInsets.symmetric(
                         horizontal: 0,
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: 24,
+                    height: 14,
                   ),
                   Container(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomButton(
-                          fontWeight: bold,
                           color: kPrimaryColor,
                           title: 'Login',
                           width: 142,
@@ -145,7 +135,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 36,
+                    height: 26,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -170,7 +160,7 @@ class LoginPage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 24,
+                    height: 14,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -195,7 +185,7 @@ class LoginPage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 72,
+                    height: 48,
                   ),
                   Column(
                     children: [
@@ -226,13 +216,11 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: kWhiteColor,
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Stack(
-            children: [
-              backgroundImage(),
-              content(),
-            ],
-          ),
+        child: Stack(
+          children: [
+            backgroundImage(),
+            content(),
+          ],
         ),
       ),
     );

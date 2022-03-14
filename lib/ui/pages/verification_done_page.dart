@@ -74,7 +74,6 @@ class VerificationDonePage extends StatelessWidget {
                 horizontal: 36,
               ),
               color: kPrimaryColor,
-              fontWeight: bold,
             ),
           ),
         ],
