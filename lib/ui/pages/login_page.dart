@@ -85,7 +85,6 @@ class LoginPage extends StatelessWidget {
                       ),
                       hintColor: kDarkGreyColor,
                       filled: true,
-                      padding: EdgeInsets.all(2),
                       margin: EdgeInsets.symmetric(
                         horizontal: 0,
                       ),
@@ -109,7 +108,6 @@ class LoginPage extends StatelessWidget {
                       ),
                       hintColor: kDarkGreyColor,
                       filled: true,
-                      padding: EdgeInsets.all(2),
                       margin: EdgeInsets.symmetric(
                         horizontal: 0,
                       ),
@@ -123,7 +121,6 @@ class LoginPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomButton(
-                          fontWeight: bold,
                           color: kPrimaryColor,
                           title: 'Login',
                           width: 142,

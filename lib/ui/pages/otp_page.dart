@@ -206,7 +206,6 @@ class OtpPage extends StatelessWidget {
               title: 'Submit',
               onPressed: () {},
               color: kPrimaryColor,
-              fontWeight: normal,
               width: 356,
             ),
           ],
