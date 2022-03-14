@@ -219,9 +219,39 @@ class OtpPage extends StatelessWidget {
         )
       );
     }
-    
+    Widget customButtonBorder(){
+      return Container(
+        margin: EdgeInsets.only(bottom:26,),
+        child: Column(
+          
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+              CustomButtonBorder(
+                title: 'Kembali',
+                onPressed: (){},
+                borderColor: kDarkGreyColor,
+                borderWidth: 2,
+                fontWeight: normal,
+                width: 356,
+              ),
+              SizedBox(height:12),
+              CustomButton(
+                title: 'Submit',
+                onPressed: (){},
+                color: kPrimaryColor,
+                fontWeight: normal,
+                                width: 356,
+
+                ) 
+          ],
+          ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: kWhiteColor,
+      floatingActionButton: customButtonBorder(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: SafeArea(
         
         child: Center(
@@ -234,34 +264,36 @@ class OtpPage extends StatelessWidget {
             otpSms(),
             coba(),
             
-            Container(
-              color: kPrimaryColor,
-              child: Column(
+            
+ 
+            
+            // Container(
+            //   child: Column(
 
-                crossAxisAlignment : CrossAxisAlignment.end,
-                children: [
-                  Container(
-                    child: CustomButtonBorder(
-                      title: 'Kembali',
-                      onPressed: (){},
-                      borderColor: kDarkGreyColor,
-                      borderWidth: 2,
-                      fontWeight: normal
-                    ),
-                  ),
+            //     crossAxisAlignment : CrossAxisAlignment.end,
+            //     children: [
+            //       Container(
+            //         child: CustomButtonBorder(
+            //           title: 'Kembali',
+            //           onPressed: (){},
+            //           borderColor: kDarkGreyColor,
+            //           borderWidth: 2,
+            //           fontWeight: normal
+            //         ),
+            //       ),
 
-                ],
-              ),
-            ),
-            Container(
-              child: Column(
-                children: [
-            CustomButton(title: 'Submit', onPressed: (){}, color: kPrimaryColor, fontWeight: normal) 
-
-                ],
-              ),
-            ),
-            ],
+            //     ],
+            //   ),
+            // ),
+            // Container(
+            //   child: Column(
+            //     crossAxisAlignment: CrossAxisAlignment.end,
+            //     children: [
+           
+            //     ],
+            //   ),
+            // ),
+           ],
             
             
     
