@@ -17,7 +17,7 @@ class TrialPage extends StatelessWidget {
           children: [
             
             // NOTE: CUSTOM NAVBAR
-            CustomNavbar(suffixWidget: SizedBox(), preffixWidget: SizedBox()),
+            CustomNavbar(suffixWidget: SizedBox(), preffixWidget: SizedBox(), text: "Pencarian Unit",),
 
             // NOTE: CUSTOM MENU
             // CustomMenu(

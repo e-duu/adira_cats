@@ -7,8 +7,9 @@ class CustomNavbar extends StatelessWidget {
   final Widget preffixWidget;
   final Widget suffixWidget;
   
-  const CustomNavbar({ 
+  const CustomNavbar({
     Key? key,
+    required this.text,
     required this.preffixWidget,
     required this.suffixWidget,
   }) : super(key: key);
