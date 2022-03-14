@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../shared/theme.dart';
+import 'package:adira_cats/shared/theme.dart';
 
 class CustomButtonBorder extends StatelessWidget {
   final String title;
