@@ -1,3 +1,5 @@
+import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/forgot_password_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
@@ -16,6 +18,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      home: OtpPage(),
+      // home: SplashPage(),
+      // home: SuccessPage(),
 
       /// NOTE: DONE
       home: SplashPage(),
