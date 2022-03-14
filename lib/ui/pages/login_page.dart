@@ -36,7 +36,7 @@ class LoginPage extends StatelessWidget {
               ),
               padding: EdgeInsets.symmetric(
                 horizontal: 36,
-                vertical: 36,
+                vertical: 16,
               ),
               decoration: BoxDecoration(
                 color: kWhiteColor,
@@ -69,12 +69,16 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 24,
+                    height: 14,
                   ),
                   Container(
                     width: double.infinity,
+                    padding: EdgeInsets.symmetric(
+                      vertical: 15,
+                      horizontal: 21,
+                    ),
                     child: CustomInput(
-                      contentPadding: EdgeInsets.all(2.0),
+                      contentPadding: EdgeInsets.all(2),
                       hintText: 'User ID',
                       prefixIcon: Icon(
                         Icons.account_circle_outlined,
@@ -89,10 +93,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   Container(
                     width: double.infinity,
-                    padding: EdgeInsets.symmetric(
-                      vertical: 15,
-                      horizontal: 21,
-                    ),
+                    padding: EdgeInsets.only(bottom: 15, right: 21, left: 21),
                     child: CustomInput(
                       hintText: 'Password',
                       contentPadding: EdgeInsets.all(2.0),
@@ -109,7 +110,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 24,
+                    height: 14,
                   ),
                   Container(
                     child: Row(
@@ -137,7 +138,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 36,
+                    height: 26,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -162,7 +163,7 @@ class LoginPage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 24,
+                    height: 14,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -187,7 +188,7 @@ class LoginPage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 72,
+                    height: 48,
                   ),
                   Column(
                     children: [
@@ -218,13 +219,11 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: kWhiteColor,
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Stack(
-            children: [
-              backgroundImage(),
-              content(),
-            ],
-          ),
+        child: Stack(
+          children: [
+            backgroundImage(),
+            content(),
+          ],
         ),
       ),
     );
