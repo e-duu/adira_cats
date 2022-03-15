@@ -27,11 +27,11 @@ class MyApp extends StatelessWidget {
         // home: SplashPage(),
         // home: VerificationDonePage(),
         // home: SkDonePage(),
-        home: ForgotPasswordPage(),
+        // home: ForgotPasswordPage(),
         // home: OtpPage(),
 
         /// NOTE: ON PROGRESS
-        // home: LoginPage(),
+        home: LoginPage(),
         // home: HomePage(),
         // home: TestingPage(),
         // home: ProfilePage(),

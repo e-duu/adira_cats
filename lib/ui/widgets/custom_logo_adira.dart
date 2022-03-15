@@ -16,7 +16,7 @@ class CustomLogoAdira extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          width: 200.w,
+          width: 200,
           height: 34,
           margin: EdgeInsets.only(top: 72.h),
           decoration: BoxDecoration(
