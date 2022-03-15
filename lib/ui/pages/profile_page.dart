@@ -2,6 +2,7 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_field.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -27,8 +28,8 @@ class ProfilePage extends StatelessWidget {
         children: [
           Container(
             margin: EdgeInsets.only(top: 36),
-            width: 160,
-            height: 160,
+            width: 160.w,
+            height: 160.h,
             decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
@@ -39,12 +40,12 @@ class ProfilePage extends StatelessWidget {
                 )),
           ),
           SizedBox(
-            height: 24,
+            height: 24.h,
           ),
           Text(
             "Edward Einselton",
             style: blackTextStyle.copyWith(
-              fontSize: 18,
+              fontSize: 18.sp,
               fontWeight: bold,
             ),
           ),
@@ -65,7 +66,7 @@ class ProfilePage extends StatelessWidget {
             Text(
               "Nomor KTP",
               style: darkGreyTextStyle.copyWith(
-                fontSize: 13,
+                fontSize: 13.sp,
                 fontWeight: semibold,
               ),
             ),
@@ -76,7 +77,7 @@ class ProfilePage extends StatelessWidget {
               width: double.infinity,
             ),
             SizedBox(
-              height: 12,
+              height: 12.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -88,7 +89,7 @@ class ProfilePage extends StatelessWidget {
                     Text(
                       "Tempat Lahir",
                       style: darkGreyTextStyle.copyWith(
-                        fontSize: 13,
+                        fontSize: 13.sp,
                         fontWeight: semibold,
                       ),
                     ),
@@ -96,7 +97,7 @@ class ProfilePage extends StatelessWidget {
                       hintText: "Tempat Lahir",
                       hintColor: kDarkGreyColor,
                       margin: EdgeInsets.only(top: 12),
-                      width: 172,
+                      width: 172.w,
                     ),
                   ],
                 ),
@@ -106,7 +107,7 @@ class ProfilePage extends StatelessWidget {
                     Text(
                       "Tanggal Lahir",
                       style: darkGreyTextStyle.copyWith(
-                        fontSize: 13,
+                        fontSize: 13.sp,
                         fontWeight: semibold,
                       ),
                     ),
@@ -116,19 +117,19 @@ class ProfilePage extends StatelessWidget {
                       margin: EdgeInsets.only(
                         top: 12,
                       ),
-                      width: 172,
+                      width: 172.w,
                     ),
                   ],
                 ),
               ],
             ),
             SizedBox(
-              height: 12,
+              height: 12.h,
             ),
             Text(
               "Alamat KTP",
               style: darkGreyTextStyle.copyWith(
-                fontSize: 13,
+                fontSize: 13.sp,
                 fontWeight: semibold,
               ),
             ),
@@ -140,12 +141,12 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 12,
+              height: 12.h,
             ),
             Text(
               "Alamat Domisili",
               style: darkGreyTextStyle.copyWith(
-                fontSize: 13,
+                fontSize: 13.sp,
                 fontWeight: semibold,
               ),
             ),
@@ -157,7 +158,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 12,
+              height: 12.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -169,7 +170,7 @@ class ProfilePage extends StatelessWidget {
                     Text(
                       "Email",
                       style: darkGreyTextStyle.copyWith(
-                        fontSize: 13,
+                        fontSize: 13.sp,
                         fontWeight: semibold,
                       ),
                     ),
@@ -177,7 +178,7 @@ class ProfilePage extends StatelessWidget {
                       hintText: "Email",
                       hintColor: kDarkGreyColor,
                       margin: EdgeInsets.only(top: 12),
-                      width: 172,
+                      width: 172.w,
                     ),
                   ],
                 ),
@@ -187,7 +188,7 @@ class ProfilePage extends StatelessWidget {
                     Text(
                       "Nomor Telepon",
                       style: darkGreyTextStyle.copyWith(
-                        fontSize: 13,
+                        fontSize: 13.sp,
                         fontWeight: semibold,
                       ),
                     ),
@@ -197,13 +198,15 @@ class ProfilePage extends StatelessWidget {
                       margin: EdgeInsets.only(
                         top: 12,
                       ),
-                      width: 172,
+                      width: 172.w,
                     ),
                   ],
                 ),
               ],
             ),
-            SizedBox(height: 100),
+            SizedBox(
+              height: 100.h,
+            ),
           ],
         ),
       );
