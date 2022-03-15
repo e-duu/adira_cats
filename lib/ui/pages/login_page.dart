@@ -14,7 +14,7 @@ class LoginPage extends StatelessWidget {
     Widget backgroundImage() {
       return Container(
         width: double.infinity,
-        height: 227,
+        height: 327.h,
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
@@ -33,29 +33,24 @@ class LoginPage extends StatelessWidget {
             Container(
               width: double.infinity,
               margin: EdgeInsets.only(
-                top: 191,
+                top: 291.h,
               ),
               padding: EdgeInsets.symmetric(
-                horizontal: 36,
-                vertical: 16,
+                horizontal: 36.w,
               ),
               decoration: BoxDecoration(
                 color: kWhiteColor,
-                borderRadius: BorderRadius.circular(18),
+                borderRadius: BorderRadius.circular(18.r),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   CustomLogoAdira(text: 'Login'),
                   SizedBox(
-                    height: 14,
+                    height: 24.h,
                   ),
                   Container(
                     width: double.infinity,
-                    padding: EdgeInsets.symmetric(
-                      vertical: 10,
-                      // horizontal: 21,
-                    ),
                     child: CustomInput(
                       hintText: 'User ID',
                       prefixIcon: Icon(
@@ -64,16 +59,13 @@ class LoginPage extends StatelessWidget {
                       ),
                       hintColor: kDarkGreyColor,
                       filled: true,
-                      margin: EdgeInsets.symmetric(
-                        horizontal: 0,
-                      ),
                     ),
+                  ),
+                  SizedBox(
+                    height: 12.h,
                   ),
                   Container(
                     width: double.infinity,
-                    padding: EdgeInsets.only(
-                      bottom: 10,
-                    ),
                     child: CustomInput(
                       hintText: 'Password',
                       prefixIcon: Icon(
@@ -81,7 +73,7 @@ class LoginPage extends StatelessWidget {
                         color: Colors.grey,
                       ),
                       obscureText: true,
-                      borderWidth: 0.w,
+                      borderWidth: 0.r,
                       hintColor: kDarkGreyColor,
                       filled: true,
                     ),
@@ -96,7 +88,7 @@ class LoginPage extends StatelessWidget {
                         CustomButton(
                           color: kPrimaryColor,
                           title: 'Login',
-                          width: 164.w,
+                          width: 172.w,
                           onPressed: () {},
                         ),
                         SizedBox(
@@ -108,7 +100,7 @@ class LoginPage extends StatelessWidget {
                           onPressed: () {},
                           borderColor: kDarkGreyColor,
                           borderWidth: 2.w,
-                          width: 164.w,
+                          width: 172.w,
                           fontWeight: light,
                         ),
                       ],
