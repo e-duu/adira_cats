@@ -8,8 +8,8 @@ import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
-class TrialPage extends StatelessWidget {
-  const TrialPage({Key? key}) : super(key: key);
+class TestingPage extends StatelessWidget {
+  const TestingPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +78,6 @@ class TrialPage extends StatelessWidget {
             // CustomIconUpload(text: "Tambahkan\nFoto Diri"),
 
             // NOTE: PAGE PROFILE
-            
           ],
         ),
       ),

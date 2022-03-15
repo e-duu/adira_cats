@@ -7,7 +7,7 @@ import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/sk_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
 import 'package:adira_cats/ui/pages/verification_done_page.dart';
-import 'package:adira_cats/ui/pages/trial_page.dart';
+import 'package:adira_cats/ui/pages/testing.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -21,15 +21,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       /// NOTE: DONE
-      // home: SplashPage(),
-      // home: VertifivationDonePage(),
+      home: SplashPage(),
+      // home: VerificationDonePage(),
       // home: SkDonePage(),
       // home: ForgotPasswordPage(),
       // home: OtpPage(),
 
       /// NOTE: ON PROGRESS
-      home: LoginPage(),
-      // home: TrialPage(),
+      // home: LoginPage(),
+      // home: TestingPage(),
       // home: ProfilePage(),
     );
   }
