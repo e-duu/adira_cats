@@ -1,3 +1,4 @@
+import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/forgot_password_page.dart';
