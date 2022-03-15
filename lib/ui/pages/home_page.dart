@@ -4,19 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({ Key? key }) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    Widget navBar(){
+    Widget navBar() {
       return Container(
         width: double.infinity,
         height: 163,
-        margin: EdgeInsets.only(
-          bottom: 20
+        margin: EdgeInsets.only(bottom: 20),
+        padding: EdgeInsets.only(
+          bottom: 40,
+          top: 36,
+          left: 36,
+          right: 36,
         ),
-        padding: EdgeInsets.only(bottom: 40, top: 36, left: 36, right: 36),
         decoration: BoxDecoration(
           color: kPrimaryColor,
           borderRadius: BorderRadius.only(
@@ -31,34 +33,26 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 IconButton(
-                  onPressed: () => {},
-                  icon: Icon(
-                    Icons.subject_sharp
-                  )
-                ),
+                    onPressed: () => {}, icon: Icon(Icons.subject_sharp)),
                 Container(
                   height: 16,
                   width: 210,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        "assets/adira_logo_white.png",
-                      )
-                    )
-                  ),
+                      image: DecorationImage(
+                          image: AssetImage(
+                    "assets/adira_logo_white.png",
+                  ))),
                 ),
                 Container(
                   width: 48,
                   height: 48,
                   decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage(
-                        "assets/image_user.png",
-                      )
-                    )
-                  ),
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage(
+                            "assets/image_user.png",
+                          ))),
                 ),
               ],
             ),
@@ -66,13 +60,10 @@ class HomePage extends StatelessWidget {
               height: 18,
             ),
             StyledText(
-              text:
-                  'Selamat Datang, <bold>Edward Einselton!</bold>',
+              text: 'Selamat Datang, <bold>Edward Einselton!</bold>',
               tags: {
                 'bold': StyledTextTag(
-                  style: TextStyle(
-                    fontWeight: extraBold
-                  ),
+                  style: TextStyle(fontWeight: extraBold),
                 ),
               },
               style: blackTextStyle.copyWith(
@@ -85,18 +76,16 @@ class HomePage extends StatelessWidget {
         ),
       );
     }
-    
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-            children: [
-              navBar(),
-              CustomInputSearch(
-                onPressed: () {},
-              ),
-            ]
-          ),
+          child: Column(children: [
+            navBar(),
+            CustomInputSearch(
+              onPressed: () {},
+            ),
+          ]),
         ),
       ),
     );

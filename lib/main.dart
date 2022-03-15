@@ -31,7 +31,8 @@ class MyApp extends StatelessWidget {
         // home: OtpPage(),
 
         /// NOTE: ON PROGRESS
-        home: LoginPage(),
+        // home: LoginPage(),
+        home: HomePage(),
         // home: TestingPage(),
         // home: ProfilePage(),
         // home: TestingPage(),

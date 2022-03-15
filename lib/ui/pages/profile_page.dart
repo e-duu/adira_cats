@@ -5,45 +5,38 @@ import 'package:adira_cats/ui/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({ Key? key }) : super(key: key);
+  const ProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    Widget navBar(){
+    Widget navbar() {
       return Container(
         child: CustomNavbar(
           text: "Profil Saya",
-          preffixWidget: IconButton(
-            onPressed: () => {},
-            icon: libraryIcon
-          ), 
+          preffixWidget: IconButton(onPressed: () => {}, icon: libraryIcon),
           suffixWidget: IconButton(
             onPressed: () => {},
             icon: editIcon,
-          ), 
+          ),
         ),
       );
     }
 
-    Widget profile(){
+    Widget profile() {
       return Column(
         children: [
           Container(
-            margin: EdgeInsets.only(
-              top: 36
-            ),
+            margin: EdgeInsets.only(top: 36),
             width: 160,
             height: 160,
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(
-                  "assets/image_user.png",
-                ),
-              )
-            ),
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                    "assets/image_user.png",
+                  ),
+                )),
           ),
           SizedBox(
             height: 24,
@@ -59,7 +52,7 @@ class ProfilePage extends StatelessWidget {
       );
     }
 
-    Widget formInput(){
+    Widget formInput() {
       return Container(
         margin: EdgeInsets.only(
           top: 18,
@@ -77,11 +70,9 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             CustomInput(
-              hintText: "Nomor KTP", 
+              hintText: "Nomor KTP",
               hintColor: kDarkGreyColor,
-              margin: EdgeInsets.only(
-                top: 12
-              ),
+              margin: EdgeInsets.only(top: 12),
               width: double.infinity,
             ),
             SizedBox(
@@ -102,11 +93,9 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     CustomInput(
-                      hintText: "Tempat Lahir", 
-                      hintColor: kDarkGreyColor, 
-                      margin: EdgeInsets.only(
-                        top: 12
-                      ),
+                      hintText: "Tempat Lahir",
+                      hintColor: kDarkGreyColor,
+                      margin: EdgeInsets.only(top: 12),
                       width: 172,
                     ),
                   ],
@@ -122,8 +111,8 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     CustomInput(
-                      hintText: "Tanggal Lahir", 
-                      hintColor: kDarkGreyColor, 
+                      hintText: "Tanggal Lahir",
+                      hintColor: kDarkGreyColor,
                       margin: EdgeInsets.only(
                         top: 12,
                       ),
@@ -185,11 +174,9 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     CustomInput(
-                      hintText: "Email", 
-                      hintColor: kDarkGreyColor, 
-                      margin: EdgeInsets.only(
-                        top: 12
-                      ),
+                      hintText: "Email",
+                      hintColor: kDarkGreyColor,
+                      margin: EdgeInsets.only(top: 12),
                       width: 172,
                     ),
                   ],
@@ -205,8 +192,8 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     CustomInput(
-                      hintText: "Nomor Telepon", 
-                      hintColor: kDarkGreyColor, 
+                      hintText: "Nomor Telepon",
+                      hintColor: kDarkGreyColor,
                       margin: EdgeInsets.only(
                         top: 12,
                       ),
@@ -216,19 +203,17 @@ class ProfilePage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
-              height: 100
-            ),
+            SizedBox(height: 100),
           ],
         ),
       );
     }
-    
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            navBar(),
+            navbar(),
             profile(),
             formInput(),
           ],
