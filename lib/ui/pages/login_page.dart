@@ -81,112 +81,113 @@ class LoginPage extends StatelessWidget {
                         color: Colors.grey,
                       ),
                       obscureText: true,
-                      borderWidth: 0,
+                      borderWidth: 0.w,
                       hintColor: kDarkGreyColor,
                       filled: true,
-                      margin: EdgeInsets.symmetric(
-                        horizontal: 0,
-                      ),
                     ),
                   ),
                   SizedBox(
-                    height: 7,
+                    height: 24.h,
                   ),
                   Container(
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomButton(
                           color: kPrimaryColor,
                           title: 'Login',
-                          width: 162,
+                          width: 164.w,
                           onPressed: () {},
                         ),
                         SizedBox(
-                          width: 12,
+                          width: 12.w,
                         ),
                         CustomButtonBorder(
                           title: 'Reset',
                           titleColor: kBlackColor,
                           onPressed: () {},
                           borderColor: kDarkGreyColor,
-                          borderWidth: 2,
-                          width: 162,
+                          borderWidth: 2.w,
+                          width: 164.w,
                           fontWeight: light,
                         ),
                       ],
                     ),
                   ),
                   SizedBox(
-                    height: 16,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Lupa Password?',
-                        style: darkGreyTextStyle.copyWith(
-                          fontSize: 13,
-                          fontWeight: light,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 2,
-                      ),
-                      Text(
-                        'Klik di Sini',
-                        style: blackTextStyle.copyWith(
-                          fontSize: 13,
-                          fontWeight: bold,
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Belum punya akun?',
-                        style: darkGreyTextStyle.copyWith(
-                          fontSize: 13,
-                          fontWeight: light,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 2,
-                      ),
-                      Text(
-                        'Daftar',
-                        style: blackTextStyle.copyWith(
-                          fontSize: 13,
-                          fontWeight: bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 22,
+                    height: 36.h,
                   ),
                   Column(
                     children: [
-                      Text(
-                        'CATS',
-                        style: darkGreyTextStyle.copyWith(
-                          fontSize: 11,
-                          fontWeight: bold,
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Lupa Password?',
+                            style: darkGreyTextStyle.copyWith(
+                              fontSize: 13.sp,
+                              fontWeight: light,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 2.w,
+                          ),
+                          Text(
+                            'Klik di Sini',
+                            style: blackTextStyle.copyWith(
+                              fontSize: 13.sp,
+                              fontWeight: bold,
+                            ),
+                          )
+                        ],
                       ),
-                      Text(
-                        'Collection Activity and Tracking System',
-                        style: darkGreyTextStyle.copyWith(
-                          fontSize: 11,
-                          fontWeight: light,
-                        ),
-                      )
+                      SizedBox(
+                        height: 24.h,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Belum punya akun?',
+                            style: darkGreyTextStyle.copyWith(
+                              fontSize: 13.sp,
+                              fontWeight: light,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 2.w,
+                          ),
+                          Text(
+                            'Daftar',
+                            style: blackTextStyle.copyWith(
+                              fontSize: 13.sp,
+                              fontWeight: bold,
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 72.h, bottom: 36.h),
+                    child: Column(
+                      children: [
+                        Text(
+                          'CATS',
+                          style: darkGreyTextStyle.copyWith(
+                            fontSize: 11.sp,
+                            fontWeight: bold,
+                          ),
+                        ),
+                        Text(
+                          'Collection Activity and Tracking System',
+                          style: darkGreyTextStyle.copyWith(
+                            fontSize: 11.sp,
+                            fontWeight: light,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),
