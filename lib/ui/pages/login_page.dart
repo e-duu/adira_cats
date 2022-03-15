@@ -91,12 +91,12 @@ class LoginPage extends StatelessWidget {
                   ),
                   Container(
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomButton(
                           color: kPrimaryColor,
                           title: 'Login',
-                          width: 172.w,
+                          width: 164.w,
                           onPressed: () {},
                         ),
                         SizedBox(
@@ -108,7 +108,7 @@ class LoginPage extends StatelessWidget {
                           onPressed: () {},
                           borderColor: kDarkGreyColor,
                           borderWidth: 2.w,
-                          width: 172.w,
+                          width: 164.w,
                           fontWeight: light,
                         ),
                       ],
@@ -168,10 +168,11 @@ class LoginPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
-                    height: 72.h,
-                  ),
+                  // SizedBox(
+                  //   height: 72.h,
+                  // ),
                   Container(
+                    margin: EdgeInsets.only(top: 72.h, bottom: 36.h),
                     child: Column(
                       children: [
                         Text(
