@@ -62,6 +62,10 @@ class _CustomInputState extends State<CustomInput> {
     return Container(
       width: widget.width,
       margin: widget.margin,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(defaultRadius),
+        color: kGreyColor
+      ),
       child: TextFormField(
         autocorrect: true,
         autofocus: false,
@@ -78,10 +82,11 @@ class _CustomInputState extends State<CustomInput> {
             color: widget.hintColor
           ),
           filled: widget.filled,
-          fillColor: kGreyColor,
+          fillColor: kBlackColor,
+          focusColor: kDarkGreyColor,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
-            borderSide: BorderSide(color: kDarkGreyColor, width: widget.borderWidth),
+            borderSide: BorderSide(color: kGreyColor, width: widget.borderWidth),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),

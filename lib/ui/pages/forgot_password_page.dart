@@ -79,6 +79,7 @@ class ForgotPasswordPage extends StatelessWidget {
               children: [
                 CustomButtonBorder(
                   title: 'Kembali',
+                  titleColor: kBlackColor,
                   onPressed: () {},
                   borderColor: kDarkGreyColor,
                   borderWidth: 2,
@@ -90,6 +91,7 @@ class ForgotPasswordPage extends StatelessWidget {
                 ),
                 CustomButtonBorder(
                   title: 'Reset',
+                  titleColor: kBlackColor,
                   onPressed: () {},
                   borderColor: kDarkGreyColor,
                   borderWidth: 2,

@@ -16,12 +16,12 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
       /// NOTE: DONE
-      home: SplashPage(),
+      // home: SplashPage(),
       // home: VerificationDonePage(),
       // home: SkDonePage(),
       // home: ForgotPasswordPage(),
@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
       // home: LoginPage(),
       // home: TestingPage(),
       // home: ProfilePage(),
+      home: TestingPage(),
     );
   }
 }

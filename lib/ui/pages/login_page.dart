@@ -125,6 +125,7 @@ class LoginPage extends StatelessWidget {
                         ),
                         CustomButtonBorder(
                           title: 'Reset',
+                          titleColor: kBlackColor,
                           onPressed: () {},
                           borderColor: kDarkGreyColor,
                           borderWidth: 2,
