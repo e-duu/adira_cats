@@ -14,7 +14,7 @@ class LoginPage extends StatelessWidget {
     Widget backgroundImage() {
       return Container(
         width: double.infinity,
-        height: 327.h,
+        height: 227,
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
@@ -33,11 +33,11 @@ class LoginPage extends StatelessWidget {
             Container(
               width: double.infinity,
               margin: EdgeInsets.only(
-                top: 291.h,
+                top: 191,
               ),
               padding: EdgeInsets.symmetric(
-                horizontal: 36.w,
-                vertical: 16.h,
+                horizontal: 36,
+                vertical: 16,
               ),
               decoration: BoxDecoration(
                 color: kWhiteColor,
@@ -48,14 +48,14 @@ class LoginPage extends StatelessWidget {
                 children: [
                   CustomLogoAdira(text: 'Login'),
                   SizedBox(
-                    height: 24.h,
+                    height: 14,
                   ),
                   Container(
                     width: double.infinity,
-                    // padding: EdgeInsets.symmetric(
-                    //   vertical: 10,
-                    //   // horizontal: 21,
-                    // ),
+                    padding: EdgeInsets.symmetric(
+                      vertical: 10,
+                      // horizontal: 21,
+                    ),
                     child: CustomInput(
                       hintText: 'User ID',
                       prefixIcon: Icon(
@@ -64,13 +64,15 @@ class LoginPage extends StatelessWidget {
                       ),
                       hintColor: kDarkGreyColor,
                       filled: true,
-                      margin: EdgeInsets.only(bottom: 12.h),
+                      margin: EdgeInsets.symmetric(
+                        horizontal: 0,
+                      ),
                     ),
                   ),
                   Container(
                     width: double.infinity,
                     padding: EdgeInsets.only(
-                      bottom: 24.h,
+                      bottom: 10,
                     ),
                     child: CustomInput(
                       hintText: 'Password',

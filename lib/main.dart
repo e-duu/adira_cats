@@ -18,20 +18,21 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) { 
+  Widget build(BuildContext context) {
     return ScreenUtilInit(
-      builder : () => MaterialApp(
+      builder: () => MaterialApp(
         debugShowCheckedModeBanner: false,
-    
+
         /// NOTE: DONE
         // home: SplashPage(),
         // home: VerificationDonePage(),
         // home: SkDonePage(),
         // home: ForgotPasswordPage(),
         // home: OtpPage(),
-    
+
         /// NOTE: ON PROGRESS
-        home: LoginPage(),
+        // home: LoginPage(),
+        home: HomePage(),
         // home: TestingPage(),
         // home: ProfilePage(),
         // home: TestingPage(),

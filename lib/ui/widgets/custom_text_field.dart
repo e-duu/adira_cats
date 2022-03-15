@@ -1,8 +1,8 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextField extends StatelessWidget {
-  
   final String hintText;
   final int maxLines;
   final bool autocorrect;
@@ -10,8 +10,8 @@ class CustomTextField extends StatelessWidget {
   final double borderWidth;
   final EdgeInsets? margin;
   final double width;
-  
-  const CustomTextField({ 
+
+  const CustomTextField({
     Key? key,
     required this.hintText,
     required this.maxLines,
@@ -28,22 +28,19 @@ class CustomTextField extends StatelessWidget {
       width: width,
       margin: margin,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(defaultRadius),
-        color: kGreyColor
-      ),
+          borderRadius: BorderRadius.circular(defaultRadius),
+          color: kGreyColor),
       child: TextField(
         maxLines: maxLines,
         autocorrect: true,
         autofocus: false,
         decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(
-            horizontal: 18,
-            vertical: 15
+            horizontal: 18.w,
+            vertical: 15.h,
           ),
           hintText: hintText,
-          hintStyle: TextStyle(
-            color: kGreyColor
-          ),
+          hintStyle: TextStyle(color: kGreyColor),
           filled: filled,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),

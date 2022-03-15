@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
   final String title;
@@ -21,7 +22,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      height: 50,
+      height: 50.h,
       margin: margin,
       child: TextButton(
         onPressed: onPressed,
@@ -34,7 +35,7 @@ class CustomButton extends StatelessWidget {
         child: Text(
           title,
           style: blackTextStyle.copyWith(
-            fontSize: 12,
+            fontSize: 12.sp,
             fontWeight: bold,
           ),
         ),
