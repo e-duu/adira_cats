@@ -168,9 +168,6 @@ class LoginPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  // SizedBox(
-                  //   height: 72.h,
-                  // ),
                   Container(
                     margin: EdgeInsets.only(top: 72.h, bottom: 36.h),
                     child: Column(
