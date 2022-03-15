@@ -1,3 +1,4 @@
+import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/forgot_password_page.dart';
@@ -31,10 +32,11 @@ class MyApp extends StatelessWidget {
 
         /// NOTE: ON PROGRESS
         home: LoginPage(),
+        // home: TestingPage(),
         // home: ProfilePage(),
         // home: TestingPage(),
       ),
-      designSize: const Size(360, 640),
+      designSize: const Size(428, 926),
     );
   }
 }
