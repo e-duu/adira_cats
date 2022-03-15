@@ -29,14 +29,11 @@ class MyApp extends StatelessWidget {
       // home: OtpPage(),
 
       /// NOTE: ON PROGRESS
-      home: LoginPage(),
+      // home: LoginPage(),
       // home: TestingPage(),
       // home: ProfilePage(),
       // home: TestingPage(),
-<<<<<<< HEAD
       home: HomePage(),
-=======
->>>>>>> 055b4e332b151aa9f79ca8c828e7ac33534044ad
     );
   }
 }
