@@ -27,7 +27,9 @@ class ProfilePage extends StatelessWidget {
       return Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: 36),
+            margin: EdgeInsets.only(
+              top: 36.h,
+            ),
             width: 160.w,
             height: 160.h,
             decoration: BoxDecoration(
@@ -56,9 +58,9 @@ class ProfilePage extends StatelessWidget {
     Widget formInput() {
       return Container(
         margin: EdgeInsets.only(
-          top: 18,
-          right: 36,
-          left: 36,
+          top: 18.h,
+          right: 36.w,
+          left: 36.w,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,7 +75,9 @@ class ProfilePage extends StatelessWidget {
             CustomInput(
               hintText: "Nomor KTP",
               hintColor: kDarkGreyColor,
-              margin: EdgeInsets.only(top: 12),
+              margin: EdgeInsets.only(
+                top: 12.h,
+              ),
               width: double.infinity,
             ),
             SizedBox(
@@ -96,7 +100,9 @@ class ProfilePage extends StatelessWidget {
                     CustomInput(
                       hintText: "Tempat Lahir",
                       hintColor: kDarkGreyColor,
-                      margin: EdgeInsets.only(top: 12),
+                      margin: EdgeInsets.only(
+                        top: 12.h,
+                      ),
                       width: 172.w,
                     ),
                   ],
@@ -115,7 +121,7 @@ class ProfilePage extends StatelessWidget {
                       hintText: "Tanggal Lahir",
                       hintColor: kDarkGreyColor,
                       margin: EdgeInsets.only(
-                        top: 12,
+                        top: 12.h,
                       ),
                       width: 172.w,
                     ),
@@ -137,7 +143,7 @@ class ProfilePage extends StatelessWidget {
               hintText: "Alamat KTP",
               maxLines: 2,
               margin: EdgeInsets.only(
-                top: 12,
+                top: 12.h,
               ),
             ),
             SizedBox(
@@ -154,7 +160,7 @@ class ProfilePage extends StatelessWidget {
               hintText: "Alamat Domisili",
               maxLines: 2,
               margin: EdgeInsets.only(
-                top: 12,
+                top: 12.h,
               ),
             ),
             SizedBox(
@@ -177,7 +183,9 @@ class ProfilePage extends StatelessWidget {
                     CustomInput(
                       hintText: "Email",
                       hintColor: kDarkGreyColor,
-                      margin: EdgeInsets.only(top: 12),
+                      margin: EdgeInsets.only(
+                        top: 12.h,
+                      ),
                       width: 172.w,
                     ),
                   ],
@@ -196,7 +204,7 @@ class ProfilePage extends StatelessWidget {
                       hintText: "Nomor Telepon",
                       hintColor: kDarkGreyColor,
                       margin: EdgeInsets.only(
-                        top: 12,
+                        top: 12.h,
                       ),
                       width: 172.w,
                     ),

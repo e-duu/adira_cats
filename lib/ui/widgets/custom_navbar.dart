@@ -20,16 +20,16 @@ class CustomNavbar extends StatelessWidget {
       width: double.infinity,
       height: 114.h,
       padding: EdgeInsets.only(
-        bottom: 30,
-        top: 36,
-        left: 36,
-        right: 36,
+        bottom: 30.h,
+        top: 36.h,
+        left: 36.w,
+        right: 36.w,
       ),
       decoration: BoxDecoration(
         color: kPrimaryColor,
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(18),
-          bottomRight: Radius.circular(18),
+          bottomLeft: Radius.circular(18.r),
+          bottomRight: Radius.circular(18.r),
         ),
       ),
       child: Row(

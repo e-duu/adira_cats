@@ -17,7 +17,7 @@ class CustomIconUpload extends StatelessWidget {
       height: 172.h,
       decoration: BoxDecoration(
         color: kGreyColor,
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(8.r),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

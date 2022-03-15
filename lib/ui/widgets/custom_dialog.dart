@@ -29,7 +29,7 @@ class CustomDialog {
           ),
           child: AlertDialog(
             titlePadding: EdgeInsets.only(
-              top: 10,
+              top: 10.h,
             ),
             title: Text(
               title,
@@ -48,10 +48,10 @@ class CustomDialog {
             ),
             actions: <Widget>[preffixAction, suffixAction],
             actionsPadding: EdgeInsets.only(
-              bottom: 10,
+              bottom: 10.h,
             ),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(18),
+              borderRadius: BorderRadius.circular(18.r),
             ),
           ),
         ),

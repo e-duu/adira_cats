@@ -22,7 +22,7 @@ class CustomMenu extends StatelessWidget {
         width: 110.w,
         height: 110.h,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(12.r),
             border: Border.all(
               color: kGreyColor,
               width: 2.w,
@@ -42,7 +42,10 @@ class CustomMenu extends StatelessWidget {
             ),
             Text(
               text,
-              style: TextStyle(fontSize: 10.sp, fontWeight: bold),
+              style: TextStyle(
+                fontSize: 10.sp,
+                fontWeight: bold,
+              ),
               textAlign: TextAlign.center,
             )
           ],
