@@ -82,7 +82,7 @@ class _CustomInputState extends State<CustomInput> {
             color: widget.hintColor
           ),
           filled: widget.filled,
-          fillColor: kBlackColor,
+          fillColor: kGreyColor,
           focusColor: kDarkGreyColor,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
@@ -90,7 +90,7 @@ class _CustomInputState extends State<CustomInput> {
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
-            borderSide: BorderSide(color: kDarkGreyColor, width: widget.borderWidth),
+            borderSide: BorderSide(color: kGreyColor, width: widget.borderWidth),
           ),
         ),
       ),
