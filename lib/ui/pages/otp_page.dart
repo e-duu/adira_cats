@@ -242,6 +242,7 @@ class OtpPage extends StatelessWidget {
           children: [
             CustomButtonBorder(
               title: 'Kembali',
+              titleColor: kBlackColor,
               onPressed: () {},
               borderColor: kDarkGreyColor,
               borderWidth: 2,

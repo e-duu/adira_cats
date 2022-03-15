@@ -133,6 +133,9 @@ class ProfilePage extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(
+              height: 12,
+            ),
             Text(
               "Alamat KTP",
               style: darkGreyTextStyle.copyWith(
@@ -143,6 +146,12 @@ class ProfilePage extends StatelessWidget {
             CustomTextField(
               hintText: "Alamat KTP",
               maxLines: 2,
+              margin: EdgeInsets.only(
+                top: 12,
+              ),
+            ),
+            SizedBox(
+              height: 12,
             ),
             Text(
               "Alamat Domisili",
@@ -154,6 +163,12 @@ class ProfilePage extends StatelessWidget {
             CustomTextField(
               hintText: "Alamat Domisili",
               maxLines: 2,
+              margin: EdgeInsets.only(
+                top: 12,
+              ),
+            ),
+            SizedBox(
+              height: 12,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -163,14 +178,14 @@ class ProfilePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Tempat Lahir",
+                      "Email",
                       style: darkGreyTextStyle.copyWith(
                         fontSize: 13,
                         fontWeight: semibold,
                       ),
                     ),
                     CustomInput(
-                      hintText: "Tempat Lahir", 
+                      hintText: "Email", 
                       hintColor: kDarkGreyColor, 
                       margin: EdgeInsets.only(
                         top: 12
@@ -183,14 +198,14 @@ class ProfilePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Tanggal Lahir",
+                      "Nomor Telepon",
                       style: darkGreyTextStyle.copyWith(
                         fontSize: 13,
                         fontWeight: semibold,
                       ),
                     ),
                     CustomInput(
-                      hintText: "Tanggal Lahir", 
+                      hintText: "Nomor Telepon", 
                       hintColor: kDarkGreyColor, 
                       margin: EdgeInsets.only(
                         top: 12,
@@ -200,6 +215,9 @@ class ProfilePage extends StatelessWidget {
                   ],
                 ),
               ],
+            ),
+            SizedBox(
+              height: 100
             ),
           ],
         ),

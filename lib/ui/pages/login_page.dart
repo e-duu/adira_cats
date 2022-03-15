@@ -2,6 +2,7 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
+import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class LoginPage extends StatelessWidget {
     Widget backgroundImage() {
       return Container(
         width: double.infinity,
-        height: 327,
+        height: 227,
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
@@ -32,7 +33,7 @@ class LoginPage extends StatelessWidget {
             Container(
               width: double.infinity,
               margin: EdgeInsets.only(
-                top: 291,
+                top: 191,
               ),
               padding: EdgeInsets.symmetric(
                 horizontal: 36,
@@ -45,37 +46,15 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
-                    width: 242,
-                    height: 40,
-                    margin: EdgeInsets.only(
-                      top: 36,
-                      bottom: 42,
-                    ),
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: AssetImage(
-                          'assets/adira_logo_yellow.png',
-                        ),
-                      ),
-                    ),
-                  ),
-                  Text(
-                    'Login',
-                    style: blackTextStyle.copyWith(
-                      fontSize: 18,
-                      fontWeight: bold,
-                    ),
-                  ),
+                  CustomLogoAdira(text: 'Login'),
                   SizedBox(
                     height: 14,
                   ),
                   Container(
                     width: double.infinity,
                     padding: EdgeInsets.symmetric(
-                      vertical: 15,
-                      horizontal: 21,
+                      vertical: 10,
+                      // horizontal: 21,
                     ),
                     child: CustomInput(
                       hintText: 'User ID',
@@ -92,7 +71,9 @@ class LoginPage extends StatelessWidget {
                   ),
                   Container(
                     width: double.infinity,
-                    padding: EdgeInsets.only(bottom: 15, right: 21, left: 21),
+                    padding: EdgeInsets.only(
+                      bottom: 10,
+                    ),
                     child: CustomInput(
                       hintText: 'Password',
                       prefixIcon: Icon(
@@ -100,6 +81,7 @@ class LoginPage extends StatelessWidget {
                         color: Colors.grey,
                       ),
                       obscureText: true,
+                      borderWidth: 0,
                       hintColor: kDarkGreyColor,
                       filled: true,
                       margin: EdgeInsets.symmetric(
@@ -108,16 +90,16 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 14,
+                    height: 7,
                   ),
                   Container(
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CustomButton(
                           color: kPrimaryColor,
                           title: 'Login',
-                          width: 142,
+                          width: 162,
                           onPressed: () {},
                         ),
                         SizedBox(
@@ -125,17 +107,18 @@ class LoginPage extends StatelessWidget {
                         ),
                         CustomButtonBorder(
                           title: 'Reset',
+                          titleColor: kBlackColor,
                           onPressed: () {},
                           borderColor: kDarkGreyColor,
                           borderWidth: 2,
-                          width: 142,
+                          width: 162,
                           fontWeight: light,
                         ),
                       ],
                     ),
                   ),
                   SizedBox(
-                    height: 26,
+                    height: 16,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -160,7 +143,7 @@ class LoginPage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 14,
+                    height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -185,7 +168,7 @@ class LoginPage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 48,
+                    height: 22,
                   ),
                   Column(
                     children: [
@@ -216,11 +199,13 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: kWhiteColor,
       body: SafeArea(
-        child: Stack(
-          children: [
-            backgroundImage(),
-            content(),
-          ],
+        child: SingleChildScrollView(
+          child: Stack(
+            children: [
+              backgroundImage(),
+              content(),
+            ],
+          ),
         ),
       ),
     );

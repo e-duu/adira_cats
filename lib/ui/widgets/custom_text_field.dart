@@ -25,33 +25,33 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: 18,
-          vertical: 15,
-        ),
-        child: TextField(
-          maxLines: maxLines,
-          autocorrect: true,
-          autofocus: false,
-          decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(
-              horizontal: 18,
-              vertical: 15
-            ),
-            hintText: hintText,
-            hintStyle: TextStyle(
-              color: kDarkGreyColor
-            ),
-            filled: filled,
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(defaultRadius),
-              borderSide: BorderSide(color: kDarkGreyColor, width: borderWidth),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(defaultRadius),
-              borderSide: BorderSide(color: kDarkGreyColor, width: borderWidth),
-            ),
+      width: width,
+      margin: margin,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(defaultRadius),
+        color: kGreyColor
+      ),
+      child: TextField(
+        maxLines: maxLines,
+        autocorrect: true,
+        autofocus: false,
+        decoration: InputDecoration(
+          contentPadding: EdgeInsets.symmetric(
+            horizontal: 18,
+            vertical: 15
+          ),
+          hintText: hintText,
+          hintStyle: TextStyle(
+            color: kGreyColor
+          ),
+          filled: filled,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(defaultRadius),
+            borderSide: BorderSide(color: kGreyColor, width: borderWidth),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(defaultRadius),
+            borderSide: BorderSide(color: kDarkGreyColor, width: borderWidth),
           ),
         ),
       ),
