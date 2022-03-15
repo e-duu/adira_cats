@@ -21,16 +21,17 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       /// NOTE: DONE
-      home: SplashPage(),
+      // home: SplashPage(),
       // home: VerificationDonePage(),
       // home: SkDonePage(),
-      // home: ForgotPasswordPage(),
+      home: ForgotPasswordPage(),
       // home: OtpPage(),
 
-      /// NOTE: ON PROGRESS
+      /// NOTE: IN PROGRESS
       // home: LoginPage(),
-      // home: TestingPage(),
       // home: ProfilePage(),
+      // home: HomePage(),
+      // home: TestingPage(),
     );
   }
 }
