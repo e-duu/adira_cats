@@ -14,8 +14,8 @@ class CustomInput extends StatefulWidget {
   final EdgeInsets? margin;
   final double width;
   final bool readOnly;
-  
-  const CustomInput({ 
+
+  const CustomInput({
     Key? key,
     required this.hintText,
     required this.hintColor,

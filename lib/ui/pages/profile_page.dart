@@ -8,20 +8,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sms_autofill/sms_autofill.dart';
+
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    Widget navbar(){
+    Widget navbar() {
       return Container(
         child: CustomNavbar(
           text: "Profil Saya",
-          preffixWidget: IconButton(
-            onPressed: () => {},
-            icon: libraryIcon
-          ), 
+          preffixWidget: GestureDetector(
+            onTap: () {},
+            child: Icon(Icons.subject_sharp)
+          ),
           suffixWidget: SizedBox(),
         ),
       );
@@ -37,18 +37,17 @@ class ProfilePage extends StatelessWidget {
             width: 160.w,
             height: 160.h,
             decoration: BoxDecoration(
-              border: Border.all(
-                width: 2,
-                color: kGreyColor
-              ),
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(
-                  "assets/image_user.png",
+                border: Border.all(
+                  width: 2.w,
+                  color: kGreyColor,
                 ),
-              )
-            ),
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                    "assets/image_user.png",
+                  ),
+                )),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -66,9 +65,7 @@ class ProfilePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8),
                             color: kPrimaryColor,
                           ),
-                          child: Icon(
-                            Icons.edit_outlined
-                          ),
+                          child: Icon(Icons.edit_outlined),
                         ),
                       ),
                     ),
@@ -91,9 +88,7 @@ class ProfilePage extends StatelessWidget {
                 ),
               ),
               IconButton(
-                icon: Icon(
-                  Icons.edit_outlined
-                ),
+                icon: Icon(Icons.edit_outlined),
                 onPressed: () {},
               )
             ],
@@ -121,7 +116,7 @@ class ProfilePage extends StatelessWidget {
             ),
             CustomInput(
               readOnly: true,
-              hintText: "edward999", 
+              hintText: "edward999",
               hintColor: kBlackColor,
               margin: EdgeInsets.only(
                 top: 12.h,
@@ -140,7 +135,7 @@ class ProfilePage extends StatelessWidget {
             ),
             CustomInput(
               readOnly: true,
-              hintText: "*******", 
+              hintText: "*******",
               hintColor: kBlackColor,
               margin: EdgeInsets.only(
                 top: 12.h,
@@ -159,7 +154,7 @@ class ProfilePage extends StatelessWidget {
             ),
             CustomInput(
               readOnly: true,
-              hintText: "9999 9999 9999", 
+              hintText: "9999 9999 9999",
               hintColor: kBlackColor,
               margin: EdgeInsets.only(
                 top: 12.h,
@@ -185,8 +180,8 @@ class ProfilePage extends StatelessWidget {
                     ),
                     CustomInput(
                       readOnly: true,
-                      hintText: "Jakarta", 
-                      hintColor: kBlackColor, 
+                      hintText: "Jakarta",
+                      hintColor: kBlackColor,
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
@@ -206,8 +201,8 @@ class ProfilePage extends StatelessWidget {
                     ),
                     CustomInput(
                       readOnly: true,
-                      hintText: "29 Februari 1996", 
-                      hintColor: kBlackColor, 
+                      hintText: "29 Februari 1996",
+                      hintColor: kBlackColor,
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
@@ -230,7 +225,8 @@ class ProfilePage extends StatelessWidget {
             CustomTextField(
               readOnly: true,
               hintColor: kBlackColor,
-              hintText: "Jln. Raya Bau Petrikor no.8, Kec. Camat, Kab. Kabup, Provinsi DKI Jakarta",
+              hintText:
+                  "Jln. Raya Bau Petrikor no.8, Kec. Camat, Kab. Kabup, Provinsi DKI Jakarta",
               maxLines: 2,
               margin: EdgeInsets.only(
                 top: 12.h,
@@ -274,8 +270,8 @@ class ProfilePage extends StatelessWidget {
                     ),
                     CustomInput(
                       readOnly: true,
-                      hintText: "Email", 
-                      hintColor: kBlackColor, 
+                      hintText: "Email",
+                      hintColor: kBlackColor,
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
@@ -296,7 +292,7 @@ class ProfilePage extends StatelessWidget {
                     CustomInput(
                       readOnly: true,
                       hintText: "Nomor Telepon",
-                      hintColor: kBlackColor, 
+                      hintColor: kBlackColor,
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
@@ -311,7 +307,7 @@ class ProfilePage extends StatelessWidget {
       );
     }
 
-    Widget buttonLogout(){
+    Widget buttonLogout() {
       return Container(
         child: CustomButtonBorder(
           title: "Logout",
@@ -320,7 +316,7 @@ class ProfilePage extends StatelessWidget {
             horizontal: 36.w
           ),
           titleColor: kRedColor,
-          borderColor: kRedColor, 
+          borderColor: kRedColor,
           borderWidth: 2,
           fontWeight: light,
           onPressed: () => showDialog<String>(
@@ -332,7 +328,7 @@ class ProfilePage extends StatelessWidget {
                   top: 10.h,
                 ),
                 contentPadding: EdgeInsets.symmetric(
-                  vertical: 20.w
+                  vertical: 20.h
                 ),
                 title: Container(
                   margin: EdgeInsets.only(
@@ -348,7 +344,7 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
                 content: Container(
-                  width: 200,
+                  width: 200.w,
                   child: Text(
                     'Anda yakin ingin logout?',
                     style: blackTextStyle.copyWith(
@@ -391,7 +387,7 @@ class ProfilePage extends StatelessWidget {
                   bottom: 10.h,
                 ),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18),
+                  borderRadius: BorderRadius.circular(18.r),
                 ),
               ),
             ),
@@ -399,16 +395,18 @@ class ProfilePage extends StatelessWidget {
         ),
       );
     }
-    
+
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            navbar(),
-            profile(),
-            formInput(),
-            buttonLogout(),
-          ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              navbar(),
+              profile(),
+              formInput(),
+              buttonLogout(),
+            ],
+          ),
         ),
       ),
     );
