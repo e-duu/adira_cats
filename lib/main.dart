@@ -1,6 +1,7 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/notification_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/forgot_password_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
@@ -40,20 +41,14 @@ class MyApp extends StatelessWidget {
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
 
-          /// NOTE: DONE
-          // home: SkDonePage(),
-          // home: OtpPage(),
-          // home: SuccessPage(),
-          // home: LoginPage(),
-          // home: VerificationDonePage(),
-
           /// NOTE: ON PROGRESS
-          // home: Testing(),
-          home: ProfilePage(),
-          // home: RegisterPage(),
+          // home: TrialPage(),
+          // home: ProfilePage(),
+          // home: OtpPage(),
+          home: RegisterPage(),
           // home: RegisterSecondPage(),
+          // home: NotificationPage(),
         ),
-        designSize: const Size(428, 926),
       ),
     );
   }
