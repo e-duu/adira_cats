@@ -47,7 +47,7 @@ class CustomInputSearch extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
             borderSide: BorderSide(
-              color: kGreyColor, 
+              color: kGreyColor,
               width: 2
             ),
           ),

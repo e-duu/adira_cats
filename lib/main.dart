@@ -31,9 +31,9 @@ class MyApp extends StatelessWidget {
       /// NOTE: ON PROGRESS
       // home: LoginPage(),
       // home: TestingPage(),
-      // home: ProfilePage(),
+      home: ProfilePage(),
       // home: TestingPage(),
-      home: HomePage(),
+      // home: HomePage(),
     );
   }
 }

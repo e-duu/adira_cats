@@ -1,5 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomInput extends StatefulWidget {
 
@@ -13,6 +14,7 @@ class CustomInput extends StatefulWidget {
   final double borderWidth;
   final EdgeInsets? margin;
   final double width;
+  final bool readOnly;
   
   const CustomInput({ 
     Key? key,
@@ -26,6 +28,7 @@ class CustomInput extends StatefulWidget {
     this.autocorrect = false,
     this.filled = false,
     this.obscureText = false,
+    this.readOnly = false,
   }) : super(key: key);
 
   @override
@@ -67,8 +70,7 @@ class _CustomInputState extends State<CustomInput> {
         color: kGreyColor
       ),
       child: TextFormField(
-        autocorrect: true,
-        autofocus: false,
+        readOnly: widget.readOnly,
         obscureText: widget.obscureText ? _isHidePassword : widget.obscureText,
         decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(
@@ -79,7 +81,9 @@ class _CustomInputState extends State<CustomInput> {
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.obscureText ? suffixPassword() : null,
           hintStyle: TextStyle(
-            color: widget.hintColor
+            color: widget.hintColor,
+            fontWeight: light,
+            fontSize: 12,
           ),
           filled: widget.filled,
           fillColor: kGreyColor,

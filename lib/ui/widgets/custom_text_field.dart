@@ -10,16 +10,20 @@ class CustomTextField extends StatelessWidget {
   final double borderWidth;
   final EdgeInsets? margin;
   final double width;
+  final Color hintColor;
+  final bool readOnly;
   
   const CustomTextField({ 
     Key? key,
     required this.hintText,
+    required this.hintColor,
     required this.maxLines,
     this.margin,
     this.borderWidth = 0,
     this.width = double.infinity,
     this.autocorrect = false,
     this.filled = false,
+    this.readOnly = false,
   }) : super(key: key);
 
   @override
@@ -32,6 +36,7 @@ class CustomTextField extends StatelessWidget {
         color: kGreyColor
       ),
       child: TextField(
+        readOnly: readOnly,
         maxLines: maxLines,
         autocorrect: true,
         autofocus: false,
@@ -42,7 +47,9 @@ class CustomTextField extends StatelessWidget {
           ),
           hintText: hintText,
           hintStyle: TextStyle(
-            color: kGreyColor
+            color: hintColor,
+            fontWeight: light,
+            fontSize: 12,
           ),
           filled: filled,
           enabledBorder: OutlineInputBorder(
