@@ -31,7 +31,7 @@ class NotificationPage extends StatelessWidget {
 
     Widget title() {
       return Container(
-        margin: EdgeInsets.only(top: 24.h, left: 36.w),
+        margin: EdgeInsets.only(top: 24.h, left: 12.w),
         child: Row(
           children: [
             Text(
@@ -43,6 +43,25 @@ class NotificationPage extends StatelessWidget {
             ),
           ],
         ),
+      );
+    }
+
+    Widget cardNotif() {
+      return Container(
+        margin: EdgeInsets.only(
+          top: 18.h,
+        ),
+        padding: EdgeInsets.symmetric(
+          vertical: 18.h,
+          horizontal: 24.w,
+        ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(defaultRadius),
+          border: Border.all(
+            color: kDarkGreyColor,
+          ),
+        ),
+        child: Row(),
       );
     }
 
@@ -59,6 +78,7 @@ class NotificationPage extends StatelessWidget {
                 child: Column(
                   children: [
                     title(),
+                    cardNotif(),
                   ],
                 ),
               ),

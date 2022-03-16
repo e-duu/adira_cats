@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
@@ -7,12 +5,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class EditProfilePage extends StatelessWidget {
-  const EditProfilePage({ Key? key }) : super(key: key);
-
+  const EditProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     Widget photo() {
       return Column(
         children: [
@@ -49,9 +45,8 @@ class EditProfilePage extends StatelessWidget {
                           builder: (BuildContext context) => Container(
                             width: double.infinity,
                             child: AlertDialog(
-                              contentPadding: EdgeInsets.symmetric(
-                                vertical: 20.h
-                              ),
+                              contentPadding:
+                                  EdgeInsets.symmetric(vertical: 20.h),
                               content: Container(
                                 width: 200.w,
                                 child: Text(
@@ -108,9 +103,7 @@ class EditProfilePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(8),
                             color: kPrimaryColor,
                           ),
-                          child: Icon(
-                            Icons.edit_outlined
-                          ),
+                          child: Icon(Icons.edit_outlined),
                         ),
                       ),
                     ),

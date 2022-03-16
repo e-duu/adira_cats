@@ -44,9 +44,9 @@ class MyApp extends StatelessWidget {
         // home: TrialPage(),
         // home: ProfilePage(),
         // home: OtpPage(),
-        // home: RegisterPage(),
+        home: RegisterPage(),
         // home: RegisterSecondPage(),
-        home: NotificationPage(),
+        // home: NotificationPage(),
       ),
       designSize: const Size(428, 926),
     );
