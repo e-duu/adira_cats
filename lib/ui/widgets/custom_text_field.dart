@@ -39,7 +39,6 @@ class CustomTextField extends StatelessWidget {
         readOnly: readOnly,
         maxLines: maxLines,
         autocorrect: true,
-        autofocus: false,
         decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(
             horizontal: 18.w,
