@@ -1,5 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomNavbar extends StatelessWidget {
   final String text;
@@ -17,13 +18,18 @@ class CustomNavbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 114,
-      padding: EdgeInsets.only(bottom: 30, top: 36, left: 36, right: 36),
+      height: 114.h,
+      padding: EdgeInsets.only(
+        bottom: 30.h,
+        top: 36.h,
+        left: 36.w,
+        right: 36.w,
+      ),
       decoration: BoxDecoration(
         color: kPrimaryColor,
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(18),
-          bottomRight: Radius.circular(18),
+          bottomLeft: Radius.circular(18.r),
+          bottomRight: Radius.circular(18.r),
         ),
       ),
       child: Row(
@@ -33,7 +39,10 @@ class CustomNavbar extends StatelessWidget {
           preffixWidget,
           Text(
             text,
-            style: blackTextStyle.copyWith(fontSize: 18, fontWeight: bold),
+            style: blackTextStyle.copyWith(
+              fontSize: 18.sp,
+              fontWeight: bold,
+            ),
           ),
           suffixWidget
         ],

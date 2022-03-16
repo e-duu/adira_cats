@@ -2,36 +2,24 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomTextField extends StatelessWidget {
-  final String hintText;
-  final int maxLines;
-  final bool autocorrect;
-  final bool filled;
-  final double borderWidth;
-  final EdgeInsets? margin;
-  final double width;
+class CustomInputSearch extends StatelessWidget {
+  final Function() onPressed;
 
-  const CustomTextField({
+  const CustomInputSearch({
     Key? key,
-    required this.hintText,
-    required this.maxLines,
-    this.margin,
-    this.borderWidth = 0,
-    this.width = double.infinity,
-    this.autocorrect = false,
-    this.filled = false,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: width,
-      margin: margin,
+      margin: EdgeInsets.symmetric(
+        horizontal: 36.w,
+      ),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(defaultRadius),
           color: kGreyColor),
-      child: TextField(
-        maxLines: maxLines,
+      child: TextFormField(
         autocorrect: true,
         autofocus: false,
         decoration: InputDecoration(
@@ -39,16 +27,31 @@ class CustomTextField extends StatelessWidget {
             horizontal: 18.w,
             vertical: 15.h,
           ),
-          hintText: hintText,
+          hintText: "Apa Yang Anda Cari?",
+          suffixIcon: IconButton(
+            onPressed: onPressed,
+            hoverColor: kTransparent,
+            focusColor: kTransparent,
+            highlightColor: kTransparent,
+            icon: Icon(Icons.search_outlined),
+          ),
           hintStyle: TextStyle(color: kGreyColor),
-          filled: filled,
+          filled: true,
+          fillColor: kGreyColor,
+          focusColor: kDarkGreyColor,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
-            borderSide: BorderSide(color: kGreyColor, width: borderWidth),
+            borderSide: BorderSide(
+              color: kGreyColor,
+              width: 2.w,
+            ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
-            borderSide: BorderSide(color: kDarkGreyColor, width: borderWidth),
+            borderSide: BorderSide(
+              color: kDarkGreyColor,
+              width: 2.w,
+            ),
           ),
         ),
       ),

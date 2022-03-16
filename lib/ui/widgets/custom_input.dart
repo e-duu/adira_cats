@@ -1,5 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomInput extends StatefulWidget {
   final String hintText;
@@ -60,27 +61,34 @@ class _CustomInputState extends State<CustomInput> {
     return Container(
       width: widget.width,
       margin: widget.margin,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(defaultRadius),
+          color: kGreyColor),
       child: TextFormField(
         autocorrect: true,
         autofocus: false,
         obscureText: widget.obscureText ? _isHidePassword : widget.obscureText,
         decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(horizontal: 18, vertical: 15),
+          contentPadding: EdgeInsets.symmetric(
+            horizontal: 18.w,
+            vertical: 15.h,
+          ),
           hintText: widget.hintText,
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.obscureText ? suffixPassword() : null,
           hintStyle: TextStyle(color: widget.hintColor),
           filled: widget.filled,
           fillColor: kGreyColor,
+          focusColor: kDarkGreyColor,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
             borderSide:
-                BorderSide(color: kDarkGreyColor, width: widget.borderWidth),
+                BorderSide(color: kGreyColor, width: widget.borderWidth),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
             borderSide:
-                BorderSide(color: kDarkGreyColor, width: widget.borderWidth),
+                BorderSide(color: kGreyColor, width: widget.borderWidth),
           ),
         ),
       ),

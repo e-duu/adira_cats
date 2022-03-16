@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButtonBorder extends StatelessWidget {
   final String title;
+  final Color titleColor;
   final double width;
   final Function() onPressed;
   final Color borderColor;
@@ -13,6 +16,7 @@ class CustomButtonBorder extends StatelessWidget {
   const CustomButtonBorder({
     Key? key,
     required this.title,
+    required this.titleColor,
     required this.onPressed,
     required this.borderColor,
     required this.borderWidth,
@@ -25,7 +29,7 @@ class CustomButtonBorder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      height: 50,
+      height: 50.h,
       margin: margin,
       child: OutlinedButton(
         onPressed: onPressed,
@@ -37,8 +41,9 @@ class CustomButtonBorder extends StatelessWidget {
         ),
         child: Text(
           title,
-          style: blackTextStyle.copyWith(
-            fontSize: 12,
+          style: GoogleFonts.poppins(
+            color: titleColor,
+            fontSize: 12.sp,
             fontWeight: fontWeight,
           ),
         ),

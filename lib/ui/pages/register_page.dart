@@ -147,6 +147,7 @@ class RegisterPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomButtonBorder(
+                  titleColor: kRedColor,
                   title: 'Batal',
                   onPressed: () {},
                   borderColor: kRedColor,
@@ -158,6 +159,7 @@ class RegisterPage extends StatelessWidget {
                   width: 12,
                 ),
                 CustomButtonBorder(
+                  titleColor: kDarkGreyColor,
                   title: 'Reset',
                   onPressed: () {},
                   borderColor: kDarkGreyColor,

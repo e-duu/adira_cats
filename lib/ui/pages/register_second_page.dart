@@ -1,3 +1,4 @@
+import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_text_form_field.dart';
@@ -52,7 +53,7 @@ class RegisterSecondPage extends StatelessWidget {
 
       Widget chooseBank() {
         return CustomInput(
-          hintText: 'Pilig Bank',
+          hintText: 'Pilih Bank',
           hintColor: kDarkGreyColor,
           filled: true,
           margin: EdgeInsets.only(bottom: 12),
@@ -91,16 +92,47 @@ class RegisterSecondPage extends StatelessWidget {
 
     Widget button() {
       return Container(
-        width: double.infinity,
-        margin: EdgeInsets.only(top: 358),
-        child: Row(
+        child: Column(
           children: [
-            CustomButtonBorder(
-              title: 'Kembali',
+            SizedBox(
+              height: 34,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CustomButtonBorder(
+                  titleColor: kDarkGreyColor,
+                  title: 'Kembali',
+                  onPressed: () {},
+                  borderColor: kDarkGreyColor,
+                  borderWidth: 2,
+                  fontWeight: normal,
+                  width: 207,
+                ),
+                SizedBox(
+                  width: 12,
+                ),
+                CustomButtonBorder(
+                  titleColor: kDarkGreyColor,
+                  title: 'Reset',
+                  onPressed: () {},
+                  borderColor: kDarkGreyColor,
+                  borderWidth: 2,
+                  fontWeight: normal,
+                  width: 207,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            CustomButton(
+              title: 'Lanjutkan',
               onPressed: () {},
-              borderColor: kBlackColor,
-              borderWidth: 2,
-              fontWeight: light,
+              color: kPrimaryColor,
+              margin: EdgeInsets.only(
+                bottom: 36,
+              ),
             ),
           ],
         ),
@@ -109,63 +141,16 @@ class RegisterSecondPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: kWhiteColor,
-      body: SafeArea(
-        child: Center(
-          child: ListView(
-            padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-            children: [
-              logo(),
-              title(),
-              inputSection(),
-              // dropdown(),
-              button(),
-            ],
-          ),
-        ),
+      body: ListView(
+        padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+        children: [
+          logo(),
+          title(),
+          inputSection(),
+          // dropdown(),
+          button(),
+        ],
       ),
     );
   }
 }
-
-// class _MyHomePageState extends State<MyHomePage> {
-//   String dropdownvalue = 'Apple';
-
-//   var items = [
-//     'Apple',
-//     'Banana',
-//     'Grapes',
-//     'Orange',
-//     'watermelon',
-//     'Pineapple'
-//   ];
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text("DropDownList Example"),
-//       ),
-//       body: Container(
-//         child: Center(
-//           child: Column(
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             children: [
-//               DropdownButton(
-//                 value: dropdownvalue,
-//                 icon: Icon(Icons.keyboard_arrow_down),
-//                 items: items.map((String items) {
-//                   return DropdownMenuItem(value: items, child: Text(items));
-//                 }).toList(),
-//                 onChanged: (dynamic newValue) {
-//                   setState(() {
-//                     dropdownvalue = newValue;
-//                   });
-//                 },
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }

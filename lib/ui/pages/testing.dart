@@ -1,5 +1,7 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_dialog.dart';
 import 'package:adira_cats/ui/widgets/custom_icon_upload.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
@@ -8,8 +10,8 @@ import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
-class TrialPage extends StatelessWidget {
-  const TrialPage({Key? key}) : super(key: key);
+class TestingPage extends StatelessWidget {
+  const TestingPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -77,8 +79,34 @@ class TrialPage extends StatelessWidget {
             // ),
             // CustomIconUpload(text: "Tambahkan\nFoto Diri"),
 
-            // NOTE: PAGE PROFILE
-            
+            // NOTE: DIALOG
+            TextButton(
+              onPressed: () => CustomDialog(
+                title: "Batalkan?", 
+                text: "Anda Ingin Membatalkan?",
+                context: context,
+                preffixAction: CustomButtonBorder(
+                  title: "Batalkan",
+                  titleColor: kRedColor,
+                  onPressed: () => {},
+                  borderColor: kRedColor, 
+                  borderWidth: 2, 
+                  fontWeight: light,
+                ), 
+                suffixAction: CustomButton(
+                  title: "Tetap Edit", 
+                  onPressed: () => {}, 
+                  color: kPrimaryColor
+                ),
+              ),
+              child: Text(
+                'Coba Dialog',
+                style: blackTextStyle.copyWith(
+                  fontSize: 14,
+                  fontWeight: bold,
+                ),
+              ),
+            ),
           ],
         ),
       ),

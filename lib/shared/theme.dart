@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 double defaultMargin = 36;
-double defaultRadius = 8;
+double defaultRadius = 8.r;
 
 Color kPrimaryColor = Color(0XFFFFEB00);
 Color kBlackColor = Color(0XFF212121);
@@ -33,9 +34,10 @@ TextStyle greyTextStyle = GoogleFonts.poppins(
 );
 
 FontWeight light = FontWeight.w300;
+FontWeight normal = FontWeight.w400;
 FontWeight semibold = FontWeight.w600;
 FontWeight bold = FontWeight.w700;
-FontWeight normal = FontWeight.w400;
+FontWeight extraBold = FontWeight.w800;
 
 Icon libraryIcon = Icon(Icons.subject_sharp);
 Icon editIcon = Icon(Icons.edit_outlined);
