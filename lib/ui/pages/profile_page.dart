@@ -1,9 +1,13 @@
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/widgets/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sms_autofill/sms_autofill.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -15,10 +19,7 @@ class ProfilePage extends StatelessWidget {
         child: CustomNavbar(
           text: "Profil Saya",
           preffixWidget: IconButton(onPressed: () => {}, icon: libraryIcon),
-          suffixWidget: IconButton(
-            onPressed: () => {},
-            icon: editIcon,
-          ),
+          suffixWidget: SizedBox(),
         ),
       );
     }
@@ -33,6 +34,10 @@ class ProfilePage extends StatelessWidget {
             width: 160.w,
             height: 160.h,
             decoration: BoxDecoration(
+                border: Border.all(
+                  width: 2.w,
+                  color: kGreyColor,
+                ),
                 shape: BoxShape.circle,
                 image: DecorationImage(
                   fit: BoxFit.cover,
@@ -40,17 +45,51 @@ class ProfilePage extends StatelessWidget {
                     "assets/image_user.png",
                   ),
                 )),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          width: 42.w,
+                          height: 42.h,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: kPrimaryColor,
+                          ),
+                          child: Icon(Icons.edit_outlined),
+                        ),
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
           ),
           SizedBox(
             height: 24.h,
           ),
-          Text(
-            "Edward Einselton",
-            style: blackTextStyle.copyWith(
-              fontSize: 18.sp,
-              fontWeight: bold,
-            ),
-          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Edward Einselton",
+                style: blackTextStyle.copyWith(
+                  fontSize: 18.sp,
+                  fontWeight: bold,
+                ),
+              ),
+              IconButton(
+                icon: Icon(Icons.edit_outlined),
+                onPressed: () {},
+              )
+            ],
+          )
         ],
       );
     }
@@ -66,6 +105,44 @@ class ProfilePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
+              "User ID",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: semibold,
+              ),
+            ),
+            CustomInput(
+              readOnly: true,
+              hintText: "edward999",
+              hintColor: kBlackColor,
+              margin: EdgeInsets.only(
+                top: 12.h,
+              ),
+              width: double.infinity,
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
+            Text(
+              "Password",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: semibold,
+              ),
+            ),
+            CustomInput(
+              readOnly: true,
+              hintText: "*******",
+              hintColor: kBlackColor,
+              margin: EdgeInsets.only(
+                top: 12.h,
+              ),
+              width: double.infinity,
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
+            Text(
               "Nomor KTP",
               style: darkGreyTextStyle.copyWith(
                 fontSize: 13.sp,
@@ -73,8 +150,9 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             CustomInput(
-              hintText: "Nomor KTP",
-              hintColor: kDarkGreyColor,
+              readOnly: true,
+              hintText: "9999 9999 9999",
+              hintColor: kBlackColor,
               margin: EdgeInsets.only(
                 top: 12.h,
               ),
@@ -98,8 +176,9 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     CustomInput(
-                      hintText: "Tempat Lahir",
-                      hintColor: kDarkGreyColor,
+                      readOnly: true,
+                      hintText: "Jakarta",
+                      hintColor: kBlackColor,
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
@@ -118,8 +197,9 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     CustomInput(
-                      hintText: "Tanggal Lahir",
-                      hintColor: kDarkGreyColor,
+                      readOnly: true,
+                      hintText: "29 Februari 1996",
+                      hintColor: kBlackColor,
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
@@ -140,7 +220,10 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             CustomTextField(
-              hintText: "Alamat KTP",
+              readOnly: true,
+              hintColor: kBlackColor,
+              hintText:
+                  "Jln. Raya Bau Petrikor no.8, Kec. Camat, Kab. Kabup, Provinsi DKI Jakarta",
               maxLines: 2,
               margin: EdgeInsets.only(
                 top: 12.h,
@@ -157,6 +240,8 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             CustomTextField(
+              readOnly: true,
+              hintColor: kBlackColor,
               hintText: "Alamat Domisili",
               maxLines: 2,
               margin: EdgeInsets.only(
@@ -181,8 +266,9 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     CustomInput(
+                      readOnly: true,
                       hintText: "Email",
-                      hintColor: kDarkGreyColor,
+                      hintColor: kBlackColor,
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
@@ -201,8 +287,9 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     CustomInput(
+                      readOnly: true,
                       hintText: "Nomor Telepon",
-                      hintColor: kDarkGreyColor,
+                      hintColor: kBlackColor,
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
@@ -212,22 +299,94 @@ class ProfilePage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
-              height: 100.h,
-            ),
           ],
+        ),
+      );
+    }
+
+    Widget buttonLogout() {
+      return Container(
+        child: CustomButtonBorder(
+          title: "Logout",
+          margin: EdgeInsets.symmetric(
+            vertical: 18.h,
+            horizontal: 36.w,
+          ),
+          titleColor: kRedColor,
+          borderColor: kRedColor,
+          borderWidth: 2,
+          fontWeight: light,
+          onPressed: () => showDialog<String>(
+            context: context,
+            builder: (BuildContext context) => Container(
+              width: double.infinity,
+              child: AlertDialog(
+                titlePadding: EdgeInsets.only(
+                  top: 10.h,
+                ),
+                contentPadding: EdgeInsets.symmetric(vertical: 20.h),
+                title: Container(
+                  margin: EdgeInsets.only(
+                    top: 48.h,
+                  ),
+                  child: Text(
+                    'Logout?',
+                    style: blackTextStyle.copyWith(
+                      fontWeight: bold,
+                      fontSize: 18.sp,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                content: Text(
+                  'Kode telah dikirim ulang ke email Anda.',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 13.sp,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                actions: <Widget>[
+                  CustomButtonBorder(
+                    title: "Kembali",
+                    titleColor: kDarkGreyColor,
+                    onPressed: () => Navigator.pop(context),
+                    borderColor: kDarkGreyColor,
+                    borderWidth: 2,
+                    fontWeight: light,
+                  ),
+                  SizedBox(
+                    height: 12.h,
+                  ),
+                  CustomButton(
+                    title: 'Ok',
+                    onPressed: () {},
+                    color: kRedColor,
+                  ),
+                ],
+                actionsPadding: EdgeInsets.only(
+                  bottom: 10.h,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.r),
+                ),
+              ),
+            ),
+          ),
         ),
       );
     }
 
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            navbar(),
-            profile(),
-            formInput(),
-          ],
+        child: SafeArea(
+          child: Column(
+            children: [
+              navbar(),
+              profile(),
+              formInput(),
+              buttonLogout(),
+            ],
+          ),
         ),
       ),
     );

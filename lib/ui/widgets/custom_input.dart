@@ -13,6 +13,7 @@ class CustomInput extends StatefulWidget {
   final double borderWidth;
   final EdgeInsets? margin;
   final double width;
+  final bool readOnly;
 
   const CustomInput({
     Key? key,
@@ -26,6 +27,7 @@ class CustomInput extends StatefulWidget {
     this.autocorrect = false,
     this.filled = false,
     this.obscureText = false,
+    this.readOnly = false,
   }) : super(key: key);
 
   @override
@@ -65,8 +67,7 @@ class _CustomInputState extends State<CustomInput> {
           borderRadius: BorderRadius.circular(defaultRadius),
           color: kGreyColor),
       child: TextFormField(
-        autocorrect: true,
-        autofocus: false,
+        readOnly: widget.readOnly,
         obscureText: widget.obscureText ? _isHidePassword : widget.obscureText,
         decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(
@@ -76,7 +77,11 @@ class _CustomInputState extends State<CustomInput> {
           hintText: widget.hintText,
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.obscureText ? suffixPassword() : null,
-          hintStyle: TextStyle(color: widget.hintColor),
+          hintStyle: TextStyle(
+            color: widget.hintColor,
+            fontWeight: light,
+            fontSize: 12.sp,
+          ),
           filled: widget.filled,
           fillColor: kGreyColor,
           focusColor: kDarkGreyColor,

@@ -7,6 +7,7 @@ import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/register_page.dart';
 import 'package:adira_cats/ui/pages/register_second_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
+import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/sk_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
 import 'package:adira_cats/ui/pages/verification_done_page.dart';
@@ -22,28 +23,44 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        builder: () => MaterialApp(
-              debugShowCheckedModeBanner: false,
+      builder: () => MaterialApp(
+        debugShowCheckedModeBanner: false,
 
-              /// NOTE: DONE
-              // home: SplashPage(),
-              // home: LoginPage(),
-              // home: TrialPage(),
-              // home: OtpPage(),
-              // home: SplashPage(),
-              // home: SuccessPage(),
-              // home: ForgotPasswordPage(),
-              // home: LoginPage(),
-              // home: VertifivationDonePage(),
-              // home: SkDonePage(),
-              // home: ForgotPasswordPage(),
+        /// NOTE: DONE
+        // home: SplashPage(),
+        // home: LoginPage(),
+        // home: TrialPage(),
+        // home: OtpPage(),
+        // home: SplashPage(),
+        // home: SuccessPage(),
+        // home: ForgotPasswordPage(),
+        // home: LoginPage(),
+        // home: VertifivationDonePage(),
+        // home: SkDonePage(),
+        // home: ForgotPasswordPage(),
 
-              /// NOTE: ON PROGRESS
-              // home: TrialPage(),
-              // home: ProfilePage(),
-              // home: OtpPage(),
-              // home: RegisterPage(),
-              home: RegisterSecondPage(),
-            ));
+        /// NOTE: ON PROGRESS
+        // home: TrialPage(),
+        // home: ProfilePage(),
+        // home: OtpPage(),
+        // home: RegisterPage(),
+        home: RegisterSecondPage(),
+
+        /// NOTE: DONE
+        // home: SplashPage(),
+        // home: LoginPage(),
+        // home: ResetPasswordPage(),
+        // home: ForgotPasswordPage(),
+        // home: VerificationDonePage(),
+        // home: SkDonePage(),
+
+        /// NOTE: ON PROGRESS
+        // home: OtpPage(),
+        // home: HomePage(),
+        // home: TestingPage(),
+        // home: ProfilePage(),
+      ),
+      designSize: const Size(428, 926),
+    );
   }
 }
