@@ -150,7 +150,68 @@ class RegisterPage extends StatelessWidget {
                 CustomButtonBorder(
                   titleColor: kRedColor,
                   title: 'Batal',
-                  onPressed: () {},
+                  onPressed: () => showDialog<String>(
+                    context: context,
+                    builder: (BuildContext context) => Container(
+                      child: AlertDialog(
+                        titlePadding: EdgeInsets.symmetric(
+                          vertical: 24.h,
+                        ),
+                        title: Container(
+                          margin: EdgeInsets.only(
+                            top: 48.h,
+                          ),
+                          child: Text(
+                            'Batalkan?',
+                            style: blackTextStyle.copyWith(
+                              fontWeight: bold,
+                              fontSize: 18.sp,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        content: Text(
+                          'Anda yakin ingin membatalkan?',
+                          style: blackTextStyle.copyWith(
+                            fontSize: 13.sp,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        actions: <Widget>[
+                          CustomButtonBorder(
+                            titleColor: kRedColor,
+                            title: 'Batalkan',
+                            onPressed: () {},
+                            borderColor: kRedColor,
+                            borderWidth: 2.r,
+                            fontWeight: normal,
+                            width: 308.w,
+                            margin: EdgeInsets.only(
+                              right: 36.w,
+                              left: 36.w,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 12.h,
+                          ),
+                          CustomButton(
+                            title: 'Lanjutkan',
+                            onPressed: () => Navigator.pop(context, 'OK'),
+                            color: kPrimaryColor,
+                            width: 308.w,
+                            margin: EdgeInsets.only(
+                              right: 36.w,
+                              left: 36.w,
+                              bottom: 48.h,
+                            ),
+                          ),
+                        ],
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.r),
+                        ),
+                      ),
+                    ),
+                  ),
                   borderColor: kRedColor,
                   borderWidth: 2,
                   fontWeight: normal,
