@@ -14,6 +14,9 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget header() {
       return Container(
+        margin: EdgeInsets.only(
+          bottom: 24.h,
+        ),
         child: CustomLogoAdira(
           text: 'Daftar Sebagai Informan',
         ),
@@ -185,7 +188,7 @@ class RegisterPage extends StatelessWidget {
                   borderColor: kRedColor,
                   borderWidth: 2,
                   fontWeight: normal,
-                  width: 172.w,
+                  width: 138.w,
                 ),
                 SizedBox(
                   width: 12.w,
@@ -197,7 +200,7 @@ class RegisterPage extends StatelessWidget {
                   borderColor: kDarkGreyColor,
                   borderWidth: 2,
                   fontWeight: normal,
-                  width: 172.w,
+                  width: 138.w,
                 ),
               ],
             ),
