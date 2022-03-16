@@ -43,12 +43,11 @@ class VerificationDonePage extends StatelessWidget {
                           height: 24,
                         ),
                         StyledText(
-                          text: 'Akun <bold>Edward Einselton</bold> sudah terdaftar!\nSilakan Login kembali.',
+                          text:
+                              'Akun <bold>Edward Einselton</bold> sudah terdaftar!\nSilakan Login kembali.',
                           tags: {
                             'bold': StyledTextTag(
-                              style: TextStyle(
-                                fontWeight: bold
-                              ),
+                              style: TextStyle(fontWeight: bold),
                             ),
                           },
                           style: blackTextStyle.copyWith(
@@ -56,7 +55,7 @@ class VerificationDonePage extends StatelessWidget {
                             fontSize: 13,
                           ),
                           textAlign: TextAlign.center,
-                        )
+                        ),
                       ],
                     ),
                   ),

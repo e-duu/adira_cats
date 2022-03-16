@@ -27,7 +27,7 @@ class CustomLogoAdira extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 35.h,
+          height: 49.h,
         ),
         Text(
           text,
