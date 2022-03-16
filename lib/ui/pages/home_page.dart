@@ -2,26 +2,31 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({ Key? key }) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    Widget navBar(){
+    Widget navbar() {
       return Container(
         width: double.infinity,
-        height: 163,
+        height: 163.h,
         margin: EdgeInsets.only(
-          bottom: 20
+          bottom: 20.h,
         ),
-        padding: EdgeInsets.only(bottom: 40, top: 36, left: 36, right: 36),
+        padding: EdgeInsets.only(
+          bottom: 40.h,
+          top: 36.h,
+          left: 36.w,
+          right: 36.w,
+        ),
         decoration: BoxDecoration(
           color: kPrimaryColor,
           borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(18),
-            bottomRight: Radius.circular(18),
+            bottomLeft: Radius.circular(18.r),
+            bottomRight: Radius.circular(18.r),
           ),
         ),
         child: Column(
@@ -31,53 +36,44 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 IconButton(
-                  onPressed: () => {},
-                  icon: Icon(
-                    Icons.subject_sharp
-                  )
-                ),
+                    onPressed: () => {}, icon: Icon(Icons.subject_sharp)),
                 Container(
-                  height: 16,
-                  width: 210,
+                  height: 16.h,
+                  width: 210.w,
                   decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        "assets/adira_logo_white.png",
-                      )
-                    )
-                  ),
+                      image: DecorationImage(
+                          image: AssetImage(
+                    "assets/adira_logo_white.png",
+                  ))),
                 ),
                 Container(
-                  width: 48,
-                  height: 48,
+                  width: 48.w,
+                  height: 48.h,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage(
                         "assets/image_user.png",
-                      )
-                    )
+                      ),
+                    ),
                   ),
                 ),
               ],
             ),
             SizedBox(
-              height: 18,
+              height: 18.h,
             ),
             StyledText(
-              text:
-                  'Selamat Datang, <bold>Edward Einselton!</bold>',
+              text: 'Selamat Datang, <bold>Edward Einselton!</bold>',
               tags: {
                 'bold': StyledTextTag(
-                  style: TextStyle(
-                    fontWeight: extraBold
-                  ),
+                  style: TextStyle(fontWeight: extraBold),
                 ),
               },
               style: blackTextStyle.copyWith(
                 fontWeight: semibold,
-                fontSize: 14,
+                fontSize: 14.sp,
               ),
               textAlign: TextAlign.center,
             ),
@@ -85,18 +81,16 @@ class HomePage extends StatelessWidget {
         ),
       );
     }
-    
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-            children: [
-              navBar(),
-              CustomInputSearch(
-                onPressed: () {},
-              ),
-            ]
-          ),
+          child: Column(children: [
+            navbar(),
+            CustomInputSearch(
+              onPressed: () {},
+            ),
+          ]),
         ),
       ),
     );
