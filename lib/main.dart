@@ -25,17 +25,16 @@ class MyApp extends StatelessWidget {
 
         /// NOTE: DONE
         // home: SplashPage(),
+        // home: LoginPage(),
+        // home: ForgotPasswordPage(),
         // home: VerificationDonePage(),
         // home: SkDonePage(),
-        // home: ForgotPasswordPage(),
-        // home: OtpPage(),
 
         /// NOTE: ON PROGRESS
-        home: LoginPage(),
+        // home: OtpPage(),
         // home: HomePage(),
         // home: TestingPage(),
         // home: ProfilePage(),
-        // home: TestingPage(),
       ),
       designSize: const Size(428, 926),
     );
