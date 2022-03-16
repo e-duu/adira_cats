@@ -14,6 +14,9 @@ class RegisterSecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget header() {
       return Container(
+        margin: EdgeInsets.only(
+          bottom: 24.h,
+        ),
         child: CustomLogoAdira(
           text: 'Daftar Sebagai Informan',
         ),
