@@ -5,47 +5,17 @@ import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../widgets/custom_logo_adira.dart';
+
 class RegisterPage extends StatelessWidget {
   const RegisterPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Widget logo() {
+    Widget header() {
       return Container(
-        width: 200.w,
-        height: 34.h,
-        margin: EdgeInsets.only(
-          top: 72.h,
-        ),
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(
-              'assets/adira_logo_yellow.png',
-            ),
-          ),
-        ),
-      );
-    }
-
-    /// Widget Title
-    Widget title() {
-      return Container(
-        margin: EdgeInsets.only(
-          top: 35.h,
-        ),
-        child: Column(
-          children: [
-            Text(
-              'Daftar Sebagai Informan',
-              style: blackTextStyle.copyWith(
-                fontSize: 18.sp,
-                fontWeight: bold,
-              ),
-            ),
-            SizedBox(
-              height: 24.h,
-            ),
-          ],
+        child: CustomLogoAdira(
+          text: 'Daftar Sebagai Informan',
         ),
       );
     }
@@ -256,8 +226,7 @@ class RegisterPage extends StatelessWidget {
           SafeArea(
             child: Column(
               children: [
-                logo(),
-                title(),
+                header(),
                 input(),
                 button(),
               ],
