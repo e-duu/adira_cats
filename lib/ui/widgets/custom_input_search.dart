@@ -13,6 +13,7 @@ class CustomInputSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 50.h,
       margin: EdgeInsets.symmetric(
         horizontal: 36.w,
       ),

@@ -62,6 +62,7 @@ class _CustomInputState extends State<CustomInput> {
   Widget build(BuildContext context) {
     return Container(
       width: widget.width,
+      height: 50.h,
       margin: widget.margin,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(defaultRadius),
@@ -80,7 +81,7 @@ class _CustomInputState extends State<CustomInput> {
           hintStyle: TextStyle(
             color: widget.hintColor,
             fontWeight: light,
-            fontSize: 12,
+            fontSize: 12.sp,
           ),
           filled: widget.filled,
           fillColor: kGreyColor,
@@ -88,12 +89,18 @@ class _CustomInputState extends State<CustomInput> {
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
             borderSide:
-                BorderSide(color: kGreyColor, width: widget.borderWidth),
+                BorderSide(
+                  color: kGreyColor,
+                  width: widget.borderWidth
+                ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
             borderSide:
-                BorderSide(color: kGreyColor, width: widget.borderWidth),
+                BorderSide(
+                  color: kGreyColor, 
+                  width: widget.borderWidth
+                ),
           ),
         ),
       ),

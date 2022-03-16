@@ -30,6 +30,7 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
+      height: 50.h,
       margin: margin,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(defaultRadius),
@@ -45,7 +46,11 @@ class CustomTextField extends StatelessWidget {
             vertical: 15.h,
           ),
           hintText: hintText,
-          hintStyle: TextStyle(color: kGreyColor),
+          hintStyle: TextStyle(
+            color: hintColor,
+            fontWeight: light,
+            fontSize: 12.sp,
+          ),
           filled: filled,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),

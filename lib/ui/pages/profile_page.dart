@@ -86,7 +86,7 @@ class ProfilePage extends StatelessWidget {
               Text(
                 "Edward Einselton",
                 style: blackTextStyle.copyWith(
-                  fontSize: 18,
+                  fontSize: 18.sp,
                   fontWeight: bold,
                 ),
               ),
@@ -115,7 +115,7 @@ class ProfilePage extends StatelessWidget {
             Text(
               "User ID",
               style: darkGreyTextStyle.copyWith(
-                fontSize: 13,
+                fontSize: 13.sp,
                 fontWeight: semibold,
               ),
             ),
@@ -124,17 +124,17 @@ class ProfilePage extends StatelessWidget {
               hintText: "edward999", 
               hintColor: kBlackColor,
               margin: EdgeInsets.only(
-                top: 12,
+                top: 12.h,
               ),
               width: double.infinity,
             ),
             SizedBox(
-              height: 12,
+              height: 12.h,
             ),
             Text(
               "Password",
               style: darkGreyTextStyle.copyWith(
-                fontSize: 13,
+                fontSize: 13.sp,
                 fontWeight: semibold,
               ),
             ),
@@ -143,12 +143,12 @@ class ProfilePage extends StatelessWidget {
               hintText: "*******", 
               hintColor: kBlackColor,
               margin: EdgeInsets.only(
-                top: 12,
+                top: 12.h,
               ),
               width: double.infinity,
             ),
             SizedBox(
-              height: 12,
+              height: 12.h,
             ),
             Text(
               "Nomor KTP",
@@ -162,7 +162,7 @@ class ProfilePage extends StatelessWidget {
               hintText: "9999 9999 9999", 
               hintColor: kBlackColor,
               margin: EdgeInsets.only(
-                top: 12,
+                top: 12.h,
               ),
               width: double.infinity,
             ),
@@ -316,7 +316,8 @@ class ProfilePage extends StatelessWidget {
         child: CustomButtonBorder(
           title: "Logout",
           margin: EdgeInsets.symmetric(
-            vertical: 18
+            vertical: 18.h,
+            horizontal: 36.w
           ),
           titleColor: kRedColor,
           borderColor: kRedColor, 
@@ -328,51 +329,66 @@ class ProfilePage extends StatelessWidget {
               width: double.infinity,
               child: AlertDialog(
                 titlePadding: EdgeInsets.only(
-                  top: 10,
+                  top: 10.h,
                 ),
                 contentPadding: EdgeInsets.symmetric(
-                  vertical: 20
+                  vertical: 20.w
                 ),
                 title: Container(
                   margin: EdgeInsets.only(
-                    top: 48,
+                    top: 48.h,
                   ),
                   child: Text(
                     'Logout?',
                     style: blackTextStyle.copyWith(
                       fontWeight: bold,
-                      fontSize: 18,
+                      fontSize: 18.sp,
                     ),
                     textAlign: TextAlign.center,
                   ),
                 ),
-                content: Text(
-                  'Kode telah dikirim ulang ke email Anda.',
-                  style: blackTextStyle.copyWith(
-                    fontSize: 13,
+                content: Container(
+                  width: 200,
+                  child: Text(
+                    'Anda yakin ingin logout?',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 13.sp,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
                 ),
                 actions: <Widget>[
-                  CustomButtonBorder(
-                    title: "Kembali",
-                    titleColor: kDarkGreyColor,
-                    onPressed: () => Navigator.pop(context),
-                    borderColor: kDarkGreyColor,
-                    borderWidth: 2,
-                    fontWeight: light,
-                  ),
-                  SizedBox(
-                    height: 12,
-                  ),
-                  CustomButton(
-                    title: 'Ok',
-                    onPressed: () {},
-                    color: kRedColor,
+                  Container(
+                    width: 380.w,
+                    margin: EdgeInsets.only(
+                      right: 36.w,
+                      left: 36.w,
+                      bottom: 48.h,
+                    ),
+                    child: Column(
+                      children: [
+                        CustomButtonBorder(
+                          title: "Kembali",
+                          titleColor: kDarkGreyColor,
+                          onPressed: () => Navigator.pop(context),
+                          borderColor: kDarkGreyColor,
+                          borderWidth: 2,
+                          fontWeight: light,
+                        ),
+                        SizedBox(
+                          height: 12.h,
+                        ),
+                        CustomButton(
+                          title: 'Logout',
+                          onPressed: () {},
+                          color: kRedColor,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
                 actionsPadding: EdgeInsets.only(
-                  bottom: 10,
+                  bottom: 10.h,
                 ),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18),
@@ -388,6 +404,8 @@ class ProfilePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            navbar(),
+            profile(),
             formInput(),
             buttonLogout(),
           ],
