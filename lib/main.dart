@@ -3,6 +3,7 @@ import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/forgot_password_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/register_page.dart';
 import 'package:adira_cats/ui/pages/register_second_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/sk_done_page.dart';
@@ -24,13 +25,13 @@ class MyApp extends StatelessWidget {
       /// NOTE: DONE
       // home: SplashPage(),
       // home: LoginPage(),
-      home: RegisterSecondPage(),
       // home: TrialPage(),
       // home: OtpPage(),
       // home: SplashPage(),
       // home: SuccessPage(),
-      // home: LoginPage(),
       // home: ForgotPasswordPage(),
+      // home: LoginPage(),
+      // home: RegisterSecondPage(),
       // home: VertifivationDonePage(),
       // home: SkDonePage(),
       // home: ForgotPasswordPage(),
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
       // home: TrialPage(),
       // home: ProfilePage(),
       // home: OtpPage(),
-      // home: TrialPage(),
+      home: RegisterPage(),
     );
   }
 }

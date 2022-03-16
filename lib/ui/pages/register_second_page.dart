@@ -1,3 +1,4 @@
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,8 @@ class RegisterSecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    icon:
+    const Icon(Icons.arrow_downward);
     Widget logo() {
       return Container(
         margin: EdgeInsets.only(top: 72),
@@ -41,17 +44,36 @@ class RegisterSecondPage extends StatelessWidget {
       Widget accountInput() {
         return CustomInput(
           hintText: 'Nomor Rekening',
-          hintColor: kGreyColor,
-          contentPadding: EdgeInsets.symmetric(
-            horizontal: 18,
-            vertical: 15,
-          ),
-          margin: EdgeInsets.zero,
+          hintColor: kDarkGreyColor,
+          filled: true,
+          margin: EdgeInsets.only(bottom: 12),
+        );
+      }
+
+      Widget chooseBank() {
+        return CustomInput(
+          hintText: 'Pilig Bank',
+          hintColor: kDarkGreyColor,
+          filled: true,
+          margin: EdgeInsets.only(bottom: 12),
         );
       }
 
       Widget branchBank() {
-        return CustomTextFormField(hintText: 'Cabang');
+        return CustomInput(
+          hintText: 'Cabang Bank',
+          hintColor: kDarkGreyColor,
+          filled: true,
+          margin: EdgeInsets.only(bottom: 12),
+        );
+      }
+
+      Widget customerName() {
+        return CustomInput(
+          hintText: 'Nama Nasabah',
+          hintColor: kDarkGreyColor,
+          filled: true,
+        );
       }
 
       return Container(
@@ -59,7 +81,27 @@ class RegisterSecondPage extends StatelessWidget {
         child: Column(
           children: [
             accountInput(),
+            chooseBank(),
             branchBank(),
+            customerName(),
+          ],
+        ),
+      );
+    }
+
+    Widget button() {
+      return Container(
+        width: double.infinity,
+        margin: EdgeInsets.only(top: 358),
+        child: Row(
+          children: [
+            CustomButtonBorder(
+              title: 'Kembali',
+              onPressed: () {},
+              borderColor: kBlackColor,
+              borderWidth: 2,
+              fontWeight: light,
+            ),
           ],
         ),
       );
@@ -75,6 +117,8 @@ class RegisterSecondPage extends StatelessWidget {
               logo(),
               title(),
               inputSection(),
+              // dropdown(),
+              button(),
             ],
           ),
         ),
@@ -82,3 +126,46 @@ class RegisterSecondPage extends StatelessWidget {
     );
   }
 }
+
+// class _MyHomePageState extends State<MyHomePage> {
+//   String dropdownvalue = 'Apple';
+
+//   var items = [
+//     'Apple',
+//     'Banana',
+//     'Grapes',
+//     'Orange',
+//     'watermelon',
+//     'Pineapple'
+//   ];
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("DropDownList Example"),
+//       ),
+//       body: Container(
+//         child: Center(
+//           child: Column(
+//             mainAxisAlignment: MainAxisAlignment.center,
+//             children: [
+//               DropdownButton(
+//                 value: dropdownvalue,
+//                 icon: Icon(Icons.keyboard_arrow_down),
+//                 items: items.map((String items) {
+//                   return DropdownMenuItem(value: items, child: Text(items));
+//                 }).toList(),
+//                 onChanged: (dynamic newValue) {
+//                   setState(() {
+//                     dropdownvalue = newValue;
+//                   });
+//                 },
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }

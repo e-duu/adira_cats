@@ -74,8 +74,6 @@ class LoginPage extends StatelessWidget {
                         ),
                         hintColor: kDarkGreyColor,
                         filled: true,
-                        contentPadding: EdgeInsets.all(2),
-                        margin: EdgeInsets.symmetric(horizontal: 0),
                       ),
                     ),
                     Container(
@@ -96,7 +94,6 @@ class LoginPage extends StatelessWidget {
                         ),
                         hintColor: kDarkGreyColor,
                         filled: true,
-                        contentPadding: EdgeInsets.all(2),
                         margin: EdgeInsets.symmetric(horizontal: 0),
                       ),
                     ),

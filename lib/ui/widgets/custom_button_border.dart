@@ -13,11 +13,11 @@ class CustomButtonBorder extends StatelessWidget {
   const CustomButtonBorder({
     Key? key,
     required this.title,
-    this.width = double.infinity,
     required this.onPressed,
     required this.borderColor,
     required this.borderWidth,
     required this.fontWeight,
+    this.width = double.infinity,
     this.margin = EdgeInsets.zero,
   }) : super(key: key);
 

@@ -2,7 +2,6 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 class CustomInput extends StatefulWidget {
-
   final String hintText;
   final bool autocorrect;
   final bool filled;
@@ -12,14 +11,12 @@ class CustomInput extends StatefulWidget {
   final Color hintColor;
   final double borderWidth;
   final EdgeInsets? margin;
-  final EdgeInsets contentPadding;
   final double width;
-  
-  const CustomInput({ 
+
+  const CustomInput({
     Key? key,
     required this.hintText,
     required this.hintColor,
-    required this.contentPadding,
     this.margin,
     this.borderWidth = 0,
     this.width = double.infinity,
@@ -35,19 +32,18 @@ class CustomInput extends StatefulWidget {
 }
 
 class _CustomInputState extends State<CustomInput> {
-
   bool _isHidePassword = true;
-  
+
   void _togglePasswordVisibility() {
     setState(() {
       _isHidePassword = !_isHidePassword;
     });
   }
-  
-  Widget suffixPassword(){
+
+  Widget suffixPassword() {
     return GestureDetector(
       onTap: () {
-        _togglePasswordVisibility(); 
+        _togglePasswordVisibility();
       },
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
@@ -58,7 +54,7 @@ class _CustomInputState extends State<CustomInput> {
       ),
     );
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -69,22 +65,22 @@ class _CustomInputState extends State<CustomInput> {
         autofocus: false,
         obscureText: widget.obscureText ? _isHidePassword : widget.obscureText,
         decoration: InputDecoration(
-          contentPadding: widget.contentPadding,
+          contentPadding: EdgeInsets.symmetric(horizontal: 18, vertical: 15),
           hintText: widget.hintText,
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.obscureText ? suffixPassword() : null,
-          hintStyle: TextStyle(
-            color: widget.hintColor
-          ),
+          hintStyle: TextStyle(color: widget.hintColor),
           filled: widget.filled,
           fillColor: kGreyColor,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
-            borderSide: BorderSide(color: kDarkGreyColor, width: widget.borderWidth),
+            borderSide:
+                BorderSide(color: kDarkGreyColor, width: widget.borderWidth),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
-            borderSide: BorderSide(color: kDarkGreyColor, width: widget.borderWidth),
+            borderSide:
+                BorderSide(color: kDarkGreyColor, width: widget.borderWidth),
           ),
         ),
       ),

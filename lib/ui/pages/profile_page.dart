@@ -56,8 +56,8 @@ class ProfilePage extends StatelessWidget {
       return Container(
         margin: EdgeInsets.only(
           top: 18,
-          right: 18,
-          left: 18,
+          right: 36,
+          left: 36,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,7 +73,6 @@ class ProfilePage extends StatelessWidget {
               hintText: "Nomor KTP",
               hintColor: kDarkGreyColor,
               margin: EdgeInsets.only(top: 12),
-              contentPadding: EdgeInsets.symmetric(horizontal: 18),
               width: double.infinity,
             ),
             SizedBox(
@@ -97,7 +96,7 @@ class ProfilePage extends StatelessWidget {
                       hintText: "Tempat Lahir",
                       hintColor: kDarkGreyColor,
                       margin: EdgeInsets.only(top: 12),
-                      contentPadding: EdgeInsets.symmetric(horizontal: 18),
+                      width: 172,
                     ),
                   ],
                 ),
@@ -117,7 +116,73 @@ class ProfilePage extends StatelessWidget {
                       margin: EdgeInsets.only(
                         top: 12,
                       ),
-                      contentPadding: EdgeInsets.symmetric(horizontal: 18),
+                      width: 172,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            Text(
+              "Alamat KTP",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13,
+                fontWeight: semibold,
+              ),
+            ),
+            CustomTextField(
+              hintText: "Alamat KTP",
+              maxLines: 2,
+            ),
+            Text(
+              "Alamat Domisili",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13,
+                fontWeight: semibold,
+              ),
+            ),
+            CustomTextField(
+              hintText: "Alamat Domisili",
+              maxLines: 2,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Tempat Lahir",
+                      style: darkGreyTextStyle.copyWith(
+                        fontSize: 13,
+                        fontWeight: semibold,
+                      ),
+                    ),
+                    CustomInput(
+                      hintText: "Tempat Lahir",
+                      hintColor: kDarkGreyColor,
+                      margin: EdgeInsets.only(top: 12),
+                      width: 172,
+                    ),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Tanggal Lahir",
+                      style: darkGreyTextStyle.copyWith(
+                        fontSize: 13,
+                        fontWeight: semibold,
+                      ),
+                    ),
+                    CustomInput(
+                      hintText: "Tanggal Lahir",
+                      hintColor: kDarkGreyColor,
+                      margin: EdgeInsets.only(
+                        top: 12,
+                      ),
+                      width: 172,
                     ),
                   ],
                 ),
