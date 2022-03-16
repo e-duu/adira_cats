@@ -5,9 +5,11 @@ import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
+import 'package:styled_text/styled_text.dart';
+import 'package:styled_text/tags/styled_text_tag.dart';
 
-class ForgotPasswordPage extends StatelessWidget {
-  const ForgotPasswordPage({Key? key}) : super(key: key);
+class ResetPasswordPage extends StatelessWidget {
+  const ResetPasswordPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class ForgotPasswordPage extends StatelessWidget {
           bottom: 10.h,
         ),
         child: CustomLogoAdira(
-          text: 'Lupa Password Anda?',
+          text: 'Ganti Password Baru',
         ),
       );
     }
@@ -25,25 +27,55 @@ class ForgotPasswordPage extends StatelessWidget {
     /// Widget Title
     Widget title() {
       return Container(
-        child: Text(
-          'Masukkan alamat ID yang terkait dengan akun Anda.',
+        child: StyledText(
+          text: 'Masukkan password baru untuk User ID\n<bold>edward999</bold>',
+          tags: {
+            'bold': StyledTextTag(
+              style: TextStyle(
+                fontWeight: bold,
+              ),
+            ),
+          },
           style: blackTextStyle.copyWith(
-            fontSize: 14.sp,
             fontWeight: light,
+            fontSize: 13,
           ),
+          textAlign: TextAlign.center,
         ),
       );
     }
 
     Widget input() {
-      return CustomInput(
-        hintText: 'User ID',
-        hintColor: kDarkGreyColor,
-        margin: EdgeInsets.only(
-          top: 20.h,
-          right: 18.w,
-          left: 18.w,
-        ),
+      return Column(
+        children: [
+          CustomInput(
+            hintText: 'Password Lama',
+            hintColor: kDarkGreyColor,
+            margin: EdgeInsets.only(
+              top: 20.h,
+              right: 18.w,
+              left: 18.w,
+            ),
+          ),
+          CustomInput(
+            hintText: 'Password Baru',
+            hintColor: kDarkGreyColor,
+            margin: EdgeInsets.only(
+              top: 20.h,
+              right: 18.w,
+              left: 18.w,
+            ),
+          ),
+          CustomInput(
+            hintText: 'Ulangi Password Baru',
+            hintColor: kDarkGreyColor,
+            margin: EdgeInsets.only(
+              top: 20.h,
+              right: 18.w,
+              left: 18.w,
+            ),
+          ),
+        ],
       );
     }
 
@@ -83,49 +115,7 @@ class ForgotPasswordPage extends StatelessWidget {
             ),
             CustomButton(
               title: 'Submit',
-              onPressed: () => showDialog<String>(
-                context: context,
-                builder: (BuildContext context) => Container(
-                  width: double.infinity,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 2.w,
-                    vertical: 48.h,
-                  ),
-                  child: AlertDialog(
-                    titlePadding: EdgeInsets.only(
-                      top: 10.h,
-                    ),
-                    title: Text(
-                      'Password Dikirim.',
-                      style: blackTextStyle.copyWith(
-                        fontWeight: bold,
-                        fontSize: 18.sp,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    content: Text(
-                      'Password sementara telah dikirim ke email Anda, silahkan ganti password Anda setelah login.',
-                      style: blackTextStyle.copyWith(
-                        fontSize: 13.sp,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    actions: <Widget>[
-                      CustomButton(
-                        title: 'Ok',
-                        onPressed: () => Navigator.pop(context, 'OK'),
-                        color: kPrimaryColor,
-                      ),
-                    ],
-                    actionsPadding: EdgeInsets.only(
-                      bottom: 10.h,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.r),
-                    ),
-                  ),
-                ),
-              ),
+              onPressed: () {},
               color: kPrimaryColor,
               margin: EdgeInsets.symmetric(
                 horizontal: 20.w,
