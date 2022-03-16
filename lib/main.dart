@@ -33,10 +33,10 @@ class MyApp extends StatelessWidget {
         // home: SkDonePage(),
 
         /// NOTE: ON PROGRESS
-        home: OtpPage(),
+        // home: OtpPage(),
         // home: HomePage(),
         // home: TestingPage(),
-        // home: ProfilePage(),
+        home: ProfilePage(),
       ),
       designSize: const Size(428, 926),
     );

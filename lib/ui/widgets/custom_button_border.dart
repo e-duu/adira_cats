@@ -29,7 +29,7 @@ class CustomButtonBorder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      height: 50.h,
+      height: 50,
       margin: margin,
       child: OutlinedButton(
         onPressed: onPressed,

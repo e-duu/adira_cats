@@ -14,8 +14,8 @@ class CustomInput extends StatefulWidget {
   final EdgeInsets? margin;
   final double width;
   final bool readOnly;
-  
-  const CustomInput({ 
+
+  const CustomInput({
     Key? key,
     required this.hintText,
     required this.hintColor,
@@ -80,7 +80,7 @@ class _CustomInputState extends State<CustomInput> {
           hintStyle: TextStyle(
             color: widget.hintColor,
             fontWeight: light,
-            fontSize: 12,
+            fontSize: 12.sp,
           ),
           filled: widget.filled,
           fillColor: kGreyColor,
