@@ -4,12 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomCardNotification extends StatelessWidget {
   final String title;
+  final String message;
   final String time;
   final FontWeight fontWeight;
 
   const CustomCardNotification({
     Key? key,
     required this.title,
+    required this.message,
     required this.time,
     required this.fontWeight,
   }) : super(key: key);
@@ -23,7 +25,7 @@ class CustomCardNotification extends StatelessWidget {
       ),
       padding: EdgeInsets.symmetric(
         vertical: 18.h,
-        horizontal: 28.w,
+        horizontal: 24.w,
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(defaultRadius),
@@ -41,8 +43,9 @@ class CustomCardNotification extends StatelessWidget {
               right: 18.w,
             ),
             decoration: BoxDecoration(
+              shape: BoxShape.circle,
               image: DecorationImage(
-                image: AssetImage('assets/Bell_pin.png'),
+                image: AssetImage('assets/icon_bell.png'),
               ),
             ),
           ),
@@ -56,10 +59,11 @@ class CustomCardNotification extends StatelessWidget {
                     fontSize: 12.sp,
                     fontWeight: bold,
                   ),
+                  overflow: TextOverflow.ellipsis,
                 ),
                 SizedBox(height: 6.h),
                 Text(
-                  'Klik untuk melihat',
+                  message,
                   style: darkGreyTextStyle.copyWith(
                     fontWeight: semibold,
                     fontSize: 11.sp,
