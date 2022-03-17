@@ -41,7 +41,6 @@ class ProfilePage extends StatelessWidget {
               ),
               shape: BoxShape.circle,
               image: DecorationImage(
-                fit: BoxFit.cover,
                 image: AssetImage(
                   "assets/image_user.png",
                 ),
@@ -100,6 +99,7 @@ class ProfilePage extends StatelessWidget {
                                     ),
                                     CustomButton(
                                       title: "Upload", 
+                                      textStyle: whiteTextStyle,
                                       color: kPrimaryColor,
                                       onPressed: () => showDialog(
                                         context: context,
@@ -169,8 +169,9 @@ class ProfilePage extends StatelessWidget {
                                       ),
                                       CustomButton(
                                         title: 'Tetap Edit',
-                                        onPressed: () {},
+                                        textStyle: whiteTextStyle,
                                         color: kPrimaryColor,
+                                        onPressed: () {},
                                       ),
                                     ],
                                   ),
@@ -197,7 +198,6 @@ class ProfilePage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      child: Icon(Icons.edit_outlined),
                     ),
                   ],
                 )

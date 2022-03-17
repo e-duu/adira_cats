@@ -47,17 +47,12 @@ class MyApp extends StatelessWidget {
           // home: ProfilePage(),
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
-<<<<<<< HEAD
-          // home: RegisterFourthPagelllllllllllll
-          home: NotificationPage(),
-=======
-          home: RegisterFourthPage(),
->>>>>>> d45b0585be0fcb5a007c70172adcb0bdf9b8496d
+          // home: RegisterFourthPage(),
 
           /// NOTE: ON PROGRESS
           // home: TrialPage(),
           // home: RegisterThirdPage(),
-          // home: NotificationPage(),
+          home: NotificationPage(),
         ),
       ),
     );

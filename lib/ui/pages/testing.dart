@@ -4,12 +4,10 @@ import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_dialog.dart';
 import 'package:adira_cats/ui/widgets/custom_icon_upload.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
-import 'package:adira_cats/ui/widgets/custom_input_datetime.dart';
 import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:adira_cats/ui/widgets/custom_menu.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_field.dart';
-import 'package:adira_cats/ui/widgets/widget_test.dart';
 import 'package:flutter/material.dart';
 
 class TestingPage extends StatelessWidget {
