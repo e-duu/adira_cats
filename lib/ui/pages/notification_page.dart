@@ -13,7 +13,10 @@ class NotificationPage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Notifikasi",
-          preffixWidget: IconButton(onPressed: () => {}, icon: libraryIcon),
+          preffixWidget: IconButton(
+            onPressed: () => {},
+            icon: libraryIcon,
+          ),
           suffixWidget: Container(
             width: 48.w,
             height: 48.h,
@@ -30,27 +33,33 @@ class NotificationPage extends StatelessWidget {
       );
     }
 
-    Widget title() {
-      return Container(
-        margin: EdgeInsets.only(top: 24.h, left: 12.w),
-        child: Row(
-          children: [
-            Text(
-              'Hari ini',
-              style: darkGreyTextStyle.copyWith(
-                fontWeight: semibold,
-                fontSize: 13.sp,
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-
     Widget cardNotif() {
       return Container(
+        margin: EdgeInsets.only(
+          bottom: 50.h,
+        ),
         child: Column(
           children: [
+            // NOTE: TITLE
+            Container(
+              margin: EdgeInsets.only(
+                top: 24.h,
+                left: 12.w,
+              ),
+              child: Row(
+                children: [
+                  Text(
+                    'Hari ini',
+                    style: darkGreyTextStyle.copyWith(
+                      fontWeight: semibold,
+                      fontSize: 13.sp,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // NOTE: CARD NOTIFICATION
             CustomCardNotification(
               title: 'SK 14142 telah diterbitkan',
               time: 'Baru Saja',
@@ -64,6 +73,32 @@ class NotificationPage extends StatelessWidget {
             CustomCardNotification(
               title: 'Anda menerima pesan dari Anggora',
               time: '03.45',
+              fontWeight: light,
+            ),
+
+            // NOTE: TITLE
+            Container(
+              margin: EdgeInsets.only(
+                top: 24.h,
+                left: 12.w,
+              ),
+              child: Row(
+                children: [
+                  Text(
+                    'Kemarin',
+                    style: darkGreyTextStyle.copyWith(
+                      fontWeight: semibold,
+                      fontSize: 13.sp,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // NOTE: CARD NOTIFICATION
+            CustomCardNotification(
+              title: 'Anda menerima pesan dari Persia',
+              time: '22.22',
               fontWeight: light,
             ),
           ],
@@ -83,7 +118,6 @@ class NotificationPage extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    title(),
                     cardNotif(),
                   ],
                 ),

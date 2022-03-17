@@ -23,7 +23,7 @@ class CustomCardNotification extends StatelessWidget {
       ),
       padding: EdgeInsets.symmetric(
         vertical: 18.h,
-        horizontal: 28.w,
+        horizontal: 24.w,
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(defaultRadius),
