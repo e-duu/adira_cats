@@ -4,10 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomInputSearch extends StatelessWidget {
   final Function() onPressed;
+  final String hintText;
 
   const CustomInputSearch({
     Key? key,
     required this.onPressed,
+    required this.hintText,
   }) : super(key: key);
 
   @override
@@ -28,17 +30,17 @@ class CustomInputSearch extends StatelessWidget {
             horizontal: 18.w,
             vertical: 15.h,
           ),
-          hintText: "Apa Yang Anda Cari?",
+          hintText: hintText,
           suffixIcon: IconButton(
             onPressed: onPressed,
             hoverColor: kTransparent,
             focusColor: kTransparent,
             highlightColor: kTransparent,
-            icon: Icon(Icons.search_outlined),
+            icon: Icon(Icons.search_sharp),
           ),
           hintStyle: TextStyle(color: kGreyColor),
           filled: true,
-          fillColor: kGreyColor,
+          fillColor: kWhiteColor,
           focusColor: kDarkGreyColor,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
