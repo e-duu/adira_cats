@@ -1,5 +1,4 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/pages/edit_profile_page.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
@@ -62,6 +61,7 @@ class ProfilePage extends StatelessWidget {
                         onTap: () => showDialog<String>(
                           context: context,
                           builder: (BuildContext context) => Container(
+                            height: 200,
                             width: double.infinity,
                             child: AlertDialog(
                               titlePadding: EdgeInsets.only(
@@ -108,9 +108,9 @@ class ProfilePage extends StatelessWidget {
                                         builder: (BuildContext context) {
                                           return AlertDialog(
                                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                                            title: Text('Please choose media to select'),
+                                            title: Text('Silahkan Pilih Media'),
                                             content: Container(
-                                              height: MediaQuery.of(context).size.height / 6,
+                                              height: MediaQuery.of(context).size.height / 10,
                                               child: Column(
                                                 children: <Widget>[
                                                   TextButton(
@@ -123,6 +123,9 @@ class ProfilePage extends StatelessWidget {
                                                         Text('From Gallery'),
                                                       ],
                                                     ),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 6,
                                                   ),
                                                   TextButton(
                                                     onPressed: () {
@@ -169,7 +172,7 @@ class ProfilePage extends StatelessWidget {
                                       CustomButton(
                                         title: 'Tetap Edit',
                                         onPressed: () {},
-                                        color: kRedColor,
+                                        color: kPrimaryColor,
                                       ),
                                     ],
                                   ),
@@ -310,7 +313,7 @@ class ProfilePage extends StatelessWidget {
                               CustomButton(
                                 title: 'Tetap Edit',
                                 onPressed: () {},
-                                color: kRedColor,
+                                color: kPrimaryColor,
                               ),
                             ],
                           ),
@@ -460,8 +463,7 @@ class ProfilePage extends StatelessWidget {
             CustomTextField(
               readOnly: true,
               hintColor: kBlackColor,
-              hintText:
-                  "Jln. Raya Bau Petrikor no.8, Kec. Camat, Kab. Kabup, Provinsi DKI Jakarta",
+              hintText: "Jln. Raya Bau Petrikor no.8, Kec. Camat, Kab. Kabup, Provinsi DKI Jakarta",
               maxLines: 2,
               margin: EdgeInsets.only(
                 top: 12.h,

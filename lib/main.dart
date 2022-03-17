@@ -40,8 +40,8 @@ class MyApp extends StatelessWidget {
         // home: ForgotPasswordPage(),
 
         /// NOTE: ON PROGRESS
-        // home: TrialPage(),
-        home: ProfilePage(),
+        home: TestingPage()
+        // home: ProfilePage(),
         // home: OtpPage(),
         // home: RegisterPage(),
         // home: RegisterSecondPage(),

@@ -4,10 +4,12 @@ import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_dialog.dart';
 import 'package:adira_cats/ui/widgets/custom_icon_upload.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
+import 'package:adira_cats/ui/widgets/custom_input_datetime.dart';
 import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:adira_cats/ui/widgets/custom_menu.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_field.dart';
+import 'package:adira_cats/ui/widgets/widget_test.dart';
 import 'package:flutter/material.dart';
 
 class TestingPage extends StatelessWidget {
@@ -80,33 +82,35 @@ class TestingPage extends StatelessWidget {
             // CustomIconUpload(text: "Tambahkan\nFoto Diri"),
 
             // NOTE: DIALOG
-            TextButton(
-              onPressed: () => CustomDialog(
-                title: "Batalkan?", 
-                text: "Anda Ingin Membatalkan?",
-                context: context,
-                preffixAction: CustomButtonBorder(
-                  title: "Batalkan",
-                  titleColor: kRedColor,
-                  onPressed: () => {},
-                  borderColor: kRedColor, 
-                  borderWidth: 2, 
-                  fontWeight: light,
-                ), 
-                suffixAction: CustomButton(
-                  title: "Tetap Edit", 
-                  onPressed: () => {}, 
-                  color: kPrimaryColor
-                ),
-              ),
-              child: Text(
-                'Coba Dialog',
-                style: blackTextStyle.copyWith(
-                  fontSize: 14,
-                  fontWeight: bold,
-                ),
-              ),
-            ),
+            // TextButton(
+            //   onPressed: () => CustomDialog(
+            //     title: "Batalkan?", 
+            //     text: "Anda Ingin Membatalkan?",
+            //     context: context,
+            //     preffixAction: CustomButtonBorder(
+            //       title: "Batalkan",
+            //       titleColor: kRedColor,
+            //       onPressed: () => {},
+            //       borderColor: kRedColor, 
+            //       borderWidth: 2, 
+            //       fontWeight: light,
+            //     ), 
+            //     suffixAction: CustomButton(
+            //       title: "Tetap Edit", 
+            //       onPressed: () => {}, 
+            //       color: kPrimaryColor
+            //     ),
+            //   ),
+            //   child: Text(
+            //     'Coba Dialog',
+            //     style: blackTextStyle.copyWith(
+            //       fontSize: 14,
+            //       fontWeight: bold,
+            //     ),
+            //   ),
+            // ),
+
+            CustomInputDatetime()
           ],
         ),
       ),
