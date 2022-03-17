@@ -66,8 +66,9 @@ class ProfilePage extends StatelessWidget {
                               titlePadding: EdgeInsets.only(
                                 top: 10.h,
                               ),
-                              contentPadding:
-                                  EdgeInsets.symmetric(vertical: 20.h),
+                              contentPadding: EdgeInsets.symmetric(
+                                vertical: 20.h,
+                              ),
                               title: Container(
                                 margin: EdgeInsets.only(
                                   top: 48.h,
@@ -82,71 +83,74 @@ class ProfilePage extends StatelessWidget {
                                 ),
                               ),
                               content: Container(
-                                  width: double.infinity,
-                                  margin: EdgeInsets.symmetric(horizontal: 36),
-                                  child: Column(
-                                    children: [
-                                      Text(
-                                        "Upload Photo",
-                                        style: darkGreyTextStyle.copyWith(
-                                            fontSize: 13, fontWeight: semibold),
+                                width: double.infinity,
+                                margin: EdgeInsets.symmetric(
+                                  horizontal: 36,
+                                ),
+                                child: Column(
+                                  children: [
+                                    Text(
+                                      "Upload Photo",
+                                      style: darkGreyTextStyle.copyWith(
+                                        fontSize: 13,
+                                        fontWeight: semibold,
                                       ),
-                                      SizedBox(
-                                        height: 12,
-                                      ),
-                                      CustomButton(
-                                        title: "Upload",
-                                        color: kPrimaryColor,
-                                        onPressed: () => showDialog(
-                                            context: context,
-                                            builder: (BuildContext context) {
-                                              return AlertDialog(
-                                                shape: RoundedRectangleBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            8)),
-                                                title: Text(
-                                                    'Please choose media to select'),
-                                                content: Container(
-                                                  height: MediaQuery.of(context)
-                                                          .size
-                                                          .height /
-                                                      6,
-                                                  child: Column(
-                                                    children: <Widget>[
-                                                      TextButton(
-                                                        onPressed: () {
-                                                          Navigator.pop(
-                                                              context);
-                                                        },
-                                                        child: Row(
-                                                          children: <Widget>[
-                                                            Icon(Icons.image),
-                                                            Text(
-                                                                'From Gallery'),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                      TextButton(
-                                                        onPressed: () {
-                                                          Navigator.pop(
-                                                              context);
-                                                        },
-                                                        child: Row(
-                                                          children: <Widget>[
-                                                            Icon(Icons.camera),
-                                                            Text('From Camera'),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ],
+                                    ),
+                                    SizedBox(
+                                      height: 12,
+                                    ),
+                                    CustomButton(
+                                      title: "Upload",
+                                      color: kPrimaryColor,
+                                      onPressed: () => showDialog(
+                                        context: context,
+                                        builder: (BuildContext context) {
+                                          return AlertDialog(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
+                                            ),
+                                            title: Text(
+                                                'Please choose media to select'),
+                                            content: Container(
+                                              height: MediaQuery.of(context)
+                                                      .size
+                                                      .height /
+                                                  6,
+                                              child: Column(
+                                                children: <Widget>[
+                                                  TextButton(
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: Row(
+                                                      children: <Widget>[
+                                                        Icon(Icons.image),
+                                                        Text('From Gallery'),
+                                                      ],
+                                                    ),
                                                   ),
-                                                ),
-                                              );
-                                            }),
+                                                  TextButton(
+                                                    onPressed: () {
+                                                      Navigator.pop(context);
+                                                    },
+                                                    child: Row(
+                                                      children: <Widget>[
+                                                        Icon(Icons.camera),
+                                                        Text('From Camera'),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          );
+                                        },
                                       ),
-                                    ],
-                                  )),
+                                    ),
+                                  ],
+                                ),
+                              ),
                               actions: <Widget>[
                                 Container(
                                   width: 380.w,
