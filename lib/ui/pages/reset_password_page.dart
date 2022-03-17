@@ -2,11 +2,10 @@ import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:styled_text/styled_text.dart';
-import 'package:styled_text/tags/styled_text_tag.dart';
+import 'package:flutter/material.dart';
 
 class ResetPasswordPage extends StatelessWidget {
   const ResetPasswordPage({Key? key}) : super(key: key);
@@ -117,6 +116,7 @@ class ResetPasswordPage extends StatelessWidget {
               title: 'Submit',
               onPressed: () {},
               color: kPrimaryColor,
+              textStyle: blackTextStyle,
               margin: EdgeInsets.symmetric(
                 horizontal: 20.w,
               ),

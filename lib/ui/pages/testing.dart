@@ -82,35 +82,34 @@ class TestingPage extends StatelessWidget {
             // CustomIconUpload(text: "Tambahkan\nFoto Diri"),
 
             // NOTE: DIALOG
-            // TextButton(
-            //   onPressed: () => CustomDialog(
-            //     title: "Batalkan?", 
-            //     text: "Anda Ingin Membatalkan?",
-            //     context: context,
-            //     preffixAction: CustomButtonBorder(
-            //       title: "Batalkan",
-            //       titleColor: kRedColor,
-            //       onPressed: () => {},
-            //       borderColor: kRedColor, 
-            //       borderWidth: 2, 
-            //       fontWeight: light,
-            //     ), 
-            //     suffixAction: CustomButton(
-            //       title: "Tetap Edit", 
-            //       onPressed: () => {}, 
-            //       color: kPrimaryColor
-            //     ),
-            //   ),
-            //   child: Text(
-            //     'Coba Dialog',
-            //     style: blackTextStyle.copyWith(
-            //       fontSize: 14,
-            //       fontWeight: bold,
-            //     ),
-            //   ),
-            // ),
-
-            CustomInputDatetime()
+            TextButton(
+              onPressed: () => CustomDialog(
+                title: "Batalkan?",
+                text: "Anda Ingin Membatalkan?",
+                context: context,
+                preffixAction: CustomButtonBorder(
+                  title: "Batalkan",
+                  titleColor: kRedColor,
+                  onPressed: () => {},
+                  borderColor: kRedColor,
+                  borderWidth: 2,
+                  fontWeight: light,
+                ),
+                suffixAction: CustomButton(
+                  title: "Tetap Edit",
+                  onPressed: () => {},
+                  color: kPrimaryColor,
+                  textStyle: blackTextStyle,
+                ),
+              ),
+              child: Text(
+                'Coba Dialog',
+                style: blackTextStyle.copyWith(
+                  fontSize: 14,
+                  fontWeight: bold,
+                ),
+              ),
+            ),
           ],
         ),
       ),

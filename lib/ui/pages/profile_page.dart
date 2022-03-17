@@ -6,8 +6,6 @@ import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sms_autofill/sms_autofill.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -20,7 +18,7 @@ class ProfilePage extends StatelessWidget {
           text: "Profil Saya",
           preffixWidget: GestureDetector(
             onTap: () {},
-            child: Icon(Icons.subject_sharp)
+            child: Icon(Icons.subject_sharp),
           ),
           suffixWidget: SizedBox(),
         ),
@@ -199,6 +197,7 @@ class ProfilePage extends StatelessWidget {
                           ),
                         ),
                       ),
+                      child: Icon(Icons.edit_outlined),
                     ),
                   ],
                 )
@@ -219,111 +218,112 @@ class ProfilePage extends StatelessWidget {
                 ),
               ),
               IconButton(
-                icon: Icon(
-                  Icons.edit_outlined
-                ),
+                icon: Icon(Icons.edit_outlined),
                 onPressed: () => showDialog<String>(
                   context: context,
-                  builder: (BuildContext context) => Container(
-                    width: double.infinity,
-                    child: AlertDialog(
-                      titlePadding: EdgeInsets.only(
-                        top: 10.h,
-                      ),
-                      contentPadding: EdgeInsets.symmetric(
-                        vertical: 20.h
-                      ),
-                      title: Container(
-                        margin: EdgeInsets.only(
-                          top: 48.h,
+                  builder: (BuildContext context) => SingleChildScrollView(
+                    child: Container(
+                      width: double.infinity,
+                      child: AlertDialog(
+                        titlePadding: EdgeInsets.only(
+                          top: 10.h,
                         ),
-                        child: Text(
-                          'Ganti Nama',
-                          style: blackTextStyle.copyWith(
-                            fontWeight: bold,
-                            fontSize: 18.sp,
-                          ),
-                          textAlign: TextAlign.center,
+                        contentPadding: EdgeInsets.symmetric(
+                          vertical: 20.h,
                         ),
-                      ),
-                      content: Container(
-                        width: double.infinity,
-                        margin: EdgeInsets.symmetric(
-                          horizontal: 36
-                        ),
-                        child: Column(
-                          children: [
-                            Text(
-                              "Nama Depan",
-                              style: darkGreyTextStyle.copyWith(
-                                fontSize: 13,
-                                fontWeight: semibold
-                              ),
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-                            CustomInput(
-                              hintText: "Nama Depan", 
-                              hintColor: kDarkGreyColor,
-                              value: "Edward",
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-                            Text(
-                              "Nama Belakang",
-                              style: darkGreyTextStyle.copyWith(
-                                fontSize: 13,
-                                fontWeight: semibold
-                              ),
-                            ),
-                            SizedBox(
-                              height: 12,
-                            ),
-                            CustomInput(
-                              hintText: "Nama Belakang", 
-                              hintColor: kDarkGreyColor,
-                              value: "Einselton",
-                            )
-                          ],
-                        )
-                      ),
-                      actions: <Widget>[
-                        Container(
-                          width: 380.w,
+                        title: Container(
                           margin: EdgeInsets.only(
-                            right: 36.w,
-                            left: 36.w,
-                            bottom: 48.h,
+                            top: 48.h,
+                          ),
+                          child: Text(
+                            'Ganti Nama',
+                            style: blackTextStyle.copyWith(
+                              fontWeight: bold,
+                              fontSize: 18.sp,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        content: Container(
+                          width: double.infinity,
+                          margin: EdgeInsets.symmetric(
+                            horizontal: 36.w,
                           ),
                           child: Column(
                             children: [
-                              CustomButtonBorder(
-                                title: "Batalkan",
-                                titleColor: kDarkGreyColor,
-                                onPressed: () => Navigator.pop(context),
-                                borderColor: kDarkGreyColor,
-                                borderWidth: 2,
-                                fontWeight: light,
+                              Text(
+                                "Nama Depan",
+                                style: darkGreyTextStyle.copyWith(
+                                  fontSize: 13.sp,
+                                  fontWeight: semibold,
+                                ),
                               ),
                               SizedBox(
                                 height: 12.h,
                               ),
-                              CustomButton(
-                                title: 'Tetap Edit',
-                                onPressed: () {},
-                                color: kPrimaryColor,
+                              CustomInput(
+                                hintText: "Nama Depan",
+                                hintColor: kDarkGreyColor,
+                                value: "Edward",
                               ),
+                              SizedBox(
+                                height: 12.h,
+                              ),
+                              Text(
+                                "Nama Belakang",
+                                style: darkGreyTextStyle.copyWith(
+                                  fontSize: 13.sp,
+                                  fontWeight: semibold,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 12.h,
+                              ),
+                              CustomInput(
+                                hintText: "Nama Belakang",
+                                hintColor: kDarkGreyColor,
+                                value: "Einselton",
+                              )
                             ],
                           ),
                         ),
-                      ],
-                      actionsPadding: EdgeInsets.only(
-                        bottom: 10.h,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.r),
+                        actions: <Widget>[
+                          Container(
+                            width: 380.w,
+                            margin: EdgeInsets.only(
+                              right: 36.w,
+                              left: 36.w,
+                              bottom: 48.h,
+                            ),
+                            child: Column(
+                              children: [
+                                CustomButtonBorder(
+                                  title: "Batalkan",
+                                  titleColor: kDarkGreyColor,
+                                  onPressed: () => Navigator.pop(context),
+                                  borderColor: kDarkGreyColor,
+                                  borderWidth: 2,
+                                  fontWeight: light,
+                                ),
+                                SizedBox(
+                                  height: 12.h,
+                                ),
+                                CustomButton(
+                                  title: 'Tetap Edit',
+                                  onPressed: () {},
+                                  color: kRedColor,
+                                  textStyle: whiteTextStyle,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                        actionsPadding: EdgeInsets.only(
+                          bottom: 10.h,
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.r),
+                        ),
                       ),
                     ),
                   ),
@@ -403,8 +403,7 @@ class ProfilePage extends StatelessWidget {
               height: 12.h,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -423,9 +422,12 @@ class ProfilePage extends StatelessWidget {
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
-                      width: 172.w,
+                      width: 138.w,
                     ),
                   ],
+                ),
+                SizedBox(
+                  width: 12,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -444,7 +446,7 @@ class ProfilePage extends StatelessWidget {
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
-                      width: 172.w,
+                      width: 138.w,
                     ),
                   ],
                 ),
@@ -492,8 +494,7 @@ class ProfilePage extends StatelessWidget {
               height: 12.h,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -507,20 +508,23 @@ class ProfilePage extends StatelessWidget {
                     ),
                     CustomInput(
                       readOnly: true,
-                      hintText: "Email",
+                      hintText: "edward@gmail.com",
                       hintColor: kBlackColor,
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
-                      width: 172.w,
+                      width: 138.w,
                     ),
                   ],
+                ),
+                SizedBox(
+                  width: 12,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Nomor Telepon",
+                      "Nomer Telepon",
                       style: darkGreyTextStyle.copyWith(
                         fontSize: 13.sp,
                         fontWeight: semibold,
@@ -528,12 +532,12 @@ class ProfilePage extends StatelessWidget {
                     ),
                     CustomInput(
                       readOnly: true,
-                      hintText: "Nomor Telepon",
+                      hintText: "0813261392",
                       hintColor: kBlackColor,
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
-                      width: 172.w,
+                      width: 138.w,
                     ),
                   ],
                 ),
@@ -550,7 +554,7 @@ class ProfilePage extends StatelessWidget {
           title: "Logout",
           margin: EdgeInsets.symmetric(
             vertical: 18.h,
-            horizontal: 36.w
+            horizontal: 36.w,
           ),
           titleColor: kRedColor,
           borderColor: kRedColor,
@@ -565,7 +569,7 @@ class ProfilePage extends StatelessWidget {
                   top: 10.h,
                 ),
                 contentPadding: EdgeInsets.symmetric(
-                  vertical: 20.h
+                  vertical: 20.h,
                 ),
                 title: Container(
                   margin: EdgeInsets.only(
@@ -615,6 +619,7 @@ class ProfilePage extends StatelessWidget {
                           title: 'Logout',
                           onPressed: () {},
                           color: kRedColor,
+                          textStyle: whiteTextStyle,
                         ),
                       ],
                     ),

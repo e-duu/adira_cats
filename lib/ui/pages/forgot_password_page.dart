@@ -83,6 +83,7 @@ class ForgotPasswordPage extends StatelessWidget {
             ),
             CustomButton(
               title: 'Submit',
+              textStyle: blackTextStyle,
               onPressed: () => showDialog<String>(
                 context: context,
                 builder: (BuildContext context) => Container(
@@ -115,6 +116,7 @@ class ForgotPasswordPage extends StatelessWidget {
                         title: 'Ok',
                         onPressed: () => Navigator.pop(context, 'OK'),
                         color: kPrimaryColor,
+                        textStyle: blackTextStyle,
                       ),
                     ],
                     actionsPadding: EdgeInsets.only(
