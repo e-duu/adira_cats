@@ -1,3 +1,4 @@
+import 'package:adira_cats/ui/widgets/custom_card_notification.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
@@ -48,20 +49,25 @@ class NotificationPage extends StatelessWidget {
 
     Widget cardNotif() {
       return Container(
-        margin: EdgeInsets.only(
-          top: 18.h,
+        child: Column(
+          children: [
+            CustomCardNotification(
+              title: 'SK 14142 telah diterbitkan',
+              time: 'Baru Saja',
+              fontWeight: semibold,
+            ),
+            CustomCardNotification(
+              title: 'SK 14141 telah dikonfirmasi',
+              time: '06.12',
+              fontWeight: light,
+            ),
+            CustomCardNotification(
+              title: 'Anda menerima pesan dari Anggora',
+              time: '03.45',
+              fontWeight: light,
+            ),
+          ],
         ),
-        padding: EdgeInsets.symmetric(
-          vertical: 18.h,
-          horizontal: 24.w,
-        ),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(defaultRadius),
-          border: Border.all(
-            color: kDarkGreyColor,
-          ),
-        ),
-        child: Row(),
       );
     }
 
