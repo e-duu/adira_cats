@@ -442,28 +442,32 @@ class HomePage extends StatelessWidget {
             ),
             SizedBox(height: 12.h,),
             Container(
-              width: double.infinity,
-              height: 120.h,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage(
-                    "assets/announcement.png",
+              child: Column(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    height: 120.h,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(
+                          "assets/announcement.png",
+                        ),
+                      ),
+                      borderRadius: BorderRadius.circular(8.r)
+                    ),
                   ),
-                ),
-                borderRadius: BorderRadius.circular(8.r)
+                  SizedBox(height: 12.h,),
+                  Text(
+                    'Mobile App Adira Finance CATS Terbaru\nAkan Segera Hadir!',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 13.sp,
+                      fontWeight: bold,
+                    ),
+                  ),
+                ],
               ),
-            ),
-            SizedBox(height: 12.h,),
-            Container(
-              child: Text(
-                'Mobile App Adira Finance CATS Terbaru\nAkan Segera Hadir!',
-                style: blackTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: bold,
-                ),
-              ),
-            ),
+            )
           ],
         ),
       );
