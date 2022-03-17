@@ -4,12 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomCardNotification extends StatelessWidget {
   final String title;
+  final String message;
   final String time;
   final FontWeight fontWeight;
 
   const CustomCardNotification({
     Key? key,
     required this.title,
+    required this.message,
     required this.time,
     required this.fontWeight,
   }) : super(key: key);
@@ -59,7 +61,7 @@ class CustomCardNotification extends StatelessWidget {
                 ),
                 SizedBox(height: 6.h),
                 Text(
-                  'Klik untuk melihat',
+                  message,
                   style: darkGreyTextStyle.copyWith(
                     fontWeight: semibold,
                     fontSize: 11.sp,

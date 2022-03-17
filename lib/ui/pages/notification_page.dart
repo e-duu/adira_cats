@@ -62,16 +62,19 @@ class NotificationPage extends StatelessWidget {
             // NOTE: CARD NOTIFICATION
             CustomCardNotification(
               title: 'SK 14142 telah diterbitkan',
+              message: 'klik untuk melihat',
               time: 'Baru Saja',
               fontWeight: semibold,
             ),
             CustomCardNotification(
               title: 'SK 14141 telah dikonfirmasi',
+              message: 'klik untuk melihat',
               time: '06.12',
               fontWeight: light,
             ),
             CustomCardNotification(
               title: 'Anda menerima pesan dari Anggora',
+              message: 'klik untuk melihat',
               time: '03.45',
               fontWeight: light,
             ),
@@ -98,11 +101,18 @@ class NotificationPage extends StatelessWidget {
             // NOTE: CARD NOTIFICATION
             CustomCardNotification(
               title: 'Anda menerima pesan dari Persia',
+              message: 'klik untuk melihat',
               time: '22.22',
               fontWeight: light,
             ),
           ],
         ),
+      );
+    }
+
+    Widget customNavigation() {
+      return Container(
+        child: Text('Ramadhan'),
       );
     }
 

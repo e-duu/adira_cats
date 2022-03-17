@@ -2,6 +2,7 @@ import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../shared/theme.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomBottomNavigationItem extends StatelessWidget {
   final int index;
@@ -25,8 +26,8 @@ class CustomBottomNavigationItem extends StatelessWidget {
           SizedBox(),
           Image.asset(
             imageUrl,
-            width: 24,
-            height: 24,
+            width: 24.w,
+            height: 24.h,
             color: context.read<PageCubit>().state == index
                 ? kPrimaryColor
                 : kGreyColor,
