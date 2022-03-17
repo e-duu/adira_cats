@@ -67,6 +67,7 @@ class SkDonePage extends StatelessWidget {
                 horizontal: 36,
               ),
               color: kPrimaryColor,
+              textStyle: blackTextStyle,
             ),
           ),
         ],

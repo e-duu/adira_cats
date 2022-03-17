@@ -171,6 +171,7 @@ class RegisterPage extends StatelessWidget {
                             title: 'Lanjutkan',
                             onPressed: () => Navigator.pop(context, 'OK'),
                             color: kPrimaryColor,
+                            textStyle: blackTextStyle,
                             width: 308.w,
                             margin: EdgeInsets.only(
                               right: 36.w,
@@ -211,6 +212,7 @@ class RegisterPage extends StatelessWidget {
               title: 'Lanjutkan',
               onPressed: () {},
               color: kPrimaryColor,
+              textStyle: blackTextStyle,
               margin: EdgeInsets.only(
                 right: 36.w,
                 left: 36.w,

@@ -118,6 +118,7 @@ class RegisterFourthPage extends StatelessWidget {
               title: 'Lanjutkan',
               onPressed: () {},
               color: kPrimaryColor,
+              textStyle: blackTextStyle,
               margin: EdgeInsets.symmetric(
                 horizontal: defaultMargin.w,
               ),
