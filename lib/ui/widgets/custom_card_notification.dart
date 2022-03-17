@@ -43,8 +43,9 @@ class CustomCardNotification extends StatelessWidget {
               right: 18.w,
             ),
             decoration: BoxDecoration(
+              shape: BoxShape.circle,
               image: DecorationImage(
-                image: AssetImage('assets/Bell_pin.png'),
+                image: AssetImage('assets/icon_bell.png'),
               ),
             ),
           ),
@@ -58,6 +59,7 @@ class CustomCardNotification extends StatelessWidget {
                     fontSize: 12.sp,
                     fontWeight: bold,
                   ),
+                  overflow: TextOverflow.ellipsis,
                 ),
                 SizedBox(height: 6.h),
                 Text(
