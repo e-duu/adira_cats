@@ -107,7 +107,7 @@ class LoginPage extends StatelessWidget {
                         Text(
                           'Klik di Sini',
                           style: blackTextStyle.copyWith(
-                            fontSize: 13,
+                            fontSize: 13.sp,
                             fontWeight: bold,
                           ),
                         )
