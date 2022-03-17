@@ -110,9 +110,65 @@ class NotificationPage extends StatelessWidget {
       );
     }
 
-    Widget customNavigation() {
-      return Container(
-        child: Text('Ramadhan'),
+    Widget customBottomNavigation() {
+      return Align(
+        alignment: Alignment.bottomCenter,
+        child: Container(
+          width: double.infinity,
+          height: 100.h,
+          padding: EdgeInsets.symmetric(
+            horizontal: 40.w,
+          ),
+          decoration: BoxDecoration(
+            color: kWhiteColor,
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(24.r),
+              topLeft: Radius.circular(24.r),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: kGrayColor.withOpacity(1),
+                spreadRadius: 3,
+                blurRadius: 18.r,
+                offset: Offset(0, 0),
+              ),
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                  width: 25,
+                  height: 25,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        'assets/icon_chat_button.png',
+                      ),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 21.w,
+                            height: 21.h,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: kPrimaryColor,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  )),
+            ],
+          ),
+        ),
       );
     }
 
@@ -132,6 +188,7 @@ class NotificationPage extends StatelessWidget {
                   ],
                 ),
               ),
+              customBottomNavigation(),
             ],
           ),
         ),
