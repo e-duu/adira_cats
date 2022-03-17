@@ -13,7 +13,10 @@ class NotificationPage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Notifikasi",
-          preffixWidget: IconButton(onPressed: () => {}, icon: libraryIcon),
+          preffixWidget: IconButton(
+            onPressed: () => {},
+            icon: libraryIcon,
+          ),
           suffixWidget: Container(
             width: 48.w,
             height: 48.h,
@@ -30,44 +33,86 @@ class NotificationPage extends StatelessWidget {
       );
     }
 
-    Widget title() {
+    Widget cardNotif() {
       return Container(
-        margin: EdgeInsets.only(top: 24.h, left: 12.w),
-        child: Row(
+        margin: EdgeInsets.only(
+          bottom: 50.h,
+        ),
+        child: Column(
           children: [
-            Text(
-              'Hari ini',
-              style: darkGreyTextStyle.copyWith(
-                fontWeight: semibold,
-                fontSize: 13.sp,
+            // NOTE: TITLE
+            Container(
+              margin: EdgeInsets.only(
+                top: 24.h,
+                left: 12.w,
               ),
+              child: Row(
+                children: [
+                  Text(
+                    'Hari ini',
+                    style: darkGreyTextStyle.copyWith(
+                      fontWeight: semibold,
+                      fontSize: 13.sp,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // NOTE: CARD NOTIFICATION
+            CustomCardNotification(
+              title: 'SK 14142 telah diterbitkan',
+              message: 'klik untuk melihat',
+              time: 'Baru Saja',
+              fontWeight: semibold,
+            ),
+            CustomCardNotification(
+              title: 'SK 14141 telah dikonfirmasi',
+              message: 'klik untuk melihat',
+              time: '06.12',
+              fontWeight: light,
+            ),
+            CustomCardNotification(
+              title: 'Anda menerima pesan dari Anggora',
+              message: 'klik untuk melihat',
+              time: '03.45',
+              fontWeight: light,
+            ),
+
+            // NOTE: TITLE
+            Container(
+              margin: EdgeInsets.only(
+                top: 24.h,
+                left: 12.w,
+              ),
+              child: Row(
+                children: [
+                  Text(
+                    'Kemarin',
+                    style: darkGreyTextStyle.copyWith(
+                      fontWeight: semibold,
+                      fontSize: 13.sp,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // NOTE: CARD NOTIFICATION
+            CustomCardNotification(
+              title: 'Anda menerima pesan dari Persia',
+              message: 'klik untuk melihat',
+              time: '22.22',
+              fontWeight: light,
             ),
           ],
         ),
       );
     }
 
-    Widget cardNotif() {
+    Widget customNavigation() {
       return Container(
-        child: Column(
-          children: [
-            CustomCardNotification(
-              title: 'SK 14142 telah diterbitkan',
-              time: 'Baru Saja',
-              fontWeight: semibold,
-            ),
-            CustomCardNotification(
-              title: 'SK 14141 telah dikonfirmasi',
-              time: '06.12',
-              fontWeight: light,
-            ),
-            CustomCardNotification(
-              title: 'Anda menerima pesan dari Anggora',
-              time: '03.45',
-              fontWeight: light,
-            ),
-          ],
-        ),
+        child: Text('Ramadhan'),
       );
     }
 
@@ -83,7 +128,6 @@ class NotificationPage extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    title(),
                     cardNotif(),
                   ],
                 ),

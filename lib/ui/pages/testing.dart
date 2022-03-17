@@ -82,21 +82,22 @@ class TestingPage extends StatelessWidget {
             // NOTE: DIALOG
             TextButton(
               onPressed: () => CustomDialog(
-                title: "Batalkan?", 
+                title: "Batalkan?",
                 text: "Anda Ingin Membatalkan?",
                 context: context,
                 preffixAction: CustomButtonBorder(
                   title: "Batalkan",
                   titleColor: kRedColor,
                   onPressed: () => {},
-                  borderColor: kRedColor, 
-                  borderWidth: 2, 
+                  borderColor: kRedColor,
+                  borderWidth: 2,
                   fontWeight: light,
-                ), 
+                ),
                 suffixAction: CustomButton(
-                  title: "Tetap Edit", 
-                  onPressed: () => {}, 
-                  color: kPrimaryColor
+                  title: "Tetap Edit",
+                  onPressed: () => {},
+                  color: kPrimaryColor,
+                  textStyle: blackTextStyle,
                 ),
               ),
               child: Text(

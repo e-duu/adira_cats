@@ -2,7 +2,7 @@ import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
-import 'package:adira_cats/ui/pages/notif_page.dart';
+import 'package:adira_cats/ui/pages/notification_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/unit_search.dart';
 import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
@@ -23,7 +23,7 @@ class MainPage extends StatelessWidget {
         case 2:
           return HomePage();
         case 3:
-          return NotifPage();
+          return NotificationPage();
         case 4:
           return ProfilePage();
         default:
