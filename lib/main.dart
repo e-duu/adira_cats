@@ -6,6 +6,7 @@ import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/forgot_password_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/register_fourth_page.dart';
 import 'package:adira_cats/ui/pages/register_page.dart';
 import 'package:adira_cats/ui/pages/register_second_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
@@ -41,12 +42,16 @@ class MyApp extends StatelessWidget {
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
 
+          /// NOTE : DONE
+          // home: OtpPage(),
+          // home: RegisterPage(),
+          // home: RegisterSecondPage(),
+          // home: RegisterFourthPage(),
+
           /// NOTE: ON PROGRESS
           // home: TrialPage(),
-          // home: ProfilePage(),
-          // home: OtpPage(),
-          home: RegisterPage(),
-          // home: RegisterSecondPage(),
+          home: ProfilePage(),
+          // home: RegisterThirdPage(),
           // home: NotificationPage(),
         ),
       ),

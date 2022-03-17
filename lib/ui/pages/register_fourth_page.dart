@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 import '../widgets/custom_logo_adira.dart';
 
-class RegisterSecondPage extends StatelessWidget {
-  const RegisterSecondPage({Key? key}) : super(key: key);
+class RegisterFourthPage extends StatelessWidget {
+  const RegisterFourthPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
