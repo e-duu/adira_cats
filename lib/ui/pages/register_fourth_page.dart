@@ -2,7 +2,6 @@ import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:adira_cats/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 import '../widgets/custom_logo_adira.dart';
@@ -12,6 +11,8 @@ class RegisterFourthPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    icon:
+    const Icon(Icons.arrow_downward);
     Widget header() {
       return Container(
         margin: EdgeInsets.only(
@@ -24,44 +25,87 @@ class RegisterFourthPage extends StatelessWidget {
     }
 
     Widget inputSection() {
-      Widget accountInput() {
-        return CustomInput(
-          hintText: 'Nomor Rekening',
-          hintColor: kDarkGreyColor,
-          filled: true,
-          margin: EdgeInsets.only(
-            bottom: 12.h,
-          ),
+      Widget newNameUserId() {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Nama User ID Baru",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: semibold,
+              ),
+            ),
+            SizedBox(
+              height: 5.h,
+            ),
+            CustomInput(
+              hintText: 'Nama User ID Baru',
+              hintColor: kDarkGreyColor,
+              filled: true,
+              margin: EdgeInsets.only(
+                bottom: 12.h,
+              ),
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
+          ],
         );
       }
 
-      Widget chooseBank() {
-        return CustomInput(
-          hintText: 'Pilih Bank',
-          hintColor: kDarkGreyColor,
-          filled: true,
-          margin: EdgeInsets.only(
-            bottom: 12.h,
-          ),
+      Widget password() {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Password",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: semibold,
+              ),
+            ),
+            SizedBox(
+              height: 5.h,
+            ),
+            CustomInput(
+              hintText: 'Password',
+              hintColor: kDarkGreyColor,
+              filled: true,
+              margin: EdgeInsets.only(
+                bottom: 12.h,
+              ),
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
+          ],
         );
       }
 
-      Widget branchBank() {
-        return CustomInput(
-          hintText: 'Cabang Bank',
-          hintColor: kDarkGreyColor,
-          filled: true,
-          margin: EdgeInsets.only(
-            bottom: 12.h,
-          ),
-        );
-      }
-
-      Widget customerName() {
-        return CustomInput(
-          hintText: 'Nama Nasabah',
-          hintColor: kDarkGreyColor,
-          filled: true,
+      Widget passwordConfirmation() {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Ulangi Password",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: semibold,
+              ),
+            ),
+            SizedBox(
+              height: 5.h,
+            ),
+            CustomInput(
+              hintText: 'Ulangi Password',
+              hintColor: kDarkGreyColor,
+              filled: true,
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
+          ],
         );
       }
 
@@ -71,10 +115,9 @@ class RegisterFourthPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            accountInput(),
-            chooseBank(),
-            branchBank(),
-            customerName(),
+            newNameUserId(),
+            password(),
+            passwordConfirmation(),
           ],
         ),
       );
@@ -85,6 +128,9 @@ class RegisterFourthPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
+            SizedBox(
+              height: 34.h,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -95,7 +141,7 @@ class RegisterFourthPage extends StatelessWidget {
                   borderColor: kDarkGreyColor,
                   borderWidth: 2.r,
                   fontWeight: normal,
-                  width: 173.w,
+                  width: 138.w,
                 ),
                 SizedBox(
                   width: 12.w,
@@ -107,7 +153,7 @@ class RegisterFourthPage extends StatelessWidget {
                   borderColor: kDarkGreyColor,
                   borderWidth: 2.r,
                   fontWeight: normal,
-                  width: 173.w,
+                  width: 138.w,
                 ),
               ],
             ),
@@ -119,8 +165,8 @@ class RegisterFourthPage extends StatelessWidget {
               onPressed: () {},
               color: kPrimaryColor,
               textStyle: blackTextStyle,
-              margin: EdgeInsets.symmetric(
-                horizontal: defaultMargin.w,
+              margin: EdgeInsets.only(
+                bottom: 36.h,
               ),
             ),
           ],
@@ -129,22 +175,22 @@ class RegisterFourthPage extends StatelessWidget {
     }
 
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      floatingActionButton: Visibility(
-        child: button(),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       backgroundColor: kWhiteColor,
-      body: SafeArea(
-        child: ListView(
-          padding: EdgeInsets.symmetric(
-            horizontal: defaultMargin.w,
-          ),
-          children: [
-            header(),
-            inputSection(),
-          ],
+      body: ListView(
+        padding: EdgeInsets.symmetric(
+          horizontal: defaultMargin.w,
         ),
+        children: [
+          SafeArea(
+            child: Column(
+              children: [
+                header(),
+                inputSection(),
+                button(),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
