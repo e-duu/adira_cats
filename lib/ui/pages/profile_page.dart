@@ -6,8 +6,6 @@ import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sms_autofill/sms_autofill.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -18,7 +16,10 @@ class ProfilePage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Profil Saya",
-          preffixWidget: IconButton(onPressed: () => {}, icon: libraryIcon),
+          preffixWidget: GestureDetector(
+            onTap: () {},
+            child: Icon(Icons.subject_sharp),
+          ),
           suffixWidget: SizedBox(),
         ),
       );
@@ -34,37 +35,32 @@ class ProfilePage extends StatelessWidget {
             width: 160.w,
             height: 160.h,
             decoration: BoxDecoration(
-                border: Border.all(
-                  width: 2.w,
-                  color: kGreyColor,
+              border: Border.all(
+                width: 2.w,
+                color: kGreyColor,
+              ),
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  "assets/image_user.png",
                 ),
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage(
-                    "assets/image_user.png",
-                  ),
-                )),
+              ),
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      child: GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                          width: 42.w,
-                          height: 42.h,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: kPrimaryColor,
-                          ),
-                          child: Icon(Icons.edit_outlined),
-                        ),
+                    Container(
+                      width: 42,
+                      height: 42,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: kPrimaryColor,
                       ),
+                      child: Icon(Icons.edit_outlined),
                     ),
                   ],
                 )
@@ -86,7 +82,115 @@ class ProfilePage extends StatelessWidget {
               ),
               IconButton(
                 icon: Icon(Icons.edit_outlined),
-                onPressed: () {},
+                onPressed: () => showDialog<String>(
+                  context: context,
+                  builder: (BuildContext context) => SingleChildScrollView(
+                    child: Container(
+                      width: double.infinity,
+                      child: AlertDialog(
+                        titlePadding: EdgeInsets.only(
+                          top: 10.h,
+                        ),
+                        contentPadding: EdgeInsets.symmetric(
+                          vertical: 20.h,
+                        ),
+                        title: Container(
+                          margin: EdgeInsets.only(
+                            top: 48.h,
+                          ),
+                          child: Text(
+                            'Ganti Nama',
+                            style: blackTextStyle.copyWith(
+                              fontWeight: bold,
+                              fontSize: 18.sp,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        content: Container(
+                          width: double.infinity,
+                          margin: EdgeInsets.symmetric(
+                            horizontal: 36.w,
+                          ),
+                          child: Column(
+                            children: [
+                              Text(
+                                "Nama Depan",
+                                style: darkGreyTextStyle.copyWith(
+                                  fontSize: 13.sp,
+                                  fontWeight: semibold,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 12.h,
+                              ),
+                              CustomInput(
+                                hintText: "Nama Depan",
+                                hintColor: kDarkGreyColor,
+                                value: "Edward",
+                              ),
+                              SizedBox(
+                                height: 12.h,
+                              ),
+                              Text(
+                                "Nama Belakang",
+                                style: darkGreyTextStyle.copyWith(
+                                  fontSize: 13.sp,
+                                  fontWeight: semibold,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 12.h,
+                              ),
+                              CustomInput(
+                                hintText: "Nama Belakang",
+                                hintColor: kDarkGreyColor,
+                                value: "Einselton",
+                              )
+                            ],
+                          ),
+                        ),
+                        actions: <Widget>[
+                          Container(
+                            width: 380.w,
+                            margin: EdgeInsets.only(
+                              right: 36.w,
+                              left: 36.w,
+                              bottom: 48.h,
+                            ),
+                            child: Column(
+                              children: [
+                                CustomButtonBorder(
+                                  title: "Batalkan",
+                                  titleColor: kDarkGreyColor,
+                                  onPressed: () => Navigator.pop(context),
+                                  borderColor: kDarkGreyColor,
+                                  borderWidth: 2,
+                                  fontWeight: light,
+                                ),
+                                SizedBox(
+                                  height: 12.h,
+                                ),
+                                CustomButton(
+                                  title: 'Tetap Edit',
+                                  onPressed: () {},
+                                  color: kRedColor,
+                                  textStyle: whiteTextStyle,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                        actionsPadding: EdgeInsets.only(
+                          bottom: 10.h,
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.r),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               )
             ],
           )
@@ -162,8 +266,7 @@ class ProfilePage extends StatelessWidget {
               height: 12.h,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -182,9 +285,12 @@ class ProfilePage extends StatelessWidget {
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
-                      width: 172.w,
+                      width: 138.w,
                     ),
                   ],
+                ),
+                SizedBox(
+                  width: 12,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -203,7 +309,7 @@ class ProfilePage extends StatelessWidget {
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
-                      width: 172.w,
+                      width: 138.w,
                     ),
                   ],
                 ),
@@ -252,8 +358,7 @@ class ProfilePage extends StatelessWidget {
               height: 12.h,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -267,20 +372,23 @@ class ProfilePage extends StatelessWidget {
                     ),
                     CustomInput(
                       readOnly: true,
-                      hintText: "Email",
+                      hintText: "edward@gmail.com",
                       hintColor: kBlackColor,
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
-                      width: 172.w,
+                      width: 138.w,
                     ),
                   ],
+                ),
+                SizedBox(
+                  width: 12,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Nomor Telepon",
+                      "Nomer Telepon",
                       style: darkGreyTextStyle.copyWith(
                         fontSize: 13.sp,
                         fontWeight: semibold,
@@ -288,12 +396,12 @@ class ProfilePage extends StatelessWidget {
                     ),
                     CustomInput(
                       readOnly: true,
-                      hintText: "Nomor Telepon",
+                      hintText: "0813261392",
                       hintColor: kBlackColor,
                       margin: EdgeInsets.only(
                         top: 12.h,
                       ),
-                      width: 172.w,
+                      width: 138.w,
                     ),
                   ],
                 ),
@@ -324,7 +432,9 @@ class ProfilePage extends StatelessWidget {
                 titlePadding: EdgeInsets.only(
                   top: 10.h,
                 ),
-                contentPadding: EdgeInsets.symmetric(vertical: 20.h),
+                contentPadding: EdgeInsets.symmetric(
+                  vertical: 20.h,
+                ),
                 title: Container(
                   margin: EdgeInsets.only(
                     top: 48.h,
@@ -338,29 +448,45 @@ class ProfilePage extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
-                content: Text(
-                  'Kode telah dikirim ulang ke email Anda.',
-                  style: blackTextStyle.copyWith(
-                    fontSize: 13.sp,
+                content: Container(
+                  width: 200.w,
+                  child: Text(
+                    'Anda yakin ingin logout?',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 13.sp,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
                 ),
                 actions: <Widget>[
-                  CustomButtonBorder(
-                    title: "Kembali",
-                    titleColor: kDarkGreyColor,
-                    onPressed: () => Navigator.pop(context),
-                    borderColor: kDarkGreyColor,
-                    borderWidth: 2,
-                    fontWeight: light,
-                  ),
-                  SizedBox(
-                    height: 12.h,
-                  ),
-                  CustomButton(
-                    title: 'Ok',
-                    onPressed: () {},
-                    color: kRedColor,
+                  Container(
+                    width: 380.w,
+                    margin: EdgeInsets.only(
+                      right: 36.w,
+                      left: 36.w,
+                      bottom: 48.h,
+                    ),
+                    child: Column(
+                      children: [
+                        CustomButtonBorder(
+                          title: "Kembali",
+                          titleColor: kDarkGreyColor,
+                          onPressed: () => Navigator.pop(context),
+                          borderColor: kDarkGreyColor,
+                          borderWidth: 2,
+                          fontWeight: light,
+                        ),
+                        SizedBox(
+                          height: 12.h,
+                        ),
+                        CustomButton(
+                          title: 'Logout',
+                          onPressed: () {},
+                          color: kRedColor,
+                          textStyle: whiteTextStyle,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
                 actionsPadding: EdgeInsets.only(
@@ -377,8 +503,8 @@ class ProfilePage extends StatelessWidget {
     }
 
     return Scaffold(
-      body: SingleChildScrollView(
-        child: SafeArea(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(
             children: [
               navbar(),

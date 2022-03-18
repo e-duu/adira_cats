@@ -24,13 +24,16 @@ class CustomIconUpload extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-              width: 64.w,
-              height: 64.h,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(
-                "assets/icon_upload.png",
-              )))),
+            width: 64.w,
+            height: 64.h,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  "assets/icon_upload.png",
+                ),
+              ),
+            ),
+          ),
           SizedBox(
             height: 18.h,
           ),

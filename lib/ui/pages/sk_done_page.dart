@@ -1,7 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
-import 'package:styled_text/styled_text.dart';
 
 class SkDonePage extends StatelessWidget {
   const SkDonePage({Key? key}) : super(key: key);
@@ -67,6 +66,7 @@ class SkDonePage extends StatelessWidget {
                 horizontal: 36,
               ),
               color: kPrimaryColor,
+              textStyle: blackTextStyle,
             ),
           ),
         ],

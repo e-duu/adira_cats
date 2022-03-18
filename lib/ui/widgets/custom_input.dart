@@ -14,12 +14,14 @@ class CustomInput extends StatefulWidget {
   final EdgeInsets? margin;
   final double width;
   final bool readOnly;
+  final String value;
 
   const CustomInput({
     Key? key,
     required this.hintText,
     required this.hintColor,
     this.margin,
+    this.value = '',
     this.borderWidth = 0,
     this.width = double.infinity,
     this.prefixIcon = null,
@@ -62,11 +64,14 @@ class _CustomInputState extends State<CustomInput> {
   Widget build(BuildContext context) {
     return Container(
       width: widget.width,
+      height: 50.h,
       margin: widget.margin,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(defaultRadius),
-          color: kGreyColor),
+        borderRadius: BorderRadius.circular(defaultRadius),
+        color: kGreyColor,
+      ),
       child: TextFormField(
+        initialValue: widget.value,
         readOnly: widget.readOnly,
         obscureText: widget.obscureText ? _isHidePassword : widget.obscureText,
         decoration: InputDecoration(
@@ -87,13 +92,17 @@ class _CustomInputState extends State<CustomInput> {
           focusColor: kDarkGreyColor,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
-            borderSide:
-                BorderSide(color: kGreyColor, width: widget.borderWidth),
+            borderSide: BorderSide(
+              color: kGreyColor,
+              width: widget.borderWidth,
+            ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
-            borderSide:
-                BorderSide(color: kGreyColor, width: widget.borderWidth),
+            borderSide: BorderSide(
+              color: kGreyColor,
+              width: widget.borderWidth,
+            ),
           ),
         ),
       ),

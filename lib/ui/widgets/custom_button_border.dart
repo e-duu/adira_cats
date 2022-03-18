@@ -29,7 +29,7 @@ class CustomButtonBorder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
-      height: 50,
+      height: 50.h,
       margin: margin,
       child: OutlinedButton(
         onPressed: onPressed,
@@ -37,7 +37,10 @@ class CustomButtonBorder extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
           ),
-          side: BorderSide(color: borderColor, width: borderWidth),
+          side: BorderSide(
+            color: borderColor,
+            width: borderWidth,
+          ),
         ),
         child: Text(
           title,

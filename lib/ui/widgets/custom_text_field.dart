@@ -12,8 +12,8 @@ class CustomTextField extends StatelessWidget {
   final double width;
   final Color hintColor;
   final bool readOnly;
-  
-  const CustomTextField({ 
+
+  const CustomTextField({
     Key? key,
     required this.hintText,
     required this.hintColor,
@@ -30,30 +30,41 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: width,
+      height: 50.h,
       margin: margin,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(defaultRadius),
-          color: kGreyColor),
+        borderRadius: BorderRadius.circular(defaultRadius),
+        color: kGreyColor,
+      ),
       child: TextField(
         readOnly: readOnly,
         maxLines: maxLines,
         autocorrect: true,
-        autofocus: false,
         decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(
             horizontal: 18.w,
             vertical: 15.h,
           ),
           hintText: hintText,
-          hintStyle: TextStyle(color: kGreyColor),
+          hintStyle: TextStyle(
+            color: hintColor,
+            fontWeight: light,
+            fontSize: 12.sp,
+          ),
           filled: filled,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
-            borderSide: BorderSide(color: kGreyColor, width: borderWidth),
+            borderSide: BorderSide(
+              color: kGreyColor,
+              width: borderWidth,
+            ),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius),
-            borderSide: BorderSide(color: kDarkGreyColor, width: borderWidth),
+            borderSide: BorderSide(
+              color: kDarkGreyColor,
+              width: borderWidth,
+            ),
           ),
         ),
       ),
