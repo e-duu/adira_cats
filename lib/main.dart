@@ -1,4 +1,5 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
+import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
@@ -44,13 +45,14 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : DONE
           // home: OtpPage(),
-          home: ProfilePage(),
+          // home: ProfilePage(),
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterFourthPage(),
 
           /// NOTE: ON PROGRESS
+          home: HomePage(),
           // home: TrialPage(),
           // home: NotificationPage(),
         ),
