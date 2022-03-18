@@ -25,10 +25,11 @@ class ForgotPasswordPage extends StatelessWidget {
     /// Widget Title
     Widget title() {
       return Container(
+        margin: EdgeInsets.symmetric(horizontal: defaultMargin.w),
         child: Text(
           'Masukkan alamat ID yang terkait dengan akun Anda.',
           style: blackTextStyle.copyWith(
-            fontSize: 14.sp,
+            fontSize: 13.sp,
             fontWeight: light,
           ),
         ),
@@ -62,7 +63,7 @@ class ForgotPasswordPage extends StatelessWidget {
                   borderColor: kDarkGreyColor,
                   borderWidth: 2.r,
                   fontWeight: normal,
-                  width: 188.w,
+                  width: 153.w,
                 ),
                 SizedBox(
                   width: 12.w,
@@ -74,7 +75,7 @@ class ForgotPasswordPage extends StatelessWidget {
                   borderColor: kDarkGreyColor,
                   borderWidth: 2.r,
                   fontWeight: normal,
-                  width: 188.w,
+                  width: 153.w,
                 ),
               ],
             ),

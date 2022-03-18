@@ -7,6 +7,7 @@ class CustomCardNotification extends StatelessWidget {
   final String message;
   final String time;
   final FontWeight fontWeight;
+  final Function() onTap;
 
   const CustomCardNotification({
     Key? key,
@@ -14,72 +15,76 @@ class CustomCardNotification extends StatelessWidget {
     required this.message,
     required this.time,
     required this.fontWeight,
+    required this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      margin: EdgeInsets.only(
-        top: 18.h,
-      ),
-      padding: EdgeInsets.symmetric(
-        vertical: 18.h,
-        horizontal: 24.w,
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(defaultRadius),
-        border: Border.all(
-          color: kGrayColor,
-          width: 2.w,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: double.infinity,
+        margin: EdgeInsets.only(
+          top: 18.h,
         ),
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 36.w,
-            height: 36.h,
-            margin: EdgeInsets.only(
-              right: 18.w,
-            ),
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                image: AssetImage('assets/icon_bell.png'),
+        padding: EdgeInsets.symmetric(
+          vertical: 18.h,
+          horizontal: 24.w,
+        ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(defaultRadius),
+          border: Border.all(
+            color: kGrayColor,
+            width: 2.w,
+          ),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 36.w,
+              height: 36.h,
+              margin: EdgeInsets.only(
+                right: 18.w,
+              ),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage('assets/icon_bell.png'),
+                ),
               ),
             ),
-          ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: blackTextStyle.copyWith(
-                    fontSize: 12.sp,
-                    fontWeight: bold,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: blackTextStyle.copyWith(
+                      fontSize: 12.sp,
+                      fontWeight: bold,
+                    ),
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  overflow: TextOverflow.ellipsis,
-                ),
-                SizedBox(height: 6.h),
-                Text(
-                  message,
-                  style: darkGreyTextStyle.copyWith(
-                    fontWeight: semibold,
-                    fontSize: 11.sp,
+                  SizedBox(height: 6.h),
+                  Text(
+                    message,
+                    style: darkGreyTextStyle.copyWith(
+                      fontWeight: semibold,
+                      fontSize: 11.sp,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          Text(
-            time,
-            style: blackTextStyle.copyWith(
-              fontSize: 11.sp,
-              fontWeight: fontWeight,
+            Text(
+              time,
+              style: blackTextStyle.copyWith(
+                fontSize: 11.sp,
+                fontWeight: fontWeight,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

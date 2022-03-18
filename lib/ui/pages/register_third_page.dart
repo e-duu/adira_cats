@@ -1,14 +1,13 @@
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
+import 'package:adira_cats/ui/widgets/custom_upload_image.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
-import 'package:styled_text/styled_text.dart';
-import 'package:flutter/material.dart';
 
-class ResetPasswordPage extends StatelessWidget {
-  const ResetPasswordPage({Key? key}) : super(key: key);
+class RegisterThirdPage extends StatelessWidget {
+  const RegisterThirdPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,63 +17,29 @@ class ResetPasswordPage extends StatelessWidget {
           bottom: 10.h,
         ),
         child: CustomLogoAdira(
-          text: 'Ganti Password Baru',
+          text: 'Daftar Sebagai Informan',
         ),
       );
     }
 
-    /// Widget Title
-    Widget title() {
+    Widget uploadImage() {
       return Container(
-        child: StyledText(
-          text: 'Masukkan password baru untuk User ID\n<bold>edward999</bold>',
-          tags: {
-            'bold': StyledTextTag(
-              style: TextStyle(
-                fontWeight: bold,
-              ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CustomUploadImage(
+              hintText: 'Tambahkan\nFoto KTP',
+              imageUrl: 'assets/icon_upload.png',
             ),
-          },
-          style: blackTextStyle.copyWith(
-            fontWeight: light,
-            fontSize: 13,
-          ),
-          textAlign: TextAlign.center,
+            SizedBox(
+              width: 16.w,
+            ),
+            CustomUploadImage(
+              hintText: 'Tambahkan\nFoto Diri',
+              imageUrl: 'assets/icon_upload.png',
+            ),
+          ],
         ),
-      );
-    }
-
-    Widget input() {
-      return Column(
-        children: [
-          CustomInput(
-            hintText: 'Password Lama',
-            hintColor: kDarkGreyColor,
-            margin: EdgeInsets.only(
-              top: 20.h,
-              right: 18.w,
-              left: 18.w,
-            ),
-          ),
-          CustomInput(
-            hintText: 'Password Baru',
-            hintColor: kDarkGreyColor,
-            margin: EdgeInsets.only(
-              top: 20.h,
-              right: 18.w,
-              left: 18.w,
-            ),
-          ),
-          CustomInput(
-            hintText: 'Ulangi Password Baru',
-            hintColor: kDarkGreyColor,
-            margin: EdgeInsets.only(
-              top: 20.h,
-              right: 18.w,
-              left: 18.w,
-            ),
-          ),
-        ],
       );
     }
 
@@ -137,8 +102,7 @@ class ResetPasswordPage extends StatelessWidget {
         child: Column(
           children: [
             logo(),
-            title(),
-            input(),
+            uploadImage(),
           ],
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/widgets/custom_card_notification.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
@@ -17,14 +18,19 @@ class NotificationPage extends StatelessWidget {
             onPressed: () => {},
             icon: libraryIcon,
           ),
-          suffixWidget: Container(
-            width: 48.w,
-            height: 48.h,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                image: AssetImage(
-                  "assets/image_user.png",
+          suffixWidget: GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage(),));
+            },
+            child: Container(
+              width: 48.w,
+              height: 48.h,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/image_user.png",
+                  ),
                 ),
               ),
             ),
@@ -61,18 +67,21 @@ class NotificationPage extends StatelessWidget {
 
             // NOTE: CARD NOTIFICATION
             CustomCardNotification(
+              onTap: () {},
               title: 'SK 14142 telah diterbitkan',
               message: 'klik untuk melihat',
               time: 'Baru Saja',
               fontWeight: semibold,
             ),
             CustomCardNotification(
+              onTap: () {},
               title: 'SK 14141 telah dikonfirmasi',
               message: 'klik untuk melihat',
               time: '06.12',
               fontWeight: light,
             ),
             CustomCardNotification(
+              onTap: () {},
               title: 'Anda menerima pesan dari Anggora',
               message: 'klik untuk melihat',
               time: '03.45',
@@ -100,6 +109,7 @@ class NotificationPage extends StatelessWidget {
 
             // NOTE: CARD NOTIFICATION
             CustomCardNotification(
+              onTap: () {},
               title: 'Anda menerima pesan dari Persia',
               message: 'klik untuk melihat',
               time: '22.22',
