@@ -40,17 +40,9 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
-          home: LoginPage(),
+          // home: LoginPage(),
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
-
-          /// NOTE: ON PROGRESS
-          // home: TrialPage(),
-          // home: ProfilePage(),
-          // home: OtpPage(),
-          // home: RegisterPage(),
-          // home: RegisterSecondPage(),
-          // home: RegisterThirdPage(),
 
           /// NOTE : DONE
           // home: OtpPage(),
@@ -62,8 +54,8 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: HomePage(),
-          // home: TrialPage(),
           // home: NotificationPage(),
+          // home: TestingPage(),
         ),
       ),
     );
