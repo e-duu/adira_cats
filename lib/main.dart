@@ -1,12 +1,14 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/pages/create_st_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_detail_page.dart';
-import 'package:adira_cats/ui/pages/handover_sk_konfirmed_page.dart';
+import 'package:adira_cats/ui/pages/handover_sk_confirmed_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/forgot_password_page.dart';
@@ -56,16 +58,27 @@ class MyApp extends StatelessWidget {
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterFourthPage(),
+<<<<<<< HEAD
 
           /// NOTE: ON PROGRESS
           // home: HomePage(),
           home: NotificationPage(),
+=======
+>>>>>>> 2f84644620c486c935bc0d4f586c70bbe6bb6ad0
           // home: HandoverSkPage(),
           // home: HandoverSkSearchPage(),
           // home: HandoverSkSearchNilPage(),
           // home: HandoverSkDetailPage(),
           // home: HandoverSkConfirmedPage(),
+<<<<<<< HEAD
+=======
+
+          /// NOTE: ON PROGRESS
+          // home: HomePage(),
+          // home: NotificationPage(),
+>>>>>>> 2f84644620c486c935bc0d4f586c70bbe6bb6ad0
           // home: TestingPage(),
+          home: CreateStPage(),
         ),
       ),
     );

@@ -48,7 +48,7 @@ class NotificationPage extends StatelessWidget {
     Widget cardNotif() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 50.h,
+          bottom: 150.h,
         ),
         child: Column(
           children: [
@@ -126,11 +126,47 @@ class NotificationPage extends StatelessWidget {
       );
     }
 
-    Widget customBottomNavigation() {
-      return CustomBottomNavigationItem();
+    Widget customIconNavigation() {
+      return Align(
+        alignment: Alignment.bottomCenter,
+        child: Container(
+          width: double.infinity,
+          height: 100.h,
+          padding: EdgeInsets.symmetric(
+            horizontal: 40.w,
+          ),
+          decoration: BoxDecoration(
+            color: kWhiteColor,
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(24.r),
+              topLeft: Radius.circular(24.r),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: kGrayColor.withOpacity(1),
+                spreadRadius: 3,
+                blurRadius: 18.r,
+                offset: Offset(0, 0),
+              ),
+            ],
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // NOTE: ICON CHAT
+              CustomBottomNavigationItem(
+                isSelected: true,
+                isNotifMessage: true,
+              ),
+            ],
+          ),
+        ),
+      );
     }
 
     return Scaffold(
+      floatingActionButton: customIconNavigation(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -146,7 +182,6 @@ class NotificationPage extends StatelessWidget {
                   ],
                 ),
               ),
-              customBottomNavigation(),
             ],
           ),
         ),
