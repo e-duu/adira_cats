@@ -143,7 +143,7 @@ class NotificationPage extends StatelessWidget {
             ),
             boxShadow: [
               BoxShadow(
-                color: kGrayColor.withOpacity(1),
+                color: kLigthGrayColor.withOpacity(1),
                 spreadRadius: 3,
                 blurRadius: 18.r,
                 offset: Offset(0, 0),

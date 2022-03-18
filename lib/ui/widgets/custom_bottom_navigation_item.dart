@@ -33,7 +33,7 @@ class CustomBottomNavigationItem extends StatelessWidget {
             children: [
               Icon(
                 Icons.message,
-                color: kGrayColor,
+                color: kLigthGrayColor,
                 size: 28.sp,
               ),
               if (isNotifMessage == true)
@@ -71,7 +71,7 @@ class CustomBottomNavigationItem extends StatelessWidget {
             children: [
               Icon(
                 Icons.location_on,
-                color: kGrayColor,
+                color: kLigthGrayColor,
                 size: 28.sp,
               ),
               if (isNotifLocation == true)
@@ -109,7 +109,7 @@ class CustomBottomNavigationItem extends StatelessWidget {
             children: [
               Icon(
                 Icons.home,
-                color: kGrayColor,
+                color: kLigthGrayColor,
                 size: 28.sp,
               ),
               if (isNotifHome == true)
@@ -155,7 +155,7 @@ class CustomBottomNavigationItem extends StatelessWidget {
             children: [
               Icon(
                 Icons.notifications,
-                color: kGrayColor,
+                color: kLigthGrayColor,
                 size: 28.sp,
               ),
               if (isNotifBell == true)
@@ -192,7 +192,7 @@ class CustomBottomNavigationItem extends StatelessWidget {
             children: [
               Icon(
                 Icons.person,
-                color: kGrayColor,
+                color: kLigthGrayColor,
                 size: 28.sp,
               ),
               if (isNotifProfile == true)

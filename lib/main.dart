@@ -58,27 +58,17 @@ class MyApp extends StatelessWidget {
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterFourthPage(),
-<<<<<<< HEAD
-
-          /// NOTE: ON PROGRESS
-          // home: HomePage(),
-          home: NotificationPage(),
-=======
->>>>>>> 2f84644620c486c935bc0d4f586c70bbe6bb6ad0
           // home: HandoverSkPage(),
           // home: HandoverSkSearchPage(),
           // home: HandoverSkSearchNilPage(),
           // home: HandoverSkDetailPage(),
           // home: HandoverSkConfirmedPage(),
-<<<<<<< HEAD
-=======
 
           /// NOTE: ON PROGRESS
           // home: HomePage(),
-          // home: NotificationPage(),
->>>>>>> 2f84644620c486c935bc0d4f586c70bbe6bb6ad0
+          home: NotificationPage(),
           // home: TestingPage(),
-          home: CreateStPage(),
+          // home: CreateStPage(),
         ),
       ),
     );
