@@ -49,14 +49,6 @@ class MyApp extends StatelessWidget {
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
 
-          /// NOTE: ON PROGRESS
-          // home: TrialPage(),
-          // home: ProfilePage(),
-          // home: OtpPage(),
-          // home: RegisterPage(),
-          // home: RegisterSecondPage(),
-          // home: RegisterThirdPage(),
-
           /// NOTE : DONE
           // home: OtpPage(),
           // home: ProfilePage(),
@@ -67,13 +59,13 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: HomePage(),
-          // home: TrialPage(),
           // home: NotificationPage(),
           // home: HandoverSkPage(),
           // home: HandoverSkSearchPage(),
           // home: HandoverSkSearchNilPage(),
           // home: HandoverSkDetailPage(),
           home: HandoverSkConfirmedPage(),
+          // home: TestingPage(),
         ),
       ),
     );

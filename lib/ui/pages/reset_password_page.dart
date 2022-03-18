@@ -93,7 +93,7 @@ class ResetPasswordPage extends StatelessWidget {
                   borderColor: kDarkGreyColor,
                   borderWidth: 2.r,
                   fontWeight: normal,
-                  width: 188.w,
+                  width: 153.w,
                 ),
                 SizedBox(
                   width: 12.w,
@@ -105,7 +105,7 @@ class ResetPasswordPage extends StatelessWidget {
                   borderColor: kDarkGreyColor,
                   borderWidth: 2.r,
                   fontWeight: normal,
-                  width: 188.w,
+                  width: 153.w,
                 ),
               ],
             ),
