@@ -1,4 +1,5 @@
 import 'package:adira_cats/ui/pages/profile_page.dart';
+import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:adira_cats/ui/widgets/custom_card_notification.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,12 @@ class NotificationPage extends StatelessWidget {
           ),
           suffixWidget: GestureDetector(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage(),));
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProfilePage(),
+                ),
+              );
             },
             child: Container(
               width: 48.w,
@@ -42,7 +48,7 @@ class NotificationPage extends StatelessWidget {
     Widget cardNotif() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 50.h,
+          bottom: 150.h,
         ),
         child: Column(
           children: [
@@ -120,13 +126,47 @@ class NotificationPage extends StatelessWidget {
       );
     }
 
-    Widget customNavigation() {
-      return Container(
-        child: Text('Ramadhan'),
+    Widget customIconNavigation() {
+      return Align(
+        alignment: Alignment.bottomCenter,
+        child: Container(
+          width: double.infinity,
+          height: 100.h,
+          padding: EdgeInsets.symmetric(
+            horizontal: 40.w,
+          ),
+          decoration: BoxDecoration(
+            color: kWhiteColor,
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(24.r),
+              topLeft: Radius.circular(24.r),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: kLigthGrayColor.withOpacity(1),
+                spreadRadius: 3,
+                blurRadius: 18.r,
+                offset: Offset(0, 0),
+              ),
+            ],
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // NOTE: ICON CHAT
+              CustomBottomNavigationItem(
+                isSelected: true,
+                isNotifMessage: true,
+              ),
+            ],
+          ),
+        ),
       );
     }
 
     return Scaffold(
+      floatingActionButton: customIconNavigation(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

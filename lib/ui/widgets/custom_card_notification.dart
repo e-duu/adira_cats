@@ -34,7 +34,7 @@ class CustomCardNotification extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(defaultRadius),
           border: Border.all(
-            color: kGrayColor,
+            color: kLigthGrayColor,
             width: 2.w,
           ),
         ),

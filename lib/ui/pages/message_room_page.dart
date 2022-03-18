@@ -129,7 +129,7 @@ class MessageRoomPage extends StatelessWidget {
             ),
           ),
           Container(
-            color: kGrayColor,
+            color: kLigthGrayColor,
             child: Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: 18.w,
