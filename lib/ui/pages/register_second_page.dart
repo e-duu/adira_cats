@@ -1,6 +1,8 @@
+import 'package:adira_cats/main.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
+import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -12,8 +14,6 @@ class RegisterSecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    icon:
-    const Icon(Icons.arrow_downward);
     Widget header() {
       return Container(
         margin: EdgeInsets.only(
@@ -146,7 +146,6 @@ class RegisterSecondPage extends StatelessWidget {
         child: Column(
           children: [
             accountInput(),
-            chooseBank(),
             branchBank(),
             customerName(),
           ],
@@ -206,22 +205,20 @@ class RegisterSecondPage extends StatelessWidget {
     }
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
+      floatingActionButton: Visibility(
+        child: button(),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       backgroundColor: kWhiteColor,
-      body: ListView(
-        padding: EdgeInsets.symmetric(
-          horizontal: defaultMargin.w,
+      body: SafeArea(
+        child: Column(
+          children: [
+            header(),
+            inputSection(),
+            button(),
+          ],
         ),
-        children: [
-          SafeArea(
-            child: Column(
-              children: [
-                header(),
-                inputSection(),
-                button(),
-              ],
-            ),
-          ),
-        ],
       ),
     );
   }
