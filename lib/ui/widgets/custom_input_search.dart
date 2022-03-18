@@ -17,7 +17,7 @@ class CustomInputSearch extends StatelessWidget {
     return Container(
       height: 50.h,
       margin: EdgeInsets.symmetric(
-        horizontal: 36.w,
+        horizontal: 20.w,
       ),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(defaultRadius),
