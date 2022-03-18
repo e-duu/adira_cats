@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
           home: HomePage(),
           // home: TrialPage(),
           // home: RegisterThirdPage(),
-          home: NotificationPage(),
+          // home: NotificationPage(),
         ),
       ),
     );
