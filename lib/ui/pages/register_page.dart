@@ -1,11 +1,10 @@
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
+import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../widgets/custom_logo_adira.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({Key? key}) : super(key: key);
@@ -290,6 +289,7 @@ class RegisterPage extends StatelessWidget {
     Widget button() {
       return Container(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             SizedBox(
               height: 34.h,
@@ -298,8 +298,8 @@ class RegisterPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomButtonBorder(
-                  titleColor: kRedColor,
                   title: 'Batal',
+                  titleColor: kRedColor,
                   onPressed: () => showDialog<String>(
                     context: context,
                     builder: (BuildContext context) => Container(
@@ -364,7 +364,7 @@ class RegisterPage extends StatelessWidget {
                     ),
                   ),
                   borderColor: kRedColor,
-                  borderWidth: 2,
+                  borderWidth: 2.r,
                   fontWeight: normal,
                   width: 138.w,
                 ),
@@ -372,11 +372,11 @@ class RegisterPage extends StatelessWidget {
                   width: 12.w,
                 ),
                 CustomButtonBorder(
-                  titleColor: kDarkGreyColor,
                   title: 'Reset',
+                  titleColor: kBlackColor,
                   onPressed: () {},
                   borderColor: kDarkGreyColor,
-                  borderWidth: 2,
+                  borderWidth: 2.r,
                   fontWeight: normal,
                   width: 138.w,
                 ),
@@ -398,6 +398,8 @@ class RegisterPage extends StatelessWidget {
         ),
       );
     }
+
+    
 
     return Scaffold(
       backgroundColor: kWhiteColor,
