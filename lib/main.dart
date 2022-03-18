@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
           // home: RegisterFourthPage(),
 
           /// NOTE: ON PROGRESS
-          // home: HomePage(),
+          home: HomePage(),
           // home: NotificationPage(),
           // home: TestingPage(),
         ),

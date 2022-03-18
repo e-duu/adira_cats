@@ -23,19 +23,23 @@ class RegisterThirdPage extends StatelessWidget {
     }
 
     Widget uploadImage() {
-      return Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CustomUploadImage(
+      return Container(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CustomUploadImage(
               hintText: 'Tambahkan\nFoto KTP',
-              imageUrl: 'assets/icon_upload.png'),
-          SizedBox(
-            width: 16.w,
-          ),
-          CustomUploadImage(
+              imageUrl: 'assets/icon_upload.png',
+            ),
+            SizedBox(
+              width: 16.w,
+            ),
+            CustomUploadImage(
               hintText: 'Tambahkan\nFoto Diri',
-              imageUrl: 'assets/icon_upload.png'),
-        ],
+              imageUrl: 'assets/icon_upload.png',
+            ),
+          ],
+        ),
       );
     }
 
@@ -54,7 +58,7 @@ class RegisterThirdPage extends StatelessWidget {
                   borderColor: kDarkGreyColor,
                   borderWidth: 2.r,
                   fontWeight: normal,
-                  width: 188.w,
+                  width: 153.w,
                 ),
                 SizedBox(
                   width: 12.w,
@@ -66,7 +70,7 @@ class RegisterThirdPage extends StatelessWidget {
                   borderColor: kDarkGreyColor,
                   borderWidth: 2.r,
                   fontWeight: normal,
-                  width: 188.w,
+                  width: 153.w,
                 ),
               ],
             ),
@@ -74,10 +78,10 @@ class RegisterThirdPage extends StatelessWidget {
               height: 12.h,
             ),
             CustomButton(
-              textStyle: blackTextStyle,
               title: 'Submit',
               onPressed: () {},
               color: kPrimaryColor,
+              textStyle: blackTextStyle,
               margin: EdgeInsets.symmetric(
                 horizontal: 20.w,
               ),

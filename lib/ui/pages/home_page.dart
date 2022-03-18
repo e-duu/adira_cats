@@ -1,5 +1,4 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,15 +33,21 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 IconButton(
-                    onPressed: () => {}, icon: Icon(Icons.subject_sharp)),
+                  onPressed: () => {},
+                  icon: Icon(
+                    Icons.subject_sharp,
+                  ),
+                ),
                 Container(
-                  height: 16.h,
-                  width: 120.w,
+                  height: 24,
+                  width: 120,
                   decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(
-                    "assets/adira_logo_white.png",
-                  ))),
+                    image: DecorationImage(
+                      image: AssetImage(
+                        "assets/adira_logo_white.png",
+                      ),
+                    ),
+                  ),
                 ),
                 Container(
                   width: 48.w,
@@ -80,7 +85,7 @@ class HomePage extends StatelessWidget {
       );
     }
 
-    Widget inputSearch(){
+    Widget inputSearch() {
       return Container(
         height: 50.h,
         margin: EdgeInsets.only(top: 135.h, right: 36.w, left: 36.w),
@@ -97,11 +102,14 @@ class HomePage extends StatelessWidget {
             ),
             hintText: 'Apa Yang Anda Cari?',
             suffixIcon: IconButton(
-              onPressed: (){},
+              onPressed: () {},
               hoverColor: kTransparent,
               focusColor: kTransparent,
               highlightColor: kTransparent,
-              icon: Icon(Icons.search_sharp, color: Colors.grey,),
+              icon: Icon(
+                Icons.search_sharp,
+                color: Colors.grey,
+              ),
             ),
             hintStyle: TextStyle(color: kGreyColor),
             filled: true,
@@ -109,10 +117,7 @@ class HomePage extends StatelessWidget {
             focusColor: kDarkGreyColor,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(defaultRadius),
-              borderSide: BorderSide(
-                color: kGreyColor,
-                width: 2
-              ),
+              borderSide: BorderSide(color: kGreyColor, width: 2),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(defaultRadius),
@@ -126,7 +131,7 @@ class HomePage extends StatelessWidget {
       );
     }
 
-    Widget notification(){
+    Widget notification() {
       return Container(
         width: double.infinity,
         height: 77.h,
@@ -134,14 +139,9 @@ class HomePage extends StatelessWidget {
           horizontal: 24.w,
           vertical: 24.h,
         ),
-        padding: EdgeInsets.symmetric(
-          horizontal: 12.w,
-          vertical: 12.h
-        ),
+        padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
         decoration: BoxDecoration(
-          color: kPrimaryColor,
-          borderRadius: BorderRadius.circular(12.r)
-        ),
+            color: kPrimaryColor, borderRadius: BorderRadius.circular(12.r)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -156,13 +156,14 @@ class HomePage extends StatelessWidget {
               width: 190.w,
               height: 53.h,
               decoration: BoxDecoration(
-                color: kWhiteColor,
-                borderRadius: BorderRadius.circular(8.r)
-              ),
+                  color: kWhiteColor, borderRadius: BorderRadius.circular(8.r)),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Icon(Icons.notifications_none_sharp, color: Colors.grey,),
+                  Icon(
+                    Icons.notifications_none_sharp,
+                    color: Colors.grey,
+                  ),
                   Text(
                     'SK 14142 telah diterbitkan.',
                     style: blackTextStyle.copyWith(
@@ -180,14 +181,17 @@ class HomePage extends StatelessWidget {
                 color: kBlackColor,
                 shape: BoxShape.circle,
               ),
-              child: Icon(Icons.arrow_forward_ios_rounded, color: kWhiteColor,),
+              child: Icon(
+                Icons.arrow_forward_ios_rounded,
+                color: kWhiteColor,
+              ),
             ),
           ],
         ),
       );
     }
 
-    Widget menu(){
+    Widget menu() {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.symmetric(
@@ -211,7 +215,6 @@ class HomePage extends StatelessWidget {
                           width: 72.w,
                           height: 72.h,
                         ),
-
                         Text(
                           'Pencarian Unit',
                           style: darkGreyTextStyle.copyWith(
@@ -232,7 +235,6 @@ class HomePage extends StatelessWidget {
                           width: 72.w,
                           height: 72.h,
                         ),
-
                         Text(
                           'Buat SK',
                           style: darkGreyTextStyle.copyWith(
@@ -253,7 +255,6 @@ class HomePage extends StatelessWidget {
                           width: 72.w,
                           height: 72.h,
                         ),
-
                         Text(
                           'Serah-Terima\nSK',
                           style: darkGreyTextStyle.copyWith(
@@ -284,9 +285,8 @@ class HomePage extends StatelessWidget {
                           width: 72.w,
                           height: 72.h,
                         ),
-
                         Text(
-                    // margin: EdgeInsets.only(bottom: 14.h),
+                          // margin: EdgeInsets.only(bottom: 14.h),
                           'Laporan',
                           style: darkGreyTextStyle.copyWith(
                             fontSize: 10.sp,
@@ -306,7 +306,6 @@ class HomePage extends StatelessWidget {
                           width: 72.w,
                           height: 72.h,
                         ),
-
                         Text(
                           'Proses Pencarian\nUnit',
                           style: darkGreyTextStyle.copyWith(
@@ -328,7 +327,6 @@ class HomePage extends StatelessWidget {
                           width: 72.w,
                           height: 72.h,
                         ),
-
                         Text(
                           'Penarikan-\nPengiriman',
                           style: darkGreyTextStyle.copyWith(
@@ -359,7 +357,6 @@ class HomePage extends StatelessWidget {
                           width: 72.w,
                           height: 72.h,
                         ),
-
                         Text(
                           'Input Hasil\nKunjungan',
                           style: darkGreyTextStyle.copyWith(
@@ -381,7 +378,6 @@ class HomePage extends StatelessWidget {
                           width: 72.w,
                           height: 72.h,
                         ),
-
                         Text(
                           'Pengajuan Biaya\nTarik',
                           style: darkGreyTextStyle.copyWith(
@@ -403,7 +399,6 @@ class HomePage extends StatelessWidget {
                           width: 72.w,
                           height: 72.h,
                         ),
-
                         Text(
                           'Pencarian Unit',
                           style: darkGreyTextStyle.copyWith(
@@ -422,7 +417,7 @@ class HomePage extends StatelessWidget {
       );
     }
 
-    Widget announcement(){
+    Widget announcement() {
       return Container(
         margin: EdgeInsets.symmetric(
           horizontal: 36.w,
@@ -440,24 +435,28 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 12.h,),
+            SizedBox(
+              height: 12.h,
+            ),
             Container(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     width: double.infinity,
                     height: 120.h,
                     decoration: BoxDecoration(
-                      image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: AssetImage(
-                          "assets/announcement.png",
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage(
+                            "assets/announcement.png",
+                          ),
                         ),
-                      ),
-                      borderRadius: BorderRadius.circular(8.r)
-                    ),
+                        borderRadius: BorderRadius.circular(8.r)),
                   ),
-                  SizedBox(height: 12.h,),
+                  SizedBox(
+                    height: 12.h,
+                  ),
                   Text(
                     'Mobile App Adira Finance CATS Terbaru\nAkan Segera Hadir!',
                     style: blackTextStyle.copyWith(
@@ -472,7 +471,7 @@ class HomePage extends StatelessWidget {
         ),
       );
     }
-    
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
