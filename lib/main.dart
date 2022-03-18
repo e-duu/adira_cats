@@ -8,6 +8,7 @@ import 'package:adira_cats/ui/pages/handover_sk_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/forgot_password_page.dart';
@@ -57,17 +58,17 @@ class MyApp extends StatelessWidget {
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterFourthPage(),
-
-          /// NOTE: ON PROGRESS
-          // home: HomePage(),
-          // home: NotificationPage(),
           // home: HandoverSkPage(),
           // home: HandoverSkSearchPage(),
           // home: HandoverSkSearchNilPage(),
           // home: HandoverSkDetailPage(),
           // home: HandoverSkConfirmedPage(),
+
+          /// NOTE: ON PROGRESS
+          // home: HomePage(),
+          // home: NotificationPage(),
           // home: TestingPage(),
-          home: CreateStPage(),
+          // home: CreateStPage(),
         ),
       ),
     );
