@@ -5,11 +5,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomInputSearch extends StatelessWidget {
   final Function() onPressed;
   final String hintText;
+  final String value;
 
   const CustomInputSearch({
     Key? key,
     required this.onPressed,
     required this.hintText,
+    this.value = '',
   }) : super(key: key);
 
   @override
@@ -19,12 +21,14 @@ class CustomInputSearch extends StatelessWidget {
       margin: EdgeInsets.symmetric(
         horizontal: 20.w,
       ),
+      width: double.infinity,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(defaultRadius),
           color: kGreyColor),
       child: TextFormField(
         autocorrect: true,
         autofocus: false,
+        initialValue: value,
         decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(
             horizontal: 18.w,
@@ -45,7 +49,7 @@ class CustomInputSearch extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius.r),
             borderSide: BorderSide(
-              color: kGreyColor,
+              color: kGrayColor,
               width: 2,
             ),
           ),
