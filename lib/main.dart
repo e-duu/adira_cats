@@ -44,14 +44,14 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : DONE
           // home: OtpPage(),
-          // home: ProfilePage(),
+          home: ProfilePage(),
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
-          home: RegisterFourthPage(),
+          // home: RegisterThirdPage(),
+          // home: RegisterFourthPage(),
 
           /// NOTE: ON PROGRESS
           // home: TrialPage(),
-          // home: RegisterThirdPage(),
           // home: NotificationPage(),
         ),
       ),
