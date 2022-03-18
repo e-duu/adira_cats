@@ -1,5 +1,3 @@
-import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widgets/custom_card_sk.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,36 +5,30 @@ import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
 class HandoverSkSearchNilPage extends StatelessWidget {
-  const HandoverSkSearchNilPage({ Key? key }) : super(key: key);
+  const HandoverSkSearchNilPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Serah Terima SK",
-          preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
+            text: "Serah Terima SK",
+            preffixWidget: GestureDetector(
+              onTap: () {},
+              child: Icon(
+                Icons.subject_sharp,
+              ),
             ),
-          ),
-          suffixWidget: GestureDetector(
-            onTap: () {},
-            child: Container(
-              width: 27.w,
-              height: 26.h,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                    "assets/icon_arrow_back.png",
-                  )
-                )
-              )
-            )
-          )
-        ),
+            suffixWidget: GestureDetector(
+                onTap: () {},
+                child: Container(
+                    width: 27.w,
+                    height: 26.h,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(
+                      "assets/icon_arrow_back.png",
+                    )))))),
       );
     }
 
@@ -47,7 +39,7 @@ class HandoverSkSearchNilPage extends StatelessWidget {
           vertical: 24.h,
         ),
         child: CustomInputSearch(
-          onPressed: () {}, 
+          onPressed: () {},
           hintText: "Cari Nomor Kontak ...",
           value: '7777',
         ),
@@ -56,9 +48,7 @@ class HandoverSkSearchNilPage extends StatelessWidget {
 
     Widget notifSearch() {
       return Container(
-        margin: EdgeInsets.only(
-          bottom: 36.h
-        ),
+        margin: EdgeInsets.only(bottom: 36.h),
         child: StyledText(
           text: "Nomor Kontrak tidak ditemukan.",
           textAlign: TextAlign.center,
@@ -72,28 +62,26 @@ class HandoverSkSearchNilPage extends StatelessWidget {
     //     children: [
     //       CustomCardSk(
     //         skNumber: "3234 5678",
-    //         contractNumber: "9999 8888 7777", 
+    //         contractNumber: "9999 8888 7777",
     //         notifNew: false
     //       ),
     //     ]
     //   );
     // }
-    
+
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Container(
+        body: SafeArea(
+      child: SingleChildScrollView(
+        child: Container(
             child: Column(
-              children: [
-                navbar(),
-                formSearch(),
-                notifSearch(),
-                // cardNumberSk(),
-              ],
-            )
-          ),
-        ),
-      )
-    );
+          children: [
+            navbar(),
+            formSearch(),
+            notifSearch(),
+            // cardNumberSk(),
+          ],
+        )),
+      ),
+    ));
   }
 }

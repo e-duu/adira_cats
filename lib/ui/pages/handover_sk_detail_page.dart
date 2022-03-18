@@ -1,52 +1,43 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_card_sk.dart';
-import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_informasi_detail.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
 class HandoverSkDetailPage extends StatelessWidget {
-  const HandoverSkDetailPage({ Key? key }) : super(key: key);
+  const HandoverSkDetailPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     /// NOTE: NAVBAR
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Serah Terima SK",
-          preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
+            text: "Serah Terima SK",
+            preffixWidget: GestureDetector(
+              onTap: () {},
+              child: Icon(
+                Icons.subject_sharp,
+              ),
             ),
-          ),
-          suffixWidget: GestureDetector(
-            onTap: () {},
-            child: Container(
-              width: 27.w,
-              height: 26.h,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                    "assets/icon_arrow_back.png",
-                  )
-                )
-              )
-            )
-          )
-        ),
+            suffixWidget: GestureDetector(
+                onTap: () {},
+                child: Container(
+                    width: 27.w,
+                    height: 26.h,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(
+                      "assets/icon_arrow_back.png",
+                    )))))),
       );
     }
 
     // NOTE: CARD SK
-    Widget cardSkDetail(){
+    Widget cardSkDetail() {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.symmetric(
@@ -55,7 +46,7 @@ class HandoverSkDetailPage extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           border: Border.all(
-            color: kGrayColor,
+            color: kLigthGrayColor,
             width: 2.w,
           ),
           borderRadius: BorderRadius.circular(defaultRadius),
@@ -65,10 +56,7 @@ class HandoverSkDetailPage extends StatelessWidget {
             Container(
               width: 100.w,
               height: 60.h,
-              margin: EdgeInsets.only(
-                top: 43.h,
-                bottom: 31.h
-              ),
+              margin: EdgeInsets.only(top: 43.h, bottom: 31.h),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -83,21 +71,21 @@ class HandoverSkDetailPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Container(
-                      width: 59,
-                      height: 29.h,
-                      decoration: BoxDecoration(
-                        color: kPrimaryColor,
-                        borderRadius: BorderRadius.circular(defaultRadius),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Baru",
-                          style: blackTextStyle.copyWith(
-                            fontWeight: semibold,
-                            fontSize: 11.sp,
+                        width: 59,
+                        height: 29.h,
+                        decoration: BoxDecoration(
+                          color: kPrimaryColor,
+                          borderRadius: BorderRadius.circular(defaultRadius),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Baru",
+                            style: blackTextStyle.copyWith(
+                              fontWeight: semibold,
+                              fontSize: 11.sp,
+                            ),
                           ),
                         ),
-                      ),
                       ),
                     ],
                   ),
@@ -234,7 +222,7 @@ class HandoverSkDetailPage extends StatelessWidget {
                 ],
               ),
             ),
-            
+
             /// NOTE: BUTTON CONFIRMATION
             CustomButton(
               margin: EdgeInsets.only(
@@ -244,7 +232,7 @@ class HandoverSkDetailPage extends StatelessWidget {
                 right: 36.w,
               ),
               title: "Konfirmasi",
-              color: kPrimaryColor, 
+              color: kPrimaryColor,
               textStyle: blackTextStyle,
               onPressed: () {
                 showDialog<String>(
@@ -276,18 +264,14 @@ class HandoverSkDetailPage extends StatelessWidget {
                           top: 24.h,
                         ),
                         child: StyledText(
-                          text: 'SK dengan Nomor <bold>1234 5678</bold> telah dikonfirmasi.',
+                          text:
+                              'SK dengan Nomor <bold>1234 5678</bold> telah dikonfirmasi.',
                           tags: {
                             'bold': StyledTextTag(
-                              style: TextStyle(
-                                fontWeight: semibold
-                              )
-                            ),
+                                style: TextStyle(fontWeight: semibold)),
                           },
                           style: blackTextStyle.copyWith(
-                            fontSize: 13.sp,
-                            fontWeight: light
-                          ),
+                              fontSize: 13.sp, fontWeight: light),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -315,7 +299,7 @@ class HandoverSkDetailPage extends StatelessWidget {
                     ),
                   ),
                 );
-              }, 
+              },
             ),
           ],
         ),
@@ -323,7 +307,7 @@ class HandoverSkDetailPage extends StatelessWidget {
     }
 
     /// NOTE: BUTTON BACK
-    Widget buttonBack(){
+    Widget buttonBack() {
       return Container(
         child: CustomButtonBorder(
           title: "Kembali",
@@ -341,21 +325,19 @@ class HandoverSkDetailPage extends StatelessWidget {
         ),
       );
     }
-    
+
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Container(
+        body: SafeArea(
+      child: SingleChildScrollView(
+        child: Container(
             child: Column(
-              children: [
-                navbar(),
-                cardSkDetail(),
-                buttonBack(),
-              ],
-            )
-          ),
-        ),
-      )
-    );
+          children: [
+            navbar(),
+            cardSkDetail(),
+            buttonBack(),
+          ],
+        )),
+      ),
+    ));
   }
 }

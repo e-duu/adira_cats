@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomCardSk extends StatelessWidget {
-
   final String skNumber;
   final String contractNumber;
   final bool notifNew;
-  
-  const CustomCardSk({ 
+
+  const CustomCardSk({
     Key? key,
     required this.skNumber,
     required this.contractNumber,
@@ -19,10 +18,7 @@ class CustomCardSk extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.symmetric(
-        horizontal: 18.w,
-        vertical: 18.h
-      ),
+      padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 18.h),
       margin: EdgeInsets.only(
         bottom: 12.h,
         right: 24.w,
@@ -30,7 +26,7 @@ class CustomCardSk extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         border: Border.all(
-          color: kGrayColor,
+          color: kLigthGrayColor,
           width: 2.w,
         ),
         borderRadius: BorderRadius.circular(defaultRadius),
@@ -46,12 +42,10 @@ class CustomCardSk extends StatelessWidget {
               right: 22.w,
             ),
             decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  "assets/icon_number_sk.png",
-                )
-              )
-            ),
+                image: DecorationImage(
+                    image: AssetImage(
+              "assets/icon_number_sk.png",
+            ))),
           ),
           Expanded(
             child: Column(
@@ -87,27 +81,27 @@ class CustomCardSk extends StatelessWidget {
               ],
             ),
           ),
-          if (notifNew == true) Container(
-            width: 59.w,
-            height: 29.h,
-            child: Container(
+          if (notifNew == true)
+            Container(
               width: 59.w,
               height: 29.h,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(defaultRadius),
-                color: kPrimaryColor
-              ),
-              child: Center(
-                child: Text(
-                  "Baru",
-                  style: blackTextStyle.copyWith(
-                    fontSize: 11.sp,
-                    fontWeight: semibold,
+              child: Container(
+                width: 59.w,
+                height: 29.h,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(defaultRadius),
+                    color: kPrimaryColor),
+                child: Center(
+                  child: Text(
+                    "Baru",
+                    style: blackTextStyle.copyWith(
+                      fontSize: 11.sp,
+                      fontWeight: semibold,
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
         ],
       ),
     );
