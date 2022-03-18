@@ -34,7 +34,7 @@ class RegisterThirdPage extends StatelessWidget {
             width: 16.w,
           ),
           CustomUploadImage(
-              hintText: 'Tambahkan\nFoto KTP',
+              hintText: 'Tambahkan\nFoto Diri',
               imageUrl: 'assets/icon_upload.png'),
         ],
       );
@@ -75,6 +75,7 @@ class RegisterThirdPage extends StatelessWidget {
               height: 12.h,
             ),
             CustomButton(
+              textStyle: blackTextStyle,
               title: 'Submit',
               onPressed: () {},
               color: kPrimaryColor,
