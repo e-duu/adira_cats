@@ -449,7 +449,7 @@ class HomePage extends StatelessWidget {
                         image: DecorationImage(
                           fit: BoxFit.cover,
                           image: AssetImage(
-                            "assets/announcement.png",
+                            "assets/image_announcement.png",
                           ),
                         ),
                         borderRadius: BorderRadius.circular(8.r)),
