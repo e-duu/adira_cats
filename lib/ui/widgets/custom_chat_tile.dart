@@ -7,6 +7,8 @@ class CustomChatTile extends StatelessWidget {
   final String subtitle; 
   final String imageUrl; 
   final String time; 
+  final bool unread;
+  final int count;
 
   const CustomChatTile({
     Key? key,
@@ -14,6 +16,8 @@ class CustomChatTile extends StatelessWidget {
     required this.subtitle,
     required this.imageUrl, 
     required this.time, 
+    this.count = 0, 
+    this.unread = true, 
   }) : super(key: key);
 
   @override
@@ -37,6 +41,35 @@ class CustomChatTile extends StatelessWidget {
                 ),
               ),
             ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    if (unread == true) Container(
+                      width: 21,
+                      height: 21,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: kPrimaryColor,
+                      ),
+                      child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            count.toString(),
+                            style: blackTextStyle.copyWith(
+                              fontSize: 11.sp,
+                              fontWeight: semibold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
           ),
           Expanded(
             child: Column(
@@ -51,16 +84,16 @@ class CustomChatTile extends StatelessWidget {
                 ),
                 Text(
                   subtitle,
-                  style: darkGreyTextStyle.copyWith(
-                    fontWeight: semibold,
-                    fontSize: 11.sp,
-                  ),
+                  style: unread
+                    ? darkGreyTextStyle.copyWith(
+                        fontWeight: semibold,
+                        fontSize: 11.sp,
+                      )
+                    : darkGreyTextStyle.copyWith(
+                        fontWeight: light,
+                        fontSize: 11.sp,
+                      ),
                   overflow: TextOverflow.ellipsis,
-                  // style: unread 
-                  //     ? subtitleTextStyle.copyWith(
-                  //         color: blackColor,
-                  //       )
-                  //     : subtitleTextStyle,
                 ), 
               ],
             ),
@@ -70,10 +103,15 @@ class CustomChatTile extends StatelessWidget {
           ),
           Text(
               time,
-              style: blackTextStyle.copyWith(
-              fontSize: 11.sp,
-              fontWeight: semibold,
-            ),
+              style: unread
+                ? blackTextStyle.copyWith(
+                    fontWeight: semibold,
+                    fontSize: 11.sp,
+                  )
+                : blackTextStyle.copyWith(
+                    fontWeight: light,
+                    fontSize: 11.sp,
+                  ),
           ),
         ],
       ),

@@ -34,6 +34,10 @@ TextStyle greyTextStyle = GoogleFonts.poppins(
   color: kGreyColor,
 );
 
+TextStyle whiteTextStyle = GoogleFonts.poppins(
+  color: kWhiteColor,
+);
+
 FontWeight light = FontWeight.w300;
 FontWeight normal = FontWeight.w400;
 FontWeight semibold = FontWeight.w600;

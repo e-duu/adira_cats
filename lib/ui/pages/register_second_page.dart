@@ -1,6 +1,8 @@
+import 'package:adira_cats/main.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
+import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -12,8 +14,6 @@ class RegisterSecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    icon:
-    const Icon(Icons.arrow_downward);
     Widget header() {
       return Container(
         margin: EdgeInsets.only(
@@ -27,43 +27,115 @@ class RegisterSecondPage extends StatelessWidget {
 
     Widget inputSection() {
       Widget accountInput() {
-        return CustomInput(
-          hintText: 'Nomor Rekening',
-          hintColor: kDarkGreyColor,
-          filled: true,
-          margin: EdgeInsets.only(
-            bottom: 12.h,
-          ),
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Nomor Rekening",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: semibold,
+              ),
+            ),
+            SizedBox(
+              height: 5.h,
+            ),
+            CustomInput(
+              hintText: 'Nomor Rekening',
+              hintColor: kDarkGreyColor,
+              filled: true,
+              margin: EdgeInsets.only(
+                bottom: 12.h,
+              ),
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
+          ],
         );
       }
 
       Widget chooseBank() {
-        return CustomInput(
-          hintText: 'Pilih Bank',
-          hintColor: kDarkGreyColor,
-          filled: true,
-          margin: EdgeInsets.only(
-            bottom: 12.h,
-          ),
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Pilih Bank",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: semibold,
+              ),
+            ),
+            SizedBox(
+              height: 5.h,
+            ),
+            CustomInput(
+              hintText: 'Pilih Bank',
+              hintColor: kDarkGreyColor,
+              filled: true,
+              margin: EdgeInsets.only(
+                bottom: 12.h,
+              ),
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
+          ],
         );
       }
 
       Widget branchBank() {
-        return CustomInput(
-          hintText: 'Cabang Bank',
-          hintColor: kDarkGreyColor,
-          filled: true,
-          margin: EdgeInsets.only(
-            bottom: 12.h,
-          ),
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Bank Cabang",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: semibold,
+              ),
+            ),
+            SizedBox(
+              height: 5.h,
+            ),
+            CustomInput(
+              hintText: 'Cabang Bank',
+              hintColor: kDarkGreyColor,
+              filled: true,
+              margin: EdgeInsets.only(
+                bottom: 12.h,
+              ),
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
+          ],
         );
       }
 
       Widget customerName() {
-        return CustomInput(
-          hintText: 'Nama Nasabah',
-          hintColor: kDarkGreyColor,
-          filled: true,
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Nama Nasabah",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: semibold,
+              ),
+            ),
+            SizedBox(
+              height: 5.h,
+            ),
+            CustomInput(
+              hintText: 'Nama Nasabah',
+              hintColor: kDarkGreyColor,
+              filled: true,
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
+          ],
         );
       }
 
@@ -74,7 +146,6 @@ class RegisterSecondPage extends StatelessWidget {
         child: Column(
           children: [
             accountInput(),
-            chooseBank(),
             branchBank(),
             customerName(),
           ],
@@ -87,6 +158,9 @@ class RegisterSecondPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
+            SizedBox(
+              height: 34.h,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -97,7 +171,7 @@ class RegisterSecondPage extends StatelessWidget {
                   borderColor: kDarkGreyColor,
                   borderWidth: 2.r,
                   fontWeight: normal,
-                  width: 173.w,
+                  width: 138.w,
                 ),
                 SizedBox(
                   width: 12.w,
@@ -109,7 +183,7 @@ class RegisterSecondPage extends StatelessWidget {
                   borderColor: kDarkGreyColor,
                   borderWidth: 2.r,
                   fontWeight: normal,
-                  width: 173.w,
+                  width: 138.w,
                 ),
               ],
             ),
@@ -120,8 +194,9 @@ class RegisterSecondPage extends StatelessWidget {
               title: 'Lanjutkan',
               onPressed: () {},
               color: kPrimaryColor,
-              margin: EdgeInsets.symmetric(
-                horizontal: defaultMargin.w,
+              textStyle: blackTextStyle,
+              margin: EdgeInsets.only(
+                bottom: 36.h,
               ),
             ),
           ],
@@ -137,13 +212,11 @@ class RegisterSecondPage extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       backgroundColor: kWhiteColor,
       body: SafeArea(
-        child: ListView(
-          padding: EdgeInsets.symmetric(
-            horizontal: defaultMargin.w,
-          ),
+        child: Column(
           children: [
             header(),
             inputSection(),
+            button(),
           ],
         ),
       ),

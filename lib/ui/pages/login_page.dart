@@ -16,11 +16,13 @@ class LoginPage extends StatelessWidget {
         width: double.infinity,
         height: 327.h,
         decoration: BoxDecoration(
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(
-                  'assets/image_login.png',
-                ))),
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage(
+              'assets/image_login.png',
+            ),
+          ),
+        ),
       );
     }
 
@@ -84,10 +86,11 @@ class LoginPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CustomButton(
-                          color: kPrimaryColor,
                           title: 'Login',
-                          width: 172.w,
                           onPressed: () {},
+                          width: 172.w,
+                          color: kPrimaryColor,
+                          textStyle: blackTextStyle,
                         ),
                         SizedBox(
                           width: 12.w,
@@ -104,7 +107,7 @@ class LoginPage extends StatelessWidget {
                         Text(
                           'Klik di Sini',
                           style: blackTextStyle.copyWith(
-                            fontSize: 13,
+                            fontSize: 13.sp,
                             fontWeight: bold,
                           ),
                         )

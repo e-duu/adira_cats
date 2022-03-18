@@ -1,45 +1,46 @@
-import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomIconUpload extends StatelessWidget {
-  final String text;
+import '../../shared/theme.dart';
 
-  const CustomIconUpload({
-    Key? key,
-    required this.text,
-  }) : super(key: key);
+class CustomUploadImage extends StatelessWidget {
+  final String hintText;
+  final String imageUrl;
+  const CustomUploadImage(
+      {Key? key, required this.hintText, required this.imageUrl})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 170.w,
-      height: 172.h,
+      width: 150.w,
+      height: 200.h,
       decoration: BoxDecoration(
+        shape: BoxShape.rectangle,
         color: kGreyColor,
-        borderRadius: BorderRadius.circular(8.r),
+        borderRadius: BorderRadius.all(
+          Radius.circular(defaultRadius),
+        ),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            width: 64.w,
-            height: 64.h,
+            width: 80.w,
+            height: 80.h,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(
-                  "assets/icon_upload.png",
-                ),
+                image: AssetImage(imageUrl),
               ),
             ),
           ),
           SizedBox(
-            height: 18.h,
+            height: 19.h,
           ),
           Text(
-            text,
+            hintText,
             style: darkGreyTextStyle.copyWith(
+              fontSize: 12.sp,
               fontWeight: light,
             ),
             textAlign: TextAlign.center,

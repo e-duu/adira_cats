@@ -35,7 +35,10 @@ class CustomMenu extends StatelessWidget {
               width: 32.w,
               height: 32.h,
               decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage(imageUrl))),
+                image: DecorationImage(
+                  image: AssetImage(imageUrl),
+                ),
+              ),
             ),
             SizedBox(
               height: 17.h,
