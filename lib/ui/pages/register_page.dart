@@ -5,20 +5,47 @@ import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../widgets/custom_logo_adira.dart';
-
 class RegisterPage extends StatelessWidget {
   const RegisterPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Widget header() {
+    Widget logo() {
+      return Container(
+        width: 200.w,
+        height: 34.h,
+        margin: EdgeInsets.only(
+          top: 72.h,
+        ),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              'assets/adira_logo_yellow.png',
+            ),
+          ),
+        ),
+      );
+    }
+
+    /// Widget Title
+    Widget title() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 24.h,
+          top: 35.h,
         ),
-        child: CustomLogoAdira(
-          text: 'Daftar Sebagai Informan',
+        child: Column(
+          children: [
+            Text(
+              'Daftar Sebagai Informan',
+              style: blackTextStyle.copyWith(
+                fontSize: 18.sp,
+                fontWeight: bold,
+              ),
+            ),
+            SizedBox(
+              height: 24.h,
+            ),
+          ],
         ),
       );
     }
@@ -188,7 +215,7 @@ class RegisterPage extends StatelessWidget {
                   borderColor: kRedColor,
                   borderWidth: 2,
                   fontWeight: normal,
-                  width: 138.w,
+                  width: 172.w,
                 ),
                 SizedBox(
                   width: 12.w,
@@ -200,7 +227,7 @@ class RegisterPage extends StatelessWidget {
                   borderColor: kDarkGreyColor,
                   borderWidth: 2,
                   fontWeight: normal,
-                  width: 138.w,
+                  width: 172.w,
                 ),
               ],
             ),
@@ -229,7 +256,8 @@ class RegisterPage extends StatelessWidget {
           SafeArea(
             child: Column(
               children: [
-                header(),
+                logo(),
+                title(),
                 input(),
                 button(),
               ],
