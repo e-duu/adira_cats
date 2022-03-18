@@ -5,44 +5,136 @@ import '../../shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomBottomNavigationItem extends StatelessWidget {
-  final int index;
-  final String imageUrl;
-
-  const CustomBottomNavigationItem({
-    Key? key,
-    required this.index,
-    required this.imageUrl,
-  }) : super(key: key);
+  const CustomBottomNavigationItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        context.read<PageCubit>().setPage(index);
-      },
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(),
-          Image.asset(
-            imageUrl,
-            width: 24.w,
-            height: 24.h,
-            color: context.read<PageCubit>().state == index
-                ? kPrimaryColor
-                : kGreyColor,
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Container(
+        width: double.infinity,
+        height: 100.h,
+        padding: EdgeInsets.symmetric(
+          horizontal: 40.w,
+        ),
+        decoration: BoxDecoration(
+          color: kWhiteColor,
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(24.r),
+            topLeft: Radius.circular(24.r),
           ),
-          Container(
-            width: 30,
-            height: 2,
-            decoration: BoxDecoration(
-              color: context.read<PageCubit>().state == index
-                  ? kPrimaryColor
-                  : kTransparent,
-              borderRadius: BorderRadius.circular(18),
+          boxShadow: [
+            BoxShadow(
+              color: kGrayColor.withOpacity(1),
+              spreadRadius: 3,
+              blurRadius: 18.r,
+              offset: Offset(0, 0),
             ),
-          ),
-        ],
+          ],
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            // NOTE: ICON CHAT
+            Container(
+              child: Stack(
+                children: <Widget>[
+                  Icon(
+                    Icons.message,
+                    color: kGrayColor,
+                    size: 30.sp,
+                  ),
+                  Positioned(
+                    left: 20.0,
+                    bottom: 20.0,
+                    child: Container(
+                      padding: EdgeInsets.all(0.0),
+                      decoration: BoxDecoration(
+                        color: kPrimaryColor,
+                        shape: BoxShape.circle,
+                      ),
+                      constraints: BoxConstraints(
+                        minHeight: 15.0,
+                        minWidth: 15.0,
+                      ),
+                      child: Center(
+                        child: Text(
+                          '1',
+                          textAlign: TextAlign.center,
+                          style: blackTextStyle.copyWith(
+                            fontSize: 11.sp,
+                            fontWeight: semibold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // NOTE: ICON LOCATION
+            Container(
+              child: Stack(
+                children: [
+                  Icon(
+                    Icons.location_on,
+                    color: kGrayColor,
+                    size: 25.sp,
+                  ),
+                ],
+              ),
+            ),
+
+            // NOTE: ICON HOME
+            Container(
+              child: Stack(
+                children: [
+                  Icon(
+                    Icons.home,
+                    color: kGrayColor,
+                    size: 25.sp,
+                  ),
+                ],
+              ),
+            ),
+
+            // NOTE: ICON NOTIFICATION
+            Container(
+              padding: EdgeInsets.symmetric(
+                horizontal: 15.w,
+                vertical: 15.h,
+              ),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12.r),
+                color: kBlackColor,
+              ),
+              child: Stack(
+                children: [
+                  Icon(
+                    Icons.notifications,
+                    color: kGrayColor,
+                    size: 25.sp,
+                  ),
+                ],
+              ),
+            ),
+
+            // NOTE: ICON PROFILE
+            Container(
+              child: Stack(
+                children: [
+                  Icon(
+                    Icons.person,
+                    color: kGrayColor,
+                    size: 25.sp,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
