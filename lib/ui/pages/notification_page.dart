@@ -139,33 +139,104 @@ class NotificationPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                  width: 25,
-                  height: 25,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        'assets/icon_chat_button.png',
-                      ),
+                width: 25,
+                height: 25,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      'assets/icon_chat_button.png',
                     ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Container(
-                            width: 21.w,
-                            height: 21.h,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: kPrimaryColor,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 21.w,
+                          height: 21.h,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: kPrimaryColor,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: 25,
+                height: 25,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      'assets/icon_location_button.png',
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                width: 25,
+                height: 25,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      'assets/icon_home_button.png',
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                width: 25,
+                height: 25,
+                child: Stack(
+                  children: [
+                    Icon(
+                      Icons.notifications,
+                      color: kGrayColor,
+                      size: 30,
+                    ),
+                    Container(
+                      width: 30,
+                      height: 30,
+                      alignment: Alignment.topRight,
+                      margin: EdgeInsets.only(right: -10),
+                      child: Container(
+                        width: 15,
+                        height: 15,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: kPrimaryColor,
+                          border: Border.all(color: Colors.white, width: 1),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(0.0),
+                          child: Center(
+                            child: Text(
+                              '1',
+                              style: TextStyle(fontSize: 10),
                             ),
                           ),
-                        ],
-                      )
-                    ],
-                  )),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: 25,
+                height: 25,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      'assets/icon_user_button.png',
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
