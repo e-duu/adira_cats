@@ -20,7 +20,12 @@ class NotificationPage extends StatelessWidget {
           ),
           suffixWidget: GestureDetector(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage(),));
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProfilePage(),
+                ),
+              );
             },
             child: Container(
               width: 48.w,
@@ -213,7 +218,7 @@ class NotificationPage extends StatelessWidget {
                       width: 30,
                       height: 30,
                       alignment: Alignment.topRight,
-                      margin: EdgeInsets.only(right: -10),
+                      margin: EdgeInsets.only(left: 10),
                       child: Container(
                         width: 15,
                         height: 15,
