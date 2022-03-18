@@ -57,12 +57,12 @@ class MyApp extends StatelessWidget {
           // home: ProfilePage(),
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
+          // home: RegisterThirdPage(),
           // home: RegisterFourthPage(),
 
           /// NOTE: ON PROGRESS
           // home: HomePage(),
           // home: TrialPage(),
-          // home: RegisterThirdPage(),
           // home: NotificationPage(),
         ),
       ),
