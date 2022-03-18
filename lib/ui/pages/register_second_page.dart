@@ -25,7 +25,7 @@ class RegisterSecondPage extends StatelessWidget {
       );
     }
 
-    Widget inputSection() {
+    Widget input() {
       Widget accountInput() {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -215,7 +215,7 @@ class RegisterSecondPage extends StatelessWidget {
         child: Column(
           children: [
             header(),
-            inputSection(),
+            input(),
             button(),
           ],
         ),

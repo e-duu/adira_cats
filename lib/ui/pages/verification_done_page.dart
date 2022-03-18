@@ -47,7 +47,9 @@ class VerificationDonePage extends StatelessWidget {
                               'Akun <bold>Edward Einselton</bold> sudah terdaftar!\nSilakan Login kembali.',
                           tags: {
                             'bold': StyledTextTag(
-                              style: TextStyle(fontWeight: bold),
+                              style: TextStyle(
+                                fontWeight: bold,
+                              ),
                             ),
                           },
                           style: blackTextStyle.copyWith(
