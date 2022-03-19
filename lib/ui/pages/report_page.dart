@@ -1,7 +1,11 @@
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/pages/report_detail_page.dart';
+import 'package:adira_cats/ui/widgets/custom_bar_chart.dart';
+import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_card_sk.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
+import 'package:adira_cats/ui/widgets/custom_report_chart.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
@@ -49,192 +53,118 @@ class ReportPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              width: double.infinity,
-              height: 261.h,
-              padding: EdgeInsets.symmetric(
-                horizontal: 24.w,
-                vertical: 18.h,
-              ),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: kGrayColor,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(defaultRadius),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Input Kunjungan",
-                    style: blackTextStyle.copyWith(
-                      fontWeight: bold,
-                      fontSize: 13.sp,
-                    ),
-                  )
-                ],
+            CustomReportChart(
+              title: "Input Kunjungan", 
+              chart: CustomBarChart(
+                mon: 100,
+                tue: 633,
+                wed: 72,
+                thu: 10,
+                fri: 77,
+                sat: 12,
+                sun: 56,
               ),
             ),
             SizedBox(
               height: 12.h,
             ),
-            Container(
-              width: double.infinity,
-              height: 261.h,
-              padding: EdgeInsets.symmetric(
-                horizontal: 24.w,
-                vertical: 18.h,
-              ),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: kGrayColor,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(defaultRadius),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Biaya Tarik",
-                    style: blackTextStyle.copyWith(
-                      fontWeight: bold,
-                      fontSize: 13.sp,
-                    ),
-                  )
-                ],
+            CustomReportChart(
+              title: "Prodex", 
+              chart: CustomBarChart(
+                mon: 100,
+                tue: 633,
+                wed: 72,
+                thu: 10,
+                fri: 77,
+                sat: 12,
+                sun: 56,
               ),
             ),
             SizedBox(
               height: 12.h,
             ),
-            Container(
-              width: double.infinity,
-              height: 261.h,
-              padding: EdgeInsets.symmetric(
-                horizontal: 24.w,
-                vertical: 18.h,
-              ),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: kGrayColor,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(defaultRadius),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Prodex",
-                    style: blackTextStyle.copyWith(
-                      fontWeight: bold,
-                      fontSize: 13.sp,
-                    ),
-                  )
-                ],
+            CustomReportChart(
+              title: "Biaya Tarik", 
+              chart: CustomBarChart(
+                mon: 100,
+                tue: 633,
+                wed: 72,
+                thu: 10,
+                fri: 77,
+                sat: 12,
+                sun: 56,
               ),
             ),
             SizedBox(
               height: 12.h,
             ),
-            Container(
-              width: double.infinity,
-              height: 261.h,
-              padding: EdgeInsets.symmetric(
-                horizontal: 24.w,
-                vertical: 18.h,
-              ),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: kGrayColor,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(defaultRadius),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Biaya Tarik",
-                    style: blackTextStyle.copyWith(
-                      fontWeight: bold,
-                      fontSize: 13.sp,
-                    ),
-                  )
-                ],
+            CustomReportChart(
+              title: "Surat Tugas (ST)", 
+              chart: CustomBarChart(
+                mon: 100,
+                tue: 633,
+                wed: 72,
+                thu: 10,
+                fri: 77,
+                sat: 12,
+                sun: 56,
               ),
             ),
             SizedBox(
               height: 12.h,
             ),
-            Container(
-              width: double.infinity,
-              height: 261.h,
-              padding: EdgeInsets.symmetric(
-                horizontal: 24.w,
-                vertical: 18.h,
-              ),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: kGrayColor,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(defaultRadius),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Surat Tugas (ST)",
-                    style: blackTextStyle.copyWith(
-                      fontWeight: bold,
-                      fontSize: 13.sp,
-                    ),
-                  )
-                ],
+            CustomReportChart(
+              title: "Monitoring Workflow", 
+              chart: CustomBarChart(
+                mon: 100,
+                tue: 633,
+                wed: 72,
+                thu: 10,
+                fri: 77,
+                sat: 12,
+                sun: 56,
               ),
             ),
             SizedBox(
-              height: 12.h,
-            ),
-            Container(
-              width: double.infinity,
-              height: 261.h,
-              padding: EdgeInsets.symmetric(
-                horizontal: 24.w,
-                vertical: 18.h,
-              ),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: kGrayColor,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(defaultRadius),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Monitoring Workflow",
-                    style: blackTextStyle.copyWith(
-                      fontWeight: bold,
-                      fontSize: 13.sp,
-                    ),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 12.h,
+              height: 100.h,
             ),
           ],
         ),
       );
     }
+
+    Widget buttonDetail(){
+      return Container(
+        decoration: BoxDecoration(
+          color: kWhiteColor,
+        ),
+        padding: EdgeInsets.symmetric(
+          vertical: 36.h,
+          horizontal: 36.w,
+        ),
+        margin: EdgeInsets.zero,
+        child: CustomButton(
+          title: "Lihat Detail Laporan",
+          color: kPrimaryColor,
+          textStyle: blackTextStyle.copyWith(
+           fontWeight: bold,
+           fontSize: 12.sp
+          ),
+          onPressed: () {
+            Navigator.push(
+              context, 
+              MaterialPageRoute(
+                builder: (context) => ReportDetailPage(),
+              ),
+            );
+          },
+        )
+      );
+    }
     
     return Scaffold(
+      floatingActionButton: buttonDetail(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(

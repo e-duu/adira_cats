@@ -18,6 +18,9 @@ class CustomInputSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 50.h,
+      margin: EdgeInsets.symmetric(
+        horizontal: 20.w,
+      ),
       width: double.infinity,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(defaultRadius),
@@ -39,14 +42,14 @@ class CustomInputSearch extends StatelessWidget {
             highlightColor: kTransparent,
             icon: Icon(Icons.search_sharp),
           ),
-          hintStyle: TextStyle(color: kGreyColor),
+          hintStyle: TextStyle(color: kDarkGreyColor),
           filled: true,
           fillColor: kWhiteColor,
           focusColor: kDarkGreyColor,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(defaultRadius.r),
             borderSide: BorderSide(
-              color: kGrayColor,
+              color: kLigthGrayColor,
               width: 2,
             ),
           ),

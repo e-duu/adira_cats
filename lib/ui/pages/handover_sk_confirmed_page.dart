@@ -1,50 +1,39 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_card_sk.dart';
-import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_informasi_detail.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
-import 'package:styled_text/styled_text.dart';
 
 class HandoverSkConfirmedPage extends StatelessWidget {
-  const HandoverSkConfirmedPage({ Key? key }) : super(key: key);
+  const HandoverSkConfirmedPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Serah Terima SK",
-          preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
+            text: "Serah Terima SK",
+            preffixWidget: GestureDetector(
+              onTap: () {},
+              child: Icon(
+                Icons.subject_sharp,
+              ),
             ),
-          ),
-          suffixWidget: GestureDetector(
-            onTap: () {},
-            child: Container(
-              width: 27.w,
-              height: 26.h,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                    "assets/icon_arrow_back.png",
-                  )
-                )
-              )
-            )
-          )
-        ),
+            suffixWidget: GestureDetector(
+                onTap: () {},
+                child: Container(
+                    width: 27.w,
+                    height: 26.h,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(
+                      "assets/icon_arrow_back.png",
+                    )))))),
       );
     }
 
-    Widget cardSkDetail(){
+    Widget cardSkDetail() {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.symmetric(
@@ -53,7 +42,7 @@ class HandoverSkConfirmedPage extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           border: Border.all(
-            color: kGrayColor,
+            color: kLigthGrayColor,
             width: 2.w,
           ),
           borderRadius: BorderRadius.circular(defaultRadius),
@@ -63,10 +52,7 @@ class HandoverSkConfirmedPage extends StatelessWidget {
             Container(
               width: 100.w,
               height: 60.h,
-              margin: EdgeInsets.only(
-                top: 43.h,
-                bottom: 31.h
-              ),
+              margin: EdgeInsets.only(top: 43.h, bottom: 31.h),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -208,9 +194,7 @@ class HandoverSkConfirmedPage extends StatelessWidget {
 
             /// NOTE: NOTIF CONFIRMED SK
             Container(
-              margin: EdgeInsets.symmetric(
-                vertical: 24.h
-              ),
+              margin: EdgeInsets.symmetric(vertical: 24.h),
               child: Text(
                 "SK telah dikonfirmasi pada 10 maret 2022",
                 style: darkGreyTextStyle.copyWith(
@@ -234,7 +218,7 @@ class HandoverSkConfirmedPage extends StatelessWidget {
                     height: 68.h,
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: kGrayColor,
+                        color: kLigthGrayColor,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.circular(defaultRadius),
@@ -243,22 +227,20 @@ class HandoverSkConfirmedPage extends StatelessWidget {
                       child: Text(
                         "Cetak SK",
                         style: greyTextStyle.copyWith(
-                          fontWeight: light,
-                          fontSize: 12.sp
-                        ),
+                            fontWeight: light, fontSize: 12.sp),
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.center,
                       ),
                     ),
                   ),
-                  
+
                   /// NOTE: CETAK BASTK
                   Container(
                     width: 94.w,
                     height: 68.h,
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: kGrayColor,
+                        color: kLigthGrayColor,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.circular(defaultRadius),
@@ -267,9 +249,7 @@ class HandoverSkConfirmedPage extends StatelessWidget {
                       child: Text(
                         "Cetak\nBASTK",
                         style: greyTextStyle.copyWith(
-                          fontWeight: light,
-                          fontSize: 12.sp
-                        ),
+                            fontWeight: light, fontSize: 12.sp),
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.center,
                       ),
@@ -282,7 +262,7 @@ class HandoverSkConfirmedPage extends StatelessWidget {
                     height: 68.h,
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: kGrayColor,
+                        color: kLigthGrayColor,
                         width: 2,
                       ),
                       borderRadius: BorderRadius.circular(defaultRadius),
@@ -291,9 +271,7 @@ class HandoverSkConfirmedPage extends StatelessWidget {
                       child: Text(
                         "Buat\nHisPay",
                         style: greyTextStyle.copyWith(
-                          fontWeight: light,
-                          fontSize: 12.sp
-                        ),
+                            fontWeight: light, fontSize: 12.sp),
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.center,
                       ),
@@ -307,7 +285,7 @@ class HandoverSkConfirmedPage extends StatelessWidget {
       );
     }
 
-    Widget buttonBack(){
+    Widget buttonBack() {
       return Container(
         child: CustomButtonBorder(
           title: "Kembali",
@@ -325,21 +303,19 @@ class HandoverSkConfirmedPage extends StatelessWidget {
         ),
       );
     }
-    
+
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Container(
+        body: SafeArea(
+      child: SingleChildScrollView(
+        child: Container(
             child: Column(
-              children: [
-                navbar(),
-                cardSkDetail(),
-                buttonBack(),
-              ],
-            )
-          ),
-        ),
-      )
-    );
+          children: [
+            navbar(),
+            cardSkDetail(),
+            buttonBack(),
+          ],
+        )),
+      ),
+    ));
   }
 }

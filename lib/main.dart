@@ -1,12 +1,15 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/pages/create_st_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_detail_page.dart';
-import 'package:adira_cats/ui/pages/handover_sk_konfirmed_page.dart';
+import 'package:adira_cats/ui/pages/handover_sk_confirmed_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/message_page.dart';
+import 'package:adira_cats/ui/pages/message_room_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/forgot_password_page.dart';
@@ -24,6 +27,7 @@ import 'package:adira_cats/ui/pages/sk_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
 import 'package:adira_cats/ui/pages/verification_done_page.dart';
 import 'package:adira_cats/ui/pages/testing.dart';
+import 'package:adira_cats/ui/widgets/custom_bar_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -58,10 +62,6 @@ class MyApp extends StatelessWidget {
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterFourthPage(),
-
-          /// NOTE: ON PROGRESS
-          // home: HomePage(),
-          // home: NotificationPage(),
           // home: HandoverSkPage(),
           // home: HandoverSkSearchPage(),
           // home: HandoverSkSearchNilPage(),
@@ -69,8 +69,17 @@ class MyApp extends StatelessWidget {
           // home: HandoverSkConfirmedPage(),
           // home: TestingPage(),
           // home: SimpleTimeSeriesChart()
-          home: ReportDetailPage(),
-          // home: ReportPage(),
+          // home: ReportDetailPage(),
+          home: ReportPage(),
+
+          /// NOTE: ON PROGRESS
+          // home: HomePage(),
+          // home: NotificationPage(),
+          // home: TestingPage(),
+          // home: CreateStPage(),
+          // home: MessagePage(),
+          // home: MessageRoomPage(),
+          // home: CustomBarChart(),
         ),
       ),
     );

@@ -23,7 +23,7 @@ class CustomDetailReport extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         border: Border.all(
-          color: kGrayColor,
+          color: kLigthGrayColor,
           width: 2,
         ),
         borderRadius: BorderRadius.circular(defaultRadius),
@@ -61,7 +61,7 @@ class CustomDetailReport extends StatelessWidget {
                   ),
                   Text(
                     "Klik untuk lihat detail",
-                    style: greyTextStyle.copyWith(
+                    style: darkGreyTextStyle.copyWith(
                       fontWeight: light,
                       fontSize: 11.sp,
                     ),
