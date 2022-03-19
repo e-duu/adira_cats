@@ -153,10 +153,36 @@ class NotificationPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // NOTE: ICON CHAT
-              CustomBottomNavigationItem(
-                isSelected: true,
-                isNotifMessage: true,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // NOTE: ICON CHAT
+                  CustomBottomNavigationItem(
+                    icon: Icons.message,
+                    isNotif: true,
+                  ),
+
+                  // NOTE: ICON LOCATION
+                  CustomBottomNavigationItem(
+                    icon: Icons.location_on,
+                  ),
+
+                  // NOTE: ICON HOME
+                  CustomBottomNavigationItem(
+                    icon: Icons.home,
+                  ),
+
+                  // NOTE: ICON NOTIFICATION
+                  CustomBottomNavigationItem(
+                    isSelected: true,
+                    icon: Icons.notifications,
+                  ),
+
+                  // NOTE: ICON PROFILE
+                  CustomBottomNavigationItem(
+                    icon: Icons.person,
+                  ),
+                ],
               ),
             ],
           ),

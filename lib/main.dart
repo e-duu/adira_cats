@@ -66,11 +66,11 @@ class MyApp extends StatelessWidget {
           // home: HandoverSkConfirmedPage(),
 
           /// NOTE: ON PROGRESS
-          // home: HomePage(),
+          home: HomePage(),
           // home: NotificationPage(),
           // home: TestingPage(),
           // home: CreateStPage(),
-          home: MessagePage(),
+          // home: MessagePage(),
           // home: MessageRoomPage(),
         ),
       ),

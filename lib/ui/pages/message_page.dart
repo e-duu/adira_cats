@@ -54,7 +54,7 @@ class MessagePage extends StatelessWidget {
         child: Column(
           children: [
             CustomChatTile(
-              count: 1,
+              number: 1,
               unread: true,
               title: 'Anggora',
               subtitle: 'Anggora: Baik, akan segera kami',
@@ -135,10 +135,40 @@ class MessagePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // NOTE: ICON CHAT
-              CustomBottomNavigationItem(
-                isSelected: true,
-                isNotifMessage: true,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // NOTE: ICON CHAT
+                  CustomBottomNavigationItem(
+                    isSelected: true,
+                    icon: Icons.message,
+                  ),
+
+                  // NOTE: ICON LOCATION
+                  CustomBottomNavigationItem(
+                    isSelected: false,
+                    icon: Icons.location_on,
+                  ),
+
+                  // NOTE: ICON HOME
+                  CustomBottomNavigationItem(
+                    isSelected: false,
+                    icon: Icons.home,
+                  ),
+
+                  // NOTE: ICON NOTIFICATION
+                  CustomBottomNavigationItem(
+                    isSelected: false,
+                    icon: Icons.notifications,
+                    isNotif: true,
+                  ),
+
+                  // NOTE: ICON PROFILE
+                  CustomBottomNavigationItem(
+                    isSelected: false,
+                    icon: Icons.person,
+                  ),
+                ],
               ),
             ],
           ),
