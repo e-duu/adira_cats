@@ -1,4 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:adira_cats/ui/widgets/custom_card_notification.dart';
 import 'package:adira_cats/ui/widgets/custom_chat_tile.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
@@ -38,19 +39,17 @@ class MessagePage extends StatelessWidget {
           vertical: 24.h,
         ),
         child: CustomInputSearch(
-          hintText: 'Cari Pesan atau Kontak...',
-          onPressed: () {}
-        ),
+            hintText: 'Cari Pesan atau Kontak...', onPressed: () {}),
       );
     }
 
     Widget message() {
       return Container(
         width: double.infinity,
-        padding: EdgeInsets.only(
-          right: 36.w,
-          left: 36.w,
-          bottom: 116.h,
+        margin: EdgeInsets.only(
+          right: 24.w,
+          left: 24.w,
+          bottom: 150.h,
         ),
         child: Column(
           children: [
@@ -109,7 +108,47 @@ class MessagePage extends StatelessWidget {
       );
     }
 
+    Widget bottomNavigation() {
+      return Align(
+        alignment: Alignment.bottomCenter,
+        child: Container(
+          width: double.infinity,
+          height: 100.h,
+          padding: EdgeInsets.symmetric(
+            horizontal: 40.w,
+          ),
+          decoration: BoxDecoration(
+            color: kWhiteColor,
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(24.r),
+              topLeft: Radius.circular(24.r),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: kLigthGrayColor.withOpacity(1),
+                spreadRadius: 3,
+                blurRadius: 18.r,
+                offset: Offset(0, 0),
+              ),
+            ],
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // NOTE: ICON CHAT
+              CustomBottomNavigationItem(
+                isSelected: true,
+                isNotifMessage: true,
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
+      floatingActionButton: bottomNavigation(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       backgroundColor: kWhiteColor,
       body: SafeArea(
         child: SingleChildScrollView(

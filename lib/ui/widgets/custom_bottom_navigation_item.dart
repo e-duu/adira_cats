@@ -149,7 +149,7 @@ class CustomBottomNavigationItem extends StatelessWidget {
           ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12.r),
-            color: isSelected ? kBlackColor : kTransparent,
+            color: kBlackColor,
           ),
           child: Stack(
             children: [

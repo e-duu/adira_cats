@@ -126,7 +126,7 @@ class NotificationPage extends StatelessWidget {
       );
     }
 
-    Widget customIconNavigation() {
+    Widget bottomNavigation() {
       return Align(
         alignment: Alignment.bottomCenter,
         child: Container(
@@ -165,7 +165,7 @@ class NotificationPage extends StatelessWidget {
     }
 
     return Scaffold(
-      floatingActionButton: customIconNavigation(),
+      floatingActionButton: bottomNavigation(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: SingleChildScrollView(

@@ -19,7 +19,7 @@ class CustomInputSearch extends StatelessWidget {
     return Container(
       height: 50.h,
       margin: EdgeInsets.symmetric(
-        horizontal: 20.w,
+        horizontal: 24.w,
       ),
       width: double.infinity,
       decoration: BoxDecoration(

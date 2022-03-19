@@ -67,17 +67,11 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: HomePage(),
-<<<<<<< HEAD
-          home: NotificationPage(),
-          // home: TestingPage(),
-          // home: CreateStPage(),
-=======
           // home: NotificationPage(),
           // home: TestingPage(),
           // home: CreateStPage(),
-          // home: MessagePage(),
-          home: MessageRoomPage(),
->>>>>>> d1bfd30d08b1dad321fcb659dfc8e8660ce79fab
+          home: MessagePage(),
+          // home: MessageRoomPage(),
         ),
       ),
     );
