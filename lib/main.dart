@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : DONE
           // home: OtpPage(),
-          // home: ProfilePage(),
+          home: ProfilePage(),
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
@@ -70,7 +70,7 @@ class MyApp extends StatelessWidget {
           // home: TestingPage(),
           // home: SimpleTimeSeriesChart()
           // home: ReportDetailPage(),
-          home: ReportPage(),
+          // home: ReportPage(),
 
           /// NOTE: ON PROGRESS
           // home: HomePage(),

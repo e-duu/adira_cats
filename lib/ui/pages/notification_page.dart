@@ -132,9 +132,6 @@ class NotificationPage extends StatelessWidget {
         child: Container(
           width: double.infinity,
           height: 100.h,
-          padding: EdgeInsets.symmetric(
-            horizontal: 40.w,
-          ),
           decoration: BoxDecoration(
             color: kWhiteColor,
             borderRadius: BorderRadius.only(
@@ -154,7 +151,7 @@ class NotificationPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   // NOTE: ICON CHAT
                   CustomBottomNavigationItem(
