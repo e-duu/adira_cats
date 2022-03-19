@@ -20,11 +20,14 @@ import 'package:adira_cats/ui/pages/register_page.dart';
 import 'package:adira_cats/ui/pages/register_second_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/register_third_page.dart';
+import 'package:adira_cats/ui/pages/report_detail_page.dart';
+import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/sk_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
 import 'package:adira_cats/ui/pages/verification_done_page.dart';
 import 'package:adira_cats/ui/pages/testing.dart';
+import 'package:adira_cats/ui/widgets/custom_bar_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -64,14 +67,19 @@ class MyApp extends StatelessWidget {
           // home: HandoverSkSearchNilPage(),
           // home: HandoverSkDetailPage(),
           // home: HandoverSkConfirmedPage(),
+          // home: TestingPage(),
+          // home: SimpleTimeSeriesChart()
+          // home: ReportDetailPage(),
+          home: ReportPage(),
 
           /// NOTE: ON PROGRESS
-          home: HomePage(),
+          // home: HomePage(),
           // home: NotificationPage(),
           // home: TestingPage(),
           // home: CreateStPage(),
           // home: MessagePage(),
           // home: MessageRoomPage(),
+          // home: CustomBarChart(),
         ),
       ),
     );
