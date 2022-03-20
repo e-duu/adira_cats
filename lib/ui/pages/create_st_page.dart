@@ -16,7 +16,7 @@ class CreateStPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget navbar() {
       return CustomNavbar(
-        text: 'Buat ST',
+        text: 'Buat Surat Tugas',
         preffixWidget: IconButton(
           onPressed: () => {},
           icon: libraryIcon,
@@ -362,7 +362,7 @@ class CreateStPage extends StatelessWidget {
               height: 12.h,
             ),
             CustomButton(
-              title: 'Lanjutkan',
+              title: 'Buat ST',
               onPressed: () {},
               color: kPrimaryColor,
               textStyle: blackTextStyle,
