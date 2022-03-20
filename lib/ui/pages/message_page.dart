@@ -1,6 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
-import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:adira_cats/ui/widgets/custom_chat_tile.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';

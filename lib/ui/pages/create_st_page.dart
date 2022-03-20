@@ -1,4 +1,5 @@
 import 'package:adira_cats/ui/pages/home_page.dart';
+import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -95,9 +96,13 @@ class CreateStPage extends StatelessWidget {
               SizedBox(
                 height: 12.h,
               ),
-              CustomInput(
-                hintText: 'Pilih Cabang',
-                hintColor: kDarkGreyColor,
+              CustomDropdown(
+                items: [
+                  'Cabang MOU 1',
+                  'Cabang MOU 2',
+                  'Cabang MOU 3',
+                ],
+                hintText: 'Pilih Cabang MOU Eksternal',
               ),
             ],
           ),
@@ -205,7 +210,11 @@ class CreateStPage extends StatelessWidget {
                 fontWeight: bold,
               ),
               width: 172.w,
-              margin: EdgeInsets.only(top: 12.h, bottom: 12.h, right: 20.w),
+              margin: EdgeInsets.only(
+                top: 12.h,
+                bottom: 12.h,
+                right: 20.w,
+              ),
             ),
           ],
         );
