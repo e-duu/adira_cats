@@ -1,12 +1,8 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_card_sk.dart';
 import 'package:adira_cats/ui/widgets/custom_detail_report.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
-import 'package:adira_cats/ui/widgets/custom_input.dart';
-import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
@@ -57,12 +53,12 @@ class ReportDetailProdexResultPage extends StatelessWidget {
           children: [
             CustomDropdown(
               items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-              hintText: 'Pilih Area ...'
+              hintText: 'JAKARTA'
             ),
             SizedBox(height: 12.h,),
             CustomDropdown(
               items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-              hintText: 'Pilih Cabang ...'
+              hintText: 'JAKARTA PUSAT'
             ),
             Container(
               margin: EdgeInsets.symmetric(
@@ -96,7 +92,7 @@ class ReportDetailProdexResultPage extends StatelessWidget {
                   width: 138.w,
                   child: CustomDropdownBorder(
                     items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-                    hintText: 'Periode Awal', 
+                    hintText: '1 Januari 2022', 
                     // width: 132.w,
                   ),
                 ),
@@ -105,7 +101,7 @@ class ReportDetailProdexResultPage extends StatelessWidget {
                   width: 138.w,
                   child: CustomDropdownBorder(
                     items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-                    hintText: 'Periode Awal', 
+                    hintText: '1 Maret 2022', 
                     // width: 132.w,
                   ),
                 ),
@@ -121,12 +117,13 @@ class ReportDetailProdexResultPage extends StatelessWidget {
                   'bold': StyledTextTag(
                     style: TextStyle(
                       fontWeight: bold,
+                      fontSize: 13.sp
                     ),
                   ),
                 },
-                style: blackTextStyle.copyWith(
+                style: darkGreyTextStyle.copyWith(
                   fontWeight: light,
-                  fontSize: 13,
+                  fontSize: 13.sp,
                 ),
                 textAlign: TextAlign.center,
               ),

@@ -3,6 +3,7 @@ import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:styled_text/styled_text.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class VerificationDonePage extends StatelessWidget {
   const VerificationDonePage({Key? key}) : super(key: key);
@@ -20,8 +21,8 @@ class VerificationDonePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: 140,
-                    height: 140,
+                    width: 140.w,
+                    height: 140.h,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
@@ -41,7 +42,7 @@ class VerificationDonePage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 24,
+                          height: 24.h,
                         ),
                         StyledText(
                           text:
@@ -55,7 +56,7 @@ class VerificationDonePage extends StatelessWidget {
                           },
                           style: blackTextStyle.copyWith(
                             fontWeight: light,
-                            fontSize: 13,
+                            fontSize: 13.sp,
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -68,13 +69,13 @@ class VerificationDonePage extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(
-              bottom: 36,
+              bottom: 36.h,
             ),
             child: CustomButton(
               title: 'Ok',
               onPressed: () {},
               margin: EdgeInsets.symmetric(
-                horizontal: 36,
+                horizontal: 36.w,
               ),
               color: kPrimaryColor,
               textStyle: blackTextStyle,

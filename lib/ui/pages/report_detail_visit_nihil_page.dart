@@ -6,15 +6,15 @@ import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
-class ReportDetailProdexNihilPage extends StatelessWidget {
-  const ReportDetailProdexNihilPage({Key? key}) : super(key: key);
+class ReportDetailVisitNihilPage extends StatelessWidget {
+  const ReportDetailVisitNihilPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Prodex",
+          text: "Input Kunjungan",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(
@@ -110,7 +110,7 @@ class ReportDetailProdexNihilPage extends StatelessWidget {
                 vertical: defaultMargin,
               ),
               child: Text(
-                'Prodex tidak ditemukan.',
+                'Input Kunjungan tidak ditemukan.',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,

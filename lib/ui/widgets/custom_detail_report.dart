@@ -64,6 +64,7 @@ class CustomDetailReport extends StatelessWidget {
                     style: darkGreyTextStyle.copyWith(
                       fontWeight: light,
                       fontSize: 11.sp,
+                      fontStyle: FontStyle.italic
                     ),
                   )
                 ],

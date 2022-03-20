@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:styled_text/styled_text.dart';
-import 'package:styled_text/tags/styled_text_tag.dart';
 
 import '../../shared/theme.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_button_border.dart';
-import '../widgets/custom_card_sk.dart';
 import '../widgets/custom_navbar.dart';
 import 'home_page.dart';
 
@@ -23,21 +20,16 @@ class CreateStContractNullPage extends StatelessWidget {
           icon: libraryIcon,
         ),
         suffixWidget: GestureDetector(
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomePage(),
-                ));
-          },
+          onTap: () {},
           child: Container(
-            child: Column(
-              children: [
-                IconButton(
-                  onPressed: () => {},
-                  icon: const Icon(Icons.subdirectory_arrow_left),
+            width: 21.w,
+            height: 21.h,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  "assets/icon_arrow_back.png",
                 ),
-              ],
+              ),
             ),
           ),
         ),
@@ -52,7 +44,7 @@ class CreateStContractNullPage extends StatelessWidget {
         child: Text(
           'Nomor Kontrak tidak ditemukan.',
           style: blackTextStyle.copyWith(
-            fontSize: 13,
+            fontSize: 13.sp,
             fontWeight: light,
           ),
         ),

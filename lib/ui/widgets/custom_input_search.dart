@@ -23,8 +23,9 @@ class CustomInputSearch extends StatelessWidget {
       ),
       width: double.infinity,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(defaultRadius),
-          color: kGreyColor),
+        borderRadius: BorderRadius.circular(defaultRadius),
+        color: kGreyColor
+      ),
       child: TextFormField(
         autocorrect: true,
         autofocus: false,

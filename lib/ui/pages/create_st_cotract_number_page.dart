@@ -21,21 +21,16 @@ class CreateStContractNumberPage extends StatelessWidget {
           icon: libraryIcon,
         ),
         suffixWidget: GestureDetector(
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomePage(),
-                ));
-          },
+          onTap: () {},
           child: Container(
-            child: Column(
-              children: [
-                IconButton(
-                  onPressed: () => {},
-                  icon: const Icon(Icons.subdirectory_arrow_left),
+            width: 21.w,
+            height: 21.h,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  "assets/icon_arrow_back.png",
                 ),
-              ],
+              ),
             ),
           ),
         ),
@@ -44,7 +39,9 @@ class CreateStContractNumberPage extends StatelessWidget {
 
     Widget notifSearch() {
       return Container(
-        margin: EdgeInsets.symmetric(vertical: 36.h),
+        margin: EdgeInsets.symmetric(
+          vertical: 36.h,
+        ),
         child: StyledText(
           text:
               "<bold>3</bold> Nomor Kontrak telah ditemukan,\nPilih salah satu untuk melanjutkan.",
@@ -55,7 +52,7 @@ class CreateStContractNumberPage extends StatelessWidget {
               ),
             )
           },
-          style: greyTextStyle.copyWith(
+          style: darkGreyTextStyle.copyWith(
             fontSize: 13.sp,
             fontWeight: light,
           ),
@@ -66,7 +63,9 @@ class CreateStContractNumberPage extends StatelessWidget {
 
     Widget card() {
       return Container(
-        margin: EdgeInsets.only(bottom: 36.h),
+        margin: EdgeInsets.only(
+          bottom: 36.h,
+        ),
         child: Column(
           children: [
             CustomCardSk(
@@ -90,6 +89,9 @@ class CreateStContractNumberPage extends StatelessWidget {
 
     Widget button() {
       return Container(
+        margin: EdgeInsets.only(
+          bottom: defaultMargin.h,
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
