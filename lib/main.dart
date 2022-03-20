@@ -29,6 +29,7 @@ import 'package:adira_cats/ui/pages/splash_page.dart';
 import 'package:adira_cats/ui/pages/verification_done_page.dart';
 import 'package:adira_cats/ui/pages/testing.dart';
 import 'package:adira_cats/ui/widgets/custom_bar_chart.dart';
+import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -81,7 +82,7 @@ class MyApp extends StatelessWidget {
           // home: MessagePage(),
           // home: MessageRoomPage(),
           // home: CustomBarChart(),
-          home: ReportDetailProdexPage(),
+          home: CustomDropdown(items: ['item 1', 'item 2', 'item 2'], hintText: 'Pilih Data...'),
         ),
       ),
     );

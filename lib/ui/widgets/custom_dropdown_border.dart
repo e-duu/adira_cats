@@ -2,12 +2,12 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomDropdown extends StatefulWidget {
+class CustomDropdownBorder extends StatefulWidget {
 
   final List items;
   final String hintText;
   
-  const CustomDropdown({
+  const CustomDropdownBorder({
     Key? key,
     required this.items,
     required this.hintText,
@@ -17,7 +17,7 @@ class CustomDropdown extends StatefulWidget {
   Custom_DropdownState createState() => Custom_DropdownState();
 }
   
-class Custom_DropdownState extends State<CustomDropdown> {
+class Custom_DropdownState extends State<CustomDropdownBorder> {
     
   // Initial Selected Value
   String? dropdownvalue;
@@ -37,8 +37,12 @@ class Custom_DropdownState extends State<CustomDropdown> {
         horizontal: 36.w,
       ),
       decoration: BoxDecoration(
+        border: Border.all(
+          color: kDarkGreyColor,
+          width: 2,
+        ),
         borderRadius: BorderRadius.circular(defaultRadius),
-        color: kGreyColor,
+        color: kLigthGrayColor,
       ),
       child: DropdownButtonHideUnderline(
         child: DropdownButton(
