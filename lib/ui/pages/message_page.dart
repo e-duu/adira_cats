@@ -1,4 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:adira_cats/ui/widgets/custom_card_notification.dart';
 import 'package:adira_cats/ui/widgets/custom_chat_tile.dart';
@@ -16,15 +17,28 @@ class MessagePage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Pesan",
-          preffixWidget: IconButton(onPressed: () => {}, icon: libraryIcon),
-          suffixWidget: Container(
-            width: 48.w,
-            height: 48.h,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                image: AssetImage(
-                  "assets/image_user.png",
+          preffixWidget: IconButton(
+            onPressed: () => {},
+            icon: libraryIcon,
+          ),
+          suffixWidget: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProfilePage(),
+                ),
+              );
+            },
+            child: Container(
+              width: 48.w,
+              height: 48.h,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/image_user.png",
+                  ),
                 ),
               ),
             ),
@@ -54,7 +68,7 @@ class MessagePage extends StatelessWidget {
         child: Column(
           children: [
             CustomChatTile(
-              number: 1,
+              number: 99,
               unread: true,
               title: 'Anggora',
               subtitle: 'Anggora: Baik, akan segera kami',
@@ -115,7 +129,7 @@ class MessagePage extends StatelessWidget {
           width: double.infinity,
           height: 100.h,
           padding: EdgeInsets.symmetric(
-            horizontal: 40.w,
+            horizontal: 24,
           ),
           decoration: BoxDecoration(
             color: kWhiteColor,
@@ -136,7 +150,7 @@ class MessagePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   // NOTE: ICON CHAT
                   CustomBottomNavigationItem(

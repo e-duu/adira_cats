@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : DONE
           // home: OtpPage(),
-          home: ProfilePage(),
+          // home: ProfilePage(),
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
@@ -68,7 +68,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverSkDetailPage(),
           // home: HandoverSkConfirmedPage(),
           // home: TestingPage(),
-          // home: SimpleTimeSeriesChart()
+          // home: SimpleTimeSeriesChart(),
           // home: ReportDetailPage(),
           // home: ReportPage(),
 
@@ -77,7 +77,7 @@ class MyApp extends StatelessWidget {
           // home: NotificationPage(),
           // home: TestingPage(),
           // home: CreateStPage(),
-          // home: MessagePage(),
+          home: MessagePage(),
           // home: MessageRoomPage(),
           // home: CustomBarChart(),
         ),
