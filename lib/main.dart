@@ -3,6 +3,7 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
 import 'package:adira_cats/ui/pages/create_st_cotract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_page.dart';
+import 'package:adira_cats/ui/pages/error_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_detail_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_confirmed_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_page.dart';
@@ -56,11 +57,11 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
-          routes: {
-            '/': (context) => SplashPage(),
-            '/login': (context) => LoginPage(),
-            '/main': (context) => MainPage(),
-          },
+          // routes: {
+          //   '/': (context) => SplashPage(),
+          //   '/login': (context) => LoginPage(),
+          //   '/main': (context) => MainPage(),
+          // },
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
@@ -85,7 +86,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverSkConfirmedPage(),
           // home: TestingPage(),
           // home: CreateStPage(),
-          home: CreateStContractNumberPage(),
+          // home: CreateStContractNumberPage(),
           // home: CreateStContractNullPage(),
           // home: ReportDetailPage(),
           // home: ReportDetailProdexPage(),
@@ -101,6 +102,7 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailProdexResultPage(),
           // home: ReportDetailVisitPage(),
           // home: ReportDetailPullFeePage(),
+          home: ErrorPage(),
         ),
       ),
     );

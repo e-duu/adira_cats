@@ -18,11 +18,11 @@ class MainPage extends StatelessWidget {
     Widget buildContent(int currentIndex) {
       switch (currentIndex) {
         case 0:
-          return MessagePage();
-        case 1:
-          return UnitSearchPage();
-        case 2:
           return HomePage();
+        case 1:
+          return MessagePage();
+        case 2:
+          return UnitSearchPage();
         case 3:
           return NotificationPage();
         case 4:
@@ -64,7 +64,7 @@ class MainPage extends StatelessWidget {
                 children: [
                   // NOTE: ICON CHAT
                   CustomBottomNavigationItem(
-                    index: 0,
+                    index: 1,
                     icon: Icons.message,
                     isNotif: true,
                     number: 15,
@@ -72,13 +72,13 @@ class MainPage extends StatelessWidget {
 
                   // NOTE: ICON LOCATION
                   CustomBottomNavigationItem(
-                    index: 1,
+                    index: 2,
                     icon: Icons.location_on,
                   ),
 
                   // NOTE: ICON HOME
                   CustomBottomNavigationItem(
-                    index: 2,
+                    index: 0,
                     icon: Icons.home,
                   ),
 
