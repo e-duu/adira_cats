@@ -126,73 +126,7 @@ class NotificationPage extends StatelessWidget {
       );
     }
 
-    Widget bottomNavigation() {
-      return Align(
-        alignment: Alignment.bottomCenter,
-        child: Container(
-          width: double.infinity,
-          height: 100.h,
-          padding: EdgeInsets.symmetric(
-            horizontal: 24,
-          ),
-          decoration: BoxDecoration(
-            color: kWhiteColor,
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(24.r),
-              topLeft: Radius.circular(24.r),
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: kLigthGrayColor.withOpacity(1),
-                spreadRadius: 3,
-                blurRadius: 18.r,
-                offset: Offset(0, 0),
-              ),
-            ],
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  // NOTE: ICON CHAT
-                  CustomBottomNavigationItem(
-                    icon: Icons.message,
-                    isNotif: true,
-                  ),
-
-                  // NOTE: ICON LOCATION
-                  CustomBottomNavigationItem(
-                    icon: Icons.location_on,
-                  ),
-
-                  // NOTE: ICON HOME
-                  CustomBottomNavigationItem(
-                    icon: Icons.home,
-                  ),
-
-                  // NOTE: ICON NOTIFICATION
-                  CustomBottomNavigationItem(
-                    isSelected: true,
-                    icon: Icons.notifications,
-                  ),
-
-                  // NOTE: ICON PROFILE
-                  CustomBottomNavigationItem(
-                    icon: Icons.person,
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      );
-    }
-
     return Scaffold(
-      floatingActionButton: bottomNavigation(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -200,7 +134,7 @@ class NotificationPage extends StatelessWidget {
               navbar(),
               Container(
                 margin: EdgeInsets.symmetric(
-                  horizontal: 24,
+                  horizontal: 24.w,
                 ),
                 child: Column(
                   children: [
