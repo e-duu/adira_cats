@@ -18,7 +18,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Prodex",
+          text: "Detail Prodex",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(
@@ -43,76 +43,48 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
       );
     }
 
-    Widget inputSection() {
-      Widget selectArea() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomInput(
-              hintText: 'Pilih Area ...',
-              hintColor: kDarkGreyColor,
-              filled: true,
-              margin: EdgeInsets.only(
-                bottom: 12.h,
-              ),
-            ),
-          ],
-        );
-      }
-
-      Widget selectBranch() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomInput(
-              hintText: 'Pilih Cabang ...',
-              hintColor: kDarkGreyColor,
-              filled: true,
-              margin: EdgeInsets.only(
-                bottom: 12.h,
-              ),
-            ),
-          ],
-        );
-      }
-
-      return Container(
-        margin: EdgeInsets.only(
-          top: 24.h,
-          right: 36.w,
-          left: 36.w
-        ),
-        child: Column(
-          children: [
-            selectArea(),
-            selectBranch(),
-          ],
-        ),
-      );
-    }
-
-    Widget period(){
+    Widget box(){
       return Container(
         margin: EdgeInsets.symmetric(
+          vertical: 24.h,
+          horizontal: 24.w,
+        ),
+        padding: EdgeInsets.symmetric(
+          vertical: 36.h,
           horizontal: 36.w,
         ),
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: kLigthGrayColor,
+            width: 2.w,
+          ),
+          borderRadius: BorderRadius.circular(8.r),
+        ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              child: Text(
-                'Periode (Awal s/d Akhir)',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: semibold,
-                ),
+              width: 57.w,
+              height: 51.h,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    'assets/icon_prodex.png',
+                  )
+                )
               ),
-            )
+            ),
+            SizedBox(height: 34.h,),
+            Text(
+              'Nama Eksternal : Prodex1234',
+              style: blackTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: bold,
+              ),
+            ),
           ],
         )
       );
     }
-    
     
     return Scaffold(
       body: SafeArea(
@@ -120,8 +92,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
           child: ListView(
             children: [
               navbar(),
-              inputSection(),
-              period(),
+              box(),
             ],
           ),
         ),
