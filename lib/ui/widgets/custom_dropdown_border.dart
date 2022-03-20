@@ -3,50 +3,47 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomDropdownBorder extends StatefulWidget {
-
   final List items;
   final String hintText;
-  
+  final EdgeInsets? margin;
+  final double width;
+
   const CustomDropdownBorder({
     Key? key,
     required this.items,
     required this.hintText,
+    this.margin,
+    required this.width,
   }) : super(key: key);
-  
+
   @override
-  Custom_DropdownState createState() => Custom_DropdownState();
+  CustomDropdownBorderState createState() => CustomDropdownBorderState();
 }
-  
-class Custom_DropdownState extends State<CustomDropdownBorder> {
-    
+
+class CustomDropdownBorderState extends State<CustomDropdownBorder> {
   // Initial Selected Value
   String? dropdownvalue;
 
   @override
   Widget build(BuildContext context) {
-
     // List of items in our dropdown menu
-    var items = [    
+    var items = [
       for (var i = 0; i < widget.items.length; i++) '${widget.items[i]}',
     ];
 
     return Container(
-      width: double.infinity,
+      width: widget.width,
       height: 48.h,
-      margin: EdgeInsets.symmetric(
-        horizontal: 36.w,
-      ),
+      margin: widget.margin,
       decoration: BoxDecoration(
         border: Border.all(
           color: kDarkGreyColor,
           width: 2,
         ),
         borderRadius: BorderRadius.circular(defaultRadius),
-        color: kLigthGrayColor,
       ),
       child: DropdownButtonHideUnderline(
         child: DropdownButton(
-            
           hint: Container(
             margin: EdgeInsets.symmetric(
               horizontal: 18.w,
@@ -59,20 +56,18 @@ class Custom_DropdownState extends State<CustomDropdownBorder> {
               ),
             ),
           ),
-          
+
           // Initial Value
           value: dropdownvalue,
-          
+
           // Down Arrow Icon
           icon: Container(
             margin: EdgeInsets.only(
               right: 18.w,
             ),
-            child: Icon(
-              Icons.keyboard_arrow_down
-            ),
+            child: Icon(Icons.keyboard_arrow_down),
           ),
-            
+
           // Array list of items
           items: items.map((String items) {
             return DropdownMenuItem(
@@ -93,7 +88,7 @@ class Custom_DropdownState extends State<CustomDropdownBorder> {
           }).toList(),
           // After selecting the desired option,it will
           // change button value to selected value
-          onChanged: (String? newValue) { 
+          onChanged: (String? newValue) {
             setState(() {
               dropdownvalue = newValue!;
             });
