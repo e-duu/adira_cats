@@ -70,17 +70,14 @@ class MyApp extends StatelessWidget {
           // home: HandoverSkSearchPage(),
           // home: HandoverSkDetailPage(),
           // home: HandoverSkSearchNilPage(),
-          home: HandoverSkConfirmedPage(),
-          // home: TestingPage(),
-          // home: SimpleTimeSeriesChart()
+          // home: HandoverSkConfirmedPage(),
           // home: ReportDetailPage(),
           // home: ReportPage(),
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
           // home: MessageRoomPage(),
-          // home: CustomBarChart(),
-          // home: ReportDetailProdexPage(),
+          home: ReportDetailProdexPage(),
         ),
       ),
     );

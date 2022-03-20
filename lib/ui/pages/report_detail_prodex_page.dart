@@ -10,11 +10,10 @@ import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
 class ReportDetailProdexPage extends StatelessWidget {
-  const ReportDetailProdexPage({ Key? key }) : super(key: key);
+  const ReportDetailProdexPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     Widget navbar() {
       return Container(
         child: CustomNavbar(
@@ -34,11 +33,11 @@ class ReportDetailProdexPage extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage(
                     "assets/icon_arrow_back.png",
-                  )
-                )
-              )
-            )
-          )
+                  ),
+                ),
+              ),
+            ),
+          ),
         ),
       );
     }
@@ -80,7 +79,7 @@ class ReportDetailProdexPage extends StatelessWidget {
         margin: EdgeInsets.only(
           top: 24.h,
           right: 36.w,
-          left: 36.w
+          left: 36.w,
         ),
         child: Column(
           children: [
@@ -91,7 +90,7 @@ class ReportDetailProdexPage extends StatelessWidget {
       );
     }
 
-    Widget period(){
+    Widget period() {
       return Container(
         margin: EdgeInsets.symmetric(
           horizontal: 36.w,
@@ -109,11 +108,10 @@ class ReportDetailProdexPage extends StatelessWidget {
               ),
             )
           ],
-        )
+        ),
       );
     }
-    
-    
+
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -125,7 +123,7 @@ class ReportDetailProdexPage extends StatelessWidget {
             ],
           ),
         ),
-      )
+      ),
     );
   }
 }
