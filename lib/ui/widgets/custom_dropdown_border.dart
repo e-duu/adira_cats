@@ -6,14 +6,12 @@ class CustomDropdownBorder extends StatefulWidget {
   final List items;
   final String hintText;
   final EdgeInsets? margin;
-  final double width;
 
   const CustomDropdownBorder({
     Key? key,
     required this.items,
     required this.hintText,
     this.margin,
-    required this.width,
   }) : super(key: key);
 
   @override
@@ -32,7 +30,7 @@ class CustomDropdownBorderState extends State<CustomDropdownBorder> {
     ];
 
     return Container(
-      width: widget.width,
+      width: double.infinity,
       height: 48.h,
       margin: widget.margin,
       decoration: BoxDecoration(
@@ -45,8 +43,8 @@ class CustomDropdownBorderState extends State<CustomDropdownBorder> {
       child: DropdownButtonHideUnderline(
         child: DropdownButton(
           hint: Container(
-            margin: EdgeInsets.symmetric(
-              horizontal: 18.w,
+            margin: EdgeInsets.only(
+              left: 18.w,
             ),
             child: Text(
               widget.hintText,
@@ -63,7 +61,7 @@ class CustomDropdownBorderState extends State<CustomDropdownBorder> {
           // Down Arrow Icon
           icon: Container(
             margin: EdgeInsets.only(
-              right: 18.w,
+              right: 10.w,
             ),
             child: Icon(Icons.keyboard_arrow_down),
           ),
