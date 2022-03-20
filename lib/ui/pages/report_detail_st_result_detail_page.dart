@@ -4,8 +4,8 @@ import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
-class ReportDetailProdexResultDetailPage extends StatelessWidget {
-  const ReportDetailProdexResultDetailPage({ Key? key }) : super(key: key);
+class ReportDetailStResultDetailPage extends StatelessWidget {
+  const ReportDetailStResultDetailPage({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Detail Prodex",
+          text: "Detail Surat Tugas",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(
@@ -48,7 +48,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                  'assets/icon_prodex.png',
+                  'assets/icon_number_sk.png',
                 )
               )
             ),
@@ -62,7 +62,15 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Nama Eksternal : Prodex1234',
+                'Nomor Kontrak : 9999 8888 7777',
+                style: blackTextStyle.copyWith(
+                  fontSize: 13.sp,
+                  fontWeight: bold,
+                ),
+              ),
+              SizedBox(height: 8.h,),
+              Text(
+                'Nomor Surat : 123456',
                 style: blackTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: bold,
@@ -78,7 +86,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                'N-1 : 555',
+                'Nama Nasabah : Steven Rogers',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,
@@ -86,7 +94,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                '< 61 : 555',
+                'OD Hari : 7 hari',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,
@@ -94,7 +102,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                '61 - 90 : 555',
+                'Nama Excoll : Nicholas Fury',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,
@@ -102,79 +110,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                '91 - 120 : 555',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                '> 121 : 555',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Total : its over 3000',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'SKP proses : lorem',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Tarik : mamang',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Bayar : ngutang dulu',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Gagal : restart from last checkpoint',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Total Hasil : legendary mythic',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Total Bayar ( Tarik + Bayar ) : segunung',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Total Bayar dalam % : 101%',
+                'Tanggal Serah Terima : 1 Maret 2022',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,

@@ -4,8 +4,8 @@ import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
-class ReportDetailProdexResultDetailPage extends StatelessWidget {
-  const ReportDetailProdexResultDetailPage({ Key? key }) : super(key: key);
+class ReportDetailVisitResultDetailPage extends StatelessWidget {
+  const ReportDetailVisitResultDetailPage({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Detail Prodex",
+          text: "Detail Input Kunjungan",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(
@@ -62,7 +62,15 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Nama Eksternal : Prodex1234',
+                'Nomor Input Kunjungan : 123',
+                style: blackTextStyle.copyWith(
+                  fontSize: 13.sp,
+                  fontWeight: bold,
+                ),
+              ),
+              SizedBox(height: 8.h,),
+              Text(
+                'Nomor Kontrak : 9999 8888 6666',
                 style: blackTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: bold,
@@ -78,7 +86,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                'N-1 : 555',
+                'Penanganan : Mantap jiwa',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,
@@ -86,7 +94,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                '< 61 : 555',
+                'Deliquency : sewajarnya',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,
@@ -102,7 +110,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                '91 - 120 : 555',
+                'Status Unit : Sehat wal Afiyat',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,
@@ -110,7 +118,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                '> 121 : 555',
+                'Status Debitur : Sehat wal Afiyat',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,
@@ -118,7 +126,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                'Total : its over 3000',
+                'Hasil Penanganan : Lumayan',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,
@@ -126,55 +134,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                'SKP proses : lorem',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Tarik : mamang',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Bayar : ngutang dulu',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Gagal : restart from last checkpoint',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Total Hasil : legendary mythic',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Total Bayar ( Tarik + Bayar ) : segunung',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Total Bayar dalam % : 101%',
+                'Catatan : Jangan lupa makan',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,

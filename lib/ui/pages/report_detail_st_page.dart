@@ -6,15 +6,15 @@ import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
-class ReportDetailPullFeePage extends StatelessWidget {
-  const ReportDetailPullFeePage({Key? key}) : super(key: key);
+class ReportDetailStPage extends StatelessWidget {
+  const ReportDetailStPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Biaya Tarik",
+          text: "Surat Tugas",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(

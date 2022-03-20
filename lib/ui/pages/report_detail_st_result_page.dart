@@ -1,20 +1,22 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_detail_report.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
+import 'package:styled_text/styled_text.dart';
 
-class ReportDetailProdexNihilPage extends StatelessWidget {
-  const ReportDetailProdexNihilPage({Key? key}) : super(key: key);
+class ReportDetailStResultPage extends StatelessWidget {
+  const ReportDetailStResultPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Prodex",
+          text: "Surat Tugas",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(
@@ -51,12 +53,12 @@ class ReportDetailProdexNihilPage extends StatelessWidget {
           children: [
             CustomDropdown(
               items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-              hintText: 'WAKANDA'
+              hintText: 'JAKARTA'
             ),
             SizedBox(height: 12.h,),
             CustomDropdown(
               items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-              hintText: 'WAKANDA SELATAN'
+              hintText: 'JAKARTA PUSAT'
             ),
             Container(
               margin: EdgeInsets.symmetric(
@@ -90,8 +92,7 @@ class ReportDetailProdexNihilPage extends StatelessWidget {
                   width: 138.w,
                   child: CustomDropdownBorder(
                     items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-                    hintText: '1 Januari 1940', 
-                    // width: 132.w,
+                    hintText: '1 Januari 2022', 
                   ),
                 ),
                 SizedBox(width: 12.h,),
@@ -99,8 +100,7 @@ class ReportDetailProdexNihilPage extends StatelessWidget {
                   width: 138.w,
                   child: CustomDropdownBorder(
                     items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-                    hintText: '1 Maret 1945', 
-                    // width: 132.w,
+                    hintText: '1 Maret 2022', 
                   ),
                 ),
               ],
@@ -109,19 +109,49 @@ class ReportDetailProdexNihilPage extends StatelessWidget {
               margin: EdgeInsets.symmetric(
                 vertical: defaultMargin,
               ),
-              child: Text(
-                'Prodex tidak ditemukan.',
+              child: StyledText(
+                text: '<bold>2</bold> Surat Tugas telah ditemukan.',
+                tags: {
+                  'bold': StyledTextTag(
+                    style: TextStyle(
+                      fontWeight: bold,
+                      fontSize: 13.sp
+                    ),
+                  ),
+                },
                 style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
                   fontWeight: light,
+                  fontSize: 13.sp,
                 ),
-              )
+                textAlign: TextAlign.center,
+              ),
             )
           ],
         ),
       );
     }
 
+    Widget externalName(){
+      return Container(
+        margin: EdgeInsets.symmetric(
+          horizontal: 24.w,
+        ),
+        child: Column(
+          children: [
+            CustomDetailReport(
+              imageUrl: 'assets/icon_surat_tugas.png',
+              title: 'Nomor Kontrak : 121212',
+            ),
+            SizedBox(height: 12.h,),
+            CustomDetailReport(
+              imageUrl: 'assets/icon_surat_tugas.png',
+              title: 'Nomor Kontrak : 121212',
+            ),
+          ],
+        ),
+      );
+    }
+    
     Widget button() {
       return Container(
         margin: EdgeInsets.only(
@@ -155,6 +185,7 @@ class ReportDetailProdexNihilPage extends StatelessWidget {
                 navbar(),
                 selectArea(),
                 selectPeriod(),
+                externalName(),
                 button(),
               ],
             ),
