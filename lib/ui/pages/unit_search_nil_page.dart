@@ -44,8 +44,9 @@ class UnitSearchNilPage extends StatelessWidget {
         vertical: 18.h,
       ),
       child: CustomInputSearch(
-        onPressed: () {},
+        margin: EdgeInsets.all(1),
         hintText: 'Cari Unit menggunakan Nomor Kontrak ...',
+        onPressed: () {},
       ),
     );
   }
@@ -80,10 +81,13 @@ class UnitSearchNilPage extends StatelessWidget {
                   color: kPrimaryColor,
                   borderRadius: BorderRadius.circular(defaultRadius),
                 ),
-                child: Center(
-                  child: Icon(
-                    Icons.edit_outlined,
-                    color: kBlackColor,
+                child: Padding(
+                  padding: EdgeInsets.all(3),
+                  child: Center(
+                    child: Icon(
+                      Icons.edit_outlined,
+                      color: kBlackColor,
+                    ),
                   ),
                 ),
               )

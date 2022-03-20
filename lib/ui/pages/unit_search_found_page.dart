@@ -46,6 +46,7 @@ class UnitSearchFoundPage extends StatelessWidget {
       ),
       child: CustomInputSearch(
         onPressed: () {},
+        margin: EdgeInsets.all(1),
         value: '9999',
         hintText: 'Cari Unit menggunakan Nomor Kontrak ...',
       ),
