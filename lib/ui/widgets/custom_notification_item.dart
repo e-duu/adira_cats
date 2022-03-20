@@ -12,9 +12,9 @@ class CustomNotificationItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      left: 14.0.w,
+      left: 13.0.w,
       child: Container(
-        padding: EdgeInsets.all(0.0),
+        padding: EdgeInsets.all(1.5),
         decoration: BoxDecoration(
           color: kPrimaryColor,
           shape: BoxShape.circle,
@@ -28,7 +28,7 @@ class CustomNotificationItem extends StatelessWidget {
             count.toString(),
             textAlign: TextAlign.center,
             style: blackTextStyle.copyWith(
-              fontSize: 11.sp,
+              fontSize: 10.sp,
               fontWeight: semibold,
             ),
           ),

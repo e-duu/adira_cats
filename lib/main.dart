@@ -10,6 +10,7 @@ import 'package:adira_cats/ui/pages/handover_sk_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
@@ -55,6 +56,11 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
+          routes: {
+            '/': (context) => SplashPage(),
+            '/login': (context) => LoginPage(),
+            '/main': (context) => MainPage(),
+          },
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
