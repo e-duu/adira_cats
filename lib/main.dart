@@ -14,10 +14,8 @@ import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
-import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/forgot_password_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
-import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/register_fourth_page.dart';
 import 'package:adira_cats/ui/pages/register_page.dart';
 import 'package:adira_cats/ui/pages/register_second_page.dart';
@@ -30,12 +28,10 @@ import 'package:adira_cats/ui/pages/report_detail_pull_fee_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_visit_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
-import 'package:adira_cats/ui/pages/sk_done_page.dart';
+import 'package:adira_cats/ui/pages/st_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
 import 'package:adira_cats/ui/pages/verification_done_page.dart';
 import 'package:adira_cats/ui/pages/testing.dart';
-import 'package:adira_cats/ui/widgets/custom_bar_chart.dart';
-import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -72,18 +68,17 @@ class MyApp extends StatelessWidget {
           // home: OtpPage(),
           // home: ProfilePage(),
           // home: RegisterPage(),
-          // home: CreateStPage(),
-          // home: HandoverSkPage(),
-          // home: ReportDetailPage(),
-          // home: NotificationPage(),
+          // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterFourthPage(),
-          // home: RegisterSecondPage(),
+          // home: CreateStPage(),
+          home: StDonePage(),
+          // home: HandoverSkPage(),
+          // home: ReportDetailPage(),
           // home: HandoverSkSearchPage(),
           // home: HandoverSkDetailPage(),
           // home: HandoverSkSearchNilPage(),
           // home: HandoverSkConfirmedPage(),
-          // home: CreateStPage(),
           // home: CreateStContractNumberPage(),
           // home: CreateStContractNullPage(),
           // home: ReportDetailPage(),
