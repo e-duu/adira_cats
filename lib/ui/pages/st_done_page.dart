@@ -1,9 +1,10 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SkDonePage extends StatelessWidget {
-  const SkDonePage({Key? key}) : super(key: key);
+class StDonePage extends StatelessWidget {
+  const StDonePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +19,11 @@ class SkDonePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: 140,
-                    height: 140,
-                    margin: EdgeInsets.only(bottom: 36),
+                    width: 140.w,
+                    height: 140.h,
+                    margin: EdgeInsets.only(
+                      bottom: 36.h,
+                    ),
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
@@ -36,11 +39,11 @@ class SkDonePage extends StatelessWidget {
                           'Berhasil!',
                           style: blackTextStyle.copyWith(
                             fontWeight: bold,
-                            fontSize: 18,
+                            fontSize: 18.sp,
                           ),
                         ),
                         SizedBox(
-                          height: 24,
+                          height: 24.h,
                         ),
                         Text(
                           'SK baru berhasil dibuat!',
@@ -57,13 +60,13 @@ class SkDonePage extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(
-              bottom: 36,
+              bottom: 36.h,
             ),
             child: CustomButton(
               title: 'Ok',
               onPressed: () {},
               margin: EdgeInsets.symmetric(
-                horizontal: 36,
+                horizontal: 36.h,
               ),
               color: kPrimaryColor,
               textStyle: blackTextStyle,

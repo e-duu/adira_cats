@@ -1,7 +1,4 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widgets/custom_card_notification.dart';
-import 'package:adira_cats/ui/widgets/custom_chat_tile.dart';
-import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_right_chat_item.dart';
 import 'package:adira_cats/ui/widgets/custom_left_chat_item.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -24,17 +21,17 @@ class MessageRoomPage extends StatelessWidget {
         suffixWidget: GestureDetector(
           onTap: () {},
           child: Container(
-            width: 27.w,
-            height: 26.h,
+            width: 21.w,
+            height: 21.h,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
                   "assets/icon_arrow_back.png",
-                )
-              )
-            )
-          )
-        )
+                ),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -71,9 +68,9 @@ class MessageRoomPage extends StatelessWidget {
                   Text(
                     'Domestic',
                     style: blackTextStyle.copyWith(
-                        fontSize: 12.sp,
-                        fontWeight: bold,
-                      ),
+                      fontSize: 12.sp,
+                      fontWeight: bold,
+                    ),
                   ),
                   SizedBox(
                     height: 2.h,
@@ -126,7 +123,7 @@ class MessageRoomPage extends StatelessWidget {
   Widget chat() {
     return Container(
       margin: EdgeInsets.only(
-        bottom: 270.h,
+        bottom: 150.h,
       ),
       child: Column(
         children: [
@@ -184,7 +181,7 @@ class MessageRoomPage extends StatelessWidget {
             time: '05.48',
             unread: true,
           ),
-        ], 
+        ],
       ),
     );
   }
@@ -219,10 +216,7 @@ class MessageRoomPage extends StatelessWidget {
                   children: [
                     Container(
                       width: 22.w,
-                      margin: EdgeInsets.only(
-                        right: 4.w,
-                        left: 8.w
-                      ),
+                      margin: EdgeInsets.only(right: 4.w, left: 8.w),
                       child: IconButton(
                         onPressed: () {},
                         hoverColor: kTransparent,

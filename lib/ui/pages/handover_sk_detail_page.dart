@@ -26,8 +26,8 @@ class HandoverSkDetailPage extends StatelessWidget {
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
-              width: 27.w,
-              height: 26.h,
+              width: 21.w,
+              height: 21.h,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -61,7 +61,10 @@ class HandoverSkDetailPage extends StatelessWidget {
             Container(
               width: 100.w,
               height: 60.h,
-              margin: EdgeInsets.only(top: 43.h, bottom: 31.h),
+              margin: EdgeInsets.only(
+                top: 43.h,
+                bottom: 31.h,
+              ),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -337,17 +340,19 @@ class HandoverSkDetailPage extends StatelessWidget {
     }
 
     return Scaffold(
-        body: SafeArea(
-      child: SingleChildScrollView(
-        child: Container(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
             child: Column(
-          children: [
-            navbar(),
-            cardSkDetail(),
-            buttonBack(),
-          ],
-        )),
+              children: [
+                navbar(),
+                cardSkDetail(),
+                buttonBack(),
+              ],
+            ),
+          ),
+        ),
       ),
-    ));
+    );
   }
 }
