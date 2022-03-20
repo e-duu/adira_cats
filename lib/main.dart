@@ -25,6 +25,7 @@ import 'package:adira_cats/ui/pages/report_detail_prodex_nihil_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_prodex_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_prodex_result_detail_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_prodex_result_page.dart';
+import 'package:adira_cats/ui/pages/report_detail_visit_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/sk_done_page.dart';
@@ -81,12 +82,11 @@ class MyApp extends StatelessWidget {
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
           // home: MessageRoomPage(),
-          // home: CustomBarChart(),
-          // home: CustomDropdown(
-          //   items: ['item 1', 'item 2', 'item 2'],
-          //   hintText: 'Pilih Data...',
-          // ),
+          // home: ReportDetailProdexNihilPage(),
           home: ReportDetailProdexPage(),
+          // home: ReportDetailProdexResultDetailPage(),
+          // home: ReportDetailProdexResultPage(),
+          // home: ReportDetailVisitPage(),
         ),
       ),
     );
