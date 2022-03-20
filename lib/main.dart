@@ -27,6 +27,9 @@ import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/sk_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_found_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_nil_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_page.dart';
 import 'package:adira_cats/ui/pages/verification_done_page.dart';
 import 'package:adira_cats/ui/pages/testing.dart';
 import 'package:adira_cats/ui/widgets/custom_bar_chart.dart';
@@ -77,10 +80,13 @@ class MyApp extends StatelessWidget {
           // home: ReportPage(),
 
           /// NOTE: ON PROGRESS
-          home: TestingPage(),
+          // home: TestingPage(),
           // home: MessageRoomPage(),
           // home: ReportDetailProdexPage(),
           // home: ReportDetailVisitPage(),
+          // home: UnitSearchPage(),
+          home: UnitSearchFoundPage(),
+          // home: UnitSearchNilPage(),
         ),
       ),
     );
