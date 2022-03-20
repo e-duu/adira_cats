@@ -2,6 +2,7 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_card_sk.dart';
 import 'package:adira_cats/ui/widgets/custom_detail_report.dart';
+import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -10,11 +11,10 @@ import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
 class ReportDetailProdexPage extends StatelessWidget {
-  const ReportDetailProdexPage({ Key? key }) : super(key: key);
+  const ReportDetailProdexPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     Widget navbar() {
       return Container(
         child: CustomNavbar(
@@ -34,11 +34,11 @@ class ReportDetailProdexPage extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage(
                     "assets/icon_arrow_back.png",
-                  )
-                )
-              )
-            )
-          )
+                  ),
+                ),
+              ),
+            ),
+          ),
         ),
       );
     }
@@ -48,13 +48,17 @@ class ReportDetailProdexPage extends StatelessWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomInput(
+            // CustomInput(
+            //   hintText: 'Pilih Area ...',
+            //   hintColor: kDarkGreyColor,
+            //   filled: true,
+            //   margin: EdgeInsets.only(
+            //     bottom: 12.h,
+            //   ),
+            // ),
+            CustomDropdown(
+              items: ['pilih 1', 'pilih 2', 'pilih 3'], 
               hintText: 'Pilih Area ...',
-              hintColor: kDarkGreyColor,
-              filled: true,
-              margin: EdgeInsets.only(
-                bottom: 12.h,
-              ),
             ),
           ],
         );
@@ -80,7 +84,7 @@ class ReportDetailProdexPage extends StatelessWidget {
         margin: EdgeInsets.only(
           top: 24.h,
           right: 36.w,
-          left: 36.w
+          left: 36.w,
         ),
         child: Column(
           children: [
@@ -91,7 +95,7 @@ class ReportDetailProdexPage extends StatelessWidget {
       );
     }
 
-    Widget period(){
+    Widget period() {
       return Container(
         margin: EdgeInsets.symmetric(
           horizontal: 36.w,
@@ -109,11 +113,10 @@ class ReportDetailProdexPage extends StatelessWidget {
               ),
             )
           ],
-        )
+        ),
       );
     }
-    
-    
+
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -125,7 +128,7 @@ class ReportDetailProdexPage extends StatelessWidget {
             ],
           ),
         ),
-      )
+      ),
     );
   }
 }

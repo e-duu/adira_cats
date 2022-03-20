@@ -32,6 +32,7 @@ import 'package:adira_cats/ui/pages/splash_page.dart';
 import 'package:adira_cats/ui/pages/verification_done_page.dart';
 import 'package:adira_cats/ui/pages/testing.dart';
 import 'package:adira_cats/ui/widgets/custom_bar_chart.dart';
+import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -63,31 +64,29 @@ class MyApp extends StatelessWidget {
           // home: OtpPage(),
           // home: ProfilePage(),
           // home: RegisterPage(),
-          // home: RegisterSecondPage(),
+          // home: CreateStPage(),
+          // home: HandoverSkPage(),
+          // home: ReportDetailPage(),
+          // home: NotificationPage(),
           // home: RegisterThirdPage(),
           // home: RegisterFourthPage(),
-          // home: HandoverSkPage(),
+          // home: RegisterSecondPage(),
           // home: HandoverSkSearchPage(),
-          // home: HandoverSkSearchNilPage(),
           // home: HandoverSkDetailPage(),
+          // home: HandoverSkSearchNilPage(),
           // home: HandoverSkConfirmedPage(),
-          // home: TestingPage(),
-          // home: SimpleTimeSeriesChart()
           // home: ReportDetailPage(),
           // home: ReportPage(),
 
           /// NOTE: ON PROGRESS
-          // home: HomePage(),
-          // home: NotificationPage(),
           // home: TestingPage(),
-          // home: CreateStPage(),
-          // home: MessagePage(),
           // home: MessageRoomPage(),
           // home: CustomBarChart(),
-          // home: ReportDetailProdexNihilPage(),
-          // home: ReportDetailProdexPage(),
-          home: ReportDetailProdexResultDetailPage(),
-          // home: ReportDetailProdexResultPage(),
+          // home: CustomDropdown(
+          //   items: ['item 1', 'item 2', 'item 2'],
+          //   hintText: 'Pilih Data...',
+          // ),
+          home: ReportDetailProdexPage(),
         ),
       ),
     );
