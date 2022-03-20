@@ -23,6 +23,8 @@ import 'package:adira_cats/ui/pages/register_page.dart';
 import 'package:adira_cats/ui/pages/register_second_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/register_third_page.dart';
+import 'package:adira_cats/ui/pages/report_detail_mv_page%20.dart';
+import 'package:adira_cats/ui/pages/report_detail_mv_result_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_prodex_nihil_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_prodex_page.dart';
@@ -44,6 +46,9 @@ import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/st_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_found_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_nil_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_page.dart';
 import 'package:adira_cats/ui/pages/verification_done_page.dart';
 import 'package:adira_cats/ui/pages/testing.dart';
 import 'package:flutter/material.dart';
@@ -103,28 +108,25 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailProdexPage(),
           // home: ReportDetailProdexResultPage(),
           // home: ReportDetailVisitPage(),
+          // home: UnitSearchPage(),
+          // home: UnitSearchFoundPage(),
+          home: UnitSearchNilPage(),
           // home: ReportDetailPullFeePage(),
           // home: MessageRoomPage(),
-          // home: ErrorPage(),
-          // home: LoadPage(),
-
-          /// NOTE: ON PROGRESS
-          // home: TestingPage(),
-          // home: ReportDetailProdexNihilPage(),
-          // home: ReportDetailProdexResultDetailPage(),
-          // home: ReportDetailProdexResultPage(),
           // home: ReportDetailVisitPage(),
-          // home: ReportDetailVisitNihilPage(),
           // home: ReportDetailVisitResultDetailPage(),
-          // home: ReportDetailVisitResultPage(),
           // home: ReportDetailPullFeePage(),
-          // home: ReportDetailPullFeeNihilPage(),
           // home: ReportDetailPullFeeResultDetailPage(),
           // home: ReportDetailPullFeeResultPage(),
           // home: ReportDetailStPage(),
           // home: ReportDetailStNihilPage(),
           // home: ReportDetailStResultDetailPage(),
           // home: ReportDetailStResultPage(),
+
+          /// NOTE: ON PROGRESS
+          // home: TestingPage(),
+          // home: ReportDetailMvPage(),
+          // home: ReportDetailMvResultPage(),
         ),
       ),
     );
