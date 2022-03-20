@@ -6,12 +6,16 @@ class CustomCardSk extends StatelessWidget {
   final String skNumber;
   final String contractNumber;
   final bool notifNew;
+  final String notifText;
+  final bool clickDetail;
 
   const CustomCardSk({
     Key? key,
     required this.skNumber,
     required this.contractNumber,
     this.notifNew = false,
+    this.notifText = '',
+    this.clickDetail = false,
   }) : super(key: key);
 
   @override
@@ -68,16 +72,18 @@ class CustomCardSk extends StatelessWidget {
                     fontSize: 12.sp,
                   ),
                 ),
-                SizedBox(
-                  height: 6.h,
-                ),
-                Text(
-                  "Klik untuk lihat detail",
-                  style: darkGreyTextStyle.copyWith(
-                    fontWeight: light,
-                    fontSize: 11.sp,
+                if (clickDetail == true)
+                  SizedBox(
+                    height: 6.h,
                   ),
-                )
+                if (clickDetail == true)
+                  Text(
+                    "Klik untuk lihat detail",
+                    style: darkGreyTextStyle.copyWith(
+                      fontWeight: light,
+                      fontSize: 11.sp,
+                    ),
+                  ),
               ],
             ),
           ),
@@ -93,7 +99,7 @@ class CustomCardSk extends StatelessWidget {
                     color: kPrimaryColor),
                 child: Center(
                   child: Text(
-                    "Baru",
+                    notifText,
                     style: blackTextStyle.copyWith(
                       fontSize: 11.sp,
                       fontWeight: semibold,

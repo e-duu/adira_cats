@@ -1,5 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widgets/custom_card_notification.dart';
+import 'package:adira_cats/ui/pages/profile_page.dart';
+import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:adira_cats/ui/widgets/custom_chat_tile.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -15,15 +16,28 @@ class MessagePage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Pesan",
-          preffixWidget: IconButton(onPressed: () => {}, icon: libraryIcon),
-          suffixWidget: Container(
-            width: 48.w,
-            height: 48.h,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                image: AssetImage(
-                  "assets/image_user.png",
+          preffixWidget: IconButton(
+            onPressed: () => {},
+            icon: libraryIcon,
+          ),
+          suffixWidget: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProfilePage(),
+                ),
+              );
+            },
+            child: Container(
+              width: 48.w,
+              height: 48.h,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/image_user.png",
+                  ),
                 ),
               ),
             ),
@@ -38,16 +52,14 @@ class MessagePage extends StatelessWidget {
           vertical: 24.h,
         ),
         child: CustomInputSearch(
-          hintText: 'Cari Pesan atau Kontak...',
-          onPressed: () {}
-        ),
+            hintText: 'Cari Pesan atau Kontak...', onPressed: () {}),
       );
     }
 
     Widget message() {
       return Container(
         width: double.infinity,
-        padding: EdgeInsets.only(
+        margin: EdgeInsets.only(
           right: 24.w,
           left: 24.w,
           bottom: 150.h,
@@ -55,7 +67,7 @@ class MessagePage extends StatelessWidget {
         child: Column(
           children: [
             CustomChatTile(
-              count: 1,
+              number: 99,
               unread: true,
               title: 'Anggora',
               subtitle: 'Anggora: Baik, akan segera kami',

@@ -16,23 +16,28 @@ class HandoverSkDetailPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-            text: "Serah Terima SK",
-            preffixWidget: GestureDetector(
-              onTap: () {},
-              child: Icon(
-                Icons.subject_sharp,
+          text: "Serah Terima SK",
+          preffixWidget: GestureDetector(
+            onTap: () {},
+            child: Icon(
+              Icons.subject_sharp,
+            ),
+          ),
+          suffixWidget: GestureDetector(
+            onTap: () {},
+            child: Container(
+              width: 27.w,
+              height: 26.h,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/icon_arrow_back.png",
+                  ),
+                ),
               ),
             ),
-            suffixWidget: GestureDetector(
-                onTap: () {},
-                child: Container(
-                    width: 27.w,
-                    height: 26.h,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(
-                      "assets/icon_arrow_back.png",
-                    )))))),
+          ),
+        ),
       );
     }
 
@@ -127,7 +132,7 @@ class HandoverSkDetailPage extends StatelessWidget {
                       ),
                       Text(
                         "Detail Informasi",
-                        style: greyTextStyle.copyWith(
+                        style: darkGreyTextStyle.copyWith(
                           fontSize: 13.sp,
                           fontWeight: semibold,
                         ),
@@ -268,10 +273,15 @@ class HandoverSkDetailPage extends StatelessWidget {
                               'SK dengan Nomor <bold>1234 5678</bold> telah dikonfirmasi.',
                           tags: {
                             'bold': StyledTextTag(
-                                style: TextStyle(fontWeight: semibold)),
+                              style: TextStyle(
+                                fontWeight: semibold,
+                              ),
+                            ),
                           },
                           style: blackTextStyle.copyWith(
-                              fontSize: 13.sp, fontWeight: light),
+                            fontSize: 13.sp,
+                            fontWeight: light,
+                          ),
                           textAlign: TextAlign.center,
                         ),
                       ),

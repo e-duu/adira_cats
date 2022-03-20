@@ -1,4 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
@@ -30,7 +31,7 @@ class ProfilePage extends StatelessWidget {
         children: [
           Container(
             margin: EdgeInsets.only(
-              top: 36.h,
+              top: defaultMargin.h,
             ),
             width: 160.w,
             height: 160.h,
@@ -41,7 +42,7 @@ class ProfilePage extends StatelessWidget {
               ),
               shape: BoxShape.circle,
               image: DecorationImage(
-                fit: BoxFit.cover,
+                // fit: BoxFit.cover,
                 image: AssetImage(
                   "assets/image_user.png",
                 ),
@@ -57,10 +58,12 @@ class ProfilePage extends StatelessWidget {
                       width: 42,
                       height: 42,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(defaultRadius),
                         color: kPrimaryColor,
                       ),
-                      child: Icon(Icons.edit_outlined),
+                      child: Icon(
+                        Icons.edit_outlined,
+                      ),
                     ),
                   ],
                 )
@@ -110,7 +113,7 @@ class ProfilePage extends StatelessWidget {
                         content: Container(
                           width: double.infinity,
                           margin: EdgeInsets.symmetric(
-                            horizontal: 36.w,
+                            horizontal: defaultMargin.w,
                           ),
                           child: Column(
                             children: [
@@ -154,8 +157,8 @@ class ProfilePage extends StatelessWidget {
                           Container(
                             width: 380.w,
                             margin: EdgeInsets.only(
-                              right: 36.w,
-                              left: 36.w,
+                              right: defaultMargin.w,
+                              left: defaultMargin.w,
                               bottom: 48.h,
                             ),
                             child: Column(
@@ -202,8 +205,8 @@ class ProfilePage extends StatelessWidget {
       return Container(
         margin: EdgeInsets.only(
           top: 18.h,
-          right: 36.w,
-          left: 36.w,
+          right: defaultMargin.w,
+          left: defaultMargin.w,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -416,9 +419,11 @@ class ProfilePage extends StatelessWidget {
       return Container(
         child: CustomButtonBorder(
           title: "Logout",
-          margin: EdgeInsets.symmetric(
-            vertical: 18.h,
-            horizontal: 36.w,
+          margin: EdgeInsets.only(
+            top: 18.h,
+            bottom: 150.h,
+            left: defaultMargin.w,
+            right: defaultMargin.w,
           ),
           titleColor: kRedColor,
           borderColor: kRedColor,
@@ -462,8 +467,8 @@ class ProfilePage extends StatelessWidget {
                   Container(
                     width: 380.w,
                     margin: EdgeInsets.only(
-                      right: 36.w,
-                      left: 36.w,
+                      right: defaultMargin.w,
+                      left: defaultMargin.w,
                       bottom: 48.h,
                     ),
                     child: Column(
