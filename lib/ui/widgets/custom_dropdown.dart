@@ -1,4 +1,6 @@
+import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomDropdown extends StatefulWidget {
 
@@ -35,28 +37,28 @@ class Custom_DropdownState extends State<CustomDropdown> {
           children: [
             Container(
               width: double.infinity,
-              height: 48,
+              height: 48.h,
               margin: EdgeInsets.symmetric(
-                horizontal: 36
+                horizontal: 36.w,
               ),
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.grey,
                   width: 2,
-                ),borderRadius: BorderRadius.circular(8)
+                ),borderRadius: BorderRadius.circular(defaultRadius)
               ),
               child: DropdownButtonHideUnderline(
                 child: DropdownButton(
                     
                   hint: Container(
                     margin: EdgeInsets.symmetric(
-                      horizontal: 18
+                      horizontal: 18.w,
                     ),
                     child: Text(
                       widget.hintText,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w300,
-                        fontSize: 12,
+                      style: darkGreyTextStyle.copyWith(
+                        fontWeight: light,
+                        fontSize: 12.sp,
                       ),
                     ),
                   ),
@@ -67,7 +69,7 @@ class Custom_DropdownState extends State<CustomDropdown> {
                   // Down Arrow Icon
                   icon: Container(
                     margin: EdgeInsets.only(
-                      right: 18
+                      right: 18.w,
                     ),
                     child: Icon(
                       Icons.keyboard_arrow_down
@@ -80,13 +82,13 @@ class Custom_DropdownState extends State<CustomDropdown> {
                       value: items,
                       child: Container(
                         margin: EdgeInsets.only(
-                          left: 18
+                          left: 18.w,
                         ),
                         child: Text(
                           items,
-                          style: TextStyle(
-                            fontWeight: FontWeight.w300,
-                            fontSize: 12,
+                          style: darkGreyTextStyle.copyWith(
+                            fontWeight: light,
+                            fontSize: 12.sp,
                           ),
                         ),
                       ),
