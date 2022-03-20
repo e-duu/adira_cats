@@ -79,7 +79,10 @@ class MyApp extends StatelessWidget {
           // home: TestingPage(),
           // home: MessageRoomPage(),
           // home: CustomBarChart(),
-          home: CustomDropdown(items: ['item 1', 'item 2', 'item 2'], hintText: 'Pilih Data...'),
+          home: CustomDropdown(
+            items: ['item 1', 'item 2', 'item 2'],
+            hintText: 'Pilih Data...',
+          ),
           // home: ReportDetailProdexPage(),
         ),
       ),
