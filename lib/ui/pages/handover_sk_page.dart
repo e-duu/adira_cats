@@ -55,16 +55,22 @@ class HandoverSkPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CustomCardSk(
+            notifText: 'Baru',
+            clickDetail: true,
             skNumber: "1234 5678",
             contractNumber: "9999 9999 9999",
             notifNew: true,
           ),
           CustomCardSk(
+            notifText: 'Baru',
+            clickDetail: true,
             skNumber: "2234 5678",
             contractNumber: "9999 8888 8888",
             notifNew: false,
           ),
           CustomCardSk(
+            notifText: 'Baru',
+            clickDetail: true,
             skNumber: "3234 5678",
             contractNumber: "9999 8888 7777",
             notifNew: false,
