@@ -21,9 +21,9 @@ class CustomNavbar extends StatelessWidget {
       height: 114.h,
       padding: EdgeInsets.only(
         bottom: 30.h,
-        top: 36.h,
-        left: 36.w,
-        right: 36.w,
+        top: defaultMargin.h,
+        left: defaultMargin.w,
+        right: defaultMargin.w,
       ),
       decoration: BoxDecoration(
         color: kPrimaryColor,

@@ -126,15 +126,12 @@ class NotificationPage extends StatelessWidget {
       );
     }
 
-    Widget customIconNavigation() {
+    Widget bottomNavigation() {
       return Align(
         alignment: Alignment.bottomCenter,
         child: Container(
           width: double.infinity,
           height: 100.h,
-          padding: EdgeInsets.symmetric(
-            horizontal: 40.w,
-          ),
           decoration: BoxDecoration(
             color: kWhiteColor,
             borderRadius: BorderRadius.only(
@@ -153,10 +150,36 @@ class NotificationPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // NOTE: ICON CHAT
-              CustomBottomNavigationItem(
-                isSelected: true,
-                isNotifMessage: true,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  // NOTE: ICON CHAT
+                  CustomBottomNavigationItem(
+                    icon: Icons.message,
+                    isNotif: true,
+                  ),
+
+                  // NOTE: ICON LOCATION
+                  CustomBottomNavigationItem(
+                    icon: Icons.location_on,
+                  ),
+
+                  // NOTE: ICON HOME
+                  CustomBottomNavigationItem(
+                    icon: Icons.home,
+                  ),
+
+                  // NOTE: ICON NOTIFICATION
+                  CustomBottomNavigationItem(
+                    isSelected: true,
+                    icon: Icons.notifications,
+                  ),
+
+                  // NOTE: ICON PROFILE
+                  CustomBottomNavigationItem(
+                    icon: Icons.person,
+                  ),
+                ],
               ),
             ],
           ),
@@ -165,7 +188,7 @@ class NotificationPage extends StatelessWidget {
     }
 
     return Scaffold(
-      floatingActionButton: customIconNavigation(),
+      floatingActionButton: bottomNavigation(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: SingleChildScrollView(
