@@ -21,6 +21,7 @@ import 'package:adira_cats/ui/pages/register_second_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/register_third_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_page.dart';
+import 'package:adira_cats/ui/pages/report_detail_prodex_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/sk_done_page.dart';
@@ -57,10 +58,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : DONE
           // home: OtpPage(),
-          // home: HomePage(),
-          // home: ReportPage(),
           // home: ProfilePage(),
-          // home: MessagePage(),
           // home: RegisterPage(),
           // home: CreateStPage(),
           // home: HandoverSkPage(),
@@ -70,13 +68,19 @@ class MyApp extends StatelessWidget {
           // home: RegisterFourthPage(),
           // home: RegisterSecondPage(),
           // home: HandoverSkSearchPage(),
-          home: HandoverSkDetailPage(),
+          // home: HandoverSkDetailPage(),
           // home: HandoverSkSearchNilPage(),
-          // home: HandoverSkConfirmedPage(),
+          home: HandoverSkConfirmedPage(),
+          // home: TestingPage(),
+          // home: SimpleTimeSeriesChart()
+          // home: ReportDetailPage(),
+          // home: ReportPage(),
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
           // home: MessageRoomPage(),
+          // home: CustomBarChart(),
+          // home: ReportDetailProdexPage(),
         ),
       ),
     );

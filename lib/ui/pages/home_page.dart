@@ -1,7 +1,10 @@
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/pages/profile_page.dart';
+import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,14 +19,14 @@ class HomePage extends StatelessWidget {
           bottom: 20.h,
         ),
         padding: EdgeInsets.symmetric(
-          horizontal: 36.w,
-          vertical: 36.h,
+          horizontal: 24.w,
+          vertical: defaultMargin.h,
         ),
         decoration: BoxDecoration(
           color: kPrimaryColor,
           borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(18.r),
-            bottomRight: Radius.circular(18.r),
+            bottomLeft: Radius.circular(defaultRadius),
+            bottomRight: Radius.circular(defaultRadius),
           ),
         ),
         child: Column(
@@ -39,8 +42,8 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  height: 24,
-                  width: 120,
+                  width: 120.w,
+                  height: 24.h,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
@@ -49,24 +52,34 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  width: 48.w,
-                  height: 48.h,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage(
-                        "assets/image_user.png",
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ProfilePage(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: 48.w,
+                    height: 48.h,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage(
+                          "assets/image_user.png",
+                        ),
                       ),
                     ),
                   ),
                 ),
               ],
             ),
-            SizedBox(
-              height: 18.h,
-            ),
+            // SizedBox(
+            //   height: 16.h,
+            // ),
+            Spacer(),
             StyledText(
               text: 'Selamat Datang, <bold>Edward Einselton!</bold>',
               tags: {
@@ -88,7 +101,11 @@ class HomePage extends StatelessWidget {
     Widget inputSearch() {
       return Container(
         height: 50.h,
-        margin: EdgeInsets.only(top: 135.h, right: 36.w, left: 36.w),
+        margin: EdgeInsets.only(
+          top: 135.h,
+          right: 24.w,
+          left: 24.w,
+        ),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(defaultRadius),
             color: kGreyColor),
@@ -137,11 +154,16 @@ class HomePage extends StatelessWidget {
         height: 77.h,
         margin: EdgeInsets.symmetric(
           horizontal: 24.w,
-          vertical: 24.h,
+          vertical: defaultMargin.h,
         ),
-        padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
+        padding: EdgeInsets.symmetric(
+          horizontal: 12.w,
+          vertical: 12.h,
+        ),
         decoration: BoxDecoration(
-            color: kPrimaryColor, borderRadius: BorderRadius.circular(12.r)),
+          color: kPrimaryColor,
+          borderRadius: BorderRadius.circular(12.r),
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -156,7 +178,9 @@ class HomePage extends StatelessWidget {
               width: 190.w,
               height: 53.h,
               decoration: BoxDecoration(
-                  color: kWhiteColor, borderRadius: BorderRadius.circular(8.r)),
+                color: kWhiteColor,
+                borderRadius: BorderRadius.circular(defaultRadius),
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -170,6 +194,7 @@ class HomePage extends StatelessWidget {
                       fontSize: 11.sp,
                       fontWeight: semibold,
                     ),
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ],
               ),
@@ -195,12 +220,14 @@ class HomePage extends StatelessWidget {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
+          horizontal: 24.w,
         ),
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(bottom: 14.h),
+              margin: EdgeInsets.only(
+                bottom: 14.h,
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -270,7 +297,9 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(bottom: 14.h),
+              margin: EdgeInsets.only(
+                bottom: 14.h,
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -342,7 +371,9 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(bottom: 14.h),
+              margin: EdgeInsets.only(
+                bottom: 14.h,
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -419,9 +450,11 @@ class HomePage extends StatelessWidget {
 
     Widget announcement() {
       return Container(
-        margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
-          vertical: 24.h,
+        margin: EdgeInsets.only(
+          left: 24.w,
+          right: 24.w,
+          top: 24.h,
+          bottom: 150.h,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -446,13 +479,14 @@ class HomePage extends StatelessWidget {
                     width: double.infinity,
                     height: 120.h,
                     decoration: BoxDecoration(
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage(
-                            "assets/image_announcement.png",
-                          ),
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(
+                          "assets/image_announcement.png",
                         ),
-                        borderRadius: BorderRadius.circular(8.r)),
+                      ),
+                      borderRadius: BorderRadius.circular(defaultRadius),
+                    ),
                   ),
                   SizedBox(
                     height: 12.h,
@@ -472,7 +506,73 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget bottomNavigation() {
+      return Align(
+        alignment: Alignment.bottomCenter,
+        child: Container(
+          width: double.infinity,
+          height: 100.h,
+          decoration: BoxDecoration(
+            color: kWhiteColor,
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(24.r),
+              topLeft: Radius.circular(24.r),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: kLigthGrayColor.withOpacity(1),
+                spreadRadius: 3,
+                blurRadius: 18.r,
+                offset: Offset(0, 0),
+              ),
+            ],
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  // NOTE: ICON CHAT
+                  CustomBottomNavigationItem(
+                    icon: Icons.message,
+                    isNotif: true,
+                    number: 99,
+                  ),
+
+                  // NOTE: ICON LOCATION
+                  CustomBottomNavigationItem(
+                    icon: Icons.location_on,
+                  ),
+
+                  // NOTE: ICON HOME
+                  CustomBottomNavigationItem(
+                    isSelected: true,
+                    icon: Icons.home,
+                  ),
+
+                  // NOTE: ICON NOTIFICATION
+                  CustomBottomNavigationItem(
+                    icon: Icons.notifications,
+                    isNotif: true,
+                    number: 15,
+                  ),
+
+                  // NOTE: ICON PROFILE
+                  CustomBottomNavigationItem(
+                    icon: Icons.person,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
+      floatingActionButton: bottomNavigation(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(children: [
