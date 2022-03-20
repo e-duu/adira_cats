@@ -48,9 +48,9 @@ class MessagePage extends StatelessWidget {
       return Container(
         width: double.infinity,
         padding: EdgeInsets.only(
-          right: 36.w,
-          left: 36.w,
-          bottom: 116.h,
+          right: 24.w,
+          left: 24.w,
+          bottom: 150.h,
         ),
         child: Column(
           children: [
