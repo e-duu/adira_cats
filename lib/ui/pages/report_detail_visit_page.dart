@@ -1,5 +1,7 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widgets/custom_input.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
+import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +14,7 @@ class ReportDetailVisitPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Prodex",
+          text: "Input Kunjungan",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(
@@ -37,39 +39,7 @@ class ReportDetailVisitPage extends StatelessWidget {
       );
     }
 
-    Widget inputSection() {
-      Widget selectArea() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomInput(
-              hintText: 'Pilih Area ...',
-              hintColor: kDarkGreyColor,
-              filled: true,
-              margin: EdgeInsets.only(
-                bottom: 12.h,
-              ),
-            ),
-          ],
-        );
-      }
-
-      Widget selectBranch() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomInput(
-              hintText: 'Pilih Cabang ...',
-              hintColor: kDarkGreyColor,
-              filled: true,
-              margin: EdgeInsets.only(
-                bottom: 12.h,
-              ),
-            ),
-          ],
-        );
-      }
-
+    Widget selectArea() {
       return Container(
         margin: EdgeInsets.only(
           top: 24.h,
@@ -78,8 +48,19 @@ class ReportDetailVisitPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            selectArea(),
-            selectBranch(),
+            CustomDropdown(items: [
+              'pilih 1',
+              'pilih 2',
+              'pilih 3',
+            ], hintText: 'Pilih Area ...'),
+            SizedBox(
+              height: 12.h,
+            ),
+            CustomDropdown(items: [
+              'pilih 1',
+              'pilih 2',
+              'pilih 3',
+            ], hintText: 'Pilih Cabang ...'),
           ],
         ),
       );
@@ -89,6 +70,7 @@ class ReportDetailVisitPage extends StatelessWidget {
       return Container(
         margin: EdgeInsets.symmetric(
           horizontal: 36.w,
+          vertical: 12.h,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -107,14 +89,80 @@ class ReportDetailVisitPage extends StatelessWidget {
       );
     }
 
+    Widget selectPeriod() {
+      return Container(
+        margin: EdgeInsets.symmetric(
+          horizontal: 36.w,
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 138.w,
+              child: CustomDropdownBorder(
+                items: [
+                  'pilih 1',
+                  'pilih 2',
+                  'pilih 3',
+                ],
+                hintText: 'Periode Awal',
+                // width: 132.w,
+              ),
+            ),
+            SizedBox(
+              width: 12.h,
+            ),
+            Container(
+              width: 138.w,
+              child: CustomDropdownBorder(
+                items: [
+                  'pilih 1',
+                  'pilih 2',
+                  'pilih 3',
+                ],
+                hintText: 'Periode Awal',
+                // width: 132.w,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget button() {
+      return Container(
+        margin: EdgeInsets.symmetric(
+          horizontal: 36.w,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            CustomButtonBorder(
+              title: 'Kembali',
+              titleColor: kDarkGreyColor,
+              onPressed: () {},
+              borderColor: kDarkGreyColor,
+              borderWidth: 2.w,
+              fontWeight: light,
+            ),
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
+      resizeToAvoidBottomInset: false,
+      floatingActionButton: Visibility(
+        child: button(),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: SafeArea(
         child: Container(
           child: ListView(
             children: [
               navbar(),
-              inputSection(),
+              selectArea(),
               period(),
+              selectPeriod(),
             ],
           ),
         ),
