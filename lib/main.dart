@@ -91,7 +91,7 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailProdexNihilPage(),
           // home: ReportDetailProdexPage(),
           // home: ReportDetailProdexResultDetailPage(),
-          home: ReportDetailProdexResultPage(),
+          // home: ReportDetailProdexResultPage(),
           // home: ReportDetailVisitPage(),
           // home: ReportDetailPullFeePage(),
         ),
