@@ -1,5 +1,6 @@
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:flutter/material.dart';
@@ -150,10 +151,13 @@ class RegisterPage extends StatelessWidget {
             SizedBox(
               height: 5.h,
             ),
-            CustomInput(
+            CustomDropdown(
+              items: [
+                '29 Februari 1996',
+                'Example',
+                'Dropdown',
+              ],
               hintText: 'Tanggal Lahir',
-              hintColor: kDarkGreyColor,
-              filled: true,
             ),
             SizedBox(
               height: 12.h,
@@ -398,8 +402,6 @@ class RegisterPage extends StatelessWidget {
         ),
       );
     }
-
-    
 
     return Scaffold(
       backgroundColor: kWhiteColor,

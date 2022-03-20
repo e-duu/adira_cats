@@ -1,9 +1,11 @@
-import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:adira_cats/shared/theme.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:styled_text/styled_text.dart';
 
-class SkDonePage extends StatelessWidget {
-  const SkDonePage({Key? key}) : super(key: key);
+class ErrorPage extends StatelessWidget {
+  const ErrorPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,13 +20,12 @@ class SkDonePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: 140,
-                    height: 140,
-                    margin: EdgeInsets.only(bottom: 36),
+                    width: 140.w,
+                    height: 140.h,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
-                          'assets/icon_sk_done.png',
+                          'assets/icon_error.png',
                         ),
                       ),
                     ),
@@ -33,20 +34,30 @@ class SkDonePage extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          'Berhasil!',
+                          'Terjadi Kesalahan!',
                           style: blackTextStyle.copyWith(
                             fontWeight: bold,
-                            fontSize: 18,
+                            fontSize: 18.sp,
                           ),
                         ),
                         SizedBox(
                           height: 24,
                         ),
-                        Text(
-                          'SK baru berhasil dibuat!',
+                        StyledText(
+                          text:
+                              'Maaf, laman tidak bisa dimuat.\nMungkin laman sedang <bold>dalam perbaikan</bold>,\natau mungkin <bold>koneksi Anda</bold> sedang buruk.',
+                          tags: {
+                            'bold': StyledTextTag(
+                              style: TextStyle(
+                                fontWeight: bold,
+                              ),
+                            ),
+                          },
                           style: blackTextStyle.copyWith(
                             fontWeight: light,
+                            fontSize: 13,
                           ),
+                          textAlign: TextAlign.center,
                         ),
                       ],
                     ),
@@ -60,13 +71,14 @@ class SkDonePage extends StatelessWidget {
               bottom: 36,
             ),
             child: CustomButton(
-              title: 'Ok',
+              title: 'Kembali',
               onPressed: () {},
               margin: EdgeInsets.symmetric(
                 horizontal: 36,
               ),
-              color: kPrimaryColor,
+              color: kWhiteColor,
               textStyle: blackTextStyle,
+              border: true,
             ),
           ),
         ],

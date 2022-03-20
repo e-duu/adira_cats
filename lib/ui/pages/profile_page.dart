@@ -1,5 +1,4 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
@@ -55,8 +54,8 @@ class ProfilePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Container(
-                      width: 42.w,
-                      height: 42.h,
+                      width: 42,
+                      height: 42,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(defaultRadius),
                         color: kPrimaryColor,
@@ -507,73 +506,7 @@ class ProfilePage extends StatelessWidget {
       );
     }
 
-    Widget bottomNavigation() {
-      return Align(
-        alignment: Alignment.bottomCenter,
-        child: Container(
-          width: double.infinity,
-          height: 100.h,
-          decoration: BoxDecoration(
-            color: kWhiteColor,
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(24.r),
-              topLeft: Radius.circular(24.r),
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: kLigthGrayColor.withOpacity(1),
-                spreadRadius: 3,
-                blurRadius: 18.r,
-                offset: Offset(0, 0),
-              ),
-            ],
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  // NOTE: ICON CHAT
-                  CustomBottomNavigationItem(
-                    icon: Icons.message,
-                    isNotif: true,
-                    number: 99,
-                  ),
-
-                  // NOTE: ICON LOCATION
-                  CustomBottomNavigationItem(
-                    icon: Icons.location_on,
-                  ),
-
-                  // NOTE: ICON HOME
-                  CustomBottomNavigationItem(
-                    icon: Icons.home,
-                  ),
-
-                  // NOTE: ICON NOTIFICATION
-                  CustomBottomNavigationItem(
-                    icon: Icons.notifications,
-                    isNotif: true,
-                    number: 15,
-                  ),
-
-                  // NOTE: ICON PROFILE
-                  CustomBottomNavigationItem(
-                    isSelected: true,
-                    icon: Icons.person,
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      );
-    }
-
     return Scaffold(
-      floatingActionButton: bottomNavigation(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

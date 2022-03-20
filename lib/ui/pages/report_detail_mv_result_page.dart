@@ -1,19 +1,23 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_detail_report.dart';
+import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
+import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
+import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
+import 'package:styled_text/styled_text.dart';
 
-class ReportDetailProdexResultDetailPage extends StatelessWidget {
-  const ReportDetailProdexResultDetailPage({ Key? key }) : super(key: key);
+class ReportDetailMvResultPage extends StatelessWidget {
+  const ReportDetailMvResultPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Detail Prodex",
+          text: "Monitoring Workflow",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(
@@ -29,40 +33,63 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage(
                     "assets/icon_arrow_back.png",
-                  )
-                )
-              )
-            )
-          )
+                  ),
+                ),
+              ),
+            ),
+          ),
         ),
       );
     }
 
-    Widget box(){
-
-      Widget icon(){
-        return Center(
-          child: Container(
-            width: 57.w,
-            height: 51.h,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  'assets/icon_prodex.png',
-                )
-              )
+    Widget found(){
+      return Container(
+        margin: EdgeInsets.symmetric(
+          vertical: defaultMargin,
+        ),
+        child: StyledText(
+          text: '<bold>Workflow Nomor 123</bold> telah ditemukan.',
+          tags: {
+            'bold': StyledTextTag(
+              style: TextStyle(
+                fontWeight: bold,
+                fontSize: 13.sp
+              ),
             ),
+          },
+          style: darkGreyTextStyle.copyWith(
+            fontWeight: light,
+            fontSize: 13.sp,
           ),
-        );
-      }
+          textAlign: TextAlign.center,
+        ),
+      );
+    }
 
-      Widget externalName(){
-        return Container(
+
+    Widget box(){
+      return Container(
+        margin: EdgeInsets.only(
+          right: defaultMargin,
+          left: defaultMargin,
+        ),
+        padding: EdgeInsets.symmetric(
+          vertical: 36.h,
+          horizontal: 36.w,
+        ),
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: kLigthGrayColor,
+            width: 2.w,
+          ),
+          borderRadius: BorderRadius.circular(8.r),
+        ),
+        child: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Nama Eksternal : Prodex1234',
+                'Nomor Workflow : 123',
                 style: blackTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: bold,
@@ -78,7 +105,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                'N-1 : 555',
+                'Tanggal Pengajuan : 1 Februari 2022, pukul 13.00',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,
@@ -86,7 +113,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                '< 61 : 555',
+                'Nama Pengaju : Peter Jackson Quill',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,
@@ -94,7 +121,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                '61 - 90 : 555',
+                'Status Dokumen : Disetujui',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,
@@ -102,7 +129,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                '91 - 120 : 555',
+                'Biaya Diajukan : Rp. 10.000.000',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,
@@ -110,7 +137,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                '> 121 : 555',
+                'Biaya Disetujui : Rp. 10.000.000',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,
@@ -118,63 +145,7 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 8.h,),
               Text(
-                'Total : its over 3000',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'SKP proses : lorem',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Tarik : mamang',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Bayar : ngutang dulu',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Gagal : restart from last checkpoint',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Total Hasil : legendary mythic',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Total Bayar ( Tarik + Bayar ) : segunung',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
-                ),
-              ),
-              SizedBox(height: 8.h,),
-              Text(
-                'Total Bayar dalam % : 101%',
+                'Kronologi : CCH, ARH',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 13.sp,
                   fontWeight: light,
@@ -182,36 +153,9 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
               ),
             ],
           ),
-        );
-      }
-      
-      return Container(
-        margin: EdgeInsets.symmetric(
-          vertical: 24.h,
-          horizontal: 24.w,
         ),
-        padding: EdgeInsets.symmetric(
-          vertical: 36.h,
-          horizontal: 36.w,
-        ),
-        decoration: BoxDecoration(
-          border: Border.all(
-            color: kLigthGrayColor,
-            width: 2.w,
-          ),
-          borderRadius: BorderRadius.circular(8.r),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            icon(),
-            SizedBox(height: 34.h,),
-            externalName(),
-          ],
-        )
       );
     }
-
     
     Widget button() {
       return Container(
@@ -244,6 +188,12 @@ class ReportDetailProdexResultDetailPage extends StatelessWidget {
             child: Column(
               children: [
                 navbar(),
+                SizedBox(height: 24.h,),
+                CustomInputSearch(
+                  onPressed: (){}, 
+                  hintText: '123'
+                ),
+                found(),
                 box(),
                 button(),
               ],

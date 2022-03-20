@@ -7,11 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
 class HandoverSkSearchPage extends StatelessWidget {
-  const HandoverSkSearchPage({ Key? key }) : super(key: key);
+  const HandoverSkSearchPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     Widget navbar() {
       return Container(
         child: CustomNavbar(
@@ -25,17 +24,17 @@ class HandoverSkSearchPage extends StatelessWidget {
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
-              width: 27.w,
-              height: 26.h,
+              width: 21.w,
+              height: 21.h,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
                     "assets/icon_arrow_back.png",
-                  )
-                )
-              )
-            )
-          )
+                  ),
+                ),
+              ),
+            ),
+          ),
         ),
       );
     }
@@ -47,7 +46,7 @@ class HandoverSkSearchPage extends StatelessWidget {
           vertical: 24.h,
         ),
         child: CustomInputSearch(
-          onPressed: () {}, 
+          onPressed: () {},
           hintText: "Cari Nomor Kontak ...",
           value: '7777',
         ),
@@ -57,7 +56,7 @@ class HandoverSkSearchPage extends StatelessWidget {
     Widget notifSearch() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 36.h
+          bottom: 36.h,
         ),
         child: StyledText(
           text: "<bold>1</bold> Nomor Kontrak telah ditemukan.",
@@ -77,19 +76,19 @@ class HandoverSkSearchPage extends StatelessWidget {
       );
     }
 
-    Widget cardNumberSk(){
+    Widget cardNumberSk() {
       return Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CustomCardSk(
             skNumber: "3234 5678",
-            contractNumber: "9999 8888 7777", 
-            notifNew: false
+            contractNumber: "9999 8888 7777",
+            notifNew: false,
           ),
-        ]
+        ],
       );
     }
-    
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -101,10 +100,10 @@ class HandoverSkSearchPage extends StatelessWidget {
                 notifSearch(),
                 cardNumberSk(),
               ],
-            )
+            ),
           ),
         ),
-      )
+      ),
     );
   }
 }

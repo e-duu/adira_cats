@@ -36,7 +36,7 @@ class LoginPage extends StatelessWidget {
                 top: 291.h,
               ),
               padding: EdgeInsets.symmetric(
-                horizontal: 36.w,
+                horizontal: defaultMargin.w,
               ),
               decoration: BoxDecoration(
                 color: kWhiteColor,
@@ -87,30 +87,23 @@ class LoginPage extends StatelessWidget {
                       children: [
                         CustomButton(
                           title: 'Login',
-                          onPressed: () {},
-                          width: 172.w,
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/main');
+                          },
+                          width: 140.w,
                           color: kPrimaryColor,
                           textStyle: blackTextStyle,
                         ),
-                        SizedBox(
-                          width: 12.w,
-                        ),
+                        Spacer(),
                         CustomButtonBorder(
                           title: 'Reset',
                           titleColor: kBlackColor,
                           onPressed: () {},
                           borderColor: kDarkGreyColor,
                           borderWidth: 2.w,
-                          width: 172.w,
+                          width: 140.w,
                           fontWeight: light,
                         ),
-                        Text(
-                          'Klik di Sini',
-                          style: blackTextStyle.copyWith(
-                            fontSize: 13.sp,
-                            fontWeight: bold,
-                          ),
-                        )
                       ],
                     ),
                   ),

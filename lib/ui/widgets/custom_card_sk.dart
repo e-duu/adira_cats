@@ -72,39 +72,42 @@ class CustomCardSk extends StatelessWidget {
                     fontSize: 12.sp,
                   ),
                 ),
-                if (clickDetail == true) SizedBox(
-                  height: 6.h,
-                ),
-                if (clickDetail == true) Text(
-                  "Klik untuk lihat detail",
-                  style: darkGreyTextStyle.copyWith(
-                    fontWeight: light,
-                    fontSize: 11.sp,
+                if (clickDetail == true)
+                  SizedBox(
+                    height: 6.h,
                   ),
-                ),
+                if (clickDetail == true)
+                  Text(
+                    "Klik untuk lihat detail",
+                    style: darkGreyTextStyle.copyWith(
+                      fontWeight: light,
+                      fontSize: 11.sp,
+                    ),
+                  ),
               ],
             ),
           ),
-          if (notifNew == true) Container(
-            width: 59.w,
-            height: 29.h,
-            child: Container(
+          if (notifNew == true)
+            Container(
               width: 59.w,
               height: 29.h,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(defaultRadius),
-                  color: kPrimaryColor),
-              child: Center(
-                child: Text(
-                  notifText,
-                  style: blackTextStyle.copyWith(
-                    fontSize: 11.sp,
-                    fontWeight: semibold,
+              child: Container(
+                width: 59.w,
+                height: 29.h,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(defaultRadius),
+                    color: kPrimaryColor),
+                child: Center(
+                  child: Text(
+                    notifText,
+                    style: blackTextStyle.copyWith(
+                      fontSize: 11.sp,
+                      fontWeight: semibold,
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
         ],
       ),
     );

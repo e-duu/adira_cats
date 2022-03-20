@@ -1,5 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
+import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/widgets/custom_chat_tile.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -15,15 +15,28 @@ class MessagePage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Pesan",
-          preffixWidget: IconButton(onPressed: () => {}, icon: libraryIcon),
-          suffixWidget: Container(
-            width: 48.w,
-            height: 48.h,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                image: AssetImage(
-                  "assets/image_user.png",
+          preffixWidget: IconButton(
+            onPressed: () => {},
+            icon: libraryIcon,
+          ),
+          suffixWidget: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProfilePage(),
+                ),
+              );
+            },
+            child: Container(
+              width: 48.w,
+              height: 48.h,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/image_user.png",
+                  ),
                 ),
               ),
             ),
@@ -53,7 +66,7 @@ class MessagePage extends StatelessWidget {
         child: Column(
           children: [
             CustomChatTile(
-              number: 1,
+              number: 99,
               unread: true,
               title: 'Anggora',
               subtitle: 'Anggora: Baik, akan segera kami',
@@ -107,77 +120,7 @@ class MessagePage extends StatelessWidget {
       );
     }
 
-    Widget bottomNavigation() {
-      return Align(
-        alignment: Alignment.bottomCenter,
-        child: Container(
-          width: double.infinity,
-          height: 100.h,
-          padding: EdgeInsets.symmetric(
-            horizontal: 40.w,
-          ),
-          decoration: BoxDecoration(
-            color: kWhiteColor,
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(24.r),
-              topLeft: Radius.circular(24.r),
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: kLigthGrayColor.withOpacity(1),
-                spreadRadius: 3,
-                blurRadius: 18.r,
-                offset: Offset(0, 0),
-              ),
-            ],
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  // NOTE: ICON CHAT
-                  CustomBottomNavigationItem(
-                    isSelected: true,
-                    icon: Icons.message,
-                  ),
-
-                  // NOTE: ICON LOCATION
-                  CustomBottomNavigationItem(
-                    isSelected: false,
-                    icon: Icons.location_on,
-                  ),
-
-                  // NOTE: ICON HOME
-                  CustomBottomNavigationItem(
-                    isSelected: false,
-                    icon: Icons.home,
-                  ),
-
-                  // NOTE: ICON NOTIFICATION
-                  CustomBottomNavigationItem(
-                    isSelected: false,
-                    icon: Icons.notifications,
-                    isNotif: true,
-                  ),
-
-                  // NOTE: ICON PROFILE
-                  CustomBottomNavigationItem(
-                    isSelected: false,
-                    icon: Icons.person,
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      );
-    }
-
     return Scaffold(
-      floatingActionButton: bottomNavigation(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       backgroundColor: kWhiteColor,
       body: SafeArea(
         child: SingleChildScrollView(
