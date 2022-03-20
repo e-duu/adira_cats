@@ -22,21 +22,16 @@ class CreateStPage extends StatelessWidget {
           icon: libraryIcon,
         ),
         suffixWidget: GestureDetector(
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomePage(),
-                ));
-          },
+          onTap: () {},
           child: Container(
-            child: Column(
-              children: [
-                IconButton(
-                  onPressed: () => {},
-                  icon: const Icon(Icons.subdirectory_arrow_left),
+            width: 21.w,
+            height: 21.h,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  "assets/icon_arrow_back.png",
                 ),
-              ],
+              ),
             ),
           ),
         ),
