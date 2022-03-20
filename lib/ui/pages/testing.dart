@@ -117,7 +117,7 @@ class TestingPage extends StatelessWidget {
               items: ['item 1', 'item 2', 'item 3'],
               hintText: 'Pilih Data...',
               margin: EdgeInsets.all(100),
-              width: 200.w,
+              // width: 200.w,
             ),
           ],
         ),

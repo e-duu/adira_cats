@@ -65,9 +65,26 @@ class CreateStContractNumberPage extends StatelessWidget {
     }
 
     Widget card() {
-      return CustomCardSk(
-        skNumber: '-',
-        contractNumber: '9999 9999 9999',
+      return Container(
+        margin: EdgeInsets.only(bottom: 36.h),
+        child: Column(
+          children: [
+            CustomCardSk(
+              skNumber: '-',
+              contractNumber: '9999 9999 9999',
+              notifNew: true,
+              notifText: 'Dipilih',
+            ),
+            CustomCardSk(
+              skNumber: '-',
+              contractNumber: '9999 9999 8888',
+            ),
+            CustomCardSk(
+              skNumber: '-',
+              contractNumber: '9999 9999 7777',
+            ),
+          ],
+        ),
       );
     }
 
@@ -105,20 +122,21 @@ class CreateStContractNumberPage extends StatelessWidget {
     }
 
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      floatingActionButton: Visibility(
-        child: button(),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       backgroundColor: kWhiteColor,
-      body: SafeArea(
-        child: Column(
-          children: [
-            navbar(),
-            notifSearch(),
-            card(),
-          ],
-        ),
+      body: ListView(
+        padding: EdgeInsets.symmetric(),
+        children: [
+          SafeArea(
+            child: Column(
+              children: [
+                navbar(),
+                notifSearch(),
+                card(),
+                button(),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
