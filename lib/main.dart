@@ -21,6 +21,7 @@ import 'package:adira_cats/ui/pages/register_second_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/register_third_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_page.dart';
+import 'package:adira_cats/ui/pages/report_detail_prodex_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/sk_done_page.dart';
@@ -57,7 +58,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : DONE
           // home: OtpPage(),
-          // home: ProfilePage(),
+          home: ProfilePage(),
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
@@ -70,7 +71,7 @@ class MyApp extends StatelessWidget {
           // home: TestingPage(),
           // home: SimpleTimeSeriesChart()
           // home: ReportDetailPage(),
-          home: ReportPage(),
+          // home: ReportPage(),
 
           /// NOTE: ON PROGRESS
           // home: HomePage(),
@@ -80,6 +81,7 @@ class MyApp extends StatelessWidget {
           // home: MessagePage(),
           // home: MessageRoomPage(),
           // home: CustomBarChart(),
+          home: ReportDetailProdexPage(),
         ),
       ),
     );

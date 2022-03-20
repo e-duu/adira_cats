@@ -1,23 +1,24 @@
+import 'package:adira_cats/ui/widgets/custom_notification_item.dart';
 import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomChatTile extends StatelessWidget {
-  final String title; 
-  final String subtitle; 
-  final String imageUrl; 
-  final String time; 
+  final String title;
+  final String subtitle;
+  final String imageUrl;
+  final String time;
   final bool unread;
-  final int count;
+  final int number;
 
   const CustomChatTile({
     Key? key,
     required this.title,
     required this.subtitle,
-    required this.imageUrl, 
-    required this.time, 
-    this.count = 0, 
-    this.unread = true, 
+    required this.imageUrl,
+    required this.time,
+    this.number = 0,
+    this.unread = true,
   }) : super(key: key);
 
   @override
@@ -47,25 +48,7 @@ class CustomChatTile extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    if (unread == true) Container(
-                      width: 21,
-                      height: 21,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: kPrimaryColor,
-                      ),
-                      child: Column(mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            count.toString(),
-                            style: blackTextStyle.copyWith(
-                              fontSize: 11.sp,
-                              fontWeight: semibold,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                    if (unread == true) CustomNotificationItem(count: number),
                   ],
                 )
               ],
@@ -85,16 +68,16 @@ class CustomChatTile extends StatelessWidget {
                 Text(
                   subtitle,
                   style: unread
-                    ? darkGreyTextStyle.copyWith(
-                        fontWeight: semibold,
-                        fontSize: 11.sp,
-                      )
-                    : darkGreyTextStyle.copyWith(
-                        fontWeight: light,
-                        fontSize: 11.sp,
-                      ),
+                      ? darkGreyTextStyle.copyWith(
+                          fontWeight: semibold,
+                          fontSize: 11.sp,
+                        )
+                      : darkGreyTextStyle.copyWith(
+                          fontWeight: light,
+                          fontSize: 11.sp,
+                        ),
                   overflow: TextOverflow.ellipsis,
-                ), 
+                ),
               ],
             ),
           ),
@@ -102,8 +85,8 @@ class CustomChatTile extends StatelessWidget {
             width: 22.w,
           ),
           Text(
-              time,
-              style: unread
+            time,
+            style: unread
                 ? blackTextStyle.copyWith(
                     fontWeight: semibold,
                     fontSize: 11.sp,
