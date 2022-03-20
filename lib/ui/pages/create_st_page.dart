@@ -15,25 +15,21 @@ class CreateStPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
-      return Container(
-        child: CustomNavbar(
-          text: "Buat ST",
-          preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
-            ),
-          ),
-          suffixWidget: GestureDetector(
-            onTap: () {},
-            child: Container(
-              width: 27.w,
-              height: 26.h,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                    "assets/icon_arrow_back.png",
-                  ),
+      return CustomNavbar(
+        text: 'Buat Surat Tugas',
+        preffixWidget: IconButton(
+          onPressed: () => {},
+          icon: libraryIcon,
+        ),
+        suffixWidget: GestureDetector(
+          onTap: () {},
+          child: Container(
+            width: 21.w,
+            height: 21.h,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  "assets/icon_arrow_back.png",
                 ),
               ),
             ),
@@ -361,7 +357,7 @@ class CreateStPage extends StatelessWidget {
               height: 12.h,
             ),
             CustomButton(
-              title: 'Lanjutkan',
+              title: 'Buat ST',
               onPressed: () {},
               color: kPrimaryColor,
               textStyle: blackTextStyle,

@@ -1,5 +1,7 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
+import 'package:adira_cats/ui/pages/create_st_cotract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_detail_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_confirmed_page.dart';
@@ -8,6 +10,7 @@ import 'package:adira_cats/ui/pages/handover_sk_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
@@ -65,6 +68,11 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
+          // routes: {
+          //   '/': (context) => SplashPage(),
+          //   '/login': (context) => LoginPage(),
+          //   '/main': (context) => MainPage(),
+          // },
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
@@ -87,15 +95,22 @@ class MyApp extends StatelessWidget {
           // home: HandoverSkDetailPage(),
           // home: HandoverSkSearchNilPage(),
           // home: HandoverSkConfirmedPage(),
+          // home: CreateStPage(),
+          // home: CreateStContractNumberPage(),
+          // home: CreateStContractNullPage(),
+          // home: ReportDetailPage(),
           // home: ReportDetailProdexPage(),
           // home: ReportPage(),
           // home: ReportDetailPage(),
+          // home: ReportDetailProdexPage(),
+          // home: ReportDetailProdexResultPage(),
+          // home: ReportDetailVisitPage(),
+          // home: ReportDetailPullFeePage(),
+          // home: MessageRoomPage(),
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
-          // home: MessageRoomPage(),
           // home: ReportDetailProdexNihilPage(),
-          // home: ReportDetailProdexPage(),
           // home: ReportDetailProdexResultDetailPage(),
           // home: ReportDetailProdexResultPage(),
           // home: ReportDetailVisitPage(),
@@ -108,7 +123,7 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailPullFeeResultPage(),
           // home: ReportDetailStPage(),
           // home: ReportDetailStNihilPage(),
-          home: ReportDetailStResultDetailPage(),
+          // home: ReportDetailStResultDetailPage(),
           // home: ReportDetailStResultPage(),
         ),
       ),

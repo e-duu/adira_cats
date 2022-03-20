@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
 class CustomBarChart extends StatelessWidget {
-
   final int mon;
   final int tue;
   final int wed;
@@ -11,7 +10,7 @@ class CustomBarChart extends StatelessWidget {
   final int fri;
   final int sat;
   final int sun;
-  
+
   const CustomBarChart({
     Key? key,
     required this.mon,
@@ -25,7 +24,6 @@ class CustomBarChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     var data = [
       Sales("Sen", mon),
       Sales("Sel", tue),
@@ -38,11 +36,12 @@ class CustomBarChart extends StatelessWidget {
 
     var series = [
       charts.Series(
-        domainFn: (Sales sales,_)=>sales.day,
-        measureFn: (Sales sales,_)=>sales.count,
+        domainFn: (Sales sales, _) => sales.day,
+        measureFn: (Sales sales, _) => sales.count,
         id: 'Sales',
         data: data,
-        labelAccessorFn: (Sales sales,_)=> '${sales.day} : ${sales.count.toString()}',
+        labelAccessorFn: (Sales sales, _) =>
+            '${sales.day} : ${sales.count.toString()}',
       ),
     ];
 
@@ -52,7 +51,7 @@ class CustomBarChart extends StatelessWidget {
       animate: true,
       // domainAxis: charts.OrdinalAxisSpec(renderSpec: charts.NoneRenderSpec()), // Untuk Menghilangkan info hari
     );
-    
+
     return Container(
       height: 178.h,
       child: chart,
@@ -60,7 +59,7 @@ class CustomBarChart extends StatelessWidget {
   }
 }
 
-class Sales{
+class Sales {
   final String day;
   final int count;
 

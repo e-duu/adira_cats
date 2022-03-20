@@ -6,14 +6,14 @@ import '../../shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomBottomNavigationItem extends StatelessWidget {
-  final bool isSelected;
+  final int index;
   final IconData icon;
   final bool isNotif;
   final int number;
 
   const CustomBottomNavigationItem({
     Key? key,
-    this.isSelected = false,
+    required this.index,
     required this.icon,
     this.isNotif = false,
     this.number = 0,
@@ -21,33 +21,40 @@ class CustomBottomNavigationItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        // NOTE: ICON NOTIFICATION
-        Container(
-          padding: EdgeInsets.symmetric(
-            horizontal: 14.w,
-            vertical: 14.h,
-          ),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12.r),
-            color: isSelected ? kBlackColor : kTransparent,
-          ),
-          child: Stack(
-            children: [
-              Icon(
-                icon,
-                color: kLigthGrayColor,
-                size: 28.sp,
-              ),
-              if (isNotif == true)
-                CustomNotificationItem(
-                  count: number,
+    return GestureDetector(
+      onTap: () {
+        context.read<PageCubit>().setPage(index);
+      },
+      child: Row(
+        children: [
+          // NOTE: ICON NOTIFICATION
+          Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: 14.w,
+              vertical: 14.h,
+            ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12.r),
+              color: context.read<PageCubit>().state == index
+                  ? kBlackColor
+                  : kTransparent,
+            ),
+            child: Stack(
+              children: [
+                Icon(
+                  icon,
+                  color: kLigthGrayColor,
+                  size: 28.sp,
                 ),
-            ],
+                if (isNotif == true)
+                  CustomNotificationItem(
+                    count: number,
+                  ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

@@ -8,6 +8,7 @@ import 'package:adira_cats/ui/pages/unit_search.dart';
 import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -31,44 +32,71 @@ class MainPage extends StatelessWidget {
       }
     }
 
-    Widget customBottomNavigation() {
+    Widget bottomNavigation() {
       return Align(
         alignment: Alignment.bottomCenter,
         child: Container(
           width: double.infinity,
-          height: 60,
-          margin: EdgeInsets.only(
-            left: 48,
-            right: 48,
-            bottom: 30,
+          height: 100.h,
+          padding: EdgeInsets.symmetric(
+            horizontal: 24,
           ),
           decoration: BoxDecoration(
             color: kWhiteColor,
-            borderRadius: BorderRadius.circular(18),
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(24.r),
+              topLeft: Radius.circular(24.r),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: kLigthGrayColor.withOpacity(1),
+                spreadRadius: 3,
+                blurRadius: 18.r,
+                offset: Offset(0, 0),
+              ),
+            ],
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // CustomBottomNavigationItem(
-              //   index: 0,
-              //   imageUrl: 'assets/icon_chat_button.png',
-              // ),
-              // CustomBottomNavigationItem(
-              //   index: 1,
-              //   imageUrl: 'assets/icon_location_button.png',
-              // ),
-              // CustomBottomNavigationItem(
-              //   index: 2,
-              //   imageUrl: 'assets/icon_home_button.png',
-              // ),
-              // CustomBottomNavigationItem(
-              //   index: 3,
-              //   imageUrl: 'assets/icon_notification.png',
-              // ),
-              // CustomBottomNavigationItem(
-              //   index: 4,
-              //   imageUrl: 'assets/icon_user_button.png',
-              // ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  // NOTE: ICON CHAT
+                  CustomBottomNavigationItem(
+                    index: 0,
+                    icon: Icons.message,
+                    isNotif: true,
+                    number: 15,
+                  ),
+
+                  // NOTE: ICON LOCATION
+                  CustomBottomNavigationItem(
+                    index: 1,
+                    icon: Icons.location_on,
+                  ),
+
+                  // NOTE: ICON HOME
+                  CustomBottomNavigationItem(
+                    index: 2,
+                    icon: Icons.home,
+                  ),
+
+                  // NOTE: ICON NOTIFICATION
+                  CustomBottomNavigationItem(
+                    index: 3,
+                    icon: Icons.notifications,
+                    isNotif: true,
+                    number: 99,
+                  ),
+
+                  // NOTE: ICON PROFILE
+                  CustomBottomNavigationItem(
+                    index: 4,
+                    icon: Icons.person,
+                  ),
+                ],
+              ),
             ],
           ),
         ),
@@ -78,11 +106,15 @@ class MainPage extends StatelessWidget {
     return BlocBuilder<PageCubit, int>(
       builder: (context, currentIndex) {
         return Scaffold(
+          resizeToAvoidBottomInset: false,
+          floatingActionButton: bottomNavigation(),
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerDocked,
           backgroundColor: kWhiteColor,
           body: Stack(
             children: [
               buildContent(currentIndex),
-              customBottomNavigation(),
+              bottomNavigation(),
             ],
           ),
         );
