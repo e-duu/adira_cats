@@ -1,12 +1,11 @@
-import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:styled_text/styled_text.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class VerificationDonePage extends StatelessWidget {
-  const VerificationDonePage({Key? key}) : super(key: key);
+class ErrorPage extends StatelessWidget {
+  const ErrorPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +25,7 @@ class VerificationDonePage extends StatelessWidget {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
-                          'assets/icon_verification_done.png',
+                          'assets/icon_error.png',
                         ),
                       ),
                     ),
@@ -35,18 +34,18 @@ class VerificationDonePage extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          'Berhasil!',
+                          'Terjadi Kesalahan!',
                           style: blackTextStyle.copyWith(
                             fontWeight: bold,
                             fontSize: 18.sp,
                           ),
                         ),
                         SizedBox(
-                          height: 24.h,
+                          height: 24,
                         ),
                         StyledText(
                           text:
-                              'Akun <bold>Edward Einselton</bold> sudah terdaftar!\nSilakan Login kembali.',
+                              'Maaf, laman tidak bisa dimuat.\nMungkin laman sedang <bold>dalam perbaikan</bold>,\natau mungkin <bold>koneksi Anda</bold> sedang buruk.',
                           tags: {
                             'bold': StyledTextTag(
                               style: TextStyle(
@@ -56,7 +55,7 @@ class VerificationDonePage extends StatelessWidget {
                           },
                           style: blackTextStyle.copyWith(
                             fontWeight: light,
-                            fontSize: 13.sp,
+                            fontSize: 13,
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -69,16 +68,17 @@ class VerificationDonePage extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(
-              bottom: 36.h,
+              bottom: 36,
             ),
             child: CustomButton(
-              title: 'Ok',
+              title: 'Kembali',
               onPressed: () {},
               margin: EdgeInsets.symmetric(
-                horizontal: 36.w,
+                horizontal: 36,
               ),
-              color: kPrimaryColor,
+              color: kWhiteColor,
               textStyle: blackTextStyle,
+              border: true,
             ),
           ),
         ],
