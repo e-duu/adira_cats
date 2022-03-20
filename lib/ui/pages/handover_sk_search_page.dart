@@ -74,7 +74,7 @@ class HandoverSkSearchPage extends StatelessWidget {
         CustomCardSk(
           skNumber: "3234 5678",
           contractNumber: "9999 8888 7777",
-          notifResult: false,
+          notifNew: false,
         ),
       ]);
     }

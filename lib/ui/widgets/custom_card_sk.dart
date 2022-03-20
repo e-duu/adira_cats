@@ -5,15 +5,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomCardSk extends StatelessWidget {
   final String skNumber;
   final String contractNumber;
-  final bool notifResult;
-  final String textNotif;
+  final bool notifNew;
 
   const CustomCardSk({
     Key? key,
     required this.skNumber,
     required this.contractNumber,
-    this.notifResult = false,
-    this.textNotif = '',
+    this.notifNew = false,
   }) : super(key: key);
 
   @override
@@ -28,7 +26,7 @@ class CustomCardSk extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         border: Border.all(
-          color: kGrayColor,
+          color: kLigthGrayColor,
           width: 2.w,
         ),
         borderRadius: BorderRadius.circular(defaultRadius),
@@ -83,7 +81,7 @@ class CustomCardSk extends StatelessWidget {
               ],
             ),
           ),
-          if (notifResult == true)
+          if (notifNew == true)
             Container(
               width: 59.w,
               height: 29.h,
@@ -95,7 +93,7 @@ class CustomCardSk extends StatelessWidget {
                     color: kPrimaryColor),
                 child: Center(
                   child: Text(
-                    textNotif,
+                    "Baru",
                     style: blackTextStyle.copyWith(
                       fontSize: 11.sp,
                       fontWeight: semibold,

@@ -49,26 +49,26 @@ class MainPage extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              CustomBottomNavigationItem(
-                index: 0,
-                imageUrl: 'assets/icon_chat_button.png',
-              ),
-              CustomBottomNavigationItem(
-                index: 1,
-                imageUrl: 'assets/icon_location_button.png',
-              ),
-              CustomBottomNavigationItem(
-                index: 2,
-                imageUrl: 'assets/icon_home_button.png',
-              ),
-              CustomBottomNavigationItem(
-                index: 3,
-                imageUrl: 'assets/icon_notification.png',
-              ),
-              CustomBottomNavigationItem(
-                index: 4,
-                imageUrl: 'assets/icon_user_button.png',
-              ),
+              // CustomBottomNavigationItem(
+              //   index: 0,
+              //   imageUrl: 'assets/icon_chat_button.png',
+              // ),
+              // CustomBottomNavigationItem(
+              //   index: 1,
+              //   imageUrl: 'assets/icon_location_button.png',
+              // ),
+              // CustomBottomNavigationItem(
+              //   index: 2,
+              //   imageUrl: 'assets/icon_home_button.png',
+              // ),
+              // CustomBottomNavigationItem(
+              //   index: 3,
+              //   imageUrl: 'assets/icon_notification.png',
+              // ),
+              // CustomBottomNavigationItem(
+              //   index: 4,
+              //   imageUrl: 'assets/icon_user_button.png',
+              // ),
             ],
           ),
         ),

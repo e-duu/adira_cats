@@ -102,7 +102,7 @@ class CreateStPage extends StatelessWidget {
               ),
               CustomInput(
                 hintText: 'Pilih Cabang',
-                hintColor: kGrayColor,
+                hintColor: kDarkGreyColor,
               ),
             ],
           ),
@@ -131,7 +131,7 @@ class CreateStPage extends StatelessWidget {
               ),
               CustomInput(
                 hintText: 'Display Nama PT',
-                hintColor: kGrayColor,
+                hintColor: kDarkGreyColor,
               ),
             ],
           ),
@@ -160,7 +160,7 @@ class CreateStPage extends StatelessWidget {
               ),
               CustomInput(
                 hintText: 'Tidak ada nama dipilih',
-                hintColor: kGrayColor,
+                hintColor: kDarkGreyColor,
               ),
             ],
           ),
@@ -189,7 +189,7 @@ class CreateStPage extends StatelessWidget {
               ),
               CustomInput(
                 hintText: 'Cari Nomor Kontrak',
-                hintColor: kGrayColor,
+                hintColor: kDarkGreyColor,
               ),
             ],
           ),
@@ -237,7 +237,7 @@ class CreateStPage extends StatelessWidget {
               ),
               CustomInput(
                 hintText: 'Pilih Person In Charge',
-                hintColor: kGrayColor,
+                hintColor: kDarkGreyColor,
               ),
             ],
           ),

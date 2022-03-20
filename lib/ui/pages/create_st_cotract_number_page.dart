@@ -68,8 +68,6 @@ class CreateStContractNumberPage extends StatelessWidget {
       return CustomCardSk(
         skNumber: '-',
         contractNumber: '9999 9999 9999',
-        notifResult: true,
-        textNotif: 'Dipilih',
       );
     }
 

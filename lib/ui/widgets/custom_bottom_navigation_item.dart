@@ -1,49 +1,53 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
+import 'package:adira_cats/ui/widgets/custom_notification_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomBottomNavigationItem extends StatelessWidget {
-  final int index;
-  final String imageUrl;
+  final bool isSelected;
+  final IconData icon;
+  final bool isNotif;
+  final int number;
 
   const CustomBottomNavigationItem({
     Key? key,
-    required this.index,
-    required this.imageUrl,
+    this.isSelected = false,
+    required this.icon,
+    this.isNotif = false,
+    this.number = 0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        context.read<PageCubit>().setPage(index);
-      },
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(),
-          Image.asset(
-            imageUrl,
-            width: 24.w,
-            height: 24.h,
-            color: context.read<PageCubit>().state == index
-                ? kPrimaryColor
-                : kGreyColor,
+    return Row(
+      children: [
+        // NOTE: ICON NOTIFICATION
+        Container(
+          padding: EdgeInsets.symmetric(
+            horizontal: 14.w,
+            vertical: 14.h,
           ),
-          Container(
-            width: 30,
-            height: 2,
-            decoration: BoxDecoration(
-              color: context.read<PageCubit>().state == index
-                  ? kPrimaryColor
-                  : kTransparent,
-              borderRadius: BorderRadius.circular(18),
-            ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12.r),
+            color: isSelected ? kBlackColor : kTransparent,
           ),
-        ],
-      ),
+          child: Stack(
+            children: [
+              Icon(
+                icon,
+                color: kLigthGrayColor,
+                size: 28.sp,
+              ),
+              if (isNotif == true)
+                CustomNotificationItem(
+                  count: number,
+                ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

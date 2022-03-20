@@ -1,10 +1,8 @@
-import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_card_sk.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
-import 'package:styled_text/styled_text.dart';
 
 class HandoverSkPage extends StatelessWidget {
   const HandoverSkPage({Key? key}) : super(key: key);
@@ -32,6 +30,21 @@ class HandoverSkPage extends StatelessWidget {
                       "assets/icon_arrow_back.png",
                     )))))),
       );
+      suffixWidget:
+      GestureDetector(
+        onTap: () {},
+        child: Container(
+          width: 27.w,
+          height: 26.h,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                "assets/icon_arrow_back.png",
+              ),
+            ),
+          ),
+        ),
+      );
     }
 
     Widget formSearch() {
@@ -50,18 +63,37 @@ class HandoverSkPage extends StatelessWidget {
         CustomCardSk(
           skNumber: "1234 5678",
           contractNumber: "9999 9999 9999",
-          notifResult: true,
-          textNotif: 'Baru',
+          notifNew: true,
         ),
         CustomCardSk(
-            skNumber: "2234 5678",
-            contractNumber: "9999 8888 8888",
-            notifResult: false),
+          skNumber: "2234 5678",
+          contractNumber: "9999 8888 8888",
+          notifNew: false,
+        ),
         CustomCardSk(
             skNumber: "3234 5678",
             contractNumber: "9999 8888 7777",
-            notifResult: false),
+            notifNew: false),
       ]);
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CustomCardSk(
+            contractNumber: "9999 8888 7777",
+            skNumber: "1234 5678",
+          ),
+          CustomCardSk(
+            skNumber: "2234 5678",
+            contractNumber: "9999 8888 8888",
+            notifNew: false,
+          ),
+          CustomCardSk(
+            skNumber: "3234 5678",
+            contractNumber: "9999 8888 7777",
+            notifNew: false,
+          ),
+        ],
+      );
     }
 
     return Scaffold(
