@@ -10,6 +10,7 @@ import 'package:adira_cats/ui/pages/handover_sk_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
+import 'package:adira_cats/ui/pages/loading_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
@@ -65,11 +66,12 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
-          // routes: {
-          //   '/': (context) => SplashPage(),
-          //   '/login': (context) => LoginPage(),
-          //   '/main': (context) => MainPage(),
-          // },
+          routes: {
+            '/': (context) => SplashPage(),
+            '/load': (context) => LoadPage(),
+            '/login': (context) => LoginPage(),
+            '/main': (context) => MainPage(),
+          },
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
@@ -85,7 +87,7 @@ class MyApp extends StatelessWidget {
           // home: RegisterThirdPage(),
           // home: RegisterFourthPage(),
           // home: CreateStPage(),
-          home: StDonePage(),
+          // home: StDonePage(),
           // home: HandoverSkPage(),
           // home: ReportDetailPage(),
           // home: HandoverSkSearchPage(),
@@ -103,6 +105,8 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailVisitPage(),
           // home: ReportDetailPullFeePage(),
           // home: MessageRoomPage(),
+          // home: ErrorPage(),
+          // home: LoadPage(),
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),

@@ -69,13 +69,13 @@ class VerificationDonePage extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(
-              bottom: 36.h,
+              bottom: defaultMargin.h,
             ),
             child: CustomButton(
               title: 'Ok',
               onPressed: () {},
               margin: EdgeInsets.symmetric(
-                horizontal: 36.w,
+                horizontal: defaultMargin.w,
               ),
               color: kPrimaryColor,
               textStyle: blackTextStyle,

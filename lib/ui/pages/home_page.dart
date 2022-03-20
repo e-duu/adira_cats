@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
           bottom: 20.h,
         ),
         padding: EdgeInsets.symmetric(
-          horizontal: 24.w,
+          horizontal: defaultPadding.w,
           vertical: defaultMargin.h,
         ),
         decoration: BoxDecoration(
@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Container(
                   width: 120.w,
-                  height: 24.h,
+                  height: defaultPadding.h,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
@@ -103,8 +103,8 @@ class HomePage extends StatelessWidget {
         height: 50.h,
         margin: EdgeInsets.only(
           top: 135.h,
-          right: 24.w,
-          left: 24.w,
+          right: defaultPadding.w,
+          left: defaultPadding.w,
         ),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(defaultRadius),
@@ -158,7 +158,7 @@ class HomePage extends StatelessWidget {
         width: double.infinity,
         height: 77.h,
         margin: EdgeInsets.symmetric(
-          horizontal: 24.w,
+          horizontal: defaultPadding.w,
           vertical: defaultMargin.h,
         ),
         padding: EdgeInsets.symmetric(
@@ -225,7 +225,7 @@ class HomePage extends StatelessWidget {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.symmetric(
-          horizontal: 24.w,
+          horizontal: defaultPadding.w,
         ),
         child: Column(
           children: [
@@ -456,10 +456,10 @@ class HomePage extends StatelessWidget {
     Widget announcement() {
       return Container(
         margin: EdgeInsets.only(
-          left: 24.w,
-          right: 24.w,
-          top: 24.h,
-          bottom: 150.h,
+          left: defaultPadding.w,
+          right: defaultPadding.w,
+          top: defaultPadding.h,
+          bottom: defaultBottom.h,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -505,7 +505,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       );

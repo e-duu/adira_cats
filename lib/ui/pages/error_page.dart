@@ -1,4 +1,4 @@
-import 'package:adira_cats/ui/widgets/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -41,7 +41,7 @@ class ErrorPage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 24,
+                          height: 24.h,
                         ),
                         StyledText(
                           text:
@@ -55,7 +55,7 @@ class ErrorPage extends StatelessWidget {
                           },
                           style: blackTextStyle.copyWith(
                             fontWeight: light,
-                            fontSize: 13,
+                            fontSize: 13.sp,
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -68,17 +68,17 @@ class ErrorPage extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(
-              bottom: 36,
+              bottom: defaultMargin.h,
+              right: defaultMargin.w,
+              left: defaultMargin.w,
             ),
-            child: CustomButton(
+            child: CustomButtonBorder(
               title: 'Kembali',
+              titleColor: kBlackColor,
               onPressed: () {},
-              margin: EdgeInsets.symmetric(
-                horizontal: 36,
-              ),
-              color: kWhiteColor,
-              textStyle: blackTextStyle,
-              border: true,
+              borderColor: kDarkGreyColor,
+              borderWidth: 1,
+              fontWeight: light,
             ),
           ),
         ],
