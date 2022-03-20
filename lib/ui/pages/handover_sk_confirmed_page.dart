@@ -13,23 +13,28 @@ class HandoverSkConfirmedPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-            text: "Serah Terima SK",
-            preffixWidget: GestureDetector(
-              onTap: () {},
-              child: Icon(
-                Icons.subject_sharp,
+          text: "Serah Terima SK",
+          preffixWidget: GestureDetector(
+            onTap: () {},
+            child: Icon(
+              Icons.subject_sharp,
+            ),
+          ),
+          suffixWidget: GestureDetector(
+            onTap: () {},
+            child: Container(
+              width: 27.w,
+              height: 26.h,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/icon_arrow_back.png",
+                  ),
+                ),
               ),
             ),
-            suffixWidget: GestureDetector(
-                onTap: () {},
-                child: Container(
-                    width: 27.w,
-                    height: 26.h,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(
-                      "assets/icon_arrow_back.png",
-                    )))))),
+          ),
+        ),
       );
     }
 
@@ -52,7 +57,10 @@ class HandoverSkConfirmedPage extends StatelessWidget {
             Container(
               width: 100.w,
               height: 60.h,
-              margin: EdgeInsets.only(top: 43.h, bottom: 31.h),
+              margin: EdgeInsets.only(
+                top: 43.h,
+                bottom: 31.h,
+              ),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -96,7 +104,7 @@ class HandoverSkConfirmedPage extends StatelessWidget {
                       ),
                       Text(
                         "Detail Informasi",
-                        style: greyTextStyle.copyWith(
+                        style: darkGreyTextStyle.copyWith(
                           fontSize: 13.sp,
                           fontWeight: semibold,
                         ),
@@ -194,7 +202,9 @@ class HandoverSkConfirmedPage extends StatelessWidget {
 
             /// NOTE: NOTIF CONFIRMED SK
             Container(
-              margin: EdgeInsets.symmetric(vertical: 24.h),
+              margin: EdgeInsets.symmetric(
+                vertical: 24.h,
+              ),
               child: Text(
                 "SK telah dikonfirmasi pada 10 maret 2022",
                 style: darkGreyTextStyle.copyWith(
@@ -226,8 +236,10 @@ class HandoverSkConfirmedPage extends StatelessWidget {
                     child: Center(
                       child: Text(
                         "Cetak SK",
-                        style: greyTextStyle.copyWith(
-                            fontWeight: light, fontSize: 12.sp),
+                        style: darkGreyTextStyle.copyWith(
+                          fontWeight: light,
+                          fontSize: 12.sp,
+                        ),
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.center,
                       ),
@@ -248,8 +260,10 @@ class HandoverSkConfirmedPage extends StatelessWidget {
                     child: Center(
                       child: Text(
                         "Cetak\nBASTK",
-                        style: greyTextStyle.copyWith(
-                            fontWeight: light, fontSize: 12.sp),
+                        style: darkGreyTextStyle.copyWith(
+                          fontWeight: light,
+                          fontSize: 12.sp,
+                        ),
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.center,
                       ),
@@ -270,8 +284,10 @@ class HandoverSkConfirmedPage extends StatelessWidget {
                     child: Center(
                       child: Text(
                         "Buat\nHisPay",
-                        style: greyTextStyle.copyWith(
-                            fontWeight: light, fontSize: 12.sp),
+                        style: darkGreyTextStyle.copyWith(
+                          fontWeight: light,
+                          fontSize: 12.sp,
+                        ),
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.center,
                       ),
@@ -295,8 +311,8 @@ class HandoverSkConfirmedPage extends StatelessWidget {
             left: 36.w,
             right: 36.w,
           ),
-          titleColor: kGreyColor,
-          borderColor: kGreyColor,
+          titleColor: kDarkGreyColor,
+          borderColor: kDarkGreyColor,
           borderWidth: 2,
           fontWeight: light,
           onPressed: () {},
@@ -305,17 +321,19 @@ class HandoverSkConfirmedPage extends StatelessWidget {
     }
 
     return Scaffold(
-        body: SafeArea(
-      child: SingleChildScrollView(
-        child: Container(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
             child: Column(
-          children: [
-            navbar(),
-            cardSkDetail(),
-            buttonBack(),
-          ],
-        )),
+              children: [
+                navbar(),
+                cardSkDetail(),
+                buttonBack(),
+              ],
+            ),
+          ),
+        ),
       ),
-    ));
+    );
   }
 }

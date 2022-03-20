@@ -6,12 +6,16 @@ class CustomCardSk extends StatelessWidget {
   final String skNumber;
   final String contractNumber;
   final bool notifNew;
+  final String notifText;
+  final bool clickDetail;
 
   const CustomCardSk({
     Key? key,
     required this.skNumber,
     required this.contractNumber,
     this.notifNew = false,
+    this.notifText = '',
+    this.clickDetail = false,
   }) : super(key: key);
 
   @override
@@ -68,40 +72,39 @@ class CustomCardSk extends StatelessWidget {
                     fontSize: 12.sp,
                   ),
                 ),
-                SizedBox(
+                if (clickDetail == true) SizedBox(
                   height: 6.h,
                 ),
-                Text(
+                if (clickDetail == true) Text(
                   "Klik untuk lihat detail",
                   style: darkGreyTextStyle.copyWith(
                     fontWeight: light,
                     fontSize: 11.sp,
                   ),
-                )
+                ),
               ],
             ),
           ),
-          if (notifNew == true)
-            Container(
+          if (notifNew == true) Container(
+            width: 59.w,
+            height: 29.h,
+            child: Container(
               width: 59.w,
               height: 29.h,
-              child: Container(
-                width: 59.w,
-                height: 29.h,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(defaultRadius),
-                    color: kPrimaryColor),
-                child: Center(
-                  child: Text(
-                    "Baru",
-                    style: blackTextStyle.copyWith(
-                      fontSize: 11.sp,
-                      fontWeight: semibold,
-                    ),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(defaultRadius),
+                  color: kPrimaryColor),
+              child: Center(
+                child: Text(
+                  notifText,
+                  style: blackTextStyle.copyWith(
+                    fontSize: 11.sp,
+                    fontWeight: semibold,
                   ),
                 ),
               ),
             ),
+          ),
         ],
       ),
     );

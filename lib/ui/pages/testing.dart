@@ -2,6 +2,8 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_dialog.dart';
+import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
+import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
 import 'package:adira_cats/ui/widgets/custom_icon_upload.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
@@ -9,6 +11,7 @@ import 'package:adira_cats/ui/widgets/custom_menu.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TestingPage extends StatelessWidget {
   const TestingPage({Key? key}) : super(key: key);
@@ -80,33 +83,41 @@ class TestingPage extends StatelessWidget {
             // CustomIconUpload(text: "Tambahkan\nFoto Diri"),
 
             // NOTE: DIALOG
-            TextButton(
-              onPressed: () => CustomDialog(
-                title: "Batalkan?",
-                text: "Anda Ingin Membatalkan?",
-                context: context,
-                preffixAction: CustomButtonBorder(
-                  title: "Batalkan",
-                  titleColor: kRedColor,
-                  onPressed: () => {},
-                  borderColor: kRedColor,
-                  borderWidth: 2,
-                  fontWeight: light,
-                ),
-                suffixAction: CustomButton(
-                  title: "Tetap Edit",
-                  onPressed: () => {},
-                  color: kPrimaryColor,
-                  textStyle: blackTextStyle,
-                ),
-              ),
-              child: Text(
-                'Coba Dialog',
-                style: blackTextStyle.copyWith(
-                  fontSize: 14,
-                  fontWeight: bold,
-                ),
-              ),
+            // TextButton(
+            //   onPressed: () => CustomDialog(
+            //     title: "Batalkan?",
+            //     text: "Anda Ingin Membatalkan?",
+            //     context: context,
+            //     preffixAction: CustomButtonBorder(
+            //       title: "Batalkan",
+            //       titleColor: kRedColor,
+            //       onPressed: () => {},
+            //       borderColor: kRedColor,
+            //       borderWidth: 2,
+            //       fontWeight: light,
+            //     ),
+            //     suffixAction: CustomButton(
+            //       title: "Tetap Edit",
+            //       onPressed: () => {},
+            //       color: kPrimaryColor,
+            //       textStyle: blackTextStyle,
+            //     ),
+            //   ),
+            //   child: Text(
+            //     'Coba Dialog',
+            //     style: blackTextStyle.copyWith(
+            //       fontSize: 14,
+            //       fontWeight: bold,
+            //     ),
+            //   ),
+            // ),
+
+            // NOTE : CUSTOM DROPDOWN
+            CustomDropdownBorder(
+              items: ['item 1', 'item 2', 'item 3'],
+              hintText: 'Pilih Data...',
+              margin: EdgeInsets.all(100),
+              // width: 200.w,
             ),
           ],
         ),
