@@ -21,6 +21,8 @@ import 'package:adira_cats/ui/pages/register_page.dart';
 import 'package:adira_cats/ui/pages/register_second_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/register_third_page.dart';
+import 'package:adira_cats/ui/pages/report_detail_mv_page%20.dart';
+import 'package:adira_cats/ui/pages/report_detail_mv_result_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_prodex_nihil_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_prodex_page.dart';
@@ -84,7 +86,7 @@ class MyApp extends StatelessWidget {
           // home: RegisterThirdPage(),
           // home: RegisterFourthPage(),
           // home: CreateStPage(),
-          home: StDonePage(),
+          // home: StDonePage(),
           // home: HandoverSkPage(),
           // home: ReportDetailPage(),
           // home: HandoverSkSearchPage(),
@@ -102,9 +104,6 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailVisitPage(),
           // home: ReportDetailPullFeePage(),
           // home: MessageRoomPage(),
-
-          /// NOTE: ON PROGRESS
-          // home: TestingPage(),
           // home: ReportDetailProdexNihilPage(),
           // home: ReportDetailProdexResultDetailPage(),
           // home: ReportDetailProdexResultPage(),
@@ -120,6 +119,11 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailStNihilPage(),
           // home: ReportDetailStResultDetailPage(),
           // home: ReportDetailStResultPage(),
+
+          /// NOTE: ON PROGRESS
+          // home: TestingPage(),
+          // home: ReportDetailMvPage(),
+          home: ReportDetailMvResultPage(),
         ),
       ),
     );
