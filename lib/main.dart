@@ -73,6 +73,8 @@ class MyApp extends StatelessWidget {
           //   '/main': (context) => MainPage(),
           // },
 
+          // TOTALLY DONE : 44
+
           /// NOTE: INTEGRATION
           // home: SplashPage(),
           // home: LoginPage(),
@@ -82,7 +84,7 @@ class MyApp extends StatelessWidget {
           /// NOTE : DONE
           // home: OtpPage(),
           // home: ProfilePage(),
-          // home: RegisterPage(),
+          home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterFourthPage(),
@@ -124,7 +126,7 @@ class MyApp extends StatelessWidget {
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
           // home: ReportDetailMvPage(),
-          home: ReportDetailMvResultPage(),
+          // home: ReportDetailMvResultPage(),
         ),
       ),
     );
