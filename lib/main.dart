@@ -80,8 +80,6 @@ class MyApp extends StatelessWidget {
           //   '/main': (context) => MainPage(),
           // },
 
-          // TOTALLY DONE : 44
-
           /// NOTE: INTEGRATION
           // home: SplashPage(),
           // home: LoginPage(),
