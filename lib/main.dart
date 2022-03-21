@@ -71,6 +71,7 @@ class MyApp extends StatelessWidget {
           /// NOTE : DONE
           // home: OtpPage(),
           // home: ProfilePage(),
+          // home: MessageRoomPage(),
           // home: RegisterPage(),
           // home: CreateStPage(),
           // home: HandoverSkPage(),
@@ -85,7 +86,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverSkConfirmedPage(),
           // home: TestingPage(),
           // home: CreateStPage(),
-          home: CreateStContractNumberPage(),
+          // home: CreateStContractNumberPage(),
           // home: CreateStContractNullPage(),
           // home: ReportDetailPage(),
           // home: ReportDetailProdexPage(),
@@ -94,7 +95,6 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
-          // home: MessageRoomPage(),
           // home: ReportDetailProdexNihilPage(),
           // home: ReportDetailProdexPage(),
           // home: ReportDetailProdexResultDetailPage(),
