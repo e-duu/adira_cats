@@ -6,21 +6,23 @@ class CustomInputSearch extends StatelessWidget {
   final Function() onPressed;
   final String hintText;
   final String value;
+  final EdgeInsets margin;
 
   const CustomInputSearch({
     Key? key,
     required this.onPressed,
     required this.hintText,
     this.value = '',
+    this.margin = EdgeInsets.zero,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 50.h,
-      margin: EdgeInsets.symmetric(
-        horizontal: 24.w,
-      ),
+      margin: margin == EdgeInsets.zero ? EdgeInsets.symmetric(
+        horizontal: defaultMargin.w,
+      ) : margin,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(defaultRadius),

@@ -9,7 +9,6 @@ class CustomButton extends StatelessWidget {
   final EdgeInsets margin;
   final Color color;
   final TextStyle textStyle;
-  final bool border;
 
   const CustomButton({
     Key? key,
@@ -19,7 +18,6 @@ class CustomButton extends StatelessWidget {
     required this.textStyle,
     this.margin = EdgeInsets.zero,
     this.width = double.infinity,
-    this.border = false,
   }) : super(key: key);
 
   @override
@@ -29,9 +27,6 @@ class CustomButton extends StatelessWidget {
       height: 50.h,
       margin: margin,
       decoration: BoxDecoration(
-        border: Border.all(
-          color: border ? kDarkGreyColor : kTransparent,
-        ),
         borderRadius: BorderRadius.circular(defaultRadius),
       ),
       child: TextButton(

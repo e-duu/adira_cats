@@ -12,7 +12,7 @@ class HandoverSkPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Serah Terima SK",
+          text: "Serah Terima ST",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(

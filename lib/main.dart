@@ -10,6 +10,7 @@ import 'package:adira_cats/ui/pages/handover_sk_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/handover_sk_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
+import 'package:adira_cats/ui/pages/loading_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
@@ -42,9 +43,14 @@ import 'package:adira_cats/ui/pages/report_detail_visit_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_visit_result_detail_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_visit_result_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
+import 'package:adira_cats/ui/pages/request_unit_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/st_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_found_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_nil_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
 import 'package:adira_cats/ui/pages/verification_done_page.dart';
 import 'package:adira_cats/ui/pages/testing.dart';
 import 'package:flutter/material.dart';
@@ -69,6 +75,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           // routes: {
           //   '/': (context) => SplashPage(),
+          //   '/load': (context) => LoadPage(),
           //   '/login': (context) => LoginPage(),
           //   '/main': (context) => MainPage(),
           // },
@@ -84,7 +91,7 @@ class MyApp extends StatelessWidget {
           /// NOTE : DONE
           // home: OtpPage(),
           // home: ProfilePage(),
-          home: RegisterPage(),
+          // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterFourthPage(),
@@ -101,21 +108,19 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailPage(),
           // home: ReportDetailProdexPage(),
           // home: ReportPage(),
+          // home: ReportPage(),
           // home: ReportDetailPage(),
           // home: ReportDetailProdexPage(),
           // home: ReportDetailProdexResultPage(),
           // home: ReportDetailVisitPage(),
+          // home: UnitSearchPage(),
+          // home: UnitSearchFoundPage(),
+          // home: UnitSearchNilPage(),
           // home: ReportDetailPullFeePage(),
           // home: MessageRoomPage(),
-          // home: ReportDetailProdexNihilPage(),
-          // home: ReportDetailProdexResultDetailPage(),
-          // home: ReportDetailProdexResultPage(),
           // home: ReportDetailVisitPage(),
-          // home: ReportDetailVisitNihilPage(),
           // home: ReportDetailVisitResultDetailPage(),
-          // home: ReportDetailVisitResultPage(),
           // home: ReportDetailPullFeePage(),
-          // home: ReportDetailPullFeeNihilPage(),
           // home: ReportDetailPullFeeResultDetailPage(),
           // home: ReportDetailPullFeeResultPage(),
           // home: ReportDetailStPage(),
@@ -127,6 +132,7 @@ class MyApp extends StatelessWidget {
           // home: TestingPage(),
           // home: ReportDetailMvPage(),
           // home: ReportDetailMvResultPage(),
+          home: UnitSearchPullPage(),
         ),
       ),
     );
