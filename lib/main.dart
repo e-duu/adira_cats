@@ -71,12 +71,12 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
-          routes: {
-            '/': (context) => SplashPage(),
-            '/load': (context) => LoadPage(),
-            '/login': (context) => LoginPage(),
-            '/main': (context) => MainPage(),
-          },
+          // routes: {
+          //   '/': (context) => SplashPage(),
+          //   '/load': (context) => LoadPage(),
+          //   '/login': (context) => LoginPage(),
+          //   '/main': (context) => MainPage(),
+          // },
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
@@ -87,7 +87,7 @@ class MyApp extends StatelessWidget {
           /// NOTE : DONE
           // home: OtpPage(),
           // home: ProfilePage(),
-          // home: RegisterPage(),
+          home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterFourthPage(),
