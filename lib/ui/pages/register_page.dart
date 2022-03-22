@@ -6,10 +6,16 @@ import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:date_time_picker/date_time_picker.dart';
 
-class RegisterPage extends StatelessWidget {
+class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
 
+  @override
+  State<RegisterPage> createState() => _RegisterPageState();
+}
+
+class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     Widget header() {
@@ -151,13 +157,64 @@ class RegisterPage extends StatelessWidget {
             SizedBox(
               height: 5.h,
             ),
-            CustomDropdown(
-              items: [
-                '29 Februari 1996',
-                'Example',
-                'Dropdown',
-              ],
-              hintText: 'Tanggal Lahir',
+            Container(
+              width: double.infinity,
+              // height: 50.h,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(defaultRadius),
+              ),
+              // Column(
+              //   crossAxisAlignment: CrossAxisAlignment.start,
+              //   children: [
+              //     ElevatedButton(
+              //       onPressed: () {
+              //         showDatePicker(
+              //           context: context,
+              //           initialDate: DateTime.now(),
+              //           firstDate: DateTime(2000),
+              //           lastDate: DateTime(2025),
+              //           builder: (context, child) => Theme(
+              //             data: ThemeData().copyWith(
+              //               colorScheme: ColorScheme.dark(
+              //                 primary: kPrimaryColor,
+              //                 surface: kPrimaryColor,
+              //                 onSurface: kBlackColor,
+              //               ),
+              //               dialogBackgroundColor: kLightYellowColor,
+              //             ),
+              //             child: child!,
+              //           ),
+              //         );
+              //       },
+              //       child: Text(''),
+              //     ),
+              //   ],
+              child: DateTimePicker(
+                initialValue: '',
+                style: greyTextStyle.copyWith(
+                  fontSize: 12.sp,
+                  color: kDarkGreyColor,
+                  fontWeight: light,
+                ),
+                decoration: InputDecoration(
+                  contentPadding: EdgeInsets.symmetric(
+                    horizontal: 18.w,
+                    vertical: 15.h,
+                  ),
+                  border: InputBorder.none,
+                  hintText: 'Tanggal Lahir',
+                  hintStyle: TextStyle(
+                    color: kDarkGreyColor,
+                    fontWeight: light,
+                    fontSize: 12.sp,
+                  ),
+                  filled: true,
+                  fillColor: kGreyColor,
+                  focusColor: kDarkGreyColor,
+                ),
+                firstDate: DateTime(2000),
+                lastDate: DateTime(2100),
+              ),
             ),
             SizedBox(
               height: 12.h,
