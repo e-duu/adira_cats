@@ -1,18 +1,15 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_informasi_detail.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
-import 'package:styled_text/styled_text.dart';
 
-class HandoverSkDetailPage extends StatelessWidget {
-  const HandoverSkDetailPage({Key? key}) : super(key: key);
+class HandoverStConfirmedPage extends StatelessWidget {
+  const HandoverStConfirmedPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    /// NOTE: NAVBAR
     Widget navbar() {
       return Container(
         child: CustomNavbar(
@@ -41,8 +38,7 @@ class HandoverSkDetailPage extends StatelessWidget {
       );
     }
 
-    // NOTE: CARD SK
-    Widget cardSkDetail() {
+    Widget cardStDetail() {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.symmetric(
@@ -68,36 +64,9 @@ class HandoverSkDetailPage extends StatelessWidget {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                    "assets/icon_number_sk_detail.png",
+                    "assets/icon_number_st_detail.png",
                   ),
                 ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: 59,
-                        height: 29.h,
-                        decoration: BoxDecoration(
-                          color: kPrimaryColor,
-                          borderRadius: BorderRadius.circular(defaultRadius),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Baru",
-                            style: blackTextStyle.copyWith(
-                              fontWeight: semibold,
-                              fontSize: 11.sp,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
               ),
             ),
             Container(
@@ -112,7 +81,7 @@ class HandoverSkDetailPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Nomor SK : 1234 5678",
+                        "Nomor ST : 1234 5678",
                         style: blackTextStyle.copyWith(
                           fontSize: 13.sp,
                           fontWeight: bold,
@@ -231,95 +200,107 @@ class HandoverSkDetailPage extends StatelessWidget {
               ),
             ),
 
-            /// NOTE: BUTTON CONFIRMATION
-            CustomButton(
-              margin: EdgeInsets.only(
-                top: 24.h,
-                bottom: 36.h,
-                left: 36.w,
-                right: 36.w,
+            /// NOTE: NOTIF CONFIRMED ST
+            Container(
+              margin: EdgeInsets.symmetric(
+                vertical: 24.h,
               ),
-              title: "Konfirmasi",
-              color: kPrimaryColor,
-              textStyle: blackTextStyle,
-              onPressed: () {
-                showDialog<String>(
-                  context: context,
-                  builder: (BuildContext context) => Container(
-                    width: double.infinity,
-                    padding: EdgeInsets.symmetric(
-                      vertical: 48.h,
+              child: Text(
+                "ST telah dikonfirmasi pada 10 maret 2022",
+                style: darkGreyTextStyle.copyWith(
+                  fontWeight: light,
+                  fontSize: 12.sp,
+                ),
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.only(
+                bottom: 36.h,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  /// NOTE: CETAK ST
+                  Container(
+                    width: 94.w,
+                    height: 68.h,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: kLigthGrayColor,
+                        width: 2,
+                      ),
+                      borderRadius: BorderRadius.circular(defaultRadius),
                     ),
-                    child: AlertDialog(
-                      titlePadding: EdgeInsets.only(
-                        top: 10.h,
-                      ),
-                      title: Container(
-                        margin: EdgeInsets.only(
-                          top: 48.h,
+                    child: Center(
+                      child: Text(
+                        "Cetak ST",
+                        style: darkGreyTextStyle.copyWith(
+                          fontWeight: light,
+                          fontSize: 12.sp,
                         ),
-                        child: Text(
-                          'Konfirmasi Berhasil!',
-                          style: blackTextStyle.copyWith(
-                            fontWeight: bold,
-                            fontSize: 18.sp,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      content: Container(
-                        margin: EdgeInsets.only(
-                          top: 24.h,
-                        ),
-                        child: StyledText(
-                          text:
-                              'SK dengan Nomor <bold>1234 5678</bold> telah dikonfirmasi.',
-                          tags: {
-                            'bold': StyledTextTag(
-                              style: TextStyle(
-                                fontWeight: semibold,
-                              ),
-                            ),
-                          },
-                          style: blackTextStyle.copyWith(
-                            fontSize: 13.sp,
-                            fontWeight: light,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      actions: <Widget>[
-                        CustomButton(
-                          title: 'Ok',
-                          margin: EdgeInsets.only(
-                            bottom: 48.h,
-                            left: 36.w,
-                            right: 36.w,
-                          ),
-                          onPressed: () => Navigator.pop(context),
-                          color: kPrimaryColor,
-                          textStyle: blackTextStyle,
-                        ),
-                      ],
-                      actionsPadding: EdgeInsets.only(
-                        bottom: 10.h,
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                          18.r,
-                        ),
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ),
-                );
-              },
-            ),
+
+                  /// NOTE: CETAK BASTK
+                  Container(
+                    width: 94.w,
+                    height: 68.h,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: kLigthGrayColor,
+                        width: 2,
+                      ),
+                      borderRadius: BorderRadius.circular(defaultRadius),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Cetak\nBASTK",
+                        style: darkGreyTextStyle.copyWith(
+                          fontWeight: light,
+                          fontSize: 12.sp,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+
+                  /// NOTE: CETAK HisPay
+                  Container(
+                    width: 94.w,
+                    height: 68.h,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: kLigthGrayColor,
+                        width: 2,
+                      ),
+                      borderRadius: BorderRadius.circular(defaultRadius),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Buat\nHisPay",
+                        style: darkGreyTextStyle.copyWith(
+                          fontWeight: light,
+                          fontSize: 12.sp,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       );
     }
 
-    /// NOTE: BUTTON BACK
     Widget buttonBack() {
       return Container(
         child: CustomButtonBorder(
@@ -330,8 +311,8 @@ class HandoverSkDetailPage extends StatelessWidget {
             left: 36.w,
             right: 36.w,
           ),
-          titleColor: kGreyColor,
-          borderColor: kGreyColor,
+          titleColor: kDarkGreyColor,
+          borderColor: kDarkGreyColor,
           borderWidth: 2,
           fontWeight: light,
           onPressed: () {},
@@ -346,7 +327,7 @@ class HandoverSkDetailPage extends StatelessWidget {
             child: Column(
               children: [
                 navbar(),
-                cardSkDetail(),
+                cardStDetail(),
                 buttonBack(),
               ],
             ),
