@@ -21,7 +21,7 @@ class _RegisterPageState extends State<RegisterPage> {
     Widget header() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 24.h,
+          bottom: defaultPadding.h,
         ),
         child: CustomLogoAdira(
           text: 'Daftar Sebagai Informan',
@@ -329,7 +329,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
       return Container(
         margin: EdgeInsets.only(
-          top: 24.h,
+          top: defaultPadding.h,
         ),
         child: Column(
           children: [
@@ -366,7 +366,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     builder: (BuildContext context) => Container(
                       child: AlertDialog(
                         titlePadding: EdgeInsets.symmetric(
-                          vertical: 24.h,
+                          vertical: defaultPadding.h,
                         ),
                         title: Container(
                           margin: EdgeInsets.only(
@@ -398,8 +398,8 @@ class _RegisterPageState extends State<RegisterPage> {
                             fontWeight: normal,
                             width: 308.w,
                             margin: EdgeInsets.only(
-                              right: 36.w,
-                              left: 36.w,
+                              right: defaultMargin.w,
+                              left: defaultMargin.w,
                             ),
                           ),
                           SizedBox(
@@ -412,8 +412,8 @@ class _RegisterPageState extends State<RegisterPage> {
                             textStyle: blackTextStyle,
                             width: 308.w,
                             margin: EdgeInsets.only(
-                              right: 36.w,
-                              left: 36.w,
+                              right: defaultMargin.w,
+                              left: defaultMargin.w,
                               bottom: 48.h,
                             ),
                           ),
@@ -452,7 +452,7 @@ class _RegisterPageState extends State<RegisterPage> {
               color: kPrimaryColor,
               textStyle: blackTextStyle,
               margin: EdgeInsets.only(
-                bottom: 36.h,
+                bottom: defaultMargin.h,
               ),
             ),
           ],

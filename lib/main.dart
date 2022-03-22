@@ -60,8 +60,17 @@ import 'package:adira_cats/ui/pages/testing.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  // NOTE: Lock Potrait
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -77,12 +86,17 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
-          // routes: {
-          //   '/': (context) => SplashPage(),
-          //   '/load': (context) => LoadPage(),
-          //   '/login': (context) => LoginPage(),
-          //   '/main': (context) => MainPage(),
-          // },
+          routes: {
+            '/': (context) => SplashPage(),
+            '/load': (context) => LoadPage(),
+            '/login': (context) => LoginPage(),
+            '/main': (context) => MainPage(),
+            '/home': (context) => HomePage(),
+            '/profile': (context) => ProfilePage(),
+            '/message': (context) => MessagePage(),
+            '/unit_search': (context) => UnitSearchPage(),
+            '/notification': (context) => NotificationPage(),
+          },
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
@@ -92,7 +106,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : DONE
           // home: OtpPage(),
-          home: ProfilePage(),
+          // home: ProfilePage(),
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),

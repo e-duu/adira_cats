@@ -5,7 +5,6 @@ import '../../shared/theme.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_button_border.dart';
 import '../widgets/custom_navbar.dart';
-import 'home_page.dart';
 
 class CreateStContractNullPage extends StatelessWidget {
   const CreateStContractNullPage({Key? key}) : super(key: key);
@@ -39,7 +38,7 @@ class CreateStContractNullPage extends StatelessWidget {
     Widget notifSearch() {
       return Container(
         margin: EdgeInsets.only(
-          top: 36.h,
+          top: defaultMargin.h,
         ),
         child: Text(
           'Nomor Kontrak tidak ditemukan.',

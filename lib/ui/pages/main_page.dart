@@ -4,7 +4,7 @@ import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
-import 'package:adira_cats/ui/pages/unit_search.dart';
+import 'package:adira_cats/ui/pages/unit_search_page.dart';
 import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -39,13 +39,13 @@ class MainPage extends StatelessWidget {
           width: double.infinity,
           height: 100.h,
           padding: EdgeInsets.symmetric(
-            horizontal: 24,
+            horizontal: defaultPadding,
           ),
           decoration: BoxDecoration(
             color: kWhiteColor,
             borderRadius: BorderRadius.only(
-              topRight: Radius.circular(24.r),
-              topLeft: Radius.circular(24.r),
+              topRight: Radius.circular(defaultPadding.r),
+              topLeft: Radius.circular(defaultPadding.r),
             ),
             boxShadow: [
               BoxShadow(
@@ -114,7 +114,6 @@ class MainPage extends StatelessWidget {
           body: Stack(
             children: [
               buildContent(currentIndex),
-              bottomNavigation(),
             ],
           ),
         );
