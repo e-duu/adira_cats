@@ -92,11 +92,11 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : DONE
           // home: OtpPage(),
-          // home: ProfilePage(),
+          home: ProfilePage(),
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
-          home: RegisterThirdDonePage(),
+          // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
           // home: CreateStPage(),
           // home: StDonePage(),

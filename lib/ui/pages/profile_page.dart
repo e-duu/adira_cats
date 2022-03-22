@@ -1,6 +1,7 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_field.dart';
@@ -8,7 +9,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  ProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,9 @@ class ProfilePage extends StatelessWidget {
         child: CustomNavbar(
           text: "Profil Saya",
           preffixWidget: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              _scaffoldKey.currentState!.openEndDrawer();
+            },
             child: Icon(Icons.subject_sharp),
           ),
           suffixWidget: SizedBox(),
@@ -620,6 +624,8 @@ class ProfilePage extends StatelessWidget {
     }
 
     return Scaffold(
+      key: _scaffoldKey,
+      endDrawer: CustomDrawer(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
