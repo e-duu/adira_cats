@@ -441,7 +441,6 @@ class ProfilePage extends StatelessWidget {
                           hintText: "Password Lama",
                           hintColor: kDarkGreyColor,
                           obscureText: true,
-                          value: "12345678",
                         ),
                         SizedBox(
                           height: 12.h,
@@ -460,8 +459,27 @@ class ProfilePage extends StatelessWidget {
                           hintText: "Password Baru",
                           hintColor: kDarkGreyColor,
                           obscureText: true,
-                          value: "1234567890",
-                        )
+                        ),
+
+                        SizedBox(
+                          height: 12.h,
+                        ),
+                        Text(
+                          "konfimasi Password Baru",
+                          style: darkGreyTextStyle.copyWith(
+                            fontSize: 13.sp,
+                            fontWeight: semibold,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        SizedBox(
+                          height: 12.h,
+                        ),
+                        CustomInput(
+                          hintText: "Konfirmasi Password Baru",
+                          hintColor: kDarkGreyColor,
+                          obscureText: true,
+                        ),
                       ],
                     ),
                   ),
