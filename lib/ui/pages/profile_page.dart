@@ -360,7 +360,7 @@ class ProfilePage extends StatelessWidget {
               width: double.infinity,
             ),
             SizedBox(
-              width: 12,
+              height: 12.h,
             ),
             Text(
               "Nomer Telepon",
