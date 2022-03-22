@@ -46,6 +46,7 @@ import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/st_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_detail_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_page.dart';
@@ -71,12 +72,12 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
-          routes: {
-            '/': (context) => SplashPage(),
-            '/load': (context) => LoadPage(),
-            '/login': (context) => LoginPage(),
-            '/main': (context) => MainPage(),
-          },
+          // routes: {
+          //   '/': (context) => SplashPage(),
+          //   '/load': (context) => LoadPage(),
+          //   '/login': (context) => LoginPage(),
+          //   '/main': (context) => MainPage(),
+          // },
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
@@ -127,6 +128,7 @@ class MyApp extends StatelessWidget {
           // home: TestingPage(),
           // home: ReportDetailMvPage(),
           // home: ReportDetailMvResultPage(),
+          home: UnitSearchDetailPage(),
         ),
       ),
     );
