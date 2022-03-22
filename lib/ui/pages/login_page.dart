@@ -33,7 +33,7 @@ class LoginPage extends StatelessWidget {
             Container(
               width: double.infinity,
               margin: EdgeInsets.only(
-                top: 291.h,
+                top: 152.h,
               ),
               padding: EdgeInsets.symmetric(
                 horizontal: defaultMargin.w,
@@ -62,7 +62,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 12.h,
+                    height: 6.h,
                   ),
                   Container(
                     width: double.infinity,
@@ -79,7 +79,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 24.h,
+                    height: 12.h,
                   ),
                   Container(
                     child: Row(
@@ -108,7 +108,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 36.h,
+                    height: 18.h,
                   ),
                   Column(
                     children: [
@@ -135,7 +135,7 @@ class LoginPage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        height: 24.h,
+                        height: 6.h,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -162,7 +162,7 @@ class LoginPage extends StatelessWidget {
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 72.h, bottom: 36.h),
+                    margin: EdgeInsets.only(top: 18.h, bottom: 9.h),
                     child: Column(
                       children: [
                         Text(
@@ -203,5 +203,6 @@ class LoginPage extends StatelessWidget {
         ),
       ),
     );
+
   }
 }
