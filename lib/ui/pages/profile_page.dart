@@ -1,10 +1,16 @@
+import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/pages/home_page.dart';
+import 'package:adira_cats/ui/pages/message_page.dart';
+import 'package:adira_cats/ui/pages/notification_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_page.dart';
 import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_field.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +25,9 @@ class ProfilePage extends StatelessWidget {
           text: "Profil Saya",
           preffixWidget: GestureDetector(
             onTap: () {},
-            child: Icon(Icons.subject_sharp),
+            child: Icon(
+              Icons.subject_sharp,
+            ),
           ),
           suffixWidget: SizedBox(),
         ),
@@ -460,7 +468,6 @@ class ProfilePage extends StatelessWidget {
                           hintColor: kDarkGreyColor,
                           obscureText: true,
                         ),
-
                         SizedBox(
                           height: 12.h,
                         ),
@@ -691,25 +698,29 @@ class ProfilePage extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      floatingActionButton: bottomNavigation(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      backgroundColor: kWhiteColor,
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              navbar(),
-              profile(),
-              formInput(),
-              buttonChangePassword(),
-              buttonLogout(),
-              bottomNavigation(),
-            ],
+    return BlocBuilder<PageCubit, int>(
+      builder: (context, currentIndex) {
+        return Scaffold(
+          resizeToAvoidBottomInset: false,
+          floatingActionButton: bottomNavigation(),
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerDocked,
+          backgroundColor: kWhiteColor,
+          body: SafeArea(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  navbar(),
+                  profile(),
+                  formInput(),
+                  buttonChangePassword(),
+                  buttonLogout(),
+                ],
+              ),
+            ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

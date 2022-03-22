@@ -1,4 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,27 +8,32 @@ import 'package:flutter/material.dart';
 class UnitSearchPage extends StatelessWidget {
   const UnitSearchPage({Key? key}) : super(key: key);
 
-  Widget navbar() {
+  Widget navbar(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(
-        bottom: 6.h,
-      ),
       child: CustomNavbar(
-        text: "Pencarian Unit",
-        preffixWidget: GestureDetector(
-          onTap: () {},
-          child: Icon(
-            Icons.subject_sharp,
-          ),
+        text: "Pesan",
+        preffixWidget: IconButton(
+          onPressed: () => {},
+          icon: libraryIcon,
         ),
-        suffixWidget: Container(
-          width: 48.w,
-          height: 48.h,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            image: DecorationImage(
-              image: AssetImage(
-                "assets/image_user.png",
+        suffixWidget: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ProfilePage(),
+              ),
+            );
+          },
+          child: Container(
+            width: 48.w,
+            height: 48.h,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                image: AssetImage(
+                  "assets/image_user.png",
+                ),
               ),
             ),
           ),
@@ -97,7 +103,7 @@ class UnitSearchPage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            navbar(),
+            navbar(context),
             Container(
               margin: EdgeInsets.symmetric(
                 horizontal: defaultMargin.w,

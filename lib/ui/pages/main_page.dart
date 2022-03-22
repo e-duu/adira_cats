@@ -114,7 +114,6 @@ class MainPage extends StatelessWidget {
           body: Stack(
             children: [
               buildContent(currentIndex),
-              bottomNavigation(),
             ],
           ),
         );
