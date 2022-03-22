@@ -4,11 +4,11 @@ import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
 import 'package:adira_cats/ui/pages/create_st_cotract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_page.dart';
 import 'package:adira_cats/ui/pages/error_page.dart';
-import 'package:adira_cats/ui/pages/handover_sk_detail_page.dart';
-import 'package:adira_cats/ui/pages/handover_sk_confirmed_page.dart';
-import 'package:adira_cats/ui/pages/handover_sk_page.dart';
-import 'package:adira_cats/ui/pages/handover_sk_search_nil_page.dart';
-import 'package:adira_cats/ui/pages/handover_sk_search_page.dart';
+import 'package:adira_cats/ui/pages/handover_st_detail_page.dart';
+import 'package:adira_cats/ui/pages/handover_st_confirmed_page.dart';
+import 'package:adira_cats/ui/pages/handover_st_page.dart';
+import 'package:adira_cats/ui/pages/handover_st_search_nil_page.dart';
+import 'package:adira_cats/ui/pages/handover_st_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/loading_page.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
@@ -45,6 +45,8 @@ import 'package:adira_cats/ui/pages/report_detail_visit_result_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/request_unit_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
+import 'package:adira_cats/ui/pages/share_unit_found_page.dart';
+import 'package:adira_cats/ui/pages/share_unit_page.dart';
 import 'package:adira_cats/ui/pages/st_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_found_page.dart';
@@ -72,12 +74,12 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
-          routes: {
-            '/': (context) => SplashPage(),
-            '/load': (context) => LoadPage(),
-            '/login': (context) => LoginPage(),
-            '/main': (context) => MainPage(),
-          },
+          // routes: {
+          //   '/': (context) => SplashPage(),
+          //   '/load': (context) => LoadPage(),
+          //   '/login': (context) => LoginPage(),
+          //   '/main': (context) => MainPage(),
+          // },
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
@@ -87,19 +89,19 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : DONE
           // home: OtpPage(),
-          // home: ProfilePage(),
+          home: ProfilePage(),
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterFourthPage(),
           // home: CreateStPage(),
           // home: StDonePage(),
-          // home: HandoverSkPage(),
+          // home: HandoverStPage(),
           // home: ReportDetailPage(),
-          // home: HandoverSkSearchPage(),
-          // home: HandoverSkDetailPage(),
-          // home: HandoverSkSearchNilPage(),
-          // home: HandoverSkConfirmedPage(),
+          // home: HandoverStSearchPage(),
+          // home: HandoverStDetailPage(),
+          // home: HandoverStSearchNilPage(),
+          // home: HandoverStConfirmedPage(),
           // home: CreateStContractNumberPage(),
           // home: CreateStContractNullPage(),
           // home: ReportDetailPage(),
@@ -129,7 +131,9 @@ class MyApp extends StatelessWidget {
           // home: TestingPage(),
           // home: ReportDetailMvPage(),
           // home: ReportDetailMvResultPage(),
-          home: RequestUnitPage(),
+          // home: RequestUnitPage(),
+          // home: ShareUnitPage(),
+          // home: ShareUnitFoundPage(),
         ),
       ),
     );

@@ -1,5 +1,5 @@
 import 'package:adira_cats/ui/pages/home_page.dart';
-import 'package:adira_cats/ui/widgets/custom_card_sk.dart';
+import 'package:adira_cats/ui/widgets/custom_card_st.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -68,18 +68,18 @@ class CreateStContractNumberPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            CustomCardSk(
-              skNumber: '-',
+            CustomCardSt(
+              stNumber: '-',
               contractNumber: '9999 9999 9999',
               notifNew: true,
               notifText: 'Dipilih',
             ),
-            CustomCardSk(
-              skNumber: '-',
+            CustomCardSt(
+              stNumber: '-',
               contractNumber: '9999 9999 8888',
             ),
-            CustomCardSk(
-              skNumber: '-',
+            CustomCardSt(
+              stNumber: '-',
               contractNumber: '9999 9999 7777',
             ),
           ],

@@ -1,13 +1,11 @@
-import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widgets/custom_card_sk.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
-class HandoverSkSearchPage extends StatelessWidget {
-  const HandoverSkSearchPage({Key? key}) : super(key: key);
+class HandoverStSearchNilPage extends StatelessWidget {
+  const HandoverStSearchNilPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -59,33 +57,9 @@ class HandoverSkSearchPage extends StatelessWidget {
           bottom: 36.h,
         ),
         child: StyledText(
-          text: "<bold>1</bold> Nomor Kontrak telah ditemukan.",
-          tags: {
-            'bold': StyledTextTag(
-              style: TextStyle(
-                fontWeight: semibold,
-              ),
-            )
-          },
-          style: greyTextStyle.copyWith(
-            fontSize: 13.sp,
-            fontWeight: light,
-          ),
+          text: "Nomor Kontrak tidak ditemukan.",
           textAlign: TextAlign.center,
         ),
-      );
-    }
-
-    Widget cardNumberSk() {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CustomCardSk(
-            skNumber: "3234 5678",
-            contractNumber: "9999 8888 7777",
-            notifNew: false,
-          ),
-        ],
       );
     }
 
@@ -98,7 +72,6 @@ class HandoverSkSearchPage extends StatelessWidget {
                 navbar(),
                 formSearch(),
                 notifSearch(),
-                cardNumberSk(),
               ],
             ),
           ),

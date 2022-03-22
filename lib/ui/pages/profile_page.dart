@@ -229,22 +229,6 @@ class ProfilePage extends StatelessWidget {
             SizedBox(
               height: 12.h,
             ),
-            Text(
-              "Password",
-              style: darkGreyTextStyle.copyWith(
-                fontSize: 13.sp,
-                fontWeight: semibold,
-              ),
-            ),
-            CustomInput(
-              readOnly: true,
-              hintText: "*******",
-              hintColor: kBlackColor,
-              margin: EdgeInsets.only(
-                top: 12.h,
-              ),
-              width: double.infinity,
-            ),
             SizedBox(
               height: 12.h,
             ),
@@ -359,57 +343,168 @@ class ProfilePage extends StatelessWidget {
             SizedBox(
               height: 12.h,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Email",
-                      style: darkGreyTextStyle.copyWith(
-                        fontSize: 13.sp,
-                        fontWeight: semibold,
-                      ),
-                    ),
-                    CustomInput(
-                      readOnly: true,
-                      hintText: "edward@gmail.com",
-                      hintColor: kBlackColor,
-                      margin: EdgeInsets.only(
-                        top: 12.h,
-                      ),
-                      width: 138.w,
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  width: 12,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Nomer Telepon",
-                      style: darkGreyTextStyle.copyWith(
-                        fontSize: 13.sp,
-                        fontWeight: semibold,
-                      ),
-                    ),
-                    CustomInput(
-                      readOnly: true,
-                      hintText: "0813261392",
-                      hintColor: kBlackColor,
-                      margin: EdgeInsets.only(
-                        top: 12.h,
-                      ),
-                      width: 138.w,
-                    ),
-                  ],
-                ),
-              ],
+            Text(
+              "Email",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: semibold,
+              ),
+            ),
+            CustomInput(
+              readOnly: true,
+              hintText: "edward@gmail.com",
+              hintColor: kBlackColor,
+              margin: EdgeInsets.only(
+                top: 12.h,
+              ),
+              width: double.infinity,
+            ),
+            SizedBox(
+              width: 12,
+            ),
+            Text(
+              "Nomer Telepon",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: semibold,
+              ),
+            ),
+            CustomInput(
+              readOnly: true,
+              hintText: "0813261392",
+              hintColor: kBlackColor,
+              margin: EdgeInsets.only(
+                top: 12.h,
+              ),
+              width: double.infinity,
             ),
           ],
+        ),
+      );
+    }
+
+    Widget buttonChangePassword(){
+      return Container(
+        child: CustomButton(
+          title: 'Ganti Password',
+          color: kPrimaryColor, 
+          textStyle: blackTextStyle,
+          margin: EdgeInsets.only(
+            top: defaultMargin.h,
+            left: defaultMargin.w,
+            right: defaultMargin.w,
+          ),
+          onPressed: () => showDialog<String>(
+            context: context,
+            builder: (BuildContext context) => SingleChildScrollView(
+              child: Container(
+                width: double.infinity,
+                child: AlertDialog(
+                  titlePadding: EdgeInsets.only(
+                    top: 10.h,
+                  ),
+                  contentPadding: EdgeInsets.symmetric(
+                    vertical: 20.h,
+                  ),
+                  title: Container(
+                    margin: EdgeInsets.only(
+                      top: 48.h,
+                    ),
+                    child: Text(
+                      'Ganti Password',
+                      style: blackTextStyle.copyWith(
+                        fontWeight: bold,
+                        fontSize: 18.sp,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  content: Container(
+                    width: double.infinity,
+                    margin: EdgeInsets.symmetric(
+                      horizontal: defaultMargin.w,
+                    ),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Password Lama",
+                          style: darkGreyTextStyle.copyWith(
+                            fontSize: 13.sp,
+                            fontWeight: semibold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 12.h,
+                        ),
+                        CustomInput(
+                          hintText: "Password Lama",
+                          hintColor: kDarkGreyColor,
+                          obscureText: true,
+                          value: "12345678",
+                        ),
+                        SizedBox(
+                          height: 12.h,
+                        ),
+                        Text(
+                          "Password Baru",
+                          style: darkGreyTextStyle.copyWith(
+                            fontSize: 13.sp,
+                            fontWeight: semibold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 12.h,
+                        ),
+                        CustomInput(
+                          hintText: "Password Baru",
+                          hintColor: kDarkGreyColor,
+                          obscureText: true,
+                          value: "1234567890",
+                        )
+                      ],
+                    ),
+                  ),
+                  actions: <Widget>[
+                    Container(
+                      width: 380.w,
+                      margin: EdgeInsets.only(
+                        right: defaultMargin.w,
+                        left: defaultMargin.w,
+                        bottom: 48.h,
+                      ),
+                      child: Column(
+                        children: [
+                          CustomButtonBorder(
+                            title: "Batalkan",
+                            titleColor: kDarkGreyColor,
+                            onPressed: () => Navigator.pop(context),
+                            borderColor: kDarkGreyColor,
+                            borderWidth: 2,
+                            fontWeight: light,
+                          ),
+                          SizedBox(
+                            height: 12.h,
+                          ),
+                          CustomButton(
+                            title: 'Tetap Edit',
+                            onPressed: () {},
+                            color: kRedColor,
+                            textStyle: whiteTextStyle,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                  actionsPadding: EdgeInsets.only(
+                    bottom: 10.h,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.r),
+                  ),
+                ),
+              ),
+            ),
+          ), 
         ),
       );
     }
@@ -419,7 +514,7 @@ class ProfilePage extends StatelessWidget {
         child: CustomButtonBorder(
           title: "Logout",
           margin: EdgeInsets.only(
-            top: 18.h,
+            top: 12.h,
             bottom: 150.h,
             left: defaultMargin.w,
             right: defaultMargin.w,
@@ -514,6 +609,7 @@ class ProfilePage extends StatelessWidget {
               navbar(),
               profile(),
               formInput(),
+              buttonChangePassword(),
               buttonLogout(),
             ],
           ),
