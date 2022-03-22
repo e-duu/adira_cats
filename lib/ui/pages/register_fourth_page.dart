@@ -11,7 +11,6 @@ class RegisterFourthPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    icon:
     const Icon(Icons.arrow_downward);
     Widget header() {
       return Container(
