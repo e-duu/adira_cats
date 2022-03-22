@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class UnitSearchPage extends StatelessWidget {
-  const UnitSearchPage({ Key? key }) : super(key: key);
+  const UnitSearchPage({Key? key}) : super(key: key);
 
   Widget navbar() {
     return Container(
@@ -36,7 +36,7 @@ class UnitSearchPage extends StatelessWidget {
     );
   }
 
-  Widget formSearch(){
+  Widget formSearch() {
     return Container(
       width: double.infinity,
       margin: EdgeInsets.symmetric(
@@ -50,10 +50,10 @@ class UnitSearchPage extends StatelessWidget {
     );
   }
 
-  Widget searchUnitPhoto(){
+  Widget searchUnitPhoto() {
     return Container(
       padding: EdgeInsets.symmetric(
-        vertical: 24.h,
+        vertical: defaultPadding.h,
       ),
       decoration: BoxDecoration(
         color: kGreyColor,
@@ -93,12 +93,12 @@ class UnitSearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              navbar(),
-              Container(
+        body: SafeArea(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            navbar(),
+            Container(
               margin: EdgeInsets.symmetric(
                 horizontal: defaultMargin.w,
               ),
@@ -110,10 +110,9 @@ class UnitSearchPage extends StatelessWidget {
                 ],
               ),
             ),
-            ],
-          ),
+          ],
         ),
-      )
-    );
+      ),
+    ));
   }
 }
