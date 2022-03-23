@@ -41,8 +41,8 @@ class UnitSearchDetailPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              width: 420.w,
-              height: 320.h,
+              width: 294.w,
+              height: 236.h,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/image_car_1.png'),
@@ -91,7 +91,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                   CustomUnitButton(
                     width: 36.w,
                     height: 36.w,
-                    margin: EdgeInsets.only(right: 48.w, bottom: 24.h),
+                    margin: EdgeInsets.only(right: 24.w, bottom: 24.h),
                     color: kPrimaryColor,
                     imageUrl: 'assets/image_button_pin.png',
                     onPressed: () {},
