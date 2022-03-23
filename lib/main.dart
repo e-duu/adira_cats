@@ -107,17 +107,17 @@ class MyApp extends StatelessWidget {
           // home: LoginPage(),
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
-
-          /// NOTE : DONE
-          // home: NotificationPage(),
-          // home: OtpPage(),
           // home: ProfilePage(),
-          // home: MessageRoomPage(),
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
+
+          /// NOTE : DONE
+          // home: NotificationPage(),
+          home: OtpPage(),
+          // home: MessageRoomPage(),
           // home: CreateStPage(),
           // home: StDonePage(),
           // home: HandoverStPage(),
@@ -152,7 +152,7 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailStResultPage(),
           // home: ResultVisitPage(),
           // home: SavePage(),
-          home: SavePageEmpty(),
+          // home: SavePageEmpty(),
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),

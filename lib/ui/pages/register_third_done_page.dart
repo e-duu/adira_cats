@@ -2,7 +2,6 @@ import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:adira_cats/ui/widgets/custom_rectangle_edit.dart';
-import 'package:adira_cats/ui/widgets/custom_upload_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
@@ -30,14 +29,14 @@ class RegisterThirdDonePage extends StatelessWidget {
           children: [
             CustomRectangleEdit(
               imageUrl: 'assets/image_upload.png',
-              onPressed: (){},
+              onPressed: () {},
             ),
             SizedBox(
               width: 16.w,
             ),
             CustomRectangleEdit(
               imageUrl: 'assets/image_user.png',
-              onPressed: (){},
+              onPressed: () {},
             ),
           ],
         ),
