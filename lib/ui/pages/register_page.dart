@@ -329,12 +329,22 @@ class _RegisterPageState extends State<RegisterPage> {
             SizedBox(
               height: 34.h,
             ),
+            CustomButtonBorder(
+              title: 'Reset',
+              titleColor: kDarkGreyColor,
+              onPressed: () {},
+              borderColor: kDarkGreyColor,
+              borderWidth: 2,
+              fontWeight: light,
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomButtonBorder(
+                CustomButton(
                   title: 'Batal',
-                  titleColor: kRedColor,
                   onPressed: () => showDialog<String>(
                     context: context,
                     builder: (BuildContext context) => Container(
@@ -398,36 +408,24 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                     ),
                   ),
-                  borderColor: kRedColor,
-                  borderWidth: 2.r,
-                  fontWeight: normal,
+                  color: kRedColor,
+                  textStyle: whiteTextStyle,
                   width: 138.w,
                 ),
                 SizedBox(
                   width: 12.w,
                 ),
-                CustomButtonBorder(
-                  title: 'Reset',
-                  titleColor: kBlackColor,
+                CustomButton(
+                  title: 'Lanjutkan',
                   onPressed: () {},
-                  borderColor: kDarkGreyColor,
-                  borderWidth: 2.r,
-                  fontWeight: normal,
+                  color: kPrimaryColor,
+                  textStyle: blackTextStyle,
                   width: 138.w,
                 ),
               ],
             ),
             SizedBox(
-              height: 12.h,
-            ),
-            CustomButton(
-              title: 'Lanjutkan',
-              onPressed: () {},
-              color: kPrimaryColor,
-              textStyle: blackTextStyle,
-              margin: EdgeInsets.only(
-                bottom: defaultMargin.h,
-              ),
+              height: 36.h,
             ),
           ],
         ),

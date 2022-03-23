@@ -108,7 +108,7 @@ class MyApp extends StatelessWidget {
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
           // home: ProfilePage(),
-          // home: RegisterPage(),
+          home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterThirdDonePage(),
@@ -116,7 +116,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : DONE
           // home: NotificationPage(),
-          home: OtpPage(),
+          // home: OtpPage(),
           // home: MessageRoomPage(),
           // home: CreateStPage(),
           // home: StDonePage(),
