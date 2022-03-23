@@ -1,4 +1,3 @@
-import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/widgets/custom_card_st.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +39,7 @@ class CreateStContractNumberPage extends StatelessWidget {
     Widget notifSearch() {
       return Container(
         margin: EdgeInsets.symmetric(
-          vertical: 36.h,
+          vertical: defaultMargin.h,
         ),
         child: StyledText(
           text:
@@ -64,7 +63,7 @@ class CreateStContractNumberPage extends StatelessWidget {
     Widget card() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 36.h,
+          bottom: defaultMargin.h,
         ),
         child: Column(
           children: [
@@ -100,7 +99,7 @@ class CreateStContractNumberPage extends StatelessWidget {
               titleColor: kBlackColor,
               onPressed: () {},
               borderColor: kDarkGreyColor,
-              borderWidth: 2.r,
+              borderWidth: 2,
               fontWeight: normal,
               margin: EdgeInsets.symmetric(
                 horizontal: 20.w,
@@ -126,7 +125,6 @@ class CreateStContractNumberPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: kWhiteColor,
       body: ListView(
-        padding: EdgeInsets.symmetric(),
         children: [
           SafeArea(
             child: Column(
