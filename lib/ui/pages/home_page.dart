@@ -35,9 +35,7 @@ class HomePage extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () => {},
-                  icon: Icon(
-                    Icons.subject_sharp,
-                  ),
+                  icon: libraryIcon,
                 ),
                 Container(
                   width: 120.w,

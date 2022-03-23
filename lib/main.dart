@@ -1,7 +1,7 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
-import 'package:adira_cats/ui/pages/create_st_cotract_number_page.dart';
+import 'package:adira_cats/ui/pages/create_st_contract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_page.dart';
 import 'package:adira_cats/ui/pages/error_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_detail_page.dart';
@@ -46,6 +46,9 @@ import 'package:adira_cats/ui/pages/report_detail_visit_result_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/request_unit_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
+import 'package:adira_cats/ui/pages/result_visit_page.dart';
+import 'package:adira_cats/ui/pages/save_page.dart';
+import 'package:adira_cats/ui/pages/save_page_empty.dart';
 import 'package:adira_cats/ui/pages/share_unit_found_page.dart';
 import 'package:adira_cats/ui/pages/share_unit_page.dart';
 import 'package:adira_cats/ui/pages/st_done_page.dart';
@@ -104,16 +107,17 @@ class MyApp extends StatelessWidget {
           // home: LoginPage(),
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
-
-          /// NOTE : DONE
-          home: OtpPage(),
           // home: ProfilePage(),
-          // home: MessageRoomPage(),
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
+
+          /// NOTE : DONE
+          // home: NotificationPage(),
+          home: OtpPage(),
+          // home: MessageRoomPage(),
           // home: CreateStPage(),
           // home: StDonePage(),
           // home: HandoverStPage(),
@@ -146,6 +150,9 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailStNihilPage(),
           // home: ReportDetailStResultDetailPage(),
           // home: ReportDetailStResultPage(),
+          // home: ResultVisitPage(),
+          // home: SavePage(),
+          // home: SavePageEmpty(),
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
