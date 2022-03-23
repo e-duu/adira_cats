@@ -19,7 +19,7 @@ class CustomLeftChatItem extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(
         top: 18.h,
-        left: 24.w,
+        left: defaultPadding.w,
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
