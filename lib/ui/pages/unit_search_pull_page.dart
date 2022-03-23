@@ -123,78 +123,7 @@ class UnitSearchPullPage extends StatelessWidget {
                   borderWidth: 2,
                   fontWeight: light,
                   width: 150.w,
-                  onPressed: () => showDialog<String>(
-                    context: context,
-                    builder: (BuildContext context) => Container(
-                      width: double.infinity,
-                      padding: EdgeInsets.symmetric(
-                        vertical: 48.h,
-                      ),
-                      child: AlertDialog(
-                        titlePadding: EdgeInsets.only(
-                          top: 10.h,
-                        ),
-                        title: Container(
-                          margin: EdgeInsets.only(
-                            top: 48.h,
-                          ),
-                          child: Text(
-                            'Batalkan?',
-                            style: blackTextStyle.copyWith(
-                              fontWeight: bold,
-                              fontSize: 18.sp,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        content: Text(
-                          "Anda yakin akan membatalkan?",
-                          style: blackTextStyle,
-                          textAlign: TextAlign.center,
-                        ),
-                        actions: <Widget>[
-                          Container(
-                            margin: EdgeInsets.only(
-                              bottom: 24.h,
-                              right: 24.w,
-                              left: 24.w,
-                            ),
-                            child: Column(
-                              children: [
-                                CustomButtonBorder(
-                                  title: 'Batalkan',
-                                  titleColor: kRedColor,
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  },
-                                  borderColor: kRedColor,
-                                  borderWidth: 2,
-                                  fontWeight: light,
-                                ),
-                                SizedBox(
-                                  height: 12.h,
-                                ),
-                                CustomButton(
-                                  title: 'Lanjutkan',
-                                  onPressed: () {},
-                                  color: kPrimaryColor,
-                                  textStyle: blackTextStyle,
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                        actionsPadding: EdgeInsets.only(
-                          bottom: 10.h,
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                            18.r,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  onPressed: () {}
                 ),
                 SizedBox(
                   width: 12.w,
@@ -202,63 +131,7 @@ class UnitSearchPullPage extends StatelessWidget {
                 CustomButtonBorder(
                   title: 'Simpan',
                   titleColor: kBlackColor,
-                  onPressed: () => showDialog<String>(
-                    context: context,
-                    builder: (BuildContext context) => Container(
-                      width: double.infinity,
-                      padding: EdgeInsets.symmetric(
-                        vertical: 48.h,
-                      ),
-                      child: AlertDialog(
-                        titlePadding: EdgeInsets.only(
-                          top: 10.h,
-                        ),
-                        title: Container(
-                          margin: EdgeInsets.only(
-                            top: 48.h,
-                          ),
-                          child: Text(
-                            'Disimpan!',
-                            style: blackTextStyle.copyWith(
-                              fontWeight: bold,
-                              fontSize: 18.sp,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        content: Container(
-                          child: Text(
-                            "Daftar Tarik Unit berhasil disimpan!",
-                            style: blackTextStyle,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        actions: <Widget>[
-                          Container(
-                            margin: EdgeInsets.only(
-                              bottom: 24.h,
-                              right: 24.w,
-                              left: 24.w,
-                            ),
-                            child: CustomButton(
-                              title: 'Ok',
-                              onPressed: () {},
-                              color: kPrimaryColor,
-                              textStyle: blackTextStyle,
-                            ),
-                          )
-                        ],
-                        actionsPadding: EdgeInsets.only(
-                          bottom: 10.h,
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                            18.r,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  onPressed: () {},
                   borderColor: kDarkGreyColor,
                   borderWidth: 2.r,
                   fontWeight: normal,

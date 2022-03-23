@@ -163,32 +163,6 @@ class _RegisterPageState extends State<RegisterPage> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(defaultRadius),
               ),
-              // Column(
-              //   crossAxisAlignment: CrossAxisAlignment.start,
-              //   children: [
-              //     ElevatedButton(
-              //       onPressed: () {
-              //         showDatePicker(
-              //           context: context,
-              //           initialDate: DateTime.now(),
-              //           firstDate: DateTime(2000),
-              //           lastDate: DateTime(2025),
-              //           builder: (context, child) => Theme(
-              //             data: ThemeData().copyWith(
-              //               colorScheme: ColorScheme.dark(
-              //                 primary: kPrimaryColor,
-              //                 surface: kPrimaryColor,
-              //                 onSurface: kBlackColor,
-              //               ),
-              //               dialogBackgroundColor: kLightYellowColor,
-              //             ),
-              //             child: child!,
-              //           ),
-              //         );
-              //       },
-              //       child: Text(''),
-              //     ),
-              //   ],
               child: DateTimePicker(
                 initialValue: '',
                 style: greyTextStyle.copyWith(

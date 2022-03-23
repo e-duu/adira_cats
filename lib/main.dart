@@ -57,6 +57,7 @@ import 'package:adira_cats/ui/pages/unit_search_detail_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
 import 'package:adira_cats/ui/pages/verification_done_page.dart';
 import 'package:adira_cats/ui/pages/testing.dart';
@@ -113,7 +114,7 @@ class MyApp extends StatelessWidget {
           // home: ProfilePage(),
           // home: MessageRoomPage(),
           // home: RegisterPage(),
-          // home: RegisterSecondPage(),
+          home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
@@ -159,6 +160,7 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailMvResultPage(),
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
+          // home: UnitSearchPullFoundPage()
           // home: UnitSearchDetailPage(),
           // home: UnitSearchPullPage(),
         ),
