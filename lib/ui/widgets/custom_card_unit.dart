@@ -49,7 +49,7 @@ class CustomCardUnit extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.symmetric(
-              horizontal: 24.w,
+              horizontal: defaultPadding.w,
               vertical: 18.h,
             ),
             child: Column(
