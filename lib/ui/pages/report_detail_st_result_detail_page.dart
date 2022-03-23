@@ -13,27 +13,27 @@ class ReportDetailStResultDetailPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Detail Surat Tugas",
-          preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
-            ),
-          ),
-          suffixWidget: GestureDetector(
-            onTap: () {},
-            child: Container(
-              width: 27.w,
-              height: 26.h,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(
-                    "assets/icon_arrow_back.png",
-                  )
-                )
-              )
-            )
-          )
+          // text: "Detail Surat Tugas",
+          // preffixWidget: GestureDetector(
+          //   onTap: () {},
+          //   child: Icon(
+          //     Icons.subject_sharp,
+          //   ),
+          // ),
+          // suffixWidget: GestureDetector(
+          //   onTap: () {},
+          //   child: Container(
+          //     width: 27.w,
+          //     height: 26.h,
+          //     decoration: BoxDecoration(
+          //       image: DecorationImage(
+          //         image: AssetImage(
+          //           "assets/icon_arrow_back.png",
+          //         )
+          //       )
+          //     )
+          //   )
+          // )
         ),
       );
     }

@@ -13,9 +13,9 @@ class ShareUnitFoundPage extends StatelessWidget {
     Widget navbar(){
       return Container(
         child: CustomNavbar(
-          text: "Bagikan", 
-          preffixWidget: SizedBox(), 
-          suffixWidget: SizedBox(),
+          // text: "Bagikan", 
+          // preffixWidget: SizedBox(), 
+          // suffixWidget: SizedBox(),
         ),
       );
     }

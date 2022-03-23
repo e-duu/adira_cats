@@ -1,6 +1,7 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:pin_input_text_field/pin_input_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sms_autofill/sms_autofill.dart';
@@ -289,17 +290,23 @@ class OtpPage extends StatelessWidget {
     }
 
     return Scaffold(
+      appBar: AppBar(
+      title: Center(child: const Text('Drawer Demo')),
+      
+  ),
+      
       backgroundColor: kWhiteColor,
       resizeToAvoidBottomInset: false,
       floatingActionButton: Visibility(
         child: button(),
       ),
+        drawer: CustomNavbar(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: SafeArea(
         child: Center(
           child: ListView(
             children: [
-              logo(),
+          
               title(),
               otpEmail(),
               otpMessage(),
@@ -309,5 +316,28 @@ class OtpPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Drawer newMethod() {
+    return Drawer(
+      child: ListView(
+      padding: EdgeInsets.zero,
+      children: const <Widget>[
+     
+      ListTile(
+        leading: Icon(Icons.message),
+        title: Text('Messages'),
+      ),
+      ListTile(
+        leading: Icon(Icons.account_circle),
+        title: Text('Profile'),
+      ),
+      ListTile(
+        leading: Icon(Icons.settings),
+        title: Text('Settings'),
+      ),
+    ],
+  ),
+      );
   }
 }

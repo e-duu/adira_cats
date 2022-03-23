@@ -15,12 +15,12 @@ class ProfilePage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Profil Saya",
-          preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(Icons.subject_sharp),
-          ),
-          suffixWidget: SizedBox(),
+        //   text: "Profil Saya",
+        //   preffixWidget: GestureDetector(
+        //     onTap: () {},
+        //     child: Icon(Icons.subject_sharp),
+        //   ),
+        //   suffixWidget: SizedBox(),
         ),
       );
     }

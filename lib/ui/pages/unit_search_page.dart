@@ -13,25 +13,25 @@ class UnitSearchPage extends StatelessWidget {
         bottom: 6.h,
       ),
       child: CustomNavbar(
-        text: "Pencarian Unit",
-        preffixWidget: GestureDetector(
-          onTap: () {},
-          child: Icon(
-            Icons.subject_sharp,
-          ),
-        ),
-        suffixWidget: Container(
-          width: 48.w,
-          height: 48.h,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            image: DecorationImage(
-              image: AssetImage(
-                "assets/image_user.png",
-              ),
-            ),
-          ),
-        ),
+        // text: "Pencarian Unit",
+        // preffixWidget: GestureDetector(
+        //   onTap: () {},
+        //   child: Icon(
+        //     Icons.subject_sharp,
+        //   ),
+        // ),
+        // suffixWidget: Container(
+        //   width: 48.w,
+        //   height: 48.h,
+        //   decoration: BoxDecoration(
+        //     shape: BoxShape.circle,
+        //     image: DecorationImage(
+        //       image: AssetImage(
+        //         "assets/image_user.png",
+        //       ),
+        //     ),
+        //   ),
+        // ),
       ),
     );
   }

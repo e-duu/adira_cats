@@ -13,33 +13,33 @@ class NotificationPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Notifikasi",
-          preffixWidget: IconButton(
-            onPressed: () => {},
-            icon: libraryIcon,
-          ),
-          suffixWidget: GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ProfilePage(),
-                ),
-              );
-            },
-            child: Container(
-              width: 48.w,
-              height: 48.h,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  image: AssetImage(
-                    "assets/image_user.png",
-                  ),
-                ),
-              ),
-            ),
-          ),
+          // text: "Notifikasi",
+          // preffixWidget: IconButton(
+          //   onPressed: () => {},
+          //   icon: libraryIcon,
+          // ),
+          // suffixWidget: GestureDetector(
+          //   onTap: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(
+          //         builder: (context) => ProfilePage(),
+          //       ),
+          //     );
+          //   },
+          //   child: Container(
+          //     width: 48.w,
+          //     height: 48.h,
+          //     decoration: BoxDecoration(
+          //       shape: BoxShape.circle,
+          //       image: DecorationImage(
+          //         image: AssetImage(
+          //           "assets/image_user.png",
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+          // ),
         ),
       );
     }

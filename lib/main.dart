@@ -91,12 +91,12 @@ class MyApp extends StatelessWidget {
           // home: ResetPasswordPage(),
 
           /// NOTE : DONE
-          // home: OtpPage(),
+          home: OtpPage(),
           // home: ProfilePage(),
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
-          home: RegisterThirdDonePage(),
+          // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
           // home: CreateStPage(),
           // home: StDonePage(),

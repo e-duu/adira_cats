@@ -13,24 +13,24 @@ class UnitSearchDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget navbar() {
       return CustomNavbar(
-        text: 'Detail Unit',
-        preffixWidget: GestureDetector(
-          onTap: () {},
-          child: Icon(
-            Icons.subject_sharp,
-          ),
-        ),
-        suffixWidget: Container(
-          width: 21.w,
-          height: 21.h,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(
-                "assets/icon_arrow_back.png",
-              ),
-            ),
-          ),
-        ),
+        // text: 'Detail Unit',
+        // preffixWidget: GestureDetector(
+        //   onTap: () {},
+        //   child: Icon(
+        //     Icons.subject_sharp,
+        //   ),
+        // ),
+        // suffixWidget: Container(
+        //   width: 21.w,
+        //   height: 21.h,
+        //   decoration: BoxDecoration(
+        //     image: DecorationImage(
+        //       image: AssetImage(
+        //         "assets/icon_arrow_back.png",
+        //       ),
+        //     ),
+        //   ),
+        // ),
       );
     }
 
