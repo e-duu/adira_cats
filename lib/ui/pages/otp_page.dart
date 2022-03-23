@@ -1,7 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:pin_input_text_field/pin_input_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 import 'package:flutter/material.dart';
@@ -255,6 +254,7 @@ class OtpPage extends StatelessWidget {
     Widget button() {
       return Container(
         margin: EdgeInsets.only(
+          top: 100.h,
           bottom: 26.h,
         ),
         child: Column(
@@ -290,13 +290,8 @@ class OtpPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: kWhiteColor,
-      resizeToAvoidBottomInset: false,
-      floatingActionButton: Visibility(
-        child: button(),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: SafeArea(
-        child: Center(
+        child: SingleChildScrollView(
           child: ListView(
             children: [
               logo(),
@@ -304,6 +299,7 @@ class OtpPage extends StatelessWidget {
               otpEmail(),
               otpMessage(),
               contentTitle(),
+              button(),
             ],
           ),
         ),
