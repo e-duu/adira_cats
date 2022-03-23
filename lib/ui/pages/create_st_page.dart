@@ -1,4 +1,3 @@
-import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';

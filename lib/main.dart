@@ -108,7 +108,7 @@ class MyApp extends StatelessWidget {
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
           // home: ProfilePage(),
-          home: RegisterPage(),
+          // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterThirdDonePage(),
@@ -156,7 +156,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
-          // home: ReportDetailMvPage(),
+          home: ReportDetailMvPage(),
           // home: ReportDetailMvResultPage(),
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),

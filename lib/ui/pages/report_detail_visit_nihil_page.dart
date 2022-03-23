@@ -24,8 +24,8 @@ class ReportDetailVisitNihilPage extends StatelessWidget {
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
-              width: 27.w,
-              height: 26.h,
+              width: 21.w,
+              height: 21.h,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -42,26 +42,23 @@ class ReportDetailVisitNihilPage extends StatelessWidget {
     Widget selectArea() {
       return Container(
         margin: EdgeInsets.only(
-        top: 24.h,
-        right: 36.w,
-        left: 36.w,
-      ),
+          top: 24.h,
+          right: 36.w,
+          left: 36.w,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomDropdown(
-              items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-              hintText: 'WAKANDA'
+                items: ['pilih 1', 'pilih 2', 'pilih 3'], hintText: 'WAKANDA'),
+            SizedBox(
+              height: 12.h,
             ),
-            SizedBox(height: 12.h,),
             CustomDropdown(
-              items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-              hintText: 'WAKANDA SELATAN'
-            ),
+                items: ['pilih 1', 'pilih 2', 'pilih 3'],
+                hintText: 'WAKANDA SELATAN'),
             Container(
-              margin: EdgeInsets.symmetric(
-                vertical: 12.h
-              ),
+              margin: EdgeInsets.symmetric(vertical: 12.h),
               child: Text(
                 'Periode (Awal s/d Akhir)',
                 style: darkGreyTextStyle.copyWith(
@@ -76,7 +73,6 @@ class ReportDetailVisitNihilPage extends StatelessWidget {
       );
     }
 
-
     Widget selectPeriod() {
       return Container(
         margin: EdgeInsets.symmetric(
@@ -89,34 +85,35 @@ class ReportDetailVisitNihilPage extends StatelessWidget {
                 Container(
                   width: 138.w,
                   child: CustomDropdownBorder(
-                    items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-                    hintText: '1 Januari 1940', 
+                    items: ['pilih 1', 'pilih 2', 'pilih 3'],
+                    hintText: '1 Januari 1940',
                     // width: 132.w,
                   ),
                 ),
-                SizedBox(width: 12.h,),
+                SizedBox(
+                  width: 12.h,
+                ),
                 Container(
                   width: 138.w,
                   child: CustomDropdownBorder(
-                    items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-                    hintText: '1 Maret 1945', 
+                    items: ['pilih 1', 'pilih 2', 'pilih 3'],
+                    hintText: '1 Maret 1945',
                     // width: 132.w,
                   ),
                 ),
               ],
             ),
             Container(
-              margin: EdgeInsets.symmetric(
-                vertical: defaultMargin,
-              ),
-              child: Text(
-                'Input Kunjungan tidak ditemukan.',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
-                  fontWeight: light,
+                margin: EdgeInsets.symmetric(
+                  vertical: defaultMargin,
                 ),
-              )
-            )
+                child: Text(
+                  'Input Kunjungan tidak ditemukan.',
+                  style: darkGreyTextStyle.copyWith(
+                    fontSize: 13.sp,
+                    fontWeight: light,
+                  ),
+                ))
           ],
         ),
       );
@@ -134,11 +131,11 @@ class ReportDetailVisitNihilPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             CustomButtonBorder(
-              title: 'Kembali', 
-              titleColor: kDarkGreyColor, 
-              onPressed: (){}, 
-              borderColor: kDarkGreyColor, 
-              borderWidth: 2.w, 
+              title: 'Kembali',
+              titleColor: kDarkGreyColor,
+              onPressed: () {},
+              borderColor: kDarkGreyColor,
+              borderWidth: 2.w,
               fontWeight: light,
             ),
           ],
