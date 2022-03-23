@@ -1,7 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
-import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,8 +23,8 @@ class ReportDetailMvPage extends StatelessWidget {
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
-              width: 27.w,
-              height: 26.h,
+              width: 21.w,
+              height: 21.h,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -39,7 +37,6 @@ class ReportDetailMvPage extends StatelessWidget {
         ),
       );
     }
-
 
     Widget button() {
       return Container(
@@ -73,11 +70,11 @@ class ReportDetailMvPage extends StatelessWidget {
           child: ListView(
             children: [
               navbar(),
-              SizedBox(height: 24.h,),
-              CustomInputSearch(
-                onPressed: (){}, 
-                hintText: 'Cari Nomor Workflow ...'
+              SizedBox(
+                height: 24.h,
               ),
+              CustomInputSearch(
+                  onPressed: () {}, hintText: 'Cari Nomor Workflow ...'),
             ],
           ),
         ),

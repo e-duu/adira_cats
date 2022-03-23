@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomNotificationItem extends StatelessWidget {
   final int count;
+
   const CustomNotificationItem({
     Key? key,
     required this.count,

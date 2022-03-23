@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
 

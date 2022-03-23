@@ -1,6 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widgets/custom_right_chat_item.dart';
-import 'package:adira_cats/ui/widgets/custom_left_chat_item.dart';
+import 'package:adira_cats/ui/widgets/custom_chat_item.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -139,30 +138,35 @@ class MessageRoomPage extends StatelessWidget {
               ),
             ),
           ),
-          CustomLeftChatItem(
+          CustomChatItem(
             chat: 'Pak saya izin telat karena mungut kucing di jalan',
             time: '06.21',
-            unread: false,
+            read: false,
+            auth: false,
           ),
-          CustomRightChatItem(
+          CustomChatItem(
             chat: 'Berapa ekor yang kamu pungut?',
             time: '06.25',
-            unread: false,
+            read: false,
+            auth: true,
           ),
-          CustomLeftChatItem(
+          CustomChatItem(
             chat: '5 ekor udah sama induknya 👍',
             time: '06.27',
-            unread: false,
+            read: false,
+            auth: false,
           ),
-          CustomLeftChatItem(
+          CustomChatItem(
             chat: 'Ini saya langsung belikan whiskas',
             time: '06.27',
-            unread: false,
+            read: false,
+            auth: false,
           ),
-          CustomRightChatItem(
+          CustomChatItem(
             chat: 'Siap',
             time: '06.31',
-            unread: false,
+            read: false,
+            auth: true,
           ),
           Container(
             margin: EdgeInsets.only(
@@ -176,10 +180,11 @@ class MessageRoomPage extends StatelessWidget {
               ),
             ),
           ),
-          CustomRightChatItem(
+          CustomChatItem(
             chat: 'Lah memang kamu punya duit buat beli whiskas?',
             time: '05.48',
-            unread: true,
+            read: true,
+            auth: true,
           ),
         ],
       ),
