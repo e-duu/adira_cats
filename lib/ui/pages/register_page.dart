@@ -1,6 +1,5 @@
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +20,7 @@ class _RegisterPageState extends State<RegisterPage> {
     Widget header() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 24.h,
+          bottom: defaultPadding.h,
         ),
         child: CustomLogoAdira(
           text: 'Daftar Sebagai Informan',
@@ -163,32 +162,6 @@ class _RegisterPageState extends State<RegisterPage> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(defaultRadius),
               ),
-              // Column(
-              //   crossAxisAlignment: CrossAxisAlignment.start,
-              //   children: [
-              //     ElevatedButton(
-              //       onPressed: () {
-              //         showDatePicker(
-              //           context: context,
-              //           initialDate: DateTime.now(),
-              //           firstDate: DateTime(2000),
-              //           lastDate: DateTime(2025),
-              //           builder: (context, child) => Theme(
-              //             data: ThemeData().copyWith(
-              //               colorScheme: ColorScheme.dark(
-              //                 primary: kPrimaryColor,
-              //                 surface: kPrimaryColor,
-              //                 onSurface: kBlackColor,
-              //               ),
-              //               dialogBackgroundColor: kLightYellowColor,
-              //             ),
-              //             child: child!,
-              //           ),
-              //         );
-              //       },
-              //       child: Text(''),
-              //     ),
-              //   ],
               child: DateTimePicker(
                 initialValue: '',
                 style: greyTextStyle.copyWith(
@@ -329,7 +302,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
       return Container(
         margin: EdgeInsets.only(
-          top: 24.h,
+          top: defaultPadding.h,
         ),
         child: Column(
           children: [
@@ -355,18 +328,28 @@ class _RegisterPageState extends State<RegisterPage> {
             SizedBox(
               height: 34.h,
             ),
+            CustomButtonBorder(
+              title: 'Reset',
+              titleColor: kDarkGreyColor,
+              onPressed: () {},
+              borderColor: kDarkGreyColor,
+              borderWidth: 2,
+              fontWeight: light,
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomButtonBorder(
+                CustomButton(
                   title: 'Batal',
-                  titleColor: kRedColor,
                   onPressed: () => showDialog<String>(
                     context: context,
                     builder: (BuildContext context) => Container(
                       child: AlertDialog(
                         titlePadding: EdgeInsets.symmetric(
-                          vertical: 24.h,
+                          vertical: defaultPadding.h,
                         ),
                         title: Container(
                           margin: EdgeInsets.only(
@@ -398,8 +381,8 @@ class _RegisterPageState extends State<RegisterPage> {
                             fontWeight: normal,
                             width: 308.w,
                             margin: EdgeInsets.only(
-                              right: 36.w,
-                              left: 36.w,
+                              right: defaultMargin.w,
+                              left: defaultMargin.w,
                             ),
                           ),
                           SizedBox(
@@ -412,8 +395,8 @@ class _RegisterPageState extends State<RegisterPage> {
                             textStyle: blackTextStyle,
                             width: 308.w,
                             margin: EdgeInsets.only(
-                              right: 36.w,
-                              left: 36.w,
+                              right: defaultMargin.w,
+                              left: defaultMargin.w,
                               bottom: 48.h,
                             ),
                           ),
@@ -424,36 +407,24 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                     ),
                   ),
-                  borderColor: kRedColor,
-                  borderWidth: 2.r,
-                  fontWeight: normal,
+                  color: kRedColor,
+                  textStyle: whiteTextStyle,
                   width: 138.w,
                 ),
                 SizedBox(
                   width: 12.w,
                 ),
-                CustomButtonBorder(
-                  title: 'Reset',
-                  titleColor: kBlackColor,
+                CustomButton(
+                  title: 'Lanjutkan',
                   onPressed: () {},
-                  borderColor: kDarkGreyColor,
-                  borderWidth: 2.r,
-                  fontWeight: normal,
+                  color: kPrimaryColor,
+                  textStyle: blackTextStyle,
                   width: 138.w,
                 ),
               ],
             ),
             SizedBox(
-              height: 12.h,
-            ),
-            CustomButton(
-              title: 'Lanjutkan',
-              onPressed: () {},
-              color: kPrimaryColor,
-              textStyle: blackTextStyle,
-              margin: EdgeInsets.only(
-                bottom: 36.h,
-              ),
+              height: 36.h,
             ),
           ],
         ),

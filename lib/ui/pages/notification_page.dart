@@ -47,7 +47,7 @@ class NotificationPage extends StatelessWidget {
     Widget cardNotif() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 150.h,
+          bottom: defaultBottom.h,
         ),
         child: Column(
           children: [

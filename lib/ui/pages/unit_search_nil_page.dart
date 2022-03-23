@@ -3,10 +3,9 @@ import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
-import 'package:styled_text/styled_text.dart';
 
 class UnitSearchNilPage extends StatelessWidget {
-  const UnitSearchNilPage({ Key? key }) : super(key: key);
+  const UnitSearchNilPage({Key? key}) : super(key: key);
 
   Widget navbar() {
     return Container(
@@ -37,7 +36,7 @@ class UnitSearchNilPage extends StatelessWidget {
     );
   }
 
-  Widget formSearch(){
+  Widget formSearch() {
     return Container(
       width: double.infinity,
       margin: EdgeInsets.symmetric(
@@ -51,7 +50,7 @@ class UnitSearchNilPage extends StatelessWidget {
     );
   }
 
-  Widget searchUnitPhoto(){
+  Widget searchUnitPhoto() {
     return Container(
       width: double.infinity,
       height: 100.h,
@@ -90,9 +89,9 @@ class UnitSearchNilPage extends StatelessWidget {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
-          )
+          ),
         ],
       ),
     );
@@ -100,9 +99,7 @@ class UnitSearchNilPage extends StatelessWidget {
 
   Widget notif() {
     return Container(
-      margin: EdgeInsets.symmetric(
-        vertical: 36.h
-      ),
+      margin: EdgeInsets.symmetric(vertical: 36.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -115,7 +112,7 @@ class UnitSearchNilPage extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ],
-      )
+      ),
     );
   }
 
@@ -128,22 +125,22 @@ class UnitSearchNilPage extends StatelessWidget {
             children: [
               navbar(),
               Container(
-              margin: EdgeInsets.symmetric(
-                horizontal: defaultMargin.w,
+                margin: EdgeInsets.symmetric(
+                  horizontal: defaultMargin.w,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    formSearch(),
+                    searchUnitPhoto(),
+                    notif(),
+                  ],
+                ),
               ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  formSearch(),
-                  searchUnitPhoto(),
-                  notif(),
-                ],
-              ),
-            ),
             ],
           ),
         ),
-      )
+      ),
     );
   }
 }

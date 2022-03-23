@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
           bottom: 20.h,
         ),
         padding: EdgeInsets.symmetric(
-          horizontal: defaultPadding.w,
+          horizontal: defaultMargin.w,
           vertical: defaultMargin.h,
         ),
         decoration: BoxDecoration(
@@ -35,9 +35,7 @@ class HomePage extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: () => {},
-                  icon: Icon(
-                    Icons.subject_sharp,
-                  ),
+                  icon: libraryIcon,
                 ),
                 Container(
                   width: 120.w,

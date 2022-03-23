@@ -4,8 +4,7 @@ import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_unit_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../shared/theme.dart';
+import 'package:adira_cats/shared/theme.dart';
 
 class UnitSearchDetailPage extends StatelessWidget {
   const UnitSearchDetailPage({Key? key}) : super(key: key);

@@ -1,14 +1,23 @@
+import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/pages/home_page.dart';
+import 'package:adira_cats/ui/pages/message_page.dart';
+import 'package:adira_cats/ui/pages/notification_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_page.dart';
+import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_field.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  ProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +26,9 @@ class ProfilePage extends StatelessWidget {
         child: CustomNavbar(
           text: "Profil Saya",
           preffixWidget: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              _scaffoldKey.currentState!.openEndDrawer();
+            },
             child: Icon(Icons.subject_sharp),
           ),
           suffixWidget: SizedBox(),
@@ -70,7 +81,7 @@ class ProfilePage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 24.h,
+            height: defaultPadding.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -229,22 +240,6 @@ class ProfilePage extends StatelessWidget {
             SizedBox(
               height: 12.h,
             ),
-            Text(
-              "Password",
-              style: darkGreyTextStyle.copyWith(
-                fontSize: 13.sp,
-                fontWeight: semibold,
-              ),
-            ),
-            CustomInput(
-              readOnly: true,
-              hintText: "*******",
-              hintColor: kBlackColor,
-              margin: EdgeInsets.only(
-                top: 12.h,
-              ),
-              width: double.infinity,
-            ),
             SizedBox(
               height: 12.h,
             ),
@@ -359,57 +354,185 @@ class ProfilePage extends StatelessWidget {
             SizedBox(
               height: 12.h,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Email",
-                      style: darkGreyTextStyle.copyWith(
-                        fontSize: 13.sp,
-                        fontWeight: semibold,
-                      ),
-                    ),
-                    CustomInput(
-                      readOnly: true,
-                      hintText: "edward@gmail.com",
-                      hintColor: kBlackColor,
-                      margin: EdgeInsets.only(
-                        top: 12.h,
-                      ),
-                      width: 138.w,
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  width: 12,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Nomer Telepon",
-                      style: darkGreyTextStyle.copyWith(
-                        fontSize: 13.sp,
-                        fontWeight: semibold,
-                      ),
-                    ),
-                    CustomInput(
-                      readOnly: true,
-                      hintText: "0813261392",
-                      hintColor: kBlackColor,
-                      margin: EdgeInsets.only(
-                        top: 12.h,
-                      ),
-                      width: 138.w,
-                    ),
-                  ],
-                ),
-              ],
+            Text(
+              "Email",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: semibold,
+              ),
+            ),
+            CustomInput(
+              readOnly: true,
+              hintText: "edward@gmail.com",
+              hintColor: kBlackColor,
+              margin: EdgeInsets.only(
+                top: 12.h,
+              ),
+              width: double.infinity,
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
+            Text(
+              "Nomer Telepon",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: semibold,
+              ),
+            ),
+            CustomInput(
+              readOnly: true,
+              hintText: "0813261392",
+              hintColor: kBlackColor,
+              margin: EdgeInsets.only(
+                top: 12.h,
+              ),
+              width: double.infinity,
             ),
           ],
+        ),
+      );
+    }
+
+    Widget buttonChangePassword() {
+      return Container(
+        child: CustomButton(
+          title: 'Ganti Password',
+          color: kPrimaryColor,
+          textStyle: blackTextStyle,
+          margin: EdgeInsets.only(
+            top: defaultMargin.h,
+            left: defaultMargin.w,
+            right: defaultMargin.w,
+          ),
+          onPressed: () => showDialog<String>(
+            context: context,
+            builder: (BuildContext context) => SingleChildScrollView(
+              child: Container(
+                width: double.infinity,
+                child: AlertDialog(
+                  titlePadding: EdgeInsets.only(
+                    top: 10.h,
+                  ),
+                  contentPadding: EdgeInsets.symmetric(
+                    vertical: 20.h,
+                  ),
+                  title: Container(
+                    margin: EdgeInsets.only(
+                      top: 48.h,
+                    ),
+                    child: Text(
+                      'Ganti Password',
+                      style: blackTextStyle.copyWith(
+                        fontWeight: bold,
+                        fontSize: 18.sp,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  content: Container(
+                    width: double.infinity,
+                    margin: EdgeInsets.symmetric(
+                      horizontal: defaultMargin.w,
+                    ),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Password Lama",
+                          style: darkGreyTextStyle.copyWith(
+                            fontSize: 13.sp,
+                            fontWeight: semibold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 12.h,
+                        ),
+                        CustomInput(
+                          hintText: "Password Lama",
+                          hintColor: kDarkGreyColor,
+                          obscureText: true,
+                        ),
+                        SizedBox(
+                          height: 12.h,
+                        ),
+                        Text(
+                          "Password Baru",
+                          style: darkGreyTextStyle.copyWith(
+                            fontSize: 13.sp,
+                            fontWeight: semibold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 12.h,
+                        ),
+                        CustomInput(
+                          hintText: "Password Baru",
+                          hintColor: kDarkGreyColor,
+                          obscureText: true,
+                        ),
+                        SizedBox(
+                          height: 12.h,
+                        ),
+                        Text(
+                          "konfimasi Password Baru",
+                          style: darkGreyTextStyle.copyWith(
+                            fontSize: 13.sp,
+                            fontWeight: semibold,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        SizedBox(
+                          height: 12.h,
+                        ),
+                        CustomInput(
+                          hintText: "Konfirmasi Password Baru",
+                          hintColor: kDarkGreyColor,
+                          obscureText: true,
+                        ),
+                      ],
+                    ),
+                  ),
+                  actions: <Widget>[
+                    Container(
+                      width: 380.w,
+                      margin: EdgeInsets.only(
+                        right: defaultMargin.w,
+                        left: defaultMargin.w,
+                        bottom: 48.h,
+                      ),
+                      child: Column(
+                        children: [
+                          CustomButtonBorder(
+                            title: "Batalkan",
+                            titleColor: kDarkGreyColor,
+                            onPressed: () => Navigator.pop(context),
+                            borderColor: kDarkGreyColor,
+                            borderWidth: 2,
+                            fontWeight: light,
+                          ),
+                          SizedBox(
+                            height: 12.h,
+                          ),
+                          CustomButton(
+                            title: 'Tetap Edit',
+                            onPressed: () {},
+                            color: kRedColor,
+                            textStyle: whiteTextStyle,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                  actionsPadding: EdgeInsets.only(
+                    bottom: 10.h,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.r),
+                  ),
+                ),
+              ),
+            ),
+          ),
         ),
       );
     }
@@ -419,7 +542,7 @@ class ProfilePage extends StatelessWidget {
         child: CustomButtonBorder(
           title: "Logout",
           margin: EdgeInsets.only(
-            top: 18.h,
+            top: 12.h,
             bottom: 150.h,
             left: defaultMargin.w,
             right: defaultMargin.w,
@@ -506,19 +629,102 @@ class ProfilePage extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
+    Widget bottomNavigation() {
+      return Align(
+        alignment: Alignment.bottomCenter,
+        child: Container(
+          width: double.infinity,
+          height: 100.h,
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultPadding,
+          ),
+          decoration: BoxDecoration(
+            color: kWhiteColor,
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(defaultPadding.r),
+              topLeft: Radius.circular(defaultPadding.r),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: kLigthGrayColor.withOpacity(1),
+                spreadRadius: 3,
+                blurRadius: 18.r,
+                offset: Offset(0, 0),
+              ),
+            ],
+          ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              navbar(),
-              profile(),
-              formInput(),
-              buttonLogout(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  // NOTE: ICON CHAT
+                  CustomBottomNavigationItem(
+                    index: 1,
+                    icon: Icons.message,
+                    isNotif: true,
+                    number: 15,
+                  ),
+
+                  // NOTE: ICON LOCATION
+                  CustomBottomNavigationItem(
+                    index: 2,
+                    icon: Icons.location_on,
+                  ),
+
+                  // NOTE: ICON HOME
+                  CustomBottomNavigationItem(
+                    index: 0,
+                    icon: Icons.home,
+                  ),
+
+                  // NOTE: ICON NOTIFICATION
+                  CustomBottomNavigationItem(
+                    index: 3,
+                    icon: Icons.notifications,
+                    isNotif: true,
+                    number: 99,
+                  ),
+
+                  // NOTE: ICON PROFILE
+                  CustomBottomNavigationItem(
+                    index: 4,
+                    icon: Icons.person,
+                  ),
+                ],
+              ),
             ],
           ),
         ),
-      ),
+      );
+    }
+
+    return BlocBuilder<PageCubit, int>(
+      builder: (context, currentIndex) {
+        return Scaffold(
+          key: _scaffoldKey,
+          endDrawer: CustomDrawer(),
+          resizeToAvoidBottomInset: false,
+          floatingActionButton: bottomNavigation(),
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerDocked,
+          backgroundColor: kWhiteColor,
+          body: SafeArea(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  navbar(),
+                  profile(),
+                  formInput(),
+                  buttonChangePassword(),
+                  buttonLogout(),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
+import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
@@ -69,13 +69,23 @@ class RegisterSecondPage extends StatelessWidget {
             SizedBox(
               height: 5.h,
             ),
-            CustomDropdown(
-              items: [
-                'Bank BRI',
-                'Bank BCA',
-                'Bank Jago',
-              ],
-              hintText: 'Pilih Bank',
+            Container(
+              height: 50.h,
+              child: DropdownSearch<String>(
+                mode: Mode.MENU,
+                hint: 'Pilih Bank',
+                showSearchBox: true,
+                showClearButton: true,
+                items: [
+                  "BANK BRI",
+                  'BANK BNI',
+                  "BANK BCA",
+                  "BANK JAGO",
+                  "BANK MANDIRI",
+                  "BANK PERMATA",
+                ],
+                onChanged: print,
+              ),
             ),
             SizedBox(
               height: 12.h,

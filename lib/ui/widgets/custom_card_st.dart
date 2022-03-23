@@ -2,16 +2,16 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomCardSk extends StatelessWidget {
-  final String skNumber;
+class CustomCardSt extends StatelessWidget {
+  final String stNumber;
   final String contractNumber;
   final bool notifNew;
   final String notifText;
   final bool clickDetail;
 
-  const CustomCardSk({
+  const CustomCardSt({
     Key? key,
-    required this.skNumber,
+    required this.stNumber,
     required this.contractNumber,
     this.notifNew = false,
     this.notifText = '',
@@ -25,8 +25,8 @@ class CustomCardSk extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 18.h),
       margin: EdgeInsets.only(
         bottom: 12.h,
-        right: 24.w,
-        left: 24.w,
+        right: defaultPadding.w,
+        left: defaultPadding.w,
       ),
       decoration: BoxDecoration(
         border: Border.all(
@@ -56,7 +56,7 @@ class CustomCardSk extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Nomor SK : $skNumber",
+                  "Nomor SK : $stNumber",
                   style: blackTextStyle.copyWith(
                     fontWeight: bold,
                     fontSize: 12.sp,

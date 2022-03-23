@@ -48,7 +48,7 @@ class MessagePage extends StatelessWidget {
     Widget search() {
       return Container(
         margin: EdgeInsets.symmetric(
-          vertical: 24.h,
+          vertical: defaultPadding.h,
         ),
         child: CustomInputSearch(
             hintText: 'Cari Pesan atau Kontak...', onPressed: () {}),
@@ -59,8 +59,8 @@ class MessagePage extends StatelessWidget {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.only(
-          right: 24.w,
-          left: 24.w,
+          right: defaultPadding.w,
+          left: defaultPadding.w,
           bottom: 150.h,
         ),
         child: Column(
