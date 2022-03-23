@@ -45,12 +45,7 @@ class ShareUnitPage extends StatelessWidget {
           left: 24.w,
           right: 24.w,
         ),
-        child: GoogleMap(
-          initialCameraPosition: CameraPosition(
-            target: LatLng(-0.8971395757503112, 100.3507166778259),
-            zoom: 14.0,
-          ),
-        ),
+        child: CustomGoogleMaps(),
       );
     }
 

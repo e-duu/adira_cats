@@ -1,3 +1,4 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -24,7 +25,9 @@ class _CustomGoogleMapsState extends State<CustomGoogleMaps> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
+      height: 300.h,
+      width: double.infinity,
       child: GoogleMap(
         mapType: MapType.normal,
         initialCameraPosition: CameraPosition(
