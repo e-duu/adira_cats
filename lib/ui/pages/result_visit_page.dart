@@ -1,3 +1,4 @@
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_card_notification.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +41,7 @@ class ResultVisitPage extends StatelessWidget {
     Widget cardNotif() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 150.h,
+          bottom: defaultBottom.h,
         ),
         child: Column(
           children: [
@@ -77,14 +78,39 @@ class ResultVisitPage extends StatelessWidget {
               icon: false,
               createTime: false,
               title: 'Zacharius Michael',
-              message: 'klik untuk melihat',
+              message: 'Nomor Kontrak : 9999 8888 6666',
               fontWeight: light,
             ),
             CustomCardNotification(
               onTap: () {},
-              title: 'Anda menerima pesan dari Anggora',
-              message: 'klik untuk melihat',
-              time: '03.45',
+              icon: false,
+              createTime: false,
+              title: 'Ackermann Kenny',
+              message: 'Nomor Kontrak : 9999 8888 1111',
+              fontWeight: light,
+            ),
+            CustomCardNotification(
+              onTap: () {},
+              icon: false,
+              createTime: false,
+              title: 'Kirschtein Jean',
+              message: 'Nomor Kontrak : 9999 8888 2222',
+              fontWeight: light,
+            ),
+            CustomCardNotification(
+              onTap: () {},
+              icon: false,
+              createTime: false,
+              title: 'Shadis Keith',
+              message: 'Nomor Kontrak : 9999 8888 3333',
+              fontWeight: light,
+            ),
+            CustomCardNotification(
+              onTap: () {},
+              icon: false,
+              createTime: false,
+              title: 'Leonhart Annie',
+              message: 'Nomor Kontrak : 9999 8888 4444',
               fontWeight: light,
             ),
 
@@ -97,7 +123,7 @@ class ResultVisitPage extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    'Kemarin',
+                    '2 hari yang lalu',
                     style: darkGreyTextStyle.copyWith(
                       fontWeight: semibold,
                       fontSize: 13.sp,
@@ -110,9 +136,32 @@ class ResultVisitPage extends StatelessWidget {
             // NOTE: CARD NOTIFICATION
             CustomCardNotification(
               onTap: () {},
-              title: 'Anda menerima pesan dari Persia',
-              message: 'klik untuk melihat',
+              icon: false,
+              createTime: false,
+              title: 'Reiss Historia',
+              message: 'Nomor Kontrak : 9999 8888 4444',
               time: '22.22',
+              fontWeight: light,
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget buttonBack() {
+      return Container(
+        margin: EdgeInsets.symmetric(
+          horizontal: 36.w,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            CustomButtonBorder(
+              title: 'Kembali',
+              titleColor: kDarkGreyColor,
+              onPressed: () {},
+              borderColor: kDarkGreyColor,
+              borderWidth: 2.w,
               fontWeight: light,
             ),
           ],
@@ -134,6 +183,7 @@ class ResultVisitPage extends StatelessWidget {
                   child: Column(
                     children: [
                       cardNotif(),
+                      buttonBack(),
                     ],
                   ),
                 ),
