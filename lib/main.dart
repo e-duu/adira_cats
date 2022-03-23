@@ -156,7 +156,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
-          home: ReportDetailMvPage(),
+          // home: ReportDetailMvPage(),
           // home: ReportDetailMvResultPage(),
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
