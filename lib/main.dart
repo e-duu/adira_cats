@@ -86,17 +86,17 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
-          routes: {
-            '/': (context) => SplashPage(),
-            '/load': (context) => LoadPage(),
-            '/login': (context) => LoginPage(),
-            '/main': (context) => MainPage(),
-            '/home': (context) => HomePage(),
-            '/profile': (context) => ProfilePage(),
-            '/message': (context) => MessagePage(),
-            '/unit_search': (context) => UnitSearchPage(),
-            '/notification': (context) => NotificationPage(),
-          },
+          // routes: {
+          //   '/': (context) => SplashPage(),
+          //   '/load': (context) => LoadPage(),
+          //   '/login': (context) => LoginPage(),
+          //   '/main': (context) => MainPage(),
+          //   '/home': (context) => HomePage(),
+          //   '/profile': (context) => ProfilePage(),
+          //   '/message': (context) => MessagePage(),
+          //   '/unit_search': (context) => UnitSearchPage(),
+          //   '/notification': (context) => NotificationPage(),
+          // },
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
@@ -149,6 +149,8 @@ class MyApp extends StatelessWidget {
           // home: TestingPage(),
           // home: ReportDetailMvPage(),
           // home: ReportDetailMvResultPage(),
+          // home: ShareUnitPage(),
+          home: ShareUnitFoundPage(),
           // home: UnitSearchDetailPage(),
           // home: UnitSearchPullPage(),
         ),

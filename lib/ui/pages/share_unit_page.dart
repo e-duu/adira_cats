@@ -1,5 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_google_maps.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,12 +28,15 @@ class ShareUnitPage extends StatelessWidget {
         ),
         child: CustomInputSearch(
           onPressed: () {},
+          margin: EdgeInsets.only(
+            top: 24.h,
+          ),
           hintText: "Cari Cabang ...",
         ),
       );
     }
 
-    Widget GoMap(){
+    Widget goMap(){
       return Container(
         height: 600.h,
         width: 380.w,
@@ -41,10 +45,7 @@ class ShareUnitPage extends StatelessWidget {
           left: 24.w,
           right: 24.w,
         ),
-        child: Image.asset(
-          "assets/image_map1.png",
-          fit: BoxFit.cover,
-        ),
+        child: CustomGoogleMaps(),
       );
     }
 
@@ -73,7 +74,7 @@ class ShareUnitPage extends StatelessWidget {
             children: [
               navbar(),
               formSearch(),
-              GoMap(),
+              goMap(),
               buttonBack(),
             ],
           )
