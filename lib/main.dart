@@ -150,6 +150,8 @@ class MyApp extends StatelessWidget {
           // home: TestingPage(),
           // home: ReportDetailMvPage(),
           // home: ReportDetailMvResultPage(),
+          // home: ShareUnitPage(),
+          home: ShareUnitFoundPage(),
           // home: UnitSearchDetailPage(),
           // home: UnitSearchPullPage(),
           home: ResultVisitPage(),
