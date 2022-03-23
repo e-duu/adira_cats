@@ -391,7 +391,10 @@ class UnitSearchDetailPage extends StatelessWidget {
         borderColor: kGreyColor,
         borderWidth: 2.w,
         fontWeight: light,
-        margin: EdgeInsets.symmetric(horizontal: 36.w, vertical: 36.w),
+        margin: EdgeInsets.symmetric(
+          horizontal: 36.w,
+          vertical: 36.w,
+        ),
       );
     }
 
