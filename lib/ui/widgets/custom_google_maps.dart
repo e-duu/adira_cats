@@ -8,8 +8,7 @@ class CustomGoogleMaps extends StatefulWidget {
 
 class _CustomGoogleMapsState extends State<CustomGoogleMaps> {
   final Set<Marker> _markers = {};
-  final LatLng _currentPosition =
-    LatLng(-0.8971395757503112, 100.3507166778259);
+  final LatLng _currentPosition = LatLng(-0.8971395757503112, 100.3507166778259);
 
   @override
   void initState() {
