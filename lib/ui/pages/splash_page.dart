@@ -16,7 +16,7 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     // TODO: implement initState
     Timer(Duration(seconds: 5), () {
-      Navigator.pushNamed(context, '/login');
+      Navigator.pushNamed(context, '/load');
     });
     super.initState();
   }

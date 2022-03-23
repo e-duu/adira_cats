@@ -13,7 +13,7 @@ class HandoverSkConfirmedPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Serah Terima SK",
+          text: "Serah Terima ST",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(
@@ -23,8 +23,8 @@ class HandoverSkConfirmedPage extends StatelessWidget {
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
-              width: 27.w,
-              height: 26.h,
+              width: 21.w,
+              height: 21.h,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(

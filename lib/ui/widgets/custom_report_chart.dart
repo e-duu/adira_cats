@@ -20,7 +20,7 @@ class CustomReportChart extends StatelessWidget {
       width: double.infinity,
       height: 261.h,
       padding: EdgeInsets.symmetric(
-        horizontal: 24.w,
+        horizontal: defaultPadding.w,
         vertical: 18.h,
       ),
       decoration: BoxDecoration(

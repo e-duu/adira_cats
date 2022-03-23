@@ -26,6 +26,9 @@ class CustomButton extends StatelessWidget {
       width: width,
       height: 50.h,
       margin: margin,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(defaultRadius),
+      ),
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(

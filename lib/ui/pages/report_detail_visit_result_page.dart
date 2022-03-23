@@ -1,20 +1,22 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_detail_report.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
+import 'package:styled_text/styled_text.dart';
 
-class ReportDetailProdexNihilPage extends StatelessWidget {
-  const ReportDetailProdexNihilPage({Key? key}) : super(key: key);
+class ReportDetailVisitResultPage extends StatelessWidget {
+  const ReportDetailVisitResultPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Prodex",
+          text: "Input Kunjungan",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(
@@ -51,12 +53,12 @@ class ReportDetailProdexNihilPage extends StatelessWidget {
           children: [
             CustomDropdown(
               items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-              hintText: 'WAKANDA'
+              hintText: 'JAKARTA'
             ),
             SizedBox(height: 12.h,),
             CustomDropdown(
               items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-              hintText: 'WAKANDA SELATAN'
+              hintText: 'JAKARTA PUSAT'
             ),
             Container(
               margin: EdgeInsets.symmetric(
@@ -90,8 +92,7 @@ class ReportDetailProdexNihilPage extends StatelessWidget {
                   width: 138.w,
                   child: CustomDropdownBorder(
                     items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-                    hintText: '1 Januari 1940', 
-                    // width: 132.w,
+                    hintText: '1 Januari 2022', 
                   ),
                 ),
                 SizedBox(width: 12.h,),
@@ -99,8 +100,7 @@ class ReportDetailProdexNihilPage extends StatelessWidget {
                   width: 138.w,
                   child: CustomDropdownBorder(
                     items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-                    hintText: '1 Maret 1945', 
-                    // width: 132.w,
+                    hintText: '1 Maret 2022', 
                   ),
                 ),
               ],
@@ -109,19 +109,103 @@ class ReportDetailProdexNihilPage extends StatelessWidget {
               margin: EdgeInsets.symmetric(
                 vertical: defaultMargin,
               ),
-              child: Text(
-                'Prodex tidak ditemukan.',
+              child: StyledText(
+                text: '<bold>1</bold> Input Kunjungan telah ditemukan.',
+                tags: {
+                  'bold': StyledTextTag(
+                    style: TextStyle(
+                      fontWeight: bold,
+                      fontSize: 13.sp
+                    ),
+                  ),
+                },
                 style: darkGreyTextStyle.copyWith(
-                  fontSize: 13.sp,
                   fontWeight: light,
+                  fontSize: 13.sp,
                 ),
-              )
+                textAlign: TextAlign.center,
+              ),
             )
           ],
         ),
       );
     }
 
+    Widget externalName(){
+      return Container(
+        margin: EdgeInsets.symmetric(
+          horizontal: 24.w,
+        ),
+        width: double.infinity,
+        padding: EdgeInsets.symmetric(
+          horizontal: 27.w,
+          vertical: 23.h,
+        ),
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: kLigthGrayColor,
+            width: 2,
+          ),
+          borderRadius: BorderRadius.circular(defaultRadius),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 30.w,
+              height: 30.h,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    'assets/icon_input_kunjungan.png'
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 21.w,
+            ),
+            Expanded(
+              child: Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Nomor Kunjungan : 123',
+                      style: blackTextStyle.copyWith(
+                        fontWeight: bold,
+                        fontSize: 12.sp,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 4.h,
+                    ),
+                    Text(
+                      'Nomor Kontrak : 9999 8888 6666',
+                      style: blackTextStyle.copyWith(
+                        fontWeight: bold,
+                        fontSize: 12.sp,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 4.h,
+                    ),
+                    Text(
+                      "Klik untuk lihat detail",
+                      style: darkGreyTextStyle.copyWith(
+                        fontWeight: light,
+                        fontSize: 11.sp,
+                        fontStyle: FontStyle.italic
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
+      );
+    }
+    
     Widget button() {
       return Container(
         margin: EdgeInsets.only(
@@ -155,6 +239,7 @@ class ReportDetailProdexNihilPage extends StatelessWidget {
                 navbar(),
                 selectArea(),
                 selectPeriod(),
+                externalName(),
                 button(),
               ],
             ),

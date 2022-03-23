@@ -1,35 +1,93 @@
+import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
-import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
-import 'package:flutter/material.dart';
-import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/widgets/custom_navbar.dart';
+import 'package:adira_cats/ui/widgets/custom_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter/material.dart';
 
-class RegisterPage extends StatelessWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+class UnitSearchProcessPage extends StatelessWidget {
+  const UnitSearchProcessPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Widget header() {
+    // NOTE: NAVBAR
+    Widget navbar() {
       return Container(
-        margin: EdgeInsets.only(
-          bottom: 24.h,
+        child: CustomNavbar(
+          text: "Proses",
+          preffixWidget: GestureDetector(
+            onTap: () {},
+            child: Icon(
+              Icons.subject_sharp,
+            ),
+          ),
+          suffixWidget: GestureDetector(
+            onTap: () {},
+            child: Container(
+              width: 21.w,
+              height: 21.h,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/icon_arrow_back.png",
+                  ),
+                ),
+              ),
+            ),
+          ),
         ),
-        child: CustomLogoAdira(
-          text: 'Daftar Sebagai Informan',
+      );
+    }
+
+    Widget topButton() {
+      return Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            SizedBox(
+              height: 34.h,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CustomButtonBorder(
+                  title: 'Buat Surat Tugas',
+                  titleColor: kBlackColor,
+                  onPressed: () {},
+                  borderColor: kDarkGreyColor,
+                  borderWidth: 2.r,
+                  fontWeight: normal,
+                  width: 138.w,
+                ),
+                SizedBox(
+                  width: 12.w,
+                ),
+                CustomButtonBorder(
+                  title: 'Tarik Unit',
+                  titleColor: kBlackColor,
+                  onPressed: () {},
+                  borderColor: kDarkGreyColor,
+                  borderWidth: 2.r,
+                  fontWeight: normal,
+                  width: 138.w,
+                ),
+              ],
+            ),
+          ],
         ),
       );
     }
 
     Widget inputSection() {
-      Widget firstName() {
+      Widget customerName() {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Nama Depan",
+              "Nama Nasabah",
               style: darkGreyTextStyle.copyWith(
                 fontSize: 13.sp,
                 fontWeight: semibold,
@@ -39,7 +97,7 @@ class RegisterPage extends StatelessWidget {
               height: 5.h,
             ),
             CustomInput(
-              hintText: 'Nama Depan',
+              hintText: 'Nama Nasabah',
               hintColor: kDarkGreyColor,
               filled: true,
               margin: EdgeInsets.only(
@@ -53,12 +111,12 @@ class RegisterPage extends StatelessWidget {
         );
       }
 
-      Widget lastName() {
+      Widget contractNumber() {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Nama Belakang",
+              "Nomor Kontrak",
               style: darkGreyTextStyle.copyWith(
                 fontSize: 13.sp,
                 fontWeight: semibold,
@@ -68,7 +126,7 @@ class RegisterPage extends StatelessWidget {
               height: 5.h,
             ),
             CustomInput(
-              hintText: 'Nama Belakang',
+              hintText: 'Nomor Kontrak',
               hintColor: kDarkGreyColor,
               filled: true,
               margin: EdgeInsets.only(
@@ -82,67 +140,12 @@ class RegisterPage extends StatelessWidget {
         );
       }
 
-      Widget idNumber() {
+      Widget reason() {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Nomor KTP",
-              style: darkGreyTextStyle.copyWith(
-                fontSize: 13.sp,
-                fontWeight: semibold,
-              ),
-            ),
-            SizedBox(
-              height: 5.h,
-            ),
-            CustomInput(
-              hintText: 'Nomor KTP',
-              hintColor: kDarkGreyColor,
-              filled: true,
-              margin: EdgeInsets.only(
-                bottom: 12.h,
-              ),
-            ),
-            SizedBox(
-              height: 12.h,
-            ),
-          ],
-        );
-      }
-
-      Widget bornPlace() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Tempat Lahir",
-              style: darkGreyTextStyle.copyWith(
-                fontSize: 13.sp,
-                fontWeight: semibold,
-              ),
-            ),
-            SizedBox(
-              height: 5.h,
-            ),
-            CustomInput(
-              hintText: 'Tempat Lahir',
-              hintColor: kDarkGreyColor,
-              filled: true,
-            ),
-            SizedBox(
-              height: 12.h,
-            ),
-          ],
-        );
-      }
-
-      Widget bornDay() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Tanggal Lahir",
+              "Sertakan Alasan ...",
               style: darkGreyTextStyle.copyWith(
                 fontSize: 13.sp,
                 fontWeight: semibold,
@@ -153,11 +156,13 @@ class RegisterPage extends StatelessWidget {
             ),
             CustomDropdown(
               items: [
-                '29 Februari 1996',
-                'Example',
-                'Dropdown',
+                'Unit tidak pernah terlihat',
+                'Ditarik EXC lain',
+                'Pemakai pasang badan',
+                'Nomor berbeda',
+                'Sudah bayar',
               ],
-              hintText: 'Tanggal Lahir',
+              hintText: 'Sertakan Alasan ...',
             ),
             SizedBox(
               height: 12.h,
@@ -166,12 +171,12 @@ class RegisterPage extends StatelessWidget {
         );
       }
 
-      Widget address() {
+      Widget notes() {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Alamat",
+              "Tambahkan Catatan ...",
               style: darkGreyTextStyle.copyWith(
                 fontSize: 13.sp,
                 fontWeight: semibold,
@@ -181,85 +186,7 @@ class RegisterPage extends StatelessWidget {
               height: 5.h,
             ),
             CustomInput(
-              hintText: 'Alamat',
-              hintColor: kDarkGreyColor,
-              filled: true,
-            ),
-            SizedBox(
-              height: 12.h,
-            ),
-          ],
-        );
-      }
-
-      Widget residentAddress() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Alamat Domisili",
-              style: darkGreyTextStyle.copyWith(
-                fontSize: 13.sp,
-                fontWeight: semibold,
-              ),
-            ),
-            SizedBox(
-              height: 5.h,
-            ),
-            CustomInput(
-              hintText: 'Alamat Domisili',
-              hintColor: kDarkGreyColor,
-              filled: true,
-            ),
-            SizedBox(
-              height: 12.h,
-            ),
-          ],
-        );
-      }
-
-      Widget emailAddress() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Email",
-              style: darkGreyTextStyle.copyWith(
-                fontSize: 13.sp,
-                fontWeight: semibold,
-              ),
-            ),
-            SizedBox(
-              height: 5.h,
-            ),
-            CustomInput(
-              hintText: 'Email',
-              hintColor: kDarkGreyColor,
-              filled: true,
-            ),
-            SizedBox(
-              height: 12.h,
-            ),
-          ],
-        );
-      }
-
-      Widget phoneNumber() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Nomor Telefon",
-              style: darkGreyTextStyle.copyWith(
-                fontSize: 13.sp,
-                fontWeight: semibold,
-              ),
-            ),
-            SizedBox(
-              height: 5.h,
-            ),
-            CustomInput(
-              hintText: 'Nomor Telefon',
+              hintText: 'Tambahkan Catatan ...',
               hintColor: kDarkGreyColor,
               filled: true,
             ),
@@ -273,31 +200,26 @@ class RegisterPage extends StatelessWidget {
       return Container(
         margin: EdgeInsets.only(
           top: 24.h,
+          bottom: 46.h,
+          right: 36.w,
+          left: 36.w,
         ),
         child: Column(
           children: [
-            firstName(),
-            lastName(),
-            idNumber(),
-            bornPlace(),
-            bornDay(),
-            address(),
-            residentAddress(),
-            emailAddress(),
-            phoneNumber(),
+            customerName(),
+            contractNumber(),
+            reason(),
+            notes(),
           ],
         ),
       );
     }
 
-    Widget button() {
+    Widget bottomButton() {
       return Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            SizedBox(
-              height: 34.h,
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -390,13 +312,15 @@ class RegisterPage extends StatelessWidget {
               height: 12.h,
             ),
             CustomButton(
-              title: 'Lanjutkan',
+              margin: EdgeInsets.only(
+                right: 36.w,
+                left: 36.w,
+                bottom: 36.h,
+              ),
+              title: 'Submit',
               onPressed: () {},
               color: kPrimaryColor,
               textStyle: blackTextStyle,
-              margin: EdgeInsets.only(
-                bottom: 36.h,
-              ),
             ),
           ],
         ),
@@ -405,21 +329,17 @@ class RegisterPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: kWhiteColor,
-      body: ListView(
-        padding: EdgeInsets.symmetric(
-          horizontal: defaultMargin.w,
-        ),
-        children: [
-          SafeArea(
-            child: Column(
-              children: [
-                header(),
-                inputSection(),
-                button(),
-              ],
-            ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              navbar(),
+              topButton(),
+              inputSection(),
+              bottomButton(),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

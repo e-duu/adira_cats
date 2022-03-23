@@ -29,7 +29,7 @@ class CustomCardNotification extends StatelessWidget {
         ),
         padding: EdgeInsets.symmetric(
           vertical: 18.h,
-          horizontal: 24.w,
+          horizontal: defaultPadding.w,
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(defaultRadius),
@@ -41,8 +41,8 @@ class CustomCardNotification extends StatelessWidget {
         child: Row(
           children: [
             Container(
-              width: 36.w,
-              height: 36.h,
+              width: defaultMargin.w,
+              height: defaultMargin.h,
               margin: EdgeInsets.only(
                 right: 18.w,
               ),

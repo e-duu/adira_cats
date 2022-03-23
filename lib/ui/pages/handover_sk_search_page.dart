@@ -14,23 +14,28 @@ class HandoverSkSearchPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-            text: "Serah Terima SK",
-            preffixWidget: GestureDetector(
-              onTap: () {},
-              child: Icon(
-                Icons.subject_sharp,
+          text: "Serah Terima ST",
+          preffixWidget: GestureDetector(
+            onTap: () {},
+            child: Icon(
+              Icons.subject_sharp,
+            ),
+          ),
+          suffixWidget: GestureDetector(
+            onTap: () {},
+            child: Container(
+              width: 21.w,
+              height: 21.h,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/icon_arrow_back.png",
+                  ),
+                ),
               ),
             ),
-            suffixWidget: GestureDetector(
-                onTap: () {},
-                child: Container(
-                    width: 27.w,
-                    height: 26.h,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(
-                      "assets/icon_arrow_back.png",
-                    )))))),
+          ),
+        ),
       );
     }
 
@@ -50,7 +55,9 @@ class HandoverSkSearchPage extends StatelessWidget {
 
     Widget notifSearch() {
       return Container(
-        margin: EdgeInsets.only(bottom: 36.h),
+        margin: EdgeInsets.only(
+          bottom: 36.h,
+        ),
         child: StyledText(
           text: "<bold>1</bold> Nomor Kontrak telah ditemukan.",
           tags: {
@@ -70,28 +77,33 @@ class HandoverSkSearchPage extends StatelessWidget {
     }
 
     Widget cardNumberSk() {
-      return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        CustomCardSk(
-          skNumber: "3234 5678",
-          contractNumber: "9999 8888 7777",
-          notifNew: false,
-        ),
-      ]);
+      return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CustomCardSk(
+            skNumber: "3234 5678",
+            contractNumber: "9999 8888 7777",
+            notifNew: false,
+          ),
+        ],
+      );
     }
 
     return Scaffold(
-        body: SafeArea(
-      child: SingleChildScrollView(
-        child: Container(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
             child: Column(
-          children: [
-            navbar(),
-            formSearch(),
-            notifSearch(),
-            cardNumberSk(),
-          ],
-        )),
+              children: [
+                navbar(),
+                formSearch(),
+                notifSearch(),
+                cardNumberSk(),
+              ],
+            ),
+          ),
+        ),
       ),
-    ));
+    );
   }
 }

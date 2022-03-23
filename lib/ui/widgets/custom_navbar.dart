@@ -43,6 +43,7 @@ class CustomNavbar extends StatelessWidget {
               fontSize: 18.sp,
               fontWeight: bold,
             ),
+            overflow: TextOverflow.ellipsis,
           ),
           suffixWidget
         ],

@@ -25,8 +25,8 @@ class CustomCardSk extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 18.h),
       margin: EdgeInsets.only(
         bottom: 12.h,
-        right: 24.w,
-        left: 24.w,
+        right: defaultPadding.w,
+        left: defaultPadding.w,
       ),
       decoration: BoxDecoration(
         border: Border.all(

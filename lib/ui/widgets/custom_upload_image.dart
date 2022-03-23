@@ -13,7 +13,7 @@ class CustomUploadImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150.w,
+      width: defaultBottom.w,
       height: 200.h,
       decoration: BoxDecoration(
         shape: BoxShape.rectangle,

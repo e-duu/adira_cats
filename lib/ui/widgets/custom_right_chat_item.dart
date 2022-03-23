@@ -19,8 +19,8 @@ class CustomRightChatItem extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(
         top: 18.h,
-        left: 24.w,
-        right: 24.w,
+        left: defaultPadding.w,
+        right: defaultPadding.w,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,

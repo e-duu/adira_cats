@@ -1,10 +1,8 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
-import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -19,7 +17,7 @@ class HomePage extends StatelessWidget {
           bottom: 20.h,
         ),
         padding: EdgeInsets.symmetric(
-          horizontal: 24.w,
+          horizontal: defaultPadding.w,
           vertical: defaultMargin.h,
         ),
         decoration: BoxDecoration(
@@ -43,7 +41,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Container(
                   width: 120.w,
-                  height: 24.h,
+                  height: defaultPadding.h,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
@@ -84,7 +82,9 @@ class HomePage extends StatelessWidget {
               text: 'Selamat Datang, <bold>Edward Einselton!</bold>',
               tags: {
                 'bold': StyledTextTag(
-                  style: TextStyle(fontWeight: extraBold),
+                  style: TextStyle(
+                    fontWeight: extraBold,
+                  ),
                 ),
               },
               style: blackTextStyle.copyWith(
@@ -103,8 +103,8 @@ class HomePage extends StatelessWidget {
         height: 50.h,
         margin: EdgeInsets.only(
           top: 135.h,
-          right: 24.w,
-          left: 24.w,
+          right: defaultPadding.w,
+          left: defaultPadding.w,
         ),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(defaultRadius),
@@ -128,13 +128,18 @@ class HomePage extends StatelessWidget {
                 color: Colors.grey,
               ),
             ),
-            hintStyle: TextStyle(color: kGreyColor),
+            hintStyle: TextStyle(
+              color: kDarkGreyColor,
+            ),
             filled: true,
             fillColor: kWhiteColor,
             focusColor: kDarkGreyColor,
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(defaultRadius),
-              borderSide: BorderSide(color: kGreyColor, width: 2),
+              borderSide: BorderSide(
+                color: kGreyColor,
+                width: 2,
+              ),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(defaultRadius),
@@ -153,7 +158,7 @@ class HomePage extends StatelessWidget {
         width: double.infinity,
         height: 77.h,
         margin: EdgeInsets.symmetric(
-          horizontal: 24.w,
+          horizontal: defaultPadding.w,
           vertical: defaultMargin.h,
         ),
         padding: EdgeInsets.symmetric(
@@ -220,7 +225,7 @@ class HomePage extends StatelessWidget {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.symmetric(
-          horizontal: 24.w,
+          horizontal: defaultPadding.w,
         ),
         child: Column(
           children: [
@@ -451,10 +456,10 @@ class HomePage extends StatelessWidget {
     Widget announcement() {
       return Container(
         margin: EdgeInsets.only(
-          left: 24.w,
-          right: 24.w,
-          top: 24.h,
-          bottom: 150.h,
+          left: defaultPadding.w,
+          right: defaultPadding.w,
+          top: defaultPadding.h,
+          bottom: defaultBottom.h,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -500,7 +505,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       );
@@ -509,21 +514,19 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(children: [
-            Stack(
-              children: [
-                navbar(),
-                inputSearch(),
-              ],
-            ),
-            // CustomInputSearch(
-            //   hintText: "Apa Yang Anda Cari?",
-            //   onPressed: () {},
-            // ),
-            notification(),
-            menu(),
-            announcement()
-          ]),
+          child: Column(
+            children: [
+              Stack(
+                children: [
+                  navbar(),
+                  inputSearch(),
+                ],
+              ),
+              notification(),
+              menu(),
+              announcement()
+            ],
+          ),
         ),
       ),
     );
