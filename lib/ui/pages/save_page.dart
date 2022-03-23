@@ -1,3 +1,4 @@
+import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_card_notification.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -5,15 +6,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
 
-class ResultVisitPage extends StatelessWidget {
-  const ResultVisitPage({Key? key}) : super(key: key);
+class SavePage extends StatelessWidget {
+  const SavePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Input Hasil Kunjungan",
+          text: "Disimpan",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(
@@ -42,26 +43,10 @@ class ResultVisitPage extends StatelessWidget {
       return Container(
         child: Column(
           children: [
-            // NOTE: TITLE
-            Container(
-              margin: EdgeInsets.only(
-                top: defaultPadding.h,
-                left: 12.w,
-              ),
-              child: Row(
-                children: [
-                  Text(
-                    'Hari ini',
-                    style: darkGreyTextStyle.copyWith(
-                      fontWeight: semibold,
-                      fontSize: 13.sp,
-                    ),
-                  ),
-                ],
-              ),
+            SizedBox(
+              height: 6.h,
             ),
-
-            // NOTE: CARD RESULT VISIT
+            // NOTE: CARD SAVE
             CustomCardNotification(
               icon: false,
               createTime: false,
@@ -94,50 +79,90 @@ class ResultVisitPage extends StatelessWidget {
               message: 'Nomor Kontrak : 9999 8888 2222',
               fontWeight: light,
             ),
-            CustomCardNotification(
-              onTap: () {},
-              icon: false,
-              createTime: false,
-              title: 'Shadis Keith',
-              message: 'Nomor Kontrak : 9999 8888 3333',
-              fontWeight: light,
-            ),
-            CustomCardNotification(
-              onTap: () {},
-              icon: false,
-              createTime: false,
-              title: 'Leonhart Annie',
-              message: 'Nomor Kontrak : 9999 8888 4444',
-              fontWeight: light,
-            ),
+          ],
+        ),
+      );
+    }
 
-            // NOTE: TITLE
-            Container(
-              margin: EdgeInsets.only(
-                top: defaultPadding.h,
-                left: 12.w,
-              ),
-              child: Row(
-                children: [
-                  Text(
-                    '2 hari yang lalu',
-                    style: darkGreyTextStyle.copyWith(
-                      fontWeight: semibold,
-                      fontSize: 13.sp,
+    Widget buttonDeleteAll() {
+      return Container(
+        margin: EdgeInsets.only(
+          left: 12.w,
+          right: 12.w,
+          top: 295.h,
+          bottom: 12.h,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            CustomButtonBorder(
+              title: 'Hapus Semua',
+              titleColor: kRedColor,
+              onPressed: () => showDialog<String>(
+                context: context,
+                builder: (BuildContext context) => Container(
+                  child: AlertDialog(
+                    titlePadding: EdgeInsets.symmetric(
+                      vertical: defaultPadding.h,
+                    ),
+                    title: Container(
+                      margin: EdgeInsets.only(
+                        top: 48.h,
+                      ),
+                      child: Text(
+                        'Hapus Semua?',
+                        style: blackTextStyle.copyWith(
+                          fontWeight: bold,
+                          fontSize: 18.sp,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    content: Text(
+                      'Anda yakin menghapus semua?',
+                      style: blackTextStyle.copyWith(
+                        fontSize: 13.sp,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    actions: <Widget>[
+                      CustomButtonBorder(
+                        titleColor: kDarkGreyColor,
+                        title: 'Kembali',
+                        onPressed: () {},
+                        borderColor: kDarkGreyColor,
+                        borderWidth: 2.r,
+                        fontWeight: normal,
+                        width: 308.w,
+                        margin: EdgeInsets.only(
+                          right: defaultMargin.w,
+                          left: defaultMargin.w,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12.h,
+                      ),
+                      CustomButton(
+                        title: 'Hapus Semua',
+                        onPressed: () => Navigator.pop(context, 'OK'),
+                        color: kRedColor,
+                        textStyle: whiteTextStyle,
+                        width: 308.w,
+                        margin: EdgeInsets.only(
+                          right: defaultMargin.w,
+                          left: defaultMargin.w,
+                          bottom: 48.h,
+                        ),
+                      ),
+                    ],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.r),
                     ),
                   ),
-                ],
+                ),
               ),
-            ),
-
-            // NOTE: CARD RESULT VISIT
-            CustomCardNotification(
-              onTap: () {},
-              icon: false,
-              createTime: false,
-              title: 'Reiss Historia',
-              message: 'Nomor Kontrak : 9999 8888 4444',
-              time: '22.22',
+              borderColor: kRedColor,
+              borderWidth: 2.w,
               fontWeight: light,
             ),
           ],
@@ -147,9 +172,10 @@ class ResultVisitPage extends StatelessWidget {
 
     Widget buttonBack() {
       return Container(
-        margin: EdgeInsets.symmetric(
-          horizontal: 12.w,
-          vertical: defaultMargin.h,
+        margin: EdgeInsets.only(
+          left: 12.w,
+          right: 12.w,
+          bottom: defaultMargin.h,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -181,6 +207,7 @@ class ResultVisitPage extends StatelessWidget {
                   child: Column(
                     children: [
                       cardNotif(),
+                      buttonDeleteAll(),
                       buttonBack(),
                     ],
                   ),
