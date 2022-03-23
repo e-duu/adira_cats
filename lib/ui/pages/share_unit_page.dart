@@ -5,6 +5,7 @@ import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class ShareUnitPage extends StatelessWidget {
   const ShareUnitPage({Key? key}) : super(key: key);
@@ -45,7 +46,12 @@ class ShareUnitPage extends StatelessWidget {
           left: 24.w,
           right: 24.w,
         ),
-        child: CustomGoogleMaps(),
+        child: GoogleMap(
+          initialCameraPosition: CameraPosition(
+            target: LatLng(-0.8971395757503112, 100.3507166778259),
+            zoom: 14.0,
+          ),
+        ),
       );
     }
 
@@ -58,8 +64,8 @@ class ShareUnitPage extends StatelessWidget {
             horizontal: defaultMargin.w,
             vertical: defaultMargin.h,
           ),
-          titleColor: kGreyColor,
-          borderColor: kGreyColor,
+          titleColor: kDarkGreyColor,
+          borderColor: kDarkGreyColor,
           borderWidth: 2,
           fontWeight: light,
           onPressed: () {},
