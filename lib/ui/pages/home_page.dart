@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
           bottom: 20.h,
         ),
         padding: EdgeInsets.symmetric(
-          horizontal: defaultPadding.w,
+          horizontal: defaultMargin.w,
           vertical: defaultMargin.h,
         ),
         decoration: BoxDecoration(

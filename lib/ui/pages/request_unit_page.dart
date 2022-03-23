@@ -2,14 +2,12 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
-import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class RequestUnitPage extends StatelessWidget {
-  const RequestUnitPage({ Key? key }) : super(key: key);
-
+  const RequestUnitPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +39,7 @@ class RequestUnitPage extends StatelessWidget {
       );
     }
 
-    Widget cardSt(){
+    Widget cardSt() {
       return Container(
         margin: EdgeInsets.symmetric(
           horizontal: 24.w,
@@ -224,11 +222,9 @@ class RequestUnitPage extends StatelessWidget {
       );
     }
 
-    Widget formCreateNote(){
+    Widget formCreateNote() {
       return Container(
-        decoration: BoxDecoration(
-          color: kWhiteColor
-        ),
+        decoration: BoxDecoration(color: kWhiteColor),
         width: double.infinity,
         padding: EdgeInsets.symmetric(
           vertical: defaultMargin.h,
@@ -274,14 +270,10 @@ class RequestUnitPage extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    content: Container(
-                      margin: EdgeInsets.only(
-                        right: defaultMargin.w,
-                        left: defaultMargin.w,
-                      ),
-                      child: Text(
-                        "Anda yakin akan membatalkan?"
-                      )
+                    content: Text(
+                      "Anda yakin akan membatalkan?",
+                      style: blackTextStyle,
+                      textAlign: TextAlign.center,
                     ),
                     actions: <Widget>[
                       Container(
@@ -350,7 +342,7 @@ class RequestUnitPage extends StatelessWidget {
             children: [
               navbar(),
               cardSt(),
-              formCreateNote()
+              formCreateNote(),
             ],
           ),
         ),

@@ -6,9 +6,12 @@ import '../../shared/theme.dart';
 class CustomUploadImage extends StatelessWidget {
   final String hintText;
   final String imageUrl;
-  const CustomUploadImage(
-      {Key? key, required this.hintText, required this.imageUrl})
-      : super(key: key);
+
+  const CustomUploadImage({
+    Key? key,
+    required this.hintText,
+    required this.imageUrl,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

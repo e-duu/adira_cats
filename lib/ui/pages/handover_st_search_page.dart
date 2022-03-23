@@ -1,11 +1,13 @@
-import 'package:adira_cats/ui/widgets/custom_card_sk.dart';
+import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/widgets/custom_card_st.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
+import 'package:styled_text/styled_text.dart';
 
-class HandoverSkPage extends StatelessWidget {
-  const HandoverSkPage({Key? key}) : super(key: key);
+class HandoverStSearchPage extends StatelessWidget {
+  const HandoverStSearchPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,28 +48,43 @@ class HandoverSkPage extends StatelessWidget {
         child: CustomInputSearch(
           onPressed: () {},
           hintText: "Cari Nomor Kontak ...",
+          value: '7777',
         ),
       );
     }
 
-    Widget cardNumberSk() {
+    Widget notifSearch() {
+      return Container(
+        margin: EdgeInsets.only(
+          bottom: 36.h,
+        ),
+        child: StyledText(
+          text: "<bold>1</bold> Nomor Kontrak telah ditemukan.",
+          tags: {
+            'bold': StyledTextTag(
+              style: TextStyle(
+                fontWeight: semibold,
+              ),
+            )
+          },
+          style: greyTextStyle.copyWith(
+            fontSize: 13.sp,
+            fontWeight: light,
+          ),
+          textAlign: TextAlign.center,
+        ),
+      );
+    }
+
+    Widget cardNumberSt() {
       return Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CustomCardSk(
-            skNumber: "1234 5678",
-            contractNumber: "9999 9999 9999",
-            notifNew: true,
-          ),
-          CustomCardSk(
-            skNumber: "2234 5678",
-            contractNumber: "9999 8888 8888",
+          CustomCardSt(
+            stNumber: "3234 5678",
+            contractNumber: "9999 8888 7777",
             notifNew: false,
           ),
-          CustomCardSk(
-              skNumber: "3234 5678",
-              contractNumber: "9999 8888 7777",
-              notifNew: false),
         ],
       );
     }
@@ -80,7 +97,8 @@ class HandoverSkPage extends StatelessWidget {
               children: [
                 navbar(),
                 formSearch(),
-                cardNumberSk(),
+                notifSearch(),
+                cardNumberSt(),
               ],
             ),
           ),
