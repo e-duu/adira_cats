@@ -1,7 +1,7 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
-import 'package:adira_cats/ui/pages/create_st_cotract_number_page.dart';
+import 'package:adira_cats/ui/pages/create_st_contract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_page.dart';
 import 'package:adira_cats/ui/pages/error_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_detail_page.dart';
@@ -46,6 +46,7 @@ import 'package:adira_cats/ui/pages/report_detail_visit_result_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/request_unit_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
+import 'package:adira_cats/ui/pages/result_visit_page.dart';
 import 'package:adira_cats/ui/pages/share_unit_found_page.dart';
 import 'package:adira_cats/ui/pages/share_unit_page.dart';
 import 'package:adira_cats/ui/pages/st_done_page.dart';
@@ -86,17 +87,17 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
-          routes: {
-            '/': (context) => SplashPage(),
-            '/load': (context) => LoadPage(),
-            '/login': (context) => LoginPage(),
-            '/main': (context) => MainPage(),
-            '/home': (context) => HomePage(),
-            '/profile': (context) => ProfilePage(),
-            '/message': (context) => MessagePage(),
-            '/unit_search': (context) => UnitSearchPage(),
-            '/notification': (context) => NotificationPage(),
-          },
+          // routes: {
+          //   '/': (context) => SplashPage(),
+          //   '/load': (context) => LoadPage(),
+          //   '/login': (context) => LoginPage(),
+          //   '/main': (context) => MainPage(),
+          //   '/home': (context) => HomePage(),
+          //   '/profile': (context) => ProfilePage(),
+          //   '/message': (context) => MessagePage(),
+          //   '/unit_search': (context) => UnitSearchPage(),
+          //   '/notification': (context) => NotificationPage(),
+          // },
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
@@ -151,6 +152,7 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailMvResultPage(),
           // home: UnitSearchDetailPage(),
           // home: UnitSearchPullPage(),
+          home: ResultVisitPage(),
         ),
       ),
     );

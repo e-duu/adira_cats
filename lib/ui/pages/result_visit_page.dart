@@ -1,40 +1,33 @@
-import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/widgets/custom_card_notification.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
-import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:adira_cats/shared/theme.dart';
 
-class NotificationPage extends StatelessWidget {
-  const NotificationPage({Key? key}) : super(key: key);
+class ResultVisitPage extends StatelessWidget {
+  const ResultVisitPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Notifikasi",
-          preffixWidget: IconButton(
-            onPressed: () => {},
-            icon: libraryIcon,
+          text: "Input Hasil Kunjungan",
+          preffixWidget: GestureDetector(
+            onTap: () {},
+            child: Icon(
+              Icons.subject_sharp,
+            ),
           ),
           suffixWidget: GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ProfilePage(),
-                ),
-              );
-            },
+            onTap: () {},
             child: Container(
-              width: 48.w,
-              height: 48.h,
+              width: 27.w,
+              height: 26.h,
               decoration: BoxDecoration(
-                shape: BoxShape.circle,
                 image: DecorationImage(
                   image: AssetImage(
-                    "assets/image_user.png",
+                    "assets/icon_arrow_back.png",
                   ),
                 ),
               ),
@@ -47,7 +40,7 @@ class NotificationPage extends StatelessWidget {
     Widget cardNotif() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: defaultBottom.h,
+          bottom: 150.h,
         ),
         child: Column(
           children: [
@@ -72,17 +65,19 @@ class NotificationPage extends StatelessWidget {
 
             // NOTE: CARD NOTIFICATION
             CustomCardNotification(
+              icon: false,
+              createTime: false,
               onTap: () {},
-              title: 'SK 14142 telah diterbitkan',
-              message: 'klik untuk melihat',
-              time: 'Baru Saja',
+              title: 'Smith Erwin',
+              message: 'Nomor Kontrak : 9999 8888 7777',
               fontWeight: semibold,
             ),
             CustomCardNotification(
               onTap: () {},
-              title: 'SK 14141 telah dikonfirmasi',
+              icon: false,
+              createTime: false,
+              title: 'Zacharius Michael',
               message: 'klik untuk melihat',
-              time: '06.12',
               fontWeight: light,
             ),
             CustomCardNotification(
@@ -127,21 +122,23 @@ class NotificationPage extends StatelessWidget {
 
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              navbar(),
-              Container(
-                margin: EdgeInsets.symmetric(
-                  horizontal: 24.w,
+        child: Container(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                navbar(),
+                Container(
+                  margin: EdgeInsets.symmetric(
+                    horizontal: 24.w,
+                  ),
+                  child: Column(
+                    children: [
+                      cardNotif(),
+                    ],
+                  ),
                 ),
-                child: Column(
-                  children: [
-                    cardNotif(),
-                  ],
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
