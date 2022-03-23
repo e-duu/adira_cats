@@ -112,7 +112,7 @@ class MyApp extends StatelessWidget {
           // home: RegisterPage(),
           home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
-          home: RegisterThirdDonePage(),
+          // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
           // home: CreateStPage(),
           // home: StDonePage(),
