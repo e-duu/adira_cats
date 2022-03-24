@@ -1,9 +1,5 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/pages/home_page.dart';
-import 'package:adira_cats/ui/pages/message_page.dart';
-import 'package:adira_cats/ui/pages/notification_page.dart';
-import 'package:adira_cats/ui/pages/unit_search_page.dart';
 import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
@@ -29,7 +25,7 @@ class ProfilePage extends StatelessWidget {
             onTap: () {
               _scaffoldKey.currentState!.openEndDrawer();
             },
-            child: Icon(Icons.subject_sharp),
+            child: libraryIcon,
           ),
           suffixWidget: SizedBox(),
         ),
@@ -71,9 +67,7 @@ class ProfilePage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(defaultRadius),
                         color: kPrimaryColor,
                       ),
-                      child: Icon(
-                        Icons.edit_outlined,
-                      ),
+                      child: editIcon,
                     ),
                   ],
                 )
@@ -94,7 +88,7 @@ class ProfilePage extends StatelessWidget {
                 ),
               ),
               IconButton(
-                icon: Icon(Icons.edit_outlined),
+                icon: editIcon,
                 onPressed: () => showDialog<String>(
                   context: context,
                   builder: (BuildContext context) => SingleChildScrollView(
@@ -543,7 +537,7 @@ class ProfilePage extends StatelessWidget {
           title: "Logout",
           margin: EdgeInsets.only(
             top: 12.h,
-            bottom: 150.h,
+            bottom: defaultBottom.h,
             left: defaultMargin.w,
             right: defaultMargin.w,
           ),

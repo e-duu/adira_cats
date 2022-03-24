@@ -1,13 +1,12 @@
+import 'package:adira_cats/ui/widgets/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../shared/theme.dart';
-import '../widgets/custom_button.dart';
-import '../widgets/custom_button_border.dart';
+import 'package:adira_cats/shared/theme.dart';
 
 class CreateStPage extends StatelessWidget {
   const CreateStPage({Key? key}) : super(key: key);
@@ -49,9 +48,9 @@ class CreateStPage extends StatelessWidget {
       Widget createDate() {
         return Container(
           margin: EdgeInsets.only(
-            top: 24.h,
-            right: 20.w,
-            left: 20.w,
+            top: defaultPadding.h,
+            right: 19.w,
+            left: 19.w,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -78,9 +77,9 @@ class CreateStPage extends StatelessWidget {
       Widget branch() {
         return Container(
           margin: EdgeInsets.only(
-            top: 24.h,
-            right: 20.w,
-            left: 20.w,
+            top: defaultPadding.h,
+            right: 19.w,
+            left: 19.w,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,9 +110,9 @@ class CreateStPage extends StatelessWidget {
       Widget display() {
         return Container(
           margin: EdgeInsets.only(
-            top: 24.h,
-            right: 20.w,
-            left: 20.w,
+            top: defaultPadding.h,
+            right: 19.w,
+            left: 19.w,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -140,9 +139,9 @@ class CreateStPage extends StatelessWidget {
       Widget eksternalName() {
         return Container(
           margin: EdgeInsets.only(
-            top: 24.h,
-            right: 20.w,
-            left: 20.w,
+            top: defaultPadding.h,
+            right: 19.w,
+            left: 19.w,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -169,9 +168,9 @@ class CreateStPage extends StatelessWidget {
       Widget contract() {
         return Container(
           margin: EdgeInsets.only(
-            top: 24.h,
-            right: 20.w,
-            left: 20.w,
+            top: defaultPadding.h,
+            right: 19.w,
+            left: 19.w,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -212,7 +211,7 @@ class CreateStPage extends StatelessWidget {
               margin: EdgeInsets.only(
                 top: 12.h,
                 bottom: 12.h,
-                right: 20.w,
+                right: 19.w,
               ),
             ),
           ],
@@ -222,8 +221,8 @@ class CreateStPage extends StatelessWidget {
       Widget personInCharge() {
         return Container(
           margin: EdgeInsets.only(
-            right: 20.w,
-            left: 20.w,
+            right: 19.w,
+            left: 19.w,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -249,7 +248,7 @@ class CreateStPage extends StatelessWidget {
 
       return Container(
         margin: EdgeInsets.only(
-          top: 24.h,
+          top: defaultPadding.h,
         ),
         child: Column(
           children: [
@@ -284,7 +283,7 @@ class CreateStPage extends StatelessWidget {
                     builder: (BuildContext context) => Container(
                       child: AlertDialog(
                         titlePadding: EdgeInsets.symmetric(
-                          vertical: 24.h,
+                          vertical: defaultPadding.h,
                         ),
                         title: Container(
                           margin: EdgeInsets.only(
@@ -312,12 +311,12 @@ class CreateStPage extends StatelessWidget {
                             title: 'Batalkan',
                             onPressed: () {},
                             borderColor: kRedColor,
-                            borderWidth: 2.r,
+                            borderWidth: 2.w,
                             fontWeight: normal,
                             width: 308.w,
                             margin: EdgeInsets.only(
-                              right: 36.w,
-                              left: 36.w,
+                              right: defaultMargin.w,
+                              left: defaultMargin.w,
                             ),
                           ),
                           SizedBox(
@@ -330,8 +329,8 @@ class CreateStPage extends StatelessWidget {
                             textStyle: blackTextStyle,
                             width: 308.w,
                             margin: EdgeInsets.only(
-                              right: 36.w,
-                              left: 36.w,
+                              right: defaultMargin.w,
+                              left: defaultMargin.w,
                               bottom: 48.h,
                             ),
                           ),
@@ -370,9 +369,9 @@ class CreateStPage extends StatelessWidget {
               color: kPrimaryColor,
               textStyle: blackTextStyle,
               margin: EdgeInsets.only(
-                bottom: 36.h,
-                right: 20.w,
-                left: 20.w,
+                bottom: defaultMargin.h,
+                right: 19.w,
+                left: 19.w,
               ),
             ),
           ],
