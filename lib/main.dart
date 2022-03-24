@@ -129,15 +129,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverStDetailPage(),
           // home: HandoverStSearchNilPage(),
           // home: HandoverStConfirmedPage(),
-<<<<<<< HEAD
           // home: ReportPage(),
-=======
-          // home: CreateStContractNumberPage(),
-          // home: CreateStContractNullPage(),
-          // home: ReportDetailPage(),
-          // home: ReportDetailProdexPage(),
-          home: ReportPage(),
->>>>>>> 218349ab34a74c1ed6e9888960674ec3e8eba230
           // home: ReportDetailPage(),
           // home: ReportDetailProdexPage(),
           // home: ReportDetailProdexPage(),
