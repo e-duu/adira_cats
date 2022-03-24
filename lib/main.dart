@@ -111,7 +111,7 @@ class MyApp extends StatelessWidget {
           // home: OtpPage(),
           // home: ProfilePage(),
           // home: MessageRoomPage(),
-          // home: RegisterPage(),
+          home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterThirdDonePage(),
@@ -152,7 +152,10 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailStResultPage(),
           // home: PullFeePage(),
           // home: PullFeeDonePage(),
+<<<<<<< HEAD
           // home: ErrorPage(),
+=======
+>>>>>>> 4f9244943a5cd3460e9372aaf572d881799c2dd4
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
