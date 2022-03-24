@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 import '../widgets/custom_navbar.dart';
-import '../widgets/custom_upload_image.dart';
 
 class UnitSearchPullFoundPage extends StatelessWidget {
   const UnitSearchPullFoundPage({Key? key}) : super(key: key);
@@ -52,14 +51,14 @@ class UnitSearchPullFoundPage extends StatelessWidget {
               children: [
                 CustomRectangleEdit(
                   imageUrl: 'assets/image_unit_pull1.png',
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
                 SizedBox(
                   width: 16.w,
                 ),
                 CustomRectangleEdit(
                   imageUrl: 'assets/image_unit_pull2.png',
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
               ],
             ),
@@ -71,14 +70,14 @@ class UnitSearchPullFoundPage extends StatelessWidget {
               children: [
                 CustomRectangleEdit(
                   imageUrl: 'assets/image_unit_pull1.png',
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
                 SizedBox(
                   width: 16.w,
                 ),
                 CustomRectangleEdit(
                   imageUrl: 'assets/image_unit_pull2.png',
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
               ],
             ),
@@ -90,14 +89,14 @@ class UnitSearchPullFoundPage extends StatelessWidget {
               children: [
                 CustomRectangleEdit(
                   imageUrl: 'assets/image_unit_pull1.png',
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
                 SizedBox(
                   width: 16.w,
                 ),
                 CustomRectangleEdit(
                   imageUrl: 'assets/image_unit_pull2.png',
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
               ],
             ),

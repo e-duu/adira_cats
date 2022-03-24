@@ -1,6 +1,5 @@
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_card_notification.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,8 +23,8 @@ class SavePageEmpty extends StatelessWidget {
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
-              width: 27.w,
-              height: 26.h,
+              width: 21.w,
+              height: 21.h,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(

@@ -18,6 +18,8 @@ import 'package:adira_cats/ui/pages/message_room_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
 import 'package:adira_cats/ui/pages/forgot_password_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
+import 'package:adira_cats/ui/pages/pull_fee_done_page.dart';
+import 'package:adira_cats/ui/pages/pull_fee_page.dart';
 import 'package:adira_cats/ui/pages/register_fourth_page.dart';
 import 'package:adira_cats/ui/pages/register_page.dart';
 import 'package:adira_cats/ui/pages/register_second_page.dart';
@@ -46,9 +48,6 @@ import 'package:adira_cats/ui/pages/report_detail_visit_result_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/request_unit_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
-import 'package:adira_cats/ui/pages/result_visit_page.dart';
-import 'package:adira_cats/ui/pages/save_page.dart';
-import 'package:adira_cats/ui/pages/save_page_empty.dart';
 import 'package:adira_cats/ui/pages/share_unit_found_page.dart';
 import 'package:adira_cats/ui/pages/share_unit_page.dart';
 import 'package:adira_cats/ui/pages/st_done_page.dart';
@@ -57,7 +56,8 @@ import 'package:adira_cats/ui/pages/unit_search_detail_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_page.dart';
-import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_process_done_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_process_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
 import 'package:adira_cats/ui/pages/verification_done_page.dart';
 import 'package:adira_cats/ui/pages/testing.dart';
@@ -107,17 +107,16 @@ class MyApp extends StatelessWidget {
           // home: LoginPage(),
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
+
+          /// NOTE : DONE
+          // home: OtpPage(),
           // home: ProfilePage(),
-          // home: RegisterPage(),
+          // home: MessageRoomPage(),
+          home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
-
-          /// NOTE : DONE
-          // home: NotificationPage(),
-          // home: OtpPage(),
-          // home: MessageRoomPage(),
           // home: CreateStPage(),
           // home: StDonePage(),
           // home: HandoverStPage(),
@@ -138,6 +137,8 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchPage(),
           // home: UnitSearchFoundPage(),
           // home: UnitSearchNilPage(),
+          // home: UnitSearchProcessPage(),
+          // home: UnitSearchProcessDonePage(),
           // home: ReportDetailPullFeePage(),
           // home: MessageRoomPage(),
           // home: ReportDetailVisitPage(),
@@ -149,9 +150,8 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailStNihilPage(),
           // home: ReportDetailStResultDetailPage(),
           // home: ReportDetailStResultPage(),
-          // home: ResultVisitPage(),
-          // home: SavePage(),
-          // home: SavePageEmpty(),
+          // home: PullFeePage(),
+          // home: PullFeeDonePage(),
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
@@ -159,7 +159,6 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailMvResultPage(),
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
-          // home: UnitSearchPullFoundPage()
           // home: UnitSearchDetailPage(),
           // home: UnitSearchPullPage(),
         ),

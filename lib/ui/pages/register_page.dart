@@ -1,6 +1,5 @@
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:flutter/material.dart';
@@ -324,21 +323,22 @@ class _RegisterPageState extends State<RegisterPage> {
     Widget button() {
       return Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
-              height: 34.h,
-            ),
-            CustomButtonBorder(
-              title: 'Reset',
-              titleColor: kDarkGreyColor,
-              onPressed: () {},
-              borderColor: kDarkGreyColor,
-              borderWidth: 2,
-              fontWeight: light,
-            ),
-            SizedBox(
-              height: 12.h,
+            Container(
+              width: 138.w,
+              margin: EdgeInsets.only(
+                top: 12.h,
+                bottom: 32.h,
+              ),
+              child: CustomButtonBorder(
+                title: 'Reset',
+                titleColor: kDarkGreyColor,
+                onPressed: () {},
+                borderColor: kDarkGreyColor,
+                borderWidth: 1,
+                fontWeight: light,
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

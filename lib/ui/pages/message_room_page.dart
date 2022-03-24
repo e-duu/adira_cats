@@ -1,5 +1,4 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widgets/custom_right_chat_item.dart';
 import 'package:adira_cats/ui/widgets/custom_chat_item.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';

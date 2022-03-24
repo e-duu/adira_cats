@@ -1,9 +1,9 @@
+import 'package:adira_cats/ui/widgets/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
-import '../widgets/custom_button.dart';
-import '../widgets/custom_button_border.dart';
-import '../widgets/custom_navbar.dart';
 
 class CreateStContractNullPage extends StatelessWidget {
   const CreateStContractNullPage({Key? key}) : super(key: key);
@@ -59,7 +59,7 @@ class CreateStContractNullPage extends StatelessWidget {
               titleColor: kBlackColor,
               onPressed: () {},
               borderColor: kDarkGreyColor,
-              borderWidth: 2,
+              borderWidth: 2.w,
               fontWeight: normal,
               margin: EdgeInsets.symmetric(
                 horizontal: 20.w,
