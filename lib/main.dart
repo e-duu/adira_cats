@@ -116,9 +116,9 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : DONE
           // home: NotificationPage(),
-          home: OtpPage(),
+          // home: OtpPage(),
           // home: MessageRoomPage(),
-          // home: CreateStPage(),
+          home: CreateStPage(),
           // home: StDonePage(),
           // home: HandoverStPage(),
           // home: ReportDetailPage(),
