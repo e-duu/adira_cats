@@ -1,5 +1,4 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
-import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_page.dart';
@@ -124,7 +123,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverStSearchPage(),
           // home: HandoverStDetailPage(),
           // home: HandoverStSearchNilPage(),
-          // home: HandoverStConfirmedPage(),
+          home: HandoverStConfirmedPage(),
           // home: CreateStContractNumberPage(),
           // home: CreateStContractNullPage(),
           // home: ReportDetailPage(),
@@ -152,7 +151,8 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailStResultDetailPage(),
           // home: ReportDetailStResultPage(),
           // home: PullFeePage(),
-          home: PullFeeDonePage(),
+          // home: PullFeeDonePage(),
+          // home: ErrorPage(),
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),

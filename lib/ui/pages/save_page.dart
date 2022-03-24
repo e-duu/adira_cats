@@ -148,7 +148,10 @@ class SavePage extends StatelessWidget {
                       ),
                       CustomButton(
                         title: 'Hapus Semua',
-                        onPressed: () => Navigator.pop(context, 'OK'),
+                        onPressed: () => Navigator.pop(
+                          context,
+                          'OK',
+                        ),
                         color: kRedColor,
                         textStyle: whiteTextStyle,
                         width: 308.w,
@@ -160,7 +163,9 @@ class SavePage extends StatelessWidget {
                       ),
                     ],
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.r),
+                      borderRadius: BorderRadius.circular(
+                        18.r,
+                      ),
                     ),
                   ),
                 ),
@@ -198,6 +203,7 @@ class SavePage extends StatelessWidget {
     }
 
     return Scaffold(
+      backgroundColor: kWhiteColor,
       body: SafeArea(
         child: Container(
           child: SingleChildScrollView(

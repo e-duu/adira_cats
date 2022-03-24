@@ -40,6 +40,9 @@ class CreateStPage extends StatelessWidget {
     Widget input() {
       Widget search() {
         return CustomInputSearch(
+          margin: EdgeInsets.symmetric(
+            horizontal: 19.w,
+          ),
           onPressed: () {},
           hintText: 'Cari Cabang Login',
         );
