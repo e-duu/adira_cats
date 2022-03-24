@@ -29,7 +29,11 @@ class _CustomCardStState extends State<CustomCardSt>{
 
   void changeColorIndex(){
     setState(() {
-      press = random.nextBool();
+      if (press == true) {
+        press = false;
+      } else {
+        press = true;
+      }
     });
   }
 
