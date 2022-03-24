@@ -99,26 +99,27 @@ class UnitSearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            navbar(context),
-            Container(
-              margin: EdgeInsets.symmetric(
-                horizontal: defaultMargin.w,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              navbar(context),
+              Container(
+                margin: EdgeInsets.symmetric(
+                  horizontal: defaultMargin.w,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    formSearch(),
+                    searchUnitPhoto(),
+                  ],
+                ),
               ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  formSearch(),
-                  searchUnitPhoto(),
-                ],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
-    ));
+    );
   }
 }

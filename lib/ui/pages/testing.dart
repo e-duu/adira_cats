@@ -123,22 +123,21 @@ class TestingPage extends StatelessWidget {
               // ),
 
               // NOTE : DROPDOWN SEARCH
-
-              DropdownSearch<String>(
-                mode: Mode.MENU,
-                showSearchBox: true,
-                hint: 'Pilih Bank',
-                showClearButton: true,
-                items: [
-                  "BANK BRI",
-                  'BANK BNI',
-                  "BANK BCA",
-                  "BANK JAGO",
-                  "BANK MANDIRI",
-                  "BANK PERMATA",
-                ],
-                onChanged: print,
-              ),
+              // DropdownSearch<String>(
+              //   mode: Mode.MENU,
+              //   showSearchBox: true,
+              //   hint: 'Pilih Bank',
+              //   showClearButton: true,
+              //   items: [
+              //     "BANK BRI",
+              //     'BANK BNI',
+              //     "BANK BCA",
+              //     "BANK JAGO",
+              //     "BANK MANDIRI",
+              //     "BANK PERMATA",
+              //   ],
+              //   onChanged: print,
+              // ),
             ],
           ),
         ),

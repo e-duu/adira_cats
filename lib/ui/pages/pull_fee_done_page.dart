@@ -2,10 +2,9 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:styled_text/styled_text.dart';
 
-class VerificationDonePage extends StatelessWidget {
-  const VerificationDonePage({Key? key}) : super(key: key);
+class PullFeeDonePage extends StatelessWidget {
+  const PullFeeDonePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +21,13 @@ class VerificationDonePage extends StatelessWidget {
                   Container(
                     width: 140.w,
                     height: 140.h,
+                    margin: EdgeInsets.only(
+                      bottom: 36.h,
+                    ),
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
-                          'assets/icon_verification_done.png',
+                          'assets/icon_sk_done.png',
                         ),
                       ),
                     ),
@@ -43,21 +45,11 @@ class VerificationDonePage extends StatelessWidget {
                         SizedBox(
                           height: 24.h,
                         ),
-                        StyledText(
-                          text:
-                              'Akun <bold>Edward Einselton</bold> sudah terdaftar!\nSilakan Login kembali.',
-                          tags: {
-                            'bold': StyledTextTag(
-                              style: TextStyle(
-                                fontWeight: bold,
-                              ),
-                            ),
-                          },
+                        Text(
+                          'Pengajuan Biaya Tarik berhasil diajukan!',
                           style: blackTextStyle.copyWith(
                             fontWeight: light,
-                            fontSize: 13.sp,
                           ),
-                          textAlign: TextAlign.center,
                         ),
                       ],
                     ),
@@ -68,13 +60,13 @@ class VerificationDonePage extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(
-              bottom: defaultMargin.h,
+              bottom: 36.h,
             ),
             child: CustomButton(
               title: 'Ok',
               onPressed: () {},
               margin: EdgeInsets.symmetric(
-                horizontal: defaultMargin.w,
+                horizontal: 36.h,
               ),
               color: kPrimaryColor,
               textStyle: blackTextStyle,
