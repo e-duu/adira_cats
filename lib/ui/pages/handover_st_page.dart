@@ -45,7 +45,8 @@ class HandoverStPage extends StatelessWidget {
         ),
         child: CustomInputSearch(
           onPressed: () {},
-          hintText: "Cari Nomor Kontak ...",
+          hintText: "Cari Nomor Kontrak ...",
+          margin: EdgeInsets.all(1),
         ),
       );
     }
