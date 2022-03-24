@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomCardSt extends StatelessWidget {
   final String stNumber;
   final String contractNumber;
-  final bool notifNew;
   final String notifText;
   final bool clickDetail;
 
@@ -13,7 +12,6 @@ class CustomCardSt extends StatelessWidget {
     Key? key,
     required this.stNumber,
     required this.contractNumber,
-    this.notifNew = false,
     this.notifText = '',
     this.clickDetail = false,
   }) : super(key: key);
@@ -22,7 +20,10 @@ class CustomCardSt extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 18.h),
+      padding: EdgeInsets.symmetric(
+        horizontal: 18.w,
+        vertical: 18.h,
+      ),
       margin: EdgeInsets.only(
         bottom: 12.h,
         right: defaultPadding.w,
@@ -46,17 +47,19 @@ class CustomCardSt extends StatelessWidget {
               right: 22.w,
             ),
             decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage(
-              "assets/icon_number_sk.png",
-            ))),
+              image: DecorationImage(
+                image: AssetImage(
+                  "assets/icon_number_st.png",
+                ),
+              ),
+            ),
           ),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Nomor SK : $stNumber",
+                  "Nomor ST : $stNumber",
                   style: blackTextStyle.copyWith(
                     fontWeight: bold,
                     fontSize: 12.sp,
@@ -87,27 +90,6 @@ class CustomCardSt extends StatelessWidget {
               ],
             ),
           ),
-          if (notifNew == true)
-            Container(
-              width: 59.w,
-              height: 29.h,
-              child: Container(
-                width: 59.w,
-                height: 29.h,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(defaultRadius),
-                    color: kPrimaryColor),
-                child: Center(
-                  child: Text(
-                    notifText,
-                    style: blackTextStyle.copyWith(
-                      fontSize: 11.sp,
-                      fontWeight: semibold,
-                    ),
-                  ),
-                ),
-              ),
-            ),
         ],
       ),
     );

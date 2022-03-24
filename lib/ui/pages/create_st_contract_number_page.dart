@@ -70,7 +70,6 @@ class CreateStContractNumberPage extends StatelessWidget {
             CustomCardSt(
               stNumber: '-',
               contractNumber: '9999 9999 9999',
-              notifNew: true,
               notifText: 'Dipilih',
             ),
             CustomCardSt(
