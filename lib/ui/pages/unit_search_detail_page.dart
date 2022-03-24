@@ -114,13 +114,17 @@ class UnitSearchDetailPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CustomButtonBorder(
-                    title: 'Minta SK',
+                    title: 'Minta ST',
                     titleColor: kGreyColor,
                     onPressed: () {},
                     borderColor: kGreyColor,
                     borderWidth: 2.w,
                     fontWeight: light,
-                    margin: EdgeInsets.only(top: 24.h, left: 36.w, right: 36.w),
+                    margin: EdgeInsets.only(
+                      top: 24.h,
+                      left: 36.w,
+                      right: 36.w,
+                    ),
                   ),
                   CustomButton(
                     title: 'Proses',

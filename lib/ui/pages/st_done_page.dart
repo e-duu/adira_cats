@@ -46,7 +46,7 @@ class StDonePage extends StatelessWidget {
                           height: 24.h,
                         ),
                         Text(
-                          'SK baru berhasil dibuat!',
+                          'ST baru berhasil dibuat!',
                           style: blackTextStyle.copyWith(
                             fontWeight: light,
                           ),

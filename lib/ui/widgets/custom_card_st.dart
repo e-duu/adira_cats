@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomCardSt extends StatelessWidget {
   final String stNumber;
   final String contractNumber;
+  final bool iconDelete;
   final String notifText;
   final bool clickDetail;
 
@@ -12,6 +13,7 @@ class CustomCardSt extends StatelessWidget {
     Key? key,
     required this.stNumber,
     required this.contractNumber,
+    this.iconDelete = false,
     this.notifText = '',
     this.clickDetail = false,
   }) : super(key: key);
@@ -90,6 +92,12 @@ class CustomCardSt extends StatelessWidget {
               ],
             ),
           ),
+          if (iconDelete == true)
+            Icon(
+              Icons.delete,
+              color: kDarkGreyColor,
+              size: 30,
+            ),
         ],
       ),
     );
