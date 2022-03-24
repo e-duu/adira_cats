@@ -112,7 +112,7 @@ class MyApp extends StatelessWidget {
           // home: OtpPage(),
           // home: ProfilePage(),
           // home: MessageRoomPage(),
-          home: RegisterPage(),
+          // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterThirdDonePage(),
