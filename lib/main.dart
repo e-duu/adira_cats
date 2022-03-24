@@ -134,7 +134,7 @@ class MyApp extends StatelessWidget {
           // home: CreateStContractNullPage(),
           // home: ReportDetailPage(),
           // home: ReportDetailProdexPage(),
-          home: ReportPage(),
+          // home: ReportPage(),
           // home: ReportDetailPage(),
           // home: ReportDetailProdexPage(),
           // home: ReportDetailProdexResultPage(),
@@ -159,10 +159,10 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchProcessDonePage(),
           // home: PullFeePage(),
           // home: PullFeeDonePage(),
+          home: UnitSearchDetailPage(),
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
-          // home: UnitSearchDetailPage(),
         ),
       ),
     );
