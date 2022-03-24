@@ -2,6 +2,7 @@ import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_number_page.dart';
+import 'package:adira_cats/ui/pages/create_st_filled_page.dart';
 import 'package:adira_cats/ui/pages/create_st_page.dart';
 import 'package:adira_cats/ui/pages/error_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_detail_page.dart';
