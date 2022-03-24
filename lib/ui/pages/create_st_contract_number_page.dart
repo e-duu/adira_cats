@@ -70,7 +70,6 @@ class CreateStContractNumberPage extends StatelessWidget {
             CustomCardSt(
               stNumber: '-',
               contractNumber: '9999 9999 9999',
-              notifText: 'Dipilih',
             ),
             CustomCardSt(
               stNumber: '-',
@@ -94,10 +93,10 @@ class CreateStContractNumberPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             CustomButtonBorder(
-              title: 'Kembali',
-              titleColor: kBlackColor,
+              title: 'Batal',
+              titleColor: kRedColor,
               onPressed: () {},
-              borderColor: kDarkGreyColor,
+              borderColor: kRedColor,
               borderWidth: 2,
               fontWeight: normal,
               margin: EdgeInsets.symmetric(
