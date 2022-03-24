@@ -57,17 +57,15 @@ class HandoverStPage extends StatelessWidget {
           CustomCardSt(
             stNumber: "1234 5678",
             contractNumber: "9999 9999 9999",
-            notifNew: true,
           ),
           CustomCardSt(
             stNumber: "2234 5678",
             contractNumber: "9999 8888 8888",
-            notifNew: false,
           ),
           CustomCardSt(
             stNumber: "3234 5678",
             contractNumber: "9999 8888 7777",
-            notifNew: false),
+          ),
         ],
       );
     }

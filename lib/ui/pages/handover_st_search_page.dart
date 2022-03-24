@@ -83,7 +83,6 @@ class HandoverStSearchPage extends StatelessWidget {
           CustomCardSt(
             stNumber: "3234 5678",
             contractNumber: "9999 8888 7777",
-            notifNew: false,
           ),
         ],
       );
