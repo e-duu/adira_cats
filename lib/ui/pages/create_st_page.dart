@@ -4,6 +4,7 @@ import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
+import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
@@ -38,6 +39,7 @@ class CreateStPage extends StatelessWidget {
     }
 
     Widget input() {
+<<<<<<< HEAD
       Widget search() {
         return CustomInputSearch(
           margin: EdgeInsets.symmetric(
@@ -45,6 +47,20 @@ class CreateStPage extends StatelessWidget {
           ),
           onPressed: () {},
           hintText: 'Cari Cabang Login',
+=======
+      Widget loginBranch() {
+        return Container(
+          margin: EdgeInsets.symmetric(
+            horizontal: defaultMargin.w,
+          ),
+          child: Text(
+            'Cabang Login Semarang',
+            style: blackTextStyle.copyWith(
+              fontWeight: bold,
+              fontSize: 20,
+            ),
+          ),
+>>>>>>> 1064aeac3a229c616ea831788c411c8848e0b35d
         );
       }
 
@@ -97,13 +113,62 @@ class CreateStPage extends StatelessWidget {
               SizedBox(
                 height: 12.h,
               ),
-              CustomDropdown(
-                items: [
-                  'Cabang MOU 1',
-                  'Cabang MOU 2',
-                  'Cabang MOU 3',
-                ],
-                hintText: 'Pilih Cabang MOU Eksternal',
+              Container(
+                height: 50.h,
+                child: DropdownSearch<String>(
+                  mode: Mode.MENU,
+                  hint: 'Cabang MOU Eksternal',
+                  showSearchBox: true,
+                  showClearButton: true,
+                  items: [
+                    "Cabang MOU Eksternal 1",
+                    "Cabang MOU Eksternal 2",
+                    "Cabang MOU Eksternal 3",
+                    "Cabang MOU Eksternal 4",
+                  ],
+                  onChanged: print,
+                ),
+              ),
+            ],
+          ),
+        );
+      }
+
+      Widget eksternalName() {
+        return Container(
+          margin: EdgeInsets.only(
+            top: defaultPadding.h,
+            right: 19.w,
+            left: 19.w,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Nama Eksternal',
+                style: darkGreyTextStyle.copyWith(
+                  fontSize: 12.sp,
+                  fontWeight: semibold,
+                ),
+              ),
+              SizedBox(
+                height: 12.h,
+              ),
+              Container(
+                height: 50.h,
+                child: DropdownSearch<String>(
+                  mode: Mode.MENU,
+                  hint: 'Nama Eksternal',
+                  showSearchBox: true,
+                  showClearButton: true,
+                  items: [
+                    "External Name 1",
+                    "External Name 2",
+                    "External Name 3",
+                    "External Name 4",
+                  ],
+                  onChanged: print,
+                ),
               ),
             ],
           ),
@@ -133,35 +198,7 @@ class CreateStPage extends StatelessWidget {
               CustomInput(
                 hintText: 'Display Nama PT',
                 hintColor: kDarkGreyColor,
-              ),
-            ],
-          ),
-        );
-      }
-
-      Widget eksternalName() {
-        return Container(
-          margin: EdgeInsets.only(
-            top: defaultPadding.h,
-            right: 19.w,
-            left: 19.w,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Nama Eksternal',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 12.sp,
-                  fontWeight: semibold,
-                ),
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              CustomInput(
-                hintText: 'Tidak ada nama dipilih',
-                hintColor: kDarkGreyColor,
+                readOnly: true,
               ),
             ],
           ),
@@ -240,9 +277,13 @@ class CreateStPage extends StatelessWidget {
               SizedBox(
                 height: 12.h,
               ),
-              CustomInput(
-                hintText: 'Pilih Person In Charge',
-                hintColor: kDarkGreyColor,
+              CustomDropdown(
+                items: [
+                  'Joko',
+                  'Seno',
+                  'Raka',
+                ],
+                hintText: 'Person In Charge',
               ),
             ],
           ),
@@ -255,11 +296,11 @@ class CreateStPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            search(),
+            loginBranch(),
             createDate(),
             branch(),
-            display(),
             eksternalName(),
+            display(),
             contract(),
             buttonSearchData(),
             personInCharge(),
