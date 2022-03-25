@@ -257,6 +257,69 @@ class CreateStFilledPage extends StatelessWidget {
               stNumber: '-',
               contractNumber: '9999 9999 7777',
               iconDelete: true,
+              onPressedDelete: () => showDialog<String>(
+                context: context,
+                builder: (BuildContext context) => Container(
+                  child: AlertDialog(
+                    titlePadding: EdgeInsets.symmetric(
+                      vertical: defaultPadding.h,
+                    ),
+                    title: Container(
+                      margin: EdgeInsets.only(
+                        top: 48.h,
+                      ),
+                      child: Text(
+                        'Batalkan?',
+                        style: blackTextStyle.copyWith(
+                          fontWeight: bold,
+                          fontSize: 18.sp,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    content: Text(
+                      'Anda yakin ingin membatalkan?',
+                      style: blackTextStyle.copyWith(
+                        fontSize: 13.sp,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    actions: <Widget>[
+                      CustomButtonBorder(
+                        titleColor: kRedColor,
+                        title: 'Batalkan',
+                        onPressed: () {},
+                        borderColor: kRedColor,
+                        borderWidth: 2.w,
+                        fontWeight: normal,
+                        width: 308.w,
+                        margin: EdgeInsets.only(
+                          right: defaultMargin.w,
+                          left: defaultMargin.w,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12.h,
+                      ),
+                      CustomButton(
+                        title: 'Lanjutkan',
+                        onPressed: () => Navigator.pop(context, 'OK'),
+                        color: kPrimaryColor,
+                        textStyle: blackTextStyle,
+                        width: 308.w,
+                        margin: EdgeInsets.only(
+                          right: defaultMargin.w,
+                          left: defaultMargin.w,
+                          bottom: 48.h,
+                        ),
+                      ),
+                    ],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.r),
+                    ),
+                  ),
+                ),
+              ),
               onPressed: () => showDialog<String>(
                 context: context,
                 builder: (BuildContext context) => SingleChildScrollView(
