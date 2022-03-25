@@ -1,3 +1,4 @@
+import 'package:adira_cats/ui/widgets/custom_card_handover_st.dart';
 import 'package:adira_cats/ui/widgets/custom_card_st.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -55,17 +56,23 @@ class HandoverStPage extends StatelessWidget {
       return Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CustomCardSt(
+          CustomCardHandoverSt(
             stNumber: "1234 5678",
             contractNumber: "9999 9999 9999",
+            onPressed: (){},
+            newHandover: true,
           ),
-          CustomCardSt(
+          CustomCardHandoverSt(
             stNumber: "2234 5678",
             contractNumber: "9999 8888 8888",
+            onPressed: (){},
+            newHandover: false,
           ),
-          CustomCardSt(
+          CustomCardHandoverSt(
             stNumber: "3234 5678",
             contractNumber: "9999 8888 7777",
+            onPressed: (){},
+            newHandover: false,
           ),
         ],
       );
