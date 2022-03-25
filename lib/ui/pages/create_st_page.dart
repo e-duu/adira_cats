@@ -39,15 +39,6 @@ class CreateStPage extends StatelessWidget {
     }
 
     Widget input() {
-<<<<<<< HEAD
-      Widget search() {
-        return CustomInputSearch(
-          margin: EdgeInsets.symmetric(
-            horizontal: 19.w,
-          ),
-          onPressed: () {},
-          hintText: 'Cari Cabang Login',
-=======
       Widget loginBranch() {
         return Container(
           margin: EdgeInsets.symmetric(
@@ -60,7 +51,6 @@ class CreateStPage extends StatelessWidget {
               fontSize: 20,
             ),
           ),
->>>>>>> 1064aeac3a229c616ea831788c411c8848e0b35d
         );
       }
 

@@ -10,6 +10,7 @@ import 'package:adira_cats/ui/pages/handover_st_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/loading_page.dart';
+import 'package:adira_cats/ui/pages/local_notification.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
@@ -72,7 +73,10 @@ void main() {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-  runApp(MyApp());
+
+  runApp(
+    MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -128,7 +132,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverStDetailPage(),
           // home: HandoverStSearchNilPage(),
           // home: HandoverStConfirmedPage(),
-          home: CreateStContractNumberPage(),
+          // home: CreateStContractNumberPage(),
           // home: CreateStContractNullPage(),
           // home: ReportDetailPage(),
           // home: ReportDetailProdexPage(),
@@ -161,6 +165,7 @@ class MyApp extends StatelessWidget {
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
           // home: UnitSearchDetailPage(),
+          home: LocalNotification(),
         ),
       ),
     );
