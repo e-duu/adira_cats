@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
