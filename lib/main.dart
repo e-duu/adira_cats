@@ -152,7 +152,7 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailStResultDetailPage(),
           // home: ReportDetailStResultPage(),
           // home: PullFeePage(),
-          home: PullFeeDonePage(),
+          // home: PullFeeDonePage(),
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
@@ -160,7 +160,7 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailMvResultPage(),
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
-          // home: UnitSearchDetailPage(),
+          home: UnitSearchDetailPage(),
           // home: UnitSearchPullPage(),
         ),
       ),
