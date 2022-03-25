@@ -9,6 +9,7 @@ class CustomCardDialogSt extends StatelessWidget {
   final String notifText;
   final bool clickDetail;
   final Function()? onPressed;
+  final Function()? onPressedDelete;
 
   const CustomCardDialogSt({
     Key? key,
@@ -18,6 +19,7 @@ class CustomCardDialogSt extends StatelessWidget {
     this.notifText = '',
     this.clickDetail = false,
     this.onPressed,
+    this.onPressedDelete,
   }) : super(key: key);
 
   @override
@@ -97,10 +99,13 @@ class CustomCardDialogSt extends StatelessWidget {
               ),
             ),
             if (iconDelete == true)
-              Icon(
-                Icons.delete,
-                color: kDarkGreyColor,
-                size: 32,
+              GestureDetector(
+                onTap: onPressedDelete,
+                child: Icon(
+                  Icons.delete,
+                  color: kDarkGreyColor,
+                  size: 32,
+                ),
               ),
           ],
         ),
