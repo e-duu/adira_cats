@@ -17,7 +17,7 @@ class UnitSearchPullFoundPage extends StatelessWidget {
           bottom: 24.h,
         ),
         child: CustomNavbar(
-          text: "Serah Terima ST",
+          text: "Tarik Unit",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(

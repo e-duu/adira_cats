@@ -5,7 +5,6 @@ import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
-import 'package:adira_cats/ui/widgets/custom_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
@@ -49,8 +48,7 @@ class PullFeePage extends StatelessWidget {
           vertical: defaultPadding.h,
         ),
         child: CustomInputSearch(
-              hintText: 'Cari Nomor Kontrak...', onPressed: () {}
-            ),
+            hintText: 'Cari Nomor Kontrak...', onPressed: () {}),
       );
     }
 
