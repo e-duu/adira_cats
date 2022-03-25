@@ -47,8 +47,9 @@ class HandoverStSearchPage extends StatelessWidget {
         ),
         child: CustomInputSearch(
           onPressed: () {},
-          hintText: "Cari Nomor Kontak ...",
+          hintText: "Cari Nomor Kontrak ...",
           value: '7777',
+          margin: EdgeInsets.all(1),
         ),
       );
     }
@@ -67,7 +68,7 @@ class HandoverStSearchPage extends StatelessWidget {
               ),
             )
           },
-          style: greyTextStyle.copyWith(
+          style: darkGreyTextStyle.copyWith(
             fontSize: 13.sp,
             fontWeight: light,
           ),
@@ -83,7 +84,6 @@ class HandoverStSearchPage extends StatelessWidget {
           CustomCardSt(
             stNumber: "3234 5678",
             contractNumber: "9999 8888 7777",
-            notifNew: false,
           ),
         ],
       );
