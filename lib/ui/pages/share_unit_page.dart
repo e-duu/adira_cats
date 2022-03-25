@@ -5,16 +5,18 @@ import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets/custom_google_maps.dart';
+
 class ShareUnitPage extends StatelessWidget {
   const ShareUnitPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Widget navbar(){
+    Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Bagikan", 
-          preffixWidget: SizedBox(), 
+          text: "Bagikan",
+          preffixWidget: SizedBox(),
           suffixWidget: SizedBox(),
         ),
       );
@@ -27,12 +29,15 @@ class ShareUnitPage extends StatelessWidget {
         ),
         child: CustomInputSearch(
           onPressed: () {},
+          margin: EdgeInsets.only(
+            top: 24.h,
+          ),
           hintText: "Cari Cabang ...",
         ),
       );
     }
 
-    Widget GoMap(){
+    Widget goMap() {
       return Container(
         height: 600.h,
         width: 380.w,
@@ -41,10 +46,7 @@ class ShareUnitPage extends StatelessWidget {
           left: 24.w,
           right: 24.w,
         ),
-        child: Image.asset(
-          "assets/image_map1.png",
-          fit: BoxFit.cover,
-        ),
+        child: CustomGoogleMaps(),
       );
     }
 
@@ -57,15 +59,15 @@ class ShareUnitPage extends StatelessWidget {
             horizontal: defaultMargin.w,
             vertical: defaultMargin.h,
           ),
-          titleColor: kGreyColor,
-          borderColor: kGreyColor,
+          titleColor: kDarkGreyColor,
+          borderColor: kDarkGreyColor,
           borderWidth: 2,
           fontWeight: light,
           onPressed: () {},
         ),
       );
     }
-    
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -73,12 +75,12 @@ class ShareUnitPage extends StatelessWidget {
             children: [
               navbar(),
               formSearch(),
-              GoMap(),
+              goMap(),
               buttonBack(),
             ],
-          )
+          ),
         ),
-      )
+      ),
     );
   }
 }

@@ -3,36 +3,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
 class CustomBarChart extends StatelessWidget {
-  final int mon;
-  final int tue;
-  final int wed;
-  final int thu;
-  final int fri;
-  final int sat;
-  final int sun;
+  final List<Sales> listGrafik;
 
   const CustomBarChart({
     Key? key,
-    required this.mon,
-    required this.tue,
-    required this.wed,
-    required this.thu,
-    required this.fri,
-    required this.sat,
-    required this.sun,
+    required this.listGrafik,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var data = [
-      Sales("Sen", mon),
-      Sales("Sel", tue),
-      Sales("Rab", wed),
-      Sales("Kam", thu),
-      Sales("Jum", fri),
-      Sales("Sab", sat),
-      Sales("Min", sun),
-    ];
+    var data = listGrafik;
 
     var series = [
       charts.Series(
@@ -49,7 +29,7 @@ class CustomBarChart extends StatelessWidget {
       series,
       barRendererDecorator: charts.BarLabelDecorator<String>(),
       animate: true,
-      // domainAxis: charts.OrdinalAxisSpec(renderSpec: charts.NoneRenderSpec()), // Untuk Menghilangkan info hari
+      // domainAxis: charts.OrdinalAxisSpec(renderSpec: charts.NoneRenderSpec()), // Untuk Menghilangkan Parentnya
     );
 
     return Container(

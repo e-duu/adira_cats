@@ -36,15 +36,22 @@ class UnitSearchDetailPage extends StatelessWidget {
 
     Widget content() {
       return Container(
-        margin: EdgeInsets.only(top: 24.h),
+        margin: EdgeInsets.only(
+          top: 24.h,
+        ),
         child: Column(
           children: [
             Container(
-              width: 420.w,
-              height: 320.h,
+              width: double.infinity.w,
+              height: 290.h,
+              margin: EdgeInsets.symmetric(
+                horizontal: defaultMargin.w,
+              ),
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/image_car_1.png'),
+                  image: AssetImage(
+                    'assets/image_car_1.png',
+                  ),
                 ),
               ),
               child: Row(
@@ -54,7 +61,10 @@ class UnitSearchDetailPage extends StatelessWidget {
                   CustomUnitButton(
                     width: 36.w,
                     height: 36.w,
-                    margin: EdgeInsets.only(right: 8.w, bottom: 24.h),
+                    margin: EdgeInsets.only(
+                      right: 8.w,
+                      bottom: 38.h,
+                    ),
                     color: kPrimaryColor,
                     imageUrl: 'assets/image_button_fullscreen.png',
                     onPressed: () => showDialog<String>(
@@ -90,7 +100,10 @@ class UnitSearchDetailPage extends StatelessWidget {
                   CustomUnitButton(
                     width: 36.w,
                     height: 36.w,
-                    margin: EdgeInsets.only(right: 48.w, bottom: 24.h),
+                    margin: EdgeInsets.only(
+                      right: 30.w,
+                      bottom: 38.h,
+                    ),
                     color: kPrimaryColor,
                     imageUrl: 'assets/image_button_pin.png',
                     onPressed: () {},
@@ -102,7 +115,7 @@ class UnitSearchDetailPage extends StatelessWidget {
               width: 294.w,
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: kGreyColor,
+                  color: kDarkGreyColor,
                   width: 2.w,
                 ),
                 borderRadius: BorderRadius.only(
@@ -114,13 +127,17 @@ class UnitSearchDetailPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CustomButtonBorder(
-                    title: 'Minta SK',
-                    titleColor: kGreyColor,
+                    title: 'Minta ST',
+                    titleColor: kDarkGreyColor,
                     onPressed: () {},
-                    borderColor: kGreyColor,
+                    borderColor: kDarkGreyColor,
                     borderWidth: 2.w,
                     fontWeight: light,
-                    margin: EdgeInsets.only(top: 24.h, left: 36.w, right: 36.w),
+                    margin: EdgeInsets.only(
+                      top: 24.h,
+                      left: 36.w,
+                      right: 36.w,
+                    ),
                   ),
                   CustomButton(
                     title: 'Proses',
@@ -130,7 +147,11 @@ class UnitSearchDetailPage extends StatelessWidget {
                       fontSize: 12.sp,
                       fontWeight: bold,
                     ),
-                    margin: EdgeInsets.only(top: 12.h, left: 36.w, right: 36.w),
+                    margin: EdgeInsets.only(
+                      top: 12.h,
+                      left: 36.w,
+                      right: 36.w,
+                    ),
                   ),
                   SizedBox(
                     height: 24.h,
@@ -187,7 +208,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                         ),
                         Text(
                           'Cabang Handling : Lorem ipsum',
-                          style: greyTextStyle.copyWith(
+                          style: darkGreyTextStyle.copyWith(
                             fontSize: 13.sp,
                             fontWeight: light,
                           ),
@@ -197,7 +218,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                         ),
                         Text(
                           'STNK : Thor Odinson',
-                          style: greyTextStyle.copyWith(
+                          style: darkGreyTextStyle.copyWith(
                             fontSize: 13.sp,
                             fontWeight: light,
                           ),
@@ -207,7 +228,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                         ),
                         Text(
                           'Model : Supercar',
-                          style: greyTextStyle.copyWith(
+                          style: darkGreyTextStyle.copyWith(
                             fontSize: 13.sp,
                             fontWeight: light,
                           ),
@@ -217,7 +238,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                         ),
                         Text(
                           'Nomor Rangka : 01234-5678-9999',
-                          style: greyTextStyle.copyWith(
+                          style: darkGreyTextStyle.copyWith(
                             fontSize: 13.sp,
                             fontWeight: light,
                           ),
@@ -227,7 +248,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                         ),
                         Text(
                           'Warna : Hitam Metalik',
-                          style: greyTextStyle.copyWith(
+                          style: darkGreyTextStyle.copyWith(
                             fontSize: 13.sp,
                             fontWeight: light,
                           ),
@@ -237,7 +258,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                         ),
                         Text(
                           'Tahun : 2019',
-                          style: greyTextStyle.copyWith(
+                          style: darkGreyTextStyle.copyWith(
                             fontSize: 13.sp,
                             fontWeight: light,
                           ),
@@ -247,7 +268,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                         ),
                         Text(
                           'Nomor Mesin : 9898-9898-9898',
-                          style: greyTextStyle.copyWith(
+                          style: darkGreyTextStyle.copyWith(
                             fontSize: 13.sp,
                             fontWeight: light,
                           ),
@@ -257,7 +278,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                         ),
                         Text(
                           'Merk : Aston Martil',
-                          style: greyTextStyle.copyWith(
+                          style: darkGreyTextStyle.copyWith(
                             fontSize: 13.sp,
                             fontWeight: light,
                           ),
@@ -267,7 +288,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                         ),
                         Text(
                           'ARH Handling : Bruce Banner',
-                          style: greyTextStyle.copyWith(
+                          style: darkGreyTextStyle.copyWith(
                             fontSize: 13.sp,
                             fontWeight: light,
                           ),
@@ -277,7 +298,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                         ),
                         Text(
                           'OD : 70',
-                          style: greyTextStyle.copyWith(
+                          style: darkGreyTextStyle.copyWith(
                             fontSize: 13.sp,
                             fontWeight: light,
                           ),
@@ -287,7 +308,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                         ),
                         Text(
                           'Biaya Tarik : Rp. 10.000.000',
-                          style: greyTextStyle.copyWith(
+                          style: darkGreyTextStyle.copyWith(
                             fontSize: 13.sp,
                             fontWeight: light,
                           ),
@@ -306,9 +327,9 @@ class UnitSearchDetailPage extends StatelessWidget {
                       children: [
                         CustomButtonBorder(
                           title: 'Bagikan',
-                          titleColor: kGreyColor,
+                          titleColor: kDarkGreyColor,
                           onPressed: () {},
-                          borderColor: kGreyColor,
+                          borderColor: kDarkGreyColor,
                           borderWidth: 2.w,
                           fontWeight: light,
                           width: 102.w,
@@ -318,8 +339,8 @@ class UnitSearchDetailPage extends StatelessWidget {
                         ),
                         CustomButtonBorder(
                           title: 'Simpan',
-                          titleColor: kGreyColor,
-                          borderColor: kGreyColor,
+                          titleColor: kDarkGreyColor,
+                          borderColor: kDarkGreyColor,
                           borderWidth: 2.w,
                           fontWeight: light,
                           width: 102.w,
@@ -353,8 +374,10 @@ class UnitSearchDetailPage extends StatelessWidget {
                                 actions: <Widget>[
                                   CustomButton(
                                     title: 'Ok',
-                                    onPressed: () =>
-                                        Navigator.pop(context, 'OK'),
+                                    onPressed: () => Navigator.pop(
+                                      context,
+                                      'OK',
+                                    ),
                                     color: kPrimaryColor,
                                     textStyle: blackTextStyle,
                                     width: 308.w,
@@ -386,12 +409,15 @@ class UnitSearchDetailPage extends StatelessWidget {
     Widget button() {
       return CustomButtonBorder(
         title: 'Kembali',
-        titleColor: kGreyColor,
+        titleColor: kDarkGreyColor,
         onPressed: () {},
-        borderColor: kGreyColor,
+        borderColor: kDarkGreyColor,
         borderWidth: 2.w,
         fontWeight: light,
-        margin: EdgeInsets.symmetric(horizontal: 36.w, vertical: 36.w),
+        margin: EdgeInsets.symmetric(
+          horizontal: 36.w,
+          vertical: 36.w,
+        ),
       );
     }
 

@@ -5,17 +5,23 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomCardNotification extends StatelessWidget {
   final String title;
   final String message;
+  final bool createTime;
   final String time;
   final FontWeight fontWeight;
   final Function() onTap;
+  final bool icon;
+  final bool iconNew;
 
   const CustomCardNotification({
     Key? key,
     required this.title,
     required this.message,
-    required this.time,
+    this.createTime = true,
+    this.time = '',
     required this.fontWeight,
     required this.onTap,
+    this.icon = true,
+    this.iconNew = false,
   }) : super(key: key);
 
   @override
@@ -29,7 +35,7 @@ class CustomCardNotification extends StatelessWidget {
         ),
         padding: EdgeInsets.symmetric(
           vertical: 18.h,
-          horizontal: 24.w,
+          horizontal: defaultPadding.w,
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(defaultRadius),
@@ -40,19 +46,20 @@ class CustomCardNotification extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Container(
-              width: 36.w,
-              height: 36.h,
-              margin: EdgeInsets.only(
-                right: 18.w,
-              ),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  image: AssetImage('assets/icon_bell.png'),
+            if (icon == true)
+              Container(
+                width: defaultMargin.w,
+                height: defaultMargin.h,
+                margin: EdgeInsets.only(
+                  right: 18.w,
+                ),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: AssetImage('assets/icon_bell.png'),
+                  ),
                 ),
               ),
-            ),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,13 +83,19 @@ class CustomCardNotification extends StatelessWidget {
                 ],
               ),
             ),
-            Text(
-              time,
-              style: blackTextStyle.copyWith(
-                fontSize: 11.sp,
-                fontWeight: fontWeight,
+            if (createTime == true)
+              Text(
+                time,
+                style: blackTextStyle.copyWith(
+                  fontSize: 11.sp,
+                  fontWeight: fontWeight,
+                ),
               ),
-            ),
+            if (iconNew == true)
+              Icon(
+                Icons.delete,
+                color: kDarkGreyColor,
+              ),
           ],
         ),
       ),

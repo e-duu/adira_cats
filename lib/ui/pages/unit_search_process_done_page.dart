@@ -3,8 +3,8 @@ import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class StDonePage extends StatelessWidget {
-  const StDonePage({Key? key}) : super(key: key);
+class UnitSearchProcessDonePage extends StatelessWidget {
+  const UnitSearchProcessDonePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class StDonePage extends StatelessWidget {
                           height: 24.h,
                         ),
                         Text(
-                          'ST baru berhasil dibuat!',
+                          'Unit berhasil diproses!',
                           style: blackTextStyle.copyWith(
                             fontWeight: light,
                           ),

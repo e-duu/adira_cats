@@ -1,11 +1,9 @@
+import 'package:adira_cats/ui/widgets/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../shared/theme.dart';
-import '../widgets/custom_button.dart';
-import '../widgets/custom_button_border.dart';
-import '../widgets/custom_navbar.dart';
-import 'home_page.dart';
+import 'package:adira_cats/shared/theme.dart';
 
 class CreateStContractNullPage extends StatelessWidget {
   const CreateStContractNullPage({Key? key}) : super(key: key);
@@ -16,7 +14,7 @@ class CreateStContractNullPage extends StatelessWidget {
       return CustomNavbar(
         text: 'Buat Surat Tugas',
         preffixWidget: IconButton(
-          onPressed: () => {},
+          onPressed: () {},
           icon: libraryIcon,
         ),
         suffixWidget: GestureDetector(
@@ -39,7 +37,7 @@ class CreateStContractNullPage extends StatelessWidget {
     Widget notifSearch() {
       return Container(
         margin: EdgeInsets.only(
-          top: 36.h,
+          top: defaultMargin.h,
         ),
         child: Text(
           'Nomor Kontrak tidak ditemukan.',
@@ -61,7 +59,7 @@ class CreateStContractNullPage extends StatelessWidget {
               titleColor: kBlackColor,
               onPressed: () {},
               borderColor: kDarkGreyColor,
-              borderWidth: 2.r,
+              borderWidth: 2.w,
               fontWeight: normal,
               margin: EdgeInsets.symmetric(
                 horizontal: 20.w,

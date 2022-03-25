@@ -1,7 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:pin_input_text_field/pin_input_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +41,7 @@ class OtpPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 24.h,
+              height: defaultPadding.h,
             ),
             Text(
               'Masukkan kode OTP yang Anda terima dari kami.',
@@ -72,7 +71,7 @@ class OtpPage extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 12.sp,
+              height: 12.h,
             ),
             Padding(
               padding: EdgeInsets.symmetric(
@@ -89,13 +88,13 @@ class OtpPage extends StatelessWidget {
                     gapSpace: 18.w,
                     lineHeight: 4.h,
                     textStyle: TextStyle(
-                      fontSize: 24.sp,
+                      fontSize: defaultPadding.sp,
                       height: 0.h,
-                      color: Colors.black,
+                      color: kBlackColor,
                       fontWeight: bold,
                     ),
                     colorBuilder: FixedColorBuilder(
-                      Colors.black.withOpacity(
+                      kBlackColor.withOpacity(
                         0.3,
                       ),
                     ),
@@ -104,7 +103,9 @@ class OtpPage extends StatelessWidget {
                   onCodeSubmitted: (code) {},
                   onCodeChanged: (code) {
                     if (code!.length == 6) {
-                      FocusScope.of(context).requestFocus(FocusNode());
+                      FocusScope.of(context).requestFocus(
+                        FocusNode(),
+                      );
                     }
                   },
                 ),
@@ -148,13 +149,13 @@ class OtpPage extends StatelessWidget {
                     gapSpace: 18.w,
                     lineHeight: 4.h,
                     textStyle: TextStyle(
-                      fontSize: 24.sp,
-                      height: 0,
-                      color: Colors.black,
+                      fontSize: defaultPadding.sp,
+                      height: 0.h,
+                      color: kBlackColor,
                       fontWeight: bold,
                     ),
                     colorBuilder: FixedColorBuilder(
-                      Colors.black.withOpacity(
+                      kBlackColor.withOpacity(
                         0.3,
                       ),
                     ),
@@ -163,7 +164,9 @@ class OtpPage extends StatelessWidget {
                   onCodeSubmitted: (code) {},
                   onCodeChanged: (code) {
                     if (code!.length == 6) {
-                      FocusScope.of(context).requestFocus(FocusNode());
+                      FocusScope.of(context).requestFocus(
+                        FocusNode(),
+                      );
                     }
                   },
                 ),
@@ -177,7 +180,7 @@ class OtpPage extends StatelessWidget {
     Widget contentTitle() {
       return Container(
         margin: EdgeInsets.only(
-          top: 36.h,
+          top: defaultMargin.h,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -196,22 +199,22 @@ class OtpPage extends StatelessWidget {
               onPressed: () => showDialog<String>(
                 context: context,
                 builder: (BuildContext context) => Container(
-                  width: double.infinity,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 2.w,
-                    vertical: 48.h,
-                  ),
                   child: AlertDialog(
-                    titlePadding: EdgeInsets.only(
-                      top: 10.h,
+                    titlePadding: EdgeInsets.symmetric(
+                      vertical: defaultPadding.h,
                     ),
-                    title: Text(
-                      'Kode Dikirim',
-                      style: blackTextStyle.copyWith(
-                        fontWeight: bold,
-                        fontSize: 18.sp,
+                    title: Container(
+                      margin: EdgeInsets.only(
+                        top: 48.h,
                       ),
-                      textAlign: TextAlign.center,
+                      child: Text(
+                        'Kode Dikirim',
+                        style: blackTextStyle.copyWith(
+                          fontWeight: bold,
+                          fontSize: 18.sp,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                     content: Text(
                       'Kode telah dikirim ulang ke email Anda.',
@@ -226,15 +229,16 @@ class OtpPage extends StatelessWidget {
                         onPressed: () => Navigator.pop(context, 'OK'),
                         color: kPrimaryColor,
                         textStyle: blackTextStyle,
+                        width: 310.w,
+                        margin: EdgeInsets.only(
+                          right: defaultPadding.w,
+                          left: defaultPadding,
+                          bottom: 48.h,
+                        ),
                       ),
                     ],
-                    actionsPadding: EdgeInsets.only(
-                      bottom: 10.h,
-                    ),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(
-                        18.r,
-                      ),
+                      borderRadius: BorderRadius.circular(18.r),
                     ),
                   ),
                 ),
@@ -255,6 +259,7 @@ class OtpPage extends StatelessWidget {
     Widget button() {
       return Container(
         margin: EdgeInsets.only(
+          top: 100.h,
           bottom: 26.h,
         ),
         child: Column(
@@ -268,7 +273,7 @@ class OtpPage extends StatelessWidget {
               borderWidth: 2.w,
               fontWeight: normal,
               margin: EdgeInsets.symmetric(
-                horizontal: 36.w,
+                horizontal: defaultMargin.w,
               ),
             ),
             SizedBox(
@@ -280,7 +285,7 @@ class OtpPage extends StatelessWidget {
               color: kPrimaryColor,
               textStyle: blackTextStyle,
               margin: EdgeInsets.symmetric(
-                horizontal: 36.w,
+                horizontal: defaultMargin.w,
               ),
             ),
           ],
@@ -290,20 +295,16 @@ class OtpPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: kWhiteColor,
-      resizeToAvoidBottomInset: false,
-      floatingActionButton: Visibility(
-        child: button(),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      body: SafeArea(
-        child: Center(
-          child: ListView(
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
             children: [
               logo(),
               title(),
               otpEmail(),
               otpMessage(),
               contentTitle(),
+              button(),
             ],
           ),
         ),

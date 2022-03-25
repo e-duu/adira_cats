@@ -1,12 +1,11 @@
-import 'package:adira_cats/ui/pages/home_page.dart';
+import 'package:adira_cats/ui/widgets/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_card_st.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:styled_text/styled_text.dart';
-import '../../shared/theme.dart';
-import '../widgets/custom_button.dart';
-import '../widgets/custom_button_border.dart';
+import 'package:adira_cats/shared/theme.dart';
 
 class CreateStContractNumberPage extends StatelessWidget {
   const CreateStContractNumberPage({Key? key}) : super(key: key);
@@ -40,7 +39,7 @@ class CreateStContractNumberPage extends StatelessWidget {
     Widget notifSearch() {
       return Container(
         margin: EdgeInsets.symmetric(
-          vertical: 36.h,
+          vertical: defaultMargin.h,
         ),
         child: StyledText(
           text:
@@ -64,15 +63,13 @@ class CreateStContractNumberPage extends StatelessWidget {
     Widget card() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 36.h,
+          bottom: defaultMargin.h,
         ),
         child: Column(
           children: [
             CustomCardSt(
               stNumber: '-',
               contractNumber: '9999 9999 9999',
-              notifNew: true,
-              notifText: 'Dipilih',
             ),
             CustomCardSt(
               stNumber: '-',
@@ -96,11 +93,11 @@ class CreateStContractNumberPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             CustomButtonBorder(
-              title: 'Kembali',
-              titleColor: kBlackColor,
+              title: 'Batal',
+              titleColor: kRedColor,
               onPressed: () {},
-              borderColor: kDarkGreyColor,
-              borderWidth: 2.r,
+              borderColor: kRedColor,
+              borderWidth: 2,
               fontWeight: normal,
               margin: EdgeInsets.symmetric(
                 horizontal: 20.w,
@@ -126,7 +123,6 @@ class CreateStContractNumberPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: kWhiteColor,
       body: ListView(
-        padding: EdgeInsets.symmetric(),
         children: [
           SafeArea(
             child: Column(
