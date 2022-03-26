@@ -32,7 +32,7 @@ class ShareUnitFoundPage extends StatelessWidget {
           hintText: "Cari Cabang ...",
           value: 'New York',
           margin: EdgeInsets.only(
-            top: 24.h,
+            top: defaultPadding.h,
           ),
         ),
       );
@@ -44,8 +44,8 @@ class ShareUnitFoundPage extends StatelessWidget {
         width: double.infinity,
         margin: EdgeInsets.only(
           top: 18.h,
-          left: 24.w,
-          right: 24.w,
+          left: defaultPadding.w,
+          right: defaultPadding.w,
         ),
         decoration: BoxDecoration(
           border: Border.all(
@@ -67,15 +67,15 @@ class ShareUnitFoundPage extends StatelessWidget {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.symmetric(
-          horizontal: 24.w,
-          vertical: 24.h,
+          horizontal: defaultPadding.w,
+          vertical: defaultPadding.h,
         ),
         child: Column(
           children: [
             Container(
               width: double.infinity,
               padding: EdgeInsets.symmetric(
-                horizontal: 24.w,
+                horizontal: defaultPadding.w,
                 vertical: 18.h,
               ),
               decoration: BoxDecoration(

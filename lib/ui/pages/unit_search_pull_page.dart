@@ -14,7 +14,7 @@ class UnitSearchPullPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 24.h,
+          bottom: defaultPadding.h,
         ),
         child: CustomNavbar(
           text: "Serah Terima ST",
@@ -122,7 +122,7 @@ class UnitSearchPullPage extends StatelessWidget {
                   borderColor: kRedColor,
                   borderWidth: 2,
                   fontWeight: light,
-                  width: 150.w,
+                  width: defaultBottom.w,
                   onPressed: () {}
                 ),
                 SizedBox(

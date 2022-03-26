@@ -30,7 +30,7 @@ class ShareUnitPage extends StatelessWidget {
         child: CustomInputSearch(
           onPressed: () {},
           margin: EdgeInsets.only(
-            top: 24.h,
+            top: defaultPadding.h,
           ),
           hintText: "Cari Cabang ...",
         ),
@@ -43,8 +43,8 @@ class ShareUnitPage extends StatelessWidget {
         width: 380.w,
         margin: EdgeInsets.only(
           top: 18.h,
-          left: 24.w,
-          right: 24.w,
+          left: defaultPadding.w,
+          right: defaultPadding.w,
         ),
         child: CustomGoogleMaps(),
       );

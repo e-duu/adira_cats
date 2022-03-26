@@ -42,8 +42,8 @@ class HandoverStSearchPage extends StatelessWidget {
     Widget formSearch() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
-          vertical: 24.h,
+          horizontal: defaultMargin.w,
+          vertical: defaultPadding.h,
         ),
         child: CustomInputSearch(
           onPressed: () {},
@@ -57,7 +57,7 @@ class HandoverStSearchPage extends StatelessWidget {
     Widget notifSearch() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 36.h,
+          bottom: defaultMargin.h,
         ),
         child: StyledText(
           text: "<bold>1</bold> Nomor Kontrak telah ditemukan.",

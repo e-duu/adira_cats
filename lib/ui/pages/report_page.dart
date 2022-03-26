@@ -43,8 +43,8 @@ class ReportPage extends StatelessWidget {
     Widget charts() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 24.w,
-          vertical: 24.h,
+          horizontal: defaultPadding.w,
+          vertical: defaultPadding.h,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -135,8 +135,8 @@ class ReportPage extends StatelessWidget {
           color: kWhiteColor,
         ),
         padding: EdgeInsets.symmetric(
-          vertical: 36.h,
-          horizontal: 36.w,
+          vertical: defaultMargin.h,
+          horizontal: defaultMargin.w,
         ),
         margin: EdgeInsets.zero,
         child: CustomButton(

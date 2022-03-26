@@ -41,7 +41,7 @@ class ReportDetailMvPage extends StatelessWidget {
     Widget button() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
+          horizontal: defaultMargin.w,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -71,7 +71,7 @@ class ReportDetailMvPage extends StatelessWidget {
             children: [
               navbar(),
               SizedBox(
-                height: 24.h,
+                height: defaultPadding.h,
               ),
               CustomInputSearch(
                   onPressed: () {}, hintText: 'Cari Nomor Workflow ...'),

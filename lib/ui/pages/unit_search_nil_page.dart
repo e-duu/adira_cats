@@ -99,7 +99,7 @@ class UnitSearchNilPage extends StatelessWidget {
 
   Widget notif() {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 36.h),
+      margin: EdgeInsets.symmetric(vertical: defaultMargin.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

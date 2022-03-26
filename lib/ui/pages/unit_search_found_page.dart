@@ -56,7 +56,7 @@ class UnitSearchFoundPage extends StatelessWidget {
   Widget searchUnitPhoto(){
     return Container(
       padding: EdgeInsets.symmetric(
-        vertical: 24.h,
+        vertical: defaultPadding.h,
       ),
       decoration: BoxDecoration(
         color: kGreyColor,
@@ -96,7 +96,7 @@ class UnitSearchFoundPage extends StatelessWidget {
   Widget notif() {
     return Container(
       margin: EdgeInsets.symmetric(
-        vertical: 36.h
+        vertical: defaultMargin.h
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

@@ -54,7 +54,7 @@ class NotificationPage extends StatelessWidget {
             // NOTE: TITLE
             Container(
               margin: EdgeInsets.only(
-                top: 24.h,
+                top: defaultPadding.h,
                 left: 12.w,
               ),
               child: Row(
@@ -96,7 +96,7 @@ class NotificationPage extends StatelessWidget {
             // NOTE: TITLE
             Container(
               margin: EdgeInsets.only(
-                top: 24.h,
+                top: defaultPadding.h,
                 left: 12.w,
               ),
               child: Row(
@@ -133,7 +133,7 @@ class NotificationPage extends StatelessWidget {
               navbar(),
               Container(
                 margin: EdgeInsets.symmetric(
-                  horizontal: 24.w,
+                  horizontal: defaultPadding.w,
                 ),
                 child: Column(
                   children: [

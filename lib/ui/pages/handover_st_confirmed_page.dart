@@ -42,8 +42,8 @@ class HandoverStConfirmedPage extends StatelessWidget {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.symmetric(
-          vertical: 24.h,
-          horizontal: 24.h,
+          vertical: defaultPadding.h,
+          horizontal: defaultPadding.h,
         ),
         decoration: BoxDecoration(
           border: Border.all(
@@ -72,7 +72,7 @@ class HandoverStConfirmedPage extends StatelessWidget {
             Container(
               width: double.infinity,
               padding: EdgeInsets.symmetric(
-                horizontal: 36.w,
+                horizontal: defaultMargin.w,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -203,7 +203,7 @@ class HandoverStConfirmedPage extends StatelessWidget {
             /// NOTE: NOTIF CONFIRMED ST
             Container(
               margin: EdgeInsets.symmetric(
-                vertical: 24.h,
+                vertical: defaultPadding.h,
               ),
               child: Text(
                 "ST telah dikonfirmasi pada 10 maret 2022",
@@ -217,7 +217,7 @@ class HandoverStConfirmedPage extends StatelessWidget {
             Container(
               width: double.infinity,
               margin: EdgeInsets.only(
-                bottom: 36.h,
+                bottom: defaultMargin.h,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -307,9 +307,9 @@ class HandoverStConfirmedPage extends StatelessWidget {
           title: "Kembali",
           margin: EdgeInsets.only(
             top: 68.h,
-            bottom: 36.h,
-            left: 36.w,
-            right: 36.w,
+            bottom: defaultMargin.h,
+            left: defaultMargin.w,
+            right: defaultMargin.w,
           ),
           titleColor: kDarkGreyColor,
           borderColor: kDarkGreyColor,

@@ -141,7 +141,7 @@ class ReportDetailStResultDetailPage extends StatelessWidget {
               color: kLigthGrayColor,
               width: 2.w,
             ),
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(defaultRadius),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

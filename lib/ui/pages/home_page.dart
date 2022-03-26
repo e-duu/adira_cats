@@ -458,7 +458,7 @@ class HomePage extends StatelessWidget {
           left: defaultPadding.w,
           right: defaultPadding.w,
           top: defaultPadding.h,
-          bottom: 36.h,
+          bottom: defaultMargin.h,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -513,8 +513,8 @@ class HomePage extends StatelessWidget {
     Widget readMoreButton() {
       return Container(
         margin: EdgeInsets.only(
-          left: 24.w,
-          right: 24.w,
+          left: defaultPadding.w,
+          right: defaultPadding.w,
           bottom: defaultBottom.h,
         ),
         child: CustomButton(

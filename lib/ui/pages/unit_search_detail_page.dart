@@ -37,7 +37,7 @@ class UnitSearchDetailPage extends StatelessWidget {
     Widget content() {
       return Container(
         margin: EdgeInsets.only(
-          top: 24.h,
+          top: defaultPadding.h,
         ),
         child: Column(
           children: [
@@ -59,8 +59,8 @@ class UnitSearchDetailPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   CustomUnitButton(
-                    width: 36.w,
-                    height: 36.w,
+                    width: defaultMargin.w,
+                    height: defaultMargin.w,
                     margin: EdgeInsets.only(
                       right: 8.w,
                       bottom: 38.h,
@@ -84,8 +84,8 @@ class UnitSearchDetailPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             CustomUnitButton(
-                              width: 36.w,
-                              height: 36.w,
+                              width: defaultMargin.w,
+                              height: defaultMargin.w,
                               color: kTransparent,
                               imageUrl: 'assets/image_button_close.png',
                               onPressed: () {
@@ -98,8 +98,8 @@ class UnitSearchDetailPage extends StatelessWidget {
                     ),
                   ),
                   CustomUnitButton(
-                    width: 36.w,
-                    height: 36.w,
+                    width: defaultMargin.w,
+                    height: defaultMargin.w,
                     margin: EdgeInsets.only(
                       right: 30.w,
                       bottom: 38.h,
@@ -134,9 +134,9 @@ class UnitSearchDetailPage extends StatelessWidget {
                     borderWidth: 2.w,
                     fontWeight: light,
                     margin: EdgeInsets.only(
-                      top: 24.h,
-                      left: 36.w,
-                      right: 36.w,
+                      top: defaultPadding.h,
+                      left: defaultMargin.w,
+                      right: defaultMargin.w,
                     ),
                   ),
                   CustomButton(
@@ -149,17 +149,17 @@ class UnitSearchDetailPage extends StatelessWidget {
                     ),
                     margin: EdgeInsets.only(
                       top: 12.h,
-                      left: 36.w,
-                      right: 36.w,
+                      left: defaultMargin.w,
+                      right: defaultMargin.w,
                     ),
                   ),
                   SizedBox(
-                    height: 24.h,
+                    height: defaultPadding.h,
                   ),
                   Container(
                     padding: EdgeInsets.only(
-                      left: 36.w,
-                      right: 24.w,
+                      left: defaultMargin.w,
+                      right: defaultPadding.w,
                     ),
                     child: Text(
                       'Nomor Kontrak: 9999 9999 9999',
@@ -174,8 +174,8 @@ class UnitSearchDetailPage extends StatelessWidget {
                   ),
                   Container(
                     padding: EdgeInsets.only(
-                      left: 36.w,
-                      right: 24.w,
+                      left: defaultMargin.w,
+                      right: defaultPadding.w,
                     ),
                     child: Text(
                       'Nomor Polisi: AB 9999 XX',
@@ -190,8 +190,8 @@ class UnitSearchDetailPage extends StatelessWidget {
                   ),
                   Container(
                     padding: EdgeInsets.only(
-                      left: 36.w,
-                      right: 24.w,
+                      left: defaultMargin.w,
+                      right: defaultPadding.w,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -319,9 +319,9 @@ class UnitSearchDetailPage extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.only(
                       top: 14.h,
-                      left: 36.w,
-                      right: 36.w,
-                      bottom: 36.h,
+                      left: defaultMargin.w,
+                      right: defaultMargin.w,
+                      bottom: defaultMargin.h,
                     ),
                     child: Row(
                       children: [
@@ -349,7 +349,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                             builder: (BuildContext context) => Container(
                               child: AlertDialog(
                                 titlePadding: EdgeInsets.symmetric(
-                                  vertical: 24.h,
+                                  vertical: defaultPadding.h,
                                 ),
                                 title: Container(
                                   margin: EdgeInsets.only(
@@ -382,8 +382,8 @@ class UnitSearchDetailPage extends StatelessWidget {
                                     textStyle: blackTextStyle,
                                     width: 308.w,
                                     margin: EdgeInsets.only(
-                                      right: 36.w,
-                                      left: 36.w,
+                                      right: defaultMargin.w,
+                                      left: defaultMargin.w,
                                       bottom: 48.h,
                                     ),
                                   ),
@@ -415,8 +415,8 @@ class UnitSearchDetailPage extends StatelessWidget {
         borderWidth: 2.w,
         fontWeight: light,
         margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
-          vertical: 36.w,
+          horizontal: defaultMargin.w,
+          vertical: defaultMargin.w,
         ),
       );
     }

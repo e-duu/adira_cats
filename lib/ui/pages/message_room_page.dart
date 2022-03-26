@@ -39,9 +39,9 @@ class MessageRoomPage extends StatelessWidget {
   Widget user() {
     return Padding(
       padding: EdgeInsets.only(
-        right: 24.w,
-        left: 24.w,
-        top: 24.h,
+        right: defaultPadding.w,
+        left: defaultPadding.w,
+        top: defaultPadding.h,
       ),
       child: Row(
         children: [
@@ -122,7 +122,7 @@ class MessageRoomPage extends StatelessWidget {
   Widget chat() {
     return Container(
       margin: EdgeInsets.only(
-        bottom: 150.h,
+        bottom: defaultBottom.h,
       ),
       child: Column(
         children: [
@@ -195,7 +195,7 @@ class MessageRoomPage extends StatelessWidget {
   Widget chatInput() {
     return Container(
       margin: EdgeInsets.symmetric(
-        horizontal: 24.w,
+        horizontal: defaultPadding.w,
       ),
       child: Row(
         children: [

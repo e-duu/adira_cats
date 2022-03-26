@@ -161,19 +161,19 @@ class ReportDetailVisitResultDetailPage extends StatelessWidget {
 
       return Container(
           margin: EdgeInsets.symmetric(
-            vertical: 24.h,
-            horizontal: 24.w,
+            vertical: defaultPadding.h,
+            horizontal: defaultPadding.w,
           ),
           padding: EdgeInsets.symmetric(
-            vertical: 36.h,
-            horizontal: 36.w,
+            vertical: defaultMargin.h,
+            horizontal: defaultMargin.w,
           ),
           decoration: BoxDecoration(
             border: Border.all(
               color: kLigthGrayColor,
               width: 2.w,
             ),
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(defaultRadius),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -190,10 +190,10 @@ class ReportDetailVisitResultDetailPage extends StatelessWidget {
     Widget button() {
       return Container(
         margin: EdgeInsets.only(
-          left: 36.w,
-          right: 36.w,
+          left: defaultMargin.w,
+          right: defaultMargin.w,
           top: 100.h,
-          bottom: 36.h,
+          bottom: defaultMargin.h,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,

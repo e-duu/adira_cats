@@ -3,6 +3,7 @@ import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
+import 'package:adira_cats/shared/theme.dart';
 
 class HandoverStSearchNilPage extends StatelessWidget {
   const HandoverStSearchNilPage({Key? key}) : super(key: key);
@@ -40,8 +41,8 @@ class HandoverStSearchNilPage extends StatelessWidget {
     Widget formSearch() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
-          vertical: 24.h,
+          horizontal: defaultMargin.w,
+          vertical: defaultPadding.h,
         ),
         child: CustomInputSearch(
           onPressed: () {},
@@ -55,7 +56,7 @@ class HandoverStSearchNilPage extends StatelessWidget {
     Widget notifSearch() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 36.h,
+          bottom: defaultMargin.h,
         ),
         child: StyledText(
           text: "Nomor Kontrak tidak ditemukan.",
