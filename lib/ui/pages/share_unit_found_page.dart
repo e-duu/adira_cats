@@ -1,22 +1,23 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_google_maps.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import '../widgets/custom_google_maps.dart';
+
 class ShareUnitFoundPage extends StatelessWidget {
   const ShareUnitFoundPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Widget navbar(){
+    Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Bagikan", 
-          preffixWidget: SizedBox(), 
+          text: "Bagikan",
+          preffixWidget: SizedBox(),
           suffixWidget: SizedBox(),
         ),
       );
@@ -38,7 +39,7 @@ class ShareUnitFoundPage extends StatelessWidget {
       );
     }
 
-    Widget goMap(){
+    Widget goMap() {
       return Container(
         height: 360.h,
         width: double.infinity,
@@ -54,16 +55,11 @@ class ShareUnitFoundPage extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(defaultRadius),
         ),
-        child: GoogleMap(
-          initialCameraPosition: CameraPosition(
-            target: LatLng(-0.8971395757503112, 100.3507166778259),
-            zoom: 14.0,
-          ),
-        ),
+        child: CustomGoogleMaps(),
       );
     }
 
-    Widget information(){
+    Widget information() {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.symmetric(
@@ -90,12 +86,10 @@ class ShareUnitFoundPage extends StatelessWidget {
                   Container(
                     width: 30.w,
                     decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_location.png',
-                        )
-                      )
-                    ),
+                        image: DecorationImage(
+                            image: AssetImage(
+                      'assets/icon_location.png',
+                    ))),
                   ),
                   Flexible(
                     child: Column(
@@ -148,21 +142,19 @@ class ShareUnitFoundPage extends StatelessWidget {
         ),
       );
     }
-    
+
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
+        body: SafeArea(
+      child: SingleChildScrollView(
           child: Column(
-            children: [
-              navbar(),
-              formSearch(),
-              goMap(),
-              information(),
-              buttonBack(),
-            ],
-          )
-        ),
-      )
-    );
+        children: [
+          navbar(),
+          formSearch(),
+          goMap(),
+          information(),
+          buttonBack(),
+        ],
+      )),
+    ));
   }
 }
