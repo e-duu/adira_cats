@@ -2,39 +2,30 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomCardSt extends StatefulWidget {
+class CustomCardHandoverSt extends StatefulWidget {
   final String stNumber;
   final String contractNumber;
-  final Function()? onPressed;
+  final bool newHandover;
+  final Function() onPressed;
 
-  const CustomCardSt({
+  const CustomCardHandoverSt({
     Key? key,
     required this.stNumber,
     required this.contractNumber,
-    this.onPressed,
+    required this.onPressed,
+    this.newHandover = false,
   }) : super(key: key);
 
   @override
-  _CustomCardStState createState() => _CustomCardStState();
+  _CustomCardHandoverStState createState() => _CustomCardHandoverStState();
 }
 
-class _CustomCardStState extends State<CustomCardSt> {
-  bool press = false;
-
-  void changeColorIndex() {
-    setState(() {
-      if (press == true) {
-        press = false;
-      } else {
-        press = true;
-      }
-    });
-  }
+class _CustomCardHandoverStState extends State<CustomCardHandoverSt> {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: changeColorIndex,
+    return GestureDetector(
+      onTap: widget.onPressed,
       child: Container(
         width: double.infinity,
         padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 18.h),
@@ -45,7 +36,7 @@ class _CustomCardStState extends State<CustomCardSt> {
         ),
         decoration: BoxDecoration(
           border: Border.all(
-            color: press ? kPrimaryColor : kLigthGrayColor,
+            color: kLigthGrayColor,
             width: 2.w,
           ),
           borderRadius: BorderRadius.circular(defaultRadius),
@@ -89,10 +80,20 @@ class _CustomCardStState extends State<CustomCardSt> {
                       fontSize: 12.sp,
                     ),
                   ),
+                  SizedBox(
+                    height: 6.h,
+                  ),
+                  Text(
+                    "Klik untuk lihat detail",
+                    style: darkGreyTextStyle.copyWith(
+                      fontWeight: light,
+                      fontSize: 11.sp,
+                    ),
+                  ),
                 ],
               ),
             ),
-            if (press == true) Container(
+            if (widget.newHandover == true) Container(
               width: 59.w,
               height: 29.h,
               child: Container(
@@ -104,7 +105,7 @@ class _CustomCardStState extends State<CustomCardSt> {
                 ),
                 child: Center(
                   child: Text(
-                    'Dipilih',
+                    'Baru',
                     style: blackTextStyle.copyWith(
                       fontSize: 11.sp,
                       fontWeight: semibold,
