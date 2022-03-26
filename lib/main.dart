@@ -46,6 +46,7 @@ import 'package:adira_cats/ui/pages/report_detail_visit_result_detail_page.dart'
 import 'package:adira_cats/ui/pages/report_detail_visit_result_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
+import 'package:adira_cats/ui/pages/share_unit_page.dart';
 import 'package:adira_cats/ui/pages/st_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_detail_page.dart';
@@ -116,7 +117,7 @@ class MyApp extends StatelessWidget {
           /// NOTE : DONE
           // home: UnitSearchPullPage(),
           // home: ShareUnitPage(),
-          home: ShareUnitFoundPage(),
+          // home: ShareUnitFoundPage(),
           // home: MessageRoomPage(),
           // home: CreateStPage(),
           // home: CreateStFilledPage(),
@@ -130,8 +131,6 @@ class MyApp extends StatelessWidget {
           // home: HandoverStConfirmedPage(),
           // home: CreateStContractNumberPage(),
           // home: CreateStContractNullPage(),
-          // home: ReportDetailPage(),
-          // home: ReportDetailProdexPage(),
           // home: ReportPage(),
           // home: ReportDetailPage(),
           // home: ReportDetailProdexPage(),
@@ -140,16 +139,16 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailPullFeePage(),
           // home: ReportDetailVisitPage(),
           // home: ReportDetailVisitNihilPage(),
-          // home: ReportDetailVisitResultDetailPage(),
           // home: ReportDetailVisitResultPage(),
+          // home: ReportDetailVisitResultDetailPage(),
           // home: ReportDetailPullFeePage(),
           // home: ReportDetailPullFeeNihilPage(),
-          // home: ReportDetailPullFeeResultDetailPage(),
           // home: ReportDetailPullFeeResultPage(),
+          // home: ReportDetailPullFeeResultDetailPage(),
           // home: ReportDetailStPage(),
           // home: ReportDetailStNihilPage(),
-          // home: ReportDetailStResultDetailPage(),
           // home: ReportDetailStResultPage(),
+          // home: ReportDetailStResultDetailPage(),
           // home: ReportDetailMvPage(),
           // home: ReportDetailMvResultPage(),
           // home: MessageRoomPage(),
@@ -163,13 +162,13 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
-          // home: ReportDetailEMvPage(),
+          // home: ReportDetailMvPage(),
           // home: ReportDetailMvResultPage(),
-          // home: ShareUnitPage(),
+          home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
           // home: UnitSearchDetailPage(),
           // home: UnitSearchPullPage(),
-          home: UnitSearchDetailPage(),
+          // home: UnitSearchDetailPage(),
           // home: LocalNotification(),
         ),
       ),
