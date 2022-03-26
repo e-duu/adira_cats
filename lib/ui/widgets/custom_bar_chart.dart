@@ -21,7 +21,7 @@ class CustomBarChart extends StatelessWidget {
         id: 'Sales',
         data: data,
         labelAccessorFn: (Sales sales, _) =>
-            '${sales.day} : ${sales.count.toString()}',
+          '${sales.day} : ${sales.count.toString()}',
       ),
     ];
 
@@ -41,7 +41,7 @@ class CustomBarChart extends StatelessWidget {
 
 class Sales {
   final String day;
-  final int count;
+  final dynamic count;
 
   Sales(this.day, this.count);
 }

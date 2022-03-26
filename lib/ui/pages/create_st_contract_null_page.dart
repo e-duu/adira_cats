@@ -84,9 +84,7 @@ class CreateStContractNullPage extends StatelessWidget {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      floatingActionButton: Visibility(
-        child: button(),
-      ),
+      floatingActionButton: button(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       backgroundColor: kWhiteColor,
       body: SafeArea(

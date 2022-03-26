@@ -269,7 +269,7 @@ class CreateStFilledPage extends StatelessWidget {
                         top: 48.h,
                       ),
                       child: Text(
-                        'Batalkan?',
+                        'Hapus?',
                         style: blackTextStyle.copyWith(
                           fontWeight: bold,
                           fontSize: 18.sp,
@@ -278,7 +278,7 @@ class CreateStFilledPage extends StatelessWidget {
                       ),
                     ),
                     content: Text(
-                      'Anda yakin ingin membatalkan?',
+                      'Anda yakin ingin menghapus?',
                       style: blackTextStyle.copyWith(
                         fontSize: 13.sp,
                       ),
@@ -286,10 +286,10 @@ class CreateStFilledPage extends StatelessWidget {
                     ),
                     actions: <Widget>[
                       CustomButtonBorder(
-                        titleColor: kRedColor,
-                        title: 'Batalkan',
+                        titleColor: kDarkGreyColor,
+                        title: 'Kembali',
                         onPressed: () {},
-                        borderColor: kRedColor,
+                        borderColor: kDarkGreyColor,
                         borderWidth: 2.w,
                         fontWeight: normal,
                         width: 308.w,
@@ -302,9 +302,9 @@ class CreateStFilledPage extends StatelessWidget {
                         height: 12.h,
                       ),
                       CustomButton(
-                        title: 'Lanjutkan',
+                        title: 'Hapus',
                         onPressed: () => Navigator.pop(context, 'OK'),
-                        color: kPrimaryColor,
+                        color: kRedColor,
                         textStyle: blackTextStyle,
                         width: 308.w,
                         margin: EdgeInsets.only(

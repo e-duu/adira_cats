@@ -1,17 +1,16 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
-import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_filled_page.dart';
 import 'package:adira_cats/ui/pages/create_st_page.dart';
 import 'package:adira_cats/ui/pages/error_page.dart';
-import 'package:adira_cats/ui/pages/handover_st_detail_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_confirmed_page.dart';
+import 'package:adira_cats/ui/pages/handover_st_detail_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
-import 'package:adira_cats/ui/pages/loading_page.dart';
+import 'package:adira_cats/ui/pages/local_notification.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
@@ -25,7 +24,6 @@ import 'package:adira_cats/ui/pages/register_fourth_page.dart';
 import 'package:adira_cats/ui/pages/register_page.dart';
 import 'package:adira_cats/ui/pages/register_second_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
-import 'package:adira_cats/ui/pages/register_third_done_page.dart';
 import 'package:adira_cats/ui/pages/register_third_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_mv_page%20.dart';
 import 'package:adira_cats/ui/pages/report_detail_mv_result_page.dart';
@@ -47,10 +45,7 @@ import 'package:adira_cats/ui/pages/report_detail_visit_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_visit_result_detail_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_visit_result_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
-import 'package:adira_cats/ui/pages/request_unit_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
-import 'package:adira_cats/ui/pages/share_unit_found_page.dart';
-import 'package:adira_cats/ui/pages/share_unit_page.dart';
 import 'package:adira_cats/ui/pages/st_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_detail_page.dart';
@@ -74,7 +69,10 @@ void main() {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-  runApp(MyApp());
+
+  runApp(
+    MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -93,7 +91,6 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           // routes: {
           //   '/': (context) => SplashPage(),
-          //   '/load': (context) => LoadPage(),
           //   '/login': (context) => LoginPage(),
           //   '/main': (context) => MainPage(),
           //   '/home': (context) => HomePage(),
@@ -142,8 +139,11 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailVisitPage(),
           // home: ReportDetailPullFeePage(),
           // home: ReportDetailVisitPage(),
+          // home: ReportDetailVisitNihilPage(),
           // home: ReportDetailVisitResultDetailPage(),
+          // home: ReportDetailVisitResultPage(),
           // home: ReportDetailPullFeePage(),
+          // home: ReportDetailPullFeeNihilPage(),
           // home: ReportDetailPullFeeResultDetailPage(),
           // home: ReportDetailPullFeeResultPage(),
           // home: ReportDetailStPage(),
@@ -170,6 +170,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchDetailPage(),
           // home: UnitSearchPullPage(),
           home: UnitSearchDetailPage(),
+          // home: LocalNotification(),
         ),
       ),
     );
