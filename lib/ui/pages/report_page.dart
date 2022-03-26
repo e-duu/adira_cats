@@ -52,13 +52,16 @@ class ReportPage extends StatelessWidget {
             CustomReportChart(
               title: "Input Kunjungan",
               chart: CustomBarChart(
-                mon: 100,
-                tue: 633,
-                wed: 72,
-                thu: 10,
-                fri: 77,
-                sat: 12,
-                sun: 56,
+                listGrafik: [
+                  Sales('1', 22),
+                  Sales('2', 12),
+                  Sales('3', 22),
+                  Sales('4', 22),
+                  Sales('5', 22),
+                  Sales('5', 22),
+                  Sales('6', 22),
+                  Sales('7', 22),
+                ],
               ),
             ),
             SizedBox(
@@ -67,13 +70,13 @@ class ReportPage extends StatelessWidget {
             CustomReportChart(
               title: "Prodex",
               chart: CustomBarChart(
-                mon: 100,
-                tue: 633,
-                wed: 72,
-                thu: 10,
-                fri: 77,
-                sat: 12,
-                sun: 56,
+                listGrafik: [
+                  Sales('1', 22),
+                  Sales('2', 12),
+                  Sales('3', 22),
+                  Sales('4', 22),
+                  Sales('7', 22),
+                ],
               ),
             ),
             SizedBox(
@@ -82,13 +85,11 @@ class ReportPage extends StatelessWidget {
             CustomReportChart(
               title: "Biaya Tarik",
               chart: CustomBarChart(
-                mon: 100,
-                tue: 633,
-                wed: 72,
-                thu: 10,
-                fri: 77,
-                sat: 12,
-                sun: 56,
+                listGrafik: [
+                  Sales('1', 22),
+                  Sales('2', 12),
+                  Sales('3', 22),
+                ],
               ),
             ),
             SizedBox(
@@ -97,13 +98,15 @@ class ReportPage extends StatelessWidget {
             CustomReportChart(
               title: "Surat Tugas (ST)",
               chart: CustomBarChart(
-                mon: 100,
-                tue: 633,
-                wed: 72,
-                thu: 10,
-                fri: 77,
-                sat: 12,
-                sun: 56,
+                listGrafik: [
+                  Sales('sen', 22),
+                  Sales('sel', 12),
+                  Sales('rab', 22),
+                  Sales('kam', 100),
+                  Sales('jum', 22),
+                  Sales('sab', 22),
+                  Sales('min', 22),
+                ],
               ),
             ),
             SizedBox(
@@ -112,13 +115,10 @@ class ReportPage extends StatelessWidget {
             CustomReportChart(
               title: "Monitoring Workflow",
               chart: CustomBarChart(
-                mon: 100,
-                tue: 633,
-                wed: 72,
-                thu: 10,
-                fri: 77,
-                sat: 12,
-                sun: 56,
+                listGrafik: [
+                  Sales('1', 22),
+                  Sales('2', 12),
+                ],
               ),
             ),
             SizedBox(

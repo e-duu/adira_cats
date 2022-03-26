@@ -1,5 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
+import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -457,7 +458,7 @@ class HomePage extends StatelessWidget {
           left: defaultPadding.w,
           right: defaultPadding.w,
           top: defaultPadding.h,
-          bottom: defaultBottom.h,
+          bottom: 36.h,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -509,6 +510,22 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget readMoreButton() {
+      return Container(
+        margin: EdgeInsets.only(
+          left: 24.w,
+          right: 24.w,
+          bottom: defaultBottom.h,
+        ),
+        child: CustomButton(
+          title: 'Lihat selengkapnya...',
+          onPressed: () {},
+          color: kPrimaryColor,
+          textStyle: blackTextStyle,
+        ),
+      );
+    }
+
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -522,7 +539,8 @@ class HomePage extends StatelessWidget {
               ),
               notification(),
               menu(),
-              announcement()
+              announcement(),
+              readMoreButton(),
             ],
           ),
         ),

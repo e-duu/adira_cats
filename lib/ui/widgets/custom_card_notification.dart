@@ -10,6 +10,7 @@ class CustomCardNotification extends StatelessWidget {
   final FontWeight fontWeight;
   final Function() onTap;
   final bool icon;
+  final bool iconNew;
 
   const CustomCardNotification({
     Key? key,
@@ -20,6 +21,7 @@ class CustomCardNotification extends StatelessWidget {
     required this.fontWeight,
     required this.onTap,
     this.icon = true,
+    this.iconNew = false,
   }) : super(key: key);
 
   @override
@@ -88,6 +90,11 @@ class CustomCardNotification extends StatelessWidget {
                   fontSize: 11.sp,
                   fontWeight: fontWeight,
                 ),
+              ),
+            if (iconNew == true)
+              Icon(
+                Icons.delete,
+                color: kDarkGreyColor,
               ),
           ],
         ),

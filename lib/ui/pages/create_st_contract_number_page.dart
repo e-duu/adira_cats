@@ -1,11 +1,11 @@
+import 'package:adira_cats/ui/widgets/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_card_st.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:styled_text/styled_text.dart';
-import '../../shared/theme.dart';
-import '../widgets/custom_button.dart';
-import '../widgets/custom_button_border.dart';
+import 'package:adira_cats/shared/theme.dart';
 
 class CreateStContractNumberPage extends StatelessWidget {
   const CreateStContractNumberPage({Key? key}) : super(key: key);
@@ -70,8 +70,6 @@ class CreateStContractNumberPage extends StatelessWidget {
             CustomCardSt(
               stNumber: '-',
               contractNumber: '9999 9999 9999',
-              notifNew: true,
-              notifText: 'Dipilih',
             ),
             CustomCardSt(
               stNumber: '-',
@@ -95,10 +93,10 @@ class CreateStContractNumberPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             CustomButtonBorder(
-              title: 'Kembali',
-              titleColor: kBlackColor,
+              title: 'Batal',
+              titleColor: kRedColor,
               onPressed: () {},
-              borderColor: kDarkGreyColor,
+              borderColor: kRedColor,
               borderWidth: 2,
               fontWeight: normal,
               margin: EdgeInsets.symmetric(
