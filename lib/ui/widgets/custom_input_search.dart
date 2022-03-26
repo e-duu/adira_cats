@@ -20,14 +20,17 @@ class CustomInputSearch extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 50.h,
-      margin: margin == EdgeInsets.zero ? EdgeInsets.symmetric(
-        horizontal: defaultMargin.w,
-      ) : margin,
+      margin: margin == EdgeInsets.zero
+          ? EdgeInsets.symmetric(
+              horizontal: defaultMargin.w,
+            )
+          : margin,
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(defaultRadius),
-        color: kGreyColor
-      ),
+          borderRadius: BorderRadius.circular(
+            defaultRadius.r,
+          ),
+          color: kGreyColor),
       child: TextFormField(
         autocorrect: true,
         autofocus: false,
@@ -43,21 +46,29 @@ class CustomInputSearch extends StatelessWidget {
             hoverColor: kTransparent,
             focusColor: kTransparent,
             highlightColor: kTransparent,
-            icon: Icon(Icons.search_sharp),
+            icon: Icon(
+              Icons.search_sharp,
+            ),
           ),
-          hintStyle: TextStyle(color: kDarkGreyColor),
+          hintStyle: TextStyle(
+            color: kDarkGreyColor,
+          ),
           filled: true,
           fillColor: kWhiteColor,
           focusColor: kDarkGreyColor,
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(defaultRadius.r),
+            borderRadius: BorderRadius.circular(
+              defaultRadius.r,
+            ),
             borderSide: BorderSide(
               color: kLigthGrayColor,
-              width: 2,
+              width: 2.w,
             ),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(defaultRadius.r),
+            borderRadius: BorderRadius.circular(
+              defaultRadius.r,
+            ),
             borderSide: BorderSide(
               color: kDarkGreyColor,
               width: 2.w,

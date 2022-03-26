@@ -25,7 +25,9 @@ class ForgotPasswordPage extends StatelessWidget {
     /// Widget Title
     Widget title() {
       return Container(
-        margin: EdgeInsets.symmetric(horizontal: defaultMargin.w),
+        margin: EdgeInsets.symmetric(
+          horizontal: defaultMargin.w,
+        ),
         child: Text(
           'Masukkan alamat ID yang terkait dengan akun Anda.',
           style: blackTextStyle.copyWith(
@@ -88,25 +90,25 @@ class ForgotPasswordPage extends StatelessWidget {
               onPressed: () => showDialog<String>(
                 context: context,
                 builder: (BuildContext context) => Container(
-                  width: double.infinity,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 2.w,
-                    vertical: 48.h,
-                  ),
                   child: AlertDialog(
-                    titlePadding: EdgeInsets.only(
-                      top: 10.h,
+                    titlePadding: EdgeInsets.symmetric(
+                      vertical: defaultPadding.h,
                     ),
-                    title: Text(
-                      'Password Dikirim.',
-                      style: blackTextStyle.copyWith(
-                        fontWeight: bold,
-                        fontSize: 18.sp,
+                    title: Container(
+                      margin: EdgeInsets.only(
+                        top: 48.h,
                       ),
-                      textAlign: TextAlign.center,
+                      child: Text(
+                        'Password Dikirim.',
+                        style: blackTextStyle.copyWith(
+                          fontWeight: bold,
+                          fontSize: 18.sp,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                     content: Text(
-                      'Password sementara telah dikirim ke email Anda, silahkan ganti password Anda setelah login.',
+                      'Password sementara telah dikirim ke email Anda, silakan ganti password Anda setelah login.',
                       style: blackTextStyle.copyWith(
                         fontSize: 13.sp,
                       ),
@@ -115,16 +117,24 @@ class ForgotPasswordPage extends StatelessWidget {
                     actions: <Widget>[
                       CustomButton(
                         title: 'Ok',
-                        onPressed: () => Navigator.pop(context, 'OK'),
+                        onPressed: () => Navigator.pop(
+                          context,
+                          'OK',
+                        ),
                         color: kPrimaryColor,
                         textStyle: blackTextStyle,
+                        width: 308.w,
+                        margin: EdgeInsets.only(
+                          right: defaultMargin.w,
+                          left: defaultMargin.w,
+                          bottom: 48.h,
+                        ),
                       ),
                     ],
-                    actionsPadding: EdgeInsets.only(
-                      bottom: 10.h,
-                    ),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.r),
+                      borderRadius: BorderRadius.circular(
+                        18.r,
+                      ),
                     ),
                   ),
                 ),
@@ -141,9 +151,7 @@ class ForgotPasswordPage extends StatelessWidget {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      floatingActionButton: Visibility(
-        child: button(),
-      ),
+      floatingActionButton: button(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       backgroundColor: kWhiteColor,
       body: SafeArea(

@@ -11,7 +11,7 @@ class UnitSearchPage extends StatelessWidget {
   Widget navbar(BuildContext context) {
     return Container(
       child: CustomNavbar(
-        text: "Pesan",
+        text: "Pencarian Unit",
         preffixWidget: IconButton(
           onPressed: () => {},
           icon: libraryIcon,
