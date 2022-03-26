@@ -1,4 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -50,13 +51,49 @@ class UnitSearchNilPage extends StatelessWidget {
     );
   }
 
-  Widget searchUnitPhoto() {
+  Widget searchUnitPhoto(){
+    return Container(
+      margin: EdgeInsets.only(
+        top: 12.h,
+        left: defaultMargin.w,
+        right: defaultMargin.w,
+      ),
+      decoration: BoxDecoration(
+        color: kGreyColor,
+        borderRadius: BorderRadius.circular(defaultRadius),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CustomButton(
+            title: "Cari Lewat ST",
+            onPressed: (){},
+            color: kPrimaryColor,
+            textStyle: blackTextStyle,
+          ),
+          SizedBox(
+            width: 12.w,
+          ),
+          CustomButton(
+            title: "Scan Foto Plat",
+            onPressed: (){},
+            color: kPrimaryColor,
+            textStyle: blackTextStyle,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget resultUnitSearch() {
     return Container(
       width: double.infinity,
-      height: 100.h,
-      padding: EdgeInsets.symmetric(
-        vertical: 12.h,
-        horizontal: 12.w,
+      height: 240.h,
+      margin: EdgeInsets.only(
+        top: defaultPadding.h,
+        left: defaultMargin.w,
+        right: defaultMargin.w,
       ),
       decoration: BoxDecoration(
         color: kGreyColor,
@@ -68,38 +105,14 @@ class UnitSearchNilPage extends StatelessWidget {
           ),
         ),
       ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: kPrimaryColor,
-                  borderRadius: BorderRadius.circular(defaultRadius),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.all(3),
-                  child: Center(
-                    child: Icon(
-                      Icons.edit_outlined,
-                      color: kBlackColor,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
     );
   }
 
   Widget notif() {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 36.h),
+      margin: EdgeInsets.symmetric(
+        vertical: 36.h,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -133,6 +146,7 @@ class UnitSearchNilPage extends StatelessWidget {
                   children: [
                     formSearch(),
                     searchUnitPhoto(),
+                    resultUnitSearch(),
                     notif(),
                   ],
                 ),
