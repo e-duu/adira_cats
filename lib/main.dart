@@ -17,6 +17,7 @@ import 'package:adira_cats/ui/pages/local_notification.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
+import 'package:adira_cats/ui/pages/message_room_testing_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
@@ -195,6 +196,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
+          home: MessageRoomTestingPage(),
         ),
       ),
     );
