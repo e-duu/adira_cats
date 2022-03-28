@@ -115,17 +115,19 @@ class MyApp extends StatelessWidget {
           // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
 
+          /// NOTE : ERROR
+          // home: UnitSearchPage(),
+
           /// NOTE : DONE
           /// NOTE : MAIN PAGE
           // home: MessagePage(),
           // home: MessageRoomPage(),
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
-          // home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
           // home: UnitSearchPullPage(),
           // home: UnitSearchFoundPage(),
-          // home: UnitSearchDetailPage(),
+          home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
           // home: HomePage(),

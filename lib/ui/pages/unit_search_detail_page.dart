@@ -6,7 +6,6 @@ import 'package:adira_cats/ui/widgets/custom_unit_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class UnitSearchDetailPage extends StatelessWidget {
   const UnitSearchDetailPage({Key? key}) : super(key: key);
@@ -348,24 +347,18 @@ class UnitSearchDetailPage extends StatelessWidget {
                     ),
                     child: Row(
                       children: [
-                        CustomButtonBorder(
+                        CustomButton(
                           title: 'Bagikan',
-                          titleColor: kDarkGreyColor,
                           onPressed: () {},
-                          borderColor: kDarkGreyColor,
-                          borderWidth: 2.w,
-                          fontWeight: light,
+                          color: kGreenColor,
+                          textStyle: whiteTextStyle,
                           width: 100.w,
                         ),
                         SizedBox(
                           width: 12.w,
                         ),
-                        CustomButtonBorder(
+                        CustomButton(
                           title: 'Simpan',
-                          titleColor: kDarkGreyColor,
-                          borderColor: kDarkGreyColor,
-                          borderWidth: 2.w,
-                          fontWeight: light,
                           width: 100.w,
                           onPressed: () => showDialog<String>(
                             context: context,
@@ -417,6 +410,8 @@ class UnitSearchDetailPage extends StatelessWidget {
                               ),
                             ),
                           ),
+                          color: kGreyColor,
+                          textStyle: blackTextStyle,
                         ),
                       ],
                     ),
