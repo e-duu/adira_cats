@@ -131,6 +131,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
           // home: LocalNotification(),
+          home: NotificationPage(),
           // home: ProfilePage(),
           // home: HomePage(),
           // home: ErrorPage(),

@@ -123,6 +123,7 @@ class MessageRoomPage extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
       key: _scaffoldKey,
       drawer: Container(
         width: 300,
@@ -143,6 +144,23 @@ class MessageRoomPage extends StatelessWidget {
         child: CustomChatItem(),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+=======
+       key: _scaffoldKey,
+        // drawer: CustomDrawer(),w
+        drawer : Container(
+          width: 300,
+          height: 760,
+          child: ClipRRect(
+            borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
+            child: CustomDrawer()
+          ),
+        ),
+        drawerEnableOpenDragGesture : true,
+        endDrawerEnableOpenDragGesture: false,
+      floatingActionButton: chatInput(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+>>>>>>> d839f75c2422012369e903cdd59a6bf7c0a97b58
       backgroundColor: kWhiteColor,
       body: SafeArea(
         child: SingleChildScrollView(
