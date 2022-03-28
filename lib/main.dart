@@ -149,7 +149,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverStDetailPage(),
           // home: HandoverStSearchPage(),
           // home: HandoverStSearchNilPage(),
-          home: HandoverStConfirmedPage(),
+          // home: HandoverStConfirmedPage(),
 
           /// NOTE : REPORT PAGE
           // home: ReportPage(),
