@@ -1,11 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-<<<<<<< HEAD
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
-import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
-import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
-=======
->>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,11 +17,11 @@ class ReportDetailMvPage extends StatelessWidget {
         child: CustomNavbar(
           text: "Monitoring Workflow",
           preffixWidget: GestureDetector(
-              onTap: () {
-                _scaffoldKey.currentState!.openDrawer();
-              },
-              child: Icon(Icons.subject_sharp),
-            ),
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
+          ),
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
@@ -67,20 +62,20 @@ class ReportDetailMvPage extends StatelessWidget {
     }
 
     return Scaffold(
-        key: _scaffoldKey,
-       
-          // drawer: CustomDrawer(),
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
-          ),
-              drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+      key: _scaffoldKey,
+
+      // drawer: CustomDrawer(),
+      drawer: Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(35),
+                bottomRight: Radius.circular(35)),
+            child: CustomDrawer()),
+      ),
+      drawerEnableOpenDragGesture: true,
+      endDrawerEnableOpenDragGesture: false,
       resizeToAvoidBottomInset: false,
       floatingActionButton: Visibility(
         child: button(),

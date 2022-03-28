@@ -116,7 +116,6 @@ class MyApp extends StatelessWidget {
           // home: RegisterFourthPage(),
 
           /// NOTE : ERROR
-          // home: UnitSearchPage(),
 
           /// NOTE : DONE
           /// NOTE : MAIN PAGE
@@ -124,10 +123,11 @@ class MyApp extends StatelessWidget {
           // home: MessageRoomPage(),
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
+          // home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
           // home: UnitSearchPullPage(),
           // home: UnitSearchFoundPage(),
-          home: UnitSearchDetailPage(),
+          // home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
           // home: HomePage(),
@@ -149,7 +149,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverStDetailPage(),
           // home: HandoverStSearchPage(),
           // home: HandoverStSearchNilPage(),
-          // home: HandoverStConfirmedPage(),
+          home: HandoverStConfirmedPage(),
 
           /// NOTE : REPORT PAGE
           // home: ReportPage(),

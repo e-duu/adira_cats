@@ -1,9 +1,5 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
-<<<<<<< HEAD
-
-=======
->>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
 import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
@@ -703,18 +699,19 @@ class ProfilePage extends StatelessWidget {
       builder: (context, currentIndex) {
         return Scaffold(
           key: _scaffoldKey,
-       
+
           // drawer: CustomDrawer(),
-          drawer : Container(
-            width: 300,
-            height: 760,
+          drawer: Container(
+            width: 300.w,
+            height: 760.h,
             child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(35),
+                  bottomRight: Radius.circular(35),
+                ),
+                child: CustomDrawer()),
           ),
-          drawerEnableOpenDragGesture : true,
+          drawerEnableOpenDragGesture: true,
           endDrawerEnableOpenDragGesture: false,
           resizeToAvoidBottomInset: false,
           floatingActionButton: bottomNavigation(),
