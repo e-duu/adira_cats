@@ -1,4 +1,5 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
+import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_filled_page.dart';
@@ -61,7 +62,6 @@ import 'package:adira_cats/ui/pages/unit_search_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_process_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -74,7 +74,6 @@ void main() {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
-
   runApp(MyApp());
 }
 
@@ -116,6 +115,8 @@ class MyApp extends StatelessWidget {
           // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
 
+          /// NOTE : ERROR
+
           /// NOTE : DONE
           /// NOTE : MAIN PAGE
           // home: MessagePage(),
@@ -123,7 +124,7 @@ class MyApp extends StatelessWidget {
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
           // home: UnitSearchPage(),
-          // home: UnitSearchNilPage(),
+          home: UnitSearchNilPage(),
           // home: UnitSearchPullPage(),
           // home: UnitSearchFoundPage(),
           // home: UnitSearchDetailPage(),
@@ -157,7 +158,6 @@ class MyApp extends StatelessWidget {
           /// NOTE : VISIT PAGE
           // home: ReportDetailVisitPage(),
           // home: ReportDetailVisitNihilPage(),
-          // home: ReportDetailVisitResultPage(),
           // home: ReportDetailVisitResultDetailPage(),
 
           /// NOTE : PRODEX PAGE
@@ -169,13 +169,11 @@ class MyApp extends StatelessWidget {
           /// NOTE : PULL FEE PAGE
           // home: ReportDetailPullFeePage(),
           // home: ReportDetailPullFeeNihilPage(),
-          // home: ReportDetailPullFeeResultPage(),
           // home: ReportDetailPullFeeResultDetailPage(),
 
           /// NOTE : ST PAGE
           // home: ReportDetailStPage(),
           // home: ReportDetailStNihilPage(),
-          // home: ReportDetailStResultPage(),
           // home: ReportDetailStResultDetailPage(),
 
           /// NOTE : MONITORING FLOW PAGE
@@ -194,7 +192,7 @@ class MyApp extends StatelessWidget {
           // home: SavePageEmpty(),
 
           /// NOTE: ON PROGRESS
-          home: TestingPage(),
+          // home: TestingPage(),
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),

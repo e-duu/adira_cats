@@ -4,7 +4,6 @@ import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../widgets/custom_google_maps.dart';
 
@@ -85,11 +84,17 @@ class ShareUnitFoundPage extends StatelessWidget {
                 children: [
                   Container(
                     width: 30.w,
+                    height: 40.w,
+                    margin: EdgeInsets.only(
+                      right: 15,
+                    ),
                     decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(
-                      'assets/icon_location.png',
-                    ))),
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/icon_location.png',
+                        ),
+                      ),
+                    ),
                   ),
                   Flexible(
                     child: Column(
@@ -144,17 +149,19 @@ class ShareUnitFoundPage extends StatelessWidget {
     }
 
     return Scaffold(
-        body: SafeArea(
-      child: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Column(
-        children: [
-          navbar(),
-          formSearch(),
-          goMap(),
-          information(),
-          buttonBack(),
-        ],
-      )),
-    ));
+            children: [
+              navbar(),
+              formSearch(),
+              goMap(),
+              information(),
+              buttonBack(),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

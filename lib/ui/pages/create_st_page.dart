@@ -1,3 +1,5 @@
+import 'package:adira_cats/ui/pages/home_page.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
@@ -9,16 +11,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
 
 class CreateStPage extends StatelessWidget {
-  const CreateStPage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+  CreateStPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return CustomNavbar(
         text: 'Buat Surat Tugas',
-        preffixWidget: IconButton(
-          onPressed: () => {},
-          icon: libraryIcon,
+        preffixWidget: GestureDetector(
+          onTap: () {
+            _scaffoldKey.currentState!.openDrawer();
+          },
+          child: Icon(Icons.subject_sharp),
         ),
         suffixWidget: GestureDetector(
           onTap: () {},
@@ -413,6 +419,20 @@ class CreateStPage extends StatelessWidget {
     }
 
     return Scaffold(
+      key: _scaffoldKey,
+
+      // drawer: CustomDrawer(),w
+      drawer: Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(35),
+                bottomRight: Radius.circular(35)),
+            child: CustomDrawer()),
+      ),
+      drawerEnableOpenDragGesture: true,
+      endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: ListView(
         padding: EdgeInsets.symmetric(),
