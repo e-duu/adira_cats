@@ -1,11 +1,17 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class ReportDetailVisitResultDetailPage extends StatelessWidget {
+<<<<<<< HEAD
+      final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+      ReportDetailVisitResultDetailPage({ Key? key }) : super(key: key);
+=======
   const ReportDetailVisitResultDetailPage({Key? key}) : super(key: key);
+>>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +20,10 @@ class ReportDetailVisitResultDetailPage extends StatelessWidget {
         child: CustomNavbar(
           text: "Input Kunjungan",
           preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
-            ),
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
           ),
           suffixWidget: GestureDetector(
             onTap: () {},
@@ -212,6 +218,19 @@ class ReportDetailVisitResultDetailPage extends StatelessWidget {
     }
 
     return Scaffold(
+       key: _scaffoldKey,
+       
+          drawer : Container(
+            width: 300,
+            height: 760,
+            child: ClipRRect(
+               borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
+              child: CustomDrawer()
+              ),
+          ),
+                drawerEnableOpenDragGesture : true,
+          endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
         child: Container(
           child: SingleChildScrollView(
