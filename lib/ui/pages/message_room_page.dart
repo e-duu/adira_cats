@@ -296,19 +296,18 @@ class MessageRoomPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
        key: _scaffoldKey,
-       
-          // drawer: CustomDrawer(),w
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
+        // drawer: CustomDrawer(),w
+        drawer : Container(
+          width: 300,
+          height: 760,
+          child: ClipRRect(
+            borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
+            child: CustomDrawer()
           ),
-                drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+        ),
+        drawerEnableOpenDragGesture : true,
+        endDrawerEnableOpenDragGesture: false,
       floatingActionButton: chatInput(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       backgroundColor: kWhiteColor,
