@@ -1,3 +1,5 @@
+import 'package:adira_cats/ui/widgets/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,6 +30,69 @@ class CustomCardNotification extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
+      onLongPress: () => showDialog<String>(
+        context: context,
+        builder: (BuildContext context) => Container(
+          child: AlertDialog(
+            titlePadding: EdgeInsets.symmetric(
+              vertical: defaultPadding.h,
+            ),
+            title: Container(
+              margin: EdgeInsets.only(
+                top: 48.h,
+              ),
+              child: Text(
+                'Hapus?',
+                style: blackTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 18.sp,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            content: Text(
+              'Anda yakin ingin menghapus?',
+              style: blackTextStyle.copyWith(
+                fontSize: 13.sp,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            actions: <Widget>[
+              CustomButtonBorder(
+                titleColor: kDarkGreyColor,
+                title: 'Kembali',
+                onPressed: () {},
+                borderColor: kDarkGreyColor,
+                borderWidth: 2.w,
+                fontWeight: normal,
+                width: 308.w,
+                margin: EdgeInsets.only(
+                  right: defaultMargin.w,
+                  left: defaultMargin.w,
+                ),
+              ),
+              SizedBox(
+                height: 12.h,
+              ),
+              CustomButton(
+                title: 'Hapus',
+                onPressed: () => Navigator.pop(context, 'OK'),
+                color: kRedColor,
+                textStyle: blackTextStyle,
+                width: 308.w,
+                margin: EdgeInsets.only(
+                  right: defaultMargin.w,
+                  left: defaultMargin.w,
+                  bottom: 48.h,
+                ),
+              ),
+            ],
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(18.r),
+            ),
+          ),
+        ),
+      ),
       child: Container(
         width: double.infinity,
         margin: EdgeInsets.only(

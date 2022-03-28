@@ -44,13 +44,51 @@ class _MessageRoomTestingPageState extends State<MessageRoomTestingPage> {
 
   @override
   Widget build(BuildContext context) {
+    // NOTE: NAVBAR
+  Widget navbar() {
+    return Container(
+      child: CustomNavbar(
+        text: "Obrolan",
+       preffixWidget: GestureDetector(
+            onTap: () {},
+            child: Icon(Icons.subject_sharp),
+          ),
+        suffixWidget: GestureDetector(
+          onTap: () {},
+          child: Container(
+            width: 21.w,
+            height: 21.h,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  "assets/icon_arrow_back.png",
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+    
     return Scaffold(
       body: SafeArea(
-        bottom: false,
-        child: Chat(
-          messages: _messages,
-          onSendPressed: _handleSendPressed,
-          user: _user,
+        child: Container(
+          child: Column(
+            children: [
+              navbar(),
+              Spacer(),
+              SizedBox(
+                height: 560.h,
+                child: Chat(
+                  messages: _messages,
+                  onSendPressed: _handleSendPressed,
+                  user: _user,
+                  disableImageGallery: true,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

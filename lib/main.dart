@@ -105,7 +105,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
-          home: LoginPage(),
+          // home: LoginPage(),
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
           // home: OtpPage(),
@@ -132,6 +132,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
           // home: LocalNotification(),
+          home: NotificationPage(),
           // home: ProfilePage(),
           // home: HomePage(),
           // home: ErrorPage(),
@@ -196,7 +197,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
-          home: MessageRoomTestingPage(),
+          // home: MessageRoomTestingPage(),
         ),
       ),
     );
