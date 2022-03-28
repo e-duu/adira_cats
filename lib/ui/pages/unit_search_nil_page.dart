@@ -55,8 +55,6 @@ class UnitSearchNilPage extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(
         top: 12.h,
-        left: defaultMargin.w,
-        right: defaultMargin.w,
       ),
       decoration: BoxDecoration(
         color: kGreyColor,
@@ -71,6 +69,7 @@ class UnitSearchNilPage extends StatelessWidget {
             onPressed: (){},
             color: kPrimaryColor,
             textStyle: blackTextStyle,
+            width: 138.w,
           ),
           SizedBox(
             width: 12.w,
@@ -80,6 +79,7 @@ class UnitSearchNilPage extends StatelessWidget {
             onPressed: (){},
             color: kPrimaryColor,
             textStyle: blackTextStyle,
+            width: 138.w,
           ),
         ],
       ),
@@ -92,8 +92,6 @@ class UnitSearchNilPage extends StatelessWidget {
       height: 240.h,
       margin: EdgeInsets.only(
         top: defaultPadding.h,
-        left: defaultMargin.w,
-        right: defaultMargin.w,
       ),
       decoration: BoxDecoration(
         color: kGreyColor,

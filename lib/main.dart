@@ -122,7 +122,7 @@ class MyApp extends StatelessWidget {
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
           // home: UnitSearchPage(),
-          // home: UnitSearchNilPage(),
+          home: UnitSearchNilPage(),
           // home: UnitSearchPullPage(),
           // home: UnitSearchFoundPage(),
           // home: UnitSearchDetailPage(),
