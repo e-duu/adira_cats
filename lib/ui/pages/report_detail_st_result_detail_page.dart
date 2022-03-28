@@ -1,11 +1,13 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class ReportDetailStResultDetailPage extends StatelessWidget {
-  const ReportDetailStResultDetailPage({Key? key}) : super(key: key);
+    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+    ReportDetailStResultDetailPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +16,10 @@ class ReportDetailStResultDetailPage extends StatelessWidget {
         child: CustomNavbar(
           text: "Detail Surat Tugas",
           preffixWidget: GestureDetector(
-            onTap: () {},
-            child: libraryIcon,
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
           ),
           suffixWidget: GestureDetector(
             onTap: () {},
@@ -141,7 +145,7 @@ class ReportDetailStResultDetailPage extends StatelessWidget {
               color: kLigthGrayColor,
               width: 2.w,
             ),
-            borderRadius: BorderRadius.circular(8.r),
+            borderRadius: BorderRadius.circular(defaultRadius),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -180,6 +184,19 @@ class ReportDetailStResultDetailPage extends StatelessWidget {
     }
 
     return Scaffold(
+       key: _scaffoldKey,
+       
+          drawer : Container(
+            width: 300,
+            height: 760,
+            child: ClipRRect(
+               borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
+              child: CustomDrawer()
+              ),
+          ),
+                drawerEnableOpenDragGesture : true,
+          endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
         child: Container(
           child: SingleChildScrollView(

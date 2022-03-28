@@ -1,5 +1,6 @@
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_rectangle_edit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
@@ -7,23 +8,18 @@ import '../../shared/theme.dart';
 import '../widgets/custom_navbar.dart';
 
 class UnitSearchPullFoundPage extends StatelessWidget {
-  const UnitSearchPullFoundPage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  UnitSearchPullFoundPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 24.h,
+          bottom: defaultPadding.h,
         ),
         child: CustomNavbar(
           text: "Tarik Unit",
-          preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
-            ),
-          ),
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
@@ -36,6 +32,12 @@ class UnitSearchPullFoundPage extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+          ),
+          preffixWidget: GestureDetector(
+            onTap: () {},
+            child: Icon(
+              Icons.subject_sharp,
             ),
           ),
         ),
@@ -122,7 +124,7 @@ class UnitSearchPullFoundPage extends StatelessWidget {
                   borderColor: kRedColor,
                   borderWidth: 2,
                   fontWeight: light,
-                  width: 150.w,
+                  width: defaultBottom.w,
                   onPressed: () => showDialog<String>(
                     context: context,
                     builder: (BuildContext context) => Container(
@@ -155,9 +157,9 @@ class UnitSearchPullFoundPage extends StatelessWidget {
                         actions: <Widget>[
                           Container(
                             margin: EdgeInsets.only(
-                              bottom: 24.h,
-                              right: 24.w,
-                              left: 24.w,
+                              bottom: defaultPadding.h,
+                              right: defaultPadding.w,
+                              left: defaultPadding.w,
                             ),
                             child: Column(
                               children: [
@@ -236,9 +238,9 @@ class UnitSearchPullFoundPage extends StatelessWidget {
                         actions: <Widget>[
                           Container(
                             margin: EdgeInsets.only(
-                              bottom: 24.h,
-                              right: 24.w,
-                              left: 24.w,
+                              bottom: defaultPadding.h,
+                              right: defaultPadding.w,
+                              left: defaultPadding.w,
                             ),
                             child: CustomButton(
                               title: 'Ok',
@@ -286,6 +288,20 @@ class UnitSearchPullFoundPage extends StatelessWidget {
     }
 
     return Scaffold(
+      key: _scaffoldKey,
+
+      // drawer: CustomDrawer(),
+      drawer: Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(35),
+                bottomRight: Radius.circular(35)),
+            child: CustomDrawer()),
+      ),
+      drawerEnableOpenDragGesture: true,
+      endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: SingleChildScrollView(
         child: SafeArea(

@@ -1,5 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,7 +8,9 @@ import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
 class ReportDetailMvResultPage extends StatelessWidget {
-  const ReportDetailMvResultPage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+  ReportDetailMvResultPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +19,10 @@ class ReportDetailMvResultPage extends StatelessWidget {
         child: CustomNavbar(
           text: "Monitoring Workflow",
           preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
-            ),
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
           ),
           suffixWidget: GestureDetector(
             onTap: () {},
@@ -67,15 +70,15 @@ class ReportDetailMvResultPage extends StatelessWidget {
           left: defaultMargin,
         ),
         padding: EdgeInsets.symmetric(
-          vertical: 36.h,
-          horizontal: 36.w,
+          vertical: defaultMargin.h,
+          horizontal: defaultMargin.w,
         ),
         decoration: BoxDecoration(
           border: Border.all(
             color: kLigthGrayColor,
             width: 2.w,
           ),
-          borderRadius: BorderRadius.circular(8.r),
+          borderRadius: BorderRadius.circular(defaultRadius),
         ),
         child: Container(
           child: Column(
@@ -167,10 +170,10 @@ class ReportDetailMvResultPage extends StatelessWidget {
     Widget button() {
       return Container(
         margin: EdgeInsets.only(
-          left: 36.w,
-          right: 36.w,
+          left: defaultMargin.w,
+          right: defaultMargin.w,
           top: 100.h,
-          bottom: 36.h,
+          bottom: defaultMargin.h,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -189,6 +192,20 @@ class ReportDetailMvResultPage extends StatelessWidget {
     }
 
     return Scaffold(
+      key: _scaffoldKey,
+
+      // drawer: CustomDrawer(),
+      drawer: Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(35),
+                bottomRight: Radius.circular(35)),
+            child: CustomDrawer()),
+      ),
+      drawerEnableOpenDragGesture: true,
+      endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
         child: Container(
           child: SingleChildScrollView(
@@ -196,7 +213,7 @@ class ReportDetailMvResultPage extends StatelessWidget {
               children: [
                 navbar(),
                 SizedBox(
-                  height: 24.h,
+                  height: defaultPadding.h,
                 ),
                 CustomInputSearch(onPressed: () {}, hintText: '123'),
                 found(),

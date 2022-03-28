@@ -1,5 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -7,7 +8,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class ReportDetailStNihilPage extends StatelessWidget {
-  const ReportDetailStNihilPage({Key? key}) : super(key: key);
+        final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+   ReportDetailStNihilPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +18,11 @@ class ReportDetailStNihilPage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Surat Tugas",
-          preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
-            ),
+         preffixWidget: GestureDetector(
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
           ),
           suffixWidget: GestureDetector(
             onTap: () {},
@@ -42,9 +45,9 @@ class ReportDetailStNihilPage extends StatelessWidget {
     Widget selectArea() {
       return Container(
         margin: EdgeInsets.only(
-          top: 24.h,
-          right: 36.w,
-          left: 36.w,
+          top: defaultPadding.h,
+          right: defaultMargin.w,
+          left: defaultMargin.w,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,7 +79,7 @@ class ReportDetailStNihilPage extends StatelessWidget {
     Widget selectPeriod() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
+          horizontal: defaultMargin.w,
         ),
         child: Column(
           children: [
@@ -122,10 +125,10 @@ class ReportDetailStNihilPage extends StatelessWidget {
     Widget button() {
       return Container(
         margin: EdgeInsets.only(
-          left: 36.w,
-          right: 36.w,
+          left: defaultMargin.w,
+          right: defaultMargin.w,
           top: 100.h,
-          bottom: 36.h,
+          bottom: defaultMargin.h,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -144,6 +147,19 @@ class ReportDetailStNihilPage extends StatelessWidget {
     }
 
     return Scaffold(
+        key: _scaffoldKey,
+       
+          drawer : Container(
+            width: 300,
+            height: 760,
+            child: ClipRRect(
+               borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
+              child: CustomDrawer()
+              ),
+          ),
+                drawerEnableOpenDragGesture : true,
+          endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
         child: Container(
           child: SingleChildScrollView(

@@ -18,6 +18,7 @@ import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
+import 'package:adira_cats/ui/pages/message_room_testing_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
@@ -117,6 +118,8 @@ class MyApp extends StatelessWidget {
           // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
 
+          /// NOTE : ERROR
+
           /// NOTE : DONE
           /// NOTE : MAIN PAGE
           // home: MessagePage(),
@@ -130,10 +133,9 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
-          // home: HomePage(),
-          // home: NotificationPage(),
           // home: LocalNotification(),
           // home: ProfilePage(),
+          // home: HomePage(),
           // home: ErrorPage(),
           // home: LoadPage(),
           // home: LoadPage(),
@@ -196,6 +198,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
+          home: MessageRoomTestingPage(),
         ),
       ),
     );

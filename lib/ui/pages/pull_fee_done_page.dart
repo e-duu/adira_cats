@@ -22,7 +22,7 @@ class PullFeeDonePage extends StatelessWidget {
                     width: 140.w,
                     height: 140.h,
                     margin: EdgeInsets.only(
-                      bottom: 36.h,
+                      bottom: defaultMargin.h,
                     ),
                     decoration: BoxDecoration(
                       image: DecorationImage(
@@ -43,7 +43,7 @@ class PullFeeDonePage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 24.h,
+                          height: defaultPadding.h,
                         ),
                         Text(
                           'Pengajuan Biaya Tarik berhasil diajukan!',
@@ -60,13 +60,13 @@ class PullFeeDonePage extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(
-              bottom: 36.h,
+              bottom: defaultMargin.h,
             ),
             child: CustomButton(
               title: 'Ok',
               onPressed: () {},
               margin: EdgeInsets.symmetric(
-                horizontal: 36.h,
+                horizontal: defaultMargin.h,
               ),
               color: kPrimaryColor,
               textStyle: blackTextStyle,

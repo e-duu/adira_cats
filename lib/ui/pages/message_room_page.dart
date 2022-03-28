@@ -1,22 +1,25 @@
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_chat_item.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MessageRoomPage extends StatelessWidget {
+        final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
   @override
   // NOTE: NAVBAR
   Widget navbar() {
     return Container(
       child: CustomNavbar(
         text: "Obrolan",
-        preffixWidget: GestureDetector(
-          onTap: () {},
-          child: Icon(
-            Icons.subject_sharp,
+       preffixWidget: GestureDetector(
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
           ),
-        ),
         suffixWidget: GestureDetector(
           onTap: () {},
           child: Container(
@@ -39,9 +42,9 @@ class MessageRoomPage extends StatelessWidget {
   Widget user() {
     return Padding(
       padding: EdgeInsets.only(
-        right: 24.w,
-        left: 24.w,
-        top: 24.h,
+        right: defaultPadding.w,
+        left: defaultPadding.w,
+        top: defaultPadding.h,
       ),
       child: Row(
         children: [
@@ -122,7 +125,7 @@ class MessageRoomPage extends StatelessWidget {
   Widget chat() {
     return Container(
       margin: EdgeInsets.only(
-        bottom: 150.h,
+        bottom: defaultBottom.h,
       ),
       child: Column(
         children: [
@@ -195,7 +198,7 @@ class MessageRoomPage extends StatelessWidget {
   Widget chatInput() {
     return Container(
       margin: EdgeInsets.symmetric(
-        horizontal: 24.w,
+        horizontal: defaultPadding.w,
       ),
       child: Row(
         children: [
@@ -292,6 +295,20 @@ class MessageRoomPage extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
+       key: _scaffoldKey,
+       
+          // drawer: CustomDrawer(),w
+          drawer : Container(
+            width: 300,
+            height: 760,
+            child: ClipRRect(
+               borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
+              child: CustomDrawer()
+              ),
+          ),
+                drawerEnableOpenDragGesture : true,
+          endDrawerEnableOpenDragGesture: false,
       floatingActionButton: chatInput(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       backgroundColor: kWhiteColor,

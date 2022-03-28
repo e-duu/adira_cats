@@ -1,5 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -7,7 +8,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class ReportDetailStPage extends StatelessWidget {
-  const ReportDetailStPage({Key? key}) : super(key: key);
+      final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+  ReportDetailStPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +18,11 @@ class ReportDetailStPage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Surat Tugas",
-          preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
-            ),
+         preffixWidget: GestureDetector(
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
           ),
           suffixWidget: GestureDetector(
             onTap: () {},
@@ -42,9 +45,9 @@ class ReportDetailStPage extends StatelessWidget {
     Widget selectArea() {
       return Container(
         margin: EdgeInsets.only(
-          top: 24.h,
-          right: 36.w,
-          left: 36.w,
+          top: defaultPadding.h,
+          right: defaultMargin.w,
+          left: defaultMargin.w,
         ),
         child: Column(
           children: [
@@ -69,7 +72,7 @@ class ReportDetailStPage extends StatelessWidget {
     Widget period() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
+          horizontal: defaultMargin.w,
           vertical: 12.h,
         ),
         child: Column(
@@ -92,7 +95,7 @@ class ReportDetailStPage extends StatelessWidget {
     Widget selectPeriod() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
+          horizontal: defaultMargin.w,
         ),
         child: Row(
           children: [
@@ -131,7 +134,7 @@ class ReportDetailStPage extends StatelessWidget {
     Widget button() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
+          horizontal: defaultMargin.w,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -150,6 +153,19 @@ class ReportDetailStPage extends StatelessWidget {
     }
 
     return Scaffold(
+      key: _scaffoldKey,
+       
+          drawer : Container(
+            width: 300,
+            height: 760,
+            child: ClipRRect(
+               borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
+              child: CustomDrawer()
+              ),
+          ),
+                drawerEnableOpenDragGesture : true,
+          endDrawerEnableOpenDragGesture: false,
       resizeToAvoidBottomInset: false,
       floatingActionButton: Visibility(
         child: button(),

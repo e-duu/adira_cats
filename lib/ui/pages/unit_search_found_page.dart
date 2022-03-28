@@ -1,6 +1,7 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_card_unit.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,7 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
 class UnitSearchFoundPage extends StatelessWidget {
-  const UnitSearchFoundPage({ Key? key }) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  UnitSearchFoundPage({ Key? key }) : super(key: key);
 
   Widget navbar() {
     return Container(
@@ -18,11 +20,11 @@ class UnitSearchFoundPage extends StatelessWidget {
       child: CustomNavbar(
         text: "Pencarian Unit",
         preffixWidget: GestureDetector(
-          onTap: () {},
-          child: Icon(
-            Icons.subject_sharp,
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
           ),
-        ),
         suffixWidget: Container(
           width: 48.w,
           height: 48.h,
@@ -58,8 +60,6 @@ class UnitSearchFoundPage extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(
         top: 12.h,
-        left: defaultMargin.w,
-        right: defaultMargin.w,
       ),
       decoration: BoxDecoration(
         color: kGreyColor,
@@ -74,6 +74,7 @@ class UnitSearchFoundPage extends StatelessWidget {
             onPressed: (){},
             color: kPrimaryColor,
             textStyle: blackTextStyle,
+            width: 138.w,
           ),
           SizedBox(
             width: 12.w,
@@ -83,6 +84,7 @@ class UnitSearchFoundPage extends StatelessWidget {
             onPressed: (){},
             color: kPrimaryColor,
             textStyle: blackTextStyle,
+            width: 138.w,
           ),
         ],
       ),
@@ -152,6 +154,17 @@ class UnitSearchFoundPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
+       
+          drawer : Container(
+            width: 300,
+            height: 760,
+            child: ClipRRect(
+               borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
+              child: CustomDrawer()
+              ),
+          ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

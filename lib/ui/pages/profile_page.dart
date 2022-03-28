@@ -19,11 +19,12 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget navbar() {
       return Container(
+        // height: 100,
         child: CustomNavbar(
           text: "Profil Saya",
           preffixWidget: GestureDetector(
             onTap: () {
-              _scaffoldKey.currentState!.openEndDrawer();
+              _scaffoldKey.currentState!.openDrawer();
             },
             child: libraryIcon,
           ),
@@ -698,7 +699,20 @@ class ProfilePage extends StatelessWidget {
       builder: (context, currentIndex) {
         return Scaffold(
           key: _scaffoldKey,
-          endDrawer: CustomDrawer(),
+
+          // drawer: CustomDrawer(),
+          drawer: Container(
+            width: 300.w,
+            height: 760.h,
+            child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(35),
+                  bottomRight: Radius.circular(35),
+                ),
+                child: CustomDrawer()),
+          ),
+          drawerEnableOpenDragGesture: true,
+          endDrawerEnableOpenDragGesture: false,
           resizeToAvoidBottomInset: false,
           floatingActionButton: bottomNavigation(),
           floatingActionButtonLocation:
