@@ -15,9 +15,9 @@ import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/loading_page.dart';
 import 'package:adira_cats/ui/pages/local_notification.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
-import 'package:adira_cats/ui/pages/message_room_testing_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
@@ -95,6 +95,7 @@ class MyApp extends StatelessWidget {
           // routes: {
           //   '/': (context) => SplashPage(),
           //   '/login': (context) => LoginPage(),
+          //   '/load': (context) => LoadPage(),
           //   '/main': (context) => MainPage(),
           //   '/home': (context) => HomePage(),
           //   '/profile': (context) => ProfilePage(),
@@ -116,12 +117,10 @@ class MyApp extends StatelessWidget {
           // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
 
-          /// NOTE : ERROR
-
           /// NOTE : DONE
           /// NOTE : MAIN PAGE
           // home: MessagePage(),
-          // home: MessageRoomPage(),
+          home: MessageRoomPage(),
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
           // home: UnitSearchPage(),
@@ -135,7 +134,6 @@ class MyApp extends StatelessWidget {
           // home: ProfilePage(),
           // home: HomePage(),
           // home: ErrorPage(),
-          // home: LoadPage(),
           // home: LoadPage(),
 
           /// NOTE : ST CONTRACT PAGE
@@ -196,7 +194,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
-          home: MessageRoomTestingPage(),
+          // home: MessageRoomTestingPage(),
         ),
       ),
     );

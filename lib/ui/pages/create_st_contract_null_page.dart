@@ -93,10 +93,12 @@ class CreateStContractNullPage extends StatelessWidget {
         width: 300,
         height: 760,
         child: ClipRRect(
-            borderRadius: BorderRadius.only(
-                topRight: Radius.circular(35),
-                bottomRight: Radius.circular(35)),
-            child: CustomDrawer()),
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
+          ),
+          child: CustomDrawer(),
+        ),
       ),
       drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
