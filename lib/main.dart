@@ -121,10 +121,10 @@ class MyApp extends StatelessWidget {
           /// NOTE : MAIN PAGE
           // home: MessagePage(),
           // home: MessageRoomPage(),
-          // home: ShareUnitPage(),
+          home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
           // home: UnitSearchPage(),
-          home: UnitSearchNilPage(),
+          // home: UnitSearchNilPage(),
           // home: UnitSearchPullPage(),
           // home: UnitSearchFoundPage(),
           // home: UnitSearchDetailPage(),

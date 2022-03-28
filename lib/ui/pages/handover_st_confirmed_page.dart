@@ -246,7 +246,7 @@ class HandoverStConfirmedPage extends StatelessWidget {
                       title: 'Cetak\nBASTK',
                       onPressed: () {},
                       color: kGreenColor,
-                      textStyle: blackTextStyle.copyWith(
+                      textStyle: whiteTextStyle.copyWith(
                         fontWeight: light,
                       ),
                       width: 94.w,
