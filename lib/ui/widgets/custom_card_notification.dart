@@ -13,86 +13,27 @@ class CustomCardNotification extends StatelessWidget {
   final Function() onTap;
   final bool icon;
   final bool iconNew;
+  final Function()? onPressedDelete;
+  final bool iconDelete;
 
   const CustomCardNotification({
     Key? key,
     required this.title,
     required this.message,
-    this.createTime = true,
-    this.time = '',
     required this.fontWeight,
     required this.onTap,
+    this.onPressedDelete,
+    this.createTime = true,
     this.icon = true,
     this.iconNew = false,
+    this.iconDelete = false,
+    this.time = '',
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      onLongPress: () => showDialog<String>(
-        context: context,
-        builder: (BuildContext context) => Container(
-          child: AlertDialog(
-            titlePadding: EdgeInsets.symmetric(
-              vertical: defaultPadding.h,
-            ),
-            title: Container(
-              margin: EdgeInsets.only(
-                top: 48.h,
-              ),
-              child: Text(
-                'Hapus?',
-                style: blackTextStyle.copyWith(
-                  fontWeight: bold,
-                  fontSize: 18.sp,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            content: Text(
-              'Anda yakin ingin menghapus?',
-              style: blackTextStyle.copyWith(
-                fontSize: 13.sp,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            actions: <Widget>[
-              CustomButtonBorder(
-                titleColor: kDarkGreyColor,
-                title: 'Kembali',
-                onPressed: () {},
-                borderColor: kDarkGreyColor,
-                borderWidth: 2.w,
-                fontWeight: normal,
-                width: 308.w,
-                margin: EdgeInsets.only(
-                  right: defaultMargin.w,
-                  left: defaultMargin.w,
-                ),
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              CustomButton(
-                title: 'Hapus',
-                onPressed: () => Navigator.pop(context, 'OK'),
-                color: kRedColor,
-                textStyle: blackTextStyle,
-                width: 308.w,
-                margin: EdgeInsets.only(
-                  right: defaultMargin.w,
-                  left: defaultMargin.w,
-                  bottom: 48.h,
-                ),
-              ),
-            ],
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(18.r),
-            ),
-          ),
-        ),
-      ),
       child: Container(
         width: double.infinity,
         margin: EdgeInsets.only(
@@ -100,7 +41,7 @@ class CustomCardNotification extends StatelessWidget {
         ),
         padding: EdgeInsets.symmetric(
           vertical: 18.h,
-          horizontal: defaultPadding.w,
+          horizontal: 18.w,
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(defaultRadius),
@@ -156,10 +97,14 @@ class CustomCardNotification extends StatelessWidget {
                   fontWeight: fontWeight,
                 ),
               ),
-            if (iconNew == true)
-              Icon(
-                Icons.delete,
-                color: kDarkGreyColor,
+            if (iconDelete == true)
+              GestureDetector(
+                onTap: onPressedDelete,
+                child: Icon(
+                  Icons.delete,
+                  color: kDarkGreyColor,
+                  size: 32,
+                ),
               ),
           ],
         ),
