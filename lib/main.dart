@@ -15,6 +15,7 @@ import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/loading_page.dart';
 import 'package:adira_cats/ui/pages/local_notification.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
@@ -91,16 +92,17 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
-          // routes: {
-          //   '/': (context) => SplashPage(),
-          //   '/login': (context) => LoginPage(),
-          //   '/main': (context) => MainPage(),
-          //   '/home': (context) => HomePage(),
-          //   '/profile': (context) => ProfilePage(),
-          //   '/message': (context) => MessagePage(),
-          //   '/unit_search': (context) => UnitSearchPage(),
-          //   '/notification': (context) => NotificationPage(),
-          // },
+          routes: {
+            '/': (context) => SplashPage(),
+            '/load': (context) => LoadPage(),
+            '/login': (context) => LoginPage(),
+            '/main': (context) => MainPage(),
+            '/home': (context) => HomePage(),
+            '/profile': (context) => ProfilePage(),
+            '/message': (context) => MessagePage(),
+            '/unit_search': (context) => UnitSearchPage(),
+            '/notification': (context) => NotificationPage(),
+          },
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
