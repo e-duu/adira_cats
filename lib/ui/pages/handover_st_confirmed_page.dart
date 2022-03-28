@@ -16,9 +16,7 @@ class HandoverStConfirmedPage extends StatelessWidget {
           text: "Serah Terima ST",
           preffixWidget: GestureDetector(
             onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
-            ),
+            child: libraryIcon,
           ),
           suffixWidget: GestureDetector(
             onTap: () {},
@@ -50,7 +48,9 @@ class HandoverStConfirmedPage extends StatelessWidget {
             color: kLigthGrayColor,
             width: 2.w,
           ),
-          borderRadius: BorderRadius.circular(defaultRadius),
+          borderRadius: BorderRadius.circular(
+            defaultRadius,
+          ),
         ),
         child: Column(
           children: [

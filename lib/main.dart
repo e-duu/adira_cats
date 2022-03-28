@@ -1,30 +1,29 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
-import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_filled_page.dart';
 import 'package:adira_cats/ui/pages/create_st_page.dart';
 import 'package:adira_cats/ui/pages/error_page.dart';
-import 'package:adira_cats/ui/pages/handover_st_detail_page.dart';
+import 'package:adira_cats/ui/pages/forgot_password_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_confirmed_page.dart';
+import 'package:adira_cats/ui/pages/handover_st_detail_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/loading_page.dart';
+import 'package:adira_cats/ui/pages/local_notification.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
-import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
-import 'package:adira_cats/ui/pages/forgot_password_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
+import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/pull_fee_done_page.dart';
 import 'package:adira_cats/ui/pages/pull_fee_page.dart';
 import 'package:adira_cats/ui/pages/register_fourth_page.dart';
 import 'package:adira_cats/ui/pages/register_page.dart';
 import 'package:adira_cats/ui/pages/register_second_page.dart';
-import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/register_third_done_page.dart';
 import 'package:adira_cats/ui/pages/register_third_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_mv_page%20.dart';
@@ -47,21 +46,22 @@ import 'package:adira_cats/ui/pages/report_detail_visit_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_visit_result_detail_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_visit_result_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
-import 'package:adira_cats/ui/pages/request_unit_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
+import 'package:adira_cats/ui/pages/result_visit_page.dart';
+import 'package:adira_cats/ui/pages/save_page.dart';
+import 'package:adira_cats/ui/pages/save_page_empty.dart';
 import 'package:adira_cats/ui/pages/share_unit_found_page.dart';
 import 'package:adira_cats/ui/pages/share_unit_page.dart';
-import 'package:adira_cats/ui/pages/st_done_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
+import 'package:adira_cats/ui/pages/testing.dart';
 import 'package:adira_cats/ui/pages/unit_search_detail_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_page.dart';
-import 'package:adira_cats/ui/pages/unit_search_process_done_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_process_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
-import 'package:adira_cats/ui/pages/verification_done_page.dart';
-import 'package:adira_cats/ui/pages/testing.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -74,6 +74,7 @@ void main() {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);
+
   runApp(MyApp());
 }
 
@@ -93,7 +94,6 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           // routes: {
           //   '/': (context) => SplashPage(),
-          //   '/load': (context) => LoadPage(),
           //   '/login': (context) => LoginPage(),
           //   '/main': (context) => MainPage(),
           //   '/home': (context) => HomePage(),
@@ -117,45 +117,84 @@ class MyApp extends StatelessWidget {
           // home: RegisterFourthPage(),
 
           /// NOTE : DONE
-          // home: UnitSearchPullPage(),
+          /// NOTE : MAIN PAGE
+          // home: MessagePage(),
+          // home: MessageRoomPage(),
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
-          // home: MessageRoomPage(),
+          // home: UnitSearchPage(),
+          // home: UnitSearchNilPage(),
+          // home: UnitSearchPullPage(),
+          // home: UnitSearchFoundPage(),
+          // home: UnitSearchDetailPage(),
+          // home: UnitSearchProcessPage(),
+          // home: UnitSearchPullFoundPage(),
+          // home: HomePage(),
+          // home: NotificationPage(),
+          // home: LocalNotification(),
+          // home: ProfilePage(),
+          // home: ErrorPage(),
+          // home: LoadPage(),
+          // home: LoadPage(),
+
+          /// NOTE : ST CONTRACT PAGE
           // home: CreateStPage(),
           // home: CreateStFilledPage(),
-          // home: CreateStContractNumberPage(),
           // home: CreateStContractNullPage(),
-          // home: StDonePage(),
+          // home: CreateStContractNumberPage(),
+
+          /// NOTE : HANDOVER ST PAGE
           // home: HandoverStPage(),
-          // home: HandoverStSearchPage(),
           // home: HandoverStDetailPage(),
+          // home: HandoverStSearchPage(),
           // home: HandoverStSearchNilPage(),
           // home: HandoverStConfirmedPage(),
-          // home: CreateStContractNumberPage(),
-          // home: CreateStContractNullPage(),
+
+          /// NOTE : REPORT PAGE
           // home: ReportPage(),
           // home: ReportDetailPage(),
-          // home: ReportDetailProdexPage(),
-          // home: ReportDetailProdexResultPage(),
+
+          /// NOTE : VISIT PAGE
           // home: ReportDetailVisitPage(),
+          // home: ReportDetailVisitNihilPage(),
+          // home: ReportDetailVisitResultPage(),
           // home: ReportDetailVisitResultDetailPage(),
+
+          /// NOTE : PRODEX PAGE
+          // home: ReportDetailProdexPage(),
+          // home: ReportDetailProdexNihilPage(),
+          // home: ReportDetailProdexResultPage(),
+          // home: ReportDetailProdexResultDetailPage(),
+
+          /// NOTE : PULL FEE PAGE
           // home: ReportDetailPullFeePage(),
+          // home: ReportDetailPullFeeNihilPage(),
           // home: ReportDetailPullFeeResultPage(),
           // home: ReportDetailPullFeeResultDetailPage(),
+
+          /// NOTE : ST PAGE
           // home: ReportDetailStPage(),
           // home: ReportDetailStNihilPage(),
           // home: ReportDetailStResultPage(),
           // home: ReportDetailStResultDetailPage(),
+
+          /// NOTE : MONITORING FLOW PAGE
           // home: ReportDetailMvPage(),
           // home: ReportDetailMvResultPage(),
-          // home: UnitSearchPage(),
-          // home: UnitSearchFoundPage(),
-          // home: UnitSearchNilPage(),
-          // home: UnitSearchProcessPage(),
-          // home: UnitSearchProcessDonePage(),
-          home: PullFeePage(),
+
+          /// NOTE : SUBMISSION PULL FEE PAGE
+          // home: PullFeePage(),
           // home: PullFeeDonePage(),
-          // home: UnitSearchDetailPage(),
+
+          /// NOTE : RESULT VISIT PAGE
+          // home: ResultVisitPage(),
+
+          /// NOTE : SAVED PAGE
+          // home: SavePage(),
+          // home: SavePageEmpty(),
+
+          /// NOTE: ON PROGRESS
+          home: TestingPage(),
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),

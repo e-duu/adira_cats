@@ -47,7 +47,7 @@ class LoginPage extends StatelessWidget {
                 children: [
                   CustomLogoAdira(text: 'Login'),
                   SizedBox(
-                    height: defaultPadding.h,
+                    height: 12.h,
                   ),
                   Container(
                     width: double.infinity,
@@ -162,7 +162,7 @@ class LoginPage extends StatelessWidget {
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 18.h, bottom: 9.h),
+                    margin: EdgeInsets.only(top: 28.h, bottom: 11.h),
                     child: Column(
                       children: [
                         Text(

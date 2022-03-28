@@ -1,55 +1,29 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class CustomGoogleMaps extends StatefulWidget {
+  const CustomGoogleMaps({Key? key}) : super(key: key);
+
   @override
   _CustomGoogleMapsState createState() => _CustomGoogleMapsState();
 }
 
 class _CustomGoogleMapsState extends State<CustomGoogleMaps> {
-  final Set<Marker> _markers = {};
-  final LatLng _currentPosition = LatLng(-0.8971395757503112, 100.3507166778259);
+  late GoogleMapController mapController;
 
-  @override
-  void initState() {
-    _markers.add(
-      Marker(
-        markerId: MarkerId("-0.8971395757503112, 100.3507166778259"),
-        position: _currentPosition,
-        icon: BitmapDescriptor.defaultMarker,
-      ),
-    );
-    super.initState();
+  final LatLng _center = const LatLng(45.521563, -122.677433);
+
+  void _onMapCreated(GoogleMapController controller) {
+    mapController = controller;
   }
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 300.h,
-      width: double.infinity,
-      child: GoogleMap(
-        mapType: MapType.normal,
-        initialCameraPosition: CameraPosition(
-          target: _currentPosition,
-          zoom: 14.0,
-        ),
-        markers: _markers,
-          onTap: (position) {
-            setState(() {
-              _markers.add(
-                Marker(
-                  markerId:
-                  MarkerId(
-                    "${position.latitude}, ${position.longitude}"
-                  ),
-                  icon: BitmapDescriptor.defaultMarker,
-                  position: position,
-                ),
-              );
-            },
-          );
-        },
+    return GoogleMap(
+      onMapCreated: _onMapCreated,
+      initialCameraPosition: CameraPosition(
+        target: _center,
+        zoom: 11.0,
       ),
     );
   }

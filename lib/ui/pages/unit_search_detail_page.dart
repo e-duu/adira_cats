@@ -1,10 +1,12 @@
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_google_maps.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_unit_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class UnitSearchDetailPage extends StatelessWidget {
   const UnitSearchDetailPage({Key? key}) : super(key: key);
@@ -42,8 +44,8 @@ class UnitSearchDetailPage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              width: double.infinity.w,
-              height: 290.h,
+              width: 380.w,
+              height: 280.h,
               margin: EdgeInsets.symmetric(
                 horizontal: defaultMargin.w,
               ),
@@ -52,6 +54,11 @@ class UnitSearchDetailPage extends StatelessWidget {
                   image: AssetImage(
                     'assets/image_car_1.png',
                   ),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(defaultRadius.w),
+                  topRight: Radius.circular(defaultRadius.w),
                 ),
               ),
               child: Row(
@@ -106,21 +113,37 @@ class UnitSearchDetailPage extends StatelessWidget {
                     ),
                     color: kPrimaryColor,
                     imageUrl: 'assets/image_button_pin.png',
-                    onPressed: () {},
+                    onPressed: () => showDialog<String>(
+                      context: context,
+                      builder: (BuildContext context) => AlertDialog(
+                        content: Container(
+                          child: CustomGoogleMaps(),
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
             Container(
-              width: 294.w,
+              width: 380.w,
+              margin: EdgeInsets.symmetric(
+                horizontal: defaultMargin.w,
+              ),
               decoration: BoxDecoration(
-                border: Border.all(
-                  color: kDarkGreyColor,
-                  width: 2.w,
-                ),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(8),
-                  bottomRight: Radius.circular(8),
+                border: Border(
+                  left: BorderSide(
+                    width: 2.w,
+                    color: kDarkGreyColor,
+                  ),
+                  right: BorderSide(
+                    width: 2.w,
+                    color: kDarkGreyColor,
+                  ),
+                  bottom: BorderSide(
+                    width: 2.w,
+                    color: kDarkGreyColor,
+                  ),
                 ),
               ),
               child: Column(
@@ -332,7 +355,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                           borderColor: kDarkGreyColor,
                           borderWidth: 2.w,
                           fontWeight: light,
-                          width: 102.w,
+                          width: 100.w,
                         ),
                         SizedBox(
                           width: 12.w,
@@ -343,7 +366,7 @@ class UnitSearchDetailPage extends StatelessWidget {
                           borderColor: kDarkGreyColor,
                           borderWidth: 2.w,
                           fontWeight: light,
-                          width: 102.w,
+                          width: 100.w,
                           onPressed: () => showDialog<String>(
                             context: context,
                             builder: (BuildContext context) => Container(

@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,14 +5,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomCardSt extends StatefulWidget {
   final String stNumber;
   final String contractNumber;
-  final bool clickDetail;
   final Function()? onPressed;
 
   const CustomCardSt({
     Key? key,
     required this.stNumber,
     required this.contractNumber,
-    this.clickDetail = false,
     this.onPressed,
   }) : super(key: key);
 
@@ -24,8 +20,6 @@ class CustomCardSt extends StatefulWidget {
 
 class _CustomCardStState extends State<CustomCardSt> {
   bool press = false;
-
-  var random = Random();
 
   void changeColorIndex() {
     setState(() {
@@ -95,43 +89,30 @@ class _CustomCardStState extends State<CustomCardSt> {
                       fontSize: 12.sp,
                     ),
                   ),
-                  if (widget.clickDetail == true)
-                    SizedBox(
-                      height: 6.h,
-                    ),
-                  if (widget.clickDetail == true)
-                    Text(
-                      "Klik untuk lihat detail",
-                      style: darkGreyTextStyle.copyWith(
-                        fontWeight: light,
-                        fontSize: 11.sp,
-                      ),
-                    ),
                 ],
               ),
             ),
-            if (press == true)
-              Container(
+            if (press == true) Container(
+              width: 59.w,
+              height: 29.h,
+              child: Container(
                 width: 59.w,
                 height: 29.h,
-                child: Container(
-                  width: 59.w,
-                  height: 29.h,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(defaultRadius),
-                    color: kPrimaryColor,
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Dipilih',
-                      style: blackTextStyle.copyWith(
-                        fontSize: 11.sp,
-                        fontWeight: semibold,
-                      ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(defaultRadius),
+                  color: kPrimaryColor,
+                ),
+                child: Center(
+                  child: Text(
+                    'Dipilih',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 11.sp,
+                      fontWeight: semibold,
                     ),
                   ),
                 ),
               ),
+            ),
           ],
         ),
       ),

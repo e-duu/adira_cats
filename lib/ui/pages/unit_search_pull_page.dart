@@ -17,7 +17,7 @@ class UnitSearchPullPage extends StatelessWidget {
           bottom: defaultPadding.h,
         ),
         child: CustomNavbar(
-          text: "Serah Terima ST",
+          text: "Tarik Unit",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(
@@ -50,14 +50,14 @@ class UnitSearchPullPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomUploadImage(
-                  hintText: 'Tambahkan\nFoto KTP',
+                  hintText: 'Tambahkan\nFoto Noka / Nosin',
                   imageUrl: 'assets/icon_upload.png',
                 ),
                 SizedBox(
                   width: 16.w,
                 ),
                 CustomUploadImage(
-                  hintText: 'Tambahkan\nFoto Diri',
+                  hintText: 'Tambahkan\nFoto Nomor Polisi (Plat)',
                   imageUrl: 'assets/icon_upload.png',
                 ),
               ],
@@ -69,14 +69,14 @@ class UnitSearchPullPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomUploadImage(
-                  hintText: 'Tambahkan\nFoto KTP',
+                  hintText: 'Tambahkan\nFoto BASTK',
                   imageUrl: 'assets/icon_upload.png',
                 ),
                 SizedBox(
                   width: 16.w,
                 ),
                 CustomUploadImage(
-                  hintText: 'Tambahkan\nFoto Diri',
+                  hintText: 'Tambahkan\nFoto Bagian Belakang',
                   imageUrl: 'assets/icon_upload.png',
                 ),
               ],
@@ -88,14 +88,14 @@ class UnitSearchPullPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomUploadImage(
-                  hintText: 'Tambahkan\nFoto KTP',
+                  hintText: 'Tambahkan\nFoto Depan Kanan',
                   imageUrl: 'assets/icon_upload.png',
                 ),
                 SizedBox(
                   width: 16.w,
                 ),
                 CustomUploadImage(
-                  hintText: 'Tambahkan\nFoto Diri',
+                  hintText: 'Tambahkan\nFoto Bagian Sisi Kiri',
                   imageUrl: 'assets/icon_upload.png',
                 ),
               ],
@@ -117,14 +117,13 @@ class UnitSearchPullPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomButtonBorder(
-                  title: "Batalkan",
-                  titleColor: kRedColor,
-                  borderColor: kRedColor,
-                  borderWidth: 2,
-                  fontWeight: light,
-                  width: defaultBottom.w,
-                  onPressed: () {}
-                ),
+                    title: "Batalkan",
+                    titleColor: kRedColor,
+                    borderColor: kRedColor,
+                    borderWidth: 2,
+                    fontWeight: light,
+                    width: 150.w,
+                    onPressed: () {}),
                 SizedBox(
                   width: 12.w,
                 ),

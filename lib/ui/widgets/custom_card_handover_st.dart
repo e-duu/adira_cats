@@ -2,36 +2,33 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomCardDialogSt extends StatelessWidget {
+class CustomCardHandoverSt extends StatefulWidget {
   final String stNumber;
   final String contractNumber;
-  final bool iconDelete;
-  final String notifText;
-  final bool clickDetail;
-  final Function()? onPressed;
-  final Function()? onPressedDelete;
+  final bool newHandover;
+  final Function() onPressed;
 
-  const CustomCardDialogSt({
+  const CustomCardHandoverSt({
     Key? key,
     required this.stNumber,
     required this.contractNumber,
-    this.iconDelete = false,
-    this.notifText = '',
-    this.clickDetail = false,
-    this.onPressed,
-    this.onPressedDelete,
+    required this.onPressed,
+    this.newHandover = false,
   }) : super(key: key);
+
+  @override
+  _CustomCardHandoverStState createState() => _CustomCardHandoverStState();
+}
+
+class _CustomCardHandoverStState extends State<CustomCardHandoverSt> {
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onPressed,
+      onTap: widget.onPressed,
       child: Container(
         width: double.infinity,
-        padding: EdgeInsets.symmetric(
-          horizontal: 18.w,
-          vertical: 18.h,
-        ),
+        padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 18.h),
         margin: EdgeInsets.only(
           bottom: 12.h,
           right: defaultPadding.w,
@@ -67,7 +64,7 @@ class CustomCardDialogSt extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Nomor ST : $stNumber",
+                    "Nomor ST : ${widget.stNumber}",
                     style: blackTextStyle.copyWith(
                       fontWeight: bold,
                       fontSize: 12.sp,
@@ -77,36 +74,46 @@ class CustomCardDialogSt extends StatelessWidget {
                     height: 6.h,
                   ),
                   Text(
-                    "Nomor Kontrak : $contractNumber",
+                    "Nomor Kontrak : ${widget.contractNumber}",
                     style: blackTextStyle.copyWith(
                       fontWeight: bold,
                       fontSize: 12.sp,
                     ),
                   ),
-                  if (clickDetail == true)
-                    SizedBox(
-                      height: 6.h,
+                  SizedBox(
+                    height: 6.h,
+                  ),
+                  Text(
+                    "Klik untuk lihat detail",
+                    style: darkGreyTextStyle.copyWith(
+                      fontWeight: light,
+                      fontSize: 11.sp,
                     ),
-                  if (clickDetail == true)
-                    Text(
-                      "Klik untuk lihat detail",
-                      style: darkGreyTextStyle.copyWith(
-                        fontWeight: light,
-                        fontSize: 11.sp,
-                      ),
-                    ),
+                  ),
                 ],
               ),
             ),
-            if (iconDelete == true)
-              GestureDetector(
-                onTap: onPressedDelete,
-                child: Icon(
-                  Icons.delete,
-                  color: kDarkGreyColor,
-                  size: 32,
+            if (widget.newHandover == true) Container(
+              width: 59.w,
+              height: 29.h,
+              child: Container(
+                width: 59.w,
+                height: 29.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(defaultRadius),
+                  color: kPrimaryColor,
+                ),
+                child: Center(
+                  child: Text(
+                    'Baru',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 11.sp,
+                      fontWeight: semibold,
+                    ),
+                  ),
                 ),
               ),
+            ),
           ],
         ),
       ),
