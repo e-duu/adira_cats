@@ -3,7 +3,7 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomChatItem extends StatelessWidget {
-  final String chat; 
+  final String chat;
   final String time;
   final bool auth;
   final bool read;
@@ -12,13 +12,12 @@ class CustomChatItem extends StatelessWidget {
     Key? key,
     required this.chat,
     required this.time,
-    this.read = false, 
+    this.read = false,
     this.auth = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
     if (auth != true) {
       return Container(
         margin: EdgeInsets.only(
@@ -72,10 +71,9 @@ class CustomChatItem extends StatelessWidget {
                   Text(
                     read ? 'Diterima' : 'Dibaca',
                     style: blackTextStyle.copyWith(
-                      fontSize: 10.sp,
-                      fontWeight: light,
-                      fontStyle: FontStyle.italic
-                    ),
+                        fontSize: 10.sp,
+                        fontWeight: light,
+                        fontStyle: FontStyle.italic),
                   ),
                 ],
               ),
@@ -110,10 +108,9 @@ class CustomChatItem extends StatelessWidget {
                   Text(
                     read ? 'Diterima' : 'Dibaca',
                     style: blackTextStyle.copyWith(
-                      fontSize: 10.sp,
-                      fontWeight: light,
-                      fontStyle: FontStyle.italic
-                    ),
+                        fontSize: 10.sp,
+                        fontWeight: light,
+                        fontStyle: FontStyle.italic),
                   ),
                 ],
               ),
@@ -146,6 +143,5 @@ class CustomChatItem extends StatelessWidget {
         ),
       );
     }
-    
   }
 }

@@ -264,10 +264,9 @@ packages:
       name: flutter_bloc
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
-    version: "8.0.1"
+    version: "7.3.3"
   flutter_chat_types:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: flutter_chat_types
       url: "https://pub.dartlang.org"
@@ -294,9 +293,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.0.2"
-=======
-    version: "7.3.3"
->>>>>>> d012799a1c807d159d2545dc39826a639d83dda2
   flutter_lints:
     dependency: "direct dev"
     description:
