@@ -26,8 +26,8 @@ class ReportDetailPullFeePage extends StatelessWidget {
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
-              width: 27.w,
-              height: 26.h,
+              width: 21.w,
+              height: 21.h,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(

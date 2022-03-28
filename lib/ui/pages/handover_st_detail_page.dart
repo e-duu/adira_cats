@@ -75,33 +75,6 @@ class HandoverStDetailPage extends StatelessWidget {
                   ),
                 ),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: 59,
-                        height: 29.h,
-                        decoration: BoxDecoration(
-                          color: kPrimaryColor,
-                          borderRadius: BorderRadius.circular(defaultRadius),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Baru",
-                            style: blackTextStyle.copyWith(
-                              fontWeight: semibold,
-                              fontSize: 11.sp,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
             ),
             Container(
               width: double.infinity,
@@ -333,8 +306,8 @@ class HandoverStDetailPage extends StatelessWidget {
             left: 36.w,
             right: 36.w,
           ),
-          titleColor: kGreyColor,
-          borderColor: kGreyColor,
+          titleColor: kDarkGreyColor,
+          borderColor: kDarkGreyColor,
           borderWidth: 2,
           fontWeight: light,
           onPressed: () {},

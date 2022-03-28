@@ -6,7 +6,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 import '../widgets/custom_navbar.dart';
-import '../widgets/custom_upload_image.dart';
 
 class UnitSearchPullFoundPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
@@ -20,12 +19,20 @@ class UnitSearchPullFoundPage extends StatelessWidget {
           bottom: 24.h,
         ),
         child: CustomNavbar(
+<<<<<<< HEAD
           text: "Serah Terima ST",
            preffixWidget: GestureDetector(
               onTap: () {
                 _scaffoldKey.currentState!.openDrawer();
               },
               child: Icon(Icons.subject_sharp),
+=======
+          text: "Tarik Unit",
+          preffixWidget: GestureDetector(
+            onTap: () {},
+            child: Icon(
+              Icons.subject_sharp,
+>>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
             ),
           suffixWidget: GestureDetector(
             onTap: () {},
@@ -54,14 +61,14 @@ class UnitSearchPullFoundPage extends StatelessWidget {
               children: [
                 CustomRectangleEdit(
                   imageUrl: 'assets/image_unit_pull1.png',
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
                 SizedBox(
                   width: 16.w,
                 ),
                 CustomRectangleEdit(
                   imageUrl: 'assets/image_unit_pull2.png',
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
               ],
             ),
@@ -73,14 +80,14 @@ class UnitSearchPullFoundPage extends StatelessWidget {
               children: [
                 CustomRectangleEdit(
                   imageUrl: 'assets/image_unit_pull1.png',
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
                 SizedBox(
                   width: 16.w,
                 ),
                 CustomRectangleEdit(
                   imageUrl: 'assets/image_unit_pull2.png',
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
               ],
             ),
@@ -92,14 +99,14 @@ class UnitSearchPullFoundPage extends StatelessWidget {
               children: [
                 CustomRectangleEdit(
                   imageUrl: 'assets/image_unit_pull1.png',
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
                 SizedBox(
                   width: 16.w,
                 ),
                 CustomRectangleEdit(
                   imageUrl: 'assets/image_unit_pull2.png',
-                  onPressed: (){},
+                  onPressed: () {},
                 ),
               ],
             ),

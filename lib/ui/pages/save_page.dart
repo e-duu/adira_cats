@@ -26,8 +26,8 @@ class SavePage extends StatelessWidget {
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
-              width: 27.w,
-              height: 26.h,
+              width: 21.w,
+              height: 21.h,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -56,6 +56,7 @@ class SavePage extends StatelessWidget {
               title: 'Smith Erwin',
               message: 'Nomor Kontrak : 9999 8888 7777',
               fontWeight: semibold,
+              iconNew: true,
             ),
             CustomCardNotification(
               onTap: () {},
@@ -64,6 +65,7 @@ class SavePage extends StatelessWidget {
               title: 'Zacharius Michael',
               message: 'Nomor Kontrak : 9999 8888 6666',
               fontWeight: light,
+              iconNew: true,
             ),
             CustomCardNotification(
               onTap: () {},
@@ -72,6 +74,7 @@ class SavePage extends StatelessWidget {
               title: 'Ackermann Kenny',
               message: 'Nomor Kontrak : 9999 8888 1111',
               fontWeight: light,
+              iconNew: true,
             ),
             CustomCardNotification(
               onTap: () {},
@@ -80,6 +83,7 @@ class SavePage extends StatelessWidget {
               title: 'Kirschtein Jean',
               message: 'Nomor Kontrak : 9999 8888 2222',
               fontWeight: light,
+              iconNew: true,
             ),
           ],
         ),
@@ -91,7 +95,7 @@ class SavePage extends StatelessWidget {
         margin: EdgeInsets.only(
           left: 12.w,
           right: 12.w,
-          top: 295.h,
+          top: 50.h,
           bottom: 12.h,
         ),
         child: Column(
@@ -146,7 +150,10 @@ class SavePage extends StatelessWidget {
                       ),
                       CustomButton(
                         title: 'Hapus Semua',
-                        onPressed: () => Navigator.pop(context, 'OK'),
+                        onPressed: () => Navigator.pop(
+                          context,
+                          'OK',
+                        ),
                         color: kRedColor,
                         textStyle: whiteTextStyle,
                         width: 308.w,
@@ -158,7 +165,9 @@ class SavePage extends StatelessWidget {
                       ),
                     ],
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.r),
+                      borderRadius: BorderRadius.circular(
+                        18.r,
+                      ),
                     ),
                   ),
                 ),
@@ -196,6 +205,7 @@ class SavePage extends StatelessWidget {
     }
 
     return Scaffold(
+<<<<<<< HEAD
         key: _scaffoldKey,
        
           drawer : Container(
@@ -209,6 +219,9 @@ class SavePage extends StatelessWidget {
           ),
                 drawerEnableOpenDragGesture : true,
           endDrawerEnableOpenDragGesture: false,
+=======
+      backgroundColor: kWhiteColor,
+>>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
       body: SafeArea(
         child: Container(
           child: SingleChildScrollView(

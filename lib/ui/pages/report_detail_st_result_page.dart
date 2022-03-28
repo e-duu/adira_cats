@@ -29,8 +29,8 @@ class ReportDetailStResultPage extends StatelessWidget {
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
-              width: 27.w,
-              height: 26.h,
+              width: 21.w,
+              height: 21.h,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -47,26 +47,23 @@ class ReportDetailStResultPage extends StatelessWidget {
     Widget selectArea() {
       return Container(
         margin: EdgeInsets.only(
-        top: 24.h,
-        right: 36.w,
-        left: 36.w,
-      ),
+          top: 24.h,
+          right: 36.w,
+          left: 36.w,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomDropdown(
-              items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-              hintText: 'JAKARTA'
+                items: ['pilih 1', 'pilih 2', 'pilih 3'], hintText: 'JAKARTA'),
+            SizedBox(
+              height: 12.h,
             ),
-            SizedBox(height: 12.h,),
             CustomDropdown(
-              items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-              hintText: 'JAKARTA PUSAT'
-            ),
+                items: ['pilih 1', 'pilih 2', 'pilih 3'],
+                hintText: 'JAKARTA PUSAT'),
             Container(
-              margin: EdgeInsets.symmetric(
-                vertical: 12.h
-              ),
+              margin: EdgeInsets.symmetric(vertical: 12.h),
               child: Text(
                 'Periode (Awal s/d Akhir)',
                 style: darkGreyTextStyle.copyWith(
@@ -81,7 +78,6 @@ class ReportDetailStResultPage extends StatelessWidget {
       );
     }
 
-
     Widget selectPeriod() {
       return Container(
         margin: EdgeInsets.symmetric(
@@ -94,16 +90,18 @@ class ReportDetailStResultPage extends StatelessWidget {
                 Container(
                   width: 138.w,
                   child: CustomDropdownBorder(
-                    items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-                    hintText: '1 Januari 2022', 
+                    items: ['pilih 1', 'pilih 2', 'pilih 3'],
+                    hintText: '1 Januari 2022',
                   ),
                 ),
-                SizedBox(width: 12.h,),
+                SizedBox(
+                  width: 12.h,
+                ),
                 Container(
                   width: 138.w,
                   child: CustomDropdownBorder(
-                    items: ['pilih 1', 'pilih 2', 'pilih 3'], 
-                    hintText: '1 Maret 2022', 
+                    items: ['pilih 1', 'pilih 2', 'pilih 3'],
+                    hintText: '1 Maret 2022',
                   ),
                 ),
               ],
@@ -116,10 +114,7 @@ class ReportDetailStResultPage extends StatelessWidget {
                 text: '<bold>2</bold> Surat Tugas telah ditemukan.',
                 tags: {
                   'bold': StyledTextTag(
-                    style: TextStyle(
-                      fontWeight: bold,
-                      fontSize: 13.sp
-                    ),
+                    style: TextStyle(fontWeight: bold, fontSize: 13.sp),
                   ),
                 },
                 style: darkGreyTextStyle.copyWith(
@@ -134,7 +129,7 @@ class ReportDetailStResultPage extends StatelessWidget {
       );
     }
 
-    Widget externalName(){
+    Widget externalName() {
       return Container(
         margin: EdgeInsets.symmetric(
           horizontal: 24.w,
@@ -145,7 +140,9 @@ class ReportDetailStResultPage extends StatelessWidget {
               imageUrl: 'assets/icon_surat_tugas.png',
               title: 'Nomor Kontrak : 121212',
             ),
-            SizedBox(height: 12.h,),
+            SizedBox(
+              height: 12.h,
+            ),
             CustomDetailReport(
               imageUrl: 'assets/icon_surat_tugas.png',
               title: 'Nomor Kontrak : 121212',
@@ -154,7 +151,7 @@ class ReportDetailStResultPage extends StatelessWidget {
         ),
       );
     }
-    
+
     Widget button() {
       return Container(
         margin: EdgeInsets.only(
@@ -167,11 +164,11 @@ class ReportDetailStResultPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             CustomButtonBorder(
-              title: 'Kembali', 
-              titleColor: kDarkGreyColor, 
-              onPressed: (){}, 
-              borderColor: kDarkGreyColor, 
-              borderWidth: 2.w, 
+              title: 'Kembali',
+              titleColor: kDarkGreyColor,
+              onPressed: () {},
+              borderColor: kDarkGreyColor,
+              borderWidth: 2.w,
               fontWeight: light,
             ),
           ],

@@ -1,5 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
+import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -63,8 +64,10 @@ class UnitSearchPage extends StatelessWidget {
 
   Widget searchUnitPhoto() {
     return Container(
-      padding: EdgeInsets.symmetric(
-        vertical: defaultPadding.h,
+      margin: EdgeInsets.only(
+        top: 12.h,
+        left: defaultMargin.w,
+        right: defaultMargin.w,
       ),
       decoration: BoxDecoration(
         color: kGreyColor,
@@ -74,27 +77,20 @@ class UnitSearchPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            width: 50.w,
-            height: 50.h,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  "assets/icon_upload.png",
-                ),
-              ),
-            ),
+          CustomButton(
+            title: "Cari Lewat ST",
+            onPressed: (){},
+            color: kPrimaryColor,
+            textStyle: blackTextStyle,
           ),
           SizedBox(
-            width: 30.w,
+            width: 12.w,
           ),
-          Text(
-            "Cari Unit menggunakan\nFoto/Scan Plat Nomor",
-            style: darkGreyTextStyle.copyWith(
-              fontWeight: light,
-              fontSize: 12.sp,
-            ),
-            overflow: TextOverflow.ellipsis,
+          CustomButton(
+            title: "Scan Foto Plat",
+            onPressed: (){},
+            color: kPrimaryColor,
+            textStyle: blackTextStyle,
           ),
         ],
       ),
@@ -133,8 +129,9 @@ class UnitSearchPage extends StatelessWidget {
               ),
             ),
           ],
+          ),
         ),
       ),
-    ));
+    );
   }
 }

@@ -77,14 +77,14 @@ class NotificationPage extends StatelessWidget {
             // NOTE: CARD NOTIFICATION
             CustomCardNotification(
               onTap: () {},
-              title: 'SK 14142 telah diterbitkan',
+              title: 'ST 14142 telah diterbitkan',
               message: 'klik untuk melihat',
               time: 'Baru Saja',
               fontWeight: semibold,
             ),
             CustomCardNotification(
               onTap: () {},
-              title: 'SK 14141 telah dikonfirmasi',
+              title: 'ST 14141 telah dikonfirmasi',
               message: 'klik untuk melihat',
               time: '06.12',
               fontWeight: light,

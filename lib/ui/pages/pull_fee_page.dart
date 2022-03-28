@@ -3,12 +3,13 @@ import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
+import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
-class UnitSearchProcessPage extends StatelessWidget {
-  const UnitSearchProcessPage({Key? key}) : super(key: key);
+class PullFeePage extends StatelessWidget {
+  const PullFeePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class UnitSearchProcessPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Proses",
+          text: "Pengajuan Biaya Tarik",
           preffixWidget: GestureDetector(
             onTap: () {},
             child: Icon(
@@ -41,52 +42,23 @@ class UnitSearchProcessPage extends StatelessWidget {
       );
     }
 
-    Widget topButton() {
+    Widget search() {
       return Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            SizedBox(
-              height: 34.h,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CustomButtonBorder(
-                  title: 'Buat Surat Tugas',
-                  titleColor: kBlackColor,
-                  onPressed: () {},
-                  borderColor: kDarkGreyColor,
-                  borderWidth: 2.r,
-                  fontWeight: normal,
-                  width: 138.w,
-                ),
-                SizedBox(
-                  width: 12.w,
-                ),
-                CustomButtonBorder(
-                  title: 'Tarik Unit',
-                  titleColor: kBlackColor,
-                  onPressed: () {},
-                  borderColor: kDarkGreyColor,
-                  borderWidth: 2.r,
-                  fontWeight: normal,
-                  width: 138.w,
-                ),
-              ],
-            ),
-          ],
+        margin: EdgeInsets.symmetric(
+          vertical: defaultPadding.h,
         ),
+        child: CustomInputSearch(
+            hintText: 'Cari Nomor Kontrak...', onPressed: () {}),
       );
     }
 
     Widget inputSection() {
-      Widget customerName() {
+      Widget caseChronology() {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Nama Nasabah",
+              "Kronologi Kasus",
               style: darkGreyTextStyle.copyWith(
                 fontSize: 13.sp,
                 fontWeight: semibold,
@@ -96,12 +68,9 @@ class UnitSearchProcessPage extends StatelessWidget {
               height: 5.h,
             ),
             CustomInput(
-              hintText: 'Nama Nasabah',
+              hintText: 'Jelaskan kronologi kasus ...',
               hintColor: kDarkGreyColor,
               filled: true,
-              margin: EdgeInsets.only(
-                bottom: 12.h,
-              ),
             ),
             SizedBox(
               height: 12.h,
@@ -110,41 +79,12 @@ class UnitSearchProcessPage extends StatelessWidget {
         );
       }
 
-      Widget contractNumber() {
+      Widget fileType() {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Nomor Kontrak",
-              style: darkGreyTextStyle.copyWith(
-                fontSize: 13.sp,
-                fontWeight: semibold,
-              ),
-            ),
-            SizedBox(
-              height: 5.h,
-            ),
-            CustomInput(
-              hintText: 'Nomor Kontrak',
-              hintColor: kDarkGreyColor,
-              filled: true,
-              margin: EdgeInsets.only(
-                bottom: 12.h,
-              ),
-            ),
-            SizedBox(
-              height: 12.h,
-            ),
-          ],
-        );
-      }
-
-      Widget reason() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Sertakan Alasan ...",
+              "Jenis File",
               style: darkGreyTextStyle.copyWith(
                 fontSize: 13.sp,
                 fontWeight: semibold,
@@ -155,13 +95,36 @@ class UnitSearchProcessPage extends StatelessWidget {
             ),
             CustomDropdown(
               items: [
-                'Unit tidak pernah terlihat',
-                'Ditarik EXC lain',
-                'Pemakai pasang badan',
-                'Nomor berbeda',
-                'Sudah bayar',
+                'BASTK',
+                'Kontrak',
               ],
-              hintText: 'Sertakan Alasan ...',
+              hintText: 'Jenis File',
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
+          ],
+        );
+      }
+
+      Widget documentName() {
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Nama Dokumen",
+              style: darkGreyTextStyle.copyWith(
+                fontSize: 13.sp,
+                fontWeight: semibold,
+              ),
+            ),
+            SizedBox(
+              height: 5.h,
+            ),
+            CustomInput(
+              hintText: 'Nama Dokumen',
+              hintColor: kDarkGreyColor,
+              filled: true,
             ),
             SizedBox(
               height: 12.h,
@@ -175,7 +138,7 @@ class UnitSearchProcessPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Tambahkan Catatan ...",
+              "Catatan",
               style: darkGreyTextStyle.copyWith(
                 fontSize: 13.sp,
                 fontWeight: semibold,
@@ -198,16 +161,15 @@ class UnitSearchProcessPage extends StatelessWidget {
 
       return Container(
         margin: EdgeInsets.only(
-          top: 24.h,
-          bottom: 46.h,
-          right: 36.w,
-          left: 36.w,
+          bottom: 56.h,
+          right: defaultMargin.w,
+          left: defaultMargin.w,
         ),
         child: Column(
           children: [
-            customerName(),
-            contractNumber(),
-            reason(),
+            caseChronology(),
+            fileType(),
+            documentName(),
             notes(),
           ],
         ),
@@ -230,7 +192,7 @@ class UnitSearchProcessPage extends StatelessWidget {
                     builder: (BuildContext context) => Container(
                       child: AlertDialog(
                         titlePadding: EdgeInsets.symmetric(
-                          vertical: 24.h,
+                          vertical: defaultPadding.h,
                         ),
                         title: Container(
                           margin: EdgeInsets.only(
@@ -262,8 +224,8 @@ class UnitSearchProcessPage extends StatelessWidget {
                             fontWeight: normal,
                             width: 308.w,
                             margin: EdgeInsets.only(
-                              right: 36.w,
-                              left: 36.w,
+                              right: defaultMargin.w,
+                              left: defaultMargin.w,
                             ),
                           ),
                           SizedBox(
@@ -276,8 +238,8 @@ class UnitSearchProcessPage extends StatelessWidget {
                             textStyle: blackTextStyle,
                             width: 308.w,
                             margin: EdgeInsets.only(
-                              right: 36.w,
-                              left: 36.w,
+                              right: defaultMargin.w,
+                              left: defaultMargin.w,
                               bottom: 48.h,
                             ),
                           ),
@@ -312,9 +274,9 @@ class UnitSearchProcessPage extends StatelessWidget {
             ),
             CustomButton(
               margin: EdgeInsets.only(
-                right: 36.w,
-                left: 36.w,
-                bottom: 36.h,
+                right: defaultMargin.w,
+                left: defaultMargin.w,
+                bottom: defaultMargin.h,
               ),
               title: 'Submit',
               onPressed: () {},
@@ -333,7 +295,7 @@ class UnitSearchProcessPage extends StatelessWidget {
           child: Column(
             children: [
               navbar(),
-              topButton(),
+              search(),
               inputSection(),
               bottomButton(),
             ],

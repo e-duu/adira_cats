@@ -1,6 +1,5 @@
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,8 +12,6 @@ class RegisterSecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    icon:
-    const Icon(Icons.arrow_downward);
     Widget header() {
       return Container(
         margin: EdgeInsets.only(

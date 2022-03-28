@@ -1,9 +1,12 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+<<<<<<< HEAD
 import 'package:adira_cats/ui/widgets/custom_detail_report.dart';
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
+=======
+>>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -30,8 +33,8 @@ class ReportDetailMvResultPage extends StatelessWidget {
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
-              width: 27.w,
-              height: 26.h,
+              width: 21.w,
+              height: 21.h,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -45,7 +48,7 @@ class ReportDetailMvResultPage extends StatelessWidget {
       );
     }
 
-    Widget found(){
+    Widget found() {
       return Container(
         margin: EdgeInsets.symmetric(
           vertical: defaultMargin,
@@ -54,10 +57,7 @@ class ReportDetailMvResultPage extends StatelessWidget {
           text: '<bold>Workflow Nomor 123</bold> telah ditemukan.',
           tags: {
             'bold': StyledTextTag(
-              style: TextStyle(
-                fontWeight: bold,
-                fontSize: 13.sp
-              ),
+              style: TextStyle(fontWeight: bold, fontSize: 13.sp),
             ),
           },
           style: darkGreyTextStyle.copyWith(
@@ -69,8 +69,7 @@ class ReportDetailMvResultPage extends StatelessWidget {
       );
     }
 
-
-    Widget box(){
+    Widget box() {
       return Container(
         margin: EdgeInsets.only(
           right: defaultMargin,
@@ -98,7 +97,9 @@ class ReportDetailMvResultPage extends StatelessWidget {
                   fontWeight: bold,
                 ),
               ),
-              SizedBox(height: 12.h,),
+              SizedBox(
+                height: 12.h,
+              ),
               Text(
                 'Detail Informasi',
                 style: darkGreyTextStyle.copyWith(
@@ -106,7 +107,9 @@ class ReportDetailMvResultPage extends StatelessWidget {
                   fontWeight: semibold,
                 ),
               ),
-              SizedBox(height: 8.h,),
+              SizedBox(
+                height: 8.h,
+              ),
               Text(
                 'Tanggal Pengajuan : 1 Februari 2022, pukul 13.00',
                 style: darkGreyTextStyle.copyWith(
@@ -114,7 +117,9 @@ class ReportDetailMvResultPage extends StatelessWidget {
                   fontWeight: light,
                 ),
               ),
-              SizedBox(height: 8.h,),
+              SizedBox(
+                height: 8.h,
+              ),
               Text(
                 'Nama Pengaju : Peter Jackson Quill',
                 style: darkGreyTextStyle.copyWith(
@@ -122,7 +127,9 @@ class ReportDetailMvResultPage extends StatelessWidget {
                   fontWeight: light,
                 ),
               ),
-              SizedBox(height: 8.h,),
+              SizedBox(
+                height: 8.h,
+              ),
               Text(
                 'Status Dokumen : Disetujui',
                 style: darkGreyTextStyle.copyWith(
@@ -130,7 +137,9 @@ class ReportDetailMvResultPage extends StatelessWidget {
                   fontWeight: light,
                 ),
               ),
-              SizedBox(height: 8.h,),
+              SizedBox(
+                height: 8.h,
+              ),
               Text(
                 'Biaya Diajukan : Rp. 10.000.000',
                 style: darkGreyTextStyle.copyWith(
@@ -138,7 +147,9 @@ class ReportDetailMvResultPage extends StatelessWidget {
                   fontWeight: light,
                 ),
               ),
-              SizedBox(height: 8.h,),
+              SizedBox(
+                height: 8.h,
+              ),
               Text(
                 'Biaya Disetujui : Rp. 10.000.000',
                 style: darkGreyTextStyle.copyWith(
@@ -146,7 +157,9 @@ class ReportDetailMvResultPage extends StatelessWidget {
                   fontWeight: light,
                 ),
               ),
-              SizedBox(height: 8.h,),
+              SizedBox(
+                height: 8.h,
+              ),
               Text(
                 'Kronologi : CCH, ARH',
                 style: darkGreyTextStyle.copyWith(
@@ -159,7 +172,7 @@ class ReportDetailMvResultPage extends StatelessWidget {
         ),
       );
     }
-    
+
     Widget button() {
       return Container(
         margin: EdgeInsets.only(
@@ -172,11 +185,11 @@ class ReportDetailMvResultPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             CustomButtonBorder(
-              title: 'Kembali', 
-              titleColor: kDarkGreyColor, 
-              onPressed: (){}, 
-              borderColor: kDarkGreyColor, 
-              borderWidth: 2.w, 
+              title: 'Kembali',
+              titleColor: kDarkGreyColor,
+              onPressed: () {},
+              borderColor: kDarkGreyColor,
+              borderWidth: 2.w,
               fontWeight: light,
             ),
           ],
@@ -205,11 +218,10 @@ class ReportDetailMvResultPage extends StatelessWidget {
             child: Column(
               children: [
                 navbar(),
-                SizedBox(height: 24.h,),
-                CustomInputSearch(
-                  onPressed: (){}, 
-                  hintText: '123'
+                SizedBox(
+                  height: 24.h,
                 ),
+                CustomInputSearch(onPressed: () {}, hintText: '123'),
                 found(),
                 box(),
                 button(),

@@ -15,7 +15,7 @@ class ResultVisitPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Input Hasil Kunjungan",
+          text: "Input Kunjungan",
           preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
@@ -25,8 +25,8 @@ class ResultVisitPage extends StatelessWidget {
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
-              width: 27.w,
-              height: 26.h,
+              width: 21.w,
+              height: 21.h,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(

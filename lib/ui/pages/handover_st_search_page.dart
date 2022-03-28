@@ -1,4 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/widgets/custom_card_handover_st.dart';
 import 'package:adira_cats/ui/widgets/custom_card_st.dart';
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
@@ -49,8 +50,9 @@ class HandoverStSearchPage extends StatelessWidget {
         ),
         child: CustomInputSearch(
           onPressed: () {},
-          hintText: "Cari Nomor Kontak ...",
+          hintText: "Cari Nomor Kontrak ...",
           value: '7777',
+          margin: EdgeInsets.all(1),
         ),
       );
     }
@@ -69,7 +71,7 @@ class HandoverStSearchPage extends StatelessWidget {
               ),
             )
           },
-          style: greyTextStyle.copyWith(
+          style: darkGreyTextStyle.copyWith(
             fontSize: 13.sp,
             fontWeight: light,
           ),
@@ -82,10 +84,11 @@ class HandoverStSearchPage extends StatelessWidget {
       return Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CustomCardSt(
+          CustomCardHandoverSt(
             stNumber: "3234 5678",
             contractNumber: "9999 8888 7777",
-            notifNew: false,
+            onPressed: (){},
+            newHandover: false,
           ),
         ],
       );

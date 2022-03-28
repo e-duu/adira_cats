@@ -49,6 +49,7 @@ class HandoverStSearchNilPage extends StatelessWidget {
           onPressed: () {},
           hintText: "Cari Nomor Kontak ...",
           value: '7777',
+          margin: EdgeInsets.all(1),
         ),
       );
     }
