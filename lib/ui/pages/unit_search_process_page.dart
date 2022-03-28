@@ -198,10 +198,10 @@ class UnitSearchProcessPage extends StatelessWidget {
 
       return Container(
         margin: EdgeInsets.only(
-          top: 24.h,
+          top: defaultPadding.h,
           bottom: 46.h,
-          right: 36.w,
-          left: 36.w,
+          right: defaultMargin.w,
+          left: defaultMargin.w,
         ),
         child: Column(
           children: [
@@ -230,7 +230,7 @@ class UnitSearchProcessPage extends StatelessWidget {
                     builder: (BuildContext context) => Container(
                       child: AlertDialog(
                         titlePadding: EdgeInsets.symmetric(
-                          vertical: 24.h,
+                          vertical: defaultPadding.h,
                         ),
                         title: Container(
                           margin: EdgeInsets.only(
@@ -262,8 +262,8 @@ class UnitSearchProcessPage extends StatelessWidget {
                             fontWeight: normal,
                             width: 308.w,
                             margin: EdgeInsets.only(
-                              right: 36.w,
-                              left: 36.w,
+                              right: defaultMargin.w,
+                              left: defaultMargin.w,
                             ),
                           ),
                           SizedBox(
@@ -276,8 +276,8 @@ class UnitSearchProcessPage extends StatelessWidget {
                             textStyle: blackTextStyle,
                             width: 308.w,
                             margin: EdgeInsets.only(
-                              right: 36.w,
-                              left: 36.w,
+                              right: defaultMargin.w,
+                              left: defaultMargin.w,
                               bottom: 48.h,
                             ),
                           ),
@@ -312,9 +312,9 @@ class UnitSearchProcessPage extends StatelessWidget {
             ),
             CustomButton(
               margin: EdgeInsets.only(
-                right: 36.w,
-                left: 36.w,
-                bottom: 36.h,
+                right: defaultMargin.w,
+                left: defaultMargin.w,
+                bottom: defaultMargin.h,
               ),
               title: 'Submit',
               onPressed: () {},

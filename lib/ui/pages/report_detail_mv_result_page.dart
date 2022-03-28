@@ -70,15 +70,15 @@ class ReportDetailMvResultPage extends StatelessWidget {
           left: defaultMargin,
         ),
         padding: EdgeInsets.symmetric(
-          vertical: 36.h,
-          horizontal: 36.w,
+          vertical: defaultMargin.h,
+          horizontal: defaultMargin.w,
         ),
         decoration: BoxDecoration(
           border: Border.all(
             color: kLigthGrayColor,
             width: 2.w,
           ),
-          borderRadius: BorderRadius.circular(8.r),
+          borderRadius: BorderRadius.circular(defaultRadius),
         ),
         child: Container(
           child: Column(
@@ -170,10 +170,10 @@ class ReportDetailMvResultPage extends StatelessWidget {
     Widget button() {
       return Container(
         margin: EdgeInsets.only(
-          left: 36.w,
-          right: 36.w,
+          left: defaultMargin.w,
+          right: defaultMargin.w,
           top: 100.h,
-          bottom: 36.h,
+          bottom: defaultMargin.h,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -213,7 +213,7 @@ class ReportDetailMvResultPage extends StatelessWidget {
               children: [
                 navbar(),
                 SizedBox(
-                  height: 24.h,
+                  height: defaultPadding.h,
                 ),
                 CustomInputSearch(onPressed: () {}, hintText: '123'),
                 found(),

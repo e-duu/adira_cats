@@ -130,10 +130,9 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
-          // home: HomePage(),
-          // home: NotificationPage(),
           // home: LocalNotification(),
           // home: ProfilePage(),
+          home: HomePage(),
           // home: ErrorPage(),
           // home: LoadPage(),
           // home: LoadPage(),
@@ -149,7 +148,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverStDetailPage(),
           // home: HandoverStSearchPage(),
           // home: HandoverStSearchNilPage(),
-          home: HandoverStConfirmedPage(),
+          // home: HandoverStConfirmedPage(),
 
           /// NOTE : REPORT PAGE
           // home: ReportPage(),

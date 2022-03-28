@@ -66,11 +66,8 @@ class UnitSearchPage extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(
         top: 12.h,
-        left: defaultMargin.w,
-        right: defaultMargin.w,
       ),
       decoration: BoxDecoration(
-        color: kGreyColor,
         borderRadius: BorderRadius.circular(defaultRadius),
       ),
       child: Row(
@@ -82,6 +79,7 @@ class UnitSearchPage extends StatelessWidget {
             onPressed: (){},
             color: kPrimaryColor,
             textStyle: blackTextStyle,
+            width: 138.w,
           ),
           SizedBox(
             width: 12.w,
@@ -91,6 +89,7 @@ class UnitSearchPage extends StatelessWidget {
             onPressed: (){},
             color: kPrimaryColor,
             textStyle: blackTextStyle,
+            width: 138.w,
           ),
         ],
       ),

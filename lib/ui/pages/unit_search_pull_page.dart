@@ -17,7 +17,7 @@ class UnitSearchPullPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 24.h,
+          bottom: defaultPadding.h,
         ),
         child: CustomNavbar(
           text: "Tarik Unit",
