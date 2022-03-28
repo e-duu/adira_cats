@@ -1,4 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,7 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
 class UnitSearchNilPage extends StatelessWidget {
-  const UnitSearchNilPage({ Key? key }) : super(key: key);
+   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  UnitSearchNilPage({ Key? key }) : super(key: key);
 
   Widget navbar() {
     return Container(
@@ -15,25 +17,25 @@ class UnitSearchNilPage extends StatelessWidget {
       ),
       child: CustomNavbar(
         
-        // text: "Pencarian Unit",
-        // preffixWidget: GestureDetector(
-        //   onTap: () {},
-        //   child: Icon(
-        //     Icons.subject_sharp,
-        //   ),
-        // ),
-        // suffixWidget: Container(
-        //   width: 48.w,
-        //   height: 48.h,
-        //   decoration: BoxDecoration(
-        //     shape: BoxShape.circle,
-        //     image: DecorationImage(
-        //       image: AssetImage(
-        //         "assets/image_user.png",
-        //       ),
-        //     ),
-        //   ),
-        // ),
+        text: "Pencarian Unit",
+        preffixWidget: GestureDetector(
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
+          ),
+        suffixWidget: Container(
+          width: 48.w,
+          height: 48.h,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            image: DecorationImage(
+              image: AssetImage(
+                "assets/image_user.png",
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
@@ -123,6 +125,17 @@ class UnitSearchNilPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        key: _scaffoldKey,
+       
+          drawer : Container(
+            width: 300,
+            height: 760,
+            child: ClipRRect(
+               borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
+              child: CustomDrawer()
+              ),
+          ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

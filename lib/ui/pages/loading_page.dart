@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-// import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class LoadPage extends StatefulWidget {
   const LoadPage({Key? key}) : super(key: key);
@@ -30,10 +30,10 @@ class _LoadPageState extends State<LoadPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // SpinKitRing(
-            //   color: kDarkGreyColor,
-            //   size: 60.0,
-            // ),
+            SpinKitRing(
+              color: kDarkGreyColor,
+              size: 60.0,
+            ),
             SizedBox(
               height: 40.h,
             ),

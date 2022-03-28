@@ -1,7 +1,7 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
-import 'package:adira_cats/ui/pages/create_st_cotract_number_page.dart';
+import 'package:adira_cats/ui/pages/create_st_contract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_page.dart';
 import 'package:adira_cats/ui/pages/error_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_detail_page.dart';
@@ -46,6 +46,9 @@ import 'package:adira_cats/ui/pages/report_detail_visit_result_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/request_unit_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
+import 'package:adira_cats/ui/pages/result_visit_page.dart';
+import 'package:adira_cats/ui/pages/save_page.dart';
+import 'package:adira_cats/ui/pages/save_page_empty.dart';
 import 'package:adira_cats/ui/pages/share_unit_found_page.dart';
 import 'package:adira_cats/ui/pages/share_unit_page.dart';
 import 'package:adira_cats/ui/pages/st_done_page.dart';
@@ -54,14 +57,25 @@ import 'package:adira_cats/ui/pages/unit_search_detail_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
 import 'package:adira_cats/ui/pages/verification_done_page.dart';
 import 'package:adira_cats/ui/pages/testing.dart';
+import 'package:adira_cats/ui/pages/video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  // NOTE: Lock Potrait
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -82,6 +96,11 @@ class MyApp extends StatelessWidget {
           //   '/load': (context) => LoadPage(),
           //   '/login': (context) => LoginPage(),
           //   '/main': (context) => MainPage(),
+          //   '/home': (context) => HomePage(),
+          //   '/profile': (context) => ProfilePage(),
+          //   '/message': (context) => MessagePage(),
+          //   '/unit_search': (context) => UnitSearchPage(),
+          //   '/notification': (context) => NotificationPage(),
           // },
 
           /// NOTE: INTEGRATION
@@ -91,13 +110,18 @@ class MyApp extends StatelessWidget {
           // home: ResetPasswordPage(),
 
           /// NOTE : DONE
-          home: OtpPage(),
+          // home: OtpPage(),
           // home: ProfilePage(),
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
+
+          /// NOTE : DONE Drawer
+          // home: NotificationPage(),
+          // home: OtpPage(),
+          // home: MessageRoomPage(),
           // home: CreateStPage(),
           // home: StDonePage(),
           // home: HandoverStPage(),
@@ -111,32 +135,38 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailPage(),
           // home: ReportDetailProdexPage(),
           // home: ReportPage(),
-          // home: ReportPage(),
-          // home: ReportDetailPage(),
-          // home: ReportDetailProdexPage(),
           // home: ReportDetailProdexResultPage(),
           // home: ReportDetailVisitPage(),
           // home: UnitSearchPage(),
           // home: UnitSearchFoundPage(),
           // home: UnitSearchNilPage(),
           // home: ReportDetailPullFeePage(),
-          // home: MessageRoomPage(),
           // home: ReportDetailVisitPage(),
           // home: ReportDetailVisitResultDetailPage(),
-          // home: ReportDetailPullFeePage(),
           // home: ReportDetailPullFeeResultDetailPage(),
           // home: ReportDetailPullFeeResultPage(),
           // home: ReportDetailStPage(),
           // home: ReportDetailStNihilPage(),
           // home: ReportDetailStResultDetailPage(),
           // home: ReportDetailStResultPage(),
+          // home: ResultVisitPage(),
+          // home: SavePage(),
+          // home: SavePageEmpty(),
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
           // home: ReportDetailMvPage(),
           // home: ReportDetailMvResultPage(),
+
+          // home: ShareUnitPage(),
+
+          // home: ShareUnitFoundPage(),
+          // home: UnitSearchPullFoundPage()
+
           // home: UnitSearchDetailPage(),
-          // home: UnitSearchPullPage(),
+          home: UnitSearchPullPage(),
+          // home: VideoApp(),
+
         ),
       ),
     );

@@ -14,33 +14,33 @@ class MessagePage extends StatelessWidget {
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          // text: "Pesan",
-          // preffixWidget: IconButton(
-          //   onPressed: () => {},
-          //   icon: libraryIcon,
-          // ),
-          // suffixWidget: GestureDetector(
-          //   onTap: () {
-          //     Navigator.push(
-          //       context,
-          //       MaterialPageRoute(
-          //         builder: (context) => ProfilePage(),
-          //       ),
-          //     );
-          //   },
-          //   child: Container(
-          //     width: 48.w,
-          //     height: 48.h,
-          //     decoration: BoxDecoration(
-          //       shape: BoxShape.circle,
-          //       image: DecorationImage(
-          //         image: AssetImage(
-          //           "assets/image_user.png",
-          //         ),
-          //       ),
-          //     ),
-          //   ),
-          // ),
+          text: "Pesan",
+          preffixWidget: IconButton(
+            onPressed: () => {},
+            icon: libraryIcon,
+          ),
+          suffixWidget: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProfilePage(),
+                ),
+              );
+            },
+            child: Container(
+              width: 48.w,
+              height: 48.h,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/image_user.png",
+                  ),
+                ),
+              ),
+            ),
+          ),
         ),
       );
     }
@@ -48,7 +48,7 @@ class MessagePage extends StatelessWidget {
     Widget search() {
       return Container(
         margin: EdgeInsets.symmetric(
-          vertical: 24.h,
+          vertical: defaultPadding.h,
         ),
         child: CustomInputSearch(
             hintText: 'Cari Pesan atau Kontak...', onPressed: () {}),
@@ -59,8 +59,8 @@ class MessagePage extends StatelessWidget {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.only(
-          right: 24.w,
-          left: 24.w,
+          right: defaultPadding.w,
+          left: defaultPadding.w,
           bottom: 150.h,
         ),
         child: Column(

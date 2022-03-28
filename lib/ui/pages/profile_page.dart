@@ -1,26 +1,35 @@
+import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
+
+import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:adira_cats/ui/widgets/custom_text_field.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  ProfilePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return Container(
+        // height: 100,
         child: CustomNavbar(
-        //   text: "Profil Saya",
-        //   preffixWidget: GestureDetector(
-        //     onTap: () {},
-        //     child: Icon(Icons.subject_sharp),
-        //   ),
-        //   suffixWidget: SizedBox(),
+          text: "Profil Saya",
+          preffixWidget: GestureDetector(
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
+          ),
+          suffixWidget: SizedBox(),
         ),
       );
     }
@@ -70,7 +79,7 @@ class ProfilePage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 24.h,
+            height: defaultPadding.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -383,11 +392,11 @@ class ProfilePage extends StatelessWidget {
       );
     }
 
-    Widget buttonChangePassword(){
+    Widget buttonChangePassword() {
       return Container(
         child: CustomButton(
           title: 'Ganti Password',
-          color: kPrimaryColor, 
+          color: kPrimaryColor,
           textStyle: blackTextStyle,
           margin: EdgeInsets.only(
             top: defaultMargin.h,
@@ -459,7 +468,6 @@ class ProfilePage extends StatelessWidget {
                           hintColor: kDarkGreyColor,
                           obscureText: true,
                         ),
-
                         SizedBox(
                           height: 12.h,
                         ),
@@ -522,7 +530,7 @@ class ProfilePage extends StatelessWidget {
                 ),
               ),
             ),
-          ), 
+          ),
         ),
       );
     }
@@ -619,20 +627,114 @@ class ProfilePage extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
+    Widget bottomNavigation() {
+      return Align(
+        alignment: Alignment.bottomCenter,
+        child: Container(
+          width: double.infinity,
+          height: 100.h,
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultPadding,
+          ),
+          decoration: BoxDecoration(
+            color: kWhiteColor,
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(defaultPadding.r),
+              topLeft: Radius.circular(defaultPadding.r),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: kLigthGrayColor.withOpacity(1),
+                spreadRadius: 3,
+                blurRadius: 18.r,
+                offset: Offset(0, 0),
+              ),
+            ],
+          ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              navbar(),
-              profile(),
-              formInput(),
-              buttonChangePassword(),
-              buttonLogout(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  // NOTE: ICON CHAT
+                  CustomBottomNavigationItem(
+                    index: 1,
+                    icon: Icons.message,
+                    isNotif: true,
+                    number: 15,
+                  ),
+
+                  // NOTE: ICON LOCATION
+                  CustomBottomNavigationItem(
+                    index: 2,
+                    icon: Icons.location_on,
+                  ),
+
+                  // NOTE: ICON HOME
+                  CustomBottomNavigationItem(
+                    index: 0,
+                    icon: Icons.home,
+                  ),
+
+                  // NOTE: ICON NOTIFICATION
+                  CustomBottomNavigationItem(
+                    index: 3,
+                    icon: Icons.notifications,
+                    isNotif: true,
+                    number: 99,
+                  ),
+
+                  // NOTE: ICON PROFILE
+                  CustomBottomNavigationItem(
+                    index: 4,
+                    icon: Icons.person,
+                  ),
+                ],
+              ),
             ],
           ),
         ),
-      ),
+      );
+    }
+
+    return BlocBuilder<PageCubit, int>(
+      builder: (context, currentIndex) {
+        return Scaffold(
+          key: _scaffoldKey,
+       
+          // drawer: CustomDrawer(),
+          drawer : Container(
+            width: 300,
+            height: 760,
+            child: ClipRRect(
+               borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
+              child: CustomDrawer()
+              ),
+          ),
+          drawerEnableOpenDragGesture : true,
+          endDrawerEnableOpenDragGesture: false,
+          resizeToAvoidBottomInset: false,
+          floatingActionButton: bottomNavigation(),
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerDocked,
+          backgroundColor: kWhiteColor,
+          body: SafeArea(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  navbar(),
+                  profile(),
+                  formInput(),
+                  buttonChangePassword(),
+                  buttonLogout(),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

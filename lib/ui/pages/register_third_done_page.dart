@@ -1,7 +1,7 @@
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
-import 'package:adira_cats/ui/widgets/custom_upload_image.dart';
+import 'package:adira_cats/ui/widgets/custom_rectangle_edit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
@@ -14,7 +14,7 @@ class RegisterThirdDonePage extends StatelessWidget {
     Widget logo() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 10.h,
+          bottom: 24.h,
         ),
         child: CustomLogoAdira(
           text: 'Daftar Sebagai Informan',
@@ -27,96 +27,16 @@ class RegisterThirdDonePage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              width: 150.w,
-              height: 200.h,
-              padding: EdgeInsets.symmetric(
-                horizontal: 12.w,
-                vertical: 12.h,
-              ),
-              decoration: BoxDecoration(
-                color: kGreyColor,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(defaultRadius),
-                ),
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage(
-                    'assets/image_upload.png',
-                  ),
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Container(
-                        width: 36,
-                        height: 36,
-                        decoration: BoxDecoration(
-                          color: kPrimaryColor,
-                          borderRadius: BorderRadius.circular(defaultRadius),
-                        ),
-                        child: Center(
-                          child: Icon(
-                            Icons.edit_outlined,
-                            color: kBlackColor,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+            CustomRectangleEdit(
+              imageUrl: 'assets/image_upload.png',
+              onPressed: () {},
             ),
             SizedBox(
               width: 16.w,
             ),
-            Container(
-              width: 150.w,
-              height: 200.h,
-              padding: EdgeInsets.symmetric(
-                horizontal: 12.w,
-                vertical: 12.h,
-              ),
-              decoration: BoxDecoration(
-                color: kGreyColor,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(defaultRadius),
-                ),
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage(
-                    'assets/image_user.png',
-                  ),
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Container(
-                        width: 36,
-                        height: 36,
-                        decoration: BoxDecoration(
-                          color: kPrimaryColor,
-                          borderRadius: BorderRadius.circular(defaultRadius),
-                        ),
-                        child: Center(
-                          child: Icon(
-                            Icons.edit_outlined,
-                            color: kBlackColor,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+            CustomRectangleEdit(
+              imageUrl: 'assets/image_user.png',
+              onPressed: () {},
             ),
           ],
         ),

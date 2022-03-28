@@ -1,45 +1,48 @@
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../shared/theme.dart';
+import 'package:adira_cats/shared/theme.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_button_border.dart';
 import '../widgets/custom_navbar.dart';
-import 'home_page.dart';
 
 class CreateStContractNullPage extends StatelessWidget {
-  const CreateStContractNullPage({Key? key}) : super(key: key);
+    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+ CreateStContractNullPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return CustomNavbar(
-        // text: 'Buat Surat Tugas',
-        // preffixWidget: IconButton(
-        //   onPressed: () => {},
-        //   icon: libraryIcon,
-        // ),
-        // suffixWidget: GestureDetector(
-        //   onTap: () {},
-        //   child: Container(
-        //     width: 21.w,
-        //     height: 21.h,
-        //     decoration: BoxDecoration(
-        //       image: DecorationImage(
-        //         image: AssetImage(
-        //           "assets/icon_arrow_back.png",
-        //         ),
-        //       ),
-        //     ),
-        //   ),
-        // ),
+        text: 'Buat Surat Tugas',
+         preffixWidget: GestureDetector(
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
+          ),
+        suffixWidget: GestureDetector(
+          onTap: () {},
+          child: Container(
+            width: 21.w,
+            height: 21.h,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  "assets/icon_arrow_back.png",
+                ),
+              ),
+            ),
+          ),
+        ),
       );
     }
 
     Widget notifSearch() {
       return Container(
         margin: EdgeInsets.only(
-          top: 36.h,
+          top: defaultMargin.h,
         ),
         child: Text(
           'Nomor Kontrak tidak ditemukan.',
@@ -61,7 +64,7 @@ class CreateStContractNullPage extends StatelessWidget {
               titleColor: kBlackColor,
               onPressed: () {},
               borderColor: kDarkGreyColor,
-              borderWidth: 2.r,
+              borderWidth: 2,
               fontWeight: normal,
               margin: EdgeInsets.symmetric(
                 horizontal: 20.w,
@@ -85,6 +88,19 @@ class CreateStContractNullPage extends StatelessWidget {
     }
 
     return Scaffold(
+      key: _scaffoldKey,
+       
+          drawer : Container(
+            width: 300,
+            height: 760,
+            child: ClipRRect(
+               borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
+              child: CustomDrawer()
+              ),
+          ),
+                drawerEnableOpenDragGesture : true,
+          endDrawerEnableOpenDragGesture: false,
       resizeToAvoidBottomInset: false,
       floatingActionButton: Visibility(
         child: button(),
