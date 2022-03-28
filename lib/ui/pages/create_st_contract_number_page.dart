@@ -1,6 +1,7 @@
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_card_st.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,16 +9,20 @@ import 'package:styled_text/styled_text.dart';
 import 'package:adira_cats/shared/theme.dart';
 
 class CreateStContractNumberPage extends StatelessWidget {
-  const CreateStContractNumberPage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+  CreateStContractNumberPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return CustomNavbar(
         text: 'Buat Surat Tugas',
-        preffixWidget: IconButton(
-          onPressed: () => {},
-          icon: libraryIcon,
+        preffixWidget: GestureDetector(
+          onTap: () {
+            _scaffoldKey.currentState!.openDrawer();
+          },
+          child: Icon(Icons.subject_sharp),
         ),
         suffixWidget: GestureDetector(
           onTap: () {},
@@ -121,6 +126,18 @@ class CreateStContractNumberPage extends StatelessWidget {
     }
 
     return Scaffold(
+      key: _scaffoldKey,
+      drawer: Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(35),
+                bottomRight: Radius.circular(35)),
+            child: CustomDrawer()),
+      ),
+      drawerEnableOpenDragGesture: true,
+      endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: ListView(
         children: [

@@ -294,12 +294,17 @@ class OtpPage extends StatelessWidget {
     }
 
     return Scaffold(
+      appBar: AppBar(
+      title: Center(child: const Text('Drawer Demo')),
+      
+  ),
+      
       backgroundColor: kWhiteColor,
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
             children: [
-              logo(),
+          
               title(),
               otpEmail(),
               otpMessage(),
@@ -310,5 +315,28 @@ class OtpPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Drawer newMethod() {
+    return Drawer(
+      child: ListView(
+      padding: EdgeInsets.zero,
+      children: const <Widget>[
+     
+      ListTile(
+        leading: Icon(Icons.message),
+        title: Text('Messages'),
+      ),
+      ListTile(
+        leading: Icon(Icons.account_circle),
+        title: Text('Profile'),
+      ),
+      ListTile(
+        leading: Icon(Icons.settings),
+        title: Text('Settings'),
+      ),
+    ],
+  ),
+      );
   }
 }

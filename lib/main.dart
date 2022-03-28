@@ -115,6 +115,8 @@ class MyApp extends StatelessWidget {
           // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
 
+          /// NOTE : ERROR
+
           /// NOTE : DONE
           /// NOTE : MAIN PAGE
           // home: MessagePage(),
@@ -147,7 +149,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverStDetailPage(),
           // home: HandoverStSearchPage(),
           // home: HandoverStSearchNilPage(),
-          // home: HandoverStConfirmedPage(),
+          home: HandoverStConfirmedPage(),
 
           /// NOTE : REPORT PAGE
           // home: ReportPage(),
