@@ -45,9 +45,9 @@ class ReportDetailStPage extends StatelessWidget {
     Widget selectArea() {
       return Container(
         margin: EdgeInsets.only(
-          top: 24.h,
-          right: 36.w,
-          left: 36.w,
+          top: defaultPadding.h,
+          right: defaultMargin.w,
+          left: defaultMargin.w,
         ),
         child: Column(
           children: [
@@ -72,7 +72,7 @@ class ReportDetailStPage extends StatelessWidget {
     Widget period() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
+          horizontal: defaultMargin.w,
           vertical: 12.h,
         ),
         child: Column(
@@ -95,7 +95,7 @@ class ReportDetailStPage extends StatelessWidget {
     Widget selectPeriod() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
+          horizontal: defaultMargin.w,
         ),
         child: Row(
           children: [
@@ -134,7 +134,7 @@ class ReportDetailStPage extends StatelessWidget {
     Widget button() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
+          horizontal: defaultMargin.w,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,

@@ -35,7 +35,7 @@ packages:
       name: bloc
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "8.0.3"
+    version: "7.2.1"
   boolean_selector:
     dependency: transitive
     description:
@@ -264,6 +264,7 @@ packages:
       name: flutter_bloc
       url: "https://pub.dartlang.org"
     source: hosted
+<<<<<<< HEAD
     version: "8.0.1"
   flutter_chat_types:
     dependency: transitive
@@ -293,6 +294,12 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.0.2"
+<<<<<<< HEAD
+=======
+=======
+    version: "7.3.3"
+>>>>>>> d012799a1c807d159d2545dc39826a639d83dda2
+>>>>>>> 4385a63cdf5c90e4e320091f720c87706c6b7e58
   flutter_lints:
     dependency: "direct dev"
     description:

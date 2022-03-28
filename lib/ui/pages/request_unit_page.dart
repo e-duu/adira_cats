@@ -42,8 +42,8 @@ class RequestUnitPage extends StatelessWidget {
     Widget cardSt() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 24.w,
-          vertical: 24.w,
+          horizontal: defaultPadding.w,
+          vertical: defaultPadding.w,
         ),
         decoration: BoxDecoration(
           border: Border.all(
@@ -69,8 +69,8 @@ class RequestUnitPage extends StatelessWidget {
             ),
             Container(
               padding: EdgeInsets.symmetric(
-                horizontal: 24.w,
-                vertical: 24.h,
+                horizontal: defaultPadding.w,
+                vertical: defaultPadding.h,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -278,9 +278,9 @@ class RequestUnitPage extends StatelessWidget {
                     actions: <Widget>[
                       Container(
                         margin: EdgeInsets.only(
-                          bottom: 24.h,
-                          right: 24.w,
-                          left: 24.w,
+                          bottom: defaultPadding.h,
+                          right: defaultPadding.w,
+                          left: defaultPadding.w,
                         ),
                         child: Column(
                           children: [

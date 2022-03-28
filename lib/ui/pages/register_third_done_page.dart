@@ -14,7 +14,7 @@ class RegisterThirdDonePage extends StatelessWidget {
     Widget logo() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 24.h,
+          bottom: defaultPadding.h,
         ),
         child: CustomLogoAdira(
           text: 'Daftar Sebagai Informan',

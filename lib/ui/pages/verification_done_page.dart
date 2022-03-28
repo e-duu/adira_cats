@@ -41,7 +41,7 @@ class VerificationDonePage extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 24.h,
+                          height: defaultPadding.h,
                         ),
                         StyledText(
                           text:

@@ -15,7 +15,7 @@ class RegisterSecondPage extends StatelessWidget {
     Widget header() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 24.h,
+          bottom: defaultPadding.h,
         ),
         child: CustomLogoAdira(
           text: 'Daftar Sebagai Informan',
@@ -146,7 +146,7 @@ class RegisterSecondPage extends StatelessWidget {
 
       return Container(
         margin: EdgeInsets.only(
-          top: 24.h,
+          top: defaultPadding.h,
         ),
         child: Column(
           children: [
@@ -202,7 +202,7 @@ class RegisterSecondPage extends StatelessWidget {
               color: kPrimaryColor,
               textStyle: blackTextStyle,
               margin: EdgeInsets.only(
-                bottom: 36.h,
+                bottom: defaultMargin.h,
               ),
             ),
           ],

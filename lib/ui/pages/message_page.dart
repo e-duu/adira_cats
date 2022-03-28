@@ -61,7 +61,7 @@ class MessagePage extends StatelessWidget {
         margin: EdgeInsets.only(
           right: defaultPadding.w,
           left: defaultPadding.w,
-          bottom: 150.h,
+          bottom: defaultBottom.h,
         ),
         child: Column(
           children: [

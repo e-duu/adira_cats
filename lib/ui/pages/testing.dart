@@ -66,7 +66,7 @@ class TestingPage extends StatelessWidget {
               //   hintText: "Password",
               //   hintColor: kDarkGreyColor,
               //   padding: EdgeInsets.only(top: 5),
-              //   margin: EdgeInsets.symmetric(horizontal: 36),
+              //   margin: EdgeInsets.symmetric(horizontal: defaultMargin),
               //   obscureText: true,
               // ),
 
