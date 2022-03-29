@@ -8,7 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class UnitSearchPage extends StatelessWidget {
-        final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   UnitSearchPage({Key? key}) : super(key: key);
 
@@ -16,12 +16,12 @@ class UnitSearchPage extends StatelessWidget {
     return Container(
       child: CustomNavbar(
         text: "Pesan",
-         preffixWidget: GestureDetector(
-            onTap: () {
-              _scaffoldKey.currentState!.openDrawer();
-            },
-            child: Icon(Icons.subject_sharp),
-          ),
+        preffixWidget: GestureDetector(
+          onTap: () {
+            _scaffoldKey.currentState!.openDrawer();
+          },
+          child: Icon(Icons.subject_sharp),
+        ),
         suffixWidget: GestureDetector(
           onTap: () {
             Navigator.push(
@@ -76,7 +76,7 @@ class UnitSearchPage extends StatelessWidget {
         children: [
           CustomButton(
             title: "Cari Lewat ST",
-            onPressed: (){},
+            onPressed: () {},
             color: kPrimaryColor,
             textStyle: blackTextStyle,
             width: 138.w,
@@ -86,7 +86,7 @@ class UnitSearchPage extends StatelessWidget {
           ),
           CustomButton(
             title: "Scan Foto Plat",
-            onPressed: (){},
+            onPressed: () {},
             color: kPrimaryColor,
             textStyle: blackTextStyle,
             width: 138.w,
@@ -99,35 +99,34 @@ class UnitSearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       key: _scaffoldKey,
-       
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
+      key: _scaffoldKey,
+      drawer: Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(35),
+                bottomRight: Radius.circular(35)),
+            child: CustomDrawer()),
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              navbar(context),
+              Container(
+                margin: EdgeInsets.symmetric(
+                  horizontal: defaultMargin.w,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    formSearch(),
+                    searchUnitPhoto(),
+                  ],
+                ),
               ),
-          ),
-        body: SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            navbar(context),
-            Container(
-              margin: EdgeInsets.symmetric(
-                horizontal: defaultMargin.w,
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  formSearch(),
-                  searchUnitPhoto(),
-                ],
-              ),
-            ),
-          ],
+            ],
           ),
         ),
       ),

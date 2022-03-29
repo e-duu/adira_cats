@@ -198,7 +198,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
-          home: MessageRoomTestingPage(),
+          // home: MessageRoomTestingPage(),
         ),
       ),
     );
