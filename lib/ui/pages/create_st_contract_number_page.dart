@@ -10,8 +10,7 @@ import 'package:adira_cats/shared/theme.dart';
 
 class CreateStContractNumberPage extends StatelessWidget {
     final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
-   CreateStContractNumberPage({Key? key}) : super(key: key);
+    CreateStContractNumberPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class CreateStContractNumberPage extends StatelessWidget {
               _scaffoldKey.currentState!.openDrawer();
             },
             child: Icon(Icons.subject_sharp),
-          ),
+        ),
         suffixWidget: GestureDetector(
           onTap: () {},
           child: Container(
@@ -126,19 +125,19 @@ class CreateStContractNumberPage extends StatelessWidget {
     }
 
     return Scaffold(
-            key: _scaffoldKey,
-
-         drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
-          ),
-                drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+      key: _scaffoldKey,
+      drawer : Container(
+      width: 300,
+      height: 760,
+      child: ClipRRect(
+          borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35),
+          bottomRight: Radius.circular(35)),
+          child: CustomDrawer()
+      ),
+      ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: ListView(
         children: [

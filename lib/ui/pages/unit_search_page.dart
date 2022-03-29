@@ -8,8 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class UnitSearchPage extends StatelessWidget {
-        final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   UnitSearchPage({Key? key}) : super(key: key);
 
   Widget navbar(BuildContext context) {
@@ -22,7 +21,7 @@ class UnitSearchPage extends StatelessWidget {
             },
             child: Icon(Icons.subject_sharp),
           ),
-        suffixWidget: GestureDetector(
+         suffixWidget: GestureDetector(
           onTap: () {
             Navigator.push(
               context,
@@ -100,18 +99,19 @@ class UnitSearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       key: _scaffoldKey,
-       
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
+      key: _scaffoldKey,
+       drawer : Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+           topRight: Radius.circular(35),
+           bottomRight: Radius.circular(35)
           ),
-        body: SafeArea(
+        child: CustomDrawer()
+        ),
+        ),
+      body: SafeArea(
       child: SingleChildScrollView(
         child: Column(
           children: [

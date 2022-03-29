@@ -8,8 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class ReportDetailStPage extends StatelessWidget {
-      final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   ReportDetailStPage({Key? key}) : super(key: key);
 
   @override
@@ -18,10 +17,10 @@ class ReportDetailStPage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Surat Tugas",
-         preffixWidget: GestureDetector(
-            onTap: () {
-              _scaffoldKey.currentState!.openDrawer();
-            },
+          preffixWidget: GestureDetector(
+              onTap: () {
+                _scaffoldKey.currentState!.openDrawer();
+              },
             child: Icon(Icons.subject_sharp),
           ),
           suffixWidget: GestureDetector(
@@ -154,18 +153,19 @@ class ReportDetailStPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-       
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
+      drawer : Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35)
           ),
-                drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+        child: CustomDrawer()
+        ),
+      ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       resizeToAvoidBottomInset: false,
       floatingActionButton: Visibility(
         child: button(),

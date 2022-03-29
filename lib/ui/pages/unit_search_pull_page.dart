@@ -9,7 +9,6 @@ import '../widgets/custom_upload_image.dart';
 
 class UnitSearchPullPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
   UnitSearchPullPage({Key? key}) : super(key: key);
 
   @override
@@ -20,20 +19,12 @@ class UnitSearchPullPage extends StatelessWidget {
           bottom: 24.h,
         ),
         child: CustomNavbar(
-<<<<<<< HEAD
           text: "Serah Terima ST",
-           preffixWidget: GestureDetector(
-              onTap: () {
-                _scaffoldKey.currentState!.openDrawer();
-              },
-              child: Icon(Icons.subject_sharp),
-=======
-          text: "Tarik Unit",
           preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
->>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
             ),
           suffixWidget: GestureDetector(
             onTap: () {},
@@ -169,20 +160,20 @@ class UnitSearchPullPage extends StatelessWidget {
     }
 
     return Scaffold(
-        key: _scaffoldKey,
-       
-          // drawer: CustomDrawer(),
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
-          ),
-              drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+      key: _scaffoldKey,
+      drawer : Container(
+        width: 300,
+        height: 760,
+      child: ClipRRect(
+      borderRadius: BorderRadius.only(
+      topRight: Radius.circular(35),
+      bottomRight: Radius.circular(35)
+      ),
+      child: CustomDrawer()
+      ),
+      ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: SingleChildScrollView(
         child: SafeArea(

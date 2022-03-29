@@ -1,9 +1,5 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
-<<<<<<< HEAD
-
-=======
->>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
 import 'package:adira_cats/ui/widgets/custom_bottom_navigation_item.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';

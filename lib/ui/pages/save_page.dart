@@ -8,8 +8,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
 
 class SavePage extends StatelessWidget {
-    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-    SavePage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  SavePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -205,23 +205,20 @@ class SavePage extends StatelessWidget {
     }
 
     return Scaffold(
-<<<<<<< HEAD
-        key: _scaffoldKey,
-       
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
-          ),
-                drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
-=======
-      backgroundColor: kWhiteColor,
->>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
+      key: _scaffoldKey,
+      drawer : Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+         borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35),
+          bottomRight: Radius.circular(35)
+         ),
+        child: CustomDrawer()
+        ),
+      ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
         child: Container(
           child: SingleChildScrollView(

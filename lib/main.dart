@@ -62,12 +62,7 @@ import 'package:adira_cats/ui/pages/unit_search_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_process_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
-<<<<<<< HEAD
-import 'package:adira_cats/ui/pages/verification_done_page.dart';
-import 'package:adira_cats/ui/pages/testing.dart';
-import 'package:adira_cats/ui/pages/video_player.dart';
-=======
->>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
+import 'package:adira_cats/ui/pages/video_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -113,11 +108,6 @@ class MyApp extends StatelessWidget {
           // home: LoginPage(),
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
-<<<<<<< HEAD
-
-          /// NOTE : DONE
-=======
->>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
           // home: OtpPage(),
           // home: ProfilePage(),
           // home: RegisterPage(),
@@ -126,15 +116,9 @@ class MyApp extends StatelessWidget {
           // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
 
-<<<<<<< HEAD
-          /// NOTE : DONE Drawer
-          // home: NotificationPage(),
-          // home: OtpPage(),
-=======
           /// NOTE : DONE
           /// NOTE : MAIN PAGE
           // home: MessagePage(),
->>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
           // home: MessageRoomPage(),
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
@@ -152,6 +136,7 @@ class MyApp extends StatelessWidget {
           // home: ErrorPage(),
           // home: LoadPage(),
           // home: LoadPage(),
+          home: VideoPlayer(),
 
           /// NOTE : ST CONTRACT PAGE
           // home: CreateStPage(),
@@ -165,31 +150,15 @@ class MyApp extends StatelessWidget {
           // home: HandoverStSearchPage(),
           // home: HandoverStSearchNilPage(),
           // home: HandoverStConfirmedPage(),
-<<<<<<< HEAD
-          // home: CreateStContractNumberPage(),
-          // home: CreateStContractNullPage(),
-          // home: ReportDetailPage(),
-          // home: ReportDetailProdexPage(),
-          // home: ReportPage(),
-          // home: ReportDetailProdexResultPage(),
-          // home: ReportDetailVisitPage(),
-          // home: UnitSearchPage(),
-          // home: UnitSearchFoundPage(),
-          // home: UnitSearchNilPage(),
-          // home: ReportDetailPullFeePage(),
-=======
 
           /// NOTE : REPORT PAGE
           // home: ReportPage(),
           // home: ReportDetailPage(),
 
           /// NOTE : VISIT PAGE
->>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
           // home: ReportDetailVisitPage(),
           // home: ReportDetailVisitNihilPage(),
           // home: ReportDetailVisitResultDetailPage(),
-<<<<<<< HEAD
-=======
 
           /// NOTE : PRODEX PAGE
           // home: ReportDetailProdexPage(),
@@ -200,7 +169,6 @@ class MyApp extends StatelessWidget {
           /// NOTE : PULL FEE PAGE
           // home: ReportDetailPullFeePage(),
           // home: ReportDetailPullFeeNihilPage(),
->>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
           // home: ReportDetailPullFeeResultDetailPage(),
 
           /// NOTE : ST PAGE
@@ -225,24 +193,9 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
-<<<<<<< HEAD
-          // home: ReportDetailMvPage(),
-          // home: ReportDetailMvResultPage(),
-
-          // home: ShareUnitPage(),
-
-          // home: ShareUnitFoundPage(),
-          // home: UnitSearchPullFoundPage()
-
-          // home: UnitSearchDetailPage(),
-          home: UnitSearchPullPage(),
-          // home: VideoApp(),
-
-=======
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
->>>>>>> 49c67dbb8611030ba20f0fc1ff96486542ba0eb7
         ),
       ),
     );

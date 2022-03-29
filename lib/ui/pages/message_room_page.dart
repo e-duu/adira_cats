@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MessageRoomPage extends StatelessWidget {
-        final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
   // NOTE: NAVBAR
@@ -14,7 +14,7 @@ class MessageRoomPage extends StatelessWidget {
     return Container(
       child: CustomNavbar(
         text: "Obrolan",
-       preffixWidget: GestureDetector(
+        preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
             },
@@ -295,20 +295,19 @@ class MessageRoomPage extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
-       key: _scaffoldKey,
-       
-          // drawer: CustomDrawer(),w
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
+      key: _scaffoldKey,
+      drawer : Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35),
+          bottomRight: Radius.circular(35)),
+          child: CustomDrawer()
           ),
-                drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+        ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       floatingActionButton: chatInput(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       backgroundColor: kWhiteColor,

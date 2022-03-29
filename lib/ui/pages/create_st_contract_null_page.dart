@@ -8,21 +8,20 @@ import 'package:adira_cats/shared/theme.dart';
 
 class CreateStContractNullPage extends StatelessWidget {
     final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
- CreateStContractNullPage({Key? key}) : super(key: key);
+    CreateStContractNullPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return CustomNavbar(
         text: 'Buat Surat Tugas',
-         preffixWidget: GestureDetector(
+          preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
             },
             child: Icon(Icons.subject_sharp),
           ),
-        suffixWidget: GestureDetector(
+          suffixWidget: GestureDetector(
           onTap: () {},
           child: Container(
             width: 21.w,
@@ -89,18 +88,19 @@ class CreateStContractNullPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-       
           drawer : Container(
             width: 300,
             height: 760,
             child: ClipRRect(
                borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
+               topRight: Radius.circular(35), 
+               bottomRight: Radius.circular(35)
+               ),
+               child: CustomDrawer()
+            ),
           ),
-                drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       resizeToAvoidBottomInset: false,
       floatingActionButton: button(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

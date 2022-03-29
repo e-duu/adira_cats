@@ -11,9 +11,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
 
 class CreateStPage extends StatelessWidget {
-      final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
- CreateStPage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  CreateStPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -420,19 +419,19 @@ class CreateStPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-       
-          // drawer: CustomDrawer(),w
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
+      drawer : Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+            borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35), 
+            bottomRight: Radius.circular(35),
           ),
-                drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+          child: CustomDrawer()
+          ),
+        ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: ListView(
         padding: EdgeInsets.symmetric(),
