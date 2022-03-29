@@ -45,7 +45,35 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  CustomLogoAdira(text: 'Login'),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 200,
+                        height: 34,
+                        margin: EdgeInsets.only(
+                          top: 50.h,
+                        ),
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: AssetImage("assets/adira_logo_yellow.png"),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 40.h,
+                      ),
+                      Text(
+                        'Login',
+                        style: blackTextStyle.copyWith(
+                          fontSize: 18.w,
+                          fontWeight: bold,
+                        ),
+                        textAlign: TextAlign.center,
+                      )
+                    ],
+                  ),
                   SizedBox(
                     height: 12.h,
                   ),

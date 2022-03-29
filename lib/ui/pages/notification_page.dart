@@ -1,4 +1,6 @@
 import 'package:adira_cats/ui/pages/profile_page.dart';
+import 'package:adira_cats/ui/widgets/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_card_notification.dart';
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -76,6 +78,72 @@ class NotificationPage extends StatelessWidget {
 
             // NOTE: CARD NOTIFICATION
             CustomCardNotification(
+              iconDelete: true,
+              onPressedDelete: () => showDialog<String>(
+                context: context,
+                builder: (BuildContext context) => Container(
+                  child: AlertDialog(
+                    titlePadding: EdgeInsets.symmetric(
+                      vertical: defaultPadding.h,
+                    ),
+                    title: Container(
+                      margin: EdgeInsets.only(
+                        top: 48.h,
+                      ),
+                      child: Text(
+                        'Hapus?',
+                        style: blackTextStyle.copyWith(
+                          fontWeight: bold,
+                          fontSize: 18.sp,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    content: Text(
+                      'Anda yakin ingin menghapus?',
+                      style: blackTextStyle.copyWith(
+                        fontSize: 13.sp,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    actions: <Widget>[
+                      CustomButtonBorder(
+                        titleColor: kDarkGreyColor,
+                        title: 'Kembali',
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        borderColor: kDarkGreyColor,
+                        borderWidth: 2.w,
+                        fontWeight: normal,
+                        width: 308.w,
+                        margin: EdgeInsets.only(
+                          right: defaultMargin.w,
+                          left: defaultMargin.w,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12.h,
+                      ),
+                      CustomButton(
+                        title: 'Hapus',
+                        onPressed: () => Navigator.pop(context, 'OK'),
+                        color: kRedColor,
+                        textStyle: blackTextStyle,
+                        width: 308.w,
+                        margin: EdgeInsets.only(
+                          right: defaultMargin.w,
+                          left: defaultMargin.w,
+                          bottom: 48.h,
+                        ),
+                      ),
+                    ],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.r),
+                    ),
+                  ),
+                ),
+              ),
               onTap: () {},
               title: 'ST 14142 telah diterbitkan',
               message: 'klik untuk melihat',
@@ -83,6 +151,72 @@ class NotificationPage extends StatelessWidget {
               fontWeight: semibold,
             ),
             CustomCardNotification(
+              iconDelete: true,
+              onPressedDelete: () => showDialog<String>(
+                context: context,
+                builder: (BuildContext context) => Container(
+                  child: AlertDialog(
+                    titlePadding: EdgeInsets.symmetric(
+                      vertical: defaultPadding.h,
+                    ),
+                    title: Container(
+                      margin: EdgeInsets.only(
+                        top: 48.h,
+                      ),
+                      child: Text(
+                        'Hapus?',
+                        style: blackTextStyle.copyWith(
+                          fontWeight: bold,
+                          fontSize: 18.sp,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    content: Text(
+                      'Anda yakin ingin menghapus?',
+                      style: blackTextStyle.copyWith(
+                        fontSize: 13.sp,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    actions: <Widget>[
+                      CustomButtonBorder(
+                        titleColor: kDarkGreyColor,
+                        title: 'Kembali',
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        borderColor: kDarkGreyColor,
+                        borderWidth: 2.w,
+                        fontWeight: normal,
+                        width: 308.w,
+                        margin: EdgeInsets.only(
+                          right: defaultMargin.w,
+                          left: defaultMargin.w,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12.h,
+                      ),
+                      CustomButton(
+                        title: 'Hapus',
+                        onPressed: () => Navigator.pop(context, 'OK'),
+                        color: kRedColor,
+                        textStyle: blackTextStyle,
+                        width: 308.w,
+                        margin: EdgeInsets.only(
+                          right: defaultMargin.w,
+                          left: defaultMargin.w,
+                          bottom: 48.h,
+                        ),
+                      ),
+                    ],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.r),
+                    ),
+                  ),
+                ),
+              ),
               onTap: () {},
               title: 'ST 14141 telah dikonfirmasi',
               message: 'klik untuk melihat',
@@ -90,6 +224,72 @@ class NotificationPage extends StatelessWidget {
               fontWeight: light,
             ),
             CustomCardNotification(
+              iconDelete: true,
+              onPressedDelete: () => showDialog<String>(
+                context: context,
+                builder: (BuildContext context) => Container(
+                  child: AlertDialog(
+                    titlePadding: EdgeInsets.symmetric(
+                      vertical: defaultPadding.h,
+                    ),
+                    title: Container(
+                      margin: EdgeInsets.only(
+                        top: 48.h,
+                      ),
+                      child: Text(
+                        'Hapus?',
+                        style: blackTextStyle.copyWith(
+                          fontWeight: bold,
+                          fontSize: 18.sp,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    content: Text(
+                      'Anda yakin ingin menghapus?',
+                      style: blackTextStyle.copyWith(
+                        fontSize: 13.sp,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    actions: <Widget>[
+                      CustomButtonBorder(
+                        titleColor: kDarkGreyColor,
+                        title: 'Kembali',
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        borderColor: kDarkGreyColor,
+                        borderWidth: 2.w,
+                        fontWeight: normal,
+                        width: 308.w,
+                        margin: EdgeInsets.only(
+                          right: defaultMargin.w,
+                          left: defaultMargin.w,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12.h,
+                      ),
+                      CustomButton(
+                        title: 'Hapus',
+                        onPressed: () => Navigator.pop(context, 'OK'),
+                        color: kRedColor,
+                        textStyle: blackTextStyle,
+                        width: 308.w,
+                        margin: EdgeInsets.only(
+                          right: defaultMargin.w,
+                          left: defaultMargin.w,
+                          bottom: 48.h,
+                        ),
+                      ),
+                    ],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.r),
+                    ),
+                  ),
+                ),
+              ),
               onTap: () {},
               title: 'Anda menerima pesan dari Anggora',
               message: 'klik untuk melihat',
@@ -118,6 +318,72 @@ class NotificationPage extends StatelessWidget {
 
             // NOTE: CARD NOTIFICATION
             CustomCardNotification(
+              iconDelete: true,
+              onPressedDelete: () => showDialog<String>(
+                context: context,
+                builder: (BuildContext context) => Container(
+                  child: AlertDialog(
+                    titlePadding: EdgeInsets.symmetric(
+                      vertical: defaultPadding.h,
+                    ),
+                    title: Container(
+                      margin: EdgeInsets.only(
+                        top: 48.h,
+                      ),
+                      child: Text(
+                        'Hapus?',
+                        style: blackTextStyle.copyWith(
+                          fontWeight: bold,
+                          fontSize: 18.sp,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    content: Text(
+                      'Anda yakin ingin menghapus?',
+                      style: blackTextStyle.copyWith(
+                        fontSize: 13.sp,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    actions: <Widget>[
+                      CustomButtonBorder(
+                        titleColor: kDarkGreyColor,
+                        title: 'Kembali',
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        borderColor: kDarkGreyColor,
+                        borderWidth: 2.w,
+                        fontWeight: normal,
+                        width: 308.w,
+                        margin: EdgeInsets.only(
+                          right: defaultMargin.w,
+                          left: defaultMargin.w,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12.h,
+                      ),
+                      CustomButton(
+                        title: 'Hapus',
+                        onPressed: () => Navigator.pop(context, 'OK'),
+                        color: kRedColor,
+                        textStyle: blackTextStyle,
+                        width: 308.w,
+                        margin: EdgeInsets.only(
+                          right: defaultMargin.w,
+                          left: defaultMargin.w,
+                          bottom: 48.h,
+                        ),
+                      ),
+                    ],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18.r),
+                    ),
+                  ),
+                ),
+              ),
               onTap: () {},
               title: 'Anda menerima pesan dari Persia',
               message: 'klik untuk melihat',

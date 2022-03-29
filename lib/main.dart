@@ -18,7 +18,6 @@ import 'package:adira_cats/ui/pages/login_page.dart';
 import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
-import 'package:adira_cats/ui/pages/message_room_testing_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
@@ -93,17 +92,17 @@ class MyApp extends StatelessWidget {
       child: ScreenUtilInit(
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
-          routes: {
-            '/': (context) => SplashPage(),
-            '/load': (context) => LoadPage(),
-            '/login': (context) => LoginPage(),
-            '/main': (context) => MainPage(),
-            '/home': (context) => HomePage(),
-            '/profile': (context) => ProfilePage(),
-            '/message': (context) => MessagePage(),
-            '/unit_search': (context) => UnitSearchPage(),
-            '/notification': (context) => NotificationPage(),
-          },
+          // routes: {
+          //   '/': (context) => SplashPage(),
+          //   '/login': (context) => LoginPage(),
+          //   '/load': (context) => LoadPage(),
+          //   '/main': (context) => MainPage(),
+          //   '/home': (context) => HomePage(),
+          //   '/profile': (context) => ProfilePage(),
+          //   '/message': (context) => MessagePage(),
+          //   '/unit_search': (context) => UnitSearchPage(),
+          //   '/notification': (context) => NotificationPage(),
+          // },
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
@@ -117,8 +116,6 @@ class MyApp extends StatelessWidget {
           // home: RegisterThirdPage(),
           // home: RegisterThirdDonePage(),
           // home: RegisterFourthPage(),
-
-          /// NOTE : ERROR
 
           /// NOTE : DONE
           /// NOTE : MAIN PAGE
@@ -134,15 +131,15 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
           // home: LocalNotification(),
+          // home: NotificationPage(),
           // home: ProfilePage(),
           // home: HomePage(),
           // home: ErrorPage(),
           // home: LoadPage(),
-          // home: LoadPage(),
 
           /// NOTE : ST CONTRACT PAGE
           // home: CreateStPage(),
-          // home: CreateStFilledPage(),
+          home: CreateStFilledPage(),
           // home: CreateStContractNullPage(),
           // home: CreateStContractNumberPage(),
 
