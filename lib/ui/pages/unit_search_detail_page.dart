@@ -351,10 +351,11 @@ class UnitSearchDetailPage extends StatelessWidget {
                       children: [
                         CustomButton(
                           title: 'Bagikan',
-                          onPressed: () {},
+                          width: 100.w,
                           color: kGreenColor,
                           textStyle: whiteTextStyle,
-                          width: 100.w,
+                          fontWeight: light,
+                          onPressed: () {},
                         ),
                         SizedBox(
                           width: 12.w,
@@ -362,6 +363,9 @@ class UnitSearchDetailPage extends StatelessWidget {
                         CustomButton(
                           title: 'Simpan',
                           width: 100.w,
+                          fontWeight: light,
+                          color: kBlueColor,
+                          textStyle: whiteTextStyle,
                           onPressed: () => showDialog<String>(
                             context: context,
                             builder: (BuildContext context) => Container(
@@ -412,8 +416,6 @@ class UnitSearchDetailPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          color: kGreyColor,
-                          textStyle: blackTextStyle,
                         ),
                       ],
                     ),

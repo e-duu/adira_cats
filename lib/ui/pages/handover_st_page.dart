@@ -64,19 +64,16 @@ class HandoverStPage extends StatelessWidget {
             stNumber: "1234 5678",
             contractNumber: "9999 9999 9999",
             onPressed: (){},
-            newHandover: true,
           ),
           CustomCardHandoverSt(
             stNumber: "2234 5678",
             contractNumber: "9999 8888 8888",
             onPressed: (){},
-            newHandover: false,
           ),
           CustomCardHandoverSt(
             stNumber: "3234 5678",
             contractNumber: "9999 8888 7777",
             onPressed: (){},
-            newHandover: false,
           ),
         ],
       );

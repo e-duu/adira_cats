@@ -132,6 +132,7 @@ class UnitSearchFoundPage extends StatelessWidget {
   Widget units(){
     return Container(
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomCardUnit(
             imageUrl: 'assets/image_car_1.png',

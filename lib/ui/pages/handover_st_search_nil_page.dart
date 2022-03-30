@@ -16,7 +16,7 @@ class HandoverStSearchNilPage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Serah Terima ST",
-            preffixWidget: GestureDetector(
+          preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
             },
