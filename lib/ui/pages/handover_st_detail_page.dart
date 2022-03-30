@@ -48,8 +48,8 @@ class HandoverStDetailPage extends StatelessWidget {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.symmetric(
-          vertical: 24.h,
-          horizontal: 24.h,
+          vertical: defaultPadding.h,
+          horizontal: defaultPadding.h,
         ),
         decoration: BoxDecoration(
           border: Border.all(
@@ -78,7 +78,7 @@ class HandoverStDetailPage extends StatelessWidget {
             Container(
               width: double.infinity,
               padding: EdgeInsets.symmetric(
-                horizontal: 36.w,
+                horizontal: defaultMargin.w,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -209,10 +209,10 @@ class HandoverStDetailPage extends StatelessWidget {
             /// NOTE: BUTTON CONFIRMATION
             CustomButton(
               margin: EdgeInsets.only(
-                top: 24.h,
-                bottom: 36.h,
-                left: 36.w,
-                right: 36.w,
+                top: defaultPadding.h,
+                bottom: defaultMargin.h,
+                left: defaultMargin.w,
+                right: defaultMargin.w,
               ),
               title: "Konfirmasi",
               color: kPrimaryColor,
@@ -244,7 +244,7 @@ class HandoverStDetailPage extends StatelessWidget {
                       ),
                       content: Container(
                         margin: EdgeInsets.only(
-                          top: 24.h,
+                          top: defaultPadding.h,
                         ),
                         child: StyledText(
                           text:
@@ -268,8 +268,8 @@ class HandoverStDetailPage extends StatelessWidget {
                           title: 'Ok',
                           margin: EdgeInsets.only(
                             bottom: 48.h,
-                            left: 36.w,
-                            right: 36.w,
+                            left: defaultMargin.w,
+                            right: defaultMargin.w,
                           ),
                           onPressed: () => Navigator.pop(context),
                           color: kPrimaryColor,
@@ -301,9 +301,9 @@ class HandoverStDetailPage extends StatelessWidget {
           title: "Kembali",
           margin: EdgeInsets.only(
             top: 68.h,
-            bottom: 36.h,
-            left: 36.w,
-            right: 36.w,
+            bottom: defaultMargin.h,
+            left: defaultMargin.w,
+            right: defaultMargin.w,
           ),
           titleColor: kDarkGreyColor,
           borderColor: kDarkGreyColor,

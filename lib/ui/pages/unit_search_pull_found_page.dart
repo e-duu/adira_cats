@@ -16,7 +16,7 @@ class UnitSearchPullFoundPage extends StatelessWidget {
     Widget navbar() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 24.h,
+          bottom: defaultPadding.h,
         ),
         child: CustomNavbar(
           text: "Serah Terima ST",
@@ -40,6 +40,7 @@ class UnitSearchPullFoundPage extends StatelessWidget {
               ),
             ),
           ),
+         
         ),
       );
     }
@@ -124,7 +125,7 @@ class UnitSearchPullFoundPage extends StatelessWidget {
                   borderColor: kRedColor,
                   borderWidth: 2,
                   fontWeight: light,
-                  width: 150.w,
+                  width: defaultBottom.w,
                   onPressed: () => showDialog<String>(
                     context: context,
                     builder: (BuildContext context) => Container(
@@ -157,9 +158,9 @@ class UnitSearchPullFoundPage extends StatelessWidget {
                         actions: <Widget>[
                           Container(
                             margin: EdgeInsets.only(
-                              bottom: 24.h,
-                              right: 24.w,
-                              left: 24.w,
+                              bottom: defaultPadding.h,
+                              right: defaultPadding.w,
+                              left: defaultPadding.w,
                             ),
                             child: Column(
                               children: [
@@ -238,9 +239,9 @@ class UnitSearchPullFoundPage extends StatelessWidget {
                         actions: <Widget>[
                           Container(
                             margin: EdgeInsets.only(
-                              bottom: 24.h,
-                              right: 24.w,
-                              left: 24.w,
+                              bottom: defaultPadding.h,
+                              right: defaultPadding.w,
+                              left: defaultPadding.w,
                             ),
                             child: CustomButton(
                               title: 'Ok',

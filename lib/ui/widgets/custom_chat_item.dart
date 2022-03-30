@@ -1,151 +1,215 @@
+import 'dart:convert';
+import 'dart:math';
+import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 import 'package:flutter/material.dart';
-import 'package:adira_cats/shared/theme.dart';
+import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:file_picker/file_picker.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:mime/mime.dart';
+import 'package:open_file/open_file.dart';
+import 'package:uuid/uuid.dart';
 
-class CustomChatItem extends StatelessWidget {
-  final String chat; 
-  final String time;
-  final bool auth;
-  final bool read;
+class CustomChatItem extends StatefulWidget {
+  const CustomChatItem({Key? key}) : super(key: key);
 
-  const CustomChatItem({
-    Key? key,
-    required this.chat,
-    required this.time,
-    this.read = false, 
-    this.auth = false,
-  }) : super(key: key);
+  @override
+  _CustomChatItemState createState() => _CustomChatItemState();
+}
+
+class _CustomChatItemState extends State<CustomChatItem> {
+  List<types.Message> _messages = [];
+  final _user = const types.User(id: '06c33e8b-e835-4736-80f4-63f44b66666c');
+
+  void _addMessage(types.Message message) {
+    setState(() {
+      _messages.insert(0, message);
+    });
+  }
+
+  String randomString() {
+    final random = Random.secure();
+    final values = List<int>.generate(16, (i) => random.nextInt(255));
+    return base64UrlEncode(values);
+  }
+
+  void _handleAtachmentPressed() {
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return SafeArea(
+          child: SizedBox(
+            height: 144,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                    _handleImageSelection();
+                  },
+                  child: const Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text('Photo'),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                    _handleFileSelection();
+                  },
+                  child: const Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text('File'),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: const Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text('Cancel'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  void _handleFileSelection() async {
+    final result = await FilePicker.platform.pickFiles(
+      type: FileType.any,
+    );
+
+    if (result != null && result.files.single.path != null) {
+      final message = types.FileMessage(
+        author: _user,
+        createdAt: DateTime.now().millisecondsSinceEpoch,
+        id: const Uuid().v4(),
+        mimeType: lookupMimeType(result.files.single.path!),
+        name: result.files.single.name,
+        size: result.files.single.size,
+        uri: result.files.single.path!,
+      );
+
+      _addMessage(message);
+    }
+  }
+
+  void _handleImageSelection() async {
+    final result = await ImagePicker().pickImage(
+      imageQuality: 70,
+      maxWidth: 1440,
+      source: ImageSource.gallery,
+    );
+
+    if (result != null) {
+      final bytes = await result.readAsBytes();
+      final image = await decodeImageFromList(bytes);
+
+      final message = types.ImageMessage(
+        author: _user,
+        createdAt: DateTime.now().millisecondsSinceEpoch,
+        height: image.height.toDouble(),
+        id: const Uuid().v4(),
+        name: result.name,
+        size: bytes.length,
+        uri: result.path,
+        width: image.width.toDouble(),
+      );
+
+      _addMessage(message);
+    }
+  }
+
+  void _handleMessageTap(BuildContext context, types.Message message) async {
+    if (message is types.FileMessage) {
+      await OpenFile.open(message.uri);
+    }
+  }
+
+  void _handlePreviewDataFetched(
+    types.TextMessage message,
+    types.PreviewData previewData,
+  ) {
+    final index = _messages.indexWhere((element) => element.id == message.id);
+    final updatedMessage = _messages[index].copyWith(previewData: previewData);
+
+    WidgetsBinding.instance?.addPostFrameCallback((_) {
+      setState(() {
+        _messages[index] = updatedMessage;
+      });
+    });
+  }
+
+  void _handleSendPressed(types.PartialText message) {
+    final textMessage = types.TextMessage(
+      author: _user,
+      createdAt: DateTime.now().millisecondsSinceEpoch,
+      id: const Uuid().v4(),
+      text: message.text,
+    );
+
+    _addMessage(textMessage);
+  }
 
   @override
   Widget build(BuildContext context) {
-
-    if (auth != true) {
-      return Container(
-        margin: EdgeInsets.only(
-          top: 18.h,
-          left: defaultPadding.w,
-        ),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Flexible(
-              child: Container(
-                margin: EdgeInsets.only(
-                  right: 18.w,
+    return Container(
+      margin: EdgeInsets.only(
+        bottom: 36.h,
+        left: 24.w,
+        right: 24.w,
+      ),
+      child: SizedBox(
+        height: 470.h,
+        child: Chat(
+          theme: const DefaultChatTheme(
+            primaryColor: Color(0xfffffde0),
+            secondaryColor: Color.fromARGB(33, 33, 33, 4),
+            inputBackgroundColor: Colors.white,
+            inputTextColor: Colors.black,
+            inputTextCursorColor: Colors.black,
+            sentMessageBodyTextStyle: TextStyle(color: Colors.black),
+            sentEmojiMessageTextStyle: TextStyle(color: Colors.black),
+            sentMessageLinkDescriptionTextStyle: TextStyle(color: Colors.black),
+            sentMessageLinkTitleTextStyle: TextStyle(color: Colors.black),
+            sentMessageCaptionTextStyle: TextStyle(color: Colors.black),
+            sentMessageDocumentIconColor: Colors.black,
+            inputContainerDecoration: BoxDecoration(
+              borderRadius: BorderRadius.all(
+                Radius.circular(8),
+              ),
+              border: Border(
+                bottom: BorderSide(
+                  width: 2,
+                  color: Color.fromARGB(33, 33, 33, 012),
                 ),
-                decoration: BoxDecoration(
-                  color: kGreyColor,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(12.r),
-                    topRight: Radius.circular(12.r),
-                    bottomRight: Radius.circular(12.r),
-                    bottomLeft: Radius.circular(2.r),
-                  ),
+                top: BorderSide(
+                  width: 2,
+                  color: Color.fromARGB(33, 33, 33, 012),
                 ),
-                padding: EdgeInsets.symmetric(
-                  horizontal: 16.w,
-                  vertical: 18.h,
+                left: BorderSide(
+                  width: 2,
+                  color: Color.fromARGB(33, 33, 33, 012),
                 ),
-                child: Text(
-                  chat,
-                  style: blackTextStyle.copyWith(
-                    fontSize: 10.sp,
-                    fontWeight: light,
-                  ),
+                right: BorderSide(
+                  width: 2,
+                  color: Color.fromARGB(33, 33, 33, 012),
                 ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.only(
-                right: 18.w,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    time,
-                    style: blackTextStyle.copyWith(
-                      fontSize: 10.sp,
-                      fontWeight: light,
-                    ),
-                  ),
-                  Text(
-                    read ? 'Diterima' : 'Dibaca',
-                    style: blackTextStyle.copyWith(
-                      fontSize: 10.sp,
-                      fontWeight: light,
-                      fontStyle: FontStyle.italic
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
+          ),
+          messages: _messages,
+          onAttachmentPressed: _handleAtachmentPressed,
+          onMessageTap: _handleMessageTap,
+          onPreviewDataFetched: _handlePreviewDataFetched,
+          onSendPressed: _handleSendPressed,
+          user: _user,
         ),
-      );
-    } else {
-      return Container(
-        margin: EdgeInsets.only(
-          top: 18.h,
-          left: defaultPadding.w,
-          right: defaultPadding.w,
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Container(
-              margin: EdgeInsets.only(
-                right: 18.w,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    time,
-                    style: blackTextStyle.copyWith(
-                      fontSize: 10.sp,
-                      fontWeight: light,
-                    ),
-                  ),
-                  Text(
-                    read ? 'Diterima' : 'Dibaca',
-                    style: blackTextStyle.copyWith(
-                      fontSize: 10.sp,
-                      fontWeight: light,
-                      fontStyle: FontStyle.italic
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Flexible(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: kLightYellowColor,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(12.r),
-                    topRight: Radius.circular(12.r),
-                    bottomLeft: Radius.circular(12.r),
-                    bottomRight: Radius.circular(2.r),
-                  ),
-                ),
-                padding: EdgeInsets.symmetric(
-                  horizontal: 16.w,
-                  vertical: 18.h,
-                ),
-                child: Text(
-                  chat,
-                  style: blackTextStyle.copyWith(
-                    fontSize: 10.sp,
-                    fontWeight: light,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-    
+      ),
+    );
   }
 }

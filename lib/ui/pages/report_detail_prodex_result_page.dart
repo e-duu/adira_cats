@@ -46,9 +46,9 @@ class ReportDetailProdexResultPage extends StatelessWidget {
     Widget selectArea() {
       return Container(
         margin: EdgeInsets.only(
-          top: 24.h,
-          right: 36.w,
-          left: 36.w,
+          top: defaultPadding.h,
+          right: defaultMargin.w,
+          left: defaultMargin.w,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,7 +80,7 @@ class ReportDetailProdexResultPage extends StatelessWidget {
     Widget selectPeriod() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
+          horizontal: defaultMargin.w,
         ),
         child: Column(
           children: [
@@ -133,7 +133,7 @@ class ReportDetailProdexResultPage extends StatelessWidget {
     Widget externalName() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 24.w,
+          horizontal: defaultPadding.w,
         ),
         child: CustomDetailReport(
           imageUrl: 'assets/icon_prodex.png',
@@ -145,10 +145,10 @@ class ReportDetailProdexResultPage extends StatelessWidget {
     Widget button() {
       return Container(
         margin: EdgeInsets.only(
-          left: 36.w,
-          right: 36.w,
+          left: defaultMargin.w,
+          right: defaultMargin.w,
           top: 100.h,
-          bottom: 36.h,
+          bottom: defaultMargin.h,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,

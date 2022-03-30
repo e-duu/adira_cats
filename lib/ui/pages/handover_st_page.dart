@@ -5,6 +5,7 @@ import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
+import 'package:adira_cats/shared/theme.dart';
 
 class HandoverStPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
@@ -44,8 +45,8 @@ class HandoverStPage extends StatelessWidget {
     Widget formSearch() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 36.w,
-          vertical: 24.h,
+          horizontal: defaultMargin.w,
+          vertical: defaultPadding.h,
         ),
         child: CustomInputSearch(
           onPressed: () {},

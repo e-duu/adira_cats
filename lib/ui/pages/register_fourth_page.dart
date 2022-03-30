@@ -110,7 +110,7 @@ class RegisterFourthPage extends StatelessWidget {
 
       return Container(
         margin: EdgeInsets.only(
-          top: 24.h,
+          top: defaultPadding.h,
         ),
         child: Column(
           children: [
@@ -165,7 +165,7 @@ class RegisterFourthPage extends StatelessWidget {
               color: kPrimaryColor,
               textStyle: blackTextStyle,
               margin: EdgeInsets.only(
-                bottom: 36.h,
+                bottom: defaultMargin.h,
               ),
             ),
           ],

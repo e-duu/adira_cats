@@ -15,6 +15,7 @@ import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/loading_page.dart';
 import 'package:adira_cats/ui/pages/local_notification.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
@@ -95,6 +96,7 @@ class MyApp extends StatelessWidget {
           // routes: {
           //   '/': (context) => SplashPage(),
           //   '/login': (context) => LoginPage(),
+          //   '/load': (context) => LoadPage(),
           //   '/main': (context) => MainPage(),
           //   '/home': (context) => HomePage(),
           //   '/profile': (context) => ProfilePage(),
@@ -129,10 +131,10 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
-          // home: HomePage(),
-          // home: NotificationPage(),
           // home: LocalNotification(),
+          // home: NotificationPage(),
           // home: ProfilePage(),
+          // home: HomePage(),
           // home: ErrorPage(),
           // home: LoadPage(),
           // home: LoadPage(),

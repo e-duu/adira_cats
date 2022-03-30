@@ -16,28 +16,29 @@ class CreateStContractNumberPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget navbar() {
       return CustomNavbar(
-        text: 'Buat Surat Tugas',
-        preffixWidget: GestureDetector(
+          text: "Serah Terima ST",
+          preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
             },
             child: Icon(Icons.subject_sharp),
-        ),
-        suffixWidget: GestureDetector(
-          onTap: () {},
-          child: Container(
-            width: 21.w,
-            height: 21.h,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  "assets/icon_arrow_back.png",
+          ),
+          suffixWidget: GestureDetector(
+            onTap: () {},
+            child: Container(
+              width: 21.w,
+              height: 21.h,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/icon_arrow_back.png",
+                  ),
                 ),
               ),
             ),
           ),
-        ),
-      );
+        );
+
     }
 
     Widget notifSearch() {

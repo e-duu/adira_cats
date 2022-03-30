@@ -43,8 +43,8 @@ class ReportDetailPage extends StatelessWidget {
     Widget reportCard() {
       return Container(
         margin: EdgeInsets.symmetric(
-          horizontal: 24.w,
-          vertical: 24.h,
+          horizontal: defaultPadding.w,
+          vertical: defaultPadding.h,
         ),
         child: Column(
           children: [
@@ -94,9 +94,9 @@ class ReportDetailPage extends StatelessWidget {
           title: "Kembali",
           margin: EdgeInsets.only(
             top: 68.h,
-            bottom: 36.h,
-            left: 36.w,
-            right: 36.w,
+            bottom: defaultMargin.h,
+            left: defaultMargin.w,
+            right: defaultMargin.w,
           ),
           titleColor: kDarkGreyColor,
           borderColor: kDarkGreyColor,

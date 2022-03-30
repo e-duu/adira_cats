@@ -38,7 +38,7 @@ dependencies:
   styled_text: ^5.0.0+1
   sms_autofill: ^2.2.0
   flutter_screenutil: ^5.3.1
-  flutter_bloc: ^8.0.1
+  flutter_bloc: ^7.0.0
   equatable: ^2.0.3
   charts_flutter: ^0.12.0
   syncfusion_flutter_charts: ^19.4.56
@@ -50,6 +50,12 @@ dependencies:
   http: ^0.13.4
   json_serializable: ^6.1.5
   flutter_local_notifications: ^9.4.0
+  flutter_chat_ui: ^1.5.5
+  flutter_chat_types: ^3.3.1
+  file_picker: ^4.5.1
+  image_picker: ^0.8.4+11
+  open_file: ^3.2.1
+  uuid: ^3.0.6
 
 dev_dependencies:
   flutter_test:

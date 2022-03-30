@@ -20,11 +20,11 @@ class CreateStPage extends StatelessWidget {
       return CustomNavbar(
         text: 'Buat Surat Tugas',
         preffixWidget: GestureDetector(
-            onTap: () {
-              _scaffoldKey.currentState!.openDrawer();
-            },
-            child: Icon(Icons.subject_sharp),
-          ),
+          onTap: () {
+            _scaffoldKey.currentState!.openDrawer();
+          },
+          child: Icon(Icons.subject_sharp),
+        ),
         suffixWidget: GestureDetector(
           onTap: () {},
           child: Container(

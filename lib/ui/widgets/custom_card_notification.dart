@@ -1,3 +1,5 @@
+import 'package:adira_cats/ui/widgets/custom_button.dart';
+import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,17 +13,21 @@ class CustomCardNotification extends StatelessWidget {
   final Function() onTap;
   final bool icon;
   final bool iconNew;
+  final Function()? onPressedDelete;
+  final bool iconDelete;
 
   const CustomCardNotification({
     Key? key,
     required this.title,
     required this.message,
-    this.createTime = true,
-    this.time = '',
     required this.fontWeight,
     required this.onTap,
+    this.onPressedDelete,
+    this.createTime = true,
     this.icon = true,
     this.iconNew = false,
+    this.iconDelete = false,
+    this.time = '',
   }) : super(key: key);
 
   @override
@@ -35,7 +41,7 @@ class CustomCardNotification extends StatelessWidget {
         ),
         padding: EdgeInsets.symmetric(
           vertical: 18.h,
-          horizontal: defaultPadding.w,
+          horizontal: 18.w,
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(defaultRadius),
@@ -91,10 +97,14 @@ class CustomCardNotification extends StatelessWidget {
                   fontWeight: fontWeight,
                 ),
               ),
-            if (iconNew == true)
-              Icon(
-                Icons.delete,
-                color: kDarkGreyColor,
+            if (iconDelete == true)
+              GestureDetector(
+                onTap: onPressedDelete,
+                child: Icon(
+                  Icons.delete,
+                  color: kDarkGreyColor,
+                  size: 32,
+                ),
               ),
           ],
         ),

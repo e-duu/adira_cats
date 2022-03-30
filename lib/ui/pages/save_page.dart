@@ -17,7 +17,7 @@ class SavePage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Disimpan",
-           preffixWidget: GestureDetector(
+          preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
             },
