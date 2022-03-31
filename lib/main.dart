@@ -120,13 +120,13 @@ class MyApp extends StatelessWidget {
           /// NOTE : DONE
           /// NOTE : MAIN PAGE
           // home: MessagePage(),
-          home: MessageRoomPage(),
+          // home: MessageRoomPage(),
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
           // home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
           // home: UnitSearchPullPage(),
-          // home: UnitSearchFoundPage(),
+          home: UnitSearchFoundPage(),
           // home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),

@@ -166,7 +166,7 @@ class _CustomChatItemState extends State<CustomChatItem> {
       child: SizedBox(
         height: 470.h,
         child: Chat(
-          theme: const DefaultChatTheme(
+          theme: DefaultChatTheme(
             primaryColor: Color(0xfffffde0),
             secondaryColor: Color.fromARGB(33, 33, 33, 4),
             inputBackgroundColor: Colors.white,
