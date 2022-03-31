@@ -2,6 +2,7 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 import 'package:styled_text/styled_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -584,8 +585,8 @@ class HomePage extends StatelessWidget {
             height: 760.h,
             child: ClipRRect(
               borderRadius: BorderRadius.only(
-                topRight: Radius.circular(35),
-                bottomRight: Radius.circular(35),
+                topRight: Radius.circular(35.r),
+                bottomRight: Radius.circular(35.r),
               ),
               child: CustomDrawer(),
             ),
@@ -596,21 +597,34 @@ class HomePage extends StatelessWidget {
           floatingActionButton: bottomNavigation(),
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerDocked,
-          backgroundColor: kLightYellowColor,
+          // backgroundColor: kLightYellowColor,
           body: SafeArea(
             child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Stack(
-                    children: [
-                      navbar(),
-                      inputSearch(),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      kWhiteColor,
+                      Color(0XFFFeffc1),
+                      Color(0XFFfdff9a),
                     ],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
                   ),
-                  notification(),
-                  menu(),
-                  announcement(),
-                ],
+                ),
+                child: Column(
+                  children: [
+                    Stack(
+                      children: [
+                        navbar(),
+                        inputSearch(),
+                      ],
+                    ),
+                    notification(),
+                    menu(),
+                    announcement(),
+                  ],
+                ),
               ),
             ),
           ),

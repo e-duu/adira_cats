@@ -136,13 +136,13 @@ class MyApp extends StatelessWidget {
           // home: LocalNotification(),
           // home: NotificationPage(),
           // home: ProfilePage(),
-          // home: HomePage(),
+          home: HomePage(),
           // home: HomePageOption(),
           // home: ErrorPage(),
           // home: LoadPage(),
           // home: LoadPage(),
           // home: VideoPlayer(),
-          home: AssetPlayerWidget(),
+          // home: AssetPlayerWidget(),
 
           /// NOTE : ST CONTRACT PAGE
           // home: CreateStPage(),

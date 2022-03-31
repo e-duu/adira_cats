@@ -603,18 +603,31 @@ class HomePageOption extends StatelessWidget {
           backgroundColor: kLightYellowColor,
           body: SafeArea(
             child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Stack(
-                    children: [
-                      navbar(),
-                      inputSearch(),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      kWhiteColor,
+                      Color(0XFFFeffc1),
+                      Color(0XFFfdff9a),
                     ],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
                   ),
-                  notification(),
-                  announcement(),
-                  menu(),
-                ],
+                ),
+                child: Column(
+                  children: [
+                    Stack(
+                      children: [
+                        navbar(),
+                        inputSearch(),
+                      ],
+                    ),
+                    notification(),
+                    announcement(),
+                    menu(),
+                  ],
+                ),
               ),
             ),
           ),
