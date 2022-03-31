@@ -128,7 +128,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
           // home: UnitSearchPullPage(),
-          // home: UnitSearchFoundPage(),
+          home: UnitSearchFoundPage(),
           // home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
@@ -171,7 +171,7 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailProdexResultDetailPage(),
 
           /// NOTE : PULL FEE PAGE
-          home: ReportDetailPullFeePage(),
+          // home: ReportDetailPullFeePage(),
           // home: ReportDetailPullFeeNihilPage(),
           // home: ReportDetailPullFeeResultDetailPage(),
 
