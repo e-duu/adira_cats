@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
 
 class HandoverStPage extends StatelessWidget {
-    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-    HandoverStPage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  HandoverStPage({Key? key}) : super(key: key);
 
 
   @override
@@ -64,39 +64,35 @@ class HandoverStPage extends StatelessWidget {
             stNumber: "1234 5678",
             contractNumber: "9999 9999 9999",
             onPressed: (){},
-            newHandover: true,
           ),
           CustomCardHandoverSt(
             stNumber: "2234 5678",
             contractNumber: "9999 8888 8888",
             onPressed: (){},
-            newHandover: false,
           ),
           CustomCardHandoverSt(
             stNumber: "3234 5678",
             contractNumber: "9999 8888 7777",
             onPressed: (){},
-            newHandover: false,
           ),
         ],
       );
     }
 
     return Scaffold(
-       key: _scaffoldKey,
-       
-          // drawer: CustomDrawer(),w
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
+      key: _scaffoldKey,
+      drawer : Container(
+          width: 300,
+          height: 760,
+          child: ClipRRect(
+            borderRadius: BorderRadius.only(
+             topRight: Radius.circular(35),
+             bottomRight: Radius.circular(35)),
+             child: CustomDrawer()
+            ),
           ),
-                drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(

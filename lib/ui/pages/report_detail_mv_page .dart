@@ -1,10 +1,11 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
-import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/custom_input_search.dart';
 
 class ReportDetailMvPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
@@ -69,10 +70,12 @@ class ReportDetailMvPage extends StatelessWidget {
         width: 300,
         height: 760,
         child: ClipRRect(
-            borderRadius: BorderRadius.only(
-                topRight: Radius.circular(35),
-                bottomRight: Radius.circular(35)),
-            child: CustomDrawer()),
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
+          ),
+          child: CustomDrawer(),
+        ),
       ),
       drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
@@ -90,7 +93,9 @@ class ReportDetailMvPage extends StatelessWidget {
                 height: defaultPadding.h,
               ),
               CustomInputSearch(
-                  onPressed: () {}, hintText: 'Cari Nomor Workflow ...'),
+                onPressed: () {},
+                hintText: 'Cari Nomor Workflow ...',
+              ),
             ],
           ),
         ),

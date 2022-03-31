@@ -152,17 +152,18 @@ class ReportDetailPullFeePage extends StatelessWidget {
     }
 
     return Scaffold(
-       key: _scaffoldKey,
-       
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
-          ),
+      key: _scaffoldKey,
+      drawer : Container(
+        width: 300,
+        height: 760,
+      child: ClipRRect(
+      borderRadius: BorderRadius.only(
+      topRight: Radius.circular(35),
+      bottomRight: Radius.circular(35)
+      ),
+      child: CustomDrawer()
+      ),
+      ),
       resizeToAvoidBottomInset: false,
       floatingActionButton: Visibility(
         child: button(),

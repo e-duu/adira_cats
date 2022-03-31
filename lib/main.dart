@@ -12,6 +12,7 @@ import 'package:adira_cats/ui/pages/handover_st_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
+import 'package:adira_cats/ui/pages/home_page_option.dart';
 import 'package:adira_cats/ui/pages/loading_page.dart';
 import 'package:adira_cats/ui/pages/local_notification.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
@@ -63,6 +64,7 @@ import 'package:adira_cats/ui/pages/unit_search_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_process_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
+import 'package:adira_cats/ui/pages/video_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -127,15 +129,18 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchNilPage(),
           // home: UnitSearchPullPage(),
           // home: UnitSearchFoundPage(),
-          home: UnitSearchDetailPage(),
+          // home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
           // home: LocalNotification(),
           // home: NotificationPage(),
           // home: ProfilePage(),
           // home: HomePage(),
+          // home: HomePageOption(),
           // home: ErrorPage(),
           // home: LoadPage(),
+          // home: LoadPage(),
+          // home: VideoPlayer(),
 
           /// NOTE : ST CONTRACT PAGE
           // home: CreateStPage(),
@@ -195,7 +200,6 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
-          // home: MessageRoomTestingPage(),
         ),
       ),
     );

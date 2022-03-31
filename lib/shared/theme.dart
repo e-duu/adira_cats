@@ -9,7 +9,9 @@ double defaultBottom = 150;
 
 Color kPrimaryColor = Color(0XFFFFEB00);
 Color kBlackColor = Color(0XFF212121);
+Color kBlueColor = Color(0XFF3360FF);
 Color kRedColor = Color(0XFFFF0F0F);
+Color kOrangeColor = Color(0XFFF45800);
 Color kGreenColor = Color(0XFF198754);
 Color kWhiteColor = Color(0XFFFFFFFF);
 Color kGreyColor = Color(0XFFF6F6F6);

@@ -9,13 +9,12 @@ import 'package:flutter/material.dart';
 
 class UnitSearchPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
   UnitSearchPage({Key? key}) : super(key: key);
 
   Widget navbar(BuildContext context) {
     return Container(
       child: CustomNavbar(
-        text: "Pesan",
+        text: "Pencarian Unit",
         preffixWidget: GestureDetector(
           onTap: () {
             _scaffoldKey.currentState!.openDrawer();
@@ -104,10 +103,12 @@ class UnitSearchPage extends StatelessWidget {
         width: 300,
         height: 760,
         child: ClipRRect(
-            borderRadius: BorderRadius.only(
-                topRight: Radius.circular(35),
-                bottomRight: Radius.circular(35)),
-            child: CustomDrawer()),
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
+          ),
+          child: CustomDrawer(),
+        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(

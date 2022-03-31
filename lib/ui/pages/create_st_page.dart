@@ -12,7 +12,6 @@ import 'package:adira_cats/shared/theme.dart';
 
 class CreateStPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
   CreateStPage({Key? key}) : super(key: key);
 
   @override
@@ -420,18 +419,18 @@ class CreateStPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-
-      // drawer: CustomDrawer(),w
-      drawer: Container(
+      drawer : Container(
         width: 300,
         height: 760,
         child: ClipRRect(
             borderRadius: BorderRadius.only(
-                topRight: Radius.circular(35),
-                bottomRight: Radius.circular(35)),
-            child: CustomDrawer()),
-      ),
-      drawerEnableOpenDragGesture: true,
+            topRight: Radius.circular(35), 
+            bottomRight: Radius.circular(35),
+          ),
+          child: CustomDrawer()
+          ),
+        ),
+      drawerEnableOpenDragGesture : true,
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: ListView(

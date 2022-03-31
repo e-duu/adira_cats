@@ -21,8 +21,13 @@ class UnitSearchDetailPage extends StatelessWidget {
           onTap: () {
             _scaffoldKey.currentState!.openDrawer();
           },
+<<<<<<< HEAD
           child: libraryIcon,
         ),
+=======
+          child: Icon(Icons.subject_sharp),
+          ),
+>>>>>>> c82b463dfac61e47544f6d659d911c44755067ea
         suffixWidget: Container(
           width: 21.w,
           height: 21.h,
@@ -351,10 +356,11 @@ class UnitSearchDetailPage extends StatelessWidget {
                       children: [
                         CustomButton(
                           title: 'Bagikan',
-                          onPressed: () {},
+                          width: 100.w,
                           color: kGreenColor,
                           textStyle: whiteTextStyle,
-                          width: 100.w,
+                          fontWeight: light,
+                          onPressed: () {},
                         ),
                         SizedBox(
                           width: 12.w,
@@ -362,6 +368,9 @@ class UnitSearchDetailPage extends StatelessWidget {
                         CustomButton(
                           title: 'Simpan',
                           width: 100.w,
+                          fontWeight: light,
+                          color: kBlueColor,
+                          textStyle: whiteTextStyle,
                           onPressed: () => showDialog<String>(
                             context: context,
                             builder: (BuildContext context) => Container(
@@ -412,8 +421,6 @@ class UnitSearchDetailPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          color: kGreyColor,
-                          textStyle: blackTextStyle,
                         ),
                       ],
                     ),
@@ -443,6 +450,7 @@ class UnitSearchDetailPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
+<<<<<<< HEAD
 
       // drawer: CustomDrawer(),
       drawer: Container(
@@ -455,6 +463,20 @@ class UnitSearchDetailPage extends StatelessWidget {
             child: CustomDrawer()),
       ),
       drawerEnableOpenDragGesture: true,
+=======
+      drawer : Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+           topRight: Radius.circular(35),
+           bottomRight: Radius.circular(35)
+          ),
+        child: CustomDrawer()
+        ),
+      ),
+      drawerEnableOpenDragGesture : true,
+>>>>>>> c82b463dfac61e47544f6d659d911c44755067ea
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: ListView(
