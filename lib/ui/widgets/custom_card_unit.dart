@@ -26,7 +26,7 @@ class CustomCardUnit extends StatelessWidget {
         borderRadius: BorderRadius.circular(defaultRadius),
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             width: double.infinity,
@@ -44,42 +44,49 @@ class CustomCardUnit extends StatelessWidget {
               ),
             ),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Nomor Kontak:",
-                style: blackTextStyle.copyWith(
-                  fontWeight: semibold,
-                  fontSize: 11.sp,
+          Container(
+            padding: EdgeInsets.only(
+              top: 12.h,
+              left: 12.w,
+              right: 12.w,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Nomor Kontak:",
+                  style: blackTextStyle.copyWith(
+                    fontWeight: semibold,
+                    fontSize: 8.sp,
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
-                overflow: TextOverflow.ellipsis,
-              ),
-              Text(
-                contractNumber,
-                style: blackTextStyle.copyWith(
-                  fontWeight: light,
-                  fontSize: 11.sp,
+                Text(
+                  contractNumber,
+                  style: blackTextStyle.copyWith(
+                    fontWeight: light,
+                    fontSize: 8.sp,
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
-                overflow: TextOverflow.ellipsis,
-              ),
-              Text(
-                "Nomor Polisi",
-                style: blackTextStyle.copyWith(
-                  fontWeight: semibold,
-                  fontSize: 11.sp,
+                Text(
+                  "Nomor Polisi",
+                  style: blackTextStyle.copyWith(
+                    fontWeight: semibold,
+                    fontSize: 8.sp,
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
-                overflow: TextOverflow.ellipsis,
-              ),
-              Text(
-                policeNumber,
-                style: blackTextStyle.copyWith(
-                  fontWeight: light,
-                  fontSize: 11.sp,
+                Text(
+                  policeNumber,
+                  style: blackTextStyle.copyWith(
+                    fontWeight: light,
+                    fontSize: 8.sp,
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
-                overflow: TextOverflow.ellipsis,
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
