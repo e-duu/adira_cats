@@ -1,6 +1,3 @@
-import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/pages/video_page.dart';
-import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
