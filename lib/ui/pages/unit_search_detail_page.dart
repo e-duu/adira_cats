@@ -21,13 +21,8 @@ class UnitSearchDetailPage extends StatelessWidget {
           onTap: () {
             _scaffoldKey.currentState!.openDrawer();
           },
-<<<<<<< HEAD
-          child: libraryIcon,
-        ),
-=======
           child: Icon(Icons.subject_sharp),
-          ),
->>>>>>> c82b463dfac61e47544f6d659d911c44755067ea
+        ),
         suffixWidget: Container(
           width: 21.w,
           height: 21.h,
@@ -450,9 +445,6 @@ class UnitSearchDetailPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-<<<<<<< HEAD
-
-      // drawer: CustomDrawer(),
       drawer: Container(
         width: 300,
         height: 760,
@@ -463,20 +455,6 @@ class UnitSearchDetailPage extends StatelessWidget {
             child: CustomDrawer()),
       ),
       drawerEnableOpenDragGesture: true,
-=======
-      drawer : Container(
-        width: 300,
-        height: 760,
-        child: ClipRRect(
-          borderRadius: BorderRadius.only(
-           topRight: Radius.circular(35),
-           bottomRight: Radius.circular(35)
-          ),
-        child: CustomDrawer()
-        ),
-      ),
-      drawerEnableOpenDragGesture : true,
->>>>>>> c82b463dfac61e47544f6d659d911c44755067ea
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: ListView(
