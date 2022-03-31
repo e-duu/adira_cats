@@ -257,7 +257,7 @@ class HomePage extends StatelessWidget {
                         Text(
                           'Pencarian Unit',
                           style: darkGreyTextStyle.copyWith(
-                            fontSize: 8.sp,
+                            fontSize: 10.sp,
                             fontWeight: semibold,
                           ),
                         ),
@@ -280,7 +280,7 @@ class HomePage extends StatelessWidget {
                         Text(
                           'Buat Surat Tugas',
                           style: darkGreyTextStyle.copyWith(
-                            fontSize: 8.sp,
+                            fontSize: 10.sp,
                             fontWeight: semibold,
                           ),
                         ),
@@ -303,7 +303,7 @@ class HomePage extends StatelessWidget {
                         Text(
                           'Serah-Terima\nSurat Tugas',
                           style: darkGreyTextStyle.copyWith(
-                            fontSize: 8.sp,
+                            fontSize: 10.sp,
                             fontWeight: semibold,
                           ),
                           textAlign: TextAlign.center,
@@ -339,7 +339,7 @@ class HomePage extends StatelessWidget {
                           // margin: EdgeInsets.only(bottom: 14.h),
                           'Laporan',
                           style: darkGreyTextStyle.copyWith(
-                            fontSize: 8.sp,
+                            fontSize: 10.sp,
                             fontWeight: semibold,
                           ),
                         ),
@@ -362,7 +362,7 @@ class HomePage extends StatelessWidget {
                         Text(
                           'Input Hasil\nKunjungan',
                           style: darkGreyTextStyle.copyWith(
-                            fontSize: 8.sp,
+                            fontSize: 10.sp,
                             fontWeight: semibold,
                           ),
                           textAlign: TextAlign.center,
@@ -386,7 +386,7 @@ class HomePage extends StatelessWidget {
                         Text(
                           'Pengajuan\nBiaya Tarik',
                           style: darkGreyTextStyle.copyWith(
-                            fontSize: 8.sp,
+                            fontSize: 10.sp,
                             fontWeight: semibold,
                           ),
                           textAlign: TextAlign.center,
@@ -471,13 +471,10 @@ class HomePage extends StatelessWidget {
                       fontWeight: bold,
                     ),
                   ),
-                  SizedBox(
-                    height: 12.h,
-                  ),
                   Row(
                     children: [
                       Container(
-                        width: 230,
+                        width: 200,
                         child: Text(
                           'Ini deksripsi singkat, untuk lebih lengkap baca baca baca',
                           style: darkGreyTextStyle.copyWith(
