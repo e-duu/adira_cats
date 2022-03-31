@@ -53,5 +53,4 @@ class _AssetPlayerWidgetState extends State<AssetPlayerWidget> {
   }
 }
 
-VideoPlayerWidget({VideoPlayerController? controller}) {
-}
+VideoPlayerWidget({VideoPlayerController? controller}) {}
