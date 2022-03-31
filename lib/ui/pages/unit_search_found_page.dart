@@ -172,38 +172,41 @@ class UnitSearchFoundPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        key: _scaffoldKey,
-        drawer: Container(
-          width: 300,
-          height: 760,
-          child: ClipRRect(
-              borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(35),
-                  bottomRight: Radius.circular(35)),
-              child: CustomDrawer()),
-        ),
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                navbar(),
-                Container(
-                  margin: EdgeInsets.symmetric(
-                    horizontal: defaultMargin.w,
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      formSearch(),
-                      searchUnitPhoto(),
-                      notif(),
-                      units(),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+      key: _scaffoldKey,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
           ),
-        ));
+          child: CustomDrawer(),
+        ),
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              navbar(),
+              Container(
+                margin: EdgeInsets.symmetric(
+                  horizontal: defaultMargin.w,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    formSearch(),
+                    searchUnitPhoto(),
+                    notif(),
+                    units(),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

@@ -19,7 +19,13 @@ class UnitSearchPullFoundPage extends StatelessWidget {
           bottom: defaultPadding.h,
         ),
         child: CustomNavbar(
-          text: "Tarik Unit",
+          text: "Serah Terima ST",
+           preffixWidget: GestureDetector(
+              onTap: () {
+                _scaffoldKey.currentState!.openDrawer();
+              },
+              child: Icon(Icons.subject_sharp),
+            ),
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
@@ -34,12 +40,7 @@ class UnitSearchPullFoundPage extends StatelessWidget {
               ),
             ),
           ),
-          preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
-            ),
-          ),
+         
         ),
       );
     }
@@ -289,18 +290,18 @@ class UnitSearchPullFoundPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-
-      // drawer: CustomDrawer(),
-      drawer: Container(
-        width: 300,
-        height: 760,
+        drawer : Container(
+          width: 300,
+          height: 760,
         child: ClipRRect(
-            borderRadius: BorderRadius.only(
-                topRight: Radius.circular(35),
-                bottomRight: Radius.circular(35)),
-            child: CustomDrawer()),
+          borderRadius: BorderRadius.only(
+           topRight: Radius.circular(35),
+           bottomRight: Radius.circular(35)
+          ),
+        child: CustomDrawer()
+        ),
       ),
-      drawerEnableOpenDragGesture: true,
+      drawerEnableOpenDragGesture : true,
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: SingleChildScrollView(

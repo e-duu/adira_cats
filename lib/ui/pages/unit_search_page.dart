@@ -9,12 +9,16 @@ import 'package:flutter/material.dart';
 
 class UnitSearchPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+<<<<<<< HEAD
 
+=======
+>>>>>>> aa17f646e04168e0123ed190f60572b8841f6570
   UnitSearchPage({Key? key}) : super(key: key);
 
   Widget navbar(BuildContext context) {
     return Container(
       child: CustomNavbar(
+<<<<<<< HEAD
         text: "Pencarian Unit",
         preffixWidget: GestureDetector(
           onTap: () {
@@ -23,6 +27,16 @@ class UnitSearchPage extends StatelessWidget {
           child: Icon(Icons.subject_sharp),
         ),
         suffixWidget: GestureDetector(
+=======
+        text: "Pesan",
+         preffixWidget: GestureDetector(
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
+          ),
+         suffixWidget: GestureDetector(
+>>>>>>> aa17f646e04168e0123ed190f60572b8841f6570
           onTap: () {
             Navigator.push(
               context,
@@ -100,11 +114,16 @@ class UnitSearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
+<<<<<<< HEAD
       drawer: Container(
+=======
+       drawer : Container(
+>>>>>>> aa17f646e04168e0123ed190f60572b8841f6570
         width: 300,
         height: 760,
         child: ClipRRect(
           borderRadius: BorderRadius.only(
+<<<<<<< HEAD
             topRight: Radius.circular(35),
             bottomRight: Radius.circular(35),
           ),
@@ -127,6 +146,29 @@ class UnitSearchPage extends StatelessWidget {
                     searchUnitPhoto(),
                   ],
                 ),
+=======
+           topRight: Radius.circular(35),
+           bottomRight: Radius.circular(35)
+          ),
+        child: CustomDrawer()
+        ),
+        ),
+      body: SafeArea(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            navbar(context),
+            Container(
+              margin: EdgeInsets.symmetric(
+                horizontal: defaultMargin.w,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  formSearch(),
+                  searchUnitPhoto(),
+                ],
+>>>>>>> aa17f646e04168e0123ed190f60572b8841f6570
               ),
             ],
           ),

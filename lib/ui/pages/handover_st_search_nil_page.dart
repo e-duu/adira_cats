@@ -16,7 +16,7 @@ class HandoverStSearchNilPage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Serah Terima ST",
-            preffixWidget: GestureDetector(
+          preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
             },
@@ -68,19 +68,20 @@ class HandoverStSearchNilPage extends StatelessWidget {
     }
 
     return Scaffold(
-         key: _scaffoldKey,
-          // drawer: CustomDrawer(),w
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-               topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-               child: CustomDrawer()
-                ),
-              ),
-                drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+      key: _scaffoldKey,
+      drawer : Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35)
+          ),
+          child: CustomDrawer()
+        ),
+      ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(

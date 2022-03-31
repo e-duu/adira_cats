@@ -9,7 +9,6 @@ import '../widgets/custom_upload_image.dart';
 
 class UnitSearchPullPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
   UnitSearchPullPage({Key? key}) : super(key: key);
 
   @override
@@ -20,7 +19,13 @@ class UnitSearchPullPage extends StatelessWidget {
           bottom: defaultPadding.h,
         ),
         child: CustomNavbar(
-          text: "Tarik Unit",
+          text: "Serah Terima ST",
+          preffixWidget: GestureDetector(
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
+            ),
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
@@ -35,12 +40,7 @@ class UnitSearchPullPage extends StatelessWidget {
               ),
             ),
           ),
-          preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
-            ),
-          ),
+          
         ),
       );
     }
@@ -162,18 +162,18 @@ class UnitSearchPullPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-
-      // drawer: CustomDrawer(),
-      drawer: Container(
+      drawer : Container(
         width: 300,
         height: 760,
-        child: ClipRRect(
-            borderRadius: BorderRadius.only(
-                topRight: Radius.circular(35),
-                bottomRight: Radius.circular(35)),
-            child: CustomDrawer()),
+      child: ClipRRect(
+      borderRadius: BorderRadius.only(
+      topRight: Radius.circular(35),
+      bottomRight: Radius.circular(35)
       ),
-      drawerEnableOpenDragGesture: true,
+      child: CustomDrawer()
+      ),
+      ),
+      drawerEnableOpenDragGesture : true,
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: SingleChildScrollView(

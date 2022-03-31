@@ -17,12 +17,12 @@ class UnitSearchDetailPage extends StatelessWidget {
     Widget navbar() {
       return CustomNavbar(
         text: 'Detail Unit',
-         preffixWidget: GestureDetector(
-              onTap: () {
-                _scaffoldKey.currentState!.openDrawer();
-              },
-              child: Icon(Icons.subject_sharp),
-            ),
+        preffixWidget: GestureDetector(
+          onTap: () {
+            _scaffoldKey.currentState!.openDrawer();
+          },
+          child: Icon(Icons.subject_sharp),
+          ),
         suffixWidget: Container(
           width: 21.w,
           height: 21.h,
@@ -351,10 +351,11 @@ class UnitSearchDetailPage extends StatelessWidget {
                       children: [
                         CustomButton(
                           title: 'Bagikan',
-                          onPressed: () {},
+                          width: 100.w,
                           color: kGreenColor,
                           textStyle: whiteTextStyle,
-                          width: 100.w,
+                          fontWeight: light,
+                          onPressed: () {},
                         ),
                         SizedBox(
                           width: 12.w,
@@ -362,6 +363,9 @@ class UnitSearchDetailPage extends StatelessWidget {
                         CustomButton(
                           title: 'Simpan',
                           width: 100.w,
+                          fontWeight: light,
+                          color: kBlueColor,
+                          textStyle: whiteTextStyle,
                           onPressed: () => showDialog<String>(
                             context: context,
                             builder: (BuildContext context) => Container(
@@ -412,8 +416,6 @@ class UnitSearchDetailPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          color: kGreyColor,
-                          textStyle: blackTextStyle,
                         ),
                       ],
                     ),
@@ -442,20 +444,20 @@ class UnitSearchDetailPage extends StatelessWidget {
     }
 
     return Scaffold(
-        key: _scaffoldKey,
-       
-          // drawer: CustomDrawer(),
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
+      key: _scaffoldKey,
+      drawer : Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+           topRight: Radius.circular(35),
+           bottomRight: Radius.circular(35)
           ),
-              drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+        child: CustomDrawer()
+        ),
+      ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: ListView(
         padding: EdgeInsets.symmetric(),

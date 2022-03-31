@@ -1,6 +1,11 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
+<<<<<<< HEAD
+import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
+import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
+=======
+>>>>>>> aa4279845e548f05a5442ba030f8cb1ad0bd1cbc
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -63,6 +68,20 @@ class ReportDetailMvPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
+<<<<<<< HEAD
+      drawer : Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35),
+          bottomRight: Radius.circular(35)
+        ),
+        child: CustomDrawer()
+        ),
+      ),
+      drawerEnableOpenDragGesture : true,
+=======
 
       // drawer: CustomDrawer(),
       drawer: Container(
@@ -75,6 +94,7 @@ class ReportDetailMvPage extends StatelessWidget {
             child: CustomDrawer()),
       ),
       drawerEnableOpenDragGesture: true,
+>>>>>>> aa4279845e548f05a5442ba030f8cb1ad0bd1cbc
       endDrawerEnableOpenDragGesture: false,
       resizeToAvoidBottomInset: false,
       floatingActionButton: Visibility(

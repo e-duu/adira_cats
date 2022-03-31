@@ -9,9 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
 class HandoverStDetailPage extends StatelessWidget {
-      final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
-      HandoverStDetailPage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  HandoverStDetailPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +19,7 @@ class HandoverStDetailPage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Serah Terima ST",
-           preffixWidget: GestureDetector(
+          preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
             },
@@ -316,19 +315,18 @@ class HandoverStDetailPage extends StatelessWidget {
     }
 
     return Scaffold(
-       key: _scaffoldKey,
-          // drawer: CustomDrawer(),w
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-               topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-               child: CustomDrawer()
-                ),
-              ),
-                drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+      key: _scaffoldKey,
+      drawer : Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+            borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
+            child: CustomDrawer()
+            ),
+      ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
