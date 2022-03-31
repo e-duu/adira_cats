@@ -131,7 +131,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
           // home: LocalNotification(),
-          // home: NotificationPage(),
+          home: NotificationPage(),
           // home: ProfilePage(),
           // home: HomePage(),
           // home: ErrorPage(),
@@ -139,7 +139,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : ST CONTRACT PAGE
           // home: CreateStPage(),
-          home: CreateStFilledPage(),
+          // home: CreateStFilledPage(),
           // home: CreateStContractNullPage(),
           // home: CreateStContractNumberPage(),
 
@@ -195,7 +195,6 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
-          // home: MessageRoomTestingPage(),
         ),
       ),
     );
