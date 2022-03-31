@@ -49,9 +49,9 @@ class MainPage extends StatelessWidget {
             ),
             boxShadow: [
               BoxShadow(
-                color: kLigthGrayColor.withOpacity(1),
-                spreadRadius: 3,
-                blurRadius: 18.r,
+                color: kGreyColor.withOpacity(1),
+                spreadRadius: 1,
+                blurRadius: 12.r,
                 offset: Offset(0, 0),
               ),
             ],

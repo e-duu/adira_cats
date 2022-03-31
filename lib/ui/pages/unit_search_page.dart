@@ -14,14 +14,14 @@ class UnitSearchPage extends StatelessWidget {
   Widget navbar(BuildContext context) {
     return Container(
       child: CustomNavbar(
-        text: "Pesan",
-         preffixWidget: GestureDetector(
-            onTap: () {
-              _scaffoldKey.currentState!.openDrawer();
-            },
-            child: Icon(Icons.subject_sharp),
-          ),
-         suffixWidget: GestureDetector(
+        text: "Pencarian Unit",
+        preffixWidget: GestureDetector(
+          onTap: () {
+            _scaffoldKey.currentState!.openDrawer();
+          },
+          child: Icon(Icons.subject_sharp),
+        ),
+        suffixWidget: GestureDetector(
           onTap: () {
             Navigator.push(
               context,
@@ -75,7 +75,7 @@ class UnitSearchPage extends StatelessWidget {
         children: [
           CustomButton(
             title: "Cari Lewat ST",
-            onPressed: (){},
+            onPressed: () {},
             color: kPrimaryColor,
             textStyle: blackTextStyle,
             width: 138.w,
@@ -85,7 +85,7 @@ class UnitSearchPage extends StatelessWidget {
           ),
           CustomButton(
             title: "Scan Foto Plat",
-            onPressed: (){},
+            onPressed: () {},
             color: kPrimaryColor,
             textStyle: blackTextStyle,
             width: 138.w,
@@ -99,35 +99,35 @@ class UnitSearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-       drawer : Container(
+      drawer: Container(
         width: 300,
         height: 760,
         child: ClipRRect(
           borderRadius: BorderRadius.only(
-           topRight: Radius.circular(35),
-           bottomRight: Radius.circular(35)
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
           ),
-        child: CustomDrawer()
+          child: CustomDrawer(),
         ),
-        ),
+      ),
       body: SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            navbar(context),
-            Container(
-              margin: EdgeInsets.symmetric(
-                horizontal: defaultMargin.w,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              navbar(context),
+              Container(
+                margin: EdgeInsets.symmetric(
+                  horizontal: defaultMargin.w,
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    formSearch(),
+                    searchUnitPhoto(),
+                  ],
+                ),
               ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  formSearch(),
-                  searchUnitPhoto(),
-                ],
-              ),
-            ),
-          ],
+            ],
           ),
         ),
       ),

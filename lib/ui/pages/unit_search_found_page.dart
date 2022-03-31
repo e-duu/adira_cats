@@ -10,7 +10,7 @@ import 'package:styled_text/styled_text.dart';
 
 class UnitSearchFoundPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  UnitSearchFoundPage({ Key? key }) : super(key: key);
+  UnitSearchFoundPage({Key? key}) : super(key: key);
 
   Widget navbar() {
     return Container(
@@ -20,11 +20,11 @@ class UnitSearchFoundPage extends StatelessWidget {
       child: CustomNavbar(
         text: "Pencarian Unit",
         preffixWidget: GestureDetector(
-            onTap: () {
-              _scaffoldKey.currentState!.openDrawer();
-            },
-            child: Icon(Icons.subject_sharp),
-          ),
+          onTap: () {
+            _scaffoldKey.currentState!.openDrawer();
+          },
+          child: Icon(Icons.subject_sharp),
+        ),
         suffixWidget: Container(
           width: 48.w,
           height: 48.h,
@@ -41,7 +41,7 @@ class UnitSearchFoundPage extends StatelessWidget {
     );
   }
 
-  Widget formSearch(){
+  Widget formSearch() {
     return Container(
       width: double.infinity,
       margin: EdgeInsets.symmetric(
@@ -56,7 +56,7 @@ class UnitSearchFoundPage extends StatelessWidget {
     );
   }
 
-  Widget searchUnitPhoto(){
+  Widget searchUnitPhoto() {
     return Container(
       margin: EdgeInsets.only(
         top: 12.h,
@@ -71,7 +71,7 @@ class UnitSearchFoundPage extends StatelessWidget {
         children: [
           CustomButton(
             title: "Cari Lewat ST",
-            onPressed: (){},
+            onPressed: () {},
             color: kPrimaryColor,
             textStyle: blackTextStyle,
             width: 138.w,
@@ -81,7 +81,7 @@ class UnitSearchFoundPage extends StatelessWidget {
           ),
           CustomButton(
             title: "Scan Foto Plat",
-            onPressed: (){},
+            onPressed: () {},
             color: kPrimaryColor,
             textStyle: blackTextStyle,
             width: 138.w,
@@ -93,54 +93,68 @@ class UnitSearchFoundPage extends StatelessWidget {
 
   Widget notif() {
     return Container(
-      margin: EdgeInsets.symmetric(
-        vertical: defaultMargin.h,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          StyledText(
-            text: '<bold>2<bold> Unit telah ditemukan.',
-            tags: {
-              'bold': StyledTextTag(
-                style: TextStyle(
-                  fontWeight: semibold,
+        margin: EdgeInsets.symmetric(
+          vertical: defaultMargin.h,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            StyledText(
+              text: '<bold>2<bold> Unit telah ditemukan.',
+              tags: {
+                'bold': StyledTextTag(
+                  style: TextStyle(
+                    fontWeight: semibold,
+                  ),
                 ),
+              },
+              style: darkGreyTextStyle.copyWith(
+                  fontWeight: light, fontSize: 13.sp),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 8.h,
+            ),
+            Text(
+              "Klik untuk melihat detail",
+              style: darkGreyTextStyle.copyWith(
+                fontWeight: light,
+                fontSize: 13.sp,
               ),
-            },
-            style: darkGreyTextStyle.copyWith(
-              fontWeight: light,
-              fontSize: 13.sp
             ),
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(
-            height: 8.h,
-          ),
-          Text(
-            "Klik untuk melihat detail",
-            style: darkGreyTextStyle.copyWith(
-              fontWeight: light,
-              fontSize: 13.sp,
-            ),
-          ),
-        ],
-      )
-    );
+          ],
+        ));
   }
 
-  Widget units(){
+  Widget units() {
     return Container(
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: GridView.count(
+        physics: NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        crossAxisCount: 2,
+        crossAxisSpacing: 8.0,
+        mainAxisSpacing: 20.0,
+        scrollDirection: Axis.vertical,
         children: [
           CustomCardUnit(
             imageUrl: 'assets/image_car_1.png',
             contractNumber: '9999 9999 9999',
             policeNumber: 'AB 9999 XX',
           ),
-          SizedBox(
-            width: 12.w,
+          CustomCardUnit(
+            imageUrl: 'assets/image_car_2.png',
+            contractNumber: '9999 8888 8888',
+            policeNumber: 'AB 8888 XX',
+          ),
+          CustomCardUnit(
+            imageUrl: 'assets/image_car_2.png',
+            contractNumber: '9999 8888 8888',
+            policeNumber: 'AB 8888 XX',
+          ),
+          CustomCardUnit(
+            imageUrl: 'assets/image_car_2.png',
+            contractNumber: '9999 8888 8888',
+            policeNumber: 'AB 8888 XX',
           ),
           CustomCardUnit(
             imageUrl: 'assets/image_car_2.png',
@@ -156,15 +170,15 @@ class UnitSearchFoundPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      drawer : Container(
-        width: 300,
-        height: 760,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
         child: ClipRRect(
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(35),
-            bottomRight: Radius.circular(35)
+            bottomRight: Radius.circular(35),
           ),
-          child: CustomDrawer()
+          child: CustomDrawer(),
         ),
       ),
       body: SafeArea(
@@ -189,7 +203,7 @@ class UnitSearchFoundPage extends StatelessWidget {
             ],
           ),
         ),
-      )
+      ),
     );
   }
 }

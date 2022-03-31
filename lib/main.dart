@@ -12,6 +12,7 @@ import 'package:adira_cats/ui/pages/handover_st_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
+import 'package:adira_cats/ui/pages/home_page_option.dart';
 import 'package:adira_cats/ui/pages/loading_page.dart';
 import 'package:adira_cats/ui/pages/local_notification.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
@@ -136,6 +137,7 @@ class MyApp extends StatelessWidget {
           // home: NotificationPage(),
           // home: ProfilePage(),
           // home: HomePage(),
+          // home: HomePageOption(),
           // home: ErrorPage(),
           // home: LoadPage(),
           // home: LoadPage(),

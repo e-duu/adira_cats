@@ -9,9 +9,9 @@ import '../../cubit/page_cubit.dart';
 import '../widgets/custom_bottom_navigation_item.dart';
 import '../widgets/custom_drawer.dart';
 
-class HomePage extends StatelessWidget {
+class HomePageOption extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  HomePage({Key? key}) : super(key: key);
+  HomePageOption({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -225,11 +225,117 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget announcement() {
+      return Container(
+        padding: EdgeInsets.all(14),
+        margin: EdgeInsets.only(
+          left: defaultPadding.w,
+          right: defaultPadding.w,
+          bottom: defaultMargin.h,
+        ),
+        decoration: BoxDecoration(
+          color: kWhiteColor,
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(defaultPadding.r),
+            topLeft: Radius.circular(defaultPadding.r),
+            bottomLeft: Radius.circular(defaultPadding.r),
+            bottomRight: Radius.circular(defaultPadding.r),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: kGreyColor.withOpacity(1),
+              spreadRadius: 0.1,
+              blurRadius: 6,
+              blurStyle: BlurStyle.outer,
+              offset: Offset(0, 0),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              child: Text(
+                'Pengumuman',
+                style: blackTextStyle.copyWith(
+                  fontSize: 14.sp,
+                  fontWeight: bold,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 12.h,
+            ),
+            Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    width: double.infinity,
+                    height: 120.h,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(
+                          "assets/image_announcement.png",
+                        ),
+                      ),
+                      borderRadius: BorderRadius.circular(defaultRadius),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 12.h,
+                  ),
+                  Text(
+                    'Mobile App Adira Finance CATS Terbaru Akan Segera Hadir!',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 10.sp,
+                      fontWeight: bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 12.h,
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                        width: 200,
+                        child: Text(
+                          'Ini deksripsi singkat, untuk lebih lengkap baca baca baca',
+                          style: darkGreyTextStyle.copyWith(
+                            fontSize: 8.sp,
+                            fontWeight: normal,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Baca Selengkapnya',
+                          style: blackTextStyle.copyWith(
+                            fontSize: 8.sp,
+                            fontWeight: bold,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
     Widget menu() {
       return Container(
         width: double.infinity,
-        margin: EdgeInsets.symmetric(
-          horizontal: defaultMargin.w,
+        margin: EdgeInsets.only(
+          left: defaultMargin.w,
+          right: defaultMargin.w,
+          bottom: defaultBottom.h,
         ),
         child: Column(
           children: [
@@ -402,108 +508,6 @@ class HomePage extends StatelessWidget {
       );
     }
 
-    Widget announcement() {
-      return Container(
-        padding: EdgeInsets.all(14),
-        margin: EdgeInsets.only(
-          left: defaultPadding.w,
-          right: defaultPadding.w,
-          top: defaultPadding.h,
-          bottom: defaultBottom.h,
-        ),
-        decoration: BoxDecoration(
-          color: kWhiteColor,
-          borderRadius: BorderRadius.only(
-            topRight: Radius.circular(defaultPadding.r),
-            topLeft: Radius.circular(defaultPadding.r),
-            bottomLeft: Radius.circular(defaultPadding.r),
-            bottomRight: Radius.circular(defaultPadding.r),
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: kGreyColor.withOpacity(1),
-              spreadRadius: 0.1,
-              blurRadius: 6,
-              blurStyle: BlurStyle.outer,
-              offset: Offset(0, 0),
-            ),
-          ],
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              child: Text(
-                'Pengumuman',
-                style: blackTextStyle.copyWith(
-                  fontSize: 14.sp,
-                  fontWeight: bold,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 12.h,
-            ),
-            Container(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    width: double.infinity,
-                    height: 120.h,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: AssetImage(
-                          "assets/image_announcement.png",
-                        ),
-                      ),
-                      borderRadius: BorderRadius.circular(defaultRadius),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 12.h,
-                  ),
-                  Text(
-                    'Mobile App Adira Finance CATS Terbaru Akan Segera Hadir!',
-                    style: blackTextStyle.copyWith(
-                      fontSize: 10.sp,
-                      fontWeight: bold,
-                    ),
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        width: 200,
-                        child: Text(
-                          'Ini deksripsi singkat, untuk lebih lengkap baca baca baca',
-                          style: darkGreyTextStyle.copyWith(
-                            fontSize: 8.sp,
-                            fontWeight: normal,
-                          ),
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Baca Selengkapnya',
-                          style: blackTextStyle.copyWith(
-                            fontSize: 8.sp,
-                            fontWeight: bold,
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-
     Widget bottomNavigation() {
       return Align(
         alignment: Alignment.bottomCenter,
@@ -608,8 +612,8 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   notification(),
-                  menu(),
                   announcement(),
+                  menu(),
                 ],
               ),
             ),
