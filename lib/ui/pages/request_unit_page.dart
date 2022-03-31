@@ -334,8 +334,6 @@ class RequestUnitPage extends StatelessWidget {
     }
 
     return Scaffold(
-      // floatingActionButton: formCreateNote(),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

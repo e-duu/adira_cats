@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class UnitSearchNilPage extends StatelessWidget {
-   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   UnitSearchNilPage({ Key? key }) : super(key: key);
 
   Widget navbar() {
@@ -133,17 +133,18 @@ class UnitSearchNilPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        key: _scaffoldKey,
-       
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
+      key: _scaffoldKey, 
+        drawer : Container(
+          width: 300,
+          height: 760,
+          child: ClipRRect(
+            borderRadius: BorderRadius.only(
+              topRight: Radius.circular(35),
+              bottomRight: Radius.circular(35)
+            ),
+          child: CustomDrawer()
           ),
+        ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

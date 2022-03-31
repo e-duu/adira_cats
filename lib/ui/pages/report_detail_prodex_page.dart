@@ -8,8 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class ReportDetailProdexPage extends StatelessWidget {
-    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   ReportDetailProdexPage({Key? key}) : super(key: key);
 
   @override
@@ -153,19 +152,20 @@ class ReportDetailProdexPage extends StatelessWidget {
     }
 
     return Scaffold(
-       key: _scaffoldKey,
-       
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
-          ),
-                drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+      key: _scaffoldKey,
+      drawer : Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35),
+          bottomRight: Radius.circular(35)
+        ),
+          child: CustomDrawer()
+        ),
+        ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       resizeToAvoidBottomInset: false,
       floatingActionButton: Visibility(
         child: button(),

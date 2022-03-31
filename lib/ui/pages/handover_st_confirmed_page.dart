@@ -230,12 +230,13 @@ class HandoverStConfirmedPage extends StatelessWidget {
                     height: 68.h,
                     child: CustomButton(
                       title: 'Cetak ST',
-                      onPressed: () {},
+                      width: 94.w,
+                      fontWeight: light,
                       color: kPrimaryColor,
                       textStyle: blackTextStyle.copyWith(
                         fontWeight: light,
                       ),
-                      width: 94.w,
+                      onPressed: () {},
                     ),
                   ),
 
@@ -244,12 +245,11 @@ class HandoverStConfirmedPage extends StatelessWidget {
                     height: 68.h,
                     child: CustomButton(
                       title: 'Cetak\nBASTK',
-                      onPressed: () {},
+                      fontWeight: light,
                       color: kGreenColor,
-                      textStyle: whiteTextStyle.copyWith(
-                        fontWeight: light,
-                      ),
+                      textStyle: whiteTextStyle,
                       width: 94.w,
+                      onPressed: () {},
                     ),
                   ),
 
@@ -258,12 +258,11 @@ class HandoverStConfirmedPage extends StatelessWidget {
                     height: 68.h,
                     child: CustomButton(
                       title: 'Buat\nHisPay',
-                      onPressed: () {},
-                      color: kGreyColor,
-                      textStyle: blackTextStyle.copyWith(
-                        fontWeight: light,
-                      ),
+                      fontWeight: light,
+                      color: kOrangeColor,
+                      textStyle: whiteTextStyle,
                       width: 94.w,
+                      onPressed: () {},
                     ),
                   ),
                 ],
@@ -294,34 +293,31 @@ class HandoverStConfirmedPage extends StatelessWidget {
     }
 
     return Scaffold(
-      key: _scaffoldKey,
-
-      // drawer: CustomDrawer(),w
-      drawer: Container(
-        width: 300,
-        height: 760,
-        child: ClipRRect(
-          borderRadius: BorderRadius.only(
-            topRight: Radius.circular(35),
-            bottomRight: Radius.circular(35),
+       key: _scaffoldKey,
+       drawer : Container(
+          width: 300,
+          height: 760,
+          child: ClipRRect(
+               borderRadius: BorderRadius.only(
+               topRight: Radius.circular(35), 
+               bottomRight: Radius.circular(35)),
+               child: CustomDrawer()
+               ),
           ),
-          child: CustomDrawer(),
-        ),
-      ),
-      drawerEnableOpenDragGesture: true,
-      endDrawerEnableOpenDragGesture: false,
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Container(
-            child: Column(
-              children: [
-                navbar(),
-                cardStDetail(),
-                buttonBack(),
-              ],
+        drawerEnableOpenDragGesture : true,
+        endDrawerEnableOpenDragGesture: false,
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Container(
+              child: Column(
+                children: [
+                  navbar(),
+                  cardStDetail(),
+                  buttonBack(),
+                ],
+              ),
             ),
           ),
-        ),
       ),
     );
   }

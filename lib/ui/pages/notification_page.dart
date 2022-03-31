@@ -397,19 +397,19 @@ class NotificationPage extends StatelessWidget {
 
     return Scaffold(
        key: _scaffoldKey,
-       
-          // drawer: CustomDrawer(),
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
-          ),
-              drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+       drawer : Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+          topRight: Radius.circular(35),
+          bottomRight: Radius.circular(35)
+        ),
+          child: CustomDrawer()
+        ),
+        ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
 
         child: SingleChildScrollView(

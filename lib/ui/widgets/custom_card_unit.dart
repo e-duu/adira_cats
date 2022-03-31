@@ -3,12 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class CustomCardUnit extends StatelessWidget {
-
   final String imageUrl;
   final String contractNumber;
   final String policeNumber;
-  
-  const CustomCardUnit({ 
+
+  const CustomCardUnit({
     Key? key,
     required this.imageUrl,
     required this.contractNumber,
@@ -19,9 +18,6 @@ class CustomCardUnit extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 138.w,
-      margin: EdgeInsets.only(
-        bottom: 100.h,
-      ),
       decoration: BoxDecoration(
         border: Border.all(
           color: kLigthGrayColor,
@@ -30,12 +26,13 @@ class CustomCardUnit extends StatelessWidget {
         borderRadius: BorderRadius.circular(defaultRadius),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
             width: double.infinity,
-            height: 120.h,
+            height: 110.h,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.only( 
+              borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(defaultRadius),
                 topRight: Radius.circular(defaultRadius),
               ),
@@ -47,53 +44,42 @@ class CustomCardUnit extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            margin: EdgeInsets.symmetric(
-              horizontal: defaultPadding.w,
-              vertical: 18.h,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Nomor Kontak:",
-                  style: blackTextStyle.copyWith(
-                    fontWeight: semibold,
-                    fontSize: 11.sp
-                  ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Nomor Kontak:",
+                style: blackTextStyle.copyWith(
+                  fontWeight: semibold,
+                  fontSize: 11.sp,
                 ),
-                SizedBox(
-                  height: 3.h,
+                overflow: TextOverflow.ellipsis,
+              ),
+              Text(
+                contractNumber,
+                style: blackTextStyle.copyWith(
+                  fontWeight: light,
+                  fontSize: 11.sp,
                 ),
-                Text(
-                  contractNumber,
-                  style: blackTextStyle.copyWith(
-                    fontWeight: light,
-                    fontSize: 11.sp,
-                  ),
+                overflow: TextOverflow.ellipsis,
+              ),
+              Text(
+                "Nomor Polisi",
+                style: blackTextStyle.copyWith(
+                  fontWeight: semibold,
+                  fontSize: 11.sp,
                 ),
-                SizedBox(
-                  height: 4.h,
+                overflow: TextOverflow.ellipsis,
+              ),
+              Text(
+                policeNumber,
+                style: blackTextStyle.copyWith(
+                  fontWeight: light,
+                  fontSize: 11.sp,
                 ),
-                Text(
-                  "Nomor Polisi",
-                  style: blackTextStyle.copyWith(
-                    fontWeight: semibold,
-                    fontSize: 11.sp
-                  ),
-                ),
-                SizedBox(
-                  height: 3.h,
-                ),
-                Text(
-                  policeNumber,
-                  style: blackTextStyle.copyWith(
-                    fontWeight: light,
-                    fontSize: 11.sp,
-                  ),
-                ),
-              ],
-            ),
+                overflow: TextOverflow.ellipsis,
+              ),
+            ],
           ),
         ],
       ),
