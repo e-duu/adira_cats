@@ -9,20 +9,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
 
 class UnitSearchDetailPage extends StatelessWidget {
-   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-   UnitSearchDetailPage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  UnitSearchDetailPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return CustomNavbar(
         text: 'Detail Unit',
-         preffixWidget: GestureDetector(
-              onTap: () {
-                _scaffoldKey.currentState!.openDrawer();
-              },
-              child: Icon(Icons.subject_sharp),
-            ),
+        preffixWidget: GestureDetector(
+          onTap: () {
+            _scaffoldKey.currentState!.openDrawer();
+          },
+          child: libraryIcon,
+        ),
         suffixWidget: Container(
           width: 21.w,
           height: 21.h,
@@ -442,20 +442,20 @@ class UnitSearchDetailPage extends StatelessWidget {
     }
 
     return Scaffold(
-        key: _scaffoldKey,
-       
-          // drawer: CustomDrawer(),
-          drawer : Container(
-            width: 300,
-            height: 760,
-            child: ClipRRect(
-               borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35), bottomRight: Radius.circular(35)),
-              child: CustomDrawer()
-              ),
-          ),
-              drawerEnableOpenDragGesture : true,
-          endDrawerEnableOpenDragGesture: false,
+      key: _scaffoldKey,
+
+      // drawer: CustomDrawer(),
+      drawer: Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(35),
+                bottomRight: Radius.circular(35)),
+            child: CustomDrawer()),
+      ),
+      drawerEnableOpenDragGesture: true,
+      endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: ListView(
         padding: EdgeInsets.symmetric(),

@@ -127,7 +127,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchNilPage(),
           // home: UnitSearchPullPage(),
           // home: UnitSearchFoundPage(),
-          // home: UnitSearchDetailPage(),
+          home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
           // home: LocalNotification(),
@@ -139,7 +139,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : ST CONTRACT PAGE
           // home: CreateStPage(),
-          home: CreateStFilledPage(),
+          // home: CreateStFilledPage(),
           // home: CreateStContractNullPage(),
           // home: CreateStContractNumberPage(),
 
