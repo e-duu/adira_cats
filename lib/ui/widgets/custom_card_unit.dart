@@ -3,12 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class CustomCardUnit extends StatelessWidget {
-
   final String imageUrl;
   final String contractNumber;
   final String policeNumber;
-  
-  const CustomCardUnit({ 
+
+  const CustomCardUnit({
     Key? key,
     required this.imageUrl,
     required this.contractNumber,
@@ -35,7 +34,7 @@ class CustomCardUnit extends StatelessWidget {
             width: double.infinity,
             height: 120.h,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.only( 
+              borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(defaultRadius),
                 topRight: Radius.circular(defaultRadius),
               ),
@@ -59,7 +58,7 @@ class CustomCardUnit extends StatelessWidget {
                   "Nomor Kontak:",
                   style: blackTextStyle.copyWith(
                     fontWeight: semibold,
-                    fontSize: 11.sp
+                    fontSize: 11.sp,
                   ),
                 ),
                 SizedBox(
@@ -79,7 +78,7 @@ class CustomCardUnit extends StatelessWidget {
                   "Nomor Polisi",
                   style: blackTextStyle.copyWith(
                     fontWeight: semibold,
-                    fontSize: 11.sp
+                    fontSize: 11.sp,
                   ),
                 ),
                 SizedBox(
