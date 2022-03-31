@@ -133,16 +133,13 @@ class UnitSearchFoundPage extends StatelessWidget {
         shrinkWrap: true,
         crossAxisCount: 2,
         crossAxisSpacing: 8.0,
-        mainAxisSpacing: 160.0,
+        mainAxisSpacing: 100.0,
         scrollDirection: Axis.vertical,
         children: [
           CustomCardUnit(
             imageUrl: 'assets/image_car_1.png',
             contractNumber: '9999 9999 9999',
             policeNumber: 'AB 9999 XX',
-          ),
-          SizedBox(
-            width: 12.w,
           ),
           CustomCardUnit(
             imageUrl: 'assets/image_car_2.png',

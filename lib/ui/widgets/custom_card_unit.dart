@@ -17,10 +17,8 @@ class CustomCardUnit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // height: 300.h,
       width: 138.w,
-      margin: EdgeInsets.only(
-        bottom: 100.h,
-      ),
       decoration: BoxDecoration(
         border: Border.all(
           color: kLigthGrayColor,
@@ -46,53 +44,38 @@ class CustomCardUnit extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            margin: EdgeInsets.symmetric(
-              horizontal: defaultPadding.w,
-              vertical: 18.h,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Nomor Kontak:",
-                  style: blackTextStyle.copyWith(
-                    fontWeight: semibold,
-                    fontSize: 11.sp,
-                  ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Nomor Kontak:",
+                style: blackTextStyle.copyWith(
+                  fontWeight: semibold,
+                  fontSize: 11.sp,
                 ),
-                SizedBox(
-                  height: 3.h,
+              ),
+              Text(
+                contractNumber,
+                style: blackTextStyle.copyWith(
+                  fontWeight: light,
+                  fontSize: 11.sp,
                 ),
-                Text(
-                  contractNumber,
-                  style: blackTextStyle.copyWith(
-                    fontWeight: light,
-                    fontSize: 11.sp,
-                  ),
+              ),
+              Text(
+                "Nomor Polisi",
+                style: blackTextStyle.copyWith(
+                  fontWeight: semibold,
+                  fontSize: 11.sp,
                 ),
-                SizedBox(
-                  height: 4.h,
+              ),
+              Text(
+                policeNumber,
+                style: blackTextStyle.copyWith(
+                  fontWeight: light,
+                  fontSize: 11.sp,
                 ),
-                Text(
-                  "Nomor Polisi",
-                  style: blackTextStyle.copyWith(
-                    fontWeight: semibold,
-                    fontSize: 11.sp,
-                  ),
-                ),
-                SizedBox(
-                  height: 3.h,
-                ),
-                Text(
-                  policeNumber,
-                  style: blackTextStyle.copyWith(
-                    fontWeight: light,
-                    fontSize: 11.sp,
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),
