@@ -65,6 +65,7 @@ import 'package:adira_cats/ui/pages/unit_search_process_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
 import 'package:adira_cats/ui/pages/video_page.dart';
+import 'package:adira_cats/ui/pages/video_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -141,6 +142,7 @@ class MyApp extends StatelessWidget {
           // home: LoadPage(),
           // home: LoadPage(),
           // home: VideoPlayer(),
+          // home: AssetPlayerWidget(),
 
           /// NOTE : ST CONTRACT PAGE
           // home: CreateStPage(),
