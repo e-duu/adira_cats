@@ -133,7 +133,7 @@ class UnitSearchFoundPage extends StatelessWidget {
         shrinkWrap: true,
         crossAxisCount: 2,
         crossAxisSpacing: 8.0,
-        mainAxisSpacing: 100.0,
+        mainAxisSpacing: 20.0,
         scrollDirection: Axis.vertical,
         children: [
           CustomCardUnit(

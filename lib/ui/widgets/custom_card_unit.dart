@@ -17,7 +17,6 @@ class CustomCardUnit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // height: 300.h,
       width: 138.w,
       decoration: BoxDecoration(
         border: Border.all(
@@ -27,10 +26,11 @@ class CustomCardUnit extends StatelessWidget {
         borderRadius: BorderRadius.circular(defaultRadius),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
             width: double.infinity,
-            height: 120.h,
+            height: 110.h,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(defaultRadius),
@@ -53,6 +53,7 @@ class CustomCardUnit extends StatelessWidget {
                   fontWeight: semibold,
                   fontSize: 11.sp,
                 ),
+                overflow: TextOverflow.ellipsis,
               ),
               Text(
                 contractNumber,
@@ -60,6 +61,7 @@ class CustomCardUnit extends StatelessWidget {
                   fontWeight: light,
                   fontSize: 11.sp,
                 ),
+                overflow: TextOverflow.ellipsis,
               ),
               Text(
                 "Nomor Polisi",
@@ -67,6 +69,7 @@ class CustomCardUnit extends StatelessWidget {
                   fontWeight: semibold,
                   fontSize: 11.sp,
                 ),
+                overflow: TextOverflow.ellipsis,
               ),
               Text(
                 policeNumber,
@@ -74,6 +77,7 @@ class CustomCardUnit extends StatelessWidget {
                   fontWeight: light,
                   fontSize: 11.sp,
                 ),
+                overflow: TextOverflow.ellipsis,
               ),
             ],
           ),

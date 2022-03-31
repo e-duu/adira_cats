@@ -136,7 +136,7 @@ class MyApp extends StatelessWidget {
           // home: NotificationPage(),
           // home: ProfilePage(),
           // home: HomePage(),
-          home: HomePageOption(),
+          // home: HomePageOption(),
           // home: ErrorPage(),
           // home: LoadPage(),
           // home: LoadPage(),
@@ -171,7 +171,7 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailProdexResultDetailPage(),
 
           /// NOTE : PULL FEE PAGE
-          // home: ReportDetailPullFeePage(),
+          home: ReportDetailPullFeePage(),
           // home: ReportDetailPullFeeNihilPage(),
           // home: ReportDetailPullFeeResultDetailPage(),
 
