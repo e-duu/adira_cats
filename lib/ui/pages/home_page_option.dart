@@ -332,8 +332,10 @@ class HomePageOption extends StatelessWidget {
     Widget menu() {
       return Container(
         width: double.infinity,
-        margin: EdgeInsets.symmetric(
-          horizontal: defaultMargin.w,
+        margin: EdgeInsets.only(
+          left: defaultMargin.w,
+          right: defaultMargin.w,
+          bottom: defaultBottom.w,
         ),
         child: Column(
           children: [

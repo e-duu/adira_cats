@@ -16,7 +16,7 @@ class CreateStContractNumberPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget navbar() {
       return CustomNavbar(
-          text: "Serah Terima ST",
+          text: "Buat Surat Tugas",
           preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
