@@ -249,8 +249,8 @@ class HomePage extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu1.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -272,8 +272,8 @@ class HomePage extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu2.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -295,8 +295,8 @@ class HomePage extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu3.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -318,6 +318,8 @@ class HomePage extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(
                 bottom: 14.h,
+                left: 13.w,
+                right: 10.w,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -330,8 +332,8 @@ class HomePage extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu4.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -354,8 +356,8 @@ class HomePage extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu7.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -378,8 +380,8 @@ class HomePage extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu8.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -475,6 +477,7 @@ class HomePage extends StatelessWidget {
                   Row(
                     children: [
                       Container(
+                        /// NOTE : DON'T USE RESPONSIVE IN THIS WIDTH!!
                         width: 200,
                         child: Text(
                           'Ini deksripsi singkat, untuk lebih lengkap baca baca baca',
