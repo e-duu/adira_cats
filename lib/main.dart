@@ -128,7 +128,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
           // home: UnitSearchPullPage(),
-          home: UnitSearchFoundPage(),
+          // home: UnitSearchFoundPage(),
           // home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
@@ -156,7 +156,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverStConfirmedPage(),
 
           /// NOTE : REPORT PAGE
-          // home: ReportPage(),
+          home: ReportPage(),
           // home: ReportDetailPage(),
 
           /// NOTE : VISIT PAGE
