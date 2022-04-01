@@ -133,7 +133,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
           // home: UnitSearchPullPage(),
-          home: UnitSearchFoundPage(),
+          // home: UnitSearchFoundPage(),
           // home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
@@ -141,11 +141,11 @@ class MyApp extends StatelessWidget {
           // home: NotificationPage(),
           // home: ProfilePage(),
           // home: HomePage(),
-          // home: HomePageOption(),
+          home: HomePageOption(),
           // home: ErrorPage(),
           // home: LoadPage(),
           // home: LoadPage(),
-          home: AnnouncementDetailPage(),
+          // home: AnnouncementDetailPage(),
           // home: AssetPlayerWidget(),
 
           /// NOTE : ST CONTRACT PAGE
