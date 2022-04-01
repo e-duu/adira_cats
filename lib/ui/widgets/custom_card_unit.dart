@@ -28,18 +28,20 @@ class CustomCardUnit extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            width: double.infinity,
-            height: 110.h,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(defaultRadius),
-                topRight: Radius.circular(defaultRadius),
-              ),
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage(
-                  imageUrl,
+          Expanded(
+            child: Container(
+              width: double.infinity,
+              height: 110.h,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(defaultRadius),
+                  topRight: Radius.circular(defaultRadius),
+                ),
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                    imageUrl,
+                  ),
                 ),
               ),
             ),
@@ -57,7 +59,7 @@ class CustomCardUnit extends StatelessWidget {
                   "Nomor Kontak:",
                   style: blackTextStyle.copyWith(
                     fontWeight: semibold,
-                    fontSize: 8.sp,
+                    fontSize: 9.sp,
                   ),
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -65,7 +67,7 @@ class CustomCardUnit extends StatelessWidget {
                   contractNumber,
                   style: blackTextStyle.copyWith(
                     fontWeight: light,
-                    fontSize: 8.sp,
+                    fontSize: 9.sp,
                   ),
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -73,7 +75,7 @@ class CustomCardUnit extends StatelessWidget {
                   "Nomor Polisi",
                   style: blackTextStyle.copyWith(
                     fontWeight: semibold,
-                    fontSize: 8.sp,
+                    fontSize: 9.sp,
                   ),
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -81,7 +83,7 @@ class CustomCardUnit extends StatelessWidget {
                   policeNumber,
                   style: blackTextStyle.copyWith(
                     fontWeight: light,
-                    fontSize: 8.sp,
+                    fontSize: 9.sp,
                   ),
                   overflow: TextOverflow.ellipsis,
                 ),

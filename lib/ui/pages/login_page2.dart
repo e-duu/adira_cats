@@ -5,8 +5,8 @@ import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class LoginPage2 extends StatelessWidget {
+  const LoginPage2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class LoginPage extends StatelessWidget {
           image: DecorationImage(
             fit: BoxFit.cover,
             image: AssetImage(
-              'assets/image_login.png',
+              'assets/image_login2.png',
             ),
           ),
         ),
