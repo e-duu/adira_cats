@@ -141,7 +141,7 @@ class MyApp extends StatelessWidget {
           // home: NotificationPage(),
           // home: ProfilePage(),
           // home: HomePage(),
-          home: HomePageOption(),
+          // home: HomePageOption(),
           // home: ErrorPage(),
           // home: LoadPage(),
           // home: LoadPage(),
