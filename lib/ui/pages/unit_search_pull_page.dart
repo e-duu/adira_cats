@@ -19,13 +19,13 @@ class UnitSearchPullPage extends StatelessWidget {
           bottom: defaultPadding.h,
         ),
         child: CustomNavbar(
-          text: "Serah Terima ST",
+          text: "Tarik Unit",
           preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
             },
             child: Icon(Icons.subject_sharp),
-            ),
+          ),
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
@@ -40,7 +40,6 @@ class UnitSearchPullPage extends StatelessWidget {
               ),
             ),
           ),
-          
         ),
       );
     }
@@ -120,20 +119,148 @@ class UnitSearchPullPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomButtonBorder(
-                    title: "Batalkan",
-                    titleColor: kRedColor,
-                    borderColor: kRedColor,
-                    borderWidth: 2,
-                    fontWeight: light,
-                    width: 150.w,
-                    onPressed: () {}),
+                  title: "Batalkan",
+                  titleColor: kRedColor,
+                  borderColor: kRedColor,
+                  borderWidth: 2,
+                  fontWeight: light,
+                  width: defaultBottom.w,
+                  onPressed: () => showDialog<String>(
+                    context: context,
+                    builder: (BuildContext context) => Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.symmetric(
+                        vertical: 48.h,
+                      ),
+                      child: AlertDialog(
+                        titlePadding: EdgeInsets.only(
+                          top: 10.h,
+                        ),
+                        title: Container(
+                          margin: EdgeInsets.only(
+                            top: 48.h,
+                          ),
+                          child: Text(
+                            'Batalkan?',
+                            style: blackTextStyle.copyWith(
+                              fontWeight: bold,
+                              fontSize: 18.sp,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        content: Text(
+                          "Anda yakin akan membatalkan?",
+                          style: blackTextStyle,
+                          textAlign: TextAlign.center,
+                        ),
+                        actions: <Widget>[
+                          Container(
+                            margin: EdgeInsets.only(
+                              bottom: defaultPadding.h,
+                              right: defaultPadding.w,
+                              left: defaultPadding.w,
+                            ),
+                            child: Column(
+                              children: [
+                                CustomButtonBorder(
+                                  title: 'Batalkan',
+                                  titleColor: kRedColor,
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  borderColor: kRedColor,
+                                  borderWidth: 2,
+                                  fontWeight: light,
+                                ),
+                                SizedBox(
+                                  height: 12.h,
+                                ),
+                                CustomButton(
+                                  title: 'Lanjutkan',
+                                  onPressed: () {},
+                                  color: kPrimaryColor,
+                                  textStyle: blackTextStyle,
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                        actionsPadding: EdgeInsets.only(
+                          bottom: 10.h,
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                            18.r,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
                 SizedBox(
                   width: 12.w,
                 ),
                 CustomButtonBorder(
                   title: 'Simpan',
                   titleColor: kBlackColor,
-                  onPressed: () {},
+                  onPressed: () => showDialog<String>(
+                    context: context,
+                    builder: (BuildContext context) => Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.symmetric(
+                        vertical: 48.h,
+                      ),
+                      child: AlertDialog(
+                        titlePadding: EdgeInsets.only(
+                          top: 10.h,
+                        ),
+                        title: Container(
+                          margin: EdgeInsets.only(
+                            top: 48.h,
+                          ),
+                          child: Text(
+                            'Disimpan.',
+                            style: blackTextStyle.copyWith(
+                              fontWeight: bold,
+                              fontSize: 18.sp,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        content: Container(
+                          child: Text(
+                            "Daftar Tarik Unit berhasil disimpan!",
+                            style: blackTextStyle,
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        actions: <Widget>[
+                          Container(
+                            margin: EdgeInsets.only(
+                              bottom: defaultPadding.h,
+                              right: defaultPadding.w,
+                              left: defaultPadding.w,
+                            ),
+                            child: CustomButton(
+                              title: 'Ok',
+                              onPressed: () {},
+                              color: kPrimaryColor,
+                              textStyle: blackTextStyle,
+                            ),
+                          )
+                        ],
+                        actionsPadding: EdgeInsets.only(
+                          bottom: 10.h,
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                            18.r,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                   borderColor: kDarkGreyColor,
                   borderWidth: 2.r,
                   fontWeight: normal,
@@ -162,18 +289,16 @@ class UnitSearchPullPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer : Container(
+      drawer: Container(
         width: 300,
         height: 760,
-      child: ClipRRect(
-      borderRadius: BorderRadius.only(
-      topRight: Radius.circular(35),
-      bottomRight: Radius.circular(35)
+        child: ClipRRect(
+            borderRadius: BorderRadius.only(
+                topRight: Radius.circular(35),
+                bottomRight: Radius.circular(35)),
+            child: CustomDrawer()),
       ),
-      child: CustomDrawer()
-      ),
-      ),
-      drawerEnableOpenDragGesture : true,
+      drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: SingleChildScrollView(

@@ -16,6 +16,8 @@ import 'package:adira_cats/ui/pages/home_page_option.dart';
 import 'package:adira_cats/ui/pages/loading_page.dart';
 import 'package:adira_cats/ui/pages/local_notification.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
+import 'package:adira_cats/ui/pages/login_page1.dart';
+import 'package:adira_cats/ui/pages/login_page2.dart';
 import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
@@ -64,7 +66,8 @@ import 'package:adira_cats/ui/pages/unit_search_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_process_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
-import 'package:adira_cats/ui/pages/video_page.dart';
+import 'package:adira_cats/ui/pages/announcement_detail_page.dart';
+import 'package:adira_cats/ui/pages/video_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -109,6 +112,8 @@ class MyApp extends StatelessWidget {
           /// NOTE: INTEGRATION
           // home: SplashPage(),
           // home: LoginPage(),
+          // home: LoginPage1(),
+          // home: LoginPage2(),
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
           // home: OtpPage(),
@@ -140,7 +145,8 @@ class MyApp extends StatelessWidget {
           // home: ErrorPage(),
           // home: LoadPage(),
           // home: LoadPage(),
-          // home: VideoPlayer(),
+          home: AnnouncementDetailPage(),
+          // home: AssetPlayerWidget(),
 
           /// NOTE : ST CONTRACT PAGE
           // home: CreateStPage(),
@@ -194,9 +200,6 @@ class MyApp extends StatelessWidget {
           /// NOTE : SAVED PAGE
           // home: SavePage(),
           // home: SavePageEmpty(),
-
-          /// NOTE: ON PROGRESS
-          // home: TestingPage(),
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
