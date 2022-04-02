@@ -144,7 +144,7 @@ class MyApp extends StatelessWidget {
           // home: HomePageOption(),
           // home: ErrorPage(),
           // home: LoadPage(),
-          // home: AnnouncementDetailPage(),
+          home: AnnouncementDetailPage(),
           // home: AssetPlayerWidget(),
 
           /// NOTE : ST CONTRACT PAGE
@@ -161,7 +161,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverStConfirmedPage(),
 
           /// NOTE : REPORT PAGE
-          home: ReportPage(),
+          // home: ReportPage(),
           // home: ReportDetailPage(),
 
           /// NOTE : VISIT PAGE

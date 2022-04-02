@@ -12,7 +12,7 @@ class AnnouncementDetailPage extends StatelessWidget {
       height: 200.h,
       margin: EdgeInsets.symmetric(
         horizontal: 18.w,
-        vertical: defaultMargin.h,
+       
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(defaultRadius.r),
@@ -30,6 +30,7 @@ class AnnouncementDetailPage extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(
         horizontal: defaultPadding.w,
+        vertical: 24,
       ),
       child: Column(
         children: [
@@ -39,6 +40,15 @@ class AnnouncementDetailPage extends StatelessWidget {
               style: blackTextStyle.copyWith(
                 fontWeight: extraBold,
                 fontSize: 18.sp,
+              ),
+            ),
+          ),
+          ListTile(
+            title: Text(
+              "1 Maret 2022 | Oleh Admin",
+              style: darkGreyTextStyle.copyWith(
+                fontWeight: bold,
+                fontSize: 12.sp,
               ),
             ),
           ),
@@ -89,6 +99,47 @@ class AnnouncementDetailPage extends StatelessWidget {
     );
   }
 
+  Widget navbar(){
+    return Container(
+      margin: EdgeInsets.symmetric(
+        horizontal: 18.w,
+        vertical: 40,
+      ),
+      child: Row(
+        
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Container(
+            
+            child: Text(
+              'Penguguman',style: blackTextStyle.copyWith(
+                fontWeight: bold,
+                fontSize: 16.sp,
+              ),
+            )
+          ),
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+             
+              width: 21.w,
+              height: 21.h,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/icon_arrow_back.png",
+                  ),
+                ),
+              ),
+            ),
+            ),
+         
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,6 +148,7 @@ class AnnouncementDetailPage extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
+              navbar(),
               image(),
               content(),
               button(),
