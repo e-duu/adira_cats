@@ -140,7 +140,7 @@ class MyApp extends StatelessWidget {
           // home: LocalNotification(),
           // home: NotificationPage(),
           // home: ProfilePage(),
-          // home: HomePage(),
+          home: HomePage(),
           // home: HomePageOption(),
           // home: ErrorPage(),
           // home: LoadPage(),
@@ -161,7 +161,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverStConfirmedPage(),
 
           /// NOTE : REPORT PAGE
-          home: ReportPage(),
+          // home: ReportPage(),
           // home: ReportDetailPage(),
 
           /// NOTE : VISIT PAGE
