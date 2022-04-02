@@ -161,7 +161,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverStConfirmedPage(),
 
           /// NOTE : REPORT PAGE
-          home: ReportPage(),
+          // home: ReportPage(),
           // home: ReportDetailPage(),
 
           /// NOTE : VISIT PAGE
@@ -201,7 +201,7 @@ class MyApp extends StatelessWidget {
           // home: SavePageEmpty(),
 
           /// NOTE: ON PROGRESS
-          // home: TestingPage(),
+          home: TestingPage(),
         ),
       ),
     );
