@@ -201,7 +201,7 @@ class MyApp extends StatelessWidget {
           // home: SavePageEmpty(),
 
           /// NOTE: ON PROGRESS
-          // home: TestingPage(),
+          home: TestingPage(),
         ),
       ),
     );

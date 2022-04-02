@@ -5,6 +5,7 @@ import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
 import 'package:adira_cats/ui/widgets/custom_icon_upload.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
+import 'package:adira_cats/ui/widgets/custom_line_chart.dart';
 import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:adira_cats/ui/widgets/custom_menu.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -23,6 +24,11 @@ class TestingPage extends StatelessWidget {
         child: Container(
           child: Column(
             children: [
+              CustomLineChart(
+                listGrafik: [
+                  LineChart(1, 100),
+                ]
+              ),
               // NOTE: CUSTOM NAVBAR
               // CustomNavbar(
               //   preffixWidget: IconButton(
