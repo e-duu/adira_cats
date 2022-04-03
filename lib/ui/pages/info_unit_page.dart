@@ -60,12 +60,11 @@ class InfoUnitPage extends StatelessWidget {
     Widget OptionButton() {
       return Container(
         width: double.infinity,
-        height: 176.h,
         margin: EdgeInsets.only(
           top: 18.w,
           bottom: defaultPadding.h,
-          left: defaultPadding.h,
-          right: defaultPadding.h,
+          left: defaultPadding.w,
+          right: defaultPadding.w,
         ),
         child: Column(
           children: [
@@ -111,14 +110,14 @@ class InfoUnitPage extends StatelessWidget {
                     height: 30.h,
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       /// NOTE: CHAT
                       Container(
-                        height: 68.h,
+                        height: 60.h,
                         child: CustomButton(
                           title: 'Chat',
-                          width: 94.w,
+                          width: 80.w,
                           fontWeight: light,
                           color: kPrimaryColor,
                           textStyle: blackTextStyle.copyWith(
@@ -128,10 +127,13 @@ class InfoUnitPage extends StatelessWidget {
                           onPressed: () {},
                         ),
                       ),
+                      SizedBox(
+                        width: 12.w,
+                      ),
 
                       /// NOTE: TERIMA
                       Container(
-                        height: 68.h,
+                        height: 60.h,
                         child: CustomButton(
                           title: 'Terima',
                           fontWeight: light,
@@ -140,14 +142,17 @@ class InfoUnitPage extends StatelessWidget {
                             fontWeight: light,
                             fontSize: 12.sp,
                           ),
-                          width: 94.w,
+                          width: 80.w,
                           onPressed: () {},
                         ),
+                      ),
+                      SizedBox(
+                        width: 12.w,
                       ),
 
                       /// NOTE: TOLAK
                       Container(
-                        height: 68.h,
+                        height: 60.h,
                         child: CustomButton(
                           title: 'Tolak',
                           fontWeight: light,
@@ -156,7 +161,7 @@ class InfoUnitPage extends StatelessWidget {
                             fontWeight: light,
                             fontSize: 12.sp,
                           ),
-                          width: 94.w,
+                          width: 80.w,
                           onPressed: () {},
                         ),
                       ),
@@ -177,7 +182,7 @@ class InfoUnitPage extends StatelessWidget {
           title: "Kembali",
           margin: EdgeInsets.symmetric(
             horizontal: defaultMargin.w,
-            vertical: defaultMargin.h,
+            vertical: defaultPadding.h,
           ),
           titleColor: kDarkGreyColor,
           borderColor: kDarkGreyColor,
