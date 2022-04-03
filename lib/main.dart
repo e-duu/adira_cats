@@ -119,6 +119,8 @@ class MyApp extends StatelessWidget {
           // home: ResetPasswordPage(),
           // home: OtpPage(),
           // home: ProfilePage(),
+
+          /// NOTE : REGISTER PAGE
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
@@ -129,15 +131,7 @@ class MyApp extends StatelessWidget {
           /// NOTE : MAIN PAGE
           // home: MessagePage(),
           // home: MessageRoomPage(),
-          // home: ShareUnitPage(),
-          // home: ShareUnitFoundPage(),
-          // home: UnitSearchPage(),
-          // home: UnitSearchNilPage(),
-          // home: UnitSearchPullPage(),
-          // home: UnitSearchFoundPage(),
-          // home: UnitSearchDetailPage(),
-          // home: UnitSearchProcessPage(),
-          // home: UnitSearchPullFoundPage(),
+
           // home: LocalNotification(),
           // home: NotificationPage(),
           // home: ProfilePage(),
@@ -147,6 +141,17 @@ class MyApp extends StatelessWidget {
           // home: LoadPage(),
           // home: AnnouncementDetailPage(),
           // home: AssetPlayerWidget(),
+
+          /// NOTE : UNIT SEARCH
+          // home: UnitSearchPage(),
+          // home: UnitSearchNilPage(),
+          // home: UnitSearchPullPage(),
+          // home: UnitSearchFoundPage(),
+          // home: UnitSearchDetailPage(),
+          // home: UnitSearchProcessPage(),
+          // home: UnitSearchPullFoundPage(),
+          // home: ShareUnitPage(),
+          // home: ShareUnitFoundPage(),
 
           /// NOTE : ST CONTRACT PAGE
           // home: CreateStPage(),
