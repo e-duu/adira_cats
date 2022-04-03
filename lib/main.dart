@@ -143,7 +143,7 @@ class MyApp extends StatelessWidget {
           // home: AssetPlayerWidget(),
 
           /// NOTE : UNIT SEARCH
-          // home: UnitSearchPage(),
+          home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
           // home: UnitSearchPullPage(),
           // home: UnitSearchFoundPage(),
@@ -208,7 +208,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
-          home: InfoUnitPage(),
+          // home: InfoUnitPage(),
         ),
       ),
     );
