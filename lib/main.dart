@@ -56,6 +56,10 @@ import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/result_visit_page.dart';
 import 'package:adira_cats/ui/pages/save_page.dart';
 import 'package:adira_cats/ui/pages/save_page_empty.dart';
+import 'package:adira_cats/ui/pages/send_unit.dart';
+import 'package:adira_cats/ui/pages/send_unit_final.dart';
+import 'package:adira_cats/ui/pages/send_unit_visit.dart';
+import 'package:adira_cats/ui/pages/send_unit_warehouse.dart';
 import 'package:adira_cats/ui/pages/share_unit_found_page.dart';
 import 'package:adira_cats/ui/pages/share_unit_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
@@ -68,6 +72,8 @@ import 'package:adira_cats/ui/pages/unit_search_process_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
 import 'package:adira_cats/ui/pages/announcement_detail_page.dart';
+import 'package:adira_cats/ui/pages/unit_send_pull_found_page.dart';
+import 'package:adira_cats/ui/pages/unit_send_pull_page.dart';
 import 'package:adira_cats/ui/pages/video_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -131,7 +137,17 @@ class MyApp extends StatelessWidget {
           /// NOTE : MAIN PAGE
           // home: MessagePage(),
           // home: MessageRoomPage(),
-
+          // home: ShareUnitPage(),
+          // home: ShareUnitFoundPage(),
+          // home: UnitSearchPage(),
+          // home: UnitSearchNilPage(),
+          // home: UnitSearchPullPage(),
+          // home: UnitSearchFoundPage(),
+          // home: UnitSearchDetailPage(),
+          // home: UnitSearchProcessPage(),
+          // home: UnitSearchPullFoundPage(),
+          // home: UnitSendPullPage(),
+          home: UnitSendPullFoundPage(),
           // home: LocalNotification(),
           // home: NotificationPage(),
           // home: ProfilePage(),
@@ -201,7 +217,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : RESULT VISIT PAGE
           // home: ResultVisitPage(),
-
+          // home: ReportDetailVisitResultPage(),
           /// NOTE : SAVED PAGE
           // home: SavePage(),
           // home: SavePageEmpty(),
