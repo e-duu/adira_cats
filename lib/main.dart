@@ -55,6 +55,10 @@ import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/result_visit_page.dart';
 import 'package:adira_cats/ui/pages/save_page.dart';
 import 'package:adira_cats/ui/pages/save_page_empty.dart';
+import 'package:adira_cats/ui/pages/send_unit.dart';
+import 'package:adira_cats/ui/pages/send_unit_final.dart';
+import 'package:adira_cats/ui/pages/send_unit_visit.dart';
+import 'package:adira_cats/ui/pages/send_unit_warehouse.dart';
 import 'package:adira_cats/ui/pages/share_unit_found_page.dart';
 import 'package:adira_cats/ui/pages/share_unit_page.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
@@ -144,7 +148,12 @@ class MyApp extends StatelessWidget {
           // home: HomePageOption(),
           // home: ErrorPage(),
           // home: LoadPage(),
-          home: AnnouncementDetailPage(),
+          // home: AnnouncementDetailPage(),
+          // home: CheckUnit(),
+          // home: CheckUnitWarehouse(),
+          // home: CheckUnitVisit(),
+          // home: CheckUnitVisit(),
+          home: CheckUnitFinal(),
           // home: AssetPlayerWidget(),
 
           /// NOTE : ST CONTRACT PAGE
@@ -195,13 +204,13 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : RESULT VISIT PAGE
           // home: ResultVisitPage(),
-
+          // home: ReportDetailVisitResultPage(),
           /// NOTE : SAVED PAGE
           // home: SavePage(),
           // home: SavePageEmpty(),
 
           /// NOTE: ON PROGRESS
-          home: TestingPage(),
+          // home: TestingPage(),
         ),
       ),
     );
