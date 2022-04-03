@@ -67,88 +67,103 @@ class InfoUnitPage extends StatelessWidget {
           left: defaultPadding.h,
           right: defaultPadding.h,
         ),
-        padding: EdgeInsets.all(24),
         child: Column(
           children: [
-            StyledText(
-              text: ' <bold>Nomor Polisi :</bold> AB 9999 XX',
-              tags: {
-                'bold': StyledTextTag(
-                  style: TextStyle(
-                    fontWeight: bold,
-                  ),
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: kLigthGrayColor,
+                  width: 2,
                 ),
-              },
-              style: blackTextStyle.copyWith(
-                fontWeight: light,
-                fontSize: 13.sp,
+                borderRadius: BorderRadius.circular(defaultRadius),
               ),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 8.h,
-            ),
-            Text(
-              'Tipe : -',
-              style: blackTextStyle.copyWith(
-                fontWeight: bold,
-                fontSize: 13.sp,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  StyledText(
+                    text: ' <bold>Nomor Polisi :</bold> AB 9999 XX',
+                    tags: {
+                      'bold': StyledTextTag(
+                        style: TextStyle(
+                          fontWeight: bold,
+                        ),
+                      ),
+                    },
+                    style: blackTextStyle.copyWith(
+                      fontWeight: light,
+                      fontSize: 13.sp,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
+                    height: 8.h,
+                  ),
+                  Text(
+                    'Tipe : -',
+                    style: blackTextStyle.copyWith(
+                      fontWeight: bold,
+                      fontSize: 13.sp,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 30.h,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      /// NOTE: CHAT
+                      Container(
+                        height: 68.h,
+                        child: CustomButton(
+                          title: 'Chat',
+                          width: 94.w,
+                          fontWeight: light,
+                          color: kPrimaryColor,
+                          textStyle: blackTextStyle.copyWith(
+                            fontWeight: light,
+                            fontSize: 12.sp,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ),
+
+                      /// NOTE: TERIMA
+                      Container(
+                        height: 68.h,
+                        child: CustomButton(
+                          title: 'Terima',
+                          fontWeight: light,
+                          color: kGreenColor,
+                          textStyle: whiteTextStyle.copyWith(
+                            fontWeight: light,
+                            fontSize: 12.sp,
+                          ),
+                          width: 94.w,
+                          onPressed: () {},
+                        ),
+                      ),
+
+                      /// NOTE: TOLAK
+                      Container(
+                        height: 68.h,
+                        child: CustomButton(
+                          title: 'Tolak',
+                          fontWeight: light,
+                          color: kRedColor,
+                          textStyle: whiteTextStyle.copyWith(
+                            fontWeight: light,
+                            fontSize: 12.sp,
+                          ),
+                          width: 94.w,
+                          onPressed: () {},
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-            ),
-            SizedBox(
-              height: 30.h,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                /// NOTE: CHAT
-                Container(
-                  height: 68.h,
-                  child: CustomButton(
-                    title: 'Chat',
-                    width: 94.w,
-                    fontWeight: light,
-                    color: kPrimaryColor,
-                    textStyle: blackTextStyle.copyWith(
-                      fontWeight: light,
-                      fontSize: 12.sp,
-                    ),
-                    onPressed: () {},
-                  ),
-                ),
-
-                /// NOTE: TERIMA
-                Container(
-                  height: 68.h,
-                  child: CustomButton(
-                    title: 'Terima',
-                    fontWeight: light,
-                    color: kGreenColor,
-                    textStyle: whiteTextStyle.copyWith(
-                      fontWeight: light,
-                      fontSize: 12.sp,
-                    ),
-                    width: 94.w,
-                    onPressed: () {},
-                  ),
-                ),
-
-                /// NOTE: TOLAK
-                Container(
-                  height: 68.h,
-                  child: CustomButton(
-                    title: 'Buat\nHisPay',
-                    fontWeight: light,
-                    color: kRedColor,
-                    textStyle: whiteTextStyle.copyWith(
-                      fontWeight: light,
-                      fontSize: 12.sp,
-                    ),
-                    width: 94.w,
-                    onPressed: () {},
-                  ),
-                ),
-              ],
             ),
           ],
         ),
