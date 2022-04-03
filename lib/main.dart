@@ -144,8 +144,8 @@ class MyApp extends StatelessWidget {
           // home: HomePageOption(),
           // home: ErrorPage(),
           // home: LoadPage(),
-          // home: LoadPage(),
-          home: AnnouncementDetailPage(),
+          home: LoadPage(),
+          // home: AnnouncementDetailPage(),
           // home: AssetPlayerWidget(),
 
           /// NOTE : ST CONTRACT PAGE
