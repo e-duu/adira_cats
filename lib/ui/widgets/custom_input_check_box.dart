@@ -8,7 +8,7 @@ class CustomInputCheckBox extends StatefulWidget {
   final String title;
   final String value;
   final bool checkBox;
-  
+
   CustomInputCheckBox({
     Key? key,
     required this.title,
@@ -30,21 +30,20 @@ class _CustomInputCheckBoxState extends State<CustomInputCheckBox> {
       child: Column(
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                widget.title,
-                style: greyTextStyle.copyWith(
-                  fontWeight: semibold,
-                  fontSize: 13.sp,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  widget.title,
+                  style: darkGreyTextStyle.copyWith(
+                    fontWeight: semibold,
+                    fontSize: 13.sp,
+                  ),
                 ),
-              ),
-              CustomCheckbox(
-                value: widget.checkBox,
-              ),
-            ]
-          ),
+                CustomCheckbox(
+                  value: widget.checkBox,
+                ),
+              ]),
           CustomInput(
             hintText: 'Tambahkan keterangan ...',
             value: widget.value,

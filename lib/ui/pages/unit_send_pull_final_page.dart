@@ -1,18 +1,15 @@
-import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
-import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
 
-class CheckUnitFinal extends StatelessWidget {
+class UnitSendPullFinalPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  CheckUnitFinal ({Key? key}) : super(key: key);
+  UnitSendPullFinalPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +40,6 @@ class CheckUnitFinal extends StatelessWidget {
     }
 
     Widget input() {
-     
       Widget contactNumber() {
         return Container(
           margin: EdgeInsets.only(
@@ -73,8 +69,6 @@ class CheckUnitFinal extends StatelessWidget {
         );
       }
 
-     
-      
       Widget assignmentLetter() {
         return Container(
           margin: EdgeInsets.only(
@@ -107,13 +101,12 @@ class CheckUnitFinal extends StatelessWidget {
 
       return Container(
         margin: EdgeInsets.only(
-          top: defaultPadding.h,
+          top: defaultMargin.h,
         ),
         child: Column(
           children: [
-           contactNumber(),
-           assignmentLetter(),
-
+            contactNumber(),
+            assignmentLetter(),
           ],
         ),
       );
@@ -122,16 +115,14 @@ class CheckUnitFinal extends StatelessWidget {
     Widget button() {
       return Container(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            SizedBox(
-              height: 34.h,
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomButtonBorder(
-                  titleColor: kRedColor,
                   title: 'Batal',
+                  titleColor: kRedColor,
                   onPressed: () => showDialog<String>(
                     context: context,
                     builder: (BuildContext context) => Container(
@@ -165,7 +156,7 @@ class CheckUnitFinal extends StatelessWidget {
                             title: 'Batalkan',
                             onPressed: () {},
                             borderColor: kRedColor,
-                            borderWidth: 2.w,
+                            borderWidth: 2.r,
                             fontWeight: normal,
                             width: 308.w,
                             margin: EdgeInsets.only(
@@ -177,7 +168,7 @@ class CheckUnitFinal extends StatelessWidget {
                             height: 12.h,
                           ),
                           CustomButton(
-                            title: 'Kirim',
+                            title: 'Lanjutkan',
                             onPressed: () => Navigator.pop(context, 'OK'),
                             color: kPrimaryColor,
                             textStyle: blackTextStyle,
@@ -196,21 +187,21 @@ class CheckUnitFinal extends StatelessWidget {
                     ),
                   ),
                   borderColor: kRedColor,
-                  borderWidth: 2,
+                  borderWidth: 2.r,
                   fontWeight: normal,
-                  width: 154.w,
+                  width: 138.w,
                 ),
                 SizedBox(
                   width: 12.w,
                 ),
                 CustomButtonBorder(
-                  titleColor: kDarkGreyColor,
                   title: 'Reset',
+                  titleColor: kBlackColor,
                   onPressed: () {},
                   borderColor: kDarkGreyColor,
-                  borderWidth: 2,
+                  borderWidth: 2.r,
                   fontWeight: normal,
-                  width: 154.w,
+                  width: 138.w,
                 ),
               ],
             ),
@@ -218,15 +209,15 @@ class CheckUnitFinal extends StatelessWidget {
               height: 12.h,
             ),
             CustomButton(
-              title: 'Lanjutkan',
+              margin: EdgeInsets.only(
+                right: defaultMargin.w,
+                left: defaultMargin.w,
+                bottom: defaultMargin.h,
+              ),
+              title: 'Submit',
               onPressed: () {},
               color: kPrimaryColor,
               textStyle: blackTextStyle,
-              margin: EdgeInsets.only(
-                bottom: defaultMargin.h,
-                right: 19.w,
-                left: 19.w,
-              ),
             ),
           ],
         ),
@@ -235,36 +226,32 @@ class CheckUnitFinal extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer : Container(
-        width: 300,
-        height: 760,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
         child: ClipRRect(
-            borderRadius: BorderRadius.only(
-            topRight: Radius.circular(35), 
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
             bottomRight: Radius.circular(35),
           ),
-          child: CustomDrawer()
-          ),
+          child: CustomDrawer(),
         ),
-      drawerEnableOpenDragGesture : true,
+      ),
+      drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
-      floatingActionButton: button(),
+      resizeToAvoidBottomInset: false,
+      floatingActionButton: Visibility(
+        child: button(),
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      //  floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      body: ListView(
-        padding: EdgeInsets.symmetric(),
-        children: [
-          SafeArea(
-            child: Column(
-              children: [
-                navbar(),
-                input(),
-                // button(),
-              ],
-            ),
-          ),
-        ],
+      body: SafeArea(
+        child: Column(
+          children: [
+            navbar(),
+            input(),
+          ],
+        ),
       ),
     );
   }
