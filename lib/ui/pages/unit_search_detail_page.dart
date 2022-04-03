@@ -21,7 +21,7 @@ class UnitSearchDetailPage extends StatelessWidget {
           onTap: () {
             _scaffoldKey.currentState!.openDrawer();
           },
-          child: Icon(Icons.subject_sharp),
+          child: libraryIcon,
         ),
         suffixWidget: Container(
           width: 21.w,

@@ -1,6 +1,7 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_checkbox.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
 import 'package:adira_cats/ui/widgets/custom_icon_upload.dart';
@@ -24,11 +25,12 @@ class TestingPage extends StatelessWidget {
         child: Container(
           child: Column(
             children: [
-              CustomLineChart(
-                listGrafik: [
-                  LineChart(1, 100),
-                ]
-              ),
+              CustomCheckbox(),
+              // CustomLineChart(
+              //   listGrafik: [
+              //     LineChart(1, 100),
+              //   ]
+              // ),
               // NOTE: CUSTOM NAVBAR
               // CustomNavbar(
               //   preffixWidget: IconButton(

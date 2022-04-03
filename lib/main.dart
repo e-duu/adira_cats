@@ -13,6 +13,7 @@ import 'package:adira_cats/ui/pages/handover_st_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/pages/home_page_option.dart';
+import 'package:adira_cats/ui/pages/info_unit_page.dart';
 import 'package:adira_cats/ui/pages/loading_page.dart';
 import 'package:adira_cats/ui/pages/local_notification.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
@@ -71,6 +72,8 @@ import 'package:adira_cats/ui/pages/unit_search_process_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
 import 'package:adira_cats/ui/pages/announcement_detail_page.dart';
+import 'package:adira_cats/ui/pages/unit_send_pull_found_page.dart';
+import 'package:adira_cats/ui/pages/unit_send_pull_page.dart';
 import 'package:adira_cats/ui/pages/video_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -122,6 +125,8 @@ class MyApp extends StatelessWidget {
           // home: ResetPasswordPage(),
           // home: OtpPage(),
           // home: ProfilePage(),
+
+          /// NOTE : REGISTER PAGE
           // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
@@ -141,6 +146,8 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
+          // home: UnitSendPullPage(),
+          home: UnitSendPullFoundPage(),
           // home: LocalNotification(),
           // home: NotificationPage(),
           // home: ProfilePage(),
@@ -149,12 +156,18 @@ class MyApp extends StatelessWidget {
           // home: ErrorPage(),
           // home: LoadPage(),
           // home: AnnouncementDetailPage(),
-          // home: CheckUnit(),
-          // home: CheckUnitWarehouse(),
-          // home: CheckUnitVisit(),
-          // home: CheckUnitVisit(),
-          home: CheckUnitFinal(),
           // home: AssetPlayerWidget(),
+
+          /// NOTE : UNIT SEARCH
+          // home: UnitSearchPage(),
+          // home: UnitSearchNilPage(),
+          // home: UnitSearchPullPage(),
+          // home: UnitSearchFoundPage(),
+          // home: UnitSearchDetailPage(),
+          // home: UnitSearchProcessPage(),
+          // home: UnitSearchPullFoundPage(),
+          // home: ShareUnitPage(),
+          // home: ShareUnitFoundPage(),
 
           /// NOTE : ST CONTRACT PAGE
           // home: CreateStPage(),
@@ -211,6 +224,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
+          // home: InfoUnitPage(),
         ),
       ),
     );
