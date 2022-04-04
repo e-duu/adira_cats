@@ -114,8 +114,8 @@ class MyApp extends StatelessWidget {
           // },
 
           /// NOTE: INTEGRATION
-          // home: SplashPage(),
-          home: LoginPage(),
+          home: SplashPage(),
+          // home: LoginPage(),
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
           // home: OtpPage(),
