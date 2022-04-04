@@ -143,7 +143,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
           // home: UnitSendPullPage(),
-          home: UnitSendPullFoundPage(),
+          // home: UnitSendPullFoundPage(),
           // home: LocalNotification(),
           // home: NotificationPage(),
           // home: ProfilePage(),
@@ -219,7 +219,7 @@ class MyApp extends StatelessWidget {
           // home: SavePageEmpty(),
 
           /// NOTE: ON PROGRESS
-          // home: TestingPage(),
+          home: TestingPage(),
           // home: InfoUnitPage(),
         ),
       ),
