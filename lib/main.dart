@@ -72,7 +72,6 @@ import 'package:adira_cats/ui/pages/unit_search_process_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
 import 'package:adira_cats/ui/pages/announcement_detail_page.dart';
-import 'package:adira_cats/ui/pages/unit_send_pull_ceklis_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_ceklis_page.dart';
 import 'package:adira_cats/ui/pages/video_pages.dart';
 import 'package:flutter/material.dart';
@@ -216,15 +215,15 @@ class MyApp extends StatelessWidget {
           /// NOTE : RESULT VISIT PAGE
           // home: ResultVisitPage(),
           // home: ReportDetailVisitResultPage(),
+
           /// NOTE : SAVED PAGE
           // home: SavePage(),
           // home: SavePageEmpty(),
 
           /// NOTE : UNIT SEND PULL PAGE
-          // home: UnitSendPullPage(),
+          home: UnitSendPullPage(),
           // home: UnitSendPullVisitPage(),
-          // home: UnitSendPullFoundPage(),
-          home: UnitSendPullFinalPage(),
+          // home: UnitSendPullFinalPage(),
           // home: UnitSendPullCeklisPage(),
           // home: UnitSendPullWarehousePage(),
 

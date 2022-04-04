@@ -392,13 +392,15 @@ class UnitSendPullPage extends StatelessWidget {
       drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
-      body: SafeArea(
-        child: Column(
-          children: [
-            navbar(),
-            input(),
-            button(),
-          ],
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            children: [
+              navbar(),
+              input(),
+              button(),
+            ],
+          ),
         ),
       ),
     );

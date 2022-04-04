@@ -113,7 +113,7 @@ class InfoUnitPage extends StatelessWidget {
                     children: [
                       /// NOTE: CHAT
                       Container(
-                        height: 60.h,
+                        height: 50.h,
                         child: CustomButton(
                           title: 'Chat',
                           width: 80.w,
@@ -132,7 +132,7 @@ class InfoUnitPage extends StatelessWidget {
 
                       /// NOTE: TERIMA
                       Container(
-                        height: 60.h,
+                        height: 50.h,
                         child: CustomButton(
                           title: 'Terima',
                           fontWeight: light,
@@ -151,7 +151,7 @@ class InfoUnitPage extends StatelessWidget {
 
                       /// NOTE: TOLAK
                       Container(
-                        height: 60.h,
+                        height: 50.h,
                         child: CustomButton(
                           title: 'Tolak',
                           fontWeight: light,
