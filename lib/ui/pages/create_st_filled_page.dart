@@ -305,7 +305,7 @@ class CreateStFilledPage extends StatelessWidget {
                         title: 'Hapus',
                         onPressed: () => Navigator.pop(context, 'OK'),
                         color: kRedColor,
-                        textStyle: blackTextStyle,
+                        textStyle: whiteTextStyle,
                         width: 308.w,
                         margin: EdgeInsets.only(
                           right: defaultMargin.w,
