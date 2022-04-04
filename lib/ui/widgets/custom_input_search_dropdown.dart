@@ -1,6 +1,8 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:textfield_tags/textfield_tags.dart';
 
 class CustomInputSearchDropdown extends StatefulWidget {
   final Function() onPressedSuffix;
@@ -21,29 +23,22 @@ class CustomInputSearchDropdown extends StatefulWidget {
 }
 
 class _CustomInputSearchDropdown extends State<CustomInputSearchDropdown> {
-  String dropdownValue = '';
-
-  List<String> items = [
-    'One',
-    'Two',
-    'Three',
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 50.h,
       margin: widget.margin == EdgeInsets.zero
-          ? EdgeInsets.symmetric(
-              horizontal: defaultMargin.w,
-            )
-          : widget.margin,
+        ? EdgeInsets.symmetric(
+            horizontal: defaultMargin.w,
+          )
+        : widget.margin,
       width: double.infinity,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(
-            defaultRadius.r,
-          ),
-          color: kGreyColor),
+        borderRadius: BorderRadius.circular(
+          defaultRadius.r,
+        ),
+        color: kGreyColor,
+      ),
       child: TextFormField(
         autocorrect: true,
         autofocus: false,
@@ -64,20 +59,34 @@ class _CustomInputSearchDropdown extends State<CustomInputSearchDropdown> {
             ),
           ),
           prefixIcon: DropdownButtonHideUnderline(
-            child: DropdownButton<String>(
-              icon: Icon(Icons.arrow_drop_down,),
-              onChanged: (String? newValue){
-                setState(() {
-                  dropdownValue = newValue!;
-                });
+            child: DropdownButton2(
+              customButton: const Icon(
+                Icons.list,
+                size: 30,
+              ),
+              customItemsIndexes: const [3],
+              customItemsHeight: 8,
+              items: [
+                ...MenuItems.firstItems.map(
+                  (item) =>
+                  DropdownMenuItem<MenuItem>(
+                    value: item,
+                    child: MenuItems.buildItem(item),
+                  ),
+                ),
+              ],
+              onChanged: (value) {
+                MenuItems.onChanged(context, value as MenuItem);
               },
-              items: items.map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
-              underline: null,
+              itemHeight: 48,
+              itemPadding: const EdgeInsets.only(left: 16, right: 16),
+              dropdownWidth: 60.w,
+              dropdownPadding: const EdgeInsets.symmetric(vertical: 6),
+              dropdownDecoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(4),
+              ),
+              dropdownElevation: 8,
+              offset: const Offset(0, 8),
             ),
           ),
           hintStyle: TextStyle(
@@ -107,5 +116,46 @@ class _CustomInputSearchDropdown extends State<CustomInputSearchDropdown> {
         ),
       ),
     );
+  }
+}
+
+class MenuItem {
+  final IconData icon;
+
+  const MenuItem({
+    required this.icon,
+  });
+}
+
+class MenuItems {
+  static const List<MenuItem> firstItems = [home, share, settings];
+
+  static const home = MenuItem(icon: Icons.home);
+  static const share = MenuItem(icon: Icons.share);
+  static const settings = MenuItem(icon: Icons.settings);
+
+  static Widget buildItem(MenuItem item) {
+    return Row(
+      children: [
+        Icon(
+          item.icon,
+          size: 22
+        ),
+      ],
+    );
+  }
+
+  static onChanged(BuildContext context, MenuItem item) {
+    switch (item) {
+      case MenuItems.home:
+      //Do something
+        break;
+      case MenuItems.settings:
+      //Do something
+        break;
+      case MenuItems.share:
+      //Do something
+        break;
+    }
   }
 }
