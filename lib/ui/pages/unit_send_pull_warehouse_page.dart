@@ -7,15 +7,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
 
-class UnitSendPullPage extends StatelessWidget {
+class UnitSendPullWarehousePage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  UnitSendPullPage({Key? key}) : super(key: key);
+  UnitSendPullWarehousePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return CustomNavbar(
-        text: 'Tarik Kirim Unit - Unit',
+        text: 'Tarik Kirim Unit - WH',
         preffixWidget: GestureDetector(
           onTap: () {
             _scaffoldKey.currentState!.openDrawer();
@@ -40,7 +40,7 @@ class UnitSendPullPage extends StatelessWidget {
     }
 
     Widget input() {
-      Widget branch() {
+      Widget remote() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -51,7 +51,7 @@ class UnitSendPullPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Cabang Handling',
+                'Kode Remot',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -69,7 +69,7 @@ class UnitSendPullPage extends StatelessWidget {
         );
       }
 
-      Widget brand() {
+      Widget brandCondition() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -80,7 +80,7 @@ class UnitSendPullPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Merek',
+                'Kondisi Merek',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -99,7 +99,7 @@ class UnitSendPullPage extends StatelessWidget {
         );
       }
 
-      Widget model() {
+      Widget brandParam() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -110,7 +110,7 @@ class UnitSendPullPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Model',
+                'Merek Param',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -128,7 +128,7 @@ class UnitSendPullPage extends StatelessWidget {
         );
       }
 
-      Widget nameStnk() {
+      Widget remoteName() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -139,7 +139,7 @@ class UnitSendPullPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Nama STNK',
+                'Nama Remot',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -157,7 +157,7 @@ class UnitSendPullPage extends StatelessWidget {
         );
       }
 
-      Widget numberContact() {
+      Widget warehouseName() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -168,7 +168,7 @@ class UnitSendPullPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Nomor Kontrak',
+                'Nama Warehouse',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -186,7 +186,7 @@ class UnitSendPullPage extends StatelessWidget {
         );
       }
 
-      Widget numberMesin() {
+      Widget numberCondition() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -197,7 +197,7 @@ class UnitSendPullPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Nomor Mesin',
+                'Kondisi Nomor Mesin',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -215,7 +215,7 @@ class UnitSendPullPage extends StatelessWidget {
         );
       }
 
-      Widget chassisNumber() {
+      Widget mechineNumber() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -226,7 +226,7 @@ class UnitSendPullPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Nomor Rangka',
+                'Nomor Mesin Param',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -250,13 +250,13 @@ class UnitSendPullPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            branch(),
-            brand(),
-            model(),
-            nameStnk(),
-            numberMesin(),
-            numberMesin(),
-            chassisNumber(),
+            remote(),
+            brandCondition(),
+            brandParam(),
+            remoteName(),
+            warehouseName(),
+            numberCondition(),
+            mechineNumber(),
           ],
         ),
       );
@@ -379,8 +379,8 @@ class UnitSendPullPage extends StatelessWidget {
     return Scaffold(
       key: _scaffoldKey,
       drawer: Container(
-        width: 300.w,
-        height: 760.h,
+        width: 300,
+        height: 760,
         child: ClipRRect(
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(35),
@@ -392,16 +392,19 @@ class UnitSendPullPage extends StatelessWidget {
       drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Column(
-            children: [
-              navbar(),
-              input(),
-              button(),
-            ],
+      body: ListView(
+        padding: EdgeInsets.symmetric(),
+        children: [
+          SafeArea(
+            child: Column(
+              children: [
+                navbar(),
+                input(),
+                button(),
+              ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

@@ -7,15 +7,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
 
-class UnitSendPullPage extends StatelessWidget {
+class UnitSendPullFinalPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  UnitSendPullPage({Key? key}) : super(key: key);
+  UnitSendPullFinalPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return CustomNavbar(
-        text: 'Tarik Kirim Unit - Unit',
+        text: 'Tarik Kirim Unit',
         preffixWidget: GestureDetector(
           onTap: () {
             _scaffoldKey.currentState!.openDrawer();
@@ -40,124 +40,7 @@ class UnitSendPullPage extends StatelessWidget {
     }
 
     Widget input() {
-      Widget branch() {
-        return Container(
-          margin: EdgeInsets.only(
-            top: defaultPadding.h,
-            right: 19.w,
-            left: 19.w,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Cabang Handling',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 12.sp,
-                  fontWeight: semibold,
-                ),
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              CustomInput(
-                hintText: 'Tambahkan keterangan ...',
-                hintColor: kBlackColor,
-              ),
-            ],
-          ),
-        );
-      }
-
-      Widget brand() {
-        return Container(
-          margin: EdgeInsets.only(
-            top: defaultPadding.h,
-            right: 19.w,
-            left: 19.w,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Merek',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 12.sp,
-                  fontWeight: semibold,
-                ),
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              CustomInput(
-                hintText: 'Tambahkan keterangan ...',
-                hintColor: kDarkGreyColor,
-                readOnly: true,
-              ),
-            ],
-          ),
-        );
-      }
-
-      Widget model() {
-        return Container(
-          margin: EdgeInsets.only(
-            top: defaultPadding.h,
-            right: 19.w,
-            left: 19.w,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Model',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 12.sp,
-                  fontWeight: semibold,
-                ),
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              CustomInput(
-                hintText: 'Tambahkan keterangan ...',
-                hintColor: kDarkGreyColor,
-              ),
-            ],
-          ),
-        );
-      }
-
-      Widget nameStnk() {
-        return Container(
-          margin: EdgeInsets.only(
-            top: defaultPadding.h,
-            right: 19.w,
-            left: 19.w,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Nama STNK',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 12.sp,
-                  fontWeight: semibold,
-                ),
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              CustomInput(
-                hintText: 'Tambahkan keterangan ...',
-                hintColor: kDarkGreyColor,
-              ),
-            ],
-          ),
-        );
-      }
-
-      Widget numberContact() {
+      Widget contactNumber() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -179,14 +62,14 @@ class UnitSendPullPage extends StatelessWidget {
               ),
               CustomInput(
                 hintText: 'Tambahkan keterangan ...',
-                hintColor: kDarkGreyColor,
+                hintColor: kBlackColor,
               ),
             ],
           ),
         );
       }
 
-      Widget numberMesin() {
+      Widget assignmentLetter() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -197,7 +80,7 @@ class UnitSendPullPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Nomor Mesin',
+                'Nomor Surat Tugas',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -209,35 +92,7 @@ class UnitSendPullPage extends StatelessWidget {
               CustomInput(
                 hintText: 'Tambahkan keterangan ...',
                 hintColor: kDarkGreyColor,
-              ),
-            ],
-          ),
-        );
-      }
-
-      Widget chassisNumber() {
-        return Container(
-          margin: EdgeInsets.only(
-            top: defaultPadding.h,
-            right: 19.w,
-            left: 19.w,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Nomor Rangka',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 12.sp,
-                  fontWeight: semibold,
-                ),
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              CustomInput(
-                hintText: 'Tambahkan keterangan ...',
-                hintColor: kDarkGreyColor,
+                readOnly: true,
               ),
             ],
           ),
@@ -246,17 +101,12 @@ class UnitSendPullPage extends StatelessWidget {
 
       return Container(
         margin: EdgeInsets.only(
-          top: defaultPadding.h,
+          top: defaultMargin.h,
         ),
         child: Column(
           children: [
-            branch(),
-            brand(),
-            model(),
-            nameStnk(),
-            numberMesin(),
-            numberMesin(),
-            chassisNumber(),
+            contactNumber(),
+            assignmentLetter(),
           ],
         ),
       );
@@ -265,16 +115,14 @@ class UnitSendPullPage extends StatelessWidget {
     Widget button() {
       return Container(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            SizedBox(
-              height: 34.h,
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomButtonBorder(
-                  titleColor: kRedColor,
                   title: 'Batal',
+                  titleColor: kRedColor,
                   onPressed: () => showDialog<String>(
                     context: context,
                     builder: (BuildContext context) => Container(
@@ -308,7 +156,7 @@ class UnitSendPullPage extends StatelessWidget {
                             title: 'Batalkan',
                             onPressed: () {},
                             borderColor: kRedColor,
-                            borderWidth: 2.w,
+                            borderWidth: 2.r,
                             fontWeight: normal,
                             width: 308.w,
                             margin: EdgeInsets.only(
@@ -339,21 +187,21 @@ class UnitSendPullPage extends StatelessWidget {
                     ),
                   ),
                   borderColor: kRedColor,
-                  borderWidth: 2,
+                  borderWidth: 2.r,
                   fontWeight: normal,
-                  width: 154.w,
+                  width: 138.w,
                 ),
                 SizedBox(
                   width: 12.w,
                 ),
                 CustomButtonBorder(
-                  titleColor: kDarkGreyColor,
                   title: 'Reset',
+                  titleColor: kBlackColor,
                   onPressed: () {},
                   borderColor: kDarkGreyColor,
-                  borderWidth: 2,
+                  borderWidth: 2.r,
                   fontWeight: normal,
-                  width: 154.w,
+                  width: 138.w,
                 ),
               ],
             ),
@@ -361,15 +209,15 @@ class UnitSendPullPage extends StatelessWidget {
               height: 12.h,
             ),
             CustomButton(
-              title: 'Lanjutkan',
+              margin: EdgeInsets.only(
+                right: defaultMargin.w,
+                left: defaultMargin.w,
+                bottom: defaultMargin.h,
+              ),
+              title: 'Submit',
               onPressed: () {},
               color: kPrimaryColor,
               textStyle: blackTextStyle,
-              margin: EdgeInsets.only(
-                bottom: defaultMargin.h,
-                right: 19.w,
-                left: 19.w,
-              ),
             ),
           ],
         ),
@@ -392,15 +240,17 @@ class UnitSendPullPage extends StatelessWidget {
       drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Column(
-            children: [
-              navbar(),
-              input(),
-              button(),
-            ],
-          ),
+      resizeToAvoidBottomInset: false,
+      floatingActionButton: Visibility(
+        child: button(),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      body: SafeArea(
+        child: Column(
+          children: [
+            navbar(),
+            input(),
+          ],
         ),
       ),
     );

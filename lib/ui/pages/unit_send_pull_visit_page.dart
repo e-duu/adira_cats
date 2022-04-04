@@ -1,21 +1,23 @@
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
+import 'package:date_time_picker/date_time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
 
-class UnitSendPullPage extends StatelessWidget {
+class UnitSendPullVisitPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  UnitSendPullPage({Key? key}) : super(key: key);
+  UnitSendPullVisitPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return CustomNavbar(
-        text: 'Tarik Kirim Unit - Unit',
+        text: 'Tarik Kirim Unit - Visit',
         preffixWidget: GestureDetector(
           onTap: () {
             _scaffoldKey.currentState!.openDrawer();
@@ -40,7 +42,7 @@ class UnitSendPullPage extends StatelessWidget {
     }
 
     Widget input() {
-      Widget branch() {
+      Widget costumer() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -51,7 +53,7 @@ class UnitSendPullPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Cabang Handling',
+                'Nama Nasabah',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -69,95 +71,7 @@ class UnitSendPullPage extends StatelessWidget {
         );
       }
 
-      Widget brand() {
-        return Container(
-          margin: EdgeInsets.only(
-            top: defaultPadding.h,
-            right: 19.w,
-            left: 19.w,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Merek',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 12.sp,
-                  fontWeight: semibold,
-                ),
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              CustomInput(
-                hintText: 'Tambahkan keterangan ...',
-                hintColor: kDarkGreyColor,
-                readOnly: true,
-              ),
-            ],
-          ),
-        );
-      }
-
-      Widget model() {
-        return Container(
-          margin: EdgeInsets.only(
-            top: defaultPadding.h,
-            right: 19.w,
-            left: 19.w,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Model',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 12.sp,
-                  fontWeight: semibold,
-                ),
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              CustomInput(
-                hintText: 'Tambahkan keterangan ...',
-                hintColor: kDarkGreyColor,
-              ),
-            ],
-          ),
-        );
-      }
-
-      Widget nameStnk() {
-        return Container(
-          margin: EdgeInsets.only(
-            top: defaultPadding.h,
-            right: 19.w,
-            left: 19.w,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Nama STNK',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 12.sp,
-                  fontWeight: semibold,
-                ),
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              CustomInput(
-                hintText: 'Tambahkan keterangan ...',
-                hintColor: kDarkGreyColor,
-              ),
-            ],
-          ),
-        );
-      }
-
-      Widget numberContact() {
+      Widget contactNumber() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -180,13 +94,14 @@ class UnitSendPullPage extends StatelessWidget {
               CustomInput(
                 hintText: 'Tambahkan keterangan ...',
                 hintColor: kDarkGreyColor,
+                readOnly: true,
               ),
             ],
           ),
         );
       }
 
-      Widget numberMesin() {
+      Widget handling() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -197,7 +112,7 @@ class UnitSendPullPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Nomor Mesin',
+                'Penanganan',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -215,7 +130,7 @@ class UnitSendPullPage extends StatelessWidget {
         );
       }
 
-      Widget chassisNumber() {
+      Widget deliquency() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -226,7 +141,7 @@ class UnitSendPullPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Nomor Rangka',
+                'Deliquency',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -238,6 +153,163 @@ class UnitSendPullPage extends StatelessWidget {
               CustomInput(
                 hintText: 'Tambahkan keterangan ...',
                 hintColor: kDarkGreyColor,
+              ),
+            ],
+          ),
+        );
+      }
+
+      Widget debtorStatus() {
+        return Container(
+          margin: EdgeInsets.only(
+            top: defaultPadding.h,
+            right: 19.w,
+            left: 19.w,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Status Debitur',
+                style: darkGreyTextStyle.copyWith(
+                  fontSize: 12.sp,
+                  fontWeight: semibold,
+                ),
+              ),
+              SizedBox(
+                height: 12.h,
+              ),
+              CustomInput(
+                hintText: 'Tambahkan keterangan ...',
+                hintColor: kDarkGreyColor,
+              ),
+            ],
+          ),
+        );
+      }
+
+      Widget unitStatus() {
+        return Container(
+          margin: EdgeInsets.only(
+            top: defaultPadding.h,
+            right: 19.w,
+            left: 19.w,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Status Unit',
+                style: darkGreyTextStyle.copyWith(
+                  fontSize: 12.sp,
+                  fontWeight: semibold,
+                ),
+              ),
+              SizedBox(
+                height: 12.h,
+              ),
+              CustomInput(
+                hintText: 'Tambahkan keterangan ...',
+                hintColor: kDarkGreyColor,
+              ),
+            ],
+          ),
+        );
+      }
+
+      Widget date() {
+        return Container(
+          margin: EdgeInsets.only(
+            top: defaultPadding.h,
+            right: 19.w,
+            left: 19.w,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Tanggal Lahir",
+                style: darkGreyTextStyle.copyWith(
+                  fontSize: 13.sp,
+                  fontWeight: semibold,
+                ),
+              ),
+              SizedBox(
+                height: 12.h,
+              ),
+              Container(
+                width: double.infinity,
+                // height: 50.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(defaultRadius),
+                ),
+                child: DateTimePicker(
+                  initialValue: '',
+                  style: greyTextStyle.copyWith(
+                    fontSize: 12.sp,
+                    color: kDarkGreyColor,
+                    fontWeight: light,
+                  ),
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 18.w,
+                      vertical: 15.h,
+                    ),
+                    border: InputBorder.none,
+                    hintText: 'Tanggal Lahir',
+                    hintStyle: TextStyle(
+                      color: kDarkGreyColor,
+                      fontWeight: light,
+                      fontSize: 12.sp,
+                    ),
+                    filled: true,
+                    fillColor: kGreyColor,
+                    focusColor: kDarkGreyColor,
+                  ),
+                  firstDate: DateTime(2000),
+                  lastDate: DateTime(2100),
+                ),
+              ),
+              SizedBox(
+                height: 12.h,
+              ),
+            ],
+          ),
+        );
+      }
+
+      Widget reason() {
+        return Container(
+          margin: EdgeInsets.only(
+            top: defaultPadding.h,
+            right: 19.w,
+            left: 19.w,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Alasan",
+                style: darkGreyTextStyle.copyWith(
+                  fontSize: 13.sp,
+                  fontWeight: semibold,
+                ),
+              ),
+              SizedBox(
+                height: 5.h,
+              ),
+              CustomDropdown(
+                items: [
+                  'Unit tidak pernah terlihat',
+                  'Ditarik EXC lain',
+                  'Pemakai pasang badan',
+                  'Nomor berbeda',
+                  'Sudah bayar',
+                ],
+                hintText: 'Tambahkan alasan ...',
+              ),
+              SizedBox(
+                height: 12.h,
               ),
             ],
           ),
@@ -250,13 +322,14 @@ class UnitSendPullPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            branch(),
-            brand(),
-            model(),
-            nameStnk(),
-            numberMesin(),
-            numberMesin(),
-            chassisNumber(),
+            costumer(),
+            contactNumber(),
+            handling(),
+            deliquency(),
+            debtorStatus(),
+            unitStatus(),
+            date(),
+            reason(),
           ],
         ),
       );
@@ -392,16 +465,19 @@ class UnitSendPullPage extends StatelessWidget {
       drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Column(
-            children: [
-              navbar(),
-              input(),
-              button(),
-            ],
+      body: ListView(
+        padding: EdgeInsets.symmetric(),
+        children: [
+          SafeArea(
+            child: Column(
+              children: [
+                navbar(),
+                input(),
+                button(),
+              ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

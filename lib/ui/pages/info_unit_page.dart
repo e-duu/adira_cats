@@ -1,7 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
@@ -114,7 +113,7 @@ class InfoUnitPage extends StatelessWidget {
                     children: [
                       /// NOTE: CHAT
                       Container(
-                        height: 60.h,
+                        height: 50.h,
                         child: CustomButton(
                           title: 'Chat',
                           width: 80.w,
@@ -133,7 +132,7 @@ class InfoUnitPage extends StatelessWidget {
 
                       /// NOTE: TERIMA
                       Container(
-                        height: 60.h,
+                        height: 50.h,
                         child: CustomButton(
                           title: 'Terima',
                           fontWeight: light,
@@ -152,7 +151,7 @@ class InfoUnitPage extends StatelessWidget {
 
                       /// NOTE: TOLAK
                       Container(
-                        height: 60.h,
+                        height: 50.h,
                         child: CustomButton(
                           title: 'Tolak',
                           fontWeight: light,
