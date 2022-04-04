@@ -17,8 +17,6 @@ import 'package:adira_cats/ui/pages/info_unit_page.dart';
 import 'package:adira_cats/ui/pages/loading_page.dart';
 import 'package:adira_cats/ui/pages/local_notification.dart';
 import 'package:adira_cats/ui/pages/login_page.dart';
-import 'package:adira_cats/ui/pages/login_page1.dart';
-import 'package:adira_cats/ui/pages/login_page2.dart';
 import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
@@ -117,9 +115,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
-          // home: LoginPage(),
-          // home: LoginPage1(),
-          // home: LoginPage2(),
+          home: LoginPage(),
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
           // home: OtpPage(),
@@ -221,7 +217,7 @@ class MyApp extends StatelessWidget {
           // home: SavePageEmpty(),
 
           /// NOTE : UNIT SEND PULL PAGE
-          home: UnitSendPullPage(),
+          // home: UnitSendPullPage(),
           // home: UnitSendPullVisitPage(),
           // home: UnitSendPullFinalPage(),
           // home: UnitSendPullCeklisPage(),
