@@ -132,7 +132,6 @@ class MyApp extends StatelessWidget {
           /// NOTE : MAIN PAGE
           // home: MessagePage(),
           // home: MessageRoomPage(),
-
           // home: LocalNotification(),
           // home: NotificationPage(),
           // home: ProfilePage(),
@@ -219,7 +218,8 @@ class MyApp extends StatelessWidget {
           // home: InfoUnitPage(),
 
           /// NOTE: ON PROGRESS
-          // home: TestingPage(),
+          // home: InfoUnitPage(),
+          home: TestingPage(),
         ),
       ),
     );
