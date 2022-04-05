@@ -147,7 +147,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
           // home: UnitSendPullPage(),
-          home: UnitSendPullFoundPage(),
+          // home: UnitSendPullFoundPage(),
           // home: LocalNotification(),
           // home: NotificationPage(),
           // home: ProfilePage(),
@@ -156,6 +156,11 @@ class MyApp extends StatelessWidget {
           // home: ErrorPage(),
           // home: LoadPage(),
           // home: AnnouncementDetailPage(),
+          // home: CheckUnit(),
+          // home: CheckUnitWarehouse(),
+          // home: CheckUnitVisit(),
+          // home: CheckUnitVisit(),
+          home: CheckUnitFinal(),
           // home: AssetPlayerWidget(),
 
           /// NOTE : UNIT SEARCH
