@@ -2,7 +2,6 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
-import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search_multi.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -67,7 +66,7 @@ class UnitSearchPage extends StatelessWidget {
         borderRadius: BorderRadius.circular(defaultRadius),
       ),
       child: CustomButton(
-        title: "Cari Lewat ST",
+        title: "Scan Foto Plat",
         onPressed: () {},
         color: kPrimaryColor,
         textStyle: blackTextStyle,

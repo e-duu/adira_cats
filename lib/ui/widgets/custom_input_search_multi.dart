@@ -15,13 +15,13 @@ class _CustomInputSearchMultiState extends State<CustomInputSearchMulti> {
   bool inputItems = true;
 
   void valueChanged() => setState(() {
-    if (inputItems == true) {
-      inputItems = false;
-    } else {
-      inputItems = true;
-    }
-  });
-  
+        if (inputItems == true) {
+          inputItems = false;
+        } else {
+          inputItems = true;
+        }
+      });
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,7 +31,7 @@ class _CustomInputSearchMultiState extends State<CustomInputSearchMulti> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            width: 40,
+            width: 40.w,
             decoration: BoxDecoration(
               border: Border.all(
                 color: kLigthGrayColor,
@@ -43,19 +43,22 @@ class _CustomInputSearchMultiState extends State<CustomInputSearchMulti> {
             ),
             child: IconButton(
               icon: Icon(
-                inputItems == true 
-                  ? Icons.document_scanner
-                  : Icons.local_activity,
+                inputItems == true
+                    ? Icons.document_scanner
+                    : Icons.local_activity,
                 color: kDarkGreyColor,
               ),
               onPressed: valueChanged,
             ),
           ),
+          SizedBox(
+            width: 5.w,
+          ),
           Container(
-            width: 350,
-            child: inputItems == true 
-              ? CustomInputSearchPlatNo(onPressed: () {})
-              : CustomInputSearchNoContract(onPressed: () {}),
+            width: 240.w,
+            child: inputItems == true
+                ? CustomInputSearchPlatNo(onPressed: () {})
+                : CustomInputSearchNoContract(onPressed: () {}),
           ),
         ],
       ),
