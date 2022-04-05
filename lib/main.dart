@@ -185,6 +185,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : PULL FEE PAGE
           // home: ReportDetailPullFeePage(),
+          // home: ReportDetailPullFeePage(),
           // home: ReportDetailPullFeeNihilPage(),
           // home: ReportDetailPullFeeResultDetailPage(),
 
