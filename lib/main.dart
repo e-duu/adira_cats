@@ -223,11 +223,8 @@ class MyApp extends StatelessWidget {
           /// NOTE: ON PROGRESS
           // home: InfoUnitPage(),
           // home: TestingPage(),
-<<<<<<< HEAD
-=======
           // home: SplashPageNewOne(),
           home: SplashPageNewTwo(),
->>>>>>> a045000c1a94519c799821c94206ba31db6974af
         ),
       ),
     );
