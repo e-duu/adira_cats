@@ -4,6 +4,7 @@ import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_checkbox.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
+import 'package:adira_cats/ui/widgets/custom_expansion.dart';
 import 'package:adira_cats/ui/widgets/custom_icon_upload.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search_multi.dart';
@@ -31,7 +32,8 @@ class TestingPage extends StatelessWidget {
               // CustomCheckbox(),
               // CustomInputSearchNoContract(onPressedSuffix: (){}, hintText: 'Cari Unit menggunakan Nomor Kontrak ...'),
               // CustomInputSearchPlatNo(),
-              CustomInputSearchMulti()
+              // CustomInputSearchMulti()
+              CustomExpansion(),
               // CustomLineChart(
               //   listGrafik: [
               //     LineChart(1, 100),
