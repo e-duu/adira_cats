@@ -224,7 +224,7 @@ class MyApp extends StatelessWidget {
           // home: InfoUnitPage(),
           // home: TestingPage(),
           // home: SplashPageNewOne(),
-          home: SplashPageNewTwo(),
+          // home: SplashPageNewTwo(),
         ),
       ),
     );
