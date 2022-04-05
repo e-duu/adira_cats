@@ -7,7 +7,8 @@ class CustomInputTextFieldTags extends StatefulWidget {
   const CustomInputTextFieldTags({Key? key}) : super(key: key);
 
   @override
-  State<CustomInputTextFieldTags> createState() => _CustomInputTextFieldTagsState();
+  State<CustomInputTextFieldTags> createState() =>
+      _CustomInputTextFieldTagsState();
 }
 
 class _CustomInputTextFieldTagsState extends State<CustomInputTextFieldTags> {
@@ -62,7 +63,7 @@ class _CustomInputTextFieldTagsState extends State<CustomInputTextFieldTags> {
               return null;
             }, // Validator
             inputfieldBuilder:
-              (context, tec, fn, error, onChanged, onSubmitted) {
+                (context, tec, fn, error, onChanged, onSubmitted) {
               return ((context, sc, tags, onTagDelete) {
                 return TextField(
                   controller: tec,
@@ -98,59 +99,59 @@ class _CustomInputTextFieldTagsState extends State<CustomInputTextFieldTags> {
                       color: Colors.yellow,
                     ),
                     hintText: _controller!.hasTags ? '' : "Cari Plat Nomor ...",
-                    hintStyle: TextStyle(
-                      color: kDarkGreyColor
-                    ),
+                    hintStyle: TextStyle(color: kDarkGreyColor),
                     errorText: error,
-                    prefixIconConstraints: BoxConstraints(maxWidth: _distanceToField! * 0.74),
-                    prefixIcon: tags.isNotEmpty ? SingleChildScrollView(
-                      controller: sc,
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: tags.map((String tag) {
-                          return Container(
-                            decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(20.0),
-                              ),
-                              color: Colors.yellow,
-                            ),
-                            margin: const EdgeInsets.symmetric(
-                                horizontal: 5.0),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 10.0, vertical: 5.0),
+                    prefixIconConstraints:
+                        BoxConstraints(maxWidth: _distanceToField! * 0.74),
+                    prefixIcon: tags.isNotEmpty
+                        ? SingleChildScrollView(
+                            controller: sc,
+                            scrollDirection: Axis.horizontal,
                             child: Row(
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
-                              children: [
-                                InkWell(
-                                  child: Text(
-                                    '$tag',
-                                    style: const TextStyle(
-                                        color: Colors.white),
+                                children: tags.map((String tag) {
+                              return Container(
+                                decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(20.0),
                                   ),
-                                  onTap: () {
-                                    print("$tag selected");
-                                  },
+                                  color: Colors.yellow,
                                 ),
-                                const SizedBox(width: 4.0),
-                                InkWell(
-                                  child: const Icon(
-                                    Icons.cancel,
-                                    size: 14.0,
-                                    color: Color.fromARGB(
-                                        255, 233, 233, 233),
-                                  ),
-                                  onTap: () {
-                                    onTagDelete(tag);
-                                  },
-                                )
-                              ],
-                            ),
-                          );
-                        }  
-                      ).toList()),
-                    ) : null,
+                                margin:
+                                    const EdgeInsets.symmetric(horizontal: 5.0),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 10.0, vertical: 5.0),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    InkWell(
+                                      child: Text(
+                                        '$tag',
+                                        style: const TextStyle(
+                                            color: Colors.white),
+                                      ),
+                                      onTap: () {
+                                        print("$tag selected");
+                                      },
+                                    ),
+                                    const SizedBox(width: 4.0),
+                                    InkWell(
+                                      child: const Icon(
+                                        Icons.cancel,
+                                        size: 14.0,
+                                        color:
+                                            Color.fromARGB(255, 233, 233, 233),
+                                      ),
+                                      onTap: () {
+                                        onTagDelete(tag);
+                                      },
+                                    )
+                                  ],
+                                ),
+                              );
+                            }).toList()),
+                          )
+                        : null,
                   ),
                   onChanged: onChanged,
                   onSubmitted: onSubmitted,
@@ -161,9 +162,7 @@ class _CustomInputTextFieldTagsState extends State<CustomInputTextFieldTags> {
         ),
         ElevatedButton(
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all<Color>(
-              kPrimaryColor
-            ),
+            backgroundColor: MaterialStateProperty.all<Color>(kPrimaryColor),
           ),
           onPressed: () {
             _controller!.clearTags();

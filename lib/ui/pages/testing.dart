@@ -28,7 +28,10 @@ class TestingPage extends StatelessWidget {
           child: Column(
             children: [
               // CustomCheckbox(),
-              // CustomInputSearchDropdown(onPressedSuffix: (){}, hintText: 'Cari Unit menggunakan Nomor Kontrak ...')
+              CustomInputSearchDropdown(
+                onPressedSuffix: () {},
+                hintText: 'Cari Unit menggunakan Nomor Kontrak ...',
+              ),
               CustomInputTextFieldTags(),
               // CustomLineChart(
               //   listGrafik: [

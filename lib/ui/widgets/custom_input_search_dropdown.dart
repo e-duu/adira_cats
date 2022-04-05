@@ -19,7 +19,8 @@ class CustomInputSearchDropdown extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<CustomInputSearchDropdown> createState() => _CustomInputSearchDropdown();
+  State<CustomInputSearchDropdown> createState() =>
+      _CustomInputSearchDropdown();
 }
 
 class _CustomInputSearchDropdown extends State<CustomInputSearchDropdown> {
@@ -28,10 +29,10 @@ class _CustomInputSearchDropdown extends State<CustomInputSearchDropdown> {
     return Container(
       height: 50.h,
       margin: widget.margin == EdgeInsets.zero
-        ? EdgeInsets.symmetric(
-            horizontal: defaultMargin.w,
-          )
-        : widget.margin,
+          ? EdgeInsets.symmetric(
+              horizontal: defaultMargin.w,
+            )
+          : widget.margin,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
@@ -68,8 +69,7 @@ class _CustomInputSearchDropdown extends State<CustomInputSearchDropdown> {
               customItemsHeight: 8,
               items: [
                 ...MenuItems.firstItems.map(
-                  (item) =>
-                  DropdownMenuItem<MenuItem>(
+                  (item) => DropdownMenuItem<MenuItem>(
                     value: item,
                     child: MenuItems.buildItem(item),
                   ),
@@ -137,10 +137,7 @@ class MenuItems {
   static Widget buildItem(MenuItem item) {
     return Row(
       children: [
-        Icon(
-          item.icon,
-          size: 22
-        ),
+        Icon(item.icon, size: 22),
       ],
     );
   }
@@ -148,13 +145,13 @@ class MenuItems {
   static onChanged(BuildContext context, MenuItem item) {
     switch (item) {
       case MenuItems.home:
-      //Do something
+        //Do something
         break;
       case MenuItems.settings:
-      //Do something
+        //Do something
         break;
       case MenuItems.share:
-      //Do something
+        //Do something
         break;
     }
   }
