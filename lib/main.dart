@@ -142,7 +142,7 @@ class MyApp extends StatelessWidget {
           // home: LoadPage(),
           // home: LoadPage(),
           // home: VideoPlayer(),
-          home: AssetPlayerWidget(),
+          // home: AssetPlayerWidget(),
 
           /// NOTE : ST CONTRACT PAGE
           // home: CreateStPage(),

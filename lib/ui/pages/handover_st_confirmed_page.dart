@@ -17,9 +17,11 @@ class HandoverStConfirmedPage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Serah Terima ST",
-          preffixWidget: GestureDetector(
-            onTap: () {},
-            child: libraryIcon,
+           preffixWidget: GestureDetector(
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
           ),
           suffixWidget: GestureDetector(
             onTap: () {},
