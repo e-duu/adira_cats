@@ -54,6 +54,8 @@ import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/result_visit_page.dart';
 import 'package:adira_cats/ui/pages/save_page.dart';
 import 'package:adira_cats/ui/pages/save_page_empty.dart';
+import 'package:adira_cats/ui/pages/splash_page_new1.dart';
+import 'package:adira_cats/ui/pages/splash_page_new2.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_final_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_visit_page.dart';
@@ -220,6 +222,8 @@ class MyApp extends StatelessWidget {
           /// NOTE: ON PROGRESS
           // home: InfoUnitPage(),
           // home: TestingPage(),
+          // home: SplashPageNewOne(),
+          // home: SplashPageNewTwo(),
         ),
       ),
     );
