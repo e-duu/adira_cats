@@ -8,6 +8,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
+import '../widgets/custom_input_search_multi.dart';
+
 class UnitSearchFoundPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   UnitSearchFoundPage({Key? key}) : super(key: key);
@@ -47,12 +49,7 @@ class UnitSearchFoundPage extends StatelessWidget {
       margin: EdgeInsets.symmetric(
         vertical: 18.h,
       ),
-      child: CustomInputSearch(
-        onPressed: () {},
-        margin: EdgeInsets.all(1),
-        value: '9999',
-        hintText: 'Cari Unit menggunakan Nomor Kontrak ...',
-      ),
+      child: CustomInputSearchMulti(),
     );
   }
 
@@ -62,31 +59,13 @@ class UnitSearchFoundPage extends StatelessWidget {
         top: 12.h,
       ),
       decoration: BoxDecoration(
-        color: kGreyColor,
         borderRadius: BorderRadius.circular(defaultRadius),
       ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CustomButton(
-            title: "Cari Lewat ST",
-            onPressed: () {},
-            color: kPrimaryColor,
-            textStyle: blackTextStyle,
-            width: 138.w,
-          ),
-          SizedBox(
-            width: 12.w,
-          ),
-          CustomButton(
-            title: "Scan Foto Plat",
-            onPressed: () {},
-            color: kPrimaryColor,
-            textStyle: blackTextStyle,
-            width: 138.w,
-          ),
-        ],
+      child: CustomButton(
+        title: "Scan Foto Plat",
+        onPressed: () {},
+        color: kPrimaryColor,
+        textStyle: blackTextStyle,
       ),
     );
   }

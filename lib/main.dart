@@ -146,10 +146,10 @@ class MyApp extends StatelessWidget {
           // home: AssetPlayerWidget(),
 
           /// NOTE : UNIT SEARCH
-          // home: UnitSearchPage(),
+          home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
-          // home: UnitSearchPullPage(),
           // home: UnitSearchFoundPage(),
+          // home: UnitSearchPullPage(),
           // home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
@@ -201,7 +201,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : SUBMISSION PULL FEE PAGE
           // home: PullFeePage(),
-          home: PullFeeFoundPage(),
+          // home: PullFeeFoundPage(),
           // home: PullFeeDonePage(),
 
           /// NOTE : RESULT VISIT PAGE
