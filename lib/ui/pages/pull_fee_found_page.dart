@@ -2,6 +2,7 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
+import 'package:adira_cats/ui/widgets/custom_expansion.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -48,23 +49,20 @@ class PullFeeFoundPage extends StatelessWidget {
           vertical: defaultPadding.h,
         ),
         child: CustomInputSearch(
-            hintText: 'Cari Nomor Kontrak...', onPressed: () {}),
+          hintText: 'Cari Nomor Kontrak...',
+          onPressed: () {},
+        ),
       );
     }
 
-    Widget expansions() {
-      
+    Widget expansion() {
       return Container(
         margin: EdgeInsets.only(
-          bottom: 56.h,
-          right: defaultMargin.w,
           left: defaultMargin.w,
+          right: defaultMargin.w,
+          bottom: 12.h,
         ),
-        child: Column(
-          children: [
-
-          ],
-        ),
+        child: CustomExpansion(),
       );
     }
 
@@ -312,6 +310,7 @@ class PullFeeFoundPage extends StatelessWidget {
             children: [
               navbar(),
               search(),
+              expansion(),
               inputSection(),
               bottomButton(),
             ],
