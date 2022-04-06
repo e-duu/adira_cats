@@ -24,6 +24,7 @@ import 'package:adira_cats/ui/pages/notification_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/pull_fee_done_page.dart';
+import 'package:adira_cats/ui/pages/pull_fee_found_page.dart';
 import 'package:adira_cats/ui/pages/pull_fee_page.dart';
 import 'package:adira_cats/ui/pages/register_fourth_page.dart';
 import 'package:adira_cats/ui/pages/register_page.dart';
@@ -121,7 +122,6 @@ class MyApp extends StatelessWidget {
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
           // home: OtpPage(),
-          // home: ProfilePage(),
 
           /// NOTE : REGISTER PAGE
           // home: RegisterPage(),
@@ -200,6 +200,7 @@ class MyApp extends StatelessWidget {
           /// NOTE : SUBMISSION PULL FEE PAGE
           // home: PullFeePage(),
           // home: PullFeeDonePage(),
+          home: PullFeeFoundPage(),
 
           /// NOTE : RESULT VISIT PAGE
           // home: ResultVisitPage(),
@@ -222,7 +223,7 @@ class MyApp extends StatelessWidget {
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
           // home: SplashPageNewOne(),
-          home: SplashPageNewTwo(),
+          // home: SplashPageNewTwo(),
         ),
       ),
     );
