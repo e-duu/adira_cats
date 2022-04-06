@@ -202,7 +202,6 @@ class MyApp extends StatelessWidget {
           // home: PullFeePage(),
           home: PullFeeFoundPage(),
           // home: PullFeeDonePage(),
-          home: PullFeeFoundPage(),
 
           /// NOTE : RESULT VISIT PAGE
           // home: ResultVisitPage(),
