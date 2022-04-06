@@ -1,24 +1,21 @@
-import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
-import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
 
-class CheckUnit extends StatelessWidget {
+class UnitSendPullWarehousePage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  CheckUnit({Key? key}) : super(key: key);
+  UnitSendPullWarehousePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return CustomNavbar(
-        text: 'Tarik Kirim Unit - Unit',
+        text: 'Tarik Kirim Unit - WH',
         preffixWidget: GestureDetector(
           onTap: () {
             _scaffoldKey.currentState!.openDrawer();
@@ -43,7 +40,7 @@ class CheckUnit extends StatelessWidget {
     }
 
     Widget input() {
-      Widget branch() {
+      Widget remote() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -54,7 +51,7 @@ class CheckUnit extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Cabang Handling',
+                'Kode Remot',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -72,9 +69,7 @@ class CheckUnit extends StatelessWidget {
         );
       }
 
-     
-      
-      Widget brand() {
+      Widget brandCondition() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -85,7 +80,7 @@ class CheckUnit extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Merek',
+                'Kondisi Merek',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -104,7 +99,7 @@ class CheckUnit extends StatelessWidget {
         );
       }
 
-      Widget model() {
+      Widget brandParam() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -115,7 +110,7 @@ class CheckUnit extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Model',
+                'Merek Param',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -133,7 +128,7 @@ class CheckUnit extends StatelessWidget {
         );
       }
 
-      Widget nameStnk() {
+      Widget remoteName() {
         return Container(
           margin: EdgeInsets.only(
             top: defaultPadding.h,
@@ -144,91 +139,7 @@ class CheckUnit extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Nama STNK',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 12.sp,
-                  fontWeight: semibold,
-                ),
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              CustomInput(
-                hintText: 'Tambahkan keterangan ...',
-                hintColor: kDarkGreyColor,
-              ),
-            ],
-          ),
-        );
-      }
-      Widget numberContact() {
-        return Container(
-          margin: EdgeInsets.only(
-            top: defaultPadding.h,
-            right: 19.w,
-            left: 19.w,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Nomor Kontrak',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 12.sp,
-                  fontWeight: semibold,
-                ),
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              CustomInput(
-                hintText: 'Tambahkan keterangan ...',
-                hintColor: kDarkGreyColor,
-              ),
-            ],
-          ),
-        );
-      }
-      Widget numberMesin() {
-        return Container(
-          margin: EdgeInsets.only(
-            top: defaultPadding.h,
-            right: 19.w,
-            left: 19.w,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Nomor Mesin',
-                style: darkGreyTextStyle.copyWith(
-                  fontSize: 12.sp,
-                  fontWeight: semibold,
-                ),
-              ),
-              SizedBox(
-                height: 12.h,
-              ),
-              CustomInput(
-                hintText: 'Tambahkan keterangan ...',
-                hintColor: kDarkGreyColor,
-              ),
-            ],
-          ),
-        );
-      }
-      Widget chassisNumber() {
-        return Container(
-          margin: EdgeInsets.only(
-            top: defaultPadding.h,
-            right: 19.w,
-            left: 19.w,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Nomor Rangka',
+                'Nama Remot',
                 style: darkGreyTextStyle.copyWith(
                   fontSize: 12.sp,
                   fontWeight: semibold,
@@ -246,9 +157,92 @@ class CheckUnit extends StatelessWidget {
         );
       }
 
-     
+      Widget warehouseName() {
+        return Container(
+          margin: EdgeInsets.only(
+            top: defaultPadding.h,
+            right: 19.w,
+            left: 19.w,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Nama Warehouse',
+                style: darkGreyTextStyle.copyWith(
+                  fontSize: 12.sp,
+                  fontWeight: semibold,
+                ),
+              ),
+              SizedBox(
+                height: 12.h,
+              ),
+              CustomInput(
+                hintText: 'Tambahkan keterangan ...',
+                hintColor: kDarkGreyColor,
+              ),
+            ],
+          ),
+        );
+      }
 
-      
+      Widget numberCondition() {
+        return Container(
+          margin: EdgeInsets.only(
+            top: defaultPadding.h,
+            right: 19.w,
+            left: 19.w,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Kondisi Nomor Mesin',
+                style: darkGreyTextStyle.copyWith(
+                  fontSize: 12.sp,
+                  fontWeight: semibold,
+                ),
+              ),
+              SizedBox(
+                height: 12.h,
+              ),
+              CustomInput(
+                hintText: 'Tambahkan keterangan ...',
+                hintColor: kDarkGreyColor,
+              ),
+            ],
+          ),
+        );
+      }
+
+      Widget mechineNumber() {
+        return Container(
+          margin: EdgeInsets.only(
+            top: defaultPadding.h,
+            right: 19.w,
+            left: 19.w,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Nomor Mesin Param',
+                style: darkGreyTextStyle.copyWith(
+                  fontSize: 12.sp,
+                  fontWeight: semibold,
+                ),
+              ),
+              SizedBox(
+                height: 12.h,
+              ),
+              CustomInput(
+                hintText: 'Tambahkan keterangan ...',
+                hintColor: kDarkGreyColor,
+              ),
+            ],
+          ),
+        );
+      }
 
       return Container(
         margin: EdgeInsets.only(
@@ -256,13 +250,13 @@ class CheckUnit extends StatelessWidget {
         ),
         child: Column(
           children: [
-            branch(),
-            brand(),
-            model(),
-            nameStnk(),
-            numberMesin(),
-            numberMesin(),
-            chassisNumber(),
+            remote(),
+            brandCondition(),
+            brandParam(),
+            remoteName(),
+            warehouseName(),
+            numberCondition(),
+            mechineNumber(),
           ],
         ),
       );
@@ -384,18 +378,18 @@ class CheckUnit extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer : Container(
+      drawer: Container(
         width: 300,
         height: 760,
         child: ClipRRect(
-            borderRadius: BorderRadius.only(
-            topRight: Radius.circular(35), 
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
             bottomRight: Radius.circular(35),
           ),
-          child: CustomDrawer()
-          ),
+          child: CustomDrawer(),
         ),
-      drawerEnableOpenDragGesture : true,
+      ),
+      drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: ListView(

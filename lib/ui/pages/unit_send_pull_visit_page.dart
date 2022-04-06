@@ -1,4 +1,3 @@
-import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
@@ -6,14 +5,13 @@ import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:date_time_picker/date_time_picker.dart';
-import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
 
-class CheckUnitVisit extends StatelessWidget {
+class UnitSendPullVisitPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  CheckUnitVisit({Key? key}) : super(key: key);
+  UnitSendPullVisitPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +42,6 @@ class CheckUnitVisit extends StatelessWidget {
     }
 
     Widget input() {
-     
-
       Widget costumer() {
         return Container(
           margin: EdgeInsets.only(
@@ -75,8 +71,6 @@ class CheckUnitVisit extends StatelessWidget {
         );
       }
 
-     
-      
       Widget contactNumber() {
         return Container(
           margin: EdgeInsets.only(
@@ -224,13 +218,13 @@ class CheckUnitVisit extends StatelessWidget {
       }
 
       Widget date() {
-      return Container(
-        margin: EdgeInsets.only(
+        return Container(
+          margin: EdgeInsets.only(
             top: defaultPadding.h,
             right: 19.w,
             left: 19.w,
           ),
-        child: Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -281,14 +275,14 @@ class CheckUnitVisit extends StatelessWidget {
               ),
             ],
           ),
-      );
-    }
-     
+        );
+      }
+
       Widget reason() {
         return Container(
-           margin: EdgeInsets.only(
-           top: defaultPadding.h,
-           right: 19.w,
+          margin: EdgeInsets.only(
+            top: defaultPadding.h,
+            right: 19.w,
             left: 19.w,
           ),
           child: Column(
@@ -311,7 +305,6 @@ class CheckUnitVisit extends StatelessWidget {
                   'Pemakai pasang badan',
                   'Nomor berbeda',
                   'Sudah bayar',
-                  
                 ],
                 hintText: 'Tambahkan alasan ...',
               ),
@@ -322,8 +315,6 @@ class CheckUnitVisit extends StatelessWidget {
           ),
         );
       }
-
-      
 
       return Container(
         margin: EdgeInsets.only(
@@ -339,7 +330,6 @@ class CheckUnitVisit extends StatelessWidget {
             unitStatus(),
             date(),
             reason(),
-           
           ],
         ),
       );
@@ -461,18 +451,18 @@ class CheckUnitVisit extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer : Container(
-        width: 300,
-        height: 760,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
         child: ClipRRect(
-            borderRadius: BorderRadius.only(
-            topRight: Radius.circular(35), 
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
             bottomRight: Radius.circular(35),
           ),
-          child: CustomDrawer()
-          ),
+          child: CustomDrawer(),
         ),
-      drawerEnableOpenDragGesture : true,
+      ),
+      drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: ListView(

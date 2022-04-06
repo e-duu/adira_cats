@@ -23,7 +23,7 @@ class UnitSearchNilPage extends StatelessWidget {
               _scaffoldKey.currentState!.openDrawer();
             },
             child: Icon(Icons.subject_sharp),
-          ),
+        ),
         suffixWidget: Container(
           width: 48.w,
           height: 48.h,
@@ -133,7 +133,7 @@ class UnitSearchNilPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: _scaffoldKey, 
+        key: _scaffoldKey, 
         drawer : Container(
           width: 300,
           height: 760,

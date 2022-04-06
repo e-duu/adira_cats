@@ -1,30 +1,27 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_drawer.dart';
-import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
-import 'package:adira_cats/ui/widgets/custom_input.dart';
+import 'package:adira_cats/ui/widgets/custom_input_check_box.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class UnitSearchProcessPage extends StatelessWidget {
+class UnitSendPullCeklisPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  UnitSearchProcessPage({Key? key}) : super(key: key);
+  UnitSendPullCeklisPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // NOTE: NAVBAR
     Widget navbar() {
       return Container(
         child: CustomNavbar(
-          text: "Proses",
-           preffixWidget: GestureDetector(
+          text: "Tarik Kirim Unit - Ceklis",
+          preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
             },
             child: Icon(Icons.subject_sharp),
-           ),
+          ),
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
@@ -43,174 +40,32 @@ class UnitSearchProcessPage extends StatelessWidget {
       );
     }
 
-    Widget topButton() {
+    Widget content() {
       return Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            SizedBox(
-              height: 34.h,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CustomButtonBorder(
-                  title: 'Buat Surat Tugas',
-                  titleColor: kBlackColor,
-                  onPressed: () {},
-                  borderColor: kDarkGreyColor,
-                  borderWidth: 2.r,
-                  fontWeight: normal,
-                  width: 138.w,
-                ),
-                SizedBox(
-                  width: 12.w,
-                ),
-                CustomButtonBorder(
-                  title: 'Tarik Unit',
-                  titleColor: kBlackColor,
-                  onPressed: () {},
-                  borderColor: kDarkGreyColor,
-                  borderWidth: 2.r,
-                  fontWeight: normal,
-                  width: 138.w,
-                ),
-              ],
-            ),
-          ],
-        ),
-      );
-    }
-
-    Widget inputSection() {
-      Widget customerName() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Nama Nasabah",
-              style: darkGreyTextStyle.copyWith(
-                fontSize: 13.sp,
-                fontWeight: semibold,
-              ),
-            ),
-            SizedBox(
-              height: 5.h,
-            ),
-            CustomInput(
-              hintText: 'Nama Nasabah',
-              hintColor: kDarkGreyColor,
-              filled: true,
-              margin: EdgeInsets.only(
-                bottom: 12.h,
-              ),
-            ),
-            SizedBox(
-              height: 12.h,
-            ),
-          ],
-        );
-      }
-
-      Widget contractNumber() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Nomor Kontrak",
-              style: darkGreyTextStyle.copyWith(
-                fontSize: 13.sp,
-                fontWeight: semibold,
-              ),
-            ),
-            SizedBox(
-              height: 5.h,
-            ),
-            CustomInput(
-              hintText: 'Nomor Kontrak',
-              hintColor: kDarkGreyColor,
-              filled: true,
-              margin: EdgeInsets.only(
-                bottom: 12.h,
-              ),
-            ),
-            SizedBox(
-              height: 12.h,
-            ),
-          ],
-        );
-      }
-
-      Widget reason() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Sertakan Alasan ...",
-              style: darkGreyTextStyle.copyWith(
-                fontSize: 13.sp,
-                fontWeight: semibold,
-              ),
-            ),
-            SizedBox(
-              height: 5.h,
-            ),
-            CustomDropdown(
-              items: [
-                'Unit tidak pernah terlihat',
-                'Ditarik EXC lain',
-                'Pemakai pasang badan',
-                'Nomor berbeda',
-                'Sudah bayar',
-              ],
-              hintText: 'Sertakan Alasan ...',
-            ),
-            SizedBox(
-              height: 12.h,
-            ),
-          ],
-        );
-      }
-
-      Widget notes() {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Tambahkan Catatan ...",
-              style: darkGreyTextStyle.copyWith(
-                fontSize: 13.sp,
-                fontWeight: semibold,
-              ),
-            ),
-            SizedBox(
-              height: 5.h,
-            ),
-            CustomInput(
-              hintText: 'Tambahkan Catatan ...',
-              hintColor: kDarkGreyColor,
-              filled: true,
-            ),
-            SizedBox(
-              height: 12.h,
-            ),
-          ],
-        );
-      }
-
-      return Container(
-        margin: EdgeInsets.only(
-          top: defaultPadding.h,
-          bottom: 46.h,
-          right: defaultMargin.w,
-          left: defaultMargin.w,
+        padding: EdgeInsets.symmetric(
+          vertical: 28.h,
+          horizontal: defaultMargin.w,
         ),
         child: Column(
           children: [
-            customerName(),
-            contractNumber(),
-            reason(),
-            notes(),
+            CustomInputCheckBox(
+              title: 'Aksesoris Tambahan',
+            ),
+            CustomInputCheckBox(
+              title: 'Accu',
+            ),
+            CustomInputCheckBox(
+              title: 'Alarm',
+            ),
+            CustomInputCheckBox(
+              title: 'Bak',
+            ),
+            CustomInputCheckBox(
+              title: 'Ban',
+            ),
+            CustomInputCheckBox(
+              title: 'Ban Cadangan',
+            ),
           ],
         ),
       );
@@ -328,27 +183,13 @@ class UnitSearchProcessPage extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      key: _scaffoldKey, 
-      drawer : Container(
-        width: 300,
-        height: 760,
-        child: ClipRRect(
-          borderRadius: BorderRadius.only(
-            topRight: Radius.circular(35),
-            bottomRight: Radius.circular(35)
-          ),
-        child: CustomDrawer()
-        ),
-      ),
-      backgroundColor: kWhiteColor,
-      body: SafeArea(
-        child: SingleChildScrollView(
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
           child: Column(
             children: [
               navbar(),
-              topButton(),
-              inputSection(),
+              content(),
               bottomButton(),
             ],
           ),
