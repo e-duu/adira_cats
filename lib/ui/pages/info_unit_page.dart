@@ -9,7 +9,9 @@ import 'package:styled_text/styled_text.dart';
 import '../widgets/custom_google_maps.dart';
 
 class InfoUnitPage extends StatelessWidget {
-  const InfoUnitPage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+  InfoUnitPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class InfoUnitPage extends StatelessWidget {
         text: 'Info Unit',
         preffixWidget: GestureDetector(
           onTap: () {
-            // _scaffoldKey.currentState!.openDrawer();
+            _scaffoldKey.currentState!.openDrawer();
           },
           child: libraryIcon,
         ),

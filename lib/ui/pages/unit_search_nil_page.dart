@@ -113,13 +113,13 @@ class UnitSearchNilPage extends StatelessWidget {
     return Scaffold(
       key: _scaffoldKey,
       drawer: Container(
-        width: 300,
-        height: 760,
-        child: ClipRRect(
-            borderRadius: BorderRadius.only(
-                topRight: Radius.circular(35),
-                bottomRight: Radius.circular(35)),
-            child: CustomDrawer()),
+      width: 300,
+      height: 760,
+      child: ClipRRect(
+      borderRadius: BorderRadius.only(
+      topRight: Radius.circular(35),
+      bottomRight: Radius.circular(35)),
+      child: CustomDrawer()),
       ),
       body: SafeArea(
         child: SingleChildScrollView(

@@ -18,8 +18,10 @@ class HandoverStConfirmedPage extends StatelessWidget {
         child: CustomNavbar(
           text: "Serah Terima ST",
           preffixWidget: GestureDetector(
-            onTap: () {},
-            child: libraryIcon,
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
           ),
           suffixWidget: GestureDetector(
             onTap: () {},
@@ -295,13 +297,15 @@ class HandoverStConfirmedPage extends StatelessWidget {
     return Scaffold(
       key: _scaffoldKey,
       drawer: Container(
-        width: 300,
-        height: 760,
+        width: 300.w,
+        height: 760.h,
         child: ClipRRect(
-            borderRadius: BorderRadius.only(
-                topRight: Radius.circular(35),
-                bottomRight: Radius.circular(35)),
-            child: CustomDrawer()),
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
+          ),
+          child: CustomDrawer(),
+        ),
       ),
       drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
