@@ -24,6 +24,7 @@ import 'package:adira_cats/ui/pages/notification_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/pull_fee_done_page.dart';
+import 'package:adira_cats/ui/pages/pull_fee_found_page.dart';
 import 'package:adira_cats/ui/pages/pull_fee_page.dart';
 import 'package:adira_cats/ui/pages/register_fourth_page.dart';
 import 'package:adira_cats/ui/pages/register_page.dart';
@@ -161,10 +162,10 @@ class MyApp extends StatelessWidget {
           // home: AssetPlayerWidget(),
 
           /// NOTE : UNIT SEARCH
-          // home: UnitSearchPage(),
+          home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
-          // home: UnitSearchPullPage(),
           // home: UnitSearchFoundPage(),
+          // home: UnitSearchPullPage(),
           // home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
@@ -201,6 +202,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : PULL FEE PAGE
           // home: ReportDetailPullFeePage(),
+          // home: ReportDetailPullFeePage(),
           // home: ReportDetailPullFeeNihilPage(),
           // home: ReportDetailPullFeeResultDetailPage(),
 
@@ -215,6 +217,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : SUBMISSION PULL FEE PAGE
           // home: PullFeePage(),
+          // home: PullFeeFoundPage(),
           // home: PullFeeDonePage(),
 
           /// NOTE : RESULT VISIT PAGE
@@ -239,7 +242,7 @@ class MyApp extends StatelessWidget {
           // home: InfoUnitPage(),
           // home: TestingPage(),
           // home: SplashPageNewOne(),
-          home: SplashPageNewTwo(),
+          // home: SplashPageNewTwo(),
         ),
       ),
     );
