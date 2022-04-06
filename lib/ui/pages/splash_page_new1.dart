@@ -55,7 +55,7 @@ class _SplashPageNewOneState extends State<SplashPageNewOne> {
                       'Collection Activity and Tracking System',
                       style: blackTextStyle.copyWith(
                         fontSize: 12.sp,
-                        fontWeight: light,
+                        fontWeight: normal,
                       ),
                     ),
                   ],
@@ -71,7 +71,7 @@ class _SplashPageNewOneState extends State<SplashPageNewOne> {
                     Text(
                       "Powered by",
                       style: blackTextStyle.copyWith(
-                        fontWeight: light,
+                        fontWeight: normal,
                         fontSize: 11.sp,
                       ),
                       textAlign: TextAlign.center,

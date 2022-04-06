@@ -32,7 +32,7 @@ class LoginPage extends StatelessWidget {
             Container(
               width: double.infinity,
               margin: EdgeInsets.only(
-                top: 162.h,
+                top: 195.h,
               ),
               padding: EdgeInsets.symmetric(
                 horizontal: defaultMargin.w,

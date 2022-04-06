@@ -104,9 +104,9 @@ class MyApp extends StatelessWidget {
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
           // routes: {
-          //   '/': (context) => SplashPage(),
-          //   '/login': (context) => LoginPage(),
+          //   '/': (context) => SplashPageNewOne(),
           //   '/load': (context) => LoadPage(),
+          //   '/login': (context) => LoginPage(),
           //   '/main': (context) => MainPage(),
           //   '/home': (context) => HomePage(),
           //   '/profile': (context) => ProfilePage(),
@@ -220,10 +220,10 @@ class MyApp extends StatelessWidget {
           // home: InfoUnitPage(),
 
           /// NOTE: ON PROGRESS
-          // home: InfoUnitPage(),
+          home: InfoUnitPage(),
           // home: TestingPage(),
           // home: SplashPageNewOne(),
-          home: SplashPageNewTwo(),
+          // home: SplashPageNewTwo(),
         ),
       ),
     );
