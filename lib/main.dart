@@ -201,7 +201,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : SUBMISSION PULL FEE PAGE
           // home: PullFeePage(),
-          home: PullFeeFoundPage(),
+          // home: PullFeeFoundPage(),
           // home: PullFeeDonePage(),
 
           /// NOTE : RESULT VISIT PAGE
@@ -226,7 +226,7 @@ class MyApp extends StatelessWidget {
           // home: InfoUnitPage(),
           // home: TestingPage(),
           // home: SplashPageNewOne(),
-          // home: SplashPageNewTwo(),
+          home: SplashPageNewTwo(),
         ),
       ),
     );
