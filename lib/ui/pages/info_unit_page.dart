@@ -56,7 +56,7 @@ class InfoUnitPage extends StatelessWidget {
       );
     }
 
-    Widget OptionButton() {
+    Widget optionButton() {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.only(
@@ -199,7 +199,7 @@ class InfoUnitPage extends StatelessWidget {
             children: [
               navbar(),
               goMap(),
-              OptionButton(),
+              optionButton(),
               buttonBack(),
             ],
           ),

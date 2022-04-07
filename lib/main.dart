@@ -166,7 +166,7 @@ class MyApp extends StatelessWidget {
           // home: HandoverStDetailPage(),
           // home: HandoverStSearchPage(),
           // home: HandoverStSearchNilPage(),
-          // home: HandoverStConfirmedPage(),
+          home: HandoverStConfirmedPage(),
 
           /// NOTE : REPORT PAGE
           // home: ReportPage(),
@@ -200,7 +200,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : SUBMISSION PULL FEE PAGE
           // home: PullFeePage(),
-          home: PullFeeFoundPage(),
+          // home: PullFeeFoundPage(),
           // home: PullFeeDonePage(),
 
           /// NOTE : RESULT VISIT PAGE
