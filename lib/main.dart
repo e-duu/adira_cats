@@ -118,7 +118,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
-          // home: LoginPage(),
+          home: LoginPage(),
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
           // home: OtpPage(),
@@ -162,7 +162,7 @@ class MyApp extends StatelessWidget {
           // home: AssetPlayerWidget(),
 
           /// NOTE : UNIT SEARCH
-          home: UnitSearchPage(),
+          // home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
           // home: UnitSearchFoundPage(),
           // home: UnitSearchPullPage(),
@@ -242,7 +242,7 @@ class MyApp extends StatelessWidget {
           // home: InfoUnitPage(),
           // home: TestingPage(),
           // home: SplashPageNewOne(),
-          home: SplashPageNewTwo(),
+          // home: SplashPageNewTwo(),
         ),
       ),
     );
