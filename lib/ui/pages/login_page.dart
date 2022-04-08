@@ -2,7 +2,6 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:adira_cats/ui/widgets/custom_input.dart';
-import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +13,7 @@ class LoginPage extends StatelessWidget {
     Widget backgroundImage() {
       return Container(
         width: double.infinity,
-        height: 327.h,
+        height: 300.h,
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
@@ -33,7 +32,7 @@ class LoginPage extends StatelessWidget {
             Container(
               width: double.infinity,
               margin: EdgeInsets.only(
-                top: 152.h,
+                top: 162.h,
               ),
               padding: EdgeInsets.symmetric(
                 horizontal: defaultMargin.w,
@@ -118,18 +117,20 @@ class LoginPage extends StatelessWidget {
                           onPressed: () {
                             Navigator.pushNamed(context, '/main');
                           },
-                          width: 140.w,
+                          width: 138.w,
                           color: kPrimaryColor,
                           textStyle: blackTextStyle,
                         ),
-                        Spacer(),
+                        SizedBox(
+                          width: 12.w,
+                        ),
                         CustomButtonBorder(
                           title: 'Reset',
                           titleColor: kBlackColor,
                           onPressed: () {},
                           borderColor: kDarkGreyColor,
                           borderWidth: 2.w,
-                          width: 140.w,
+                          width: 138.w,
                           fontWeight: light,
                         ),
                       ],
@@ -231,6 +232,5 @@ class LoginPage extends StatelessWidget {
         ),
       ),
     );
-
   }
 }

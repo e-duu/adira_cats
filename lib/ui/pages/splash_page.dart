@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -14,7 +15,10 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     // TODO: implement initState
-    Timer(Duration(seconds: 5), () {
+    Timer(
+        Duration(
+          seconds: 5,
+        ), () {
       Navigator.pushNamed(context, '/load');
     });
     super.initState();
@@ -31,18 +35,22 @@ class _SplashPageState extends State<SplashPage> {
             children: [
               Expanded(
                 child: Container(
-                  width: 240,
-                  height: 42,
+                  width: 240.w,
+                  height: 42.h,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/adira_logo_white.png'),
+                      image: AssetImage(
+                        'assets/adira_logo_white.png',
+                      ),
                     ),
                   ),
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 72),
+                margin: EdgeInsets.only(
+                  bottom: 72.h,
+                ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -54,7 +62,7 @@ class _SplashPageState extends State<SplashPage> {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 10.h,
                     ),
                     Text(
                       "Collection Activity and Tracking System",

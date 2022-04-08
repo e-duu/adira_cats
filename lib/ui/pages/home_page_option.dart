@@ -332,10 +332,8 @@ class HomePageOption extends StatelessWidget {
     Widget menu() {
       return Container(
         width: double.infinity,
-        margin: EdgeInsets.only(
-          left: defaultMargin.w,
-          right: defaultMargin.w,
-          bottom: defaultBottom.h,
+        margin: EdgeInsets.symmetric(
+          horizontal: defaultMargin.w,
         ),
         child: Column(
           children: [
@@ -354,8 +352,8 @@ class HomePageOption extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu1.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -377,8 +375,8 @@ class HomePageOption extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu2.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -400,8 +398,8 @@ class HomePageOption extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu3.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -423,6 +421,8 @@ class HomePageOption extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(
                 bottom: 14.h,
+                left: 13.w,
+                right: 10.w,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -435,8 +435,8 @@ class HomePageOption extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu4.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -459,8 +459,8 @@ class HomePageOption extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu7.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -483,8 +483,8 @@ class HomePageOption extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu8.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -603,18 +603,31 @@ class HomePageOption extends StatelessWidget {
           backgroundColor: kLightYellowColor,
           body: SafeArea(
             child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Stack(
-                    children: [
-                      navbar(),
-                      inputSearch(),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      kWhiteColor,
+                      Color(0XFFFeffc1),
+                      Color(0XFFfdff9a),
                     ],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
                   ),
-                  notification(),
-                  announcement(),
-                  menu(),
-                ],
+                ),
+                child: Column(
+                  children: [
+                    Stack(
+                      children: [
+                        navbar(),
+                        inputSearch(),
+                      ],
+                    ),
+                    notification(),
+                    announcement(),
+                    menu(),
+                  ],
+                ),
               ),
             ),
           ),

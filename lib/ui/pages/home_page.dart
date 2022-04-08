@@ -2,6 +2,7 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 import 'package:styled_text/styled_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -248,8 +249,8 @@ class HomePage extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu1.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -271,8 +272,8 @@ class HomePage extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu2.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -294,8 +295,8 @@ class HomePage extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu3.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -317,6 +318,8 @@ class HomePage extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(
                 bottom: 14.h,
+                left: 13.w,
+                right: 10.w,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -329,8 +332,8 @@ class HomePage extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu4.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -353,8 +356,8 @@ class HomePage extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu7.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -377,8 +380,8 @@ class HomePage extends StatelessWidget {
                           image: AssetImage(
                             'assets/icon_menu8.png',
                           ),
-                          width: 64.w,
-                          height: 64.h,
+                          width: 48.w,
+                          height: 48.h,
                         ),
                         SizedBox(
                           height: 5,
@@ -474,6 +477,7 @@ class HomePage extends StatelessWidget {
                   Row(
                     children: [
                       Container(
+                        /// NOTE : DON'T USE RESPONSIVE IN THIS WIDTH!!
                         width: 200,
                         child: Text(
                           'Ini deksripsi singkat, untuk lebih lengkap baca baca baca',
@@ -584,8 +588,8 @@ class HomePage extends StatelessWidget {
             height: 760.h,
             child: ClipRRect(
               borderRadius: BorderRadius.only(
-                topRight: Radius.circular(35),
-                bottomRight: Radius.circular(35),
+                topRight: Radius.circular(35.r),
+                bottomRight: Radius.circular(35.r),
               ),
               child: CustomDrawer(),
             ),
@@ -596,21 +600,34 @@ class HomePage extends StatelessWidget {
           floatingActionButton: bottomNavigation(),
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerDocked,
-          backgroundColor: kLightYellowColor,
+          // backgroundColor: kLightYellowColor,
           body: SafeArea(
             child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  Stack(
-                    children: [
-                      navbar(),
-                      inputSearch(),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      kWhiteColor,
+                      Color(0XFFFeffc1),
+                      Color(0XFFfdff9a),
                     ],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
                   ),
-                  notification(),
-                  menu(),
-                  announcement(),
-                ],
+                ),
+                child: Column(
+                  children: [
+                    Stack(
+                      children: [
+                        navbar(),
+                        inputSearch(),
+                      ],
+                    ),
+                    notification(),
+                    menu(),
+                    announcement(),
+                  ],
+                ),
               ),
             ),
           ),
