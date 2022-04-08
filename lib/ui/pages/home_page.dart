@@ -583,15 +583,15 @@ class HomePage extends StatelessWidget {
       builder: (context, currentIndex) {
         return Scaffold(
           key: _scaffoldKey,
-          drawer: Container(
-            width: 300.w,
-            height: 760.h,
+          drawer : Container(
+            width: 300,
+            height: 760,
             child: ClipRRect(
-              borderRadius: BorderRadius.only(
-                topRight: Radius.circular(35.r),
-                bottomRight: Radius.circular(35.r),
-              ),
-              child: CustomDrawer(),
+                borderRadius: BorderRadius.only(
+                topRight: Radius.circular(35), 
+                bottomRight: Radius.circular(35)
+                ),
+                child: CustomDrawer()
             ),
           ),
           drawerEnableOpenDragGesture: true,
