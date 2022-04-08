@@ -2,6 +2,7 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_summary_case.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:styled_text/styled_text.dart';
 
 class CustomExpansion extends StatefulWidget {
   CustomExpansion({Key? key}) : super(key: key);
@@ -12,13 +13,13 @@ class CustomExpansion extends StatefulWidget {
 
 class _CustomExpansionState extends State<CustomExpansion> {
   List<Item> _items = generateItems();
-  
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       child: ExpansionPanelList(
-        animationDuration: Duration(milliseconds:500),
+        animationDuration: Duration(milliseconds: 500),
         elevation: 1,
         expansionCallback: (int index, bool isExpanded) {
           setState(() {
@@ -30,14 +31,15 @@ class _CustomExpansionState extends State<CustomExpansion> {
             headerBuilder: (BuildContext context, bool isExpanded) {
               return Container(
                 margin: EdgeInsets.symmetric(
-                  horizontal: 23.w,
-                  vertical: 23.h,
+                  horizontal: 16.w,
+                  vertical: 16.h,
                 ),
                 child: Text(
                   item.headerValue,
                   style: blackTextStyle.copyWith(
                     fontWeight: bold,
-                    fontSize: 14,
+                    fontSize: 14.sp,
+                    color: item.isExpanded == true ? kPrimaryColor : null,
                   ),
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -47,150 +49,138 @@ class _CustomExpansionState extends State<CustomExpansion> {
             isExpanded: item.isExpanded,
           );
         }).toList(),
-        dividerColor: kDarkGreyColor,
+        dividerColor: kGreyColor,
       ),
     );
   }
 }
 
 List<Item> generateItems() {
-  return [ 
+  return [
     Item(
       headerValue: 'Data Unit Nasabah',
-      contentValue: SingleChildScrollView(
-        child: Container(
-          width: double.infinity,
-          padding: EdgeInsets.symmetric(
-            horizontal: defaultMargin,
-            vertical: defaultMargin,
-          ),
-          decoration: BoxDecoration(
-            color: kGreyColor,
-          ),
-          child: Column(
-            children: [
-              Container(
-                padding: EdgeInsets.only(
-                  bottom: 24.h
-                ),
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: kGreyColor,
-                      width: 2,
+      contentValue: Container(
+        width: double.infinity,
+        padding: EdgeInsets.symmetric(
+          horizontal: defaultMargin,
+          vertical: defaultMargin,
+        ),
+        decoration: BoxDecoration(
+          color: kGreyColor,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: EdgeInsets.only(bottom: 24.h),
+              width: double.infinity,
+              child: StyledText(
+                text: 'No Kontrak \n<small>${'123'}</small>',
+                tags: {
+                  'small': StyledTextTag(
+                    style: TextStyle(
+                      fontWeight: light,
                     ),
                   ),
+                },
+                style: blackTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 13.sp,
                 ),
-                child: Text(
-                  "No Kontrak \n${'123'}",
-                  style: blackTextStyle.copyWith(
-                    fontSize: 16.sp,
-                    fontWeight: bold,
-                  ),
-                ),
+                textAlign: TextAlign.start,
               ),
-              Container(
-                padding: EdgeInsets.only(
-                  bottom: 24.h
-                ),
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: kGreyColor,
-                      width: 2,
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: 24.h),
+              child: StyledText(
+                text: "No CL ID \n<small>${'-'}</small>",
+                tags: {
+                  'small': StyledTextTag(
+                    style: TextStyle(
+                      fontWeight: light,
                     ),
                   ),
+                },
+                style: blackTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 13.sp,
                 ),
-                child: Text(
-                  "No CL ID \n${'-'}",
-                  style: blackTextStyle.copyWith(
-                    fontSize: 16.sp,
-                    fontWeight: bold,
-                  ),
-                ),
+                textAlign: TextAlign.start,
               ),
-              Container(
-                padding: EdgeInsets.only(
-                  bottom: 24.h
-                ),
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: kGreyColor,
-                      width: 2,
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: 24.h),
+              child: StyledText(
+                text: "No Surat Kuasa \n<small>${'-'}</small>",
+                tags: {
+                  'small': StyledTextTag(
+                    style: TextStyle(
+                      fontWeight: light,
                     ),
                   ),
+                },
+                style: blackTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 13.sp,
                 ),
-                child: Text(
-                  "No Surat Kuasa \n${'-'}",
-                  style: blackTextStyle.copyWith(
-                    fontSize: 16.sp,
-                    fontWeight: bold,
-                  ),
-                ),
+                textAlign: TextAlign.start,
               ),
-              Container(
-                padding: EdgeInsets.only(
-                  bottom: 24.h
-                ),
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: kGreyColor,
-                      width: 2,
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: 24.h),
+              child: StyledText(
+                text: "Estimasi Harga \n<small>${'70000000'}</small>",
+                tags: {
+                  'small': StyledTextTag(
+                    style: TextStyle(
+                      fontWeight: light,
                     ),
                   ),
+                },
+                style: blackTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 13.sp,
                 ),
-                child: Text(
-                  "Estimasi Harga \n${'70000000'}",
-                  style: blackTextStyle.copyWith(
-                    fontSize: 16.sp,
-                    fontWeight: bold,
-                  ),
-                ),
+                textAlign: TextAlign.start,
               ),
-              Container(
-                padding: EdgeInsets.only(
-                  bottom: 24.h
-                ),
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: kGreyColor,
-                      width: 2,
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: 24.h),
+              child: StyledText(
+                text: "Kode Cabang \n<small>${'0108'}</small>",
+                tags: {
+                  'small': StyledTextTag(
+                    style: TextStyle(
+                      fontWeight: light,
                     ),
                   ),
+                },
+                style: blackTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 13.sp,
                 ),
-                child: Text(
-                  "Kode Cabang \n${'0108'}",
-                  style: blackTextStyle.copyWith(
-                    fontSize: 16.sp,
-                    fontWeight: bold,
-                  ),
-                ),
+                textAlign: TextAlign.start,
               ),
-              Container(
-                padding: EdgeInsets.only(
-                  bottom: 24.h
-                ),
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: kGreyColor,
-                      width: 2,
+            ),
+            Container(
+              padding: EdgeInsets.only(bottom: 24.h),
+              child: StyledText(
+                text: "Kode Cabang Pemohon \n<small>${'0117'}</small>",
+                tags: {
+                  'small': StyledTextTag(
+                    style: TextStyle(
+                      fontWeight: light,
                     ),
                   ),
+                },
+                style: blackTextStyle.copyWith(
+                  fontWeight: bold,
+                  fontSize: 13.sp,
                 ),
-                child: Text(
-                  "Kode Cabang Pemohon \n${'0117'}",
-                  style: blackTextStyle.copyWith(
-                    fontSize: 16.sp,
-                    fontWeight: bold,
-                  ),
-                ),
+                textAlign: TextAlign.start,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     ),

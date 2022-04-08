@@ -18,11 +18,11 @@ class ReportDetailVisitNihilPage extends StatelessWidget {
         child: CustomNavbar(
           text: "Input Kunjungan",
           preffixWidget: GestureDetector(
-              onTap: () {
-                _scaffoldKey.currentState!.openDrawer();
-              },
-              child: Icon(Icons.subject_sharp),
-            ),
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
+          ),
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
@@ -148,16 +148,17 @@ class ReportDetailVisitNihilPage extends StatelessWidget {
     return Scaffold(
       key: _scaffoldKey,
       drawer : Container(
-        width: 300,
-        height: 760,
-        child: ClipRRect(
+      width: 300.w,
+      height: 760.h,
+      child: ClipRRect(
             borderRadius: BorderRadius.only(
             topRight: Radius.circular(35), 
-            bottomRight: Radius.circular(35)
-            ),
+            bottomRight: Radius.circular(35)),
             child: CustomDrawer()
-        ),
+            ),
       ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
         child: Container(
           child: SingleChildScrollView(

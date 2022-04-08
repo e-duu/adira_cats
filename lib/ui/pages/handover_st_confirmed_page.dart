@@ -17,7 +17,7 @@ class HandoverStConfirmedPage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Serah Terima ST",
-           preffixWidget: GestureDetector(
+          preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
             },
@@ -234,7 +234,7 @@ class HandoverStConfirmedPage extends StatelessWidget {
                       title: 'Cetak ST',
                       width: 94.w,
                       fontWeight: light,
-                      color: kPrimaryColor,
+                      color: kRedColor,
                       textStyle: blackTextStyle.copyWith(
                         fontWeight: light,
                       ),
@@ -261,7 +261,7 @@ class HandoverStConfirmedPage extends StatelessWidget {
                     child: CustomButton(
                       title: 'Buat\nHisPay',
                       fontWeight: light,
-                      color: kOrangeColor,
+                      color: kBlueColor,
                       textStyle: whiteTextStyle,
                       width: 94.w,
                       onPressed: () {},
@@ -295,31 +295,32 @@ class HandoverStConfirmedPage extends StatelessWidget {
     }
 
     return Scaffold(
-       key: _scaffoldKey,
-       drawer : Container(
-          width: 300,
-          height: 760,
-          child: ClipRRect(
-               borderRadius: BorderRadius.only(
-               topRight: Radius.circular(35), 
-               bottomRight: Radius.circular(35)),
-               child: CustomDrawer()
-               ),
+      key: _scaffoldKey,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
           ),
-        drawerEnableOpenDragGesture : true,
-        endDrawerEnableOpenDragGesture: false,
-        body: SafeArea(
-          child: SingleChildScrollView(
-            child: Container(
-              child: Column(
-                children: [
-                  navbar(),
-                  cardStDetail(),
-                  buttonBack(),
-                ],
-              ),
+          child: CustomDrawer(),
+        ),
+      ),
+      drawerEnableOpenDragGesture: true,
+      endDrawerEnableOpenDragGesture: false,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              children: [
+                navbar(),
+                cardStDetail(),
+                buttonBack(),
+              ],
             ),
           ),
+        ),
       ),
     );
   }

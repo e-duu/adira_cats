@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomSummaryCase extends StatefulWidget {
   final String title;
-  
+
   CustomSummaryCase({
     Key? key,
     required this.title,
@@ -16,7 +16,7 @@ class CustomSummaryCase extends StatefulWidget {
 
 class _CustomSummaryCaseState extends State<CustomSummaryCase> {
   int? _value = 1;
-  
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,7 +30,7 @@ class _CustomSummaryCaseState extends State<CustomSummaryCase> {
               fontWeight: normal,
             ),
             textAlign: TextAlign.start,
-            overflow: TextOverflow.ellipsis,
+            overflow: TextOverflow.visible,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -39,9 +39,9 @@ class _CustomSummaryCaseState extends State<CustomSummaryCase> {
                 child: Row(
                   children: [
                     Radio(
-                      value: 1, 
-                      groupValue: _value, 
-                      onChanged: (value){
+                      value: 1,
+                      groupValue: _value,
+                      onChanged: (value) {
                         setState(() {
                           _value = value as int?;
                         });
@@ -67,9 +67,9 @@ class _CustomSummaryCaseState extends State<CustomSummaryCase> {
                 child: Row(
                   children: [
                     Radio(
-                      value: 2, 
-                      groupValue: _value, 
-                      onChanged: (value){
+                      value: 2,
+                      groupValue: _value,
+                      onChanged: (value) {
                         setState(() {
                           _value = value as int?;
                         });

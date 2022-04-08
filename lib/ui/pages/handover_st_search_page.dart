@@ -9,8 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:styled_text/styled_text.dart';
 
 class HandoverStSearchPage extends StatelessWidget {
-    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-    HandoverStSearchPage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  HandoverStSearchPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

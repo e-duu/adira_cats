@@ -280,11 +280,11 @@ class _MessageRoomPageState extends State<MessageRoomPage> {
         width: 300,
         height: 760,
         child: ClipRRect(
-            borderRadius: BorderRadius.only(
-            topRight: Radius.circular(35), 
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
             bottomRight: Radius.circular(35)
-            ),
-            child: CustomDrawer()
+          ),
+          child: CustomDrawer()
         ),
       ),
       resizeToAvoidBottomInset: false,

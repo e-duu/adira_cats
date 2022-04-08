@@ -51,12 +51,21 @@ class PullFeeFoundPage extends StatelessWidget {
           vertical: defaultPadding.h,
         ),
         child: CustomInputSearch(
-            hintText: 'Cari Nomor Kontrak...', onPressed: () {}),
+          hintText: 'Cari Nomor Kontrak...',
+          onPressed: () {},
+        ),
       );
     }
 
     Widget expansion() {
-      return CustomExpansion();
+      return Container(
+        margin: EdgeInsets.only(
+          left: defaultMargin.w,
+          right: defaultMargin.w,
+          bottom: 12.h,
+        ),
+        child: CustomExpansion(),
+      );
     }
 
     Widget inputSection() {
