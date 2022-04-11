@@ -21,10 +21,10 @@ class PullFeePage extends StatelessWidget {
         child: CustomNavbar(
           text: "Pengajuan Biaya Tarik",
           preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
-            ),
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
           ),
           suffixWidget: GestureDetector(
             onTap: () {},

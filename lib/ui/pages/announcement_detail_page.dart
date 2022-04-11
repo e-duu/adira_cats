@@ -3,28 +3,98 @@ import 'package:adira_cats/ui/widgets/custom_button_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AnnouncementDetailPage extends StatelessWidget {
-  const AnnouncementDetailPage({Key? key}) : super(key: key);
 
-  Widget image() {
-    return Container(
-      width: double.infinity,
-      height: 200.h,
-      margin: EdgeInsets.symmetric(
-        horizontal: 18.w,
-       
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(defaultRadius.r),
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage(
-            'assets/image_announcement.png',
+import 'package:video_player/video_player.dart';
+ 
+class AnnouncementDetailPage extends StatefulWidget {
+  AnnouncementDetailPage() : super();
+ 
+  // final String title = "Video Demo";
+ 
+  @override
+  AnnouncementDetailPageState createState() => AnnouncementDetailPageState();
+}
+ 
+class AnnouncementDetailPageState extends State<AnnouncementDetailPage> {
+  // const AnnouncementDetailPageState({Key? key}) : super(key: key);
+
+  late VideoPlayerController _controller;
+  late Future<void> _initializeVideoPlayerFuture;
+ 
+  @override
+  void initState() {
+    _controller = VideoPlayerController.network(
+        "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4");
+    //_controller = VideoPlayerController.asset("videos/sample_video.mp4");
+    _initializeVideoPlayerFuture = _controller.initialize();
+    _controller.setLooping(true);
+    _controller.setVolume(1.0);
+    super.initState();
+  }
+ 
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+ 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
+    
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            children: [
+              navbar(),
+              FutureBuilder(
+                  future: _initializeVideoPlayerFuture,
+                  builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.done) {
+                    return Center(
+                      child: AspectRatio(
+                        aspectRatio: _controller.value.aspectRatio,
+                        child: VideoPlayer(_controller),
+                      ),
+                    );
+                  } else {
+                    return Center(
+                      child: CircularProgressIndicator(),
+                  );
+                }
+              },
+            ),
+              content(),
+              button(),
+            ],
           ),
         ),
+     ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: kPrimaryColor,
+        onPressed: () {
+          setState(() {
+            if (_controller.value.isPlaying) {
+              _controller.pause();
+            } else {
+              _controller.play();
+            }
+          });
+        },
+        child:
+            Icon(_controller.value.isPlaying ? Icons.pause : Icons.play_arrow),
       ),
     );
   }
+}
+
+
+
+// class AnnouncementDetailPage extends StatelessWidget {
+//   const AnnouncementDetailPage({Key? key}) : super(key: key);
+
+//  
 
   Widget content() {
     return Container(
@@ -140,22 +210,22 @@ class AnnouncementDetailPage extends StatelessWidget {
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: kWhiteColor,
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Column(
-            children: [
-              navbar(),
-              image(),
-              content(),
-              button(),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       backgroundColor: kWhiteColor,
+//       body: SingleChildScrollView(
+//         child: SafeArea(
+//           child: Column(
+//             children: [
+//               navbar(),
+//               image(),
+//               content(),
+//               button(),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }

@@ -148,8 +148,8 @@ class ReportDetailVisitNihilPage extends StatelessWidget {
     return Scaffold(
       key: _scaffoldKey,
       drawer : Container(
-      width: 300,
-      height: 760,
+      width: 300.w,
+      height: 760.h,
       child: ClipRRect(
             borderRadius: BorderRadius.only(
             topRight: Radius.circular(35), 

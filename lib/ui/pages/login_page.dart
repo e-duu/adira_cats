@@ -33,12 +33,14 @@ class LoginPage extends StatelessWidget {
               width: double.infinity,
               margin: EdgeInsets.only(
                 top: 162.h,
+                right: 6.w,
+                left: 6.w
               ),
               padding: EdgeInsets.symmetric(
-                horizontal: defaultMargin.w,
+                horizontal: 24.w,
               ),
               decoration: BoxDecoration(
-                color: kWhiteColor,
+                color: kPrimaryColor,
                 borderRadius: BorderRadius.circular(18.r),
               ),
               child: Column(
@@ -48,20 +50,20 @@ class LoginPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        width: 200,
-                        height: 34,
+                        width: 79.w,
+                        height: 95.h,
                         margin: EdgeInsets.only(
-                          top: 50.h,
+                          top: 24.h,
                         ),
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage("assets/adira_logo_yellow.png"),
+                            // fit: BoxFit.cover,
+                            image: AssetImage("assets/image_splash1.png"),
                           ),
                         ),
                       ),
                       SizedBox(
-                        height: 40.h,
+                        height: 30.h,
                       ),
                       Text(
                         'Login',
@@ -117,9 +119,9 @@ class LoginPage extends StatelessWidget {
                           onPressed: () {
                             Navigator.pushNamed(context, '/main');
                           },
-                          width: 138.w,
-                          color: kPrimaryColor,
-                          textStyle: blackTextStyle,
+                          width: 144.w,
+                          color: kBlackColor,
+                          textStyle: whiteTextStyle,
                         ),
                         SizedBox(
                           width: 12.w,
@@ -128,9 +130,9 @@ class LoginPage extends StatelessWidget {
                           title: 'Reset',
                           titleColor: kBlackColor,
                           onPressed: () {},
-                          borderColor: kDarkGreyColor,
+                          borderColor: kBlackColor,
                           borderWidth: 2.w,
-                          width: 138.w,
+                          width: 144.w,
                           fontWeight: light,
                         ),
                       ],
@@ -190,25 +192,38 @@ class LoginPage extends StatelessWidget {
                       ),
                     ],
                   ),
+                  // Container(
+                  //   margin: EdgeInsets.only(top: 28.h, bottom: 11.h),
+                  //   child: Column(
+                  //     children: [
+                  //       // Text(
+                  //       //   'CATS',
+                  //       //   style: darkGreyTextStyle.copyWith(
+                  //       //     fontSize: 11.sp,
+                  //       //     fontWeight: bold,
+                  //       //   ),
+                  //       // ),
+                  //       // Text(
+                  //       //   'Collection Activity and Tracking System',
+                  //       //   style: darkGreyTextStyle.copyWith(
+                  //       //     fontSize: 11.sp,
+                  //       //     fontWeight: light,
+                  //       //   ),
+                  //       // )
+                  //     ],
+                  //   ),
+                  // ),
                   Container(
-                    margin: EdgeInsets.only(top: 28.h, bottom: 11.h),
-                    child: Column(
-                      children: [
-                        Text(
-                          'CATS',
-                          style: darkGreyTextStyle.copyWith(
-                            fontSize: 11.sp,
-                            fontWeight: bold,
-                          ),
-                        ),
-                        Text(
-                          'Collection Activity and Tracking System',
-                          style: darkGreyTextStyle.copyWith(
-                            fontSize: 11.sp,
-                            fontWeight: light,
-                          ),
-                        )
-                      ],
+                    width: 105.w,
+                    height: 24.h,
+                    margin: EdgeInsets.symmetric(
+                      vertical: 22.h
+                    ),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.contain,
+                        image: AssetImage("assets/adira_logo_white.png"),
+                      ),
                     ),
                   ),
                 ],
@@ -220,7 +235,7 @@ class LoginPage extends StatelessWidget {
     }
 
     return Scaffold(
-      backgroundColor: kWhiteColor,
+      backgroundColor: kBlackColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Stack(

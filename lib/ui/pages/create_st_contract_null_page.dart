@@ -14,7 +14,7 @@ class CreateStContractNullPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget navbar() {
       return CustomNavbar(
-        text: 'Buat Surat Tugas',
+          text: 'Buat Surat Tugas',
           preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
@@ -88,17 +88,17 @@ class CreateStContractNullPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-        drawer : Container(
-          width: 300,
-          height: 760,
-          child: ClipRRect(
-              borderRadius: BorderRadius.only(
-              topRight: Radius.circular(35), 
-              bottomRight: Radius.circular(35)
-              ),
-              child: CustomDrawer()
-          ),
+      drawer : Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+            borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35), 
+            bottomRight: Radius.circular(35)
+            ),
+            child: CustomDrawer()
         ),
+      ),
       drawerEnableOpenDragGesture : true,
       endDrawerEnableOpenDragGesture: false,
       resizeToAvoidBottomInset: false,
