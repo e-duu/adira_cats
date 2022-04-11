@@ -58,7 +58,7 @@ class InfoUnitPage extends StatelessWidget {
       );
     }
 
-    Widget OptionButton() {
+    Widget optionButton() {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.only(
@@ -120,7 +120,7 @@ class InfoUnitPage extends StatelessWidget {
                           title: 'Chat',
                           width: 80.w,
                           fontWeight: light,
-                          color: kPrimaryColor,
+                          color: kBlueColor,
                           textStyle: blackTextStyle.copyWith(
                             fontWeight: light,
                             fontSize: 12.sp,
@@ -201,7 +201,7 @@ class InfoUnitPage extends StatelessWidget {
             children: [
               navbar(),
               goMap(),
-              OptionButton(),
+              optionButton(),
               buttonBack(),
             ],
           ),

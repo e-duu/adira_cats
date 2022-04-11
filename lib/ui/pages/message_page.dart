@@ -125,19 +125,21 @@ class MessagePage extends StatelessWidget {
     }
 
     return Scaffold(
-      backgroundColor: kWhiteColor,
-      key: _scaffoldKey,
+       key: _scaffoldKey,
       drawer : Container(
         width: 300,
         height: 760,
-        child: ClipRRect(
-          borderRadius: BorderRadius.only(
-            topRight: Radius.circular(35),
-            bottomRight: Radius.circular(35)
-          ),
-          child: CustomDrawer()
-        ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.only(
+        topRight: Radius.circular(35),
+        bottomRight: Radius.circular(35)
       ),
+      child: CustomDrawer()
+      ),
+      ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
+      backgroundColor: kWhiteColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
