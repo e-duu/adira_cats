@@ -162,7 +162,7 @@ class MyApp extends StatelessWidget {
           // home: AssetPlayerWidget(),
 
           /// NOTE : UNIT SEARCH
-          home: UnitSearchPage(),
+          // home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
           // home: UnitSearchFoundPage(),
           // home: UnitSearchPullPage(),
