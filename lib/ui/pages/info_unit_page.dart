@@ -120,7 +120,7 @@ class InfoUnitPage extends StatelessWidget {
                           title: 'Chat',
                           width: 80.w,
                           fontWeight: light,
-                          color: kBlueColor,
+                          color: kOrangeColor,
                           textStyle: blackTextStyle.copyWith(
                             fontWeight: light,
                             fontSize: 12.sp,
@@ -157,7 +157,7 @@ class InfoUnitPage extends StatelessWidget {
                         child: CustomButton(
                           title: 'Tolak',
                           fontWeight: light,
-                          color: kRedColor,
+                          color: kBlueColor,
                           textStyle: whiteTextStyle.copyWith(
                             fontWeight: light,
                             fontSize: 12.sp,
