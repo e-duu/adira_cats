@@ -153,7 +153,7 @@ class MyApp extends StatelessWidget {
           // home: HomePageOption(),
           // home: ErrorPage(),
           // home: LoadPage(),
-          // home: AnnouncementDetailPage(),
+          home: AnnouncementDetailPage(),
           // home: CheckUnit(),
           // home: CheckUnitWarehouse(),
           // home: CheckUnitVisit(),
@@ -162,7 +162,7 @@ class MyApp extends StatelessWidget {
           // home: AssetPlayerWidget(),
 
           /// NOTE : UNIT SEARCH
-          home: UnitSearchPage(),
+          // home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
           // home: UnitSearchFoundPage(),
           // home: UnitSearchPullPage(),
@@ -210,6 +210,7 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailStPage(),
           // home: ReportDetailStNihilPage(),
           // home: ReportDetailStResultDetailPage(),
+          // home: VideoDemo(),
 
           /// NOTE : MONITORING FLOW PAGE
           // home: ReportDetailMvPage(),
