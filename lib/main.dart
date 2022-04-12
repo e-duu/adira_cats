@@ -1,6 +1,5 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/pages/announcement_detail_page1.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_filled_page.dart';
@@ -22,6 +21,7 @@ import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
+import 'package:adira_cats/ui/pages/otp_input_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/pull_fee_done_page.dart';
@@ -153,8 +153,9 @@ class MyApp extends StatelessWidget {
           // home: HomePage(),
           // home: HomePageOption(),
           // home: ErrorPage(),
+          home: OtpInputPage(),
           // home: LoadPage(),
-          home: AnnouncementDetailPage(),
+          // home: AnnouncementDetailPage(),
           // home: ChewieDemo(),
           // home: CheckUnit(),
           // home: CheckUnitWarehouse(),

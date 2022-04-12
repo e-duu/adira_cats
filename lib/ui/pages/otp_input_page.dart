@@ -4,11 +4,10 @@ import 'package:adira_cats/ui/widgets/custom_input.dart';
 import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:adira_cats/shared/theme.dart';
-import 'package:styled_text/styled_text.dart';
 import 'package:flutter/material.dart';
 
-class ResetPasswordPage extends StatelessWidget {
-  const ResetPasswordPage({Key? key}) : super(key: key);
+class OtpInputPage extends StatelessWidget {
+  const OtpInputPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,7 @@ class ResetPasswordPage extends StatelessWidget {
     Widget title() {
       return Container(
         child: Text(
-          'Masukkan kode OTP yang Anda terima dari kami.',
+          'Masukkan alamat ID yang terkait dengan akun Anda.',
           style: blackTextStyle.copyWith(
             fontSize: 13.sp,
             fontWeight: light,
@@ -37,27 +36,14 @@ class ResetPasswordPage extends StatelessWidget {
     }
 
     Widget input() {
-      return Column(
-        children: [
-          CustomInput(
-            hintText: 'OTP Email',
-            hintColor: kDarkGreyColor,
-            margin: EdgeInsets.only(
-              top: 20.h,
-              right: 18.w,
-              left: 18.w,
-            ),
-          ),
-          CustomInput(
-            hintText: 'OTP SMS',
-            hintColor: kDarkGreyColor,
-            margin: EdgeInsets.only(
-              top: 20.h,
-              right: 18.w,
-              left: 18.w,
-            ),
-          ),
-        ],
+      return CustomInput(
+        hintText: 'User ID',
+        hintColor: kDarkGreyColor,
+        margin: EdgeInsets.only(
+          top: 20.h,
+          right: 18.w,
+          left: 18.w,
+        ),
       );
     }
 
