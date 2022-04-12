@@ -1,102 +1,140 @@
+import 'package:adira_cats/ui/pages/announcement_detail_page.dart';
+import 'package:chewie/chewie.dart';
+import 'package:chewie/src/chewie_player.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:video_player/video_player.dart';
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/pages/announcement_detail_page.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-
 import 'package:video_player/video_player.dart';
- 
-class AnnouncementDetailPage extends StatefulWidget {
-  AnnouncementDetailPage() : super();
- 
-  // final String title = "Video Demo";
- 
-  @override
-  AnnouncementDetailPageState createState() => AnnouncementDetailPageState();
-}
- 
-class AnnouncementDetailPageState extends State<AnnouncementDetailPage> {
-  // const AnnouncementDetailPageState({Key? key}) : super(key: key);
 
-  late VideoPlayerController _controller;
-  late Future<void> _initializeVideoPlayerFuture;
- 
+
+
+class AnnouncementDetailPage extends StatefulWidget {
+  AnnouncementDetailPage({this.title = 'Chewie Demo'});
+
+  final String title;
+
+  @override
+  State<StatefulWidget> createState() {
+    return _AnnouncementDetailPageState();
+  }
+}
+
+class _AnnouncementDetailPageState extends State<AnnouncementDetailPage> {
+  late VideoPlayerController _videoPlayerController1;
+  late VideoPlayerController _videoPlayerController2;
+  late ChewieController _chewieController;
+
   @override
   void initState() {
-    _controller = VideoPlayerController.network(
-        "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4");
-    //_controller = VideoPlayerController.asset("videos/sample_video.mp4");
-    _initializeVideoPlayerFuture = _controller.initialize();
-    _controller.setLooping(true);
-    _controller.setVolume(1.0);
     super.initState();
+    _videoPlayerController1 = VideoPlayerController.network(
+        'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4');
+   
+    _chewieController = ChewieController(
+        videoPlayerController: _videoPlayerController1,
+        aspectRatio: 3 / 2,
+        autoPlay: true,
+        looping: true,
+    );
   }
- 
+
   @override
   void dispose() {
-    _controller.dispose();
+    _videoPlayerController1.dispose();
+    _videoPlayerController2.dispose();
+    _chewieController.dispose();
     super.dispose();
   }
- 
+
   @override
+ 
+  Widget video(){
+    return Container(
+        height: 300,
+        child: Row(
+          children:[
+            Chewie(
+              controller: _chewieController,
+            ),
+            Expanded(
+              child: FlatButton(
+                onPressed: () {
+                  setState(() {
+                    _chewieController.dispose();
+                    _videoPlayerController1.pause();
+                    _videoPlayerController1.seekTo(Duration(seconds: 0));
+                    _chewieController = ChewieController(
+                      videoPlayerController: _videoPlayerController1,
+                      aspectRatio: 2 / 2,
+                      autoPlay: true,
+                      looping: true,
+                    );
+                  });
+                },
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 16.0),
+                ),
+              ),
+            ),
+          ],
+        ),
+    );
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
-
-    
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Column(
-            children: [
-              navbar(),
-              FutureBuilder(
-                  future: _initializeVideoPlayerFuture,
-                  builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.done) {
-                    return Center(
-                      child: AspectRatio(
-                        aspectRatio: _controller.value.aspectRatio,
-                        child: VideoPlayer(_controller),
-                      ),
-                    );
-                  } else {
-                    return Center(
-                      child: CircularProgressIndicator(),
-                  );
-                }
-              },
+        body: SingleChildScrollView(
+          child: SafeArea(
+            child: Column(
+              children: <Widget>[
+                navbar(),
+                video(),
+                content(),
+                button(),
+              ],
             ),
-              content(),
-              button(),
-            ],
           ),
         ),
-     ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: kPrimaryColor,
-        onPressed: () {
-          setState(() {
-            if (_controller.value.isPlaying) {
-              _controller.pause();
-            } else {
-              _controller.play();
-            }
-          });
-        },
-        child:
-            Icon(_controller.value.isPlaying ? Icons.pause : Icons.play_arrow),
-      ),
     );
   }
 }
 
+class VideoScaffold extends StatefulWidget {
+  const VideoScaffold({Key? key, required this.child}) : super(key: key);
 
+  final Widget child;
 
-// class AnnouncementDetailPage extends StatelessWidget {
-//   const AnnouncementDetailPage({Key? key}) : super(key: key);
+  @override
+  State<StatefulWidget> createState() => _VideoScaffoldState();
+}
 
-//  
+class _VideoScaffoldState extends State<VideoScaffold> {
+  @override
+  void initState() {
+   
+    super.initState();
+  }
 
-  Widget content() {
+  @override
+  dispose() {
+   
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return widget.child;
+  }  
+}
+
+Widget content() {
     return Container(
       margin: EdgeInsets.symmetric(
         horizontal: defaultPadding.w,
@@ -209,23 +247,3 @@ class AnnouncementDetailPageState extends State<AnnouncementDetailPage> {
       ),
     );
   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       backgroundColor: kWhiteColor,
-//       body: SingleChildScrollView(
-//         child: SafeArea(
-//           child: Column(
-//             children: [
-//               navbar(),
-//               image(),
-//               content(),
-//               button(),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
