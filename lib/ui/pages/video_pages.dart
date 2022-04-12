@@ -1,53 +1,73 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-
-class AssetPlayerWidget extends StatefulWidget {
+ 
+class VideoDemo extends StatefulWidget {
+  VideoDemo() : super();
+ 
+  // final String title = "Video Demo";
+ 
   @override
-  _AssetPlayerWidgetState createState() => _AssetPlayerWidgetState();
+  VideoDemoState createState() => VideoDemoState();
 }
-
-class _AssetPlayerWidgetState extends State<AssetPlayerWidget> {
-  final asset = 'assets/video.mp4';
-  late VideoPlayerController controller;
-
+ 
+class VideoDemoState extends State<VideoDemo> {
+  //
+  late VideoPlayerController _controller;
+  late Future<void> _initializeVideoPlayerFuture;
+ 
   @override
   void initState() {
+    _controller = VideoPlayerController.network(
+        "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4");
+    //_controller = VideoPlayerController.asset("videos/sample_video.mp4");
+    _initializeVideoPlayerFuture = _controller.initialize();
+    _controller.setLooping(true);
+    _controller.setVolume(1.0);
     super.initState();
-    controller = VideoPlayerController.asset(asset)
-      ..addListener(() => setState(() {}))
-      ..setLooping(true)
-      ..initialize().then((_) => controller.play());
   }
-
+ 
   @override
   void dispose() {
-    controller.dispose();
+    _controller.dispose();
     super.dispose();
   }
-
+ 
   @override
   Widget build(BuildContext context) {
-    final isMuted = controller.value.volume == 0;
-
-    return Column(
-      children: [
-        VideoPlayerWidget(controller: controller),
-        const SizedBox(height: 32),
-        if (controller != null && controller.value.isInitialized)
-          CircleAvatar(
-            radius: 30,
-            backgroundColor: Colors.red,
-            child: IconButton(
-              icon: Icon(
-                isMuted ? Icons.volume_mute : Icons.volume_up,
-                color: Colors.white,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("ds"),
+      ),
+      body: FutureBuilder(
+        future: _initializeVideoPlayerFuture,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            return Center(
+              child: AspectRatio(
+                aspectRatio: _controller.value.aspectRatio,
+                child: VideoPlayer(_controller),
               ),
-              onPressed: () => controller.setVolume(isMuted ? 1 : 0),
-            ),
-          )
-      ],
+            );
+          } else {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            if (_controller.value.isPlaying) {
+              _controller.pause();
+            } else {
+              _controller.play();
+            }
+          });
+        },
+        child:
+            Icon(_controller.value.isPlaying ? Icons.pause : Icons.play_arrow),
+      ),
     );
   }
 }
-
-VideoPlayerWidget({VideoPlayerController? controller}) {}
