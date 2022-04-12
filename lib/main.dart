@@ -1,6 +1,6 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/pages/announcement_detail_page1.dart';
+import 'package:adira_cats/ui/pages/announcement_detail_page.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_filled_page.dart';
@@ -75,7 +75,6 @@ import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
 import 'package:adira_cats/ui/pages/announcement_detail_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_ceklis_page.dart';
-import 'package:adira_cats/ui/pages/video_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -155,7 +154,6 @@ class MyApp extends StatelessWidget {
           // home: ErrorPage(),
           // home: LoadPage(),
           home: AnnouncementDetailPage(),
-          // home: ChewieDemo(),
           // home: CheckUnit(),
           // home: CheckUnitWarehouse(),
           // home: CheckUnitVisit(),
