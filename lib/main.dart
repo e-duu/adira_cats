@@ -1,5 +1,6 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/pages/announcement_detail_page1.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_filled_page.dart';
@@ -118,7 +119,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: INTEGRATION
           // home: SplashPage(),
-          home: LoginPage(),
+          // home: LoginPage(),
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
           // home: OtpPage(),
@@ -154,6 +155,7 @@ class MyApp extends StatelessWidget {
           // home: ErrorPage(),
           // home: LoadPage(),
           home: AnnouncementDetailPage(),
+          // home: ChewieDemo(),
           // home: CheckUnit(),
           // home: CheckUnitWarehouse(),
           // home: CheckUnitVisit(),
@@ -167,7 +169,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSearchFoundPage(),
           // home: UnitSearchPullPage(),
           // home: UnitSearchDetailPage(),
-          home: UnitSearchProcessPage(),
+          // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
@@ -210,7 +212,7 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailStPage(),
           // home: ReportDetailStNihilPage(),
           // home: ReportDetailStResultDetailPage(),
-          // home: VideoDemo(),
+          // home: ChewieDemo(),
 
           /// NOTE : MONITORING FLOW PAGE
           // home: ReportDetailMvPage(),
