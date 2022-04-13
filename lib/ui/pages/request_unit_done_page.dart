@@ -27,7 +27,7 @@ class RequestUnitDonePage extends StatelessWidget {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
-                          'assets/icon_sk_done.png',
+                          'assets/icon_done_yellow.png',
                         ),
                       ),
                     ),

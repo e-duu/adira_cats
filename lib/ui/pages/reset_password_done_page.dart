@@ -2,9 +2,10 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:styled_text/styled_text.dart';
 
-class StDonePage extends StatelessWidget {
-  const StDonePage({Key? key}) : super(key: key);
+class ResetPasswordDonePage extends StatelessWidget {
+  const ResetPasswordDonePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +22,6 @@ class StDonePage extends StatelessWidget {
                   Container(
                     width: 140.w,
                     height: 140.h,
-                    margin: EdgeInsets.only(
-                      bottom: defaultMargin.h,
-                    ),
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
@@ -45,11 +43,21 @@ class StDonePage extends StatelessWidget {
                         SizedBox(
                           height: defaultPadding.h,
                         ),
-                        Text(
-                          'Surat Tugas baru berhasil dibuat!',
+                        StyledText(
+                          text:
+                              'Password User ID <bold>edward999</bold> berhasil diperbaharui.',
+                          tags: {
+                            'bold': StyledTextTag(
+                              style: TextStyle(
+                                fontWeight: bold,
+                              ),
+                            ),
+                          },
                           style: blackTextStyle.copyWith(
                             fontWeight: light,
+                            fontSize: 13.sp,
                           ),
+                          textAlign: TextAlign.center,
                         ),
                       ],
                     ),
@@ -66,7 +74,7 @@ class StDonePage extends StatelessWidget {
               title: 'Ok',
               onPressed: () {},
               margin: EdgeInsets.symmetric(
-                horizontal: defaultMargin.h,
+                horizontal: defaultMargin.w,
               ),
               color: kPrimaryColor,
               textStyle: blackTextStyle,

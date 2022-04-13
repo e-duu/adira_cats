@@ -1,6 +1,5 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/pages/announcement_detail_page1.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_filled_page.dart';
@@ -52,12 +51,17 @@ import 'package:adira_cats/ui/pages/report_detail_visit_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_visit_result_detail_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_visit_result_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
+import 'package:adira_cats/ui/pages/request_unit_done_page.dart';
+import 'package:adira_cats/ui/pages/reset_password_done_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/result_visit_page.dart';
 import 'package:adira_cats/ui/pages/save_page.dart';
 import 'package:adira_cats/ui/pages/save_page_empty.dart';
 import 'package:adira_cats/ui/pages/splash_page_new1.dart';
 import 'package:adira_cats/ui/pages/splash_page_new2.dart';
+import 'package:adira_cats/ui/pages/st_done_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_process_done_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_pull_done_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_final_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_visit_page.dart';
@@ -75,6 +79,7 @@ import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
 import 'package:adira_cats/ui/pages/announcement_detail_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_ceklis_page.dart';
+import 'package:adira_cats/ui/pages/verification_done_page.dart';
 import 'package:adira_cats/ui/pages/video_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -153,8 +158,7 @@ class MyApp extends StatelessWidget {
           // home: HomePageOption(),
           // home: ErrorPage(),
           // home: LoadPage(),
-          home: AnnouncementDetailPage(),
-          // home: ChewieDemo(),
+          // home: AnnouncementDetailPage(),
           // home: CheckUnit(),
           // home: CheckUnitWarehouse(),
           // home: CheckUnitVisit(),
@@ -210,7 +214,6 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailStPage(),
           // home: ReportDetailStNihilPage(),
           // home: ReportDetailStResultDetailPage(),
-          // home: ChewieDemo(),
 
           /// NOTE : MONITORING FLOW PAGE
           // home: ReportDetailMvPage(),
@@ -228,6 +231,7 @@ class MyApp extends StatelessWidget {
           /// NOTE : SAVED PAGE
           // home: SavePage(),
           // home: SavePageEmpty(),
+          // home: AnnouncementDetailPage(),
 
           /// NOTE : UNIT SEND PULL PAGE
           // home: UnitSendPullPage(),
@@ -242,7 +246,16 @@ class MyApp extends StatelessWidget {
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
           // home: SplashPageNewOne(),
-          home: SplashPageNewTwo(), 
+          // home: SplashPageNewTwo(), 
+
+          // NOTE: PAGES DONE ALL
+          // home: VerificationDonePage(), 
+          // home: ResetPasswordDonePage(), 
+          // home: RequestUnitDonePage(), 
+          // home: StDonePage(), 
+          // home: UnitSearchPullDonePage(), 
+          // home: PullFeeDonePage(), 
+          home: UnitSearchProcessDonePage(), 
         ),
       ),
     );

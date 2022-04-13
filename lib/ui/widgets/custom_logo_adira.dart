@@ -22,7 +22,7 @@ class CustomLogoAdira extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage("assets/adira_logo_yellow.png"),
+              image: AssetImage("assets/adira_logo_white.png"),
             ),
           ),
         ),
