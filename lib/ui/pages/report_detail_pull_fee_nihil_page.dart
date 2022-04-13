@@ -1,5 +1,6 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -7,7 +8,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class ReportDetailPullFeeNihilPage extends StatelessWidget {
-  const ReportDetailPullFeeNihilPage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  ReportDetailPullFeeNihilPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +18,10 @@ class ReportDetailPullFeeNihilPage extends StatelessWidget {
         child: CustomNavbar(
           text: "Biaya Tarik",
           preffixWidget: GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.subject_sharp,
-            ),
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
           ),
           suffixWidget: GestureDetector(
             onTap: () {},
@@ -144,6 +146,19 @@ class ReportDetailPullFeeNihilPage extends StatelessWidget {
     }
 
     return Scaffold(
+      key: _scaffoldKey,
+      drawer : Container(
+      width: 300.w,
+      height: 760.h,
+      child: ClipRRect(
+      borderRadius: BorderRadius.only(
+      topRight: Radius.circular(35), 
+      bottomRight: Radius.circular(35),),
+      child: CustomDrawer(),
+      ),
+      ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
         child: Container(
           child: SingleChildScrollView(

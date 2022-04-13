@@ -9,7 +9,9 @@ import 'package:styled_text/styled_text.dart';
 import '../widgets/custom_google_maps.dart';
 
 class InfoUnitPage extends StatelessWidget {
-  const InfoUnitPage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
+  InfoUnitPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class InfoUnitPage extends StatelessWidget {
         text: 'Info Unit',
         preffixWidget: GestureDetector(
           onTap: () {
-            // _scaffoldKey.currentState!.openDrawer();
+            _scaffoldKey.currentState!.openDrawer();
           },
           child: libraryIcon,
         ),
@@ -56,7 +58,7 @@ class InfoUnitPage extends StatelessWidget {
       );
     }
 
-    Widget OptionButton() {
+    Widget optionButton() {
       return Container(
         width: double.infinity,
         margin: EdgeInsets.only(
@@ -118,7 +120,7 @@ class InfoUnitPage extends StatelessWidget {
                           title: 'Chat',
                           width: 80.w,
                           fontWeight: light,
-                          color: kPrimaryColor,
+                          color: kOrangeColor,
                           textStyle: blackTextStyle.copyWith(
                             fontWeight: light,
                             fontSize: 12.sp,
@@ -155,7 +157,7 @@ class InfoUnitPage extends StatelessWidget {
                         child: CustomButton(
                           title: 'Tolak',
                           fontWeight: light,
-                          color: kRedColor,
+                          color: kBlueColor,
                           textStyle: whiteTextStyle.copyWith(
                             fontWeight: light,
                             fontSize: 12.sp,
@@ -199,7 +201,7 @@ class InfoUnitPage extends StatelessWidget {
             children: [
               navbar(),
               goMap(),
-              OptionButton(),
+              optionButton(),
               buttonBack(),
             ],
           ),

@@ -1,32 +1,140 @@
+import 'package:adira_cats/ui/pages/announcement_detail_page.dart';
+import 'package:chewie/chewie.dart';
+import 'package:chewie/src/chewie_player.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:video_player/video_player.dart';
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/pages/announcement_detail_page.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:video_player/video_player.dart';
 
-class AnnouncementDetailPage extends StatelessWidget {
-  const AnnouncementDetailPage({Key? key}) : super(key: key);
 
-  Widget image() {
-    return Container(
-      width: double.infinity,
-      height: 200.h,
-      margin: EdgeInsets.symmetric(
-        horizontal: 18.w,
-       
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(defaultRadius.r),
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage(
-            'assets/image_announcement.png',
-          ),
-        ),
-      ),
+
+class AnnouncementDetailPage extends StatefulWidget {
+  AnnouncementDetailPage({this.title = 'Chewie Demo'});
+
+  final String title;
+
+  @override
+  State<StatefulWidget> createState() {
+    return _AnnouncementDetailPageState();
+  }
+}
+
+class _AnnouncementDetailPageState extends State<AnnouncementDetailPage> {
+  late VideoPlayerController _videoPlayerController1;
+  late VideoPlayerController _videoPlayerController2;
+  late ChewieController _chewieController;
+
+  @override
+  void initState() {
+    super.initState();
+    _videoPlayerController1 = VideoPlayerController.network(
+        'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4');
+   
+    _chewieController = ChewieController(
+        videoPlayerController: _videoPlayerController1,
+        aspectRatio: 3 / 2,
+        autoPlay: true,
+        looping: true,
     );
   }
 
-  Widget content() {
+  @override
+  void dispose() {
+    _videoPlayerController1.dispose();
+    _videoPlayerController2.dispose();
+    _chewieController.dispose();
+    super.dispose();
+  }
+
+  @override
+ 
+  Widget video(){
+    return Container(
+        height: 300,
+        child: Row(
+          children:[
+            Chewie(
+              controller: _chewieController,
+            ),
+            Expanded(
+              child: FlatButton(
+                onPressed: () {
+                  setState(() {
+                    _chewieController.dispose();
+                    _videoPlayerController1.pause();
+                    _videoPlayerController1.seekTo(Duration(seconds: 0));
+                    _chewieController = ChewieController(
+                      videoPlayerController: _videoPlayerController1,
+                      aspectRatio: 2 / 2,
+                      autoPlay: true,
+                      looping: true,
+                    );
+                  });
+                },
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: 16.0),
+                ),
+              ),
+            ),
+          ],
+        ),
+    );
+  }
+
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: SingleChildScrollView(
+          child: SafeArea(
+            child: Column(
+              children: <Widget>[
+                navbar(),
+                video(),
+                content(),
+                button(),
+              ],
+            ),
+          ),
+        ),
+    );
+  }
+}
+
+class VideoScaffold extends StatefulWidget {
+  const VideoScaffold({Key? key, required this.child}) : super(key: key);
+
+  final Widget child;
+
+  @override
+  State<StatefulWidget> createState() => _VideoScaffoldState();
+}
+
+class _VideoScaffoldState extends State<VideoScaffold> {
+  @override
+  void initState() {
+   
+    super.initState();
+  }
+
+  @override
+  dispose() {
+   
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return widget.child;
+  }  
+}
+
+Widget content() {
     return Container(
       margin: EdgeInsets.symmetric(
         horizontal: defaultPadding.w,
@@ -139,23 +247,3 @@ class AnnouncementDetailPage extends StatelessWidget {
       ),
     );
   }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: kWhiteColor,
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Column(
-            children: [
-              navbar(),
-              image(),
-              content(),
-              button(),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}

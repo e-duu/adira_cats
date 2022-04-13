@@ -78,16 +78,16 @@ class UnitSearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      drawer: Container(
-        width: 300.w,
-        height: 760.h,
-        child: ClipRRect(
+      drawer : Container(
+      width: 300,
+      height: 760,
+      child: ClipRRect(
           borderRadius: BorderRadius.only(
-            topRight: Radius.circular(35),
-            bottomRight: Radius.circular(35),
+          topRight: Radius.circular(35), 
+          bottomRight: Radius.circular(35)
           ),
-          child: CustomDrawer(),
-        ),
+          child: CustomDrawer()
+      ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(

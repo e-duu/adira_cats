@@ -1,5 +1,6 @@
 import 'package:adira_cats/cubit/page_cubit.dart';
 import 'package:adira_cats/shared/theme.dart';
+import 'package:adira_cats/ui/pages/announcement_detail_page.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_null_page.dart';
 import 'package:adira_cats/ui/pages/create_st_contract_number_page.dart';
 import 'package:adira_cats/ui/pages/create_st_filled_page.dart';
@@ -21,6 +22,7 @@ import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
+import 'package:adira_cats/ui/pages/otp_input_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/pull_fee_done_page.dart';
@@ -74,7 +76,6 @@ import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
 import 'package:adira_cats/ui/pages/announcement_detail_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_ceklis_page.dart';
-import 'package:adira_cats/ui/pages/video_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -135,21 +136,38 @@ class MyApp extends StatelessWidget {
           /// NOTE : MAIN PAGE
           // home: MessagePage(),
           // home: MessageRoomPage(),
+          // home: ShareUnitPage(),
+          // home: ShareUnitFoundPage(),
+          // home: UnitSearchPage(),
+          // home: UnitSearchNilPage(),
+          // home: UnitSearchPullPage(),
+          // home: UnitSearchFoundPage(),
+          // home: UnitSearchDetailPage(),
+          // home: UnitSearchProcessPage(),
+          // home: UnitSearchPullFoundPage(),
+          // home: UnitSendPullPage(),
+          // home: UnitSendPullFoundPage(),
           // home: LocalNotification(),
           // home: NotificationPage(),
           // home: ProfilePage(),
           // home: HomePage(),
           // home: HomePageOption(),
           // home: ErrorPage(),
+          home: OtpInputPage(),
           // home: LoadPage(),
           // home: AnnouncementDetailPage(),
+          // home: CheckUnit(),
+          // home: CheckUnitWarehouse(),
+          // home: CheckUnitVisit(),
+          // home: CheckUnitVisit(),
+          // home: CheckUnitFinal(),
           // home: AssetPlayerWidget(),
 
           /// NOTE : UNIT SEARCH
           // home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
-          // home: UnitSearchPullPage(),
           // home: UnitSearchFoundPage(),
+          // home: UnitSearchPullPage(),
           // home: UnitSearchDetailPage(),
           // home: UnitSearchProcessPage(),
           // home: UnitSearchPullFoundPage(),
@@ -194,6 +212,7 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailStPage(),
           // home: ReportDetailStNihilPage(),
           // home: ReportDetailStResultDetailPage(),
+          // home: ChewieDemo(),
 
           /// NOTE : MONITORING FLOW PAGE
           // home: ReportDetailMvPage(),
@@ -201,7 +220,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : SUBMISSION PULL FEE PAGE
           // home: PullFeePage(),
-          home: PullFeeFoundPage(),
+          // home: PullFeeFoundPage(),
           // home: PullFeeDonePage(),
 
           /// NOTE : RESULT VISIT PAGE

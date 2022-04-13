@@ -276,15 +276,15 @@ class _MessageRoomPageState extends State<MessageRoomPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      drawer: Container(
-        width: 300.w,
-        height: 760.h,
+      drawer : Container(
+        width: 300,
+        height: 760,
         child: ClipRRect(
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(35),
-            bottomRight: Radius.circular(35),
+            bottomRight: Radius.circular(35)
           ),
-          child: CustomDrawer(),
+          child: CustomDrawer()
         ),
       ),
       resizeToAvoidBottomInset: false,
