@@ -2,7 +2,6 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 import 'package:styled_text/styled_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -112,8 +111,9 @@ class HomePage extends StatelessWidget {
           left: defaultPadding.w,
         ),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(defaultRadius),
-            color: kGreyColor),
+          borderRadius: BorderRadius.circular(defaultRadius),
+          color: kGreyColor,
+        ),
         child: TextFormField(
           autocorrect: true,
           autofocus: false,
@@ -130,7 +130,7 @@ class HomePage extends StatelessWidget {
               highlightColor: kTransparent,
               icon: Icon(
                 Icons.search_sharp,
-                color: Colors.grey,
+                color: kDarkGreyColor,
               ),
             ),
             hintStyle: TextStyle(
@@ -196,7 +196,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.notifications_none_sharp,
-                    color: Colors.grey,
+                    color: kDarkGreyColor,
                   ),
                   Text(
                     'SK 14142 telah diterbitkan.',
@@ -582,16 +582,16 @@ class HomePage extends StatelessWidget {
     return BlocBuilder<PageCubit, int>(
       builder: (context, currentIndex) {
         return Scaffold(
-          key: _scaffoldKey, 
-          drawer : Container(
-            width: 300,
-            height: 760,
+          key: _scaffoldKey,
+          drawer: Container(
+            width: 300.w,
+            height: 760.h,
             child: ClipRRect(
               borderRadius: BorderRadius.only(
                 topRight: Radius.circular(35),
-                bottomRight: Radius.circular(35)
+                bottomRight: Radius.circular(35),
               ),
-            child: CustomDrawer()
+              child: CustomDrawer(),
             ),
           ),
           drawerEnableOpenDragGesture: true,
@@ -600,7 +600,6 @@ class HomePage extends StatelessWidget {
           floatingActionButton: bottomNavigation(),
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerDocked,
-          // backgroundColor: kLightYellowColor,
           body: SafeArea(
             child: SingleChildScrollView(
               child: Container(
@@ -608,8 +607,8 @@ class HomePage extends StatelessWidget {
                   gradient: LinearGradient(
                     colors: [
                       kWhiteColor,
-                      Color(0XFFFeffc1),
-                      Color(0XFFfdff9a),
+                      kGradientMidColor,
+                      kGradientBottomColor,
                     ],
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,

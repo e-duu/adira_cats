@@ -1,19 +1,19 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:textfield_tags/textfield_tags.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomInputSearchPlatNo extends StatefulWidget {
   final Function() onPressed;
-  
+
   CustomInputSearchPlatNo({
     Key? key,
     required this.onPressed,
   }) : super(key: key);
 
   @override
-  State<CustomInputSearchPlatNo> createState() => _CustomInputSearchPlatNoState();
+  State<CustomInputSearchPlatNo> createState() =>
+      _CustomInputSearchPlatNoState();
 }
 
 class _CustomInputSearchPlatNoState extends State<CustomInputSearchPlatNo> {
@@ -53,16 +53,7 @@ class _CustomInputSearchPlatNoState extends State<CustomInputSearchPlatNo> {
         initialTags: const [],
         textSeparators: const [' ', ','],
         letterCase: LetterCase.normal,
-        // validator: (String tag) {
-        //   if (tag == '000') {
-        //     return 'Mohon Maaf, tidak boleh berisi ini';
-        //   } else if (_controller!.getTags!.contains(tag)) {
-        //     return 'Anda Sudah Menginputnya';
-        //   }
-        //   return null;
-        // }, // Validation
-        inputfieldBuilder:
-          (context, tec, fn, error, onChanged, onSubmitted) {
+        inputfieldBuilder: (context, tec, fn, error, onChanged, onSubmitted) {
           return ((context, sc, tags, onTagDelete) {
             return TextField(
               controller: tec,
@@ -105,71 +96,74 @@ class _CustomInputSearchPlatNoState extends State<CustomInputSearchPlatNo> {
                   ),
                 ),
                 isDense: true,
-                border: const OutlineInputBorder(
+                border: OutlineInputBorder(
                   borderSide: BorderSide(
-                    color: Colors.yellow,
+                    color: kPrimaryColor,
                     width: 3.0,
                   ),
                 ),
-                helperStyle: const TextStyle(
-                  color: Colors.yellow,
-                ),
-                hintText: _controller!.hasTags ? '' : "Cari unit dari plat nomor ...",
-                hintStyle: TextStyle(
-                  color: kDarkGreyColor
-                ),
+                helperStyle: primaryTextStyle,
+                hintText:
+                    _controller!.hasTags ? '' : "Cari unit dari plat nomor ...",
+                hintStyle: TextStyle(color: kDarkGreyColor),
                 errorText: error,
-                prefixIconConstraints: BoxConstraints(maxWidth: _distanceToField! * 0.74),
-                prefixIcon: tags.isNotEmpty ? SingleChildScrollView(
-                  controller: sc,
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: tags.map((String tag) {
-                      return Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(20.0),
-                          ),
-                          color: kDarkGreyColor,
-                        ),
-                        margin: const EdgeInsets.symmetric(
-                            horizontal: 5.0),
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 10.0, vertical: 5.0),
+                prefixIconConstraints:
+                    BoxConstraints(maxWidth: _distanceToField! * 0.74),
+                prefixIcon: tags.isNotEmpty
+                    ? SingleChildScrollView(
+                        controller: sc,
+                        scrollDirection: Axis.horizontal,
                         child: Row(
-                          mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                          children: [
-                            InkWell(
-                              child: Text(
-                                '$tag',
-                                style: TextStyle(
-                                  color: kBlackColor,
+                          children: tags.map((String tag) {
+                            return Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(20.0),
                                 ),
+                                color: kDarkGreyColor,
                               ),
-                              onTap: () {
-                                print("$tag selected");
-                              },
-                            ),
-                            const SizedBox(width: 4.0),
-                            InkWell(
-                              child: const Icon(
-                                Icons.cancel,
-                                size: 14.0,
-                                color: Color.fromARGB(
-                                  255, 233, 233, 233,
-                                ),
+                              margin: const EdgeInsets.symmetric(
+                                horizontal: 5.0,
                               ),
-                              onTap: () {
-                                onTagDelete(tag);
-                              },
-                            )
-                          ],
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 10.0,
+                                vertical: 5.0,
+                              ),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  InkWell(
+                                    child: Text(
+                                      '$tag',
+                                      style: TextStyle(
+                                        color: kBlackColor,
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      print("$tag selected");
+                                    },
+                                  ),
+                                  const SizedBox(
+                                    width: 4.0,
+                                  ),
+                                  InkWell(
+                                    child: Icon(
+                                      Icons.cancel,
+                                      size: 14.0,
+                                      color: kWhiteColor,
+                                    ),
+                                    onTap: () {
+                                      onTagDelete(tag);
+                                    },
+                                  )
+                                ],
+                              ),
+                            );
+                          }).toList(),
                         ),
-                      );
-                    }  
-                  ).toList()),
-                ) : null,
+                      )
+                    : null,
               ),
               onChanged: onChanged,
               onSubmitted: onSubmitted,

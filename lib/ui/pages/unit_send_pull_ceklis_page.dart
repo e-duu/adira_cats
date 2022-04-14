@@ -1,6 +1,7 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_input_check_box.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter/material.dart';
@@ -183,16 +184,28 @@ class UnitSendPullCeklisPage extends StatelessWidget {
       );
     }
 
-    return SafeArea(
-      child: Scaffold(
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              navbar(),
-              content(),
-              bottomButton(),
-            ],
+    return Scaffold(
+      key: _scaffoldKey,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
           ),
+          child: CustomDrawer(),
+        ),
+      ),
+      drawerEnableOpenDragGesture: true,
+      endDrawerEnableOpenDragGesture: false,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            navbar(),
+            content(),
+            bottomButton(),
+          ],
         ),
       ),
     );

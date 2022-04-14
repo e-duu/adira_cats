@@ -18,6 +18,8 @@ Color kGreyColor = Color(0XFFF6F6F6);
 Color kDarkGreyColor = Color(0XFF909090);
 Color kLigthGrayColor = Color(0XFFE4E4E4);
 Color kLightYellowColor = Color(0XFFfffcdf);
+Color kGradientMidColor = Color(0XFFFeffc1);
+Color kGradientBottomColor = Color(0XFFfdff9a);
 Color kTransparent = Colors.transparent;
 
 TextStyle primaryTextStyle = GoogleFonts.poppins(

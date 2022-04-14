@@ -276,15 +276,15 @@ class _MessageRoomPageState extends State<MessageRoomPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      drawer : Container(
-        width: 300,
-        height: 760,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
         child: ClipRRect(
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(35),
-            bottomRight: Radius.circular(35)
+            bottomRight: Radius.circular(35),
           ),
-          child: CustomDrawer()
+          child: CustomDrawer(),
         ),
       ),
       resizeToAvoidBottomInset: false,
@@ -299,18 +299,17 @@ class _MessageRoomPageState extends State<MessageRoomPage> {
           height: 410.h,
           child: Chat(
             theme: DefaultChatTheme(
-              primaryColor: Color(0xfffffde0),
+              primaryColor: kLightYellowColor,
               secondaryColor: Color.fromARGB(33, 33, 33, 4),
-              inputBackgroundColor: Colors.white,
-              inputTextColor: Colors.black,
-              inputTextCursorColor: Colors.black,
-              sentMessageBodyTextStyle: TextStyle(color: Colors.black),
-              sentEmojiMessageTextStyle: TextStyle(color: Colors.black),
-              sentMessageLinkDescriptionTextStyle:
-                  TextStyle(color: Colors.black),
-              sentMessageLinkTitleTextStyle: TextStyle(color: Colors.black),
-              sentMessageCaptionTextStyle: TextStyle(color: Colors.black),
-              sentMessageDocumentIconColor: Colors.black,
+              inputBackgroundColor: kWhiteColor,
+              inputTextColor: kBlackColor,
+              inputTextCursorColor: kBlackColor,
+              sentMessageBodyTextStyle: blackTextStyle,
+              sentEmojiMessageTextStyle: blackTextStyle,
+              sentMessageLinkDescriptionTextStyle: blackTextStyle,
+              sentMessageLinkTitleTextStyle: blackTextStyle,
+              sentMessageCaptionTextStyle: blackTextStyle,
+              sentMessageDocumentIconColor: kBlackColor,
               inputContainerDecoration: BoxDecoration(
                 borderRadius: BorderRadius.all(
                   Radius.circular(8),
@@ -318,19 +317,19 @@ class _MessageRoomPageState extends State<MessageRoomPage> {
                 border: Border(
                   bottom: BorderSide(
                     width: 2,
-                    color: Color.fromARGB(33, 33, 33, 012),
+                    color: kDarkGreyColor,
                   ),
                   top: BorderSide(
                     width: 2,
-                    color: Color.fromARGB(33, 33, 33, 012),
+                    color: kDarkGreyColor,
                   ),
                   left: BorderSide(
                     width: 2,
-                    color: Color.fromARGB(33, 33, 33, 012),
+                    color: kDarkGreyColor,
                   ),
                   right: BorderSide(
                     width: 2,
-                    color: Color.fromARGB(33, 33, 33, 012),
+                    color: kDarkGreyColor,
                   ),
                 ),
               ),

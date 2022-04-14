@@ -16,7 +16,7 @@ class ReportDetailPage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Detail Laporan",
-           preffixWidget: GestureDetector(
+          preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
             },
@@ -109,18 +109,18 @@ class ReportDetailPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer : Container(
-        width: 300,
-        height: 760,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
         child: ClipRRect(
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(35),
-            bottomRight: Radius.circular(35)
+            bottomRight: Radius.circular(35),
           ),
-          child: CustomDrawer()
+          child: CustomDrawer(),
         ),
-        ),
-      drawerEnableOpenDragGesture : true,
+      ),
+      drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
         child: SingleChildScrollView(

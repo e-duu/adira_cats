@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 
 class ReportDetailVisitResultDetailPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  ReportDetailVisitResultDetailPage({ Key? key }) : super(key: key);
+  ReportDetailVisitResultDetailPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -215,18 +215,18 @@ class ReportDetailVisitResultDetailPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer : Container(
-        width: 300,
-        height: 760,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
         child: ClipRRect(
           borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35),
-          bottomRight: Radius.circular(35)
-        ),
-        child: CustomDrawer()
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
+          ),
+          child: CustomDrawer(),
         ),
       ),
-      drawerEnableOpenDragGesture : true,
+      drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
         child: Container(
