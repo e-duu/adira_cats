@@ -63,7 +63,7 @@ class ReportDetailMvPage extends StatelessWidget {
     }
 
     return Scaffold(
-     key: _scaffoldKey,
+      key: _scaffoldKey,
       drawer : Container(
         width: 300,
         height: 760,

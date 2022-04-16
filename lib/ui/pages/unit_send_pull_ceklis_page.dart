@@ -185,6 +185,20 @@ class UnitSendPullCeklisPage extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
+         key: _scaffoldKey,
+        drawer : Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
+        borderRadius: BorderRadius.only(
+         topRight: Radius.circular(35),
+         bottomRight: Radius.circular(35)
+        ),
+        child: CustomDrawer()
+        ),
+      ),
+      drawerEnableOpenDragGesture : true,
+      endDrawerEnableOpenDragGesture: false,
         body: SingleChildScrollView(
           child: Column(
             children: [

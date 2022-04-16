@@ -19,7 +19,7 @@ class ReportDetailStResultPage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Surat Tugas",
-         preffixWidget: GestureDetector(
+          preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
             },
@@ -176,11 +176,11 @@ class ReportDetailStResultPage extends StatelessWidget {
     }
 
     return Scaffold(
-      key: _scaffoldKey,
-      drawer : Container(
+        key: _scaffoldKey,
+        drawer : Container(
         width: 300,
         height: 760,
-      child: ClipRRect(
+        child: ClipRRect(
         borderRadius: BorderRadius.only(
          topRight: Radius.circular(35),
          bottomRight: Radius.circular(35)
