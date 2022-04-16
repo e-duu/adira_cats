@@ -226,7 +226,9 @@ class RequestUnitPage extends StatelessWidget {
 
     Widget formCreateNote() {
       return Container(
-        decoration: BoxDecoration(color: kWhiteColor),
+        decoration: BoxDecoration(
+          color: kWhiteColor,
+        ),
         width: double.infinity,
         padding: EdgeInsets.symmetric(
           vertical: defaultMargin.h,

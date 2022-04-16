@@ -1,4 +1,3 @@
-import 'package:adira_cats/ui/pages/home_page.dart';
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
@@ -419,18 +418,18 @@ class CreateStPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer : Container(
-        width: 300,
-        height: 760,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
         child: ClipRRect(
-            borderRadius: BorderRadius.only(
-            topRight: Radius.circular(35), 
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
             bottomRight: Radius.circular(35),
           ),
-          child: CustomDrawer()
-          ),
+          child: CustomDrawer(),
         ),
-      drawerEnableOpenDragGesture : true,
+      ),
+      drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: ListView(

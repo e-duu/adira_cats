@@ -17,7 +17,7 @@ class ReportDetailProdexPage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Prodex",
-           preffixWidget: GestureDetector(
+          preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
             },
@@ -50,19 +50,25 @@ class ReportDetailProdexPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            CustomDropdown(items: [
-              'pilih 1',
-              'pilih 2',
-              'pilih 3',
-            ], hintText: 'Pilih Area ...'),
+            CustomDropdown(
+              items: [
+                'pilih 1',
+                'pilih 2',
+                'pilih 3',
+              ],
+              hintText: 'Pilih Area ...',
+            ),
             SizedBox(
               height: 12.h,
             ),
-            CustomDropdown(items: [
-              'pilih 1',
-              'pilih 2',
-              'pilih 3',
-            ], hintText: 'Pilih Cabang ...'),
+            CustomDropdown(
+              items: [
+                'pilih 1',
+                'pilih 2',
+                'pilih 3',
+              ],
+              hintText: 'Pilih Cabang ...',
+            ),
           ],
         ),
       );
@@ -107,7 +113,6 @@ class ReportDetailProdexPage extends StatelessWidget {
                   'pilih 3',
                 ],
                 hintText: 'Periode Awal',
-                // width: 132.w,
               ),
             ),
             SizedBox(
@@ -122,7 +127,6 @@ class ReportDetailProdexPage extends StatelessWidget {
                   'pilih 3',
                 ],
                 hintText: 'Periode Awal',
-                // width: 132.w,
               ),
             ),
           ],
@@ -153,18 +157,18 @@ class ReportDetailProdexPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer : Container(
-        width: 300,
-        height: 760,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
         child: ClipRRect(
           borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35),
-          bottomRight: Radius.circular(35)
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
+          ),
+          child: CustomDrawer(),
         ),
-          child: CustomDrawer()
-        ),
-        ),
-      drawerEnableOpenDragGesture : true,
+      ),
+      drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       resizeToAvoidBottomInset: false,
       floatingActionButton: Visibility(

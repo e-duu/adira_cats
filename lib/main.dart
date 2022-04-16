@@ -13,7 +13,6 @@ import 'package:adira_cats/ui/pages/handover_st_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_search_nil_page.dart';
 import 'package:adira_cats/ui/pages/handover_st_search_page.dart';
 import 'package:adira_cats/ui/pages/home_page.dart';
-import 'package:adira_cats/ui/pages/home_page_option.dart';
 import 'package:adira_cats/ui/pages/info_unit_page.dart';
 import 'package:adira_cats/ui/pages/loading_page.dart';
 import 'package:adira_cats/ui/pages/local_notification.dart';
@@ -22,6 +21,7 @@ import 'package:adira_cats/ui/pages/main_page.dart';
 import 'package:adira_cats/ui/pages/message_page.dart';
 import 'package:adira_cats/ui/pages/message_room_page.dart';
 import 'package:adira_cats/ui/pages/notification_page.dart';
+import 'package:adira_cats/ui/pages/otp_input_page.dart';
 import 'package:adira_cats/ui/pages/otp_page.dart';
 import 'package:adira_cats/ui/pages/profile_page.dart';
 import 'package:adira_cats/ui/pages/pull_fee_done_page.dart';
@@ -57,8 +57,7 @@ import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/result_visit_page.dart';
 import 'package:adira_cats/ui/pages/save_page.dart';
 import 'package:adira_cats/ui/pages/save_page_empty.dart';
-import 'package:adira_cats/ui/pages/splash_page_new1.dart';
-import 'package:adira_cats/ui/pages/splash_page_new2.dart';
+import 'package:adira_cats/ui/pages/splash_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_final_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_visit_page.dart';
@@ -153,8 +152,9 @@ class MyApp extends StatelessWidget {
           // home: HomePage(),
           // home: HomePageOption(),
           // home: ErrorPage(),
+          // home: OtpInputPage(),
           // home: LoadPage(),
-          // home: AnnouncementDetailPage(),
+          home: AnnouncementDetailPage(),
           // home: CheckUnit(),
           // home: CheckUnitWarehouse(),
           // home: CheckUnitVisit(),
@@ -242,7 +242,6 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: ON PROGRESS
           // home: InfoUnitPage(),
-          home: RequestUnitPage(),
           // home: TestingPage(),
           // home: SplashPageNewOne(),
           // home: SplashPageNewTwo(),

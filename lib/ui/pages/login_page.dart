@@ -34,7 +34,7 @@ class LoginPage extends StatelessWidget {
               margin: EdgeInsets.only(
                 top: 162.h,
                 right: 6.w,
-                left: 6.w
+                left: 6.w,
               ),
               padding: EdgeInsets.symmetric(
                 horizontal: 24.w,
@@ -84,7 +84,7 @@ class LoginPage extends StatelessWidget {
                       hintText: 'User ID',
                       prefixIcon: Icon(
                         Icons.account_circle_outlined,
-                        color: Colors.grey,
+                        color: kDarkGreyColor,
                       ),
                       hintColor: kDarkGreyColor,
                       filled: true,
@@ -99,7 +99,7 @@ class LoginPage extends StatelessWidget {
                       hintText: 'Password',
                       prefixIcon: Icon(
                         Icons.password,
-                        color: Colors.grey,
+                        color: kDarkGreyColor,
                       ),
                       obscureText: true,
                       borderWidth: 0.r,
@@ -143,6 +143,31 @@ class LoginPage extends StatelessWidget {
                   ),
                   Column(
                     children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Sudah Verifikasi?',
+                            style: darkGreyTextStyle.copyWith(
+                              fontSize: 13.sp,
+                              fontWeight: light,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 2.w,
+                          ),
+                          Text(
+                            'Verifikasi',
+                            style: blackTextStyle.copyWith(
+                              fontSize: 13.sp,
+                              fontWeight: bold,
+                            ),
+                          )
+                        ],
+                      ),
+                      SizedBox(
+                        height: 6.h,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -192,37 +217,18 @@ class LoginPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  // Container(
-                  //   margin: EdgeInsets.only(top: 28.h, bottom: 11.h),
-                  //   child: Column(
-                  //     children: [
-                  //       // Text(
-                  //       //   'CATS',
-                  //       //   style: darkGreyTextStyle.copyWith(
-                  //       //     fontSize: 11.sp,
-                  //       //     fontWeight: bold,
-                  //       //   ),
-                  //       // ),
-                  //       // Text(
-                  //       //   'Collection Activity and Tracking System',
-                  //       //   style: darkGreyTextStyle.copyWith(
-                  //       //     fontSize: 11.sp,
-                  //       //     fontWeight: light,
-                  //       //   ),
-                  //       // )
-                  //     ],
-                  //   ),
-                  // ),
                   Container(
                     width: 105.w,
                     height: 24.h,
                     margin: EdgeInsets.symmetric(
-                      vertical: 22.h
+                      vertical: 22.h,
                     ),
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.contain,
-                        image: AssetImage("assets/adira_logo_white.png"),
+                        image: AssetImage(
+                          "assets/adira_logo_white.png",
+                        ),
                       ),
                     ),
                   ),

@@ -96,14 +96,14 @@ class _AnnouncementDetailPageState extends State<AnnouncementDetailPage> {
               children: <Widget>[
                 navbar(),
                 video(),
-                content(),  
+                content(),
                 button(),
               ],
             ),
           ),
         ),
     );
-  } 
+  }
 }
 
 class VideoScaffold extends StatefulWidget {

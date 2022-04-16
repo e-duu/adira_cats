@@ -288,16 +288,16 @@ class UnitSearchPullFoundPage extends StatelessWidget {
     }
 
     return Scaffold(
-      key: _scaffoldKey, 
-      drawer : Container(
-        width: 300,
-        height: 760,
+      key: _scaffoldKey,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
         child: ClipRRect(
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(35),
-            bottomRight: Radius.circular(35)
+            bottomRight: Radius.circular(35),
           ),
-        child: CustomDrawer()
+          child: CustomDrawer(),
         ),
       ),
       drawerEnableOpenDragGesture: true,
