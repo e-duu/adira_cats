@@ -152,7 +152,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSendPullPage(),
           // home: UnitSendPullFoundPage(),
           // home: LocalNotification(),
-          // home: NotificationPage(),
+          home: NotificationPage(),
           // home: ProfilePage(),
           // home: HomePage(),
           // home: HomePageOption(),
@@ -256,7 +256,7 @@ class MyApp extends StatelessWidget {
           // home: StDonePage(), 
           // home: UnitSearchPullDonePage(), 
           // home: PullFeeDonePage(), 
-          home: UnitSearchProcessDonePage(), 
+          // home: UnitSearchProcessDonePage(), 
         ),
       ),
     );

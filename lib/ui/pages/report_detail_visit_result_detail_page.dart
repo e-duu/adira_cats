@@ -48,7 +48,7 @@ class ReportDetailVisitResultDetailPage extends StatelessWidget {
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage(
-              'assets/icon_prodex.png',
+              'assets/icon_visit.png',
             ))),
           ),
         );
