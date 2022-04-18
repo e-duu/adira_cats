@@ -52,6 +52,7 @@ import 'package:adira_cats/ui/pages/report_detail_visit_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_visit_result_detail_page.dart';
 import 'package:adira_cats/ui/pages/report_detail_visit_result_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
+import 'package:adira_cats/ui/pages/request_unit_done_page.dart';
 import 'package:adira_cats/ui/pages/request_unit_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_done_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
@@ -59,6 +60,7 @@ import 'package:adira_cats/ui/pages/result_visit_page.dart';
 import 'package:adira_cats/ui/pages/save_page.dart';
 import 'package:adira_cats/ui/pages/save_page_empty.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
+import 'package:adira_cats/ui/pages/st_done_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_process_done_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_final_page.dart';
@@ -149,7 +151,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSendPullFoundPage(),
           // home: LocalNotification(),
           // home: NotificationPage(),
-          home: ProfilePage(),
+          // home: ProfilePage(),
           // home: HomePage(),
           // home: HomePageOption(),
           // home: ErrorPage(),
@@ -163,7 +165,7 @@ class MyApp extends StatelessWidget {
           // home: AssetPlayerWidget(),
 
           /// NOTE : UNIT SEARCH
-          // home: UnitSearchPage(),
+          home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
           // home: UnitSearchFoundPage(),
           // home: UnitSearchPullPage(),
