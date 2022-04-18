@@ -149,7 +149,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSendPullFoundPage(),
           // home: LocalNotification(),
           // home: NotificationPage(),
-          // home: ProfilePage(),
+          home: ProfilePage(),
           // home: HomePage(),
           // home: HomePageOption(),
           // home: ErrorPage(),
