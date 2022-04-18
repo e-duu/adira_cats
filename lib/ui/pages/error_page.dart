@@ -76,7 +76,7 @@ class ErrorPage extends StatelessWidget {
               title: 'Kembali',
               titleColor: kBlackColor,
               onPressed: () {},
-              borderColor: kDarkGreyColor,
+              borderColor: kBlackColor,
               borderWidth: 1,
               fontWeight: light,
             ),

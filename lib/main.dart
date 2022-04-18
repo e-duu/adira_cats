@@ -53,6 +53,7 @@ import 'package:adira_cats/ui/pages/report_detail_visit_result_detail_page.dart'
 import 'package:adira_cats/ui/pages/report_detail_visit_result_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/request_unit_page.dart';
+import 'package:adira_cats/ui/pages/reset_password_done_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/result_visit_page.dart';
 import 'package:adira_cats/ui/pages/save_page.dart';
@@ -106,9 +107,9 @@ class MyApp extends StatelessWidget {
         builder: () => MaterialApp(
           debugShowCheckedModeBanner: false,
           // routes: {
-          //   '/': (context) => SplashPage(),
-          //   '/login': (context) => LoginPage(),
+          //   '/': (context) => SplashPageNewOne(),
           //   '/load': (context) => LoadPage(),
+          //   '/login': (context) => LoginPage(),
           //   '/main': (context) => MainPage(),
           //   '/home': (context) => HomePage(),
           //   '/profile': (context) => ProfilePage(),
@@ -118,7 +119,7 @@ class MyApp extends StatelessWidget {
           // },
 
           /// NOTE: INTEGRATION
-          // home: SplashPage(),
+          // home: SplashPageNewOne(),
           // home: LoginPage(),
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
@@ -246,11 +247,11 @@ class MyApp extends StatelessWidget {
 
           // NOTE: PAGES DONE ALL
           // home: VerificationDonePage(),
-          // home: ResetPasswordDonePage(),
+          home: ResetPasswordDonePage(),
           // home: RequestUnitDonePage(),
           // home: StDonePage(),
           // home: UnitSearchPullDonePage(),
-          home: PullFeeDonePage(),
+          // home: PullFeeDonePage(),
           // home: UnitSearchProcessDonePage(),
         ),
       ),
