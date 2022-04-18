@@ -236,7 +236,7 @@ Widget content() {
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                    "assets/icon_arrow_back.png",
+                    "assets/icon_arrow_back_news.png",
                   ),
                 ),
               ),
