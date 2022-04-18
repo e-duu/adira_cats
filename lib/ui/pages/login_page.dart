@@ -31,7 +31,11 @@ class LoginPage extends StatelessWidget {
           children: [
             Container(
               width: double.infinity,
-              margin: EdgeInsets.only(top: 162.h, right: 6.w, left: 6.w),
+              margin: EdgeInsets.only(
+                top: 162.h,
+                right: 6.w,
+                left: 6.w,
+              ),
               padding: EdgeInsets.symmetric(
                 horizontal: 24.w,
               ),
@@ -80,7 +84,7 @@ class LoginPage extends StatelessWidget {
                       hintText: 'User ID',
                       prefixIcon: Icon(
                         Icons.account_circle_outlined,
-                        color: Colors.grey,
+                        color: kDarkGreyColor,
                       ),
                       hintColor: kDarkGreyColor,
                       filled: true,
@@ -95,7 +99,7 @@ class LoginPage extends StatelessWidget {
                       hintText: 'Password',
                       prefixIcon: Icon(
                         Icons.password,
-                        color: Colors.grey,
+                        color: kDarkGreyColor,
                       ),
                       obscureText: true,
                       borderWidth: 0.r,
@@ -216,11 +220,15 @@ class LoginPage extends StatelessWidget {
                   Container(
                     width: 105.w,
                     height: 24.h,
-                    margin: EdgeInsets.symmetric(vertical: 22.h),
+                    margin: EdgeInsets.symmetric(
+                      vertical: 22.h,
+                    ),
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         fit: BoxFit.contain,
-                        image: AssetImage("assets/adira_logo_white.png"),
+                        image: AssetImage(
+                          "assets/adira_logo_white.png",
+                        ),
                       ),
                     ),
                   ),

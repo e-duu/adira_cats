@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MessagePage extends StatelessWidget {
-    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-    MessagePage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  MessagePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class MessagePage extends StatelessWidget {
       return Container(
         child: CustomNavbar(
           text: "Pesan",
-           preffixWidget: GestureDetector(
+          preffixWidget: GestureDetector(
             onTap: () {
               _scaffoldKey.currentState!.openDrawer();
             },
@@ -125,19 +125,19 @@ class MessagePage extends StatelessWidget {
     }
 
     return Scaffold(
-       key: _scaffoldKey,
-      drawer : Container(
-        width: 300,
-        height: 760,
-      child: ClipRRect(
-        borderRadius: BorderRadius.only(
-        topRight: Radius.circular(35),
-        bottomRight: Radius.circular(35)
+      key: _scaffoldKey,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
+          ),
+          child: CustomDrawer(),
+        ),
       ),
-      child: CustomDrawer()
-      ),
-      ),
-      drawerEnableOpenDragGesture : true,
+      drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       backgroundColor: kWhiteColor,
       body: SafeArea(

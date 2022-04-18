@@ -1,14 +1,12 @@
 import 'package:adira_cats/shared/theme.dart';
-import 'package:adira_cats/ui/widgets/custom_bar_chart.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 
 class CustomReportChart extends StatelessWidget {
-
   final String title;
   final Widget chart;
-  
-  const CustomReportChart({ 
+
+  const CustomReportChart({
     Key? key,
     required this.title,
     required this.chart,

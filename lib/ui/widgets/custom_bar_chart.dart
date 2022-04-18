@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
-import 'package:adira_cats/shared/theme.dart';
 
 class CustomBarChart extends StatelessWidget {
   final List<Sales> listGrafik;
@@ -22,7 +20,7 @@ class CustomBarChart extends StatelessWidget {
         measureFn: (Sales sales, _) => sales.count,
         colorFn: (Sales sales, _) => sales.color,
         labelAccessorFn: (Sales sales, _) =>
-          '${sales.day} : ${sales.count.toString()}',
+            '${sales.day} : ${sales.count.toString()}',
         id: 'Sales',
         data: data,
       ),
@@ -48,5 +46,7 @@ class Sales {
 
   final charts.Color color;
 
-  Sales(this.day, this.count, Color color):this.color = charts.Color(r: color.red, g: color.green, b: color.blue, a: color.alpha);
+  Sales(this.day, this.count, Color color)
+      : this.color = charts.Color(
+            r: color.red, g: color.green, b: color.blue, a: color.alpha);
 }

@@ -1,6 +1,5 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
-import 'package:adira_cats/ui/widgets/custom_detail_report.dart';
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown.dart';
 import 'package:adira_cats/ui/widgets/custom_dropdown_border.dart';
@@ -226,17 +225,18 @@ class ReportDetailVisitResultPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer : Container(
-      width: 300,
-      height: 760,
-      child: ClipRRect(
-      borderRadius: BorderRadius.only(
-      topRight: Radius.circular(35), 
-      bottomRight: Radius.circular(35)),
-      child: CustomDrawer()
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
+          ),
+          child: CustomDrawer(),
+        ),
       ),
-      ),
-      drawerEnableOpenDragGesture : true,
+      drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
         child: Container(
