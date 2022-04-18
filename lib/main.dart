@@ -53,6 +53,7 @@ import 'package:adira_cats/ui/pages/report_detail_visit_result_detail_page.dart'
 import 'package:adira_cats/ui/pages/report_detail_visit_result_page.dart';
 import 'package:adira_cats/ui/pages/report_page.dart';
 import 'package:adira_cats/ui/pages/request_unit_page.dart';
+import 'package:adira_cats/ui/pages/reset_password_done_page.dart';
 import 'package:adira_cats/ui/pages/reset_password_page.dart';
 import 'package:adira_cats/ui/pages/result_visit_page.dart';
 import 'package:adira_cats/ui/pages/save_page.dart';
@@ -117,7 +118,7 @@ class MyApp extends StatelessWidget {
           // },
 
           /// NOTE: INTEGRATION
-          // home: SplashPage(),
+          // home: SplashPageNewOne(),
           // home: LoginPage(),
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
@@ -146,7 +147,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSendPullPage(),
           // home: UnitSendPullFoundPage(),
           // home: LocalNotification(),
-          home: NotificationPage(),
+          // home: NotificationPage(),
           // home: ProfilePage(),
           // home: HomePage(),
           // home: HomePageOption(),
@@ -241,16 +242,16 @@ class MyApp extends StatelessWidget {
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
           // home: SplashPageNewOne(),
-          // home: SplashPageNewTwo(), 
+          // home: SplashPageNewTwo(),
 
           // NOTE: PAGES DONE ALL
-          // home: VerificationDonePage(), 
-          // home: ResetPasswordDonePage(), 
-          // home: RequestUnitDonePage(), 
-          // home: StDonePage(), 
-          // home: UnitSearchPullDonePage(), 
-          // home: PullFeeDonePage(), 
-          // home: UnitSearchProcessDonePage(), 
+          // home: VerificationDonePage(),
+          home: ResetPasswordDonePage(),
+          // home: RequestUnitDonePage(),
+          // home: StDonePage(),
+          // home: UnitSearchPullDonePage(),
+          // home: PullFeeDonePage(),
+          // home: UnitSearchProcessDonePage(),
         ),
       ),
     );

@@ -83,8 +83,8 @@ class LoginPage extends StatelessWidget {
                     child: CustomInput(
                       hintText: 'User ID',
                       prefixIcon: Icon(
-                        Icons.account_circle_outlined,
-                        color: kDarkGreyColor,
+                        Icons.person_outline_rounded,
+                        color: kGreenColor,
                       ),
                       hintColor: kDarkGreyColor,
                       filled: true,
@@ -98,8 +98,8 @@ class LoginPage extends StatelessWidget {
                     child: CustomInput(
                       hintText: 'Password',
                       prefixIcon: Icon(
-                        Icons.password,
-                        color: kDarkGreyColor,
+                        Icons.lock_outline_rounded,
+                        color: kOrangeColor,
                       ),
                       obscureText: true,
                       borderWidth: 0.r,
@@ -219,7 +219,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   Container(
                     width: 105.w,
-                    height: 24.h,
+                    height: defaultPadding.h,
                     margin: EdgeInsets.symmetric(
                       vertical: 22.h,
                     ),
