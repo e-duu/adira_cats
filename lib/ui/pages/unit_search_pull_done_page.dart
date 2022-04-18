@@ -3,8 +3,8 @@ import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class StDonePage extends StatelessWidget {
-  const StDonePage({Key? key}) : super(key: key);
+class UnitSearchPullDonePage extends StatelessWidget {
+  const UnitSearchPullDonePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class StDonePage extends StatelessWidget {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
-                          'assets/icon_sk_done.png',
+                          'assets/icon_done_yellow.png',
                         ),
                       ),
                     ),

@@ -25,7 +25,7 @@ class VerificationDonePage extends StatelessWidget {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
-                          'assets/icon_verification_done.png',
+                          'assets/icon_done_green.png',
                         ),
                       ),
                     ),

@@ -70,7 +70,7 @@ class ReportDetailPage extends StatelessWidget {
               height: 12.h,
             ),
             CustomDetailReport(
-              imageUrl: 'assets/icon_surat_tugas.png',
+              imageUrl: 'assets/icon_number_st.png',
               title: "Surat Tugas (ST)",
             ),
             SizedBox(

@@ -122,7 +122,6 @@ class MyApp extends StatelessWidget {
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
           // home: OtpPage(),
-          // home: ProfilePage(),
 
           /// NOTE : REGISTER PAGE
           // home: RegisterPage(),
@@ -157,7 +156,6 @@ class MyApp extends StatelessWidget {
           // home: AnnouncementDetailPage(),
           // home: CheckUnit(),
           // home: CheckUnitWarehouse(),
-          // home: CheckUnitVisit(),
           // home: CheckUnitVisit(),
           // home: CheckUnitFinal(),
           // home: AssetPlayerWidget(),
@@ -211,7 +209,6 @@ class MyApp extends StatelessWidget {
           // home: ReportDetailStPage(),
           // home: ReportDetailStNihilPage(),
           // home: ReportDetailStResultDetailPage(),
-          // home: ChewieDemo(),
 
           /// NOTE : MONITORING FLOW PAGE
           // home: ReportDetailMvPage(),
@@ -229,6 +226,7 @@ class MyApp extends StatelessWidget {
           /// NOTE : SAVED PAGE
           // home: SavePage(),
           // home: SavePageEmpty(),
+          // home: AnnouncementDetailPage(),
 
           /// NOTE : UNIT SEND PULL PAGE
           // home: UnitSendPullPage(),
@@ -241,10 +239,18 @@ class MyApp extends StatelessWidget {
           // home: InfoUnitPage(),
 
           /// NOTE: ON PROGRESS
-          // home: InfoUnitPage(),
           // home: TestingPage(),
           // home: SplashPageNewOne(),
-          // home: SplashPageNewTwo(),
+          // home: SplashPageNewTwo(), 
+
+          // NOTE: PAGES DONE ALL
+          // home: VerificationDonePage(), 
+          // home: ResetPasswordDonePage(), 
+          // home: RequestUnitDonePage(), 
+          // home: StDonePage(), 
+          // home: UnitSearchPullDonePage(), 
+          // home: PullFeeDonePage(), 
+          // home: UnitSearchProcessDonePage(), 
         ),
       ),
     );
