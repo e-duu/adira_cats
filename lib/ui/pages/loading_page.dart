@@ -31,7 +31,7 @@ class _LoadPageState extends State<LoadPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SpinKitRing(
-              color: kDarkGreyColor,
+              color: Color(0XFF198754),
               size: 60.0,
             ),
             SizedBox(
