@@ -9,8 +9,8 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NotificationPage extends StatelessWidget {
-    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-   NotificationPage({Key? key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  NotificationPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -396,22 +396,21 @@ class NotificationPage extends StatelessWidget {
     }
 
     return Scaffold(
-       key: _scaffoldKey,
-       drawer : Container(
-        width: 300,
-        height: 760,
+      key: _scaffoldKey,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
         child: ClipRRect(
           borderRadius: BorderRadius.only(
-          topRight: Radius.circular(35),
-          bottomRight: Radius.circular(35)
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
+          ),
+          child: CustomDrawer(),
         ),
-          child: CustomDrawer()
-        ),
-        ),
-      drawerEnableOpenDragGesture : true,
+      ),
+      drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
-
         child: SingleChildScrollView(
           child: Column(
             children: [

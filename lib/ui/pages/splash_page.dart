@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:adira_cats/shared/theme.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SplashPage extends StatefulWidget {
-  const SplashPage({Key? key}) : super(key: key);
+class SplashPageNewOne extends StatefulWidget {
+  const SplashPageNewOne({Key? key}) : super(key: key);
 
   @override
-  State<SplashPage> createState() => _SplashPageState();
+  State<SplashPageNewOne> createState() => _SplashPageNewOneState();
 }
 
-class _SplashPageState extends State<SplashPage> {
+class _SplashPageNewOneState extends State<SplashPageNewOne> {
   @override
   void initState() {
     // TODO: implement initState
@@ -31,43 +31,63 @@ class _SplashPageState extends State<SplashPage> {
       body: Container(
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Expanded(
-                child: Container(
-                  width: 240.w,
-                  height: 42.h,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        'assets/adira_logo_white.png',
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 105.w,
+                      height: 132.h,
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            'assets/image_splash1.png',
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                    SizedBox(
+                      height: defaultPadding.h,
+                    ),
+                    Text(
+                      'Collection Activity and Tracking System',
+                      style: blackTextStyle.copyWith(
+                        fontSize: 12.sp,
+                        fontWeight: light,
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Container(
                 margin: EdgeInsets.only(
-                  bottom: 72.h,
+                  bottom: 50.h,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
-                      "CATS",
+                      "Powered by",
                       style: blackTextStyle.copyWith(
-                        fontWeight: bold,
+                        fontWeight: light,
+                        fontSize: 11.sp,
                       ),
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(
-                      height: 10.h,
+                      height: defaultPadding.h,
                     ),
-                    Text(
-                      "Collection Activity and Tracking System",
-                      style: blackTextStyle.copyWith(
-                        fontWeight: light,
+                    Container(
+                      width: 140.w,
+                      height: 24.h,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            'assets/adira_logo_white.png',
+                          ),
+                        ),
                       ),
                     ),
                   ],

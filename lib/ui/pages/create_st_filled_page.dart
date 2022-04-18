@@ -22,11 +22,11 @@ class CreateStFilledPage extends StatelessWidget {
       return CustomNavbar(
         text: 'Buat Surat Tugas',
         preffixWidget: GestureDetector(
-            onTap: () {
-              _scaffoldKey.currentState!.openDrawer();
-            },
-            child: libraryIcon,
-          ),
+          onTap: () {
+            _scaffoldKey.currentState!.openDrawer();
+          },
+          child: libraryIcon,
+        ),
         suffixWidget: GestureDetector(
           onTap: () {},
           child: Container(
@@ -949,21 +949,21 @@ class CreateStFilledPage extends StatelessWidget {
     }
 
     return Scaffold(
-        key: _scaffoldKey, 
-        drawer : Container(
-          width: 300,
-          height: 760,
-          child: ClipRRect(
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(35),
-              bottomRight: Radius.circular(35)
-            ),
-          child: CustomDrawer()
+      key: _scaffoldKey,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
           ),
+          child: CustomDrawer(),
         ),
-        drawerEnableOpenDragGesture: true,
-        endDrawerEnableOpenDragGesture: false,
-        resizeToAvoidBottomInset: false,
+      ),
+      drawerEnableOpenDragGesture: true,
+      endDrawerEnableOpenDragGesture: false,
+      resizeToAvoidBottomInset: false,
       backgroundColor: kWhiteColor,
       body: ListView(
         children: [

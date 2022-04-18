@@ -83,21 +83,19 @@ class _CustomInputTextFieldTagsState extends State<CustomInputTextFieldTags> {
                         Icons.search_sharp,
                       ),
                     ),
-                    border: const OutlineInputBorder(
+                    border: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.yellow,
+                        color: kPrimaryColor,
                         width: 3.0,
                       ),
                     ),
-                    focusedBorder: const OutlineInputBorder(
+                    focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.yellow,
+                        color: kPrimaryColor,
                         width: 3.0,
                       ),
                     ),
-                    helperStyle: const TextStyle(
-                      color: Colors.yellow,
-                    ),
+                    helperStyle: primaryTextStyle,
                     hintText: _controller!.hasTags ? '' : "Cari Plat Nomor ...",
                     hintStyle: TextStyle(color: kDarkGreyColor),
                     errorText: error,
@@ -110,11 +108,11 @@ class _CustomInputTextFieldTagsState extends State<CustomInputTextFieldTags> {
                             child: Row(
                                 children: tags.map((String tag) {
                               return Container(
-                                decoration: const BoxDecoration(
+                                decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
                                     Radius.circular(20.0),
                                   ),
-                                  color: Colors.yellow,
+                                  color: kPrimaryColor,
                                 ),
                                 margin:
                                     const EdgeInsets.symmetric(horizontal: 5.0),
@@ -127,20 +125,20 @@ class _CustomInputTextFieldTagsState extends State<CustomInputTextFieldTags> {
                                     InkWell(
                                       child: Text(
                                         '$tag',
-                                        style: const TextStyle(
-                                            color: Colors.white),
+                                        style: whiteTextStyle,
                                       ),
                                       onTap: () {
                                         print("$tag selected");
                                       },
                                     ),
-                                    const SizedBox(width: 4.0),
+                                    const SizedBox(
+                                      width: 4.0,
+                                    ),
                                     InkWell(
-                                      child: const Icon(
+                                      child: Icon(
                                         Icons.cancel,
                                         size: 14.0,
-                                        color:
-                                            Color.fromARGB(255, 233, 233, 233),
+                                        color: kLigthGrayColor,
                                       ),
                                       onTap: () {
                                         onTagDelete(tag);

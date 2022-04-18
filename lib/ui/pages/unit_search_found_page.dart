@@ -2,7 +2,6 @@ import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_card_unit.dart';
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
-import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
@@ -148,17 +147,17 @@ class UnitSearchFoundPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        key: _scaffoldKey, 
-        drawer : Container(
-          width: 300,
-          height: 760,
-          child: ClipRRect(
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(35),
-              bottomRight: Radius.circular(35)
-            ),
-          child: CustomDrawer()
+      key: _scaffoldKey,
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
           ),
+          child: CustomDrawer(),
+        ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(

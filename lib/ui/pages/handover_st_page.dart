@@ -1,5 +1,4 @@
 import 'package:adira_cats/ui/widgets/custom_card_handover_st.dart';
-import 'package:adira_cats/ui/widgets/custom_card_st.dart';
 import 'package:adira_cats/ui/widgets/custom_drawer.dart';
 import 'package:adira_cats/ui/widgets/custom_input_search.dart';
 import 'package:adira_cats/ui/widgets/custom_navbar.dart';
@@ -11,12 +10,11 @@ class HandoverStPage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   HandoverStPage({Key? key}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     Widget navbar() {
       return Container(
-       child: CustomNavbar(
+        child: CustomNavbar(
           text: "Serah Terima ST",
           preffixWidget: GestureDetector(
             onTap: () {
@@ -63,17 +61,17 @@ class HandoverStPage extends StatelessWidget {
           CustomCardHandoverSt(
             stNumber: "1234 5678",
             contractNumber: "9999 9999 9999",
-            onPressed: (){},
+            onPressed: () {},
           ),
           CustomCardHandoverSt(
             stNumber: "2234 5678",
             contractNumber: "9999 8888 8888",
-            onPressed: (){},
+            onPressed: () {},
           ),
           CustomCardHandoverSt(
             stNumber: "3234 5678",
             contractNumber: "9999 8888 7777",
-            onPressed: (){},
+            onPressed: () {},
           ),
         ],
       );
@@ -81,17 +79,16 @@ class HandoverStPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer : Container(
-          width: 300,
-          height: 760,
-          child: ClipRRect(
+      drawer: Container(
+        width: 300,
+        height: 760,
+        child: ClipRRect(
             borderRadius: BorderRadius.only(
-             topRight: Radius.circular(35),
-             bottomRight: Radius.circular(35)),
-             child: CustomDrawer()
-            ),
-          ),
-      drawerEnableOpenDragGesture : true,
+                topRight: Radius.circular(35),
+                bottomRight: Radius.circular(35)),
+            child: CustomDrawer()),
+      ),
+      drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       body: SafeArea(
         child: SingleChildScrollView(

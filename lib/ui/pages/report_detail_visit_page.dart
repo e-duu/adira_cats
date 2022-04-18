@@ -18,11 +18,11 @@ class ReportDetailVisitPage extends StatelessWidget {
         child: CustomNavbar(
           text: "Input Kunjungan",
           preffixWidget: GestureDetector(
-              onTap: () {
-                _scaffoldKey.currentState!.openDrawer();
-              },
-              child: Icon(Icons.subject_sharp),
-            ),
+            onTap: () {
+              _scaffoldKey.currentState!.openDrawer();
+            },
+            child: Icon(Icons.subject_sharp),
+          ),
           suffixWidget: GestureDetector(
             onTap: () {},
             child: Container(
@@ -153,18 +153,18 @@ class ReportDetailVisitPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer : Container(
-        width: 300,
-        height: 760,
-      child: ClipRRect(
-        borderRadius: BorderRadius.only(
-        topRight: Radius.circular(35),
-        bottomRight: Radius.circular(35)
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
+          ),
+          child: CustomDrawer(),
+        ),
       ),
-      child: CustomDrawer()
-      ),
-      ),
-      drawerEnableOpenDragGesture : true,
+      drawerEnableOpenDragGesture: true,
       endDrawerEnableOpenDragGesture: false,
       resizeToAvoidBottomInset: false,
       floatingActionButton: Visibility(

@@ -18,11 +18,15 @@ class CustomLogoAdira extends StatelessWidget {
         Container(
           width: 200,
           height: 34,
-          margin: EdgeInsets.only(top: 72.h),
+          margin: EdgeInsets.only(
+            top: 72.h,
+          ),
           decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage("assets/adira_logo_yellow.png"),
+              image: AssetImage(
+                "assets/adira_logo_yellow.png",
+              ),
             ),
           ),
         ),

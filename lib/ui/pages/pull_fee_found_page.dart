@@ -306,16 +306,16 @@ class PullFeeFoundPage extends StatelessWidget {
 
     return Scaffold(
       key: _scaffoldKey,
-      drawer : Container(
-        width: 300,
-        height: 760,
-      child: ClipRRect(
-        borderRadius: BorderRadius.only(
-        topRight: Radius.circular(35),
-        bottomRight: Radius.circular(35)
-      ),
-      child: CustomDrawer()
-      ),
+      drawer: Container(
+        width: 300.w,
+        height: 760.h,
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(35),
+            bottomRight: Radius.circular(35),
+          ),
+          child: CustomDrawer(),
+        ),
       ),
       backgroundColor: kWhiteColor,
       body: SafeArea(
