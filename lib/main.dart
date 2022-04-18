@@ -58,6 +58,7 @@ import 'package:adira_cats/ui/pages/result_visit_page.dart';
 import 'package:adira_cats/ui/pages/save_page.dart';
 import 'package:adira_cats/ui/pages/save_page_empty.dart';
 import 'package:adira_cats/ui/pages/splash_page.dart';
+import 'package:adira_cats/ui/pages/unit_search_process_done_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_final_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_visit_page.dart';
@@ -146,7 +147,7 @@ class MyApp extends StatelessWidget {
           // home: UnitSendPullPage(),
           // home: UnitSendPullFoundPage(),
           // home: LocalNotification(),
-          home: NotificationPage(),
+          // home: NotificationPage(),
           // home: ProfilePage(),
           // home: HomePage(),
           // home: HomePageOption(),
@@ -241,16 +242,16 @@ class MyApp extends StatelessWidget {
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
           // home: SplashPageNewOne(),
-          // home: SplashPageNewTwo(), 
+          // home: SplashPageNewTwo(),
 
           // NOTE: PAGES DONE ALL
-          // home: VerificationDonePage(), 
-          // home: ResetPasswordDonePage(), 
-          // home: RequestUnitDonePage(), 
-          // home: StDonePage(), 
-          // home: UnitSearchPullDonePage(), 
-          // home: PullFeeDonePage(), 
-          // home: UnitSearchProcessDonePage(), 
+          // home: VerificationDonePage(),
+          // home: ResetPasswordDonePage(),
+          // home: RequestUnitDonePage(),
+          // home: StDonePage(),
+          // home: UnitSearchPullDonePage(),
+          home: PullFeeDonePage(),
+          // home: UnitSearchProcessDonePage(),
         ),
       ),
     );
