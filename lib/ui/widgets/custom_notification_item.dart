@@ -17,7 +17,7 @@ class CustomNotificationItem extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(1.5),
         decoration: BoxDecoration(
-          color: kPrimaryColor,
+          color: kRedColor,
           shape: BoxShape.circle,
         ),
         constraints: BoxConstraints(
@@ -28,7 +28,7 @@ class CustomNotificationItem extends StatelessWidget {
           child: Text(
             count.toString(),
             textAlign: TextAlign.center,
-            style: blackTextStyle.copyWith(
+            style: whiteTextStyle.copyWith(
               fontSize: 10.sp,
               fontWeight: semibold,
             ),

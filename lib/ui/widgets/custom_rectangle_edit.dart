@@ -46,13 +46,13 @@ class CustomRectangleEdit extends StatelessWidget {
                   width: 36,
                   height: 36,
                   decoration: BoxDecoration(
-                    color: kPrimaryColor,
+                    color: kBlueColor,
                     borderRadius: BorderRadius.circular(defaultRadius),
                   ),
                   child: Center(
                     child: Icon(
                       Icons.edit_outlined,
-                      color: kBlackColor,
+                      color: kWhiteColor,
                     ),
                   ),
                 ),

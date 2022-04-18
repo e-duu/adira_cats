@@ -247,7 +247,7 @@ class MyApp extends StatelessWidget {
 
           // NOTE: PAGES DONE ALL
           // home: VerificationDonePage(),
-          home: ResetPasswordDonePage(),
+          // home: ResetPasswordDonePage(),
           // home: RequestUnitDonePage(),
           // home: StDonePage(),
           // home: UnitSearchPullDonePage(),
