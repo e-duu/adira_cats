@@ -476,16 +476,18 @@ class HomePage extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Container(
-                        /// NOTE : DON'T USE RESPONSIVE IN THIS WIDTH!!
-                        width: 200,
-                        child: Text(
-                          'Ini deksripsi singkat, untuk lebih lengkap baca baca baca',
-                          style: darkGreyTextStyle.copyWith(
-                            fontSize: 8.sp,
-                            fontWeight: normal,
+                      Flexible(
+                        child: Container(
+                          /// NOTE : DON'T USE RESPONSIVE IN THIS WIDTH!!
+                          width: 200.w,
+                          child: Text(
+                            'Ini deksripsi singkat, untuk lebih lengkap baca',
+                            style: darkGreyTextStyle.copyWith(
+                              fontSize: 8.sp,
+                              fontWeight: normal,
+                            ),
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                       TextButton(

@@ -263,26 +263,28 @@ class ProfilePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Tempat Lahir",
-                      style: darkGreyTextStyle.copyWith(
-                        fontSize: 13.sp,
-                        fontWeight: semibold,
+                Flexible(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Tempat Lahir",
+                        style: darkGreyTextStyle.copyWith(
+                          fontSize: 13.sp,
+                          fontWeight: semibold,
+                        ),
                       ),
-                    ),
-                    CustomInput(
-                      readOnly: true,
-                      hintText: "Jakarta",
-                      hintColor: kBlackColor,
-                      margin: EdgeInsets.only(
-                        top: 12.h,
+                      CustomInput(
+                        readOnly: true,
+                        hintText: "Jakarta",
+                        hintColor: kBlackColor,
+                        margin: EdgeInsets.only(
+                          top: 12.h,
+                        ),
+                        width: 138.w,
                       ),
-                      width: 138.w,
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 SizedBox(
                   width: 12,

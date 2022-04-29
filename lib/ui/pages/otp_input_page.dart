@@ -31,6 +31,7 @@ class OtpInputPage extends StatelessWidget {
             fontSize: 13.sp,
             fontWeight: light,
           ),
+          textAlign: TextAlign.center,
         ),
       );
     }

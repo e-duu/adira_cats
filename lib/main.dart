@@ -114,7 +114,7 @@ class MyApp extends StatelessWidget {
           //   '/load': (context) => LoadPage(),
           //   '/login': (context) => LoginPage(),
           //   '/main': (context) => MainPage(),
-          //   '/home': (context) => HomePage(),
+          // '/home': (context) => HomePage(),
           //   '/profile': (context) => ProfilePage(),
           //   '/message': (context) => MessagePage(),
           //   '/unit_search': (context) => UnitSearchPage(),
@@ -123,13 +123,14 @@ class MyApp extends StatelessWidget {
 
           /// NOTE: INTEGRATION
           // home: SplashPageNewOne(),
+          // home: HomePage(),
           // home: LoginPage(),
           // home: ForgotPasswordPage(),
           // home: ResetPasswordPage(),
           // home: OtpPage(),
 
           /// NOTE : REGISTER PAGE
-          home: RegisterPage(),
+          // home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterThirdDonePage(),
@@ -137,7 +138,7 @@ class MyApp extends StatelessWidget {
 
           /// NOTE : DONE
           /// NOTE : MAIN PAGE
-          // home: MessagePage(),
+          home: MessagePage(),
           // home: MessageRoomPage(),
           // home: ShareUnitPage(),
           // home: ShareUnitFoundPage(),
@@ -166,7 +167,7 @@ class MyApp extends StatelessWidget {
           // home: AssetPlayerWidget(),
 
           /// NOTE : UNIT SEARCH
-          home: UnitSearchPage(),
+          // home: UnitSearchPage(),
           // home: UnitSearchNilPage(),
           // home: UnitSearchFoundPage(),
           // home: UnitSearchPullPage(),

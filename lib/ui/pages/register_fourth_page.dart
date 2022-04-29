@@ -111,6 +111,8 @@ class RegisterFourthPage extends StatelessWidget {
       return Container(
         margin: EdgeInsets.only(
           top: defaultPadding.h,
+          left: defaultMargin.w,
+          right: defaultMargin.w,
         ),
         child: Column(
           children: [
@@ -166,6 +168,8 @@ class RegisterFourthPage extends StatelessWidget {
               textStyle: blackTextStyle,
               margin: EdgeInsets.only(
                 bottom: defaultMargin.h,
+                left: defaultMargin.w,
+                right: defaultMargin.w,
               ),
             ),
           ],
@@ -176,9 +180,6 @@ class RegisterFourthPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: kWhiteColor,
       body: ListView(
-        padding: EdgeInsets.symmetric(
-          horizontal: defaultMargin.w,
-        ),
         children: [
           SafeArea(
             child: Column(

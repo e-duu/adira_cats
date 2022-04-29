@@ -1,6 +1,7 @@
 import 'package:adira_cats/shared/theme.dart';
 import 'package:adira_cats/ui/widgets/custom_button.dart';
 import 'package:adira_cats/ui/widgets/custom_button_border.dart';
+import 'package:adira_cats/ui/widgets/custom_logo_adira.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 import 'package:flutter/material.dart';
@@ -10,17 +11,13 @@ class OtpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget logo() {
+    Widget header() {
       return Container(
-        width: 200.w,
-        height: 34.h,
         margin: EdgeInsets.only(
-          top: 70.h,
+          bottom: defaultPadding.h,
         ),
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/adira_logo_yellow.png'),
-          ),
+        child: CustomLogoAdira(
+          text: 'Verifikasi',
         ),
       );
     }
@@ -33,16 +30,6 @@ class OtpPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Text(
-              'Verifikasi',
-              style: blackTextStyle.copyWith(
-                fontSize: 18.sp,
-                fontWeight: bold,
-              ),
-            ),
-            SizedBox(
-              height: defaultPadding.h,
-            ),
             Text(
               'Masukkan kode OTP yang Anda terima dari kami.',
               style: blackTextStyle.copyWith(
@@ -299,6 +286,7 @@ class OtpPage extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
+              header(),
               title(),
               otpEmail(),
               otpMessage(),

@@ -303,6 +303,8 @@ class _RegisterPageState extends State<RegisterPage> {
       return Container(
         margin: EdgeInsets.only(
           top: defaultPadding.h,
+          left: defaultMargin.w,
+          right: defaultMargin.w,
         ),
         child: Column(
           children: [
@@ -330,6 +332,7 @@ class _RegisterPageState extends State<RegisterPage> {
               margin: EdgeInsets.only(
                 top: 12.h,
                 bottom: 32.h,
+                left: defaultMargin.w,
               ),
               child: CustomButtonBorder(
                 title: 'Reset',
@@ -435,9 +438,6 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       backgroundColor: kWhiteColor,
       body: ListView(
-        padding: EdgeInsets.symmetric(
-          horizontal: defaultMargin.w,
-        ),
         children: [
           SafeArea(
             child: Column(
