@@ -38,7 +38,7 @@ class _CustomInputSearchMultiState extends State<CustomInputSearchMulti> {
                 width: 2,
               ),
               borderRadius: BorderRadius.all(
-                Radius.circular(defaultRadius.r),
+                Radius.circular(defaultRadius),
               ),
             ),
             child: IconButton(
@@ -46,7 +46,7 @@ class _CustomInputSearchMultiState extends State<CustomInputSearchMulti> {
                 inputItems == true
                     ? Icons.document_scanner
                     : Icons.local_activity,
-                color: kDarkGreyColor,
+                color: kGreenColor,
               ),
               onPressed: valueChanged,
             ),

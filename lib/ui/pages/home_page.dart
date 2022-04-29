@@ -130,7 +130,7 @@ class HomePage extends StatelessWidget {
               highlightColor: kTransparent,
               icon: Icon(
                 Icons.search_sharp,
-                color: kDarkGreyColor,
+                color: kOrangeColor,
               ),
             ),
             hintStyle: TextStyle(
@@ -196,7 +196,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.notifications_none_sharp,
-                    color: kDarkGreyColor,
+                    color: kOrangeColor,
                   ),
                   Text(
                     'SK 14142 telah diterbitkan.',

@@ -48,6 +48,7 @@ class CustomInputSearch extends StatelessWidget {
             highlightColor: kTransparent,
             icon: Icon(
               Icons.search_sharp,
+              color: kOrangeColor,
             ),
           ),
           hintStyle: TextStyle(

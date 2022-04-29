@@ -66,9 +66,12 @@ class ProfilePage extends StatelessWidget {
                       height: 42,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(defaultRadius),
-                        color: kPrimaryColor,
+                        color: kBlueColor,
                       ),
-                      child: editIcon,
+                      child: Icon(
+                        Icons.edit_outlined,
+                        color: kWhiteColor,
+                      ),
                     ),
                   ],
                 )

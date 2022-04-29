@@ -71,7 +71,7 @@ class _CustomInputSearchPlatNoState extends State<CustomInputSearchPlatNo> {
                   icon: Icon(
                     Icons.search_sharp,
                     size: 25,
-                    color: kDarkGreyColor,
+                    color: kOrangeColor,
                   ),
                 ),
                 filled: true,
