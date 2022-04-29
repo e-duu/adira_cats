@@ -77,6 +77,7 @@ import 'package:adira_cats/ui/pages/unit_search_pull_found_page.dart';
 import 'package:adira_cats/ui/pages/unit_search_pull_page.dart';
 import 'package:adira_cats/ui/pages/announcement_detail_page.dart';
 import 'package:adira_cats/ui/pages/unit_send_pull_ceklis_page.dart';
+import 'package:adira_cats/ui/pages/verification_done_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -126,7 +127,7 @@ class MyApp extends StatelessWidget {
           // home: OtpPage(),
 
           /// NOTE : REGISTER PAGE
-          // home: RegisterPage(),
+          home: RegisterPage(),
           // home: RegisterSecondPage(),
           // home: RegisterThirdPage(),
           // home: RegisterThirdDonePage(),
@@ -243,11 +244,10 @@ class MyApp extends StatelessWidget {
           /// NOTE: ON PROGRESS
           // home: TestingPage(),
           // home: SplashPageNewOne(),
-          // home: SplashPageNewTwo(),
 
           // NOTE: PAGES DONE ALL
           // home: VerificationDonePage(),
-          home: ResetPasswordDonePage(),
+          // home: ResetPasswordDonePage(),
           // home: RequestUnitDonePage(),
           // home: StDonePage(),
           // home: UnitSearchPullDonePage(),
