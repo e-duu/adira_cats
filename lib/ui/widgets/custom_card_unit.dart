@@ -59,7 +59,7 @@ class CustomCardUnit extends StatelessWidget {
                   "Nomor Kontak:",
                   style: blackTextStyle.copyWith(
                     fontWeight: semibold,
-                    fontSize: 9.sp,
+                    fontSize: 11.sp,
                   ),
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -67,7 +67,7 @@ class CustomCardUnit extends StatelessWidget {
                   contractNumber,
                   style: blackTextStyle.copyWith(
                     fontWeight: light,
-                    fontSize: 9.sp,
+                    fontSize: 11.sp,
                   ),
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -75,7 +75,7 @@ class CustomCardUnit extends StatelessWidget {
                   "Nomor Polisi",
                   style: blackTextStyle.copyWith(
                     fontWeight: semibold,
-                    fontSize: 9.sp,
+                    fontSize: 11.sp,
                   ),
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -83,7 +83,7 @@ class CustomCardUnit extends StatelessWidget {
                   policeNumber,
                   style: blackTextStyle.copyWith(
                     fontWeight: light,
-                    fontSize: 9.sp,
+                    fontSize: 11.sp,
                   ),
                   overflow: TextOverflow.ellipsis,
                 ),
